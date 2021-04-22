@@ -1,6 +1,49 @@
 /* Header
 --------------------------------------------------------------------------------------------*/
+
+@import "./config.scss";
+
 .header{
+  background: #fff;
   height: 100px;
   position: fixed;
+  width: 100%;
+
+  &__inner{
+    display: flex;
+    height: 100%;
+  }
+
+  &__logo{
+    min-width: 300px;
+    height: $header-logo-height;
+  }
+
+  &__menu{
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+
+    .header__lang{
+      height: $header-logo-height;
+      text-align: right;
+    }
+
+    .header__list{
+      list-style: none;
+      li{
+        display: inline-block;
+      }
+    }
+
+    .header__button{
+      align-items: center;
+      background: $c-main;
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      margin-left: 50px;
+    }
+
+  }
 }

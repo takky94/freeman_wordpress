@@ -16,8 +16,8 @@ if (!function_exists('fm_basic_scripts_and_styles')) {
       // jQuery
       wp_enqueue_script('jquery');
       // Gutenberg用CSSを読み込まない
-      wp_deregister_style('wp-block-library');
-      wp_dequeue_style('wp-block-library');
+      // wp_deregister_style('wp-block-library');
+      // wp_dequeue_style('wp-block-library');
     } //is_admin()
   }
 }//fm_basic_scripts_and_styles()
