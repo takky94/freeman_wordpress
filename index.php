@@ -7,7 +7,7 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <?php wp_head(); // 削除禁止 ?>
+  <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -20,6 +20,21 @@
     <main class="main">
       <!-- メインビジュアル -->
       <section class="hero">
+        <picture class="hero__key">
+          <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider01.webp"
+            media="(min-width:769px)" />
+          <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider01.png" media="(min-width:769px)" />
+          <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider02.webp"
+            media="(min-width:769px)" />
+          <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider02.png" media="(min-width:769px)" />
+          <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider03.webp"
+            media="(min-width:769px)" />
+          <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider03.png" media="(min-width:769px)" />
+          <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider04.webp"
+            media="(min-width:769px)" />
+          <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider04.png" media="(min-width:769px)" />
+          <img src="<?= get_template_directory_uri(); ?>/images/top/top-slider01.png" alt="">
+        </picture>
         <div class="news">
         </div>
       </section>

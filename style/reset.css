@@ -1,11 +1,3 @@
-@charset "UTF-8";
-/*
-Theme Name: Freeman
-Description: 日本フリーマン株式会社公式ホームページ
-Author: Neutral Works Inc.
-Author URI: https://n-works.link/
-Version: 1.0.0
---------------------------------------------------------------------------------------------*/
 /* A Modern CSS Reset
 --------------------------------------------------------------------------------------------*/
 *,
@@ -78,11 +70,4 @@ select {
             transition-duration: .01ms !important;
   }
 }
-
-/* Header
---------------------------------------------------------------------------------------------*/
-.header {
-  height: 100px;
-  position: fixed;
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=reset.css.map */
