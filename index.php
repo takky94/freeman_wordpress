@@ -47,6 +47,10 @@
     <main class="main">
       <!-- メインビジュアル -->
       <section class="hero">
+        <h2 class="hero__heading">
+          <span>To Be POSSIBLE</span>
+          <span>モノづくりに無限の可能性を</span>
+        </h2>
         <picture class="hero__key">
           <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider01.webp" media="(min-width:769px)" />
           <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider01.png" media="(min-width:769px)" />

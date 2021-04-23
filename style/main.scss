@@ -6,3 +6,27 @@
 .main{
   margin-top: $header-height-pc;
 }
+
+// FV
+.hero{
+  position: relative;
+
+  // スライドショー
+  &__key{
+    width: 100%;
+    img{
+      height: 100%;
+      filter: brightness(0.6);
+      width: 100%;
+    }
+  }
+
+  // 見出し
+  &__heading{
+    bottom: calc(50% - 10%);
+    color: #fff;
+    left: 40px;
+    position: absolute;
+    z-index: 1;
+  }
+}

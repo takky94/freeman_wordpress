@@ -85,6 +85,7 @@ select {
   background: #fff;
   height: 100px;
   position: fixed;
+  top: 0;
   width: 100%;
 }
 
@@ -138,6 +139,35 @@ select {
           justify-content: center;
   height: 100%;
   margin-left: 50px;
+}
+
+/* Main
+--------------------------------------------------------------------------------------------*/
+.main {
+  margin-top: 100px;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero__key {
+  width: 100%;
+}
+
+.hero__key img {
+  height: 100%;
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
+  width: 100%;
+}
+
+.hero__heading {
+  bottom: calc(50% - 10%);
+  color: #fff;
+  left: 40px;
+  position: absolute;
+  z-index: 1;
 }
 
 .dev {
