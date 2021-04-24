@@ -79,6 +79,46 @@ select {
   }
 }
 
+/* Common
+--------------------------------------------------------------------------------------------*/
+.c-main {
+  color: #eb2936;
+}
+
+.center {
+  text-align: center;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 769px) {
+  .pc__none {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .sp__none {
+    display: none !important;
+  }
+}
+
 /* Header
 --------------------------------------------------------------------------------------------*/
 .header {
@@ -131,7 +171,7 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #EB2936;
+  background: #eb2936;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,7 +229,7 @@ select {
 }
 
 .case {
-  padding: 60px 0;
+  padding: 60px 0 100px;
 }
 
 .case__list {
@@ -209,6 +249,74 @@ select {
   100% {
     background-position: -1000px 0;
   }
+}
+
+.lead {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: center top/cover url("./images/top/lead-background.png") no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 200px 0 85px;
+}
+
+.lead__heading {
+  font-size: 44px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.lead__text {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.lead__achievement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 60px;
+}
+
+.lead__achievement .block {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% / 3);
+}
+
+.lead__achievement .block__left {
+  font-size: 22px;
+}
+
+.lead__achievement .block__right {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.lead__achievement .block__right .big {
+  font-size: 52px;
+}
+
+.lead__achievement .block__right .small {
+  font-size: 22px;
+}
+
+.lead__button {
+  margin-top: 60px;
 }
 
 .dev {

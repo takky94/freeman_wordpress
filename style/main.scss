@@ -51,7 +51,7 @@
 
 // 提携企業一覧
 .case{
-  padding: 60px 0;
+  padding: 60px 0 100px;
   &__list{
     animation: case_slide 30s linear infinite;
     background: left top / cover url("./images/top/case-list.png") repeat-x;
@@ -62,5 +62,54 @@
 @keyframes case_slide{
   100%{
     background-position: -1000px 0;
+  }
+}
+
+// 手のひらから宇宙まで
+.lead{
+  align-items: center;
+  background: center top / cover url("./images/top/lead-background.png") no-repeat;
+  display: flex;
+  justify-content: center;
+  padding: 200px 0 85px;
+
+  &__heading{
+    font-size: 44px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+
+  &__text{
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  &__achievement{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+
+    .block{
+      align-items: baseline;
+      display: flex;
+      width: calc(100% / 3);
+      &__left{
+        font-size: 22px;
+      }
+      &__right{
+        flex-grow: 1;
+        .big{
+          font-size: 52px;
+        }
+        .small{
+          font-size: 22px;
+        }
+      }
+    }
+  }
+
+  &__button{
+    margin-top: 60px;
   }
 }

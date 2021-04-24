@@ -69,32 +69,48 @@
       <!-- 導入企業様 -->
       <section class="case">
         <div class="case__list dev">
-          <?php /*
-          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/arrk.png" alt="" /></li>
-          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/isuzu.png" alt="" /></li>
-          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/ihi.png" alt="" /></li>
-          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/castem.png" alt="" /></li>
-          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/kingpart.png" alt="" />
-          </li>
-          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/keiuno.png" alt="" /></li>
-          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/seaforce.png" alt="" />
-          </li>
-          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/juki.png" alt="" /></li>
-          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/daido.png" alt="" /></li>
-          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/taguchikeihan.png"
-              alt="" /></li>
-          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/nidak.png" alt="" /></li>
-          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/hitachi.png" alt="" />
-          </li>
-          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/hinode.png" alt="" /></li>
-          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/honda.png" alt="" /></li>
-          */ ?>
-          <!-- <img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/case-list.png" alt="" /> -->
         </div>
       </section>
       <!-- // 導入企業様 -->
       <!-- // 手のひらから宇宙まで -->
-      <section class="lead"></section>
+      <section class="lead">
+        <div class="lead__box">
+          <h2 class="lead__heading center dev"><span class="c-main">手</span>のひらから<span class="c-main">宇</span>宙まで</h2>
+          <p class="lead__text center dev">国内トップクラスの品揃えと提案力で、<br class="pc__none" />企業のあらゆる創造をサポートします。</p>
+          <!-- lead__achivment -->
+          <div class="lead__achievement dev">
+            <!-- block -->
+            <div class="block">
+              <div class="block__left dev">創立</div>
+              <div class="block__right dev">
+                <span class="c-main big dev">1973</span>
+                <span class="small dev">年</span>
+              </div>
+            </div>
+            <!-- // block -->
+            <!-- block -->
+            <div class="block">
+              <div class="block__left dev">創立</div>
+              <div class="block__right dev">
+                <span class="c-main big dev">1973</span>
+                <span class="small dev">年</span>
+              </div>
+            </div>
+            <!-- // block -->
+            <!-- block -->
+            <div class="block">
+              <div class="block__left dev">創立</div>
+              <div class="block__right dev">
+                <span class="c-main big dev">1973</span>
+                <span class="small dev">年</span>
+              </div>
+            </div>
+            <!-- // block -->
+          </div>
+          <!-- // lead__achivment -->
+          <a href="#">社長ご挨拶・企業理念</a>
+        </div>
+      </section>
       <!-- // 手のひらから宇宙まで -->
       <!-- リンクリスト -->
       <nav class="menu"></nav>

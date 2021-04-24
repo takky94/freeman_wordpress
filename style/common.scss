@@ -1,0 +1,38 @@
+/* Common
+--------------------------------------------------------------------------------------------*/
+
+@import "./config";
+
+// 色
+.c-main{
+  color: $c-main;
+}
+
+// テキスト
+.center{
+  text-align: center;
+}
+
+// レイアウト
+.flex{
+  display: flex;
+}
+
+.flex-center{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+// レスポンシブ
+@media (min-width: #{$pc}){
+  .pc__none{
+    display: none !important;
+  }
+}
+
+@media (max-width: #{$sp}){
+  .sp__none{
+    display: none !important;
+  }
+}
