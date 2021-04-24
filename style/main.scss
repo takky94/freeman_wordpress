@@ -93,7 +93,8 @@
     .block{
       align-items: baseline;
       display: flex;
-      width: calc(100% / 3);
+      line-height: 1;
+
       &__left{
         font-size: 22px;
       }

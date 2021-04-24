@@ -90,25 +90,25 @@
             <!-- // block -->
             <!-- block -->
             <div class="block">
-              <div class="block__left dev">創立</div>
+              <div class="block__left dev"><span>取引先</span><br /><span>企業国内外</span></div>
               <div class="block__right dev">
-                <span class="c-main big dev">1973</span>
-                <span class="small dev">年</span>
+                <span class="c-main big dev">400</span>
+                <span class="small dev">社</span>
               </div>
             </div>
             <!-- // block -->
             <!-- block -->
             <div class="block">
-              <div class="block__left dev">創立</div>
+              <div class="block__left dev">海外取引</div>
               <div class="block__right dev">
-                <span class="c-main big dev">1973</span>
-                <span class="small dev">年</span>
+                <span class="c-main big dev">16</span>
+                <span class="small dev">カ国</span>
               </div>
             </div>
             <!-- // block -->
           </div>
           <!-- // lead__achivment -->
-          <a href="#">社長ご挨拶・企業理念</a>
+          <a href="#" class="lead__button c-main-bg">社長ご挨拶・企業理念</a>
         </div>
       </section>
       <!-- // 手のひらから宇宙まで -->

@@ -110,7 +110,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: calc(100% / 3);
+  line-height: 1;
 }
 
 .lead__achievement .block__left {
