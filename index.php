@@ -52,15 +52,15 @@
           <span>モノづくりに無限の可能性を</span>
         </h2>
         <picture class="hero__key">
-          <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider01.webp" media="(min-width:769px)" />
-          <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider01.png" media="(min-width:769px)" />
-          <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider02.webp" media="(min-width:769px)" />
-          <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider02.png" media="(min-width:769px)" />
-          <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider03.webp" media="(min-width:769px)" />
-          <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider03.png" media="(min-width:769px)" />
-          <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider04.webp" media="(min-width:769px)" />
-          <source srcset="<?= get_template_directory_uri(); ?>/images/top/top-slider04.png" media="(min-width:769px)" />
-          <img src="<?= get_template_directory_uri(); ?>/images/top/top-slider01.png" alt="">
+          <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/01.webp" media="(min-width:769px)" />
+          <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/01.png" media="(min-width:769px)" />
+          <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/02.webp" media="(min-width:769px)" />
+          <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/02.png" media="(min-width:769px)" />
+          <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/03.webp" media="(min-width:769px)" />
+          <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/03.png" media="(min-width:769px)" />
+          <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/04.webp" media="(min-width:769px)" />
+          <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/04.png" media="(min-width:769px)" />
+          <img src="<?= get_template_directory_uri(); ?>/images/top/slide/01.png" alt="">
         </picture>
         <div class="news">
         </div>
@@ -68,6 +68,29 @@
       <!-- // メインビジュアル -->
       <!-- 導入企業様 -->
       <section class="case">
+        <div class="case__list dev">
+          <?php /*
+          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/arrk.png" alt="" /></li>
+          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/isuzu.png" alt="" /></li>
+          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/ihi.png" alt="" /></li>
+          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/castem.png" alt="" /></li>
+          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/kingpart.png" alt="" />
+          </li>
+          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/keiuno.png" alt="" /></li>
+          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/seaforce.png" alt="" />
+          </li>
+          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/juki.png" alt="" /></li>
+          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/daido.png" alt="" /></li>
+          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/taguchikeihan.png"
+              alt="" /></li>
+          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/nidak.png" alt="" /></li>
+          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/hitachi.png" alt="" />
+          </li>
+          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/hinode.png" alt="" /></li>
+          <li class="dev"><img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/honda.png" alt="" /></li>
+          */ ?>
+          <!-- <img src="<?= get_template_directory_uri(); ?>/images/top/case-logo/case-list.png" alt="" /> -->
+        </div>
       </section>
       <!-- // 導入企業様 -->
       <!-- // 手のひらから宇宙まで -->

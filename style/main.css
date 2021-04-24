@@ -9,13 +9,30 @@
 }
 
 .hero__key {
+  height: calc(100vh - 100px);
+  position: relative;
   width: 100%;
 }
 
 .hero__key img {
   height: 100%;
-  -webkit-filter: brightness(0.6);
-          filter: brightness(0.6);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  width: 100%;
+}
+
+.hero__key::before {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 100%;
 }
 
@@ -25,5 +42,28 @@
   left: 40px;
   position: absolute;
   z-index: 1;
+}
+
+.case {
+  padding: 60px 0;
+}
+
+.case__list {
+  -webkit-animation: case_slide 30s linear infinite;
+          animation: case_slide 30s linear infinite;
+  background: left top/cover url("./images/top/case-list.png") repeat-x;
+  height: 50px;
+}
+
+@-webkit-keyframes case_slide {
+  100% {
+    background-position: -1000px 0;
+  }
+}
+
+@keyframes case_slide {
+  100% {
+    background-position: -1000px 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -13,10 +13,28 @@
 
   // スライドショー
   &__key{
+    height: calc(100vh - #{$header-height-pc});
+    position: relative;
     width: 100%;
+
     img{
       height: 100%;
-      filter: brightness(0.6);
+      object-fit: cover;
+      object-position: center center;
+      width: 100%;
+    }
+
+    // filter代わり
+    &::before{
+      background-color: rgba(0, 0, 0, .5);
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
       width: 100%;
     }
   }
@@ -28,5 +46,21 @@
     left: 40px;
     position: absolute;
     z-index: 1;
+  }
+}
+
+// 提携企業一覧
+.case{
+  padding: 60px 0;
+  &__list{
+    animation: case_slide 30s linear infinite;
+    background: left top / cover url("./images/top/case-list.png") repeat-x;
+    height: 50px;
+  }
+}
+
+@keyframes case_slide{
+  100%{
+    background-position: -1000px 0;
   }
 }
