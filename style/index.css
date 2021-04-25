@@ -224,14 +224,20 @@
   width: 50%;
 }
 
-#index .detail__text--heading {
+#index .detail__text--headingEn {
   font-size: 72px;
   font-weight: bold;
 }
 
-#index .detail__text--headingSub {
+#index .detail__text--headingJp {
   color: #96a8be;
   font-size: 20px;
   margin-top: 30px;
+}
+
+#index .detail__text--headingSub {
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 85px;
 }
 /*# sourceMappingURL=index.css.map */

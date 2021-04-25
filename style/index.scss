@@ -199,12 +199,19 @@
 
     &__text{
       &--heading{
+        &En{
         font-size: 72px;
         font-weight: bold;
-        &Sub{
+        }
+        &Jp{
           color: #96a8be;
           font-size: 20px;
           margin-top: 30px;
+        }
+        &Sub{
+          font-size: 35px;
+          font-weight: bold;
+          margin-top: 85px;
         }
       }
     }

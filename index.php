@@ -174,11 +174,13 @@
       <!-- 型製品 -->
       <section class="mold" id="mold">
         <div class="container">
-          <!-- section__header -->
+          <!-- detail -->
           <div class="detail flex">
             <div class="detail__text">
-              <h2 class="detail__text--heading">MOLD</h2>
-              <p class="detail__text--headingSub bold">型製品</p>
+              <h2 class="detail__text--headingEn dev">MOLD</h2>
+              <p class="detail__text--headingJp bold dev">型製品</p>
+              <p class="detail__text--headingSub dev">無限に広がる表現力</p>
+              <p class="detail__text--description dev">デザインから試作開発、量産にいたる全ての領域で、モノづくりに必要な技術や製品を提案し、イメージの具体化や納期改善、コストダウンに貢献します。</p>
             </div>
             <div class="detail__image">
               <picture>
@@ -186,21 +188,93 @@
               </picture>
             </div>
           </div>
-          <!-- // section__header -->
+          <!-- // detail -->
         </div>
       </section>
       <!-- // 型製品 -->
       <!-- 砂型鋳造用資材・原材料 -->
-      <section class="sand-casting" id="sand-casting"></section>
+      <section class="sand-casting" id="sand-casting">
+        <div class="container">
+          <!-- detail -->
+          <div class="detail flex">
+            <div class="detail__text">
+              <h2 class="detail__text--headingEn dev">SAND CASTING</h2>
+              <p class="detail__text--headingJp bold dev">砂型鋳造用資材・原材料</p>
+              <p class="detail__text--headingSub dev">ヨーロッパクオリティで<br />高品質な鋳物作りを</p>
+              <p class="detail__text--description dev">本場ヨーロッパの鋳物づくりを支えるLANIKセラミックフォームフィルターを筆頭に、海外から独自ルートで仕入れる最良の鋳造用資材を多岐にわたってお取り扱いしております。</p>
+            </div>
+            <div class="detail__image">
+              <picture>
+                <img src="<?= get_template_directory_uri(); ?>/images/top/sand-casting.png" alt="" />
+              </picture>
+            </div>
+          </div>
+          <!-- // detail -->
+        </div>
+      </section>
       <!-- // 砂型鋳造用資材・原材料 -->
       <!-- 精密鋳造用材料 -->
-      <section class="investment-casting" id="investment-casting"></section>
+      <section class="investment-casting" id="investment-casting">
+        <div class="container">
+          <!-- detail -->
+          <div class="detail flex">
+            <div class="detail__text">
+              <h2 class="detail__text--headingEn dev">INVESTMENT CASTING</h2>
+              <p class="detail__text--headingJp bold dev">精密鋳造用材料</p>
+              <p class="detail__text--headingSub dev">高付加価値な製品<br />ラインナップと技術サービス</p>
+              <p class="detail__text--description dev">国内外より厳選した、精密鋳造プロセスに欠かせない各種材料を取り揃え、最適なソリューションを提供。航空機・自動車・産業用ガスタービン・一般産業機械などの基幹産業を支えています。</p>
+            </div>
+            <div class="detail__image">
+              <picture>
+                <img src="<?= get_template_directory_uri(); ?>/images/top/investment-casting.png" alt="" />
+              </picture>
+            </div>
+          </div>
+          <!-- // detail -->
+        </div>
+      </section>
       <!-- // 精密鋳造用材料 -->
       <!-- ジュエリーキャスト用副資材 -->
-      <section class="jewelry" id="jewelry"></section>
+      <section class="jewelry" id="jewelry">
+        <div class="container">
+          <!-- detail -->
+          <div class="detail flex">
+            <div class="detail__text">
+              <h2 class="detail__text--headingEn dev">JEWELRY</h2>
+              <p class="detail__text--headingJp bold dev">ジュエリーキャスト用副資材</p>
+              <p class="detail__text--headingSub dev">業界のスタンダードとして</p>
+              <p class="detail__text--description dev">ジュエリー業界で最も著名かつ実績のある、FreemanワックスおよびR&R埋没材の豊富なラインナップの中から、ご要望にあわせて提案します。その他関連材、設備もお任せください。</p>
+            </div>
+            <div class="detail__image">
+              <picture>
+                <img src="<?= get_template_directory_uri(); ?>/images/top/jewelry.png" alt="" />
+              </picture>
+            </div>
+          </div>
+          <!-- // detail -->
+        </div>
+      </section>
       <!-- // ジュエリーキャスト用副資材 -->
       <!-- 新たな取り組み -->
-      <section class="new-field" id="new-field"></section>
+      <section class="new-field" id="new-field">
+        <div class="container">
+          <!-- detail -->
+          <div class="detail flex">
+            <div class="detail__text">
+              <h2 class="detail__text--headingEn dev">NEW FIELD</h2>
+              <p class="detail__text--headingJp bold dev">新たな取り組み</p>
+              <p class="detail__text--headingSub dev">SDGsへの貢献</p>
+              <p class="detail__text--description dev">ただの材料屋ではありません、明日の地球・働く人たちのことを考えたご提案。臭気対策・ミネラルキャスティング・CO2洗浄システムなど、環境を考える方に向けた新しい技術のご紹介です。</p>
+            </div>
+            <div class="detail__image">
+              <picture>
+                <img src="<?= get_template_directory_uri(); ?>/images/top/new-field.png" alt="" />
+              </picture>
+            </div>
+          </div>
+          <!-- // detail -->
+        </div>
+      </section>
       <!-- // 新たな取り組み -->
     </main>
     <!-- // main -->
