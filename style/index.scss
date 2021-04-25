@@ -1,0 +1,212 @@
+/* Main
+--------------------------------------------------------------------------------------------*/
+
+@import "./config.scss";
+
+.main{
+  margin-top: $header-height-pc;
+}
+
+#index{
+  // FV
+  .hero{
+    position: relative;
+
+    // スライドショー
+    &__key{
+      height: calc(100vh - #{$header-height-pc});
+      position: relative;
+      width: 100%;
+
+      img{
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        width: 100%;
+      }
+
+      // filter代わり
+      &::before{
+        background-color: rgba(0, 0, 0, .5);
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+      }
+    }
+
+    // 見出し
+    &__heading{
+      bottom: calc(50% - 10%);
+      color: #fff;
+      left: 40px;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+
+  // 提携企業一覧
+  .case{
+    padding: 60px 0 100px;
+    &__list{
+      animation: case_slide 300s linear infinite;
+      background: left top / cover url("./images/top/case-list.png") repeat-x;
+      height: 50px;
+    }
+  }
+
+  @keyframes case_slide{
+    100%{
+      background-position: -5383px 0;
+    }
+  }
+
+  // 手のひらから宇宙まで
+  .lead{
+    align-items: center;
+    background: center top / cover url("./images/top/lead-background.png") no-repeat;
+    display: flex;
+    justify-content: center;
+    padding: 200px 0 85px;
+
+    &__heading{
+      font-size: 44px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      text-align: center;
+    }
+
+    &__text{
+      font-size: 20px;
+      margin-top: 30px;
+    }
+
+    &__achievement{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 60px;
+
+      .block{
+        display: flex;
+        line-height: 1;
+        &:not(:first-child){
+          margin-left: 90px;
+        }
+
+        &__left{
+          font-size: 22px;
+          text-align: left;
+          img{
+            display: inline-block;
+            vertical-align: bottom;
+          }
+        }
+        &__right{
+          flex-grow: 1;
+          margin-left: 15px;
+          .big{
+            font-size: 52px;
+          }
+          .small{
+            font-size: 22px;
+          }
+        }
+      }
+    }
+
+    &__button{
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 60px;
+      padding: 20px 30px;
+    }
+  }
+
+  // メニュー
+  .menu{
+    height: 508px;
+    position: relative;
+
+    .container{
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .diamond{
+      background: #ccc;
+      height: 226.27416998px; // 320px / √2
+      margin: auto;
+      position: absolute;
+      transform: rotate(45deg);
+      transform-origin: 50% 50%;
+      width: 226.27416998px; // 320px / √2
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3){
+        top: 45px;
+      }
+      &:nth-child(4),
+      &:nth-child(5){
+        bottom: 45px;
+        left: 0;
+        right: 0;
+      }
+      &:nth-child(1){
+        left: 45px;
+      }
+      &:nth-child(2){
+        left: 0;
+        right: 0;
+      }
+      &:nth-child(3){
+        right: 45px;
+      }
+      &:nth-child(4){
+        margin-left: calc(45px + 160px + 30px);
+      }
+      &:nth-child(5){
+        margin-right: calc(45px + 160px + 30px);
+      }
+
+      a{
+        display: block;
+        height: 100%;
+      }
+
+      &__inner{
+        height: 100%;
+        transform: rotate(-45deg);
+      }
+    } // diamond
+  }
+
+  // セクション内共通スタイル
+  .detail{
+    align-items: center;
+    display: flex;
+    margin-top: 100px;
+
+    &__image,
+    &__text{
+      width: 50%;
+    }
+
+    &__text{
+      &--heading{
+        font-size: 72px;
+        font-weight: bold;
+        &Sub{
+          color: #96a8be;
+          font-size: 20px;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

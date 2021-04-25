@@ -20,8 +20,8 @@ dl,
 dd{
   margin: 0;
 }
-ul[role="list"],
-ol[role="list"]{
+ul,
+ol{
   list-style: none;
 }
 html:focus-within{
@@ -32,8 +32,8 @@ body{
   min-height: 100vh;
   text-rendering: optimizeSpeed;
 }
-a:not([class]){
-  text-decoration-skip-ink: auto;
+a{
+  text-decoration: none;
 }
 img,
 picture{

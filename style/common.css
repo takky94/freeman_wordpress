@@ -8,6 +8,14 @@
   background-color: #eb2936;
 }
 
+.c-white {
+  color: #fff;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 .center {
   text-align: center;
 }
@@ -30,6 +38,16 @@
           justify-content: center;
 }
 
+.container {
+  margin: auto;
+  max-width: 1080px;
+  width: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
 @media (min-width: 769px) {
   .pc__none {
     display: none !important;
@@ -40,5 +58,17 @@
   .sp__none {
     display: none !important;
   }
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
 }
 /*# sourceMappingURL=common.css.map */

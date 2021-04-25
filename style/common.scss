@@ -11,12 +11,20 @@
   background-color: $c-main;
 }
 
+.c-white{
+  color: #fff;
+}
+
 // テキスト
+.bold{
+  font-weight: bold;
+}
+
+// レイアウト
 .center{
   text-align: center;
 }
 
-// レイアウト
 .flex{
   display: flex;
 }
@@ -25,6 +33,16 @@
   align-items: center;
   display: flex;
   justify-content: center;
+}
+
+.container{
+  margin: auto;
+  max-width: 1080px;
+  width: 100%;
+}
+
+.relative{
+  position: relative;
 }
 
 // レスポンシブ
@@ -38,4 +56,16 @@
   .sp__none{
     display: none !important;
   }
+}
+
+// 余白
+
+.mt-5{
+  margin-top: 5px;
+}
+.mt-10{
+  margin-top: 10px;
+}
+.mt-20{
+  margin-top: 20px;
 }

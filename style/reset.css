@@ -22,8 +22,8 @@ dd {
   margin: 0;
 }
 
-ul[role="list"],
-ol[role="list"] {
+ul,
+ol {
   list-style: none;
 }
 
@@ -37,8 +37,8 @@ body {
   text-rendering: optimizeSpeed;
 }
 
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+a {
+  text-decoration: none;
 }
 
 img,
