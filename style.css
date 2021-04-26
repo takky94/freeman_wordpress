@@ -46,6 +46,7 @@ body {
 }
 
 a {
+  color: #333;
   text-decoration: none;
 }
 
@@ -284,8 +285,8 @@ body {
   opacity: 0;
   position: fixed;
   top: 100px;
-  -webkit-transition: 1s all;
-  transition: 1s all;
+  -webkit-transition: .4s all;
+  transition: .4s all;
   visibility: hidden;
   width: 100%;
   z-index: 99;
@@ -315,7 +316,7 @@ body {
 
 .header__menu .header__list > li .sub .container > ul > li a {
   color: #fff;
-  padding-left: 50px;
+  padding-left: 20px;
   position: relative;
 }
 
@@ -369,7 +370,6 @@ body {
   height: calc(100vh - 100px);
   position: relative;
   width: 100%;
-  /*=== スライドのアニメーション ========================= */
 }
 
 #index .hero__slide picture:nth-of-type(1) img {
@@ -473,6 +473,36 @@ body {
 
 #index .hero__heading .small {
   font-size: 3vw;
+}
+
+#index .hero__news {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  padding: 25px 50px;
+  position: absolute;
+}
+
+#index .hero__news--title {
+  font-size: 18px;
+}
+
+#index .hero__news--date {
+  margin-left: 30px;
+}
+
+#index .hero__news--postTitle {
+  margin-left: 5px;
+}
+
+#index .hero__news--link {
+  margin-left: 160px;
 }
 
 #index .case {

@@ -57,8 +57,6 @@
         top: 0;
         width: 100%;
       }
-
-      /*=== スライドのアニメーション ========================= */
       @keyframes slideAnime{
         0%{
           opacity: 0;
@@ -104,7 +102,29 @@
         font-size: 3vw;
       }
     }
-  }
+
+    &__news{
+      align-items: center;
+      background: rgba(0, 0, 0, .9);
+      bottom: 0;
+      display: flex;
+      font-size: 14px;
+      padding: 25px 50px;
+      position: absolute;
+      &--title{
+        font-size: 18px;
+      }
+      &--date{
+        margin-left: 30px;
+      }
+      &--postTitle{
+        margin-left: 5px;
+      }
+      &--link{
+        margin-left: 160px;
+      }
+    }
+  } // END FV
 
   // 提携企業一覧
   .case{
@@ -120,7 +140,7 @@
     100%{
       background-position: -5383px 0;
     }
-  }
+  } // END 提携企業一覧
 
   // 手のひらから宇宙まで
   .lead{
@@ -174,7 +194,7 @@
         }
       }
     }
-  }
+  } // END 手のひらから宇宙まで
 
   // メニュー
   .menu{
@@ -233,7 +253,7 @@
         transform: rotate(-45deg);
       }
     } // diamond
-  }
+  } //END メニュー
 
   // セクション内共通スタイル
   .detail{
@@ -296,5 +316,5 @@
         margin-top: 30px;
       }
     }
-  }
+  } // END セクション内共通スタイル
 }

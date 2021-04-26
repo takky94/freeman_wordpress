@@ -86,8 +86,8 @@
   opacity: 0;
   position: fixed;
   top: 100px;
-  -webkit-transition: 1s all;
-  transition: 1s all;
+  -webkit-transition: .4s all;
+  transition: .4s all;
   visibility: hidden;
   width: 100%;
   z-index: 99;
