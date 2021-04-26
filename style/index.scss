@@ -44,9 +44,13 @@
     &__heading{
       bottom: calc(50% - 10%);
       color: #fff;
+      font-size: 10vw;
       left: 40px;
       position: absolute;
       z-index: 1;
+      .small{
+        font-size: 3vw;
+      }
     }
   }
 
@@ -76,7 +80,7 @@
 
     &__heading{
       font-size: 44px;
-      font-weight: 300;
+      font-weight: 100;
       letter-spacing: 3px;
       text-align: center;
     }
@@ -117,13 +121,6 @@
           }
         }
       }
-    }
-
-    &__button{
-      display: inline-block;
-      font-size: 16px;
-      margin-top: 60px;
-      padding: 20px 30px;
     }
   }
 
@@ -192,6 +189,15 @@
     display: flex;
     margin-top: 100px;
 
+    &-reverse{
+      .detail__image{
+        order: 1;
+      }
+      .detail__text{
+        order: 2;
+      }
+    }
+
     &__image,
     &__text{
       width: 50%;
@@ -200,8 +206,27 @@
     &__text{
       &--heading{
         &En{
-        font-size: 72px;
-        font-weight: bold;
+          font-size: 72px;
+          font-weight: bold;
+          line-height: 1;
+          transform: scale(.8, 1);
+          transform-origin: top left;
+          width: 125%;
+          // 切り抜き文字
+          .decoration{
+            color: #fff;
+            position: relative;
+            &::before{
+              border: 10px solid #fff;
+              content: "";
+              display: block;
+              height: calc(100% + 3px);
+              left: -3px;
+              position: absolute;
+              top: -3px;
+              width: calc(100% + 3px);
+            }
+          }
         }
         &Jp{
           color: #96a8be;
@@ -211,8 +236,12 @@
         &Sub{
           font-size: 35px;
           font-weight: bold;
-          margin-top: 85px;
+          margin-top: 80px;
         }
+      }
+      &--description{
+        line-height: 2;
+        margin-top: 30px;
       }
     }
   }
