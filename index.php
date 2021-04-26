@@ -23,26 +23,109 @@
         <div class="header__logo dev">
           <?php $titleTag = (is_home() || is_front_page()) ? "h1" : "div"; ?>
           <<?= $titleTag; ?> class="logo">
-            <a href="<?= home_url(); ?>" class="dev">Logo</a>
+            <a href="<?= home_url(); ?>" class="dev">
+              <img src="<?= get_template_directory_uri(); ?>/images/logo.svg" alt="株式会社フリーマン ロゴ">
+            </a>
           </<?= $titleTag; ?>>
         </div>
         <nav class="header__menu dev">
           <div>
             <div class="header__lang dev">
-              <span>JP EN CH</span>
+              <span class="select">JP EN CH</span>
               <input type="text" class="search" />
             </div>
             <ul class="header__list dev">
-              <li>型製品</li>
-              <li>砂型鋳造</li>
-              <li>精密鋳造</li>
-              <li>ジュエリー</li>
-              <li>新たな取り組み</li>
-              <li>会社概要</li>
+              <li>
+                <a href="#">型製品</a>
+                <div class="sub">
+                  <div class="container flex">
+                    <p class="sub__title c-main font-robot">MOLD</p>
+                    <ul data-count="10">
+                      <li><a href="#">デザイン吐出</a></li>
+                      <li><a href="#">デザイン切削</a></li>
+                      <li><a href="#">試作注型樹脂</a></li>
+                      <li><a href="#">試作型材</a></li>
+                      <li><a href="#">試作シリコン</a></li>
+                      <li><a href="#">量産インバー</a></li>
+                      <li><a href="#">量産砂型鋳造</a></li>
+                      <li><a href="#">量産精密鋳造</a></li>
+                      <li><a href="#">量産ジュエリー</a></li>
+                      <li><a href="#">特殊</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">砂型鋳造</a>
+                <div class="sub">
+                  <div class="container flex">
+                    <p class="sub__title c-main font-robot">SAND CASTING</p>
+                    <ul>
+                      <li><a href="#">鋳造用フィルター</a></li>
+                      <li><a href="#">スリープ</a></li>
+                      <li><a href="#">方案用ゲート</a></li>
+                      <li><a href="#">非鉄用塗型</a></li>
+                      <li><a href="#">各種対火物</a></li>
+                      <li><a href="#">アルミ原材料</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">精密鋳造</a>
+                <div class="sub">
+                  <div class="container flex">
+
+                    <p class="sub__title c-main font-robot">INVESTMENT CASTING</p>
+                    <ul>
+                      <li><a href="#">WAX</a></li>
+                      <li><a href="#">離散型・洗浄剤</a></li>
+                      <li><a href="#">バインダー</a></li>
+                      <li><a href="#">砂</a></li>
+                      <li><a href="#">その他</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">ジュエリー</a>
+                <div class="sub">
+                  <div class="container flex">
+                    <p class="sub__title c-main font-robot">JEWELRY</p>
+                    <ul>
+                      <li><a href="#">インジェクションWAX</a></li>
+                      <li><a href="#">切削WAX</a></li>
+                      <li><a href="#">埋没材</a></li>
+                      <li><a href="#">シリコン</a></li>
+                      <li><a href="#">ツールマット</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">新たな取り組み</a>
+                <div class="sub">
+                  <div class="container flex">
+                    <p class="sub__title c-main font-robot">NEW FIELD</p>
+                    <ul>
+                      <li><a href="#">消臭剤</a></li>
+                      <li><a href="#">ミネラルキャスティング</a></li>
+                      <li><a href="#">CO2洗浄システム</a></li>
+                      <li><a href="#">ホットメルト</a></li>
+                      <li><a href="#">暑さ対策</a></li>
+                      <li><a href="#">電動アシスト台車</a></li>
+                      <li><a href="#">ベアリングセンサーシステム</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">会社概要</a>
+              </li>
             </ul>
           </div>
-          <div class="button dev">
-            <a href="#">CONTACT</a>
+          <div class="header__button dev">
+            <a href="#">CONTACT<br /><img src="<?= get_template_directory_uri(); ?>/images/top/icon/mail.svg" /></a>
           </div>
         </nav>
       </div>
@@ -57,17 +140,24 @@
           <br />
           <span class="small">モノづくりに無限の可能性を</span>
         </h2>
-        <picture class="hero__key">
-          <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/01.webp" media="(min-width:769px)" />
-          <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/01.png" media="(min-width:769px)" />
-          <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/02.webp" media="(min-width:769px)" />
-          <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/02.png" media="(min-width:769px)" />
-          <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/03.webp" media="(min-width:769px)" />
-          <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/03.png" media="(min-width:769px)" />
-          <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/04.webp" media="(min-width:769px)" />
-          <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/04.png" media="(min-width:769px)" />
-          <img src="<?= get_template_directory_uri(); ?>/images/top/slide/01.png" alt="">
-        </picture>
+        <div class="hero__slide">
+          <picture>
+            <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/01.webp" media="(min-width:769px)" />
+            <img src="<?= get_template_directory_uri(); ?>/images/top/slide/01.png" alt="">
+          </picture>
+          <picture>
+            <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/02.webp" media="(min-width:769px)" />
+            <img src="<?= get_template_directory_uri(); ?>/images/top/slide/02.png" />
+          </picture>
+          <picture>
+            <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/03.webp" media="(min-width:769px)" />
+            <img src="<?= get_template_directory_uri(); ?>/images/top/slide/03.png" />
+          </picture>
+          <picture>
+            <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/04.webp" media="(min-width:769px)" />
+            <img src="<?= get_template_directory_uri(); ?>/images/top/slide/04.png" />
+          </picture>
+        </div>
         <div class="news">
         </div>
       </section>
