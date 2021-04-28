@@ -4,6 +4,7 @@
 @import "./config.scss";
 
 // サブメニュー内子要素1段あたりの個数(横幅固定のため)
+$menu-list-count: 5;
 
 .header{
   background: #fff;
@@ -81,14 +82,23 @@
             }
             & > ul{
               display: flex;
+              flex-grow: 1;
               flex-wrap: wrap;
-              margin-left: auto;
-              width: 60%;
+              margin-left: 200px;
               & > li{
-                width: calc(100% / 5);
+                margin-top: 15px;
+                padding-left: calc(14px / 2);
+                width: calc(100% / #{$menu-list-count});
+                &::before{
+                  color: $c-main;
+                  content: ">";
+                  display: inline-block;
+                }
+
                 a{
                   color: #fff;
-                  padding-left: 20px;
+                  font-size: 14px;
+                  margin-left: calc(14px / 2);
                   position: relative;
                 }
               }

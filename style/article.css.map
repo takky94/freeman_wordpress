@@ -1,9 +1,10 @@
 {
     "version": 3,
-    "mappings": "AAeA;;;EAGE",
+    "mappings": "AAAA;8FAC8F",
     "sources": [
+        "article.scss",
         "config.scss"
     ],
     "names": [],
-    "file": "config.css"
+    "file": "article.css"
 }

@@ -36,7 +36,6 @@ function fm_head_cleanup(){
 ********************************************************************/
 if (!function_exists('fm_basic_scripts_and_styles')){
   function fm_basic_scripts_and_styles() {
-    if (!is_admin()) {
       // メインCSS
       wp_enqueue_style(
         'fm-stylesheet',
@@ -47,7 +46,9 @@ if (!function_exists('fm_basic_scripts_and_styles')){
       );
       // jQuery
       wp_enqueue_script('jquery');
-      // Gutenberg用CSSを読み込まない
+
+    // 未ログイン時Gutenberg用CSSを読み込まない
+    if (!is_admin()) {
       wp_deregister_style('wp-block-library');
       wp_dequeue_style('wp-block-library');
     } //is_admin()

@@ -1,19 +1,22 @@
-<main class="main">
-  <?php if(have_posts()): while(have_posts()): the_post(); ?>
-  <article class="article">
-    <div class="article-info">
-      <time datetime="<?php the_time('Y-m-d' ); ?>"><?php the_time('Y/m/d'); ?></time>
-      <?php
-        $terms = get_the_terms( 'news_category' );
-        foreach( $terms as $term ):
-      ?>
-      <span class="article-category"><?php echo $term->name; ?></span>
-      <?php endforeach; ?>
-    </div>
-    <h2 class="article-title"><?php the_title(); ?></h2>
-    <div class="article-content">
-      <?php the_content(); ?>
-    </div>
-  </article>
-  <?php endwhile; endif; ?>
+<?php
+// カスタム投稿(news)の一覧ページ
+$args = array(
+  'post_type' => 'news', // 投稿タイプを指定
+  'posts_per_page' => 10, // 表示する記事数
+);
+$news_query = new WP_Query( $args );
+?>
+
+<?php get_header(); ?>
+
+<main class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+  <h1>ニュースの個別ページ</h1>
+  <?php if($news_query->have_posts()): while($news_query->have_posts()): $news_query->the_post(); ?>
+  <h2>
+    <?php the_title(); ?>
+  </h2>
+  <div>
+    <?php the_content(); ?>
+  </div>
+  <?php endwhile; endif; wp_reset_postdata(); ?>
 </main>

@@ -8,9 +8,12 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <?php if(is_home() || is_front_page()): ?>
+  <?php if(is_home() || is_front_page()):  ?>
+  <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/index.css" />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Roboto+Condensed&display=swap"
     rel="stylesheet">
+  <?php else: ?>
+  <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/article.css" />
   <?php endif; ?>
   <?php wp_head(); //必須 ?>
 </head>

@@ -12,3 +12,11 @@ $c-main: #eb2936;
 $header-height-pc: 100px;
 $header-height-sp: 65px;
 $header-logo-height: 65px;
+
+/*
+px => vw
+$size: int
+*/
+@function px-to-vw($size, $viewport: 1080){
+  @return (100 / $viewport) * $size * 1vw;
+}

@@ -13,9 +13,9 @@ function fm_create_post_type() {
     array(
       'label' => 'ニュース',
       'labels' => array(
-        'name' => __('news'),
-        'singular_name' => __('news'),
-        'add_new' => '新規ニュース追加',
+        'name' => 'news',
+        'singular_name' => 'news',
+        'menu_name' => 'ニュース',
         'edit_item' => 'ニュースの編集',
         'view_item' => 'ニュースを表示',
         'search_items' => 'ニュースを検索',

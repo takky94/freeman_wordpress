@@ -106,35 +106,50 @@
         <li class="diamond dev">
           <a href="#">
             <div class="diamond__inner">
-              <p>テキスト</p>
+              <div class="center">
+                <div class="diamond__title font-robot c-white">MOLD</div>
+                <div class="diamond__titleSub c-white">型製品</div>
+              </div>
             </div>
           </a>
         </li>
         <li class="diamond dev">
           <a href="#">
             <div class="diamond__inner">
-              <p>テキスト</p>
+              <div class="center">
+                <div class="diamond__title font-robot c-white">INVESTMENT<br />CASTING</div>
+                <div class="diamond__titleSub c-white">精密鋳造用材料</div>
+              </div>
             </div>
           </a>
         </li>
         <li class="diamond dev">
           <a href="#">
             <div class="diamond__inner">
-              <p>テキスト</p>
+              <div class="center">
+                <div class="diamond__title font-robot c-white">NEW FIELD</div>
+                <div class="diamond__titleSub c-white">新たな取り組み</div>
+              </div>
             </div>
           </a>
         </li>
         <li class="diamond dev">
           <a href="#">
             <div class="diamond__inner">
-              <p>テキスト</p>
+              <div class="center">
+                <div class="diamond__title font-robot c-white">SAND<br />CASTING</div>
+                <div class="diamond__titleSub c-white">砂型鋳造用資材・原材料</div>
+              </div>
             </div>
           </a>
         </li>
         <li class="diamond dev">
           <a href="#">
             <div class="diamond__inner">
-              <p>テキスト</p>
+              <div class="center">
+                <div class="diamond__title font-robot c-white">JEWELRY</div>
+                <div class="diamond__titleSub c-white">型製品</div>
+              </div>
             </div>
           </a>
         </li>
@@ -144,7 +159,7 @@
   <!-- // リンクリスト -->
   <!-- 型製品 -->
   <section class="mold" id="mold">
-    <div class="container">
+    <div class="container dev">
       <!-- detail -->
       <div class="detail flex">
         <div class="detail__text">
@@ -166,7 +181,7 @@
   <!-- // 型製品 -->
   <!-- 砂型鋳造用資材・原材料 -->
   <section class="sand-casting" id="sand-casting">
-    <div class="container">
+    <div class="container dev">
       <!-- detail -->
       <div class="detail detail-reverse flex">
         <div class="detail__text">
@@ -189,7 +204,7 @@
   <!-- // 砂型鋳造用資材・原材料 -->
   <!-- 精密鋳造用材料 -->
   <section class="investment-casting" id="investment-casting">
-    <div class="container">
+    <div class="container dev">
       <!-- detail -->
       <div class="detail flex">
         <div class="detail__text">
@@ -212,7 +227,7 @@
   <!-- // 精密鋳造用材料 -->
   <!-- ジュエリーキャスト用副資材 -->
   <section class="jewelry" id="jewelry">
-    <div class="container">
+    <div class="container dev">
       <!-- detail -->
       <div class="detail detail-reverse flex">
         <div class="detail__text">
@@ -234,7 +249,7 @@
   <!-- // ジュエリーキャスト用副資材 -->
   <!-- 新たな取り組み -->
   <section class="new-field" id="new-field">
-    <div class="container">
+    <div class="container dev">
       <!-- detail -->
       <div class="detail flex">
         <div class="detail__text">
