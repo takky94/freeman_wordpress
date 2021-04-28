@@ -550,7 +550,7 @@
 
 @media (max-width: 768px) {
   #index .detail-reverse .detail__image img {
-    margin: auto;
+    margin: 30px auto 0;
   }
 }
 
@@ -568,6 +568,7 @@
   margin-left: auto;
   margin-right: -60px;
   max-width: 500px;
+  width: 100%;
 }
 
 @media (max-width: 1080px) {
@@ -579,7 +580,6 @@
 @media (max-width: 768px) {
   #index .detail__image img {
     margin: 30px auto 0;
-    width: 100%;
   }
 }
 

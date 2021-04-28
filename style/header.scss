@@ -184,4 +184,7 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
 
 .main{
   margin-top: $header-height-pc;
+  @media (max-width: $sp){
+    margin-top: $header-height-sp;
+  }
 }

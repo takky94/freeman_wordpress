@@ -416,7 +416,7 @@
             margin-left: -10px;
           }
           @media (max-width: $sp){
-            margin: auto;
+            margin: 30px auto 0;
           }
         }
       }
@@ -435,13 +435,13 @@
         margin-left: auto;
         margin-right: -60px;
         max-width: 500px;
+        width: 100%;
 
         @media (max-width: $pc){
           margin-right: -10px;
         }
         @media (max-width: $sp){
           margin: 30px auto 0;
-          width: 100%;
         }
       }
     }
