@@ -75,6 +75,9 @@ body{
   margin: auto;
   max-width: 1080px;
   width: 100%;
+  @media (max-width: $sp){
+    width: 95%;
+  }
 }
 
 .relative{

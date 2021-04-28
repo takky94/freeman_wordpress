@@ -33,7 +33,7 @@
           </<?= $titleTag; ?>>
         </div>
         <nav class="header__menu dev">
-          <div>
+          <div class="header__content">
             <div class="header__lang dev">
               <span class="select">JP EN CH</span>
               <input type="text" class="search" />
@@ -129,7 +129,12 @@
             </ul>
           </div>
           <div class="header__button dev">
-            <a href="#">CONTACT<br /><img src="<?= get_template_directory_uri(); ?>/images/top/icon/mail.svg" /></a>
+            <a href="#" class="font-robot white">CONTACT<br /><img
+                src="<?= get_template_directory_uri(); ?>/images/top/icon/mail.svg" /></a>
+          </div>
+          <div class="header__buttonMenu pc__none dev">
+            <a href="#" class="font-robot white">MENU<br /><img
+                src="<?= get_template_directory_uri(); ?>/images/top/icon/mail.svg" /></a>
           </div>
         </nav>
       </div>

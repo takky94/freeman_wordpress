@@ -11,12 +11,18 @@ $c-main: #eb2936;
 // 固定値
 $header-height-pc: 100px;
 $header-height-sp: 65px;
-$header-logo-height: 65px;
+$header-logo-height-pc: 65px;
+$header-logo-height-sp: 30px;
 
-/*
-px => vw
-$size: int
-*/
+// pxをvw化
+// $size: int
 @function px-to-vw($size, $viewport: 1080){
-  @return (100 / $viewport) * $size * 1vw;
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+// SPでの最大画面幅(768)のfont-sizeを指定し、それ以下ではviewportで縮小
+@mixin sp-font-vw($font-size: 16){
+  font-size: $font-size * 1px;
+  font-size: px-to-vw($font-size, 768);
 }

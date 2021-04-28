@@ -3,10 +3,6 @@
 
 @import "./config.scss";
 
-.main{
-  margin-top: $header-height-pc;
-}
-
 #index{
   // FV
   .hero{
@@ -112,6 +108,10 @@
       font-size: 14px;
       padding: 25px 50px;
       position: absolute;
+      @media (max-width: $sp){
+        padding: px-to-vw(25) 0 px-to-vw(50);
+      }
+
       &--title{
         font-size: 18px;
       }
@@ -130,6 +130,10 @@
   // 提携企業一覧
   .case{
     padding: 60px 0 100px;
+    @media (max-width: $sp){
+      padding: px-to-vw(60) 0 px-to-vw(100);
+    }
+
     &__list{
       animation: case_slide 300s linear infinite;
       background: left top / cover url("../images/top/case-list.png") repeat-x;
@@ -150,17 +154,27 @@
     display: flex;
     justify-content: center;
     padding: 200px 0 85px;
+    @media (max-width: $sp){
+      padding: px-to-vw(200) 0 px-to-vw(85);
+    }
 
     &__heading{
       font-size: 44px;
       font-weight: 100;
       letter-spacing: 3px;
       text-align: center;
+      @media (max-width: $sp){
+        @include sp-font-vw(60);
+      }
     }
 
     &__text{
       font-size: 20px;
       margin-top: 30px;
+      @media (max-width: $sp){
+        @include sp-font-vw(30);
+        margin-top: px-to-vw(30);
+      }
     }
 
     &__achievement{
@@ -173,11 +187,17 @@
         line-height: 1;
         &:not(:first-child){
           margin-left: 90px;
+          @media (max-width: $sp){
+            margin-left: px-to-vw(90);
+          }
         }
 
         &__left{
           font-size: 22px;
           text-align: left;
+          @media (max-width: $sp){
+            font-size: px-to-vw(22);
+          }
           img{
             display: inline-block;
             vertical-align: bottom;
@@ -188,9 +208,15 @@
           margin-left: 15px;
           .big{
             font-size: 52px;
+            @media (max-width: $sp){
+              @include sp-font-vw(30);
+            }
           }
           .small{
             font-size: 22px;
+            @media (max-width: $sp){
+              @include sp-font-vw(20);
+            }
           }
         }
       }
@@ -367,12 +393,21 @@
   .detail{
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
 
     // 左側が画像
     &-reverse{
+      .detail__text{
+        order: 2;
+        @media (max-width: $sp){
+          order: 1; // SPではテキストが上
+        }
+      }
       .detail__image{
         order: 1;
-
+        @media (max-width: $sp){
+          order: 2; // SPでは画像が下
+        }
         img{
           margin-left: -60px;
           margin-right: auto;
@@ -380,16 +415,19 @@
           @media (max-width: $pc){
             margin-left: -10px;
           }
+          @media (max-width: $sp){
+            margin: auto;
+          }
         }
-      }
-      .detail__text{
-        order: 2;
       }
     }
 
     &__image,
     &__text{
       width: 50%;
+      @media (max-width: $sp){
+        width: 100%;
+      }
     }
 
     &__image{
@@ -400,6 +438,10 @@
 
         @media (max-width: $pc){
           margin-right: -10px;
+        }
+        @media (max-width: $sp){
+          margin: 30px auto 0;
+          width: 100%;
         }
       }
     }
@@ -413,6 +455,10 @@
           transform: scale(.8, 1);
           transform-origin: top left;
           width: 125%;
+          @media (max-width: $sp){
+            @include sp-font-vw(80);
+          }
+
           // 切り抜き文字
           .decoration{
             color: #fff;
@@ -433,16 +479,27 @@
           color: #96a8be;
           font-size: 20px;
           margin-top: 30px;
+          @media (max-width: $sp){
+            @include sp-font-vw(30);
+            margin-top: 1em;
+          }
         }
         &Sub{
           font-size: 35px;
           font-weight: bold;
           margin-top: 80px;
+          @media (max-width: $sp){
+            @include sp-font-vw(40);
+            margin-top: 1.5em;
+          }
         }
       }
       &--description{
         line-height: 2;
         margin-top: 30px;
+        @media (max-width: $sp){
+          margin-top: 1.5em;
+        }
       }
     }
   } // END セクション内共通スタイル

@@ -1,13 +1,5 @@
 /* Main
 --------------------------------------------------------------------------------------------*/
-/*
-px => vw
-$size: int
-*/
-.main {
-  margin-top: 100px;
-}
-
 #index .hero {
   position: relative;
 }
@@ -137,6 +129,12 @@ $size: int
   position: absolute;
 }
 
+@media (max-width: 768px) {
+  #index .hero__news {
+    padding: 2.31481vw 0 4.62963vw;
+  }
+}
+
 #index .hero__news--title {
   font-size: 18px;
 }
@@ -155,6 +153,12 @@ $size: int
 
 #index .case {
   padding: 60px 0 100px;
+}
+
+@media (max-width: 768px) {
+  #index .case {
+    padding: 5.55556vw 0 9.25926vw;
+  }
 }
 
 #index .case__list {
@@ -190,6 +194,12 @@ $size: int
   padding: 200px 0 85px;
 }
 
+@media (max-width: 768px) {
+  #index .lead {
+    padding: 18.51852vw 0 7.87037vw;
+  }
+}
+
 #index .lead__heading {
   font-size: 44px;
   font-weight: 100;
@@ -197,9 +207,24 @@ $size: int
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  #index .lead__heading {
+    font-size: 60px;
+    font-size: 7.8125vw;
+  }
+}
+
 #index .lead__text {
   font-size: 20px;
   margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  #index .lead__text {
+    font-size: 30px;
+    font-size: 3.90625vw;
+    margin-top: 2.77778vw;
+  }
 }
 
 #index .lead__achievement {
@@ -223,9 +248,21 @@ $size: int
   margin-left: 90px;
 }
 
+@media (max-width: 768px) {
+  #index .lead__achievement .block:not(:first-child) {
+    margin-left: 8.33333vw;
+  }
+}
+
 #index .lead__achievement .block__left {
   font-size: 22px;
   text-align: left;
+}
+
+@media (max-width: 768px) {
+  #index .lead__achievement .block__left {
+    font-size: 2.03704vw;
+  }
 }
 
 #index .lead__achievement .block__left img {
@@ -244,8 +281,22 @@ $size: int
   font-size: 52px;
 }
 
+@media (max-width: 768px) {
+  #index .lead__achievement .block__right .big {
+    font-size: 30px;
+    font-size: 3.90625vw;
+  }
+}
+
 #index .lead__achievement .block__right .small {
   font-size: 22px;
+}
+
+@media (max-width: 768px) {
+  #index .lead__achievement .block__right .small {
+    font-size: 20px;
+    font-size: 2.60417vw;
+  }
 }
 
 #index .menu {
@@ -454,12 +505,36 @@ $size: int
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#index .detail-reverse .detail__text {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+@media (max-width: 768px) {
+  #index .detail-reverse .detail__text {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 #index .detail-reverse .detail__image {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+}
+
+@media (max-width: 768px) {
+  #index .detail-reverse .detail__image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 #index .detail-reverse .detail__image img {
@@ -473,14 +548,20 @@ $size: int
   }
 }
 
-#index .detail-reverse .detail__text {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+@media (max-width: 768px) {
+  #index .detail-reverse .detail__image img {
+    margin: auto;
+  }
 }
 
 #index .detail__image, #index .detail__text {
   width: 50%;
+}
+
+@media (max-width: 768px) {
+  #index .detail__image, #index .detail__text {
+    width: 100%;
+  }
 }
 
 #index .detail__image img {
@@ -495,6 +576,13 @@ $size: int
   }
 }
 
+@media (max-width: 768px) {
+  #index .detail__image img {
+    margin: 30px auto 0;
+    width: 100%;
+  }
+}
+
 #index .detail__text--headingEn {
   font-size: 72px;
   font-weight: bold;
@@ -504,6 +592,13 @@ $size: int
   -webkit-transform-origin: top left;
           transform-origin: top left;
   width: 125%;
+}
+
+@media (max-width: 768px) {
+  #index .detail__text--headingEn {
+    font-size: 80px;
+    font-size: 10.41667vw;
+  }
 }
 
 #index .detail__text--headingEn .decoration {
@@ -528,15 +623,37 @@ $size: int
   margin-top: 30px;
 }
 
+@media (max-width: 768px) {
+  #index .detail__text--headingJp {
+    font-size: 30px;
+    font-size: 3.90625vw;
+    margin-top: 1em;
+  }
+}
+
 #index .detail__text--headingSub {
   font-size: 35px;
   font-weight: bold;
   margin-top: 80px;
 }
 
+@media (max-width: 768px) {
+  #index .detail__text--headingSub {
+    font-size: 40px;
+    font-size: 5.20833vw;
+    margin-top: 1.5em;
+  }
+}
+
 #index .detail__text--description {
   line-height: 2;
   margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  #index .detail__text--description {
+    margin-top: 1.5em;
+  }
 }
 
 #index .mold,
