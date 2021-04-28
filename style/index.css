@@ -310,21 +310,70 @@
   }
 }
 
+@media (max-width: 768px) {
+  #index .menu {
+    height: auto;
+  }
+}
+
 #index .menu .container {
   height: 100%;
   overflow: hidden;
 }
 
-#index .menu .diamond {
-  height: 226.27416998px;
-  margin: auto;
-  overflow: hidden;
-  position: absolute;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  width: 226.27416998px;
+@media (max-width: 768px) {
+  #index .menu .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #index .menu .container > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #index .menu .container > ul > li.diamond:nth-child(1) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #index .menu .container > ul > li.diamond:nth-child(2) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  #index .menu .container > ul > li.diamond:nth-child(3) {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  #index .menu .container > ul > li.diamond:nth-child(4) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  #index .menu .container > ul > li.diamond:nth-child(5) {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+@media (min-width: 769px) {
+  #index .menu .diamond {
+    height: 226.27416998px;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    width: 226.27416998px;
+  }
 }
 
 @media (max-width: 1080px) {
@@ -334,16 +383,29 @@
   }
 }
 
+@media (max-width: 768px) {
+  #index .menu .diamond {
+    height: 80px;
+    position: relative;
+    width: 100%;
+  }
+}
+
 #index .menu .diamond::before {
   background: center / contain #fff no-repeat;
   content: "";
   height: 100%;
-  left: 60px;
   position: absolute;
-  top: 60px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
   width: 100%;
+}
+
+@media (min-width: 769px) {
+  #index .menu .diamond::before {
+    left: 60px;
+    top: 60px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
 }
 
 #index .menu .diamond::after {
@@ -388,6 +450,13 @@
   }
 }
 
+@media (max-width: 768px) {
+  #index .menu .diamond:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+}
+
 #index .menu .diamond:nth-child(1)::before {
   background-image: url(../images/top/menu-background/01.png);
 }
@@ -395,6 +464,13 @@
 #index .menu .diamond:nth-child(2) {
   left: 0;
   right: 0;
+}
+
+@media (max-width: 768px) {
+  #index .menu .diamond:nth-child(2) {
+    top: 0;
+    left: 0;
+  }
 }
 
 #index .menu .diamond:nth-child(2)::before {
@@ -408,6 +484,13 @@
 @media (max-width: 1080px) {
   #index .menu .diamond:nth-child(3) {
     right: 4.16667vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #index .menu .diamond:nth-child(3) {
+    top: 0;
+    left: 0;
   }
 }
 
@@ -425,6 +508,14 @@
   }
 }
 
+@media (max-width: 768px) {
+  #index .menu .diamond:nth-child(4) {
+    left: 0;
+    margin-left: 0;
+    top: 0;
+  }
+}
+
 #index .menu .diamond:nth-child(4)::before {
   background-image: url(../images/top/menu-background/04.png);
 }
@@ -436,6 +527,14 @@
 @media (max-width: 1080px) {
   #index .menu .diamond:nth-child(5) {
     margin-right: 21.75926vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #index .menu .diamond:nth-child(5) {
+    left: 0;
+    margin-right: 0;
+    top: 0;
   }
 }
 
@@ -456,17 +555,19 @@
   width: 100%;
 }
 
-#index .menu .diamond > a .diamond__inner > div {
-  height: 100%;
-  left: 0;
-  margin: auto;
-  padding-top: 35px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  width: 70%;
+@media (min-width: 769px) {
+  #index .menu .diamond > a .diamond__inner > div {
+    height: 100%;
+    left: 0;
+    margin: auto;
+    padding-top: 35px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    width: 70%;
+  }
 }
 
 @media (max-width: 1080px) {

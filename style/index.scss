@@ -230,35 +230,77 @@
     @media (max-width: $pc){
       height: px-to-vw(508); // 508pxを1080px(containerのmax横幅)以下でvw化
     }
+    @media (max-width: $sp){
+      height: auto;
+    }
 
     .container{
       height: 100%;
       overflow: hidden;
+      @media (max-width: $sp){
+        width: 100%;
+      }
+
+      &>ul{
+        @media (max-width: $sp) {
+          display: flex;
+          flex-wrap: wrap;
+          &>li.diamond{
+            &:nth-child(1){
+              order: 1;
+            }
+            &:nth-child(2){
+              order: 4;
+            }
+            &:nth-child(3){
+              order: 5;
+            }
+            &:nth-child(4){
+              order: 2;
+            }
+            &:nth-child(5){
+              order: 3;
+            }
+          }
+        }
+      }
     }
 
     .diamond{
-      height: 226.27416998px; // 320px / √2
-      margin: auto;
-      overflow: hidden; // はみ出た背景画像削除
-      position: absolute;
-      transform: rotate(45deg);
-      transform-origin: 50% 50%;
-      width: 226.27416998px; // 320px / √2
+      // 768px 〜 ひし形
+      @media (min-width: $tab){
+        height: 226.27416998px; // 320px / √2
+        margin: auto;
+        overflow: hidden; // はみ出た背景画像削除
+        position: absolute;
+        transform: rotate(45deg);
+        transform-origin: 50% 50%;
+        width: 226.27416998px; // 320px / √2
+      }
       @media (max-width: $pc){
         height: px-to-vw(226); // 226pxを1080px(containerのmax横幅)以下でvw化
         width: px-to-vw(226); // 226pxを1080px(containerのmax横幅)以下でvw化
       }
+      // 〜 768 長方形
+      @media (max-width: $sp){
+        height: 80px;
+        position: relative;
+        width: 100%;
+      }
+
 
       // ひし型メニューの背景画像
       &::before{
         background: center / contain #fff no-repeat;
         content: "";
         height: 100%;
-        left: 60px;
         position: absolute;
-        top: 60px;
-        transform: rotate(-45deg);
         width: 100%;
+        @media (min-width: $tab){
+          left: 60px;
+          top: 60px;
+          transform: rotate(-45deg);
+        }
       }
       // フィルター
       &::after{
@@ -271,7 +313,7 @@
         z-index: 2;
       }
 
-      // 位置調整
+      // .diamond 位置調整
       &:nth-child(1),
       &:nth-child(2),
       &:nth-child(3){
@@ -294,6 +336,10 @@
         @media (max-width: $pc){
           left: px-to-vw(45); // 45pxを1080px(containerのmax横幅)以下でvw化
         }
+        @media (max-width: $sp) {
+          top: 0;
+          left: 0;
+        }
 
         // 背景画像
         &::before{
@@ -303,6 +349,10 @@
       &:nth-child(2){
         left: 0;
         right: 0;
+        @media (max-width: $sp) {
+          top: 0;
+          left: 0;
+        }
 
         // 背景画像
         &::before{
@@ -313,6 +363,10 @@
         right: 45px;
         @media (max-width: $pc){
           right: px-to-vw(45); // 45pxを1080px(containerのmax横幅)以下でvw化
+        }
+        @media (max-width: $sp) {
+          top: 0;
+          left: 0;
         }
 
         // 背景画像
@@ -325,6 +379,11 @@
         @media (max-width: $pc){
           margin-left: px-to-vw(235); // 235pxを1080px(containerのmax横幅)以下でvw化
         }
+        @media (max-width: $sp){
+          left: 0;
+          margin-left: 0;
+          top: 0;
+        }
 
         // 背景画像
         &::before{
@@ -335,6 +394,11 @@
         margin-right: calc(45px + 160px + 30px); // right位置 + ひし形の半分 + 余白
         @media (max-width: $pc){
           margin-right: px-to-vw(235); // 235pxを1080px(containerのmax横幅)以下でvw化
+        }
+        @media (max-width: $sp) {
+          left: 0;
+          margin-right: 0;
+          top: 0;
         }
 
         // 背景画像
@@ -355,15 +419,17 @@
           width: 100%;
 
           & > div{
-            height: 100%;
-            left: 0;
-            margin: auto;
-            padding-top: 35px;
-            position: absolute;
-            right: 0;
-            top: 0;
-            transform: rotate(-45deg);
-            width: 70%;
+            @media (min-width: $tab){
+              height: 100%;
+              left: 0;
+              margin: auto;
+              padding-top: 35px;
+              position: absolute;
+              right: 0;
+              top: 0;
+              transform: rotate(-45deg);
+              width: 70%;
+            }
             @media (max-width: $pc){
               padding-top: px-to-vw(35); // 35pxを1080px(containerのmax横幅)以下でvw化
             }
