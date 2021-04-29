@@ -63,6 +63,17 @@ select {
   font: inherit;
 }
 
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
@@ -410,13 +421,17 @@ body {
   margin-left: 0;
 }
 
-.header__menu .header__button > a, .header__menu .header__buttonMenu > a {
+.header__menu .header__button > a, .header__menu .header__buttonMenu > a,
+.header__menu .header__button > button,
+.header__menu .header__buttonMenu > button {
   color: #fff;
   height: 100%;
   width: 100%;
 }
 
-.header__menu .header__button > a > img, .header__menu .header__buttonMenu > a > img {
+.header__menu .header__button > a > img, .header__menu .header__buttonMenu > a > img,
+.header__menu .header__button > button > img,
+.header__menu .header__buttonMenu > button > img {
   margin: 10px auto 0;
 }
 

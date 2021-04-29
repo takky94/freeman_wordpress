@@ -168,7 +168,8 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
       }
 
       //
-      & > a{
+      & > a,
+      & > button{
         color: #fff;
         height: 100%;
         width: 100%;

@@ -14,6 +14,10 @@
       height: calc(100vh - #{$header-height-pc});
       position: relative;
       width: 100%;
+      @media (max-width: $sp){
+        height: calc(100vh - #{$header-height-sp});
+      }
+
       picture{
         &:nth-of-type(1){
           img{
@@ -433,12 +437,22 @@
             @media (max-width: $pc){
               padding-top: px-to-vw(35); // 35pxを1080px(containerのmax横幅)以下でvw化
             }
+            @media (max-width: $sp){
+              padding: 0 20px;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+            }
 
             .diamond__title{
               font-size: 30px;
               line-height: 1.2;
               @media (max-width: $pc){
                 font-size: px-to-vw(30); // 30pxを1080px(containerのmax横幅)以下でvw化
+              }
+              @media (max-width: $sp){
+                @include sp-font-vw(35);
+                display: inline-block;
               }
             }
             .diamond__titleSub{
@@ -447,6 +461,9 @@
               @media (max-width: $pc){
                 font-size: px-to-vw(14);
                 margin-top: px-to-vw(8); // 8pxを1080px(containerのmax横幅)以下でvw化
+              }
+              @media (max-width: $sp){
+                display: inline-block;
               }
             }
           }

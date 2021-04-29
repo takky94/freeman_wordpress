@@ -10,8 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <?php if(is_home() || is_front_page()):  ?>
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/index.css" />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Roboto+Condensed&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Roboto+Condensed&display=swap" rel="stylesheet">
   <?php else: ?>
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/article.css" />
   <?php endif; ?>
@@ -129,12 +128,14 @@
             </ul>
           </div>
           <div class="header__button dev">
-            <a href="#" class="font-robot white">CONTACT<br /><img
-                src="<?= get_template_directory_uri(); ?>/images/top/icon/mail.svg" /></a>
+            <a href="#" class="font-robot white">CONTACT<br />
+              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/mail.svg" />
+            </a>
           </div>
           <div class="header__buttonMenu pc__none dev">
-            <a href="#" class="font-robot white">MENU<br /><img
-                src="<?= get_template_directory_uri(); ?>/images/top/icon/mail.svg" /></a>
+            <button class="font-robot white js-menu">MENU<br />
+              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/mail.svg" />
+            </button>
           </div>
         </nav>
       </div>
