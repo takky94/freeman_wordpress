@@ -1,0 +1,107 @@
+/* Footer
+--------------------------------------------------------------------------------------------*/
+
+@import "./config.scss";
+
+.footer{
+  margin-top: 100px;
+
+  .cta{
+    background: center / cover url("./images/footer/cta-background.png") no-repeat;
+    display: block;
+    height: 200px;
+    position: relative;
+
+    // フィルター
+    &::before{
+      background: rgba(0, 0, 0, .6);
+      content: "";
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .container{
+      align-items: center;
+      display: flex;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    &__title{
+      font-size: 42px;
+      font-weight: 500;
+
+      &Sub{
+        font-weight: 500;
+        margin-left: 1.5em;
+      }
+    }
+
+    &__icon{
+      margin-left: 30px;
+    }
+  } // cta
+
+  .overseas{
+    padding: 50px 0;
+
+    .container{
+      align-items: center;
+      display: flex;
+    }
+
+    &__title{
+      font-size: 22px;
+      font-weight: 500;
+
+      &Sub{
+        color: $c-gray;
+        font-weight: 500;
+        margin-top: 1em;
+      }
+    }
+
+    &__left{
+      flex-grow: 1;
+    }
+
+    &__right{
+      align-items: center;
+      display: flex;
+      flex-grow: 2;
+      justify-content: space-between;
+      margin-left: auto;
+      padding-left: 50px;
+
+      img{
+        // FREEMAN
+        &:nth-child(1){
+          width: 18%;
+        }
+        // RANSOM & RANDOLPH
+        &:nth-child(2){
+          width: 18%;
+        }
+        // LANIK
+        &:nth-child(3){
+          width: 18%;
+        }
+        // Remet
+        &:nth-child(4){
+          width: 9%;
+        }
+      }
+    }
+  } // overseas
+
+  .sitemap{
+    background: #000;
+  } // sitemap
+
+  .copyright{
+    background: #151515;
+  } // copyright
+}

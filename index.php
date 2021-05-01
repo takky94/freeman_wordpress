@@ -29,10 +29,13 @@
     <?php $news = get_posts('post_type=news'); ?>
     <?php if (!empty($news)): foreach ($news as $post): setup_postdata($post); ?>
     <div class="hero__news c-white">
-      <p class="hero__news--title font-robot  bold">NEWS</p>
+      <p class="hero__news--title font-robot  bold sp__none">NEWS</p>
       <span class="hero__news--date"><?php the_time('Y/m/d') ?></span>
       <a href="<?php the_permalink();?>" class="hero__news--postTitle c-white"><?php the_title();?></a>
-      <a href="#" class="hero__news--link c-white">お知らせ一覧</a>
+      <a href="#" class="hero__news--link c-white sp__none">お知らせ一覧</a>
+      <a href="#" class="hero__news--link c-main-bg pc__none">
+        <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowRight.svg" width="25" alt="">
+      </a>
     </div>
     <?php endforeach; endif; wp_reset_postdata(); ?>
   </section>
@@ -109,11 +112,11 @@
               <div class="center">
                 <div class="diamond__title font-robot c-white">MOLD</div>
                 <div class="diamond__titleSub c-white">型製品</div>
-                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon sp__none"
-                  width="25" alt="">
+                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                  class="diamond__icon sp__none" width="25" alt="">
               </div>
-              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon pc__none"
-                width="25" alt="">
+              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                class="diamond__icon pc__none" width="25" alt="">
             </div>
           </a>
         </li>
@@ -123,11 +126,11 @@
               <div class="center">
                 <div class="diamond__title font-robot c-white">INVESTMENT<br class="sp__none" />CASTING</div>
                 <div class="diamond__titleSub c-white">精密鋳造用材料</div>
-                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon sp__none"
-                  width="25" alt="">
+                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                  class="diamond__icon sp__none" width="25" alt="">
               </div>
-              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon pc__none"
-                width="25" alt="">
+              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                class="diamond__icon pc__none" width="25" alt="">
             </div>
           </a>
         </li>
@@ -137,11 +140,11 @@
               <div class="center">
                 <div class="diamond__title font-robot c-white">NEW FIELD</div>
                 <div class="diamond__titleSub c-white">新たな取り組み</div>
-                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon sp__none"
-                  width="25" alt="">
+                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                  class="diamond__icon sp__none" width="25" alt="">
               </div>
-              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon pc__none"
-                width="25" alt="">
+              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                class="diamond__icon pc__none" width="25" alt="">
             </div>
           </a>
         </li>
@@ -151,11 +154,11 @@
               <div class="center">
                 <div class="diamond__title font-robot c-white">SAND<br class="sp__none" />CASTING</div>
                 <div class="diamond__titleSub c-white">砂型鋳造用資材・原材料</div>
-                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon sp__none"
-                  width="25" alt="">
+                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                  class="diamond__icon sp__none" width="25" alt="">
               </div>
-              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon pc__none"
-                width="25" alt="">
+              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                class="diamond__icon pc__none" width="25" alt="">
             </div>
           </a>
         </li>
@@ -165,11 +168,11 @@
               <div class="center">
                 <div class="diamond__title font-robot c-white">JEWELRY</div>
                 <div class="diamond__titleSub c-white">ジュエリーキャスト用副資材</div>
-                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon sp__none"
-                  width="25" alt="">
+                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                  class="diamond__icon sp__none" width="25" alt="">
               </div>
-              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon pc__none"
-                width="25" alt="">
+              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                class="diamond__icon pc__none" width="25" alt="">
             </div>
           </a>
         </li>
@@ -294,6 +297,47 @@
 <!-- footer -->
 <?php wp_footer(); //必須 ?>
 <footer class="footer">
+  <!-- cta -->
+  <a class="cta dev">
+    <div class="container">
+      <div class="cta__title c-white font-robot dev">CONTACT</div>
+      <div class="cta__titleSub c-white">お問い合わせ</div>
+      <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowRight.svg" class="cta__icon" width="15"
+        alt="" />
+    </div>
+  </a>
+  <!-- //cta -->
+  <!-- overseas -->
+  <div class="overseas dev">
+    <div class="container">
+      <div class="overseas__left">
+        <div class="overseas__title font-robot dev">OVERSEAS SUPPLIER</div>
+        <div class="overseas__titleSub">海外主要取引先</div>
+      </div>
+      <div class="overseas__right">
+        <img src="<?= get_template_directory_uri(); ?>/images/footer/freeman.png" alt="海外主要取引先 FREEMAN ロゴ" />
+        <img src="<?= get_template_directory_uri(); ?>/images/footer/ransom_randolph.png"
+          alt="海外主要取引先 RANSOM&RANDOLPH ロゴ" />
+        <img src="<?= get_template_directory_uri(); ?>/images/footer/lanik.png" alt="海外主要取引先 LANIK ロゴ" />
+        <img src="<?= get_template_directory_uri(); ?>/images/footer/remet.png" alt="海外主要取引先 Remet ロゴ" />
+      </div>
+    </div>
+  </div>
+  <!-- //overseas -->
+  <!-- sitemap -->
+  <div class="sitemap">
+    <div class="container">
+
+    </div>
+  </div>
+  <!-- //sitemap -->
+  <!-- copyright -->
+  <div class="copyright">
+    <div class="container">
+
+    </div>
+  </div>
+  <!-- //copyright -->
 </footer>
 <!-- // footer -->
 </div>
