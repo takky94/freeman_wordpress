@@ -740,10 +740,21 @@ body.js-fixed {
 
 .footer .sitemap {
   background: #000;
+  padding: 90px 0;
+}
+
+.footer .sitemap__logo {
+  margin: auto;
+  width: 200px;
+}
+
+.footer .sitemap__menu {
+  margin-top: 60px;
 }
 
 .footer .copyright {
   background: #151515;
+  padding: 40px 0;
 }
 
 .dev {

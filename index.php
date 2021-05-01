@@ -327,7 +327,11 @@
   <!-- sitemap -->
   <div class="sitemap">
     <div class="container">
-
+      <img src="<?= get_template_directory_uri(); ?>/images/logo-white.svg" class="sitemap__logo"
+        alt="株式会社FREEMAN ロゴ" />
+      <div class="sitemap__menu">
+        <p>HOGE</p>
+      </div>
     </div>
   </div>
   <!-- //sitemap -->
