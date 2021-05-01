@@ -168,10 +168,11 @@
 }
 
 #index .case__list {
-  -webkit-animation: case_slide 300s linear infinite;
-          animation: case_slide 300s linear infinite;
+  -webkit-animation: case_slide 100s linear infinite;
+          animation: case_slide 100s linear infinite;
   background: left top/cover url("../images/top/case-list.png") repeat-x;
   height: 50px;
+  will-change: animation;
 }
 
 @-webkit-keyframes case_slide {
@@ -458,8 +459,8 @@
 
 @media (max-width: 768px) {
   #index .menu .diamond:nth-child(1) {
-    top: 0;
     left: 0;
+    top: 0;
   }
 }
 
@@ -474,8 +475,8 @@
 
 @media (max-width: 768px) {
   #index .menu .diamond:nth-child(2) {
-    top: 0;
     left: 0;
+    top: 0;
   }
 }
 
@@ -495,8 +496,8 @@
 
 @media (max-width: 768px) {
   #index .menu .diamond:nth-child(3) {
-    top: 0;
     left: 0;
+    top: 0;
   }
 }
 
@@ -605,9 +606,9 @@
 
 @media (max-width: 768px) {
   #index .menu .diamond > a .diamond__inner > div .diamond__title {
+    display: inline-block;
     font-size: 35px;
     font-size: 4.55729vw;
-    display: inline-block;
   }
 }
 

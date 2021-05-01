@@ -25,6 +25,12 @@
 body{
   font-family: -apple-system, BlinkMacSystemFont, "Noto Sans CJK JP", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Arial",
   "メイリオ", Meiryo, sans-serif;
+
+  // ハンバーガーなどactive時にスクロールできなくする
+  &.js-fixed{
+    height: 100%;
+    overflow: hidden;
+  }
 }
 
 // 色

@@ -23,6 +23,11 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Noto Sans CJK JP", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Arial", "メイリオ", Meiryo, sans-serif;
 }
 
+body.js-fixed {
+  height: 100%;
+  overflow: hidden;
+}
+
 .c-main {
   color: #eb2936;
 }

@@ -54,7 +54,7 @@
 
 @media (max-width: 768px) {
   .header__logo .logo a img {
-    height: calc(100% - 50%);
+    height: calc(100% / 2);
     margin: auto;
   }
 }
@@ -74,11 +74,20 @@
 @media (max-width: 768px) {
   .header__menu .header__content {
     background: #111;
-    height: 100vh;
-    left: 0;
+    height: calc(100vh - 65px);
+    left: 100%;
+    opacity: 0;
     position: absolute;
-    top: -100vh;
+    top: 65px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
     width: 100%;
+    will-change: opacity, transform;
+  }
+  .header__menu .header__content.js-active {
+    opacity: 1;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 
@@ -196,6 +205,7 @@
 
 @media (max-width: 768px) {
   .header__menu .header__button, .header__menu .header__buttonMenu {
+    margin-left: 0;
     width: 65px;
   }
 }
@@ -205,18 +215,88 @@
   margin-left: 0;
 }
 
+.header__menu .header__buttonMenu > div {
+  position: relative;
+}
+
 .header__menu .header__button > a, .header__menu .header__buttonMenu > a,
 .header__menu .header__button > button,
 .header__menu .header__buttonMenu > button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 
-.header__menu .header__button > a > img, .header__menu .header__buttonMenu > a > img,
-.header__menu .header__button > button > img,
-.header__menu .header__buttonMenu > button > img {
+@media (max-width: 768px) {
+  .header__menu .header__button > a, .header__menu .header__buttonMenu > a,
+  .header__menu .header__button > button,
+  .header__menu .header__buttonMenu > button {
+    font-size: 11px;
+    line-height: 1;
+    padding: calc((65px / 2) / 2) 0;
+  }
+}
+
+.header__menu .header__button > a > div > img, .header__menu .header__buttonMenu > a > div > img,
+.header__menu .header__button > button > div > img,
+.header__menu .header__buttonMenu > button > div > img {
   margin: 10px auto 0;
+}
+
+@media (max-width: 768px) {
+  .header__menu .header__button > a > div > img, .header__menu .header__buttonMenu > a > div > img,
+  .header__menu .header__button > button > div > img,
+  .header__menu .header__buttonMenu > button > div > img {
+    height: 15px;
+    margin-top: 5px;
+    width: 20px;
+  }
+}
+
+.header__menu .header__button > a .header__buttonMenu--bar, .header__menu .header__buttonMenu > a .header__buttonMenu--bar,
+.header__menu .header__button > button .header__buttonMenu--bar,
+.header__menu .header__buttonMenu > button .header__buttonMenu--bar {
+  background: #fff;
+  display: block;
+  height: 2px;
+  margin: 6px auto 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  width: 15px;
+  will-change: transform, opacity;
+}
+
+.header__menu .header__button > a .header__buttonMenu--bar:nth-of-type(2), .header__menu .header__buttonMenu > a .header__buttonMenu--bar:nth-of-type(2), .header__menu .header__button > a .header__buttonMenu--bar:nth-of-type(3), .header__menu .header__buttonMenu > a .header__buttonMenu--bar:nth-of-type(3),
+.header__menu .header__button > button .header__buttonMenu--bar:nth-of-type(2),
+.header__menu .header__buttonMenu > button .header__buttonMenu--bar:nth-of-type(2),
+.header__menu .header__button > button .header__buttonMenu--bar:nth-of-type(3),
+.header__menu .header__buttonMenu > button .header__buttonMenu--bar:nth-of-type(3) {
+  margin-top: 4px;
+}
+
+.header__menu .header__button > button.js-menu.js-active .header__buttonMenu--bar:nth-of-type(1), .header__menu .header__buttonMenu > button.js-menu.js-active .header__buttonMenu--bar:nth-of-type(1) {
+  -webkit-transform: rotate(-45deg) translateX(-4.5px) translateY(4px);
+          transform: rotate(-45deg) translateX(-4.5px) translateY(4px);
+}
+
+.header__menu .header__button > button.js-menu.js-active .header__buttonMenu--bar:nth-of-type(2), .header__menu .header__buttonMenu > button.js-menu.js-active .header__buttonMenu--bar:nth-of-type(2) {
+  opacity: 0;
+}
+
+.header__menu .header__button > button.js-menu.js-active .header__buttonMenu--bar:nth-of-type(3), .header__menu .header__buttonMenu > button.js-menu.js-active .header__buttonMenu--bar:nth-of-type(3) {
+  -webkit-transform: rotate(45deg) translateX(-4px) translateY(-4px);
+          transform: rotate(45deg) translateX(-4px) translateY(-4px);
 }
 
 .main {

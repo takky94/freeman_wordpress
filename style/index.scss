@@ -139,9 +139,10 @@
     }
 
     &__list{
-      animation: case_slide 300s linear infinite;
+      animation: case_slide 100s linear infinite;
       background: left top / cover url("../images/top/case-list.png") repeat-x;
       height: 50px;
+      will-change: animation;
     }
   }
 
@@ -245,11 +246,11 @@
         width: 100%;
       }
 
-      &>ul{
-        @media (max-width: $sp) {
+      & > ul{
+        @media (max-width: $sp){
           display: flex;
           flex-wrap: wrap;
-          &>li.diamond{
+          & > li.diamond{
             &:nth-child(1){
               order: 1;
             }
@@ -291,7 +292,6 @@
         position: relative;
         width: 100%;
       }
-
 
       // ひし型メニューの背景画像
       &::before{
@@ -340,9 +340,9 @@
         @media (max-width: $pc){
           left: px-to-vw(45); // 45pxを1080px(containerのmax横幅)以下でvw化
         }
-        @media (max-width: $sp) {
-          top: 0;
+        @media (max-width: $sp){
           left: 0;
+          top: 0;
         }
 
         // 背景画像
@@ -353,9 +353,9 @@
       &:nth-child(2){
         left: 0;
         right: 0;
-        @media (max-width: $sp) {
-          top: 0;
+        @media (max-width: $sp){
           left: 0;
+          top: 0;
         }
 
         // 背景画像
@@ -368,9 +368,9 @@
         @media (max-width: $pc){
           right: px-to-vw(45); // 45pxを1080px(containerのmax横幅)以下でvw化
         }
-        @media (max-width: $sp) {
-          top: 0;
+        @media (max-width: $sp){
           left: 0;
+          top: 0;
         }
 
         // 背景画像
@@ -399,7 +399,7 @@
         @media (max-width: $pc){
           margin-right: px-to-vw(235); // 235pxを1080px(containerのmax横幅)以下でvw化
         }
-        @media (max-width: $sp) {
+        @media (max-width: $sp){
           left: 0;
           margin-right: 0;
           top: 0;
@@ -451,8 +451,8 @@
                 font-size: px-to-vw(30); // 30pxを1080px(containerのmax横幅)以下でvw化
               }
               @media (max-width: $sp){
-                @include sp-font-vw(35);
                 display: inline-block;
+                @include sp-font-vw(35);
               }
             }
             .diamond__titleSub{

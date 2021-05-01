@@ -10,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <?php if(is_home() || is_front_page()):  ?>
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/index.css" />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Roboto+Condensed&display=swap"
+    rel="stylesheet">
   <?php else: ?>
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/article.css" />
   <?php endif; ?>
@@ -32,7 +33,7 @@
           </<?= $titleTag; ?>>
         </div>
         <nav class="header__menu dev">
-          <div class="header__content">
+          <div class="header__content js-menuContent">
             <div class="header__lang dev">
               <span class="select">JP EN CH</span>
               <input type="text" class="search" />
@@ -128,13 +129,21 @@
             </ul>
           </div>
           <div class="header__button dev">
-            <a href="#" class="font-robot white">CONTACT<br />
-              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/mail.svg" />
+            <a href="#" class="font-robot white">
+              <div>
+                <div class="center">CONTACT</div>
+                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/mail.svg" />
+              </div>
             </a>
           </div>
           <div class="header__buttonMenu pc__none dev">
-            <button class="font-robot white js-menu">MENU<br />
-              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/mail.svg" />
+            <button class="font-robot white js-menu">
+              <div>
+                <div class="center">MENU</div>
+                <span class="header__buttonMenu--bar"></span>
+                <span class="header__buttonMenu--bar"></span>
+                <span class="header__buttonMenu--bar"></span>
+              </div>
             </button>
           </div>
         </nav>

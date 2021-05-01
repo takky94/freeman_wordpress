@@ -41,7 +41,7 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
             min-width: 260px;
           }
           @media (max-width: $sp){
-            height: calc(100% - #{$menu-sp-gap-y});
+            height: calc(100% / 2);
             margin: auto;
           }
         }
@@ -57,14 +57,24 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
 
     // 問い合わせボタンに対しての左側
     .header__content{
+      // ハンバーガー右に隠しておく(クリックで表示)
       @media (max-width: $sp){
         background: #111;
-        height: 100vh;
-        left: 0;
+        height: calc(100vh - #{$header-height-sp});
+        left: 100%;
+        opacity: 0;
         position: absolute;
-        top: -100vh;
+        top: $header-height-sp;
+        transition: all .3s;
         width: 100%;
+        will-change: opacity, transform;
+
+        &.js-active{
+          opacity: 1;
+          transform: translateX(-100%);
+        }
       }
+
       .header__lang{
         height: $header-logo-height-pc;
         text-align: right;
@@ -157,6 +167,7 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
       margin-left: 50px;
       width: $header-height-pc;
       @media (max-width: $sp){
+        margin-left: 0;
         width: $header-height-sp;
       }
 
@@ -165,18 +176,63 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
         background: #000;
         @extend .header__button;
         margin-left: 0;
+        & > div{
+          position: relative;
+        }
       }
 
       //
       & > a,
       & > button{
+        align-items: center;
         color: #fff;
-        height: 100%;
-        width: 100%;
+        display: flex;
+        height: 100%; // クリック有効範囲を全体に
+        justify-content: center;
+        width: 100%; // クリック有効範囲を全体に
+        @media (max-width: $sp){
+          font-size: 11px;
+          line-height: 1;
+          padding: calc((#{$header-height-sp} / 2) / 2) 0; // (コンテンツエリア(ヘッダーの半分) / 2)
+        }
 
-        // アイコン
-        & > img{
+        // メールアイコン
+        & > div > img{
           margin: 10px auto 0;
+          @media (max-width: $sp){
+            height: 15px;
+            margin-top: 5px; // トータル height20px
+            width: 20px;
+          }
+        }
+        // ハンバーガー棒(~768pxでのみ表示)
+        .header__buttonMenu--bar{
+          background: #fff;
+          display: block;
+          height: 2px;
+          margin: 6px auto 0;
+          transform-origin: center;
+          transition: all .3s;
+          width: 15px;
+          will-change: transform, opacity;
+          &:nth-of-type(2),
+          &:nth-of-type(3){
+            margin-top: 4px;
+          }
+        }
+      }
+
+      & > button.js-menu.js-active{
+        .header__buttonMenu--bar{
+          &:nth-of-type(1){
+            transform: rotate(-45deg) translateX(-4.5px) translateY(4px);
+          }
+          &:nth-of-type(2){
+            opacity: 0;
+          }
+          &:nth-of-type(3){
+            transform: rotate(45deg) translateX(-4px) translateY(-4px);
+          }
         }
       }
     }
