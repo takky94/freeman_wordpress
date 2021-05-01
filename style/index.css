@@ -415,6 +415,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  #index .menu .diamond::before {
+    background-position: 90% 20px;
+  }
+}
+
 #index .menu .diamond::after {
   background: rgba(0, 0, 0, 0.5);
   content: "";
@@ -546,7 +552,7 @@
 }
 
 #index .menu .diamond:nth-child(5)::before {
-  background-image: url(../images/top/menu-background/04.png);
+  background-image: url(../images/top/menu-background/05.png);
 }
 
 #index .menu .diamond > a {
@@ -627,6 +633,27 @@
 @media (max-width: 768px) {
   #index .menu .diamond > a .diamond__inner > div .diamond__titleSub {
     display: inline-block;
+  }
+}
+
+#index .menu .diamond > a .diamond__inner .diamond__icon {
+  margin: auto;
+  position: absolute;
+}
+
+@media (min-width: 769px) {
+  #index .menu .diamond > a .diamond__inner .diamond__icon {
+    bottom: -10px;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #index .menu .diamond > a .diamond__inner .diamond__icon {
+    bottom: 0;
+    right: 10px;
+    top: 0;
   }
 }
 

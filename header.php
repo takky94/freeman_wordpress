@@ -40,11 +40,11 @@
             </div>
             <ul class="header__list dev">
               <li>
-                <a href="#">型製品</a>
+                <a href="#" class="js-accordion" data-subtitle="MOLD">型製品</a>
                 <div class="sub">
                   <div class="container flex">
-                    <p class="sub__title c-main font-robot">MOLD</p>
-                    <ul data-count="10">
+                    <p class="sub__title c-main font-robot sp__none">MOLD</p>
+                    <ul class="js-accordionContent">
                       <li><a href="#">デザイン吐出</a></li>
                       <li><a href="#">デザイン切削</a></li>
                       <li><a href="#">試作注型樹脂</a></li>
@@ -60,11 +60,11 @@
                 </div>
               </li>
               <li>
-                <a href="#">砂型鋳造</a>
+                <a href="#" class="js-accordion" data-subtitle="SAND CASTING">砂型鋳造</a>
                 <div class="sub">
                   <div class="container flex">
-                    <p class="sub__title c-main font-robot">SAND CASTING</p>
-                    <ul>
+                    <p class="sub__title c-main font-robot sp__none">SAND CASTING</p>
+                    <ul class="js-accordionContent">
                       <li><a href="#">鋳造用フィルター</a></li>
                       <li><a href="#">スリープ</a></li>
                       <li><a href="#">方案用ゲート</a></li>
@@ -76,12 +76,11 @@
                 </div>
               </li>
               <li>
-                <a href="#">精密鋳造</a>
+                <a href="#" class="js-accordion" data-subtitle="INVESTMENT CASTING">精密鋳造</a>
                 <div class="sub">
                   <div class="container flex">
-
-                    <p class="sub__title c-main font-robot">INVESTMENT CASTING</p>
-                    <ul>
+                    <p class="sub__title c-main font-robot sp__none">INVESTMENT CASTING</p>
+                    <ul class="js-accordionContent">
                       <li><a href="#">WAX</a></li>
                       <li><a href="#">離散型・洗浄剤</a></li>
                       <li><a href="#">バインダー</a></li>
@@ -92,11 +91,11 @@
                 </div>
               </li>
               <li>
-                <a href="#">ジュエリー</a>
+                <a href="#" class="js-accordion" data-subtitle="JEWELRY">ジュエリー</a>
                 <div class="sub">
                   <div class="container flex">
-                    <p class="sub__title c-main font-robot">JEWELRY</p>
-                    <ul>
+                    <p class="sub__title c-main font-robot sp__none">JEWELRY</p>
+                    <ul class="js-accordionContent">
                       <li><a href="#">インジェクションWAX</a></li>
                       <li><a href="#">切削WAX</a></li>
                       <li><a href="#">埋没材</a></li>
@@ -107,11 +106,11 @@
                 </div>
               </li>
               <li>
-                <a href="#">新たな取り組み</a>
+                <a href="#" class="js-accordion" data-subtitle="NEW FIELD">新たな取り組み</a>
                 <div class="sub">
                   <div class="container flex">
-                    <p class="sub__title c-main font-robot">NEW FIELD</p>
-                    <ul>
+                    <p class="sub__title c-main font-robot sp__none">NEW FIELD</p>
+                    <ul class="js-accordionContent">
                       <li><a href="#">消臭剤</a></li>
                       <li><a href="#">ミネラルキャスティング</a></li>
                       <li><a href="#">CO2洗浄システム</a></li>

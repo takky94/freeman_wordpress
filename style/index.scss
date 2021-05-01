@@ -305,6 +305,9 @@
           top: 60px;
           transform: rotate(-45deg);
         }
+        @media (max-width: $sp){
+          background-position: 90% 20px;
+        }
       }
       // フィルター
       &::after{
@@ -407,7 +410,7 @@
 
         // 背景画像
         &::before{
-          background-image: url(../images/top/menu-background/04.png);
+          background-image: url(../images/top/menu-background/05.png);
         }
       }
 
@@ -465,6 +468,20 @@
               @media (max-width: $sp){
                 display: inline-block;
               }
+            }
+          }
+          .diamond__icon{
+            margin: auto;
+            position: absolute;
+            @media (min-width: $tab){
+              bottom: -10px;
+              left: 0;
+              right: 0;
+            }
+            @media (max-width: $sp){
+              bottom: 0;
+              right: 10px;
+              top: 0;
             }
           }
         }

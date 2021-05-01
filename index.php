@@ -109,7 +109,11 @@
               <div class="center">
                 <div class="diamond__title font-robot c-white">MOLD</div>
                 <div class="diamond__titleSub c-white">型製品</div>
+                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon sp__none"
+                  width="25" alt="">
               </div>
+              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon pc__none"
+                width="25" alt="">
             </div>
           </a>
         </li>
@@ -119,7 +123,11 @@
               <div class="center">
                 <div class="diamond__title font-robot c-white">INVESTMENT<br class="sp__none" />CASTING</div>
                 <div class="diamond__titleSub c-white">精密鋳造用材料</div>
+                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon sp__none"
+                  width="25" alt="">
               </div>
+              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon pc__none"
+                width="25" alt="">
             </div>
           </a>
         </li>
@@ -129,7 +137,11 @@
               <div class="center">
                 <div class="diamond__title font-robot c-white">NEW FIELD</div>
                 <div class="diamond__titleSub c-white">新たな取り組み</div>
+                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon sp__none"
+                  width="25" alt="">
               </div>
+              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon pc__none"
+                width="25" alt="">
             </div>
           </a>
         </li>
@@ -139,7 +151,11 @@
               <div class="center">
                 <div class="diamond__title font-robot c-white">SAND<br class="sp__none" />CASTING</div>
                 <div class="diamond__titleSub c-white">砂型鋳造用資材・原材料</div>
+                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon sp__none"
+                  width="25" alt="">
               </div>
+              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon pc__none"
+                width="25" alt="">
             </div>
           </a>
         </li>
@@ -148,8 +164,12 @@
             <div class="diamond__inner">
               <div class="center">
                 <div class="diamond__title font-robot c-white">JEWELRY</div>
-                <div class="diamond__titleSub c-white">型製品</div>
+                <div class="diamond__titleSub c-white">ジュエリーキャスト用副資材</div>
+                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon sp__none"
+                  width="25" alt="">
               </div>
+              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrow.svg" class="diamond__icon pc__none"
+                width="25" alt="">
             </div>
           </a>
         </li>
