@@ -401,6 +401,10 @@
   }
 }
 
+#index .menu .diamond {
+  cursor: pointer;
+}
+
 @media (min-width: 769px) {
   #index .menu .diamond {
     height: 226.27416998px;
@@ -445,6 +449,9 @@
     top: 60px;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+    will-change: transform;
   }
 }
 
@@ -454,9 +461,8 @@
   }
 }
 
-#index .menu .diamond::after {
+#index .menu .diamond .filter {
   background: rgba(0, 0, 0, 0.5);
-  content: "";
   height: 100%;
   position: absolute;
   top: 0;
@@ -592,7 +598,7 @@
   display: block;
   height: 100%;
   position: relative;
-  z-index: 3;
+  z-index: 4;
 }
 
 #index .menu .diamond > a .diamond__inner {
@@ -679,6 +685,8 @@
     bottom: -10px;
     left: 0;
     right: 0;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
   }
 }
 
@@ -687,6 +695,79 @@
     bottom: 0;
     right: 10px;
     top: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  #index .menu .diamond::after {
+    -webkit-animation: circleRedOut 0.3s ease-in-out both;
+            animation: circleRedOut 0.3s ease-in-out both;
+    background: rgba(235, 41, 54, 0.6);
+    border-radius: 50%;
+    content: "";
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+    top: 0;
+    position: absolute;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    width: 100%;
+    will-change: transform;
+    z-index: 3;
+  }
+  #index .menu .diamond:hover::before {
+    -webkit-transform: rotate(-45deg) translateY(-10px);
+            transform: rotate(-45deg) translateY(-10px);
+  }
+  #index .menu .diamond:hover::after {
+    -webkit-animation: circleRed .3s ease-in-out both;
+            animation: circleRed .3s ease-in-out both;
+  }
+  #index .menu .diamond:hover a div .diamond__icon {
+    bottom: -15px;
+  }
+  @-webkit-keyframes circleRed {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    100% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+  }
+  @keyframes circleRed {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    100% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+  }
+  @-webkit-keyframes circleRedOut {
+    0% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+  }
+  @keyframes circleRedOut {
+    0% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
   }
 }
 

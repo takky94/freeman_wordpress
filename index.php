@@ -119,6 +119,7 @@
                 class="diamond__icon pc__none" width="25" alt="">
             </div>
           </a>
+          <div class="filter"></div>
         </li>
         <li class="diamond dev">
           <a href="#">
@@ -133,6 +134,7 @@
                 class="diamond__icon pc__none" width="25" alt="">
             </div>
           </a>
+          <div class="filter"></div>
         </li>
         <li class="diamond dev">
           <a href="#">
@@ -147,6 +149,7 @@
                 class="diamond__icon pc__none" width="25" alt="">
             </div>
           </a>
+          <div class="filter"></div>
         </li>
         <li class="diamond dev">
           <a href="#">
@@ -161,6 +164,7 @@
                 class="diamond__icon pc__none" width="25" alt="">
             </div>
           </a>
+          <div class="filter"></div>
         </li>
         <li class="diamond dev">
           <a href="#">
@@ -175,6 +179,7 @@
                 class="diamond__icon pc__none" width="25" alt="">
             </div>
           </a>
+          <div class="filter"></div>
         </li>
       </ul>
     </div>

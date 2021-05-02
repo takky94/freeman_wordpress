@@ -5,6 +5,7 @@
 
 // style/compressed/main.min.cssからのrootへの相対
 $root-path: "../..";
+$menu-animation-duration: .3s;
 
 @import "./@import/config.scss";
 
@@ -298,6 +299,8 @@ $root-path: "../..";
     }
 
     .diamond{
+      cursor: pointer;
+
       // 768px 〜 ひし形
       @media (min-width: $tab){
         height: 226.27416998px; // 320px / √2
@@ -331,15 +334,17 @@ $root-path: "../..";
           left: 60px;
           top: 60px;
           transform: rotate(-45deg);
+          transition: $menu-animation-duration all;
+          will-change: transform;
         }
         @media (max-width: $sp){
           background-position: 90% 20px;
         }
       }
+
       // フィルター
-      &::after{
+      .filter{
         background: rgba(0, 0, 0, .5);
-        content: "";
         height: 100%;
         position: absolute;
         top: 0;
@@ -445,7 +450,7 @@ $root-path: "../..";
         display: block;
         height: 100%;
         position: relative;
-        z-index: 3;
+        z-index: 4;
 
         .diamond__inner{
           height: 100%;
@@ -504,12 +509,66 @@ $root-path: "../..";
               bottom: -10px;
               left: 0;
               right: 0;
+              transition: $menu-animation-duration all;
             }
             @media (max-width: $sp){
               bottom: 0;
               right: 10px;
               top: 0;
             }
+          }
+        }
+      } // a
+
+      // hover時、赤く染まる挙動
+      @media (min-width: $tab){
+        // hover時アニメーション類(769px~)
+
+        // .diamond::after(赤い円)
+        &::after{
+          animation: circleRedOut $menu-animation-duration ease-in-out both;
+          background: rgba(235, 41, 54, .6);
+          border-radius: 50%;
+          content: "";
+          height: 100%;
+          @include centeringMargin;
+          position: absolute;
+          transform: scale(0);
+          width: 100%;
+          will-change: transform;
+          z-index: 3;
+        }
+
+        &:hover{
+          // .diamond::before
+          &::before{
+            transform: rotate(-45deg) translateY(-10px);
+          }
+          // .diamond::after
+          &::after{
+            animation: circleRed .3s ease-in-out both;
+          }
+
+          a div .diamond__icon{
+            bottom: -15px;
+          }
+        }
+        // hover時赤い円挙動
+        @keyframes circleRed{
+          0%{
+            transform: scale(0);
+          }
+          100%{
+            transform: scale(1.5);
+          }
+        }
+        // hover解除時赤い円挙動
+        @keyframes circleRedOut{
+          0%{
+            transform: scale(1.5);
+          }
+          100%{
+            transform: scale(0);
           }
         }
       }

@@ -27,3 +27,12 @@ $header-logo-height-sp: 30px;
   font-size: $font-size * 1px;
   font-size: px-to-vw($font-size, 768);
 }
+
+// よく使うもの
+@mixin centeringMargin{
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 0;
+}
