@@ -117,7 +117,7 @@
                       <li><a href="#">ホットメルト</a></li>
                       <li><a href="#">暑さ対策</a></li>
                       <li><a href="#">電動アシスト台車</a></li>
-                      <li><a href="#">ベアリングセンサーシステム</a></li>
+                      <li class="grow"><a href="#">ベアリングセンサーシステム</a></li>
                     </ul>
                   </div>
                 </div>

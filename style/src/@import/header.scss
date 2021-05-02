@@ -4,7 +4,11 @@
 @import "./config.scss";
 
 // サブメニュー内子要素1段あたりの個数(横幅固定のため)
-$menu-list-count: 5;
+$menu-list-count-mold: 5;
+$menu-list-count-sand-casting: 3;
+$menu-list-count-investment-casting: 3;
+$menu-list-count-jewelry: 3;
+$menu-list-count-new-field: 4;
 $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
 
 .header{
@@ -25,21 +29,31 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
   }
 
   &__logo{
-    height: $header-logo-height-pc;
+    height: 100%;
+
     .logo{
       display: block;
       height: 100%;
-      padding: 20px 0 0 40px;
+      padding-left: 40px;
+      padding-top: 15px;
+      @media (max-width: $pc){
+        padding-left: px-to-vw(25);
+      }
       @media (max-width: $sp){
-        padding: 0;
+        padding-left: px-to-vw(10);
+        padding-top: 0;
       }
       a{
         display: flex;
-        height: 100%;
+        height: $header-logo-height-pc;
+        margin-bottom: auto;
+        @media (max-width: $pc){
+          height: px-to-vw(65); // = $header-logo-height
+        }
+        @media (max-width: $sp){
+          height: 100%;
+        }
         img{
-          @media (min-width: $tab){
-            min-width: 260px;
-          }
           @media (max-width: $sp){
             height: calc(100% / 2);
             margin: auto;
@@ -109,19 +123,57 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
           }
           // 各メニューの左余白
           &:not(:first-child){
-            @media (min-width: $tab){
-              margin-left: 20px;
+            margin-left: 20px;
+            @media (max-width: $pc){
+              margin-left: px-to-vw(20);
             }
             @media (max-width: $sp){
+              border-top: 1px solid rgba(255, 255, 255, .5);
+              margin-left: 0;
               margin-top: 20px;
+              padding-top: 20px;
             }
           }
+          // 各メニュー下階層の一列の個数
+          @media (min-width: $tab){
+            &:nth-of-type(1){
+              .sub .container > ul > li{
+                width: calc((100% / #{$menu-list-count-mold}) - 10px);
+              }
+            }
+            &:nth-of-type(2){
+              .sub .container > ul > li{
+                width: calc((100% / #{$menu-list-count-sand-casting}) - 10px);
+              }
+            }
+            &:nth-of-type(3){
+              .sub .container > ul > li{
+                width: calc((100% / #{$menu-list-count-investment-casting}) - 10px);
+              }
+            }
+            &:nth-of-type(4){
+              .sub .container > ul > li{
+                width: calc((100% / #{$menu-list-count-jewelry}) - 10px);
+              }
+            }
+            &:nth-of-type(5){
+              .sub .container > ul > li{
+                width: calc((100% / #{$menu-list-count-new-field}) - 10px);
+              }
+            }
+          }
+          // 固定ヘッダー第一階層メニュー
           & > a{
             color: #333;
+            font-size: 14px;
             font-weight: 700;
+            @media (max-width: $pc){
+              font-size: px-to-vw(14);
+            }
             @media (max-width: $sp){
               color: #fff;
               display: block;
+              font-size: 14px;
               padding-right: 20px;
               position: relative;
 
@@ -165,45 +217,67 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
               top: $header-height-sp;
             }
             .container{
-              max-width: 1000px;
+              max-width: 1040px;
               @media (max-width: $sp){
                 margin: 0; //spメニュー内ではcontainerの横余白なし
               }
               & > p{
                 font-size: 30px;
+                white-space: nowrap;
+                @media (max-width: $pc){
+                  font-size: px-to-vw(30);
+                  padding-top: px-to-vw(15);
+                }
               }
               & > ul{
-                @media (min-width: $tab){
-                  display: flex;
-                  flex-grow: 1;
-                  flex-wrap: wrap;
-                  margin-left: 200px;
-                  & > li{
-                    margin-top: 15px;
-                    padding-left: calc(14px / 2);
-                    width: calc(100% / #{$menu-list-count});
-                    &::before{
-                      color: $c-main;
-                      content: ">";
-                      display: inline-block;
+                display: flex;
+                flex-grow: 1;
+                flex-wrap: wrap;
+                margin-left: 150px;
+                @media (max-width: $pc){
+                  margin-left: px-to-vw(150);
+                }
+                & > li{
+                  margin-left: 10px;
+                  margin-top: 15px;
+                  padding-left: calc(14px / 2);
+                  position: relative;
+                  &.grow{
+                    flex-grow: 1;
+                  }
+                  &::before{
+                    color: $c-main;
+                    content: ">";
+                    display: inline-block;
+                    left: 0;
+                    position: absolute;
+                  }
+                  & > a{
+                    color: #fff;
+                    font-size: 13px;
+                    margin-left: calc(13px / 2);
+                    position: relative;
+                    @media (max-width: $pc){
+                      font-size: px-to-vw(14);
+                      margin-left: px-to-vw(7);
                     }
                   }
+                }
 
-                  a{
-                    color: #fff;
-                    font-size: 14px;
-                    margin-left: calc(14px / 2);
-                    position: relative;
-                  }
-                } // media $tab
                 @media (max-width: $sp){
+                  display: block;
                   height: 0;
+                  margin-left: 0;
                   opacity: 0;
                   transform: translateY(-30px);
                   transition: all .3s;
                   will-change: opacity, height;
                   & > li{
                     margin-top: 20px;
+                    padding-left: 0;
+                    &::before{
+                      display: none;
+                    }
                   }
 
                   &.js-active{
@@ -244,8 +318,12 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
       justify-content: center;
       margin-left: 50px;
       width: $header-height-pc;
+      @media (max-width: $pc){
+        margin-left: 10px;
+        width: px-to-vw(100); // = $header-height-pc
+      }
       @media (max-width: $sp){
-        margin-left: 0;
+        margin-left: px-to-vw(10);
         width: $header-height-sp;
       }
 

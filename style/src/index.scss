@@ -45,14 +45,9 @@ $menu-animation-duration: .3s;
             animation-delay: 15s;
           }
         }
-        &:nth-of-type(5){
-          img{
-            animation-delay: 20s;
-          }
-        }
       }
       img{
-        animation: slideAnime 25s ease infinite;
+        animation: slideAnime 20s ease infinite;
         display: block;
         height: 100%;
         left: 0;
@@ -67,15 +62,18 @@ $menu-animation-duration: .3s;
         0%{
           opacity: 0;
         }
-        10%{
+        // 1s時点
+        5%{
           opacity: 1;
         }
-        20%{
+        // 4s時点
+        25%{
           opacity: 1;
         }
         30%{
           opacity: 0;
         }
+        // 20s時点
         100%{
           opacity: 0;
         }
@@ -667,6 +665,7 @@ $menu-animation-duration: .3s;
           // 切り抜き文字
           .decoration{
             color: #fff;
+            display: inline-block;
             position: relative;
             &::before{
               border: 9px solid #fff;
@@ -677,6 +676,12 @@ $menu-animation-duration: .3s;
               position: absolute;
               top: -1px;
               width: calc(100% + 2px);
+
+              @media (max-width: $sp){
+                border: px-to-vw(9, 768) solid #fff;
+                height: calc(100% + 2px);
+                width: calc(100% + 2px);
+              }
             }
           }
         }
