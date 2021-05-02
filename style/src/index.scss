@@ -99,14 +99,33 @@ $menu-animation-duration: .3s;
 
     // 見出し
     &__heading{
-      bottom: calc(50% - 10%);
+      bottom: 25%;
       color: #fff;
-      font-size: 10vw;
+      font-size: 100px;
       left: 40px;
+      line-height: 1;
       position: absolute;
       z-index: 2;
+      @media (max-width: $pc){
+        font-size: px-to-vw(100);
+      }
+      @media (max-width: $sp){
+        bottom: 15%;
+        @include sp-font-vw(150);
+        left: 20px;
+      }
       .small{
-        font-size: 3vw;
+        display: block;
+        font-size: 30px;
+        letter-spacing: 5px;
+        margin-top: 35px;
+        @media (max-width: $pc){
+          font-size: px-to-vw(30);
+        }
+        @media (max-width: $sp){
+          @include sp-font-vw(30);
+          margin-top: 1.5em;
+        }
       }
     }
 
@@ -696,6 +715,40 @@ $menu-animation-duration: .3s;
   .jewelry,
   .new-field{
     margin-top: 100px;
-    overflow-x: hidden;
+    overflow-x: hidden; // sectionの画像ちょい右にはみ出てるやつ
+  }
+
+  .section__background{
+    background: url(#{$root-path}/images/top/section-background.svg) no-repeat;
+    background-position-y: bottom;
+    background-size: 800px;
+
+    // 右側にくる方
+    &:nth-of-type(1){
+      background-position-x: 80%;
+
+      @media (max-width: $pc){
+        background-position-x: 150%;
+        background-size: 75%;
+      }
+      @media (max-width: $sp){
+        background-position: 40vw 50%;
+        background-size: 150%;
+      }
+    }
+
+    // 左側にくる方
+    &:nth-of-type(2){
+      background-position-x: 20%;
+
+      @media (max-width: $pc){
+        background-position-x: -50%;
+        background-size: 75%;
+      }
+      @media (max-width: $sp){
+        background-position: -40vw 50%;
+        background-size: 150%;
+      }
+    }
   }
 }
