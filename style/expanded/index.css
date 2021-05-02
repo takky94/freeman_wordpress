@@ -1,4 +1,4 @@
-/* Main
+/* IndexPage
 --------------------------------------------------------------------------------------------*/
 #index .hero {
   position: relative;
@@ -196,7 +196,7 @@
 #index .case__list {
   -webkit-animation: case_slide 100s linear infinite;
           animation: case_slide 100s linear infinite;
-  background: left top/cover url("../images/top/case-list.png") repeat-x;
+  background: left top/cover url(../../images/top/case-list.png) repeat-x;
   height: 50px;
   will-change: animation;
 }
@@ -217,7 +217,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: center top/cover url("../images/top/lead-background.png") no-repeat;
+  background: center top/cover url(../../images/top/lead-background.png) no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -504,7 +504,7 @@
 }
 
 #index .menu .diamond:nth-child(1)::before {
-  background-image: url(../images/top/menu-background/01.png);
+  background-image: url(../../images/top/menu-background/01.png);
 }
 
 #index .menu .diamond:nth-child(2) {
@@ -520,7 +520,7 @@
 }
 
 #index .menu .diamond:nth-child(2)::before {
-  background-image: url(../images/top/menu-background/02.png);
+  background-image: url(../../images/top/menu-background/02.png);
 }
 
 #index .menu .diamond:nth-child(3) {
@@ -541,7 +541,7 @@
 }
 
 #index .menu .diamond:nth-child(3)::before {
-  background-image: url(../images/top/menu-background/03.png);
+  background-image: url(../../images/top/menu-background/03.png);
 }
 
 #index .menu .diamond:nth-child(4) {
@@ -563,7 +563,7 @@
 }
 
 #index .menu .diamond:nth-child(4)::before {
-  background-image: url(../images/top/menu-background/04.png);
+  background-image: url(../../images/top/menu-background/04.png);
 }
 
 #index .menu .diamond:nth-child(5) {
@@ -585,7 +585,7 @@
 }
 
 #index .menu .diamond:nth-child(5)::before {
-  background-image: url(../images/top/menu-background/05.png);
+  background-image: url(../../images/top/menu-background/05.png);
 }
 
 #index .menu .diamond > a {

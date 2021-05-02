@@ -1,24 +1,27 @@
 /* Common
 --------------------------------------------------------------------------------------------*/
 
+// style/compressed/main.min.cssからのrootへの相対
+$root-path: "../..";
+
 @import "./config";
 
 @font-face{
   font-family: "Noto Sans CJK JP";
   font-weight: 100;
-  src: url("./library/fonts/NotoSansCJKjp-Thin.woff") format("woff");
+  src: url(#{$root-path}/library/fonts/NotoSansCJKjp-Thin.woff) format("woff");
 }
 
 @font-face{
   font-family: "Noto Sans CJK JP";
   font-weight: 400;
-  src: url("./library/fonts/NotoSansCJKjp-Regular.woff") format("woff");
+  src: url(#{$root-path}/library/fonts/NotoSansCJKjp-Regular.woff) format("woff");
 }
 
 @font-face{
   font-family: "Noto Sans CJK JP";
   font-weight: 700;
-  src: url("./library/fonts/NotoSansCJKjp-Bold.woff") format("woff");
+  src: url(#{$root-path}/library/fonts/NotoSansCJKjp-Bold.woff) format("woff");
 }
 
 // 全体

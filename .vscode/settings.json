@@ -1,0 +1,19 @@
+{
+  "html.format.wrapLineLength": 120,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/style/expanded/"
+    },
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/style/compressed/"
+    }
+  ],
+  "liveSassCompile.settings.excludeList": ["style/src/@import/**.scss"],
+  "liveSassCompile.settings.includeItems": ["style/src/**.scss"],
+  "liveSassCompile.settings.autoprefix": ["> 1% in JP", "last 2 versions"],
+  "liveSassCompile.settings.generateMap": true
+}

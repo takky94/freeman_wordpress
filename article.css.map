@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "AAAA;8FAC8F",
     "sources": [
-        "article.scss",
-        "include/config.scss"
+        "library/style/article.scss",
+        "library/style/include/config.scss"
     ],
     "names": [],
     "file": "article.css"

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/* AllPages
+--------------------------------------------------------------------------------------------*/
+
+@import "./@import/reset";
+@import "./@import/common";
+@import "./@import/header";
+@import "./@import/footer";
+
+.dev{
+  border: 1px dashed red;
+}

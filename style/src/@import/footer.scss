@@ -1,13 +1,16 @@
 /* Footer
 --------------------------------------------------------------------------------------------*/
 
+// style/compressed/main.min.cssからのrootへの相対
+$root-path: "../..";
+
 @import "./config.scss";
 
 .footer{
   margin-top: 100px;
 
   .cta{
-    background: center / cover url("./images/footer/cta-background.png") no-repeat;
+    background: center / cover url(#{$root-path}/images/footer/cta-background.png) no-repeat;
     display: block;
     height: 200px;
     position: relative;

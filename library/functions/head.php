@@ -38,8 +38,8 @@ if (!function_exists('fm_basic_scripts_and_styles')){
   function fm_basic_scripts_and_styles() {
       // メインCSS
       wp_enqueue_style(
-        'fm-stylesheet',
-        get_template_directory_uri() . '/style.css',
+        'fm-stylesheet-main',
+        get_template_directory_uri() . '/style/compressed/main.min.css',
         array(),
         '',
         'all'

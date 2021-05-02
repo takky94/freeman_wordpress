@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "config.scss"
+        "../../test/test.scss"
     ],
     "names": [],
-    "file": "config.css"
+    "file": "test.css"
 }
