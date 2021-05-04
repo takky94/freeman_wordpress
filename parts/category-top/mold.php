@@ -1,1 +1,1 @@
-<h1>テストカテゴリ</h1>
+<h1>MOLD CATEGORY</h1>
