@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <!-- main -->
 <main class="main">
-  <p>TEST</p>
+  <?php fm_breadcrumb(); ?>
 </main>
 <!-- // main -->
 <!-- footer -->
