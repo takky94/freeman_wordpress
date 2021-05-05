@@ -1,8 +1,6 @@
 @charset "UTF-8";
-/* Article (top以外)
---------------------------------------------------------------------------------------------*/
 .article-header {
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.5);
   height: 300px;
   position: relative;
   z-index: 1;
@@ -56,7 +54,11 @@
   font-size: 14px;
 }
 
+.article-header .breadcrumb ul li a {
+  font-weight: 500;
+}
+
 .article-header .breadcrumb ul li span {
   margin-left: 20px;
 }
-/*# sourceMappingURL=article.css.map */
+/*# sourceMappingURL=page-header.css.map */

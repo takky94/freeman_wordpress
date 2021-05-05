@@ -9,7 +9,11 @@
 <main id="main" class="main <?php echo $category_slug; ?>" role="main">
   <article id="article" <?php post_class(); ?>>
     <?php get_template_part('/parts/header/page-header'); ?>
-    <?php get_template_part('/parts/category-top/'.$category_slug); ?>
+    <div id="content">
+      <div class="container">
+        <?php get_template_part('/parts/category-top/'.$category_slug); ?>
+      </div>
+    </div>
   </article>
 </main>
 
