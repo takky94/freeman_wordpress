@@ -1,9 +1,10 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AEGA,AAAA,WAAW,AAAA,CACT,UAAU,CAAE,IAAI,CAChB,OAAO,CAAE,KAAK,CAyBf,AA3BD,AAIE,WAJS,CAIT,EAAE,AAAA,CACA,OAAO,CAAE,IAAI,CAqBd,AA1BH,AAUQ,WAVG,CAIT,EAAE,CAGA,EAAE,AACC,IAAK,CAAA,YAAY,CAEf,QAAQ,AAAA,CACP,KAAK,CAAE,IAAI,CACX,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,IAAI,CAClB,AAdT,AAiBM,WAjBK,CAIT,EAAE,CAGA,EAAE,CAUA,CAAC,CAjBP,WAAW,CAIT,EAAE,CAGA,EAAE,CAWA,IAAI,AAAA,CACF,KAAK,CAAE,IAAI,CACZ,AApBP,AAsBM,WAtBK,CAIT,EAAE,CAGA,EAAE,CAeA,IAAI,AAAA,CACF,WAAW,CAAE,IAAI,CAClB",
     "sources": [
         "../src/article.scss",
-        "../src/@import/config.scss"
+        "../src/@import/config.scss",
+        "../src/@import/breadcrumb.scss"
     ],
     "names": [],
     "file": "article.min.css"

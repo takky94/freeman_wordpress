@@ -4,7 +4,7 @@
 // style/compressed/main.min.cssからのrootへの相対
 $root-path: "../..";
 
-@import "./config.scss";
+@import "./config";
 
 .footer{
   margin-top: 100px;

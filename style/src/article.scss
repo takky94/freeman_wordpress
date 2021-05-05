@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
-/* Article
+/* Article (top以外)
 --------------------------------------------------------------------------------------------*/
 
-@import "./@import/config.scss";
+@import "./@import/config";
+@import "./@import/breadcrumb";

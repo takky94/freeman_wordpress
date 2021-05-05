@@ -1,9 +1,10 @@
 {
     "version": 3,
-    "mappings": "AAEA;8FAC8F",
+    "mappings": ";AAEA;8FAC8F;AEH9F;8FAC8F;AAE9F,AAAA,WAAW,CAAA;EACT,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,KAAK;CAyBf;;AA3BD,AAIE,WAJS,CAIT,EAAE,CAAA;EACA,OAAO,EAAE,IAAI;CAqBd;;AA1BH,AAUQ,WAVG,CAIT,EAAE,CAGA,EAAE,AACC,IAAK,CAAA,YAAY,CAEf,QAAQ,CAAA;EACP,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,IAAI;CAClB;;AAdT,AAiBM,WAjBK,CAIT,EAAE,CAGA,EAAE,CAUA,CAAC;AAjBP,WAAW,CAIT,EAAE,CAGA,EAAE,CAWA,IAAI,CAAA;EACF,KAAK,EAAE,IAAI;CACZ;;AApBP,AAsBM,WAtBK,CAIT,EAAE,CAGA,EAAE,CAeA,IAAI,CAAA;EACF,WAAW,EAAE,IAAI;CAClB",
     "sources": [
         "../src/article.scss",
-        "../src/@import/config.scss"
+        "../src/@import/config.scss",
+        "../src/@import/breadcrumb.scss"
     ],
     "names": [],
     "file": "article.css"

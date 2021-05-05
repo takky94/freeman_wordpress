@@ -1,10 +1,7 @@
 @charset "UTF-8";
-/* Article (top以外)
---------------------------------------------------------------------------------------------*/
 /* Breadcrumb
 --------------------------------------------------------------------------------------------*/
 .breadcrumb {
-  background: #111;
   display: block;
 }
 
@@ -28,4 +25,4 @@
 .breadcrumb ul li span {
   margin-left: 20px;
 }
-/*# sourceMappingURL=article.css.map */
+/*# sourceMappingURL=breadcrumb.css.map */

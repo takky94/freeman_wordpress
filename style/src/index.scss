@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
-/* IndexPage
+/* IndexPage (topのみ)
 --------------------------------------------------------------------------------------------*/
 
 // style/compressed/main.min.cssからのrootへの相対
 $root-path: "../..";
 $menu-animation-duration: .3s;
 
-@import "./@import/config.scss";
+@import "./@import/config";
 
 #index{
   // FV
