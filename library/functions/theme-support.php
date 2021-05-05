@@ -23,5 +23,18 @@ function fm_theme_support(){
   // rssリンクをhead内に出力
   add_theme_support('automatic-feed-links');
 
+  // 検索画面タイトル変更
+  add_theme_support('title-tag');
+  add_filter('document_title_parts', 'fm_custom_title');
+
+  function fm_custom_title($title){
+    if (is_search()){
+      $title['title'] = get_search_query().'の検索結果';
+    } elseif (is_404()){
+      $title['title'] = 'お探しのページは見つかりませんでした。';
+    }
+    return $title;
+  };
+
 
 } // fm_theme_support()

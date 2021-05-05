@@ -129,6 +129,14 @@ if (!function_exists('fm_breadcrumb_single')){
   }
 }
 
+// 検索画面
+if (!function_exists('fm_breadcrumb_search')){
+  function fm_breadcrumb_search(){
+    $result = fm_breadcrumb_items(esc_attr(get_search_query())."の検索結果", "2");
+    return $result;
+  }
+}
+
 
 // パンくず出力
 if (!function_exists('breadcrumb')){
@@ -144,6 +152,8 @@ if (!function_exists('breadcrumb')){
       $breadcrumb .= fm_breadcrumb_page();
     } elseif(is_single()) {
       $breadcrumb .= fm_breadcrumb_single();
+    } elseif(is_search()) {
+      $breadcrumb .= fm_breadcrumb_search();
     } else {
       $breadcrumb .= '<li>'.wp_title('', false).'</li>';
     }

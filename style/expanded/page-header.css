@@ -1,12 +1,12 @@
 @charset "UTF-8";
-.page-header {
+.entry-header {
   background: rgba(0, 0, 0, 0.5);
   height: 300px;
   position: relative;
   z-index: 1;
 }
 
-.page-header::after {
+.entry-header::after {
   background: #fff;
   bottom: 0;
   content: "";
@@ -18,14 +18,14 @@
   z-index: 2;
 }
 
-.page-header__title {
+.entry-header__title {
   bottom: calc(120px + 21px + 25px + 14px);
   color: #fff;
   font-size: 34px;
   position: absolute;
 }
 
-.page-header .breadcrumb {
+.entry-header .breadcrumb {
   bottom: calc(120px + 25px);
   height: calc(14px * 1.5);
   left: -120px;
@@ -33,7 +33,7 @@
   width: 100%;
 }
 
-.page-header .breadcrumb ul {
+.entry-header .breadcrumb ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,23 +42,23 @@
           justify-content: flex-end;
 }
 
-.page-header .breadcrumb ul li:not(:first-child)::before {
+.entry-header .breadcrumb ul li:not(:first-child)::before {
   color: #fff;
   content: "−";
   margin-left: 20px;
 }
 
-.page-header .breadcrumb ul li a,
-.page-header .breadcrumb ul li span {
+.entry-header .breadcrumb ul li a,
+.entry-header .breadcrumb ul li span {
   color: #fff;
   font-size: 14px;
 }
 
-.page-header .breadcrumb ul li a {
+.entry-header .breadcrumb ul li a {
   font-weight: 500;
 }
 
-.page-header .breadcrumb ul li span {
+.entry-header .breadcrumb ul li span {
   margin-left: 20px;
 }
 /*# sourceMappingURL=page-header.css.map */

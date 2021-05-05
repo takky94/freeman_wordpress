@@ -1,6 +1,4 @@
 @charset "UTF-8";
-/* Article (top以外)
---------------------------------------------------------------------------------------------*/
 .entry-header {
   background: rgba(0, 0, 0, 0.5);
   height: 300px;
@@ -63,4 +61,4 @@
 .entry-header .breadcrumb ul li span {
   margin-left: 20px;
 }
-/*# sourceMappingURL=article.css.map */
+/*# sourceMappingURL=entry-header.css.map */
