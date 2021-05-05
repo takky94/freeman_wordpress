@@ -5,3 +5,4 @@
   <p><span><?php echo $wp_query -> found_posts; ?></span><span>件</span></p>
 </main>
 <!-- // main -->
+<?php get_footer(); ?>

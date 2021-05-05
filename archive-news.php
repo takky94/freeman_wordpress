@@ -20,3 +20,5 @@ $news_query = new WP_Query( $args );
   </div>
   <?php endwhile; endif; wp_reset_postdata(); ?>
 </main>
+
+<?php get_header(); ?>
