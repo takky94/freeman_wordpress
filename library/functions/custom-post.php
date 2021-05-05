@@ -35,8 +35,20 @@ function fm_create_post_type() {
         'custom-fields', //カスタムフィールド
         'revisions'  //リビジョンを保存
       ),
-      'taxonomies' => array('category'),
+      'taxonomies' => array('news_category'),
     ),
+  );
+  // ニュース用カテゴリ
+  register_taxonomy(
+    'news_category',
+    'news',
+    array(
+      'label' => 'ニュースのカテゴリ',
+      'show_ui' => true,
+      'show_admin_column' => true,
+      'show_in_nav_menus' => true, //カスタムメニューの作成画面で表示するか
+      'hierarchical' => true,
+    )
   );
 
  // 商品

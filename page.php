@@ -1,4 +1,7 @@
 <?php get_header(); ?>
+
+<!--page-->
+
 <!-- main -->
 <main class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
   <?php fm_breadcrumb(); ?>

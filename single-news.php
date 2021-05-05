@@ -1,14 +1,11 @@
 <?php
-// カスタム投稿(news)の一覧ページ
-$args = array(
-  'post_type' => 'news', // 投稿タイプを指定
-  'posts_per_page' => 10, // 表示する記事数
-);
+// カスタム投稿(news)の個別ページ
 $news_query = new WP_Query( $args );
 ?>
 
 <?php get_header(); ?>
 
+<!--single-news-->
 <main id="main" class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
   <article id="article" <?php post_class(); ?>>
     <?php get_template_part('/parts/header/news-header'); ?>

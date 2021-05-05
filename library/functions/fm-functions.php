@@ -30,4 +30,4 @@ if (!function_exists('featured_image_src')) {
   function featured_image_src($size, $id = null){
     if (has_post_thumbnail($id)) return get_the_post_thumbnail_url($id, $size);
   }
-} // END featured_image_src
+} // featured_image_src
