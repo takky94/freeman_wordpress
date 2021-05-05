@@ -13,7 +13,7 @@ function fm_create_post_type() {
     array(
       'label' => 'ニュース',
       'labels' => array(
-        'name' => 'news',
+        'name' => 'ニュース',
         'singular_name' => 'news',
         'menu_name' => 'ニュース',
         'edit_item' => 'ニュースの編集',
@@ -35,6 +35,39 @@ function fm_create_post_type() {
         'custom-fields', //カスタムフィールド
         'revisions'  //リビジョンを保存
       ),
+      'taxonomies' => array('category'),
+    ),
+  );
+
+ // 商品
+  register_post_type(
+    'product',
+    array(
+      'label' => '商品',
+      'labels' => array(
+        'name' => '商品',
+        'singular_name' => 'product',
+        'menu_name' => '商品',
+        'edit_item' => '商品の編集',
+        'view_item' => '商品を表示',
+        'search_items' => '商品を検索',
+        'not_found' => '商品は見つかりませんでした。',
+        'not_found_in_trash' => 'ゴミ箱に商品はありませんでした。'
+      ),
+      'public' => true, // 公開する
+      'menu_icon' => 'dashicons-cart', // 管理画面でのアイコン
+      'menu_position' => 6, // 管理画面での表示順
+      'description' => '各商品は設定されたカテゴリにて表示されます。',
+      'has_archive' => true, // 一覧ページ
+      'show_in_rest' => true, // Gutenberg有効
+      'supports' => array(
+        'title',  //タイトル
+        'editor',  //本文
+        'thumbnail',  //アイキャッチ
+        'custom-fields', //カスタムフィールド
+        'revisions'  //リビジョンを保存
+      ),
+      'taxonomies' => array('category'),
     ),
   );
 }
