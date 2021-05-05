@@ -2,7 +2,7 @@
 <?php wp_footer(); //必須 ?>
 <footer class="footer">
   <!-- cta -->
-  <a class="cta dev">
+  <a href="#" class="cta dev">
     <div class="container">
       <div class="cta__title c-white font-robot dev">CONTACT</div>
       <div class="cta__titleSub c-white">お問い合わせ</div>

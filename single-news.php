@@ -15,6 +15,9 @@ $news_query = new WP_Query( $args );
     <div id="content">
       <div class="container">
         <?php if($news_query -> have_posts()): while($news_query -> have_posts()): $news_query -> the_post(); ?>
+        <?php if (has_post_thumbnail()): //アイキャッチ画像 ?>
+        <p class="post-thumbnail"><?php the_post_thumbnail('thumb-600');?></p>
+        <?php endif; ?>
         <h2><?php the_title(); ?></h2>
         <div>
           <?php the_content(); ?>

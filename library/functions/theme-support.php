@@ -8,14 +8,15 @@ WP拡張
 function fm_theme_support(){
   // サムネイル画像を使用可能に
   add_theme_support('post-thumbnails');
+  add_image_size('thumb-1280', 1280, 300); // 記事ヘッダーの背景
+  add_image_size('thumb-600', 600, 400, true); // 個別ページのアイキャッチ(タイトル左部)や関連記事(大)
+  add_image_size('thumb-200', 200, 130, true); //関連記事(小)
 
   function fm_custom_image_sizes($sizes){
     return array_merge($sizes, array(
+      'thumb-1280' => '1280 x 300px',
       'thumb-600' => '600 x 400px',
-      'thumb-420' => '420 x 275px',
-      'thumb-330' => '330 x 220px',
-      'thumb-140' => '140 x 90px',
-      'thumb-100' => '100 x 65px',
+      'thumb-200' => '200 x 130px',
     ));
   }
   add_filter('image_size_names_choose', 'fm_custom_image_sizes');
