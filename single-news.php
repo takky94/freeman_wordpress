@@ -11,7 +11,7 @@ $news_query = new WP_Query( $args );
 
 <main class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
   <h1>ニュースの個別ページ</h1>
-  <?php if($news_query->have_posts()): while($news_query->have_posts()): $news_query->the_post(); ?>
+  <?php if($news_query -> have_posts()): while($news_query -> have_posts()): $news_query -> the_post(); ?>
   <h2>
     <?php the_title(); ?>
   </h2>
@@ -21,4 +21,4 @@ $news_query = new WP_Query( $args );
   <?php endwhile; endif; wp_reset_postdata(); ?>
 </main>
 
-<?php get_header(); ?>
+<?php get_footer(); ?>

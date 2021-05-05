@@ -4,4 +4,4 @@
   <p>TEST</p>
 </main>
 <!-- // main -->
-<?php get_header(); ?>
+<?php get_footer(); ?>
