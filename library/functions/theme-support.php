@@ -14,6 +14,7 @@ function fm_theme_support(){
 
   function fm_custom_image_sizes($sizes){
     return array_merge($sizes, array(
+      'thumb-1280' => '1280 x 300px',
       'thumb-600' => '600 x 400px',
       'thumb-200' => '200 x 130px',
     ));

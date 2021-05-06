@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Article (記事ページ以外)
+/* Archive(記事ページ以外)
 --------------------------------------------------------------------------------------------*/
 .entry-header {
   background: rgba(0, 0, 0, 0.5);
@@ -64,10 +64,57 @@
   margin-left: 20px;
 }
 
+.archive-tabs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.archive-tabs ul li a {
+  display: block;
+  padding: 2em;
+}
+
+.archive-tabs ul li.active a {
+  background: #000;
+  color: #fff;
+}
+
 .post-card.post-card-large {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
-/*# sourceMappingURL=article.css.map */
+
+.post-card.post-card-small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.news__large {
+  margin-left: -100px;
+}
+
+.news__2col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 769px) {
+  .news__2col .news__2col--left,
+  .news__2col .news__2col--right {
+    width: 60%;
+  }
+  .news__2col .news__2col--3row {
+    width: 40%;
+  }
+  .news__2col .news__2col--right {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+/*# sourceMappingURL=archive.css.map */

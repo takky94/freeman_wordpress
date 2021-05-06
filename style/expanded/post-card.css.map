@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AACE,UADQ,AACP,iBAAiB,CAAA;EAChB,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,IAAI;CACZ",
+    "mappings": "AAAA,AACE,UADQ,AACP,gBAAgB,CAAA;EACf,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,IAAI;CACZ;;AAJH,AAUE,UAVQ,AAUP,gBAAgB,CAAA;EACf,OAAO,EAAE,IAAI;CACd",
     "sources": [
         "../src/@import/post-card.scss"
     ],

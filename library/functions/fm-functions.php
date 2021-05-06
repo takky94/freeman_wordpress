@@ -24,8 +24,8 @@ if (!function_exists('replace_thumbnail_src')) {
 }
 
 // サイズを指定して画像のURLを取得
-if (!function_exists('featured_image_src')) {
-  function featured_image_src($size, $id = null){
+if (!function_exists('fm_default_thumb')) {
+  function fm_default_thumb($size, $id = null){
     // アイキャッチが登録されていればそれを表示
     if (has_post_thumbnail($id)) return get_the_post_thumbnail_url($id, $size);
 
@@ -35,4 +35,4 @@ if (!function_exists('featured_image_src')) {
     if($size == 'thumb-200') return $template_image_path.'default-200x130.png';
     return $template_image_path.'default.png';
   }
-} // featured_image_src
+} // fm_default_thumb
