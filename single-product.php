@@ -1,3 +1,4 @@
+<!--single-product.php-->
 <?php
 // カスタム投稿(products)の一覧ページ
 $args = array(

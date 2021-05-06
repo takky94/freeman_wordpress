@@ -59,7 +59,7 @@ if (!function_exists('fm_breadcrumb_category')){
 // 固定ページ
 if (!function_exists('fm_breadcrumb_page')){
   function fm_breadcrumb_page(){
-    global $post;
+    $post = get_queried_object();
     $post_id = $post -> ID;
     $post_title = $post -> post_title;
 
@@ -89,10 +89,19 @@ if (!function_exists('fm_breadcrumb_page')){
 // 投稿ページ
 if (!function_exists('fm_breadcrumb_single')){
   function fm_breadcrumb_single(){
-    global $post;
+    $post = get_queried_object();
     $post_id = $post -> ID;
     $post_title = $post -> post_title;
-    $categories = get_the_category($post_id);
+    $post_type = $post -> post_type;
+
+    // カスタム投稿ならカスタムタクソノミー取得
+    if ($post_type === 'post'){
+      $categories = get_the_category($post_id);
+    } elseif ($post_type === 'news') {
+      $categories = get_object_taxonomies($post_type, 'news_category');
+    } elseif ($post_type === 'product') {
+      $categories = get_object_taxonomies($post_type, 'product_category');
+    }
     $category = $categories[0]; // 投稿ページのカテゴリ
     $category_id = $category -> cat_ID;
     $category_name = $category -> cat_name;
@@ -101,7 +110,13 @@ if (!function_exists('fm_breadcrumb_single')){
     $i = 2;
 
     if($category -> parent != 0) { // 投稿のカテゴリが親カテゴリを持つ場合
-      $ancestors = array_reverse(get_ancestors($category_id, 'category'));
+      if ($post_type === 'post'){
+        $ancestors = array_reverse(get_ancestors($category_id, 'category'));
+      } elseif ($post_type === 'news') {
+        $ancestors = array_reverse(get_ancestors($category_id, 'news_category'));
+      } elseif ($post_type === 'product') {
+        $ancestors = array_reverse(get_ancestors($category_id, 'product_category'));
+      }
       foreach ($ancestors as $ancestor){
         $result .= fm_breadcrumb_items(
           esc_attr(get_cat_name($ancestor)),

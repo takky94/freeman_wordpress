@@ -1,3 +1,4 @@
+<!--single-news.php-->
 <?php
 // カスタム投稿(news)の個別ページ
 $news_query = new WP_Query( $args );

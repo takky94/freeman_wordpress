@@ -46,6 +46,8 @@ function fm_create_post_type() {
       'label' => 'ニュースのカテゴリ',
       'show_ui' => true,
       'show_admin_column' => true,
+      'show_in_quick_edit' => true, // カスタム投稿クイック編集画面で表示
+      'show_in_rest' => true, // カスタム投稿編集画面で表示
       'show_in_nav_menus' => true, //カスタムメニューの作成画面で表示するか
       'hierarchical' => true,
     )
@@ -79,7 +81,21 @@ function fm_create_post_type() {
         'custom-fields', //カスタムフィールド
         'revisions'  //リビジョンを保存
       ),
-      'taxonomies' => array('category'),
+      'taxonomies' => array('product_category'),
     ),
+  );
+  // 商品用カテゴリ
+  register_taxonomy(
+    'product_category',
+    'product',
+    array(
+      'label' => '商品のカテゴリ',
+      'show_ui' => true,
+      'show_admin_column' => true,
+      'show_in_quick_edit' => true, // カスタム投稿クイック編集画面で表示
+      'show_in_rest' => true, // カスタム投稿編集画面で表示
+      'show_in_nav_menus' => true, //カスタムメニューの作成画面で表示するか
+      'hierarchical' => true,
+    )
   );
 }

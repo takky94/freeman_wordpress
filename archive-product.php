@@ -1,8 +1,10 @@
+<!--archive-product.php-->
 <?php
 // カスタム投稿(products)の一覧ページ
 $args = array(
+  'paged' => $paged,
   'post_type' => 'product', // 投稿タイプを指定
-  'posts_per_page' => 10, // 表示する記事数
+  'posts_per_page' => get_option('posts_per_page'), // 表示する記事数
 );
 $product_query = new WP_Query($args);
 ?>

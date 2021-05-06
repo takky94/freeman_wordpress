@@ -1,6 +1,5 @@
+<!--single.php-->
 <?php get_header(); ?>
-
-<!--single-->
 
 <!-- main -->
 <main class="main">

@@ -1,9 +1,17 @@
-<!--archive-news.php-->
+<!--taxonomy-news_category.php-->
 <?php
-// ニュースの一覧ページ
+// ニュースのカテゴリごと一覧ページ
   $args = array(
     'paged' => $paged,
     'post_type' => 'news',
+    'tax_query' => array(
+      'relation' => 'OR',
+      array(
+        'taxonomy' => 'news_category',
+        'field' => 'slug',
+        'terms' => get_query_var('news_category'),
+      ),
+    ),
     'posts_per_page' => get_option('posts_per_page'),
   );
   $the_query = new WP_Query($args);
