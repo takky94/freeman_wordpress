@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACE,UADQ,AACP,iBAAiB,AAAA,CAChB,OAAO,CAAE,IAAI,CACb,KAAK,CAAE,IAAI,CACZ",
+    "sources": [
+        "../src/@import/post-card.scss"
+    ],
+    "names": [],
+    "file": "post-card.min.css"
+}

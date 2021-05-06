@@ -47,11 +47,10 @@ if (!function_exists('fm_breadcrumb_category')){
         );
         $i++;
       } // foreach
-      $result .= fm_breadcrumb_items(esc_attr($category_name),$i); // 現在の階層
-    } else { // 親カテゴリなし
-      $result .= fm_breadcrumb_items(esc_attr($category_name),$i); // 現在の階層
     }
 
+    // ぱんくず最下層に現在の階層
+    $result .= fm_breadcrumb_items(esc_attr($category_name),$i);
     return $result;
   }
 }
@@ -78,9 +77,10 @@ if (!function_exists('fm_breadcrumb_page')){
         );
         $i++;
       }
-    } else { // 親ページなし
-      $result .= fm_breadcrumb_items(esc_attr($post_title),$i);
     }
+
+    // ぱんくず最下層に現在のページタイトル追加
+    $result .= fm_breadcrumb_items(esc_attr($post_title),$i);
 
     return $result;
   }
@@ -94,52 +94,44 @@ if (!function_exists('fm_breadcrumb_single')){
     $post_title = $post -> post_title;
     $post_type = $post -> post_type;
 
-    // カスタム投稿ならカスタムタクソノミー取得
-    if ($post_type === 'post'){
-      $categories = get_the_category($post_id);
-    } elseif ($post_type === 'news') {
-      $categories = get_object_taxonomies($post_type, 'news_category');
-    } elseif ($post_type === 'product') {
-      $categories = get_object_taxonomies($post_type, 'product_category');
-    }
-    $category = $categories[0]; // 投稿ページのカテゴリ
-    $category_id = $category -> cat_ID;
-    $category_name = $category -> cat_name;
-
     $result = '';
     $i = 2;
 
-    if($category -> parent != 0) { // 投稿のカテゴリが親カテゴリを持つ場合
-      if ($post_type === 'post'){
+    // 通常の投稿 or カスタム投稿
+    if ($post_type == 'post'){
+      $categories = get_the_category($post_id);
+      $category = $categories[0]; // 投稿ページのカテゴリ
+      $category_id = $category -> cat_ID;
+      $category_name = $category -> cat_name;
+
+      if($category -> parent != 0) { // 投稿のカテゴリが親カテゴリを持つ場合
         $ancestors = array_reverse(get_ancestors($category_id, 'category'));
-      } elseif ($post_type === 'news') {
-        $ancestors = array_reverse(get_ancestors($category_id, 'news_category'));
-      } elseif ($post_type === 'product') {
-        $ancestors = array_reverse(get_ancestors($category_id, 'product_category'));
-      }
-      foreach ($ancestors as $ancestor){
+        foreach ($ancestors as $ancestor){
+          $result .= fm_breadcrumb_items(
+            esc_attr(get_cat_name($ancestor)),
+            $i,
+            esc_url(get_category_link($ancestor))
+          );
+          $i++;
+        } // foreach
         $result .= fm_breadcrumb_items(
-          esc_attr(get_cat_name($ancestor)),
+          esc_attr($category_name),
           $i,
-          esc_url(get_category_link($ancestor))
+          esc_url(get_category_link($category_id))
         );
-        $i++;
-      } // foreach
-      $result .= fm_breadcrumb_items(
-        esc_attr($category_name),
-        $i,
-        esc_url(get_category_link($category_id))
-      );
-      $result .= fm_breadcrumb_items(esc_attr($post_title),$i);
-    } else { // 投稿のカテゴリに親カテゴリなし
-      $result .= fm_breadcrumb_items(
-        esc_attr($category_name),
-        $i,
-        esc_url(get_category_link($category_id))
-      );
-      $result .= fm_breadcrumb_items(esc_attr($post_title),$i);
+      } else { // 投稿のカテゴリに親カテゴリなし
+        $result .= fm_breadcrumb_items(
+          esc_attr($category_name),
+          $i,
+          esc_url(get_category_link($category_id))
+        );
+      }
+    } else { // カスタム投稿ならお知らせで統一
+      $result .= fm_breadcrumb_items("お知らせ", $i);
     }
 
+    // ぱんくず最下層に現在のページタイトル追加
+    $result .= fm_breadcrumb_items(esc_attr($post_title),$i);
     return $result;
   }
 }

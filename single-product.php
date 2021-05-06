@@ -1,12 +1,4 @@
 <!--single-product.php-->
-<?php
-// カスタム投稿(products)の一覧ページ
-$args = array(
-  'post_type' => 'product', // 投稿タイプを指定
-  'posts_per_page' => 10, // 表示する記事数
-);
-$product_query = new WP_Query($args);
-?>
 
 <?php get_header(); ?>
 
@@ -15,7 +7,10 @@ $product_query = new WP_Query($args);
     <?php get_template_part('/parts/header/news-header'); ?>
     <div id="content">
       <div class="container">
-        <?php if($product_query -> have_posts()): while($product_query -> have_posts()): $product_query -> the_post(); ?>
+        <?php if (have_posts()): while (have_posts()): the_post(); ?>
+        <?php if (has_post_thumbnail()): //アイキャッチ画像 ?>
+        <p class="post-thumbnail"><?php the_post_thumbnail('thumb-600');?></p>
+        <?php endif; ?>
         <h2><?php the_title(); ?></h2>
         <div>
           <?php the_content(); ?>

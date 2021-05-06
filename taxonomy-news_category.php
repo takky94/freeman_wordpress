@@ -23,8 +23,8 @@
 <?php get_header(); ?>
 
 <main class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-  <h1>ニュースの一覧ページ</h1>
-
+  <h1>ニュースのカテゴリごと一覧ページ</h1>
+  <?php get_template_part('/parts/archive-tabs'); ?>
   <?php if ($the_query -> found_posts > 0): if ($the_query -> have_posts()): ?>
   <ul class="news__area">
     <?php while ($the_query -> have_posts()): ?>

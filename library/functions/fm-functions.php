@@ -1,6 +1,5 @@
 <?php
 
-
 /*
 アイキャッチ画像
 ********************************************************************/
@@ -19,7 +18,6 @@ if (!function_exists('replace_custom_size_thumbnail_url')) {
 }
 if (!function_exists('replace_thumbnail_src')) {
   function replace_thumbnail_src($src, $size){
-    if ($size == "thumb-1280") return replace_custom_size_thumbnail_url($src, "1280", "300");
     if ($size == "thumb-600") return replace_custom_size_thumbnail_url($src, "600", "400");
     if ($size == "thumb-200") return replace_custom_size_thumbnail_url($src, "200", "130");
   }
@@ -28,6 +26,13 @@ if (!function_exists('replace_thumbnail_src')) {
 // サイズを指定して画像のURLを取得
 if (!function_exists('featured_image_src')) {
   function featured_image_src($size, $id = null){
+    // アイキャッチが登録されていればそれを表示
     if (has_post_thumbnail($id)) return get_the_post_thumbnail_url($id, $size);
+
+    // 登録されていなければテーマ内設置のデフォルト画像
+    $template_image_path = get_template_directory_uri().'/images/article/';
+    if($size == 'thumb-600') return $template_image_path.'default-600x400.png';
+    if($size == 'thumb-200') return $template_image_path.'default-200x130.png';
+    return $template_image_path.'default.png';
   }
 } // featured_image_src
