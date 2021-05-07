@@ -29,9 +29,14 @@
           <div class="thumbail">
             <p class="post-thumbnail"><img src="<?php echo fm_default_thumb('thumb-600'); ?>"</p>
           </div>
-          <div class="title">
-            <p><?php echo $terms[0] -> name; ?></p>
-            <p><?php echo get_the_title(); ?></p>
+          <div class="content">
+            <div class="meta">
+              <p class="meta__category"><?php echo $terms[0] -> name; ?></p>
+              <time class="meta__date font-robot"
+                datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+            </div>
+            <p class="title"><?php echo get_the_title(); ?></p>
+            <p class="description"><?php echo the_excerpt(); ?></p>
           </div>
         </a>
       </div>
@@ -77,9 +82,14 @@
         <div class="thumbail">
           <p class="post-thumbnail"><img src="<?php echo $src; ?>" alt=""></p>
         </div>
-        <div class="title">
-          <p><?php echo $terms[0] -> name; ?></p>
-          <p><?php echo get_the_title(); ?></p>
+        <div class="content">
+          <div class="meta">
+            <p class="meta__category"><?php echo $terms[0] -> name; ?></p>
+            <time class="meta__date font-robot"
+              datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+          </div>
+          <p class="title"><?php echo get_the_title(); ?></p>
+          <p class="description"><?php echo the_excerpt(); ?></p>
         </div>
       </a>
       <?php echo $end_tag; ?>

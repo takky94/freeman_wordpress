@@ -11,25 +11,37 @@
 .news {
   &__large {
     margin-left: -100px;
-    margin-top: 100px;
+    margin-top: 60px;
   }
 
   &__2col {
     display: flex;
-    margin-top: 100px;
+    margin-top: 60px;
 
     @media (min-width: $tab) {
       .news__2col--left,
       .news__2col--right {
-        width: 40%;
+        width: 45%;
       }
       .news__2col--3row {
-        width: 60%;
+        width: 55%;
       }
 
+      .news__2col--left {
+        margin-right: 60px;
+      }
       .news__2col--right {
+        margin-left: 60px;
         order: 2;
       }
+    }
+  }
+
+  &__small{
+    &:not(:first-of-type) {
+      border-top: 1px solid $c-gray;
+      margin-top: 30px;
+      padding-top: 30px;
     }
   }
 }

@@ -80,53 +80,128 @@
   color: #fff;
 }
 
-.post-card.post-card-large {
+/* Post Card
+--------------------------------------------------------------------------------------------*/
+.post-card .meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.post-card .meta__category {
+  background: #000;
+  color: #fff;
+  padding: 6px;
+}
+
+.post-card .meta__date {
+  color: #96a8be;
+}
+
+.post-card-large {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 
-.post-card.post-card-large img {
+.post-card-large img {
   max-width: 680px;
   width: 100%;
 }
 
-.post-card.post-card-middle img {
-  max-width: 450px;
+.post-card-large .content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 60px 0 0 60px;
+}
+
+.post-card-large .title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.post-card-large .description {
+  margin-top: 60px;
+}
+
+.post-card-middle img {
+  margin: auto;
   width: 100%;
 }
 
-.post-card.post-card-small {
+.post-card-middle .meta {
+  margin-top: 20px;
+}
+
+.post-card-middle .title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.post-card-middle .description {
+  margin-top: 60px;
+}
+
+.post-card-small {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.post-card-small .content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-left: 30px;
+}
+
+.post-card-small .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
 .news__large {
   margin-left: -100px;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .news__2col {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 @media (min-width: 769px) {
   .news__2col .news__2col--left,
   .news__2col .news__2col--right {
-    width: 40%;
+    width: 45%;
   }
   .news__2col .news__2col--3row {
-    width: 60%;
+    width: 55%;
+  }
+  .news__2col .news__2col--left {
+    margin-right: 60px;
   }
   .news__2col .news__2col--right {
+    margin-left: 60px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
+}
+
+.news__small:not(:first-of-type) {
+  border-top: 1px solid #96a8be;
+  margin-top: 30px;
+  padding-top: 30px;
 }
 /*# sourceMappingURL=archive.css.map */
