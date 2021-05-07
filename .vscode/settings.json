@@ -15,5 +15,6 @@
   "liveSassCompile.settings.excludeList": ["style/src/@import/**.scss"],
   "liveSassCompile.settings.includeItems": ["style/src/**.scss"],
   "liveSassCompile.settings.autoprefix": ["> 1% in JP", "last 2 versions"],
-  "liveSassCompile.settings.generateMap": true
+  "liveSassCompile.settings.generateMap": true,
+  "csscomb.preset": "./.vscode/csscomb.json"
 }

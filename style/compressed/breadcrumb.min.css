@@ -1,2 +1,0 @@
-.breadcrumb{display:block}.breadcrumb ul{display:-webkit-box;display:-ms-flexbox;display:flex}.breadcrumb ul li:not(:first-child)::before{color:#fff;content:"−";margin-left:20px}.breadcrumb ul li a,.breadcrumb ul li span{color:#fff}.breadcrumb ul li span{margin-left:20px}
-/*# sourceMappingURL=breadcrumb.min.css.map */

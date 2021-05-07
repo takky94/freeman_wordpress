@@ -8,26 +8,26 @@
 @import "./@import/tabs";
 @import "./@import/post-card";
 
-.news{
-  &__large{
-    margin-top: 100px;
+.news {
+  &__large {
     margin-left: -100px;
+    margin-top: 100px;
   }
 
-  &__2col{
+  &__2col {
     display: flex;
     margin-top: 100px;
 
-    @media (min-width: $tab){
+    @media (min-width: $tab) {
       .news__2col--left,
-      .news__2col--right{
+      .news__2col--right {
         width: 40%;
       }
-      .news__2col--3row{
+      .news__2col--3row {
         width: 60%;
       }
 
-      .news__2col--right{
+      .news__2col--right {
         order: 2;
       }
     }
