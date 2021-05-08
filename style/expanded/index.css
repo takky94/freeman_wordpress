@@ -154,15 +154,23 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.7);
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-size: 14px;
+  min-width: 800px;
   padding: 25px 50px;
   position: absolute;
   z-index: 1;
+}
+
+@media (max-width: 800px) {
+  #index .hero__news {
+    min-width: inherit;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -180,13 +188,28 @@
   margin-left: 30px;
 }
 
+@media (max-width: 768px) {
+  #index .hero__news--date {
+    margin-left: 2.77778vw;
+  }
+}
+
 #index .hero__news--postTitle {
   margin-left: 5px;
 }
 
+@media (max-width: 768px) {
+  #index .hero__news--postTitle {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60%;
+  }
+}
+
 @media (min-width: 769px) {
   #index .hero__news--link {
-    margin-left: 160px;
+    margin-left: auto;
   }
 }
 
@@ -752,8 +775,8 @@
             transform: rotate(-45deg) translateY(-10px);
   }
   #index .menu .diamond:hover::after {
-    -webkit-animation: circleRed .3s ease-in-out both;
-            animation: circleRed .3s ease-in-out both;
+    -webkit-animation: circleRed 0.3s ease-in-out both;
+            animation: circleRed 0.3s ease-in-out both;
   }
   #index .menu .diamond:hover a div .diamond__icon {
     bottom: -15px;

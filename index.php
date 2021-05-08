@@ -25,13 +25,20 @@
         <img src="<?= get_template_directory_uri(); ?>/images/top/slide/04.png" />
       </picture>
     </div>
-    <?php $news = get_posts('post_type=news'); ?>
+    <?php
+      $args = array(
+        'numberposts' => 1,
+        'post_type' => 'news'
+      );
+      $news = get_posts($args);
+    ?>
     <?php if (!empty($news)): foreach ($news as $post): setup_postdata($post); ?>
     <div class="hero__news c-white">
       <p class="hero__news--title font-robot  bold sp__none">NEWS</p>
-      <span class="hero__news--date"><?php the_time('Y/m/d') ?></span>
-      <a href="<?php the_permalink();?>" class="hero__news--postTitle c-white"><?php the_title();?></a>
-      <a href="#" class="hero__news--link c-white sp__none">お知らせ一覧</a>
+      <time class="hero__news--date" datetime="<?php the_time('Y-m-d') ?>"><?php the_time('Y/m/d') ?></time>
+      <a href="<?php the_permalink();?>"
+        class="hero__news--postTitle c-white"><?php echo wp_trim_words(get_the_title(), 20); ?></a>
+      <a href="<?php echo get_post_type_archive_link('news'); ?>" class="hero__news--link c-white sp__none">お知らせ一覧</a>
       <a href="#" class="hero__news--link c-main-bg pc__none">
         <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowRight.svg" width="25" alt="">
       </a>

@@ -5,48 +5,48 @@
 
 // style/compressed/main.min.cssからのrootへの相対
 $root-path: "../..";
-$menu-animation-duration: .3s;
+$menu-animation-duration: 0.3s;
 
 @import "./@import/config";
 
-#index{
+#index {
   // FV
-  .hero{
+  .hero {
     position: relative;
 
     // スライドショー
-    &__slide{
-      background-color: rgba(0, 0, 0, .5);
+    &__slide {
+      background-color: rgba(0, 0, 0, 0.5);
       height: calc(100vh - #{$header-height-pc});
       position: relative;
       width: 100%;
-      @media (max-width: $sp){
+      @media (max-width: $sp) {
         height: calc(100vh - #{$header-height-sp});
       }
 
-      picture{
-        &:nth-of-type(1){
-          img{
+      picture {
+        &:nth-of-type(1) {
+          img {
             animation-delay: 0s;
           }
         }
-        &:nth-of-type(2){
-          img{
+        &:nth-of-type(2) {
+          img {
             animation-delay: 5s;
           }
         }
-        &:nth-of-type(3){
-          img{
+        &:nth-of-type(3) {
+          img {
             animation-delay: 10s;
           }
         }
-        &:nth-of-type(4){
-          img{
+        &:nth-of-type(4) {
+          img {
             animation-delay: 15s;
           }
         }
       }
-      img{
+      img {
         animation: slideAnime 20s ease infinite;
         display: block;
         height: 100%;
@@ -58,30 +58,30 @@ $menu-animation-duration: .3s;
         top: 0;
         width: 100%;
       }
-      @keyframes slideAnime{
-        0%{
+      @keyframes slideAnime {
+        0% {
           opacity: 0;
         }
         // 1s時点
-        5%{
+        5% {
           opacity: 1;
         }
         // 4s時点
-        25%{
+        25% {
           opacity: 1;
         }
-        30%{
+        30% {
           opacity: 0;
         }
         // 20s時点
-        100%{
+        100% {
           opacity: 0;
         }
       }
 
       // filter代わり
-      &::before{
-        background-color: rgba(0, 0, 0, .5);
+      &::before {
+        background-color: rgba(0, 0, 0, 0.5);
         bottom: 0;
         content: "";
         display: block;
@@ -96,7 +96,7 @@ $menu-animation-duration: .3s;
     }
 
     // 見出し
-    &__heading{
+    &__heading {
       bottom: 25%;
       color: #fff;
       font-size: 100px;
@@ -104,57 +104,71 @@ $menu-animation-duration: .3s;
       line-height: 1;
       position: absolute;
       z-index: 2;
-      @media (max-width: $pc){
+      @media (max-width: $pc) {
         font-size: px-to-vw(100);
       }
-      @media (max-width: $sp){
+      @media (max-width: $sp) {
         bottom: 15%;
         @include sp-font-vw(150);
         left: 20px;
       }
-      .small{
+      .small {
         display: block;
         font-size: 30px;
         letter-spacing: 5px;
         margin-top: 35px;
-        @media (max-width: $pc){
+        @media (max-width: $pc) {
           font-size: px-to-vw(30);
         }
-        @media (max-width: $sp){
+        @media (max-width: $sp) {
           @include sp-font-vw(30);
           margin-top: 1.5em;
         }
       }
     }
 
-    &__news{
+    &__news {
       align-items: center;
-      background: rgba(0, 0, 0, .9);
+      background: rgba(0, 0, 0, 0.7);
       bottom: 0;
       display: flex;
       font-size: 14px;
+      min-width: 800px;
       padding: 25px 50px;
       position: absolute;
       z-index: 1;
-      @media (max-width: $sp){
+      @media (max-width: 800px) {
+        min-width: inherit;
+        width: 100%;
+      }
+      @media (max-width: $sp) {
         padding: px-to-vw(25) 0;
         width: 100%;
       }
 
-      &--title{
+      &--title {
         font-size: 18px;
       }
-      &--date{
+      &--date {
         margin-left: 30px;
-      }
-      &--postTitle{
-        margin-left: 5px;
-      }
-      &--link{
-        @media (min-width: $tab){
-          margin-left: 160px;
+        @media (max-width: $sp) {
+          margin-left: px-to-vw(30);
         }
-        @media (max-width: $sp){
+      }
+      &--postTitle {
+        margin-left: 5px;
+        @media (max-width: $sp) {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 60%;
+        }
+      }
+      &--link {
+        @media (min-width: $tab) {
+          margin-left: auto;
+        }
+        @media (max-width: $sp) {
           align-items: center;
           display: flex;
           height: 100%;
@@ -164,7 +178,7 @@ $menu-animation-duration: .3s;
           right: 0;
           top: 0;
 
-          img{
+          img {
             width: 15px;
           }
         }
@@ -173,13 +187,13 @@ $menu-animation-duration: .3s;
   } // END FV
 
   // 提携企業一覧
-  .case{
+  .case {
     padding: 60px 0 100px;
-    @media (max-width: $sp){
+    @media (max-width: $sp) {
       padding: px-to-vw(60) 0 px-to-vw(100);
     }
 
-    &__list{
+    &__list {
       animation: case_slide 100s linear infinite;
       background: left top / cover url(#{$root-path}/images/top/case-list.png) repeat-x;
       height: 50px;
@@ -187,80 +201,80 @@ $menu-animation-duration: .3s;
     }
   }
 
-  @keyframes case_slide{
-    100%{
+  @keyframes case_slide {
+    100% {
       background-position: -5383px 0;
     }
   } // END 提携企業一覧
 
   // 手のひらから宇宙まで
-  .lead{
+  .lead {
     align-items: center;
     background: center top / cover url(#{$root-path}/images/top/lead-background.png) no-repeat;
     display: flex;
     justify-content: center;
     padding: 200px 0 85px;
-    @media (max-width: $sp){
+    @media (max-width: $sp) {
       padding: px-to-vw(200) 0 px-to-vw(85);
     }
 
-    &__heading{
+    &__heading {
       font-size: 44px;
       font-weight: 100;
       letter-spacing: 3px;
       text-align: center;
-      @media (max-width: $sp){
+      @media (max-width: $sp) {
         @include sp-font-vw(60);
       }
     }
 
-    &__text{
+    &__text {
       font-size: 20px;
       margin-top: 30px;
-      @media (max-width: $sp){
+      @media (max-width: $sp) {
         @include sp-font-vw(30);
         margin-top: px-to-vw(30);
       }
     }
 
-    &__achievement{
+    &__achievement {
       display: flex;
       justify-content: space-between;
       margin-top: 60px;
 
-      .block{
+      .block {
         display: flex;
         line-height: 1;
-        &:not(:first-child){
+        &:not(:first-child) {
           margin-left: 90px;
-          @media (max-width: $sp){
+          @media (max-width: $sp) {
             margin-left: px-to-vw(90);
           }
         }
 
-        &__left{
+        &__left {
           font-size: 22px;
           text-align: left;
-          @media (max-width: $sp){
+          @media (max-width: $sp) {
             font-size: px-to-vw(22);
           }
-          img{
+          img {
             display: inline-block;
             vertical-align: bottom;
           }
         }
-        &__right{
+        &__right {
           flex-grow: 1;
           margin-left: 15px;
-          .big{
+          .big {
             font-size: 52px;
-            @media (max-width: $sp){
+            @media (max-width: $sp) {
               @include sp-font-vw(30);
             }
           }
-          .small{
+          .small {
             font-size: 22px;
-            @media (max-width: $sp){
+            @media (max-width: $sp) {
               @include sp-font-vw(20);
             }
           }
@@ -270,44 +284,44 @@ $menu-animation-duration: .3s;
   } // END 手のひらから宇宙まで
 
   // メニュー
-  .menu{
+  .menu {
     height: 508px;
     position: relative;
-    @media (max-width: $pc){
+    @media (max-width: $pc) {
       height: px-to-vw(508); // 508pxを1080px(containerのmax横幅)以下でvw化
     }
-    @media (max-width: $sp){
+    @media (max-width: $sp) {
       height: auto;
     }
 
-    .container{
+    .container {
       height: 100%;
       overflow: hidden;
-      @media (max-width: $pc){
+      @media (max-width: $pc) {
         width: 100%;
       }
-      @media (max-width: $sp){
+      @media (max-width: $sp) {
         width: 100%;
       }
 
-      & > ul{
-        @media (max-width: $sp){
+      & > ul {
+        @media (max-width: $sp) {
           display: flex;
           flex-wrap: wrap;
-          & > li.diamond{
-            &:nth-child(1){
+          & > li.diamond {
+            &:nth-child(1) {
               order: 1;
             }
-            &:nth-child(2){
+            &:nth-child(2) {
               order: 4;
             }
-            &:nth-child(3){
+            &:nth-child(3) {
               order: 5;
             }
-            &:nth-child(4){
+            &:nth-child(4) {
               order: 2;
             }
-            &:nth-child(5){
+            &:nth-child(5) {
               order: 3;
             }
           }
@@ -315,11 +329,11 @@ $menu-animation-duration: .3s;
       }
     }
 
-    .diamond{
+    .diamond {
       cursor: pointer;
 
       // 768px 〜 ひし形
-      @media (min-width: $tab){
+      @media (min-width: $tab) {
         height: 226.27416998px; // 320px / √2
         margin: auto;
         overflow: hidden; // はみ出た背景画像削除
@@ -328,40 +342,40 @@ $menu-animation-duration: .3s;
         transform-origin: 50% 50%;
         width: 226.27416998px; // 320px / √2
       }
-      @media (max-width: $pc){
+      @media (max-width: $pc) {
         height: px-to-vw(226); // 226pxを1080px(containerのmax横幅)以下でvw化
         width: px-to-vw(226); // 226pxを1080px(containerのmax横幅)以下でvw化
       }
       // 〜 768 長方形
-      @media (max-width: $sp){
-        border-bottom: 1px solid rgba(0, 0, 0, .4);
+      @media (max-width: $sp) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
         height: 80px;
         position: relative;
         width: 100%;
       }
 
       // ひし型メニューの背景画像
-      &::before{
+      &::before {
         background: center / contain #fff no-repeat;
         content: "";
         height: 100%;
         position: absolute;
         width: 100%;
-        @media (min-width: $tab){
+        @media (min-width: $tab) {
           left: 60px;
           top: 60px;
           transform: rotate(-45deg);
           transition: $menu-animation-duration all;
           will-change: transform;
         }
-        @media (max-width: $sp){
+        @media (max-width: $sp) {
           background-position: 90% 20px;
         }
       }
 
       // フィルター
-      .filter{
-        background: rgba(0, 0, 0, .5);
+      .filter {
+        background: rgba(0, 0, 0, 0.5);
         height: 100%;
         position: absolute;
         top: 0;
@@ -372,110 +386,110 @@ $menu-animation-duration: .3s;
       // .diamond 位置調整
       &:nth-child(1),
       &:nth-child(2),
-      &:nth-child(3){
+      &:nth-child(3) {
         top: 45px;
-        @media (max-width: $pc){
+        @media (max-width: $pc) {
           top: px-to-vw(45); // 235pxを1080px(containerのmax横幅)以下でvw化;
         }
       }
       &:nth-child(4),
-      &:nth-child(5){
+      &:nth-child(5) {
         bottom: 45px;
         left: 0;
         right: 0;
-        @media (max-width: $pc){
+        @media (max-width: $pc) {
           bottom: px-to-vw(45); // 45pxを1080px(containerのmax横幅)以下でvw化
         }
       }
-      &:nth-child(1){
+      &:nth-child(1) {
         left: 45px;
-        @media (max-width: $pc){
+        @media (max-width: $pc) {
           left: px-to-vw(45); // 45pxを1080px(containerのmax横幅)以下でvw化
         }
-        @media (max-width: $sp){
+        @media (max-width: $sp) {
           left: 0;
           top: 0;
         }
 
         // 背景画像
-        &::before{
+        &::before {
           background-image: url(#{$root-path}/images/top/menu-background/01.png);
         }
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         left: 0;
         right: 0;
-        @media (max-width: $sp){
+        @media (max-width: $sp) {
           left: 0;
           top: 0;
         }
 
         // 背景画像
-        &::before{
+        &::before {
           background-image: url(#{$root-path}/images/top/menu-background/02.png);
         }
       }
-      &:nth-child(3){
+      &:nth-child(3) {
         right: 45px;
-        @media (max-width: $pc){
+        @media (max-width: $pc) {
           right: px-to-vw(45); // 45pxを1080px(containerのmax横幅)以下でvw化
         }
-        @media (max-width: $sp){
+        @media (max-width: $sp) {
           left: 0;
           top: 0;
         }
 
         // 背景画像
-        &::before{
+        &::before {
           background-image: url(#{$root-path}/images/top/menu-background/03.png);
         }
       }
-      &:nth-child(4){
+      &:nth-child(4) {
         margin-left: calc(45px + 160px + 30px); // left位置 + ひし形の半分 + 余白
-        @media (max-width: $pc){
+        @media (max-width: $pc) {
           margin-left: px-to-vw(235); // 235pxを1080px(containerのmax横幅)以下でvw化
         }
-        @media (max-width: $sp){
+        @media (max-width: $sp) {
           left: 0;
           margin-left: 0;
           top: 0;
         }
 
         // 背景画像
-        &::before{
+        &::before {
           background-image: url(#{$root-path}/images/top/menu-background/04.png);
         }
       }
-      &:nth-child(5){
+      &:nth-child(5) {
         margin-right: calc(45px + 160px + 30px); // right位置 + ひし形の半分 + 余白
-        @media (max-width: $pc){
+        @media (max-width: $pc) {
           margin-right: px-to-vw(235); // 235pxを1080px(containerのmax横幅)以下でvw化
         }
-        @media (max-width: $sp){
+        @media (max-width: $sp) {
           left: 0;
           margin-right: 0;
           top: 0;
         }
 
         // 背景画像
-        &::before{
+        &::before {
           background-image: url(#{$root-path}/images/top/menu-background/05.png);
         }
       }
 
-      & > a{
+      & > a {
         display: block;
         height: 100%;
         position: relative;
         z-index: 4;
 
-        .diamond__inner{
+        .diamond__inner {
           height: 100%;
           position: absolute;
           width: 100%;
 
-          & > div{
-            @media (min-width: $tab){
+          & > div {
+            @media (min-width: $tab) {
               height: 100%;
               left: 0;
               margin: auto;
@@ -486,49 +500,49 @@ $menu-animation-duration: .3s;
               transform: rotate(-45deg);
               width: 70%;
             }
-            @media (max-width: $pc){
+            @media (max-width: $pc) {
               padding-top: px-to-vw(35); // 35pxを1080px(containerのmax横幅)以下でvw化
             }
-            @media (max-width: $sp){
+            @media (max-width: $sp) {
               padding: 0 20px;
               position: absolute;
               top: 50%;
               transform: translateY(-50%);
             }
 
-            .diamond__title{
+            .diamond__title {
               font-size: 30px;
               line-height: 1.2;
-              @media (max-width: $pc){
+              @media (max-width: $pc) {
                 font-size: px-to-vw(30); // 30pxを1080px(containerのmax横幅)以下でvw化
               }
-              @media (max-width: $sp){
+              @media (max-width: $sp) {
                 display: inline-block;
                 @include sp-font-vw(35);
               }
             }
-            .diamond__titleSub{
+            .diamond__titleSub {
               font-size: 14px;
               margin-top: 8px;
-              @media (max-width: $pc){
+              @media (max-width: $pc) {
                 font-size: px-to-vw(14);
                 margin-top: px-to-vw(8); // 8pxを1080px(containerのmax横幅)以下でvw化
               }
-              @media (max-width: $sp){
+              @media (max-width: $sp) {
                 display: inline-block;
               }
             }
           }
-          .diamond__icon{
+          .diamond__icon {
             margin: auto;
             position: absolute;
-            @media (min-width: $tab){
+            @media (min-width: $tab) {
               bottom: -10px;
               left: 0;
               right: 0;
               transition: $menu-animation-duration all;
             }
-            @media (max-width: $sp){
+            @media (max-width: $sp) {
               bottom: 0;
               right: 10px;
               top: 0;
@@ -538,13 +552,13 @@ $menu-animation-duration: .3s;
       } // a
 
       // hover時、赤く染まる挙動
-      @media (min-width: $tab){
+      @media (min-width: $tab) {
         // hover時アニメーション類(769px~)
 
         // .diamond::after(赤い円)
-        &::after{
+        &::after {
           animation: circleRedOut $menu-animation-duration ease-in-out both;
-          background: rgba(235, 41, 54, .6);
+          background: rgba(235, 41, 54, 0.6);
           border-radius: 50%;
           content: "";
           height: 100%;
@@ -556,35 +570,35 @@ $menu-animation-duration: .3s;
           z-index: 3;
         }
 
-        &:hover{
+        &:hover {
           // .diamond::before
-          &::before{
+          &::before {
             transform: rotate(-45deg) translateY(-10px);
           }
           // .diamond::after
-          &::after{
-            animation: circleRed .3s ease-in-out both;
+          &::after {
+            animation: circleRed 0.3s ease-in-out both;
           }
 
-          a div .diamond__icon{
+          a div .diamond__icon {
             bottom: -15px;
           }
         }
         // hover時赤い円挙動
-        @keyframes circleRed{
-          0%{
+        @keyframes circleRed {
+          0% {
             transform: scale(0);
           }
-          100%{
+          100% {
             transform: scale(1.5);
           }
         }
         // hover解除時赤い円挙動
-        @keyframes circleRedOut{
-          0%{
+        @keyframes circleRedOut {
+          0% {
             transform: scale(1.5);
           }
-          100%{
+          100% {
             transform: scale(0);
           }
         }
@@ -593,32 +607,32 @@ $menu-animation-duration: .3s;
   } //END メニュー
 
   // セクション内共通スタイル
-  .detail{
+  .detail {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
 
     // 左側が画像
-    &-reverse{
-      .detail__text{
+    &-reverse {
+      .detail__text {
         order: 2;
-        @media (max-width: $sp){
+        @media (max-width: $sp) {
           order: 1; // SPではテキストが上
         }
       }
-      .detail__image{
+      .detail__image {
         order: 1;
-        @media (max-width: $sp){
+        @media (max-width: $sp) {
           order: 2; // SPでは画像が下
         }
-        img{
+        img {
           margin-left: -60px;
           margin-right: auto;
 
-          @media (max-width: $pc){
+          @media (max-width: $pc) {
             margin-left: -10px;
           }
-          @media (max-width: $sp){
+          @media (max-width: $sp) {
             margin: 30px auto 0;
           }
         }
@@ -626,48 +640,48 @@ $menu-animation-duration: .3s;
     }
 
     &__image,
-    &__text{
+    &__text {
       width: 50%;
-      @media (max-width: $sp){
+      @media (max-width: $sp) {
         width: 100%;
       }
     }
 
-    &__image{
-      img{
+    &__image {
+      img {
         margin-left: auto;
         margin-right: -60px;
         max-width: 500px;
         width: 100%;
 
-        @media (max-width: $pc){
+        @media (max-width: $pc) {
           margin-right: -10px;
         }
-        @media (max-width: $sp){
+        @media (max-width: $sp) {
           margin: 30px auto 0;
         }
       }
     }
 
-    &__text{
-      &--heading{
-        &En{
+    &__text {
+      &--heading {
+        &En {
           font-size: 72px;
           font-weight: bold;
           line-height: 1;
-          transform: scale(.8, 1);
+          transform: scale(0.8, 1);
           transform-origin: top left;
           width: 125%;
-          @media (max-width: $sp){
+          @media (max-width: $sp) {
             @include sp-font-vw(80);
           }
 
           // 切り抜き文字
-          .decoration{
+          .decoration {
             color: #fff;
             display: inline-block;
             position: relative;
-            &::before{
+            &::before {
               border: 9px solid #fff;
               content: "";
               display: block;
@@ -677,7 +691,7 @@ $menu-animation-duration: .3s;
               top: -1px;
               width: calc(100% + 2px);
 
-              @media (max-width: $sp){
+              @media (max-width: $sp) {
                 border: px-to-vw(9, 768) solid #fff;
                 height: calc(100% + 2px);
                 width: calc(100% + 2px);
@@ -685,29 +699,29 @@ $menu-animation-duration: .3s;
             }
           }
         }
-        &Jp{
+        &Jp {
           color: $c-gray;
           font-size: 20px;
           margin-top: 30px;
-          @media (max-width: $sp){
+          @media (max-width: $sp) {
             @include sp-font-vw(30);
             margin-top: 1em;
           }
         }
-        &Sub{
+        &Sub {
           font-size: 35px;
           font-weight: bold;
           margin-top: 80px;
-          @media (max-width: $sp){
+          @media (max-width: $sp) {
             @include sp-font-vw(40);
             margin-top: 1.5em;
           }
         }
       }
-      &--description{
+      &--description {
         line-height: 2;
         margin-top: 30px;
-        @media (max-width: $sp){
+        @media (max-width: $sp) {
           margin-top: 1.5em;
         }
       }
@@ -718,39 +732,39 @@ $menu-animation-duration: .3s;
   .sand-casting,
   .investment-casting,
   .jewelry,
-  .new-field{
+  .new-field {
     margin-top: 100px;
     overflow-x: hidden; // sectionの画像ちょい右にはみ出てるやつ
   }
 
-  .section__background{
+  .section__background {
     background: url(#{$root-path}/images/top/section-background.svg) no-repeat;
     background-position-y: bottom;
     background-size: 800px;
 
     // 右側にくる方
-    &:nth-of-type(1){
+    &:nth-of-type(1) {
       background-position-x: 80%;
 
-      @media (max-width: $pc){
+      @media (max-width: $pc) {
         background-position-x: 150%;
         background-size: 75%;
       }
-      @media (max-width: $sp){
+      @media (max-width: $sp) {
         background-position: 40vw 50%;
         background-size: 150%;
       }
     }
 
     // 左側にくる方
-    &:nth-of-type(2){
+    &:nth-of-type(2) {
       background-position-x: 20%;
 
-      @media (max-width: $pc){
+      @media (max-width: $pc) {
         background-position-x: -50%;
         background-size: 75%;
       }
-      @media (max-width: $sp){
+      @media (max-width: $sp) {
         background-position: -40vw 50%;
         background-size: 150%;
       }

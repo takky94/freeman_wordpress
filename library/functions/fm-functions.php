@@ -41,15 +41,33 @@ if (!function_exists('fm_default_thumb')) {
 記事にNEWマーク
 ********************************************************************/
 
-function fm_newmark(){
-  $days = 3; // 記事投稿日から3日経ってない場合にNEWマークつける
-  $days_sec = $days * 86400;
+if (!function_exists('fm_newmark')) {
+  function fm_newmark(){
+    $days = 3; // 記事投稿日から3日経ってない場合にNEWマークつける
+    $days_sec = $days * 86400;
 
-  $today = time();
-  $entry = get_the_time('U');
-  $days_ago = $today - $entry;
+    $today = time();
+    $entry = get_the_time('U');
+    $days_ago = $today - $entry;
 
-  if ($days_ago < $days_sec) {
-    echo '<span class="meta__label--new font-robot">NEW</span>';
+    if ($days_ago < $days_sec) {
+      echo '<span class="meta__label--new font-robot">NEW</span>';
+    }
+  }
+}
+
+/*
+文字数制限
+********************************************************************/
+
+if (!function_exists('fm_trim_text')) {
+  function fm_trim_text($text, $size){
+    $str = strip_tags($text);
+    if (mb_strlen($text, 'UTF-8') < $size){
+      $str = mb_substr(strip_tags($text), 0, $size, 'UTF-8');
+      echo $str.'…';
+    } else {
+      echo strip_tags($str);
+    }
   }
 }

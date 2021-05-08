@@ -3,6 +3,7 @@
 // リンク生成(+構造化データ)
 if (!function_exists('fm_breadcrumb_items')){
   function fm_breadcrumb_items($name, $position="1", $url=""){
+    $name = wp_trim_words($name, 20); // 20文字以上は省略
     // 現在のカテゴリは$url渡さない
     $str = $url
         ? '<li itemprop="itemListElement" itemscope
