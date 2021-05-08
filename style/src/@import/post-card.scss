@@ -4,15 +4,28 @@
 @import "./config";
 
 .post-card {
-
   .meta {
+    align-items: center;
     display: flex;
     justify-content: space-between;
 
-    &__category {
-      background: #000;
-      color: #fff;
-      padding: 6px;
+    &__label {
+      display: flex;
+      min-width: 180px;
+
+      span {
+        color: #fff;
+        font-size: 14px;
+        padding: 6px;
+        text-align: center;
+        width: 50%;
+      }
+      &--new {
+        background: $c-gray;
+      }
+      &--category {
+        background: #000;
+      }
     }
 
     &__date {
@@ -53,7 +66,7 @@
     width: 100%;
   }
 
-  .meta{
+  .meta {
     margin-top: 20px;
   }
 
@@ -81,5 +94,4 @@
     font-weight: bold;
     margin-top: 10px;
   }
-
 }

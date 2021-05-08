@@ -36,3 +36,20 @@ if (!function_exists('fm_default_thumb')) {
     return $template_image_path.'default.png';
   }
 } // fm_default_thumb
+
+/*
+記事にNEWマーク
+********************************************************************/
+
+function fm_newmark(){
+  $days = 3; // 記事投稿日から3日経ってない場合にNEWマークつける
+  $days_sec = $days * 86400;
+
+  $today = time();
+  $entry = get_the_time('U');
+  $days_ago = $today - $entry;
+
+  if ($days_ago < $days_sec) {
+    echo '<span class="meta__label--new font-robot">NEW</span>';
+  }
+}

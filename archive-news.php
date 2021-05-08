@@ -31,7 +31,10 @@
           </div>
           <div class="content">
             <div class="meta">
-              <p class="meta__category"><?php echo $terms[0] -> name; ?></p>
+              <div class="meta__label">
+                <?php fm_newmark(); ?>
+                <span class="meta__label--category"><?php echo $terms[0] -> name; ?></span>
+              </div>
               <time class="meta__date font-robot"
                 datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
             </div>
@@ -104,7 +107,10 @@
         </div>
         <div class="content">
           <div class="meta">
-            <p class="meta__category"><?php echo $terms[0] -> name; ?></p>
+            <div class="meta__label">
+              <?php fm_newmark(); ?>
+              <span class="meta__label--category"><?php echo $terms[0] -> name; ?></span>
+            </div>
             <time class="meta__date font-robot"
               datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
           </div>
