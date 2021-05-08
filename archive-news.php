@@ -44,6 +44,7 @@
       <?php endif;// 上段 ?>
       <?php if ($i !== 0): // 上段以外 ?>
       <?php
+        // 雛形
         switch ($i) {
           case 1:
             $start_tag = '<div class="news__2col"><div class="news__middle news__2col--right">';
@@ -67,6 +68,25 @@
             $start_tag = '<div class="news__small">';
             $end_tag = '</div>';
             break;
+        }
+
+        // 記事数が9未満の場合、閉じdivのズレ解消
+        $post_count = $wp_query -> post_count;
+        if ($i + 1 === $post_count){
+          switch ($post_count) {
+            case 2:
+            case 3:
+            case 6:
+            case 7:
+              $end_tag = '</div></div>';
+              break;
+            case 4:
+            case 8:
+              $end_tag = '</div></div></div>';
+              break;
+            default:
+              break;
+          }
         }
 
         if ($i === 1 || $i === 5 ){
