@@ -6,6 +6,7 @@
 @import "./@import/config";
 @import "./@import/entry-header";
 @import "./@import/tabs";
+@import "./@import/pagenavi";
 @import "./@import/post-card";
 
 .news {
@@ -37,9 +38,9 @@
     }
   }
 
-  &__small{
+  &__small {
     &:not(:first-of-type) {
-      border-top: 1px solid $c-gray;
+      border-top: 1px solid $c-lightgray;
       margin-top: 30px;
       padding-top: 30px;
     }

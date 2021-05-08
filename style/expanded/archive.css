@@ -80,6 +80,72 @@
   color: #fff;
 }
 
+.pagenavi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 120px auto 0;
+  max-width: 500px;
+  position: relative;
+}
+
+.pagenavi .page {
+  display: inline-block;
+  font-family: "Roboto Condensed", sans-serif;
+  height: 70px;
+  line-height: 70px;
+  position: relative;
+  text-align: center;
+  width: 75px;
+}
+
+.pagenavi .page.current {
+  background: #000;
+  color: #fff;
+}
+
+.pagenavi .page:not(.current) {
+  padding-left: 1px;
+}
+
+.pagenavi .page:not(.current)::before {
+  background: #dce5f0;
+  bottom: 0;
+  content: "";
+  display: inline-block;
+  height: 70%;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.pagenavi .page::after {
+  background: #dce5f0;
+  bottom: 0;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.pagenavi .arrow-postlink {
+  color: #eb2936;
+  display: inline-block;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  width: 75px;
+}
+
 /* Post Card
 --------------------------------------------------------------------------------------------*/
 .post-card .meta {
@@ -121,7 +187,7 @@
 }
 
 .post-card-large .title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   margin-top: 20px;
 }
@@ -140,7 +206,7 @@
 }
 
 .post-card-middle .title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   margin-top: 20px;
 }
@@ -200,7 +266,7 @@
 }
 
 .news__small:not(:first-of-type) {
-  border-top: 1px solid #96a8be;
+  border-top: 1px solid #dce5f0;
   margin-top: 30px;
   padding-top: 30px;
 }

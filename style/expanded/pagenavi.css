@@ -1,0 +1,30 @@
+.pagenavi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  max-width: 500px;
+}
+
+.pagenavi .page {
+  display: inline-block;
+  font-family: "Roboto Condensed", sans-serif;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  width: 100px;
+}
+
+.pagenavi .page.current {
+  background: #000;
+  color: #fff;
+}
+
+.pagenavi .arrow-postlink {
+  display: inline-block;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  width: 100px;
+}
+/*# sourceMappingURL=pagenavi.css.map */

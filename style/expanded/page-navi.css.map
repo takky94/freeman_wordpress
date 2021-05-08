@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/@import/page-navi.scss"
+    ],
+    "names": [],
+    "file": "page-navi.css"
+}

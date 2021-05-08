@@ -1,0 +1,60 @@
+.pagenavi {
+  display: flex;
+  justify-content: center;
+  margin: 120px auto 0;
+  max-width: 500px;
+  position: relative;
+
+  .page {
+    display: inline-block;
+    font-family: "Roboto Condensed", sans-serif;
+    height: 70px;
+    line-height: 70px;
+    position: relative;
+    text-align: center;
+    width: 75px;
+
+    &.current {
+      background: #000;
+      color: #fff;
+    }
+
+    &:not(.current) {
+      padding-left: 1px;
+
+      &::before {
+        background: $c-lightgray;
+        bottom: 0;
+        content: "";
+        display: inline-block;
+        height: 70%;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        width: 1px;
+      }
+    }
+    &::after {
+      background: $c-lightgray;
+      bottom: 0;
+      content: "";
+      display: inline-block;
+      height: 1px;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      width: 100%; // 両端の矢印分マイナス
+    }
+  }
+
+  .arrow-postlink {
+    color: $c-main;
+    display: inline-block;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    width: 75px;
+  }
+}

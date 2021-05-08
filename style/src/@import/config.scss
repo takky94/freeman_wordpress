@@ -8,6 +8,7 @@ $sp: 768px; // ~ $sp
 // 色
 $c-main: #eb2936;
 $c-gray: #96a8be;
+$c-lightgray: #dce5f0;
 
 // 固定値
 $header-height-pc: 100px;
@@ -17,19 +18,19 @@ $header-logo-height-sp: 30px;
 
 // pxをvw化
 // $size: int
-@function px-to-vw($size, $viewport: 1080){
+@function px-to-vw($size, $viewport: 1080) {
   $rate: 100 / $viewport;
   @return $rate * $size * 1vw;
 }
 
 // SPでの最大画面幅(768)のfont-sizeを指定し、それ以下ではviewportで縮小
-@mixin sp-font-vw($font-size: 16){
+@mixin sp-font-vw($font-size: 16) {
   font-size: $font-size * 1px;
   font-size: px-to-vw($font-size, 768);
 }
 
 // よく使うもの
-@mixin centeringMargin{
+@mixin centeringMargin {
   bottom: 0;
   left: 0;
   margin: auto;

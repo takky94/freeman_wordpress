@@ -100,7 +100,7 @@
     <?php else: echo '404'; ?>
     <?php endif; endif; ?>
     <?php wp_reset_query(); ?>
-    <?php if(function_exists('wp_pagenavi')) wp_pagenavi(array('query' => $the_query)); ?>
+    <?php if(function_exists('fm_pagenavi')) fm_pagenavi(array('query' => $the_query)); ?>
   </div>
 </main>
 
