@@ -127,11 +127,24 @@ if (!function_exists('fm_breadcrumb_single')){
         );
       }
     } else { // カスタム投稿ならお知らせで統一
-      $result .= fm_breadcrumb_items("お知らせ", $i);
+      $result .= fm_breadcrumb_items("お知らせ", $i, get_post_type_archive_link('news'));
     }
 
     // ぱんくず最下層に現在のページタイトル追加
     $result .= fm_breadcrumb_items(esc_attr($post_title),$i);
+    return $result;
+  }
+}
+
+// 一覧
+if (!function_exists('fm_breadcrumb_archive')){
+  function fm_breadcrumb_archive(){
+    // 通常の投稿 or カスタム投稿
+    if ($post_type == 'post'){
+      // 通常の投稿の一覧
+    } else {
+      $result = fm_breadcrumb_items("お知らせ", $i);
+    }
     return $result;
   }
 }
@@ -159,6 +172,8 @@ if (!function_exists('breadcrumb')){
       $breadcrumb .= fm_breadcrumb_page();
     } elseif(is_single()) {
       $breadcrumb .= fm_breadcrumb_single();
+    } elseif(is_archive()) {
+      $breadcrumb .= fm_breadcrumb_archive();
     } elseif(is_search()) {
       $breadcrumb .= fm_breadcrumb_search();
     } else {
