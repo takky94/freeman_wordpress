@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* Article (記事ページ以外)
 --------------------------------------------------------------------------------------------*/
+/* entry-header(single/page)
+--------------------------------------------------------------------------------------------*/
 .entry-header {
   background: rgba(0, 0, 0, 0.5);
   height: 300px;
@@ -174,6 +176,8 @@
   margin-top: 10px;
 }
 
+/* Content(single/page)
+--------------------------------------------------------------------------------------------*/
 .content-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -243,5 +247,93 @@
 .content-main {
   margin: 120px auto 0;
   max-width: 900px;
+}
+
+.content-main h2,
+.content-main h3,
+.content-main h4 {
+  font-weight: bold;
+}
+
+.content-main h2 {
+  border-bottom: 1px solid #dce5f0;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  padding-bottom: 10px;
+}
+
+.content-main h3 {
+  font-size: 22px;
+  margin-top: 30px;
+}
+
+.content-main h4 {
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.content-main p {
+  line-height: 2;
+  margin-top: 20px;
+}
+
+.content-main blockquote {
+  background: #f4f5f8;
+  margin-top: 30px;
+  padding: 2em;
+  position: relative;
+}
+
+.content-main blockquote::before {
+  background: center/contain url(../../images/article/icon/blockquote.svg) no-repeat;
+  content: "";
+  height: 1em;
+  left: 1em;
+  position: absolute;
+  top: 1em;
+  width: 1em;
+}
+
+.content-main blockquote p {
+  margin: 0;
+}
+
+.content-main blockquote cite {
+  display: block;
+  font-size: 0.8em;
+  font-style: normal;
+  text-align: right;
+}
+
+.content-main a {
+  color: #eb2936;
+}
+
+.content-main ul,
+.content-main ol {
+  margin-top: 30px;
+}
+
+.content-main ul li,
+.content-main ol li {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.content-main ul li::before {
+  background: #96a8be;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 10px;
+  margin-right: 6px;
+  width: 10px;
+}
+
+.content-main ol {
+  list-style: decimal;
+  padding-left: 1em;
 }
 /*# sourceMappingURL=article.css.map */

@@ -1,11 +1,16 @@
-.entry-header{
-  background: rgba(0, 0, 0, .5);
+/* entry-header(single/page)
+--------------------------------------------------------------------------------------------*/
+
+@import "./config";
+
+.entry-header {
+  background: rgba(0, 0, 0, 0.5);
   height: 300px;
   position: relative;
   z-index: 1;
 
   // ずらした白背景レイアウト部分
-  &::after{
+  &::after {
     background: #fff;
     bottom: 0;
     content: "";
@@ -18,7 +23,7 @@
   }
 
   // 記事タイトル
-  &__title{
+  &__title {
     bottom: calc(120px + 21px + 25px + 14px); // ずらした白背景レイアウト部分 + ぱんくず + ぱんくず余白 + 余白
     color: #fff;
     font-size: 34px;
@@ -26,33 +31,33 @@
   }
 
   // ぱんくず
-  .breadcrumb{
+  .breadcrumb {
     bottom: calc(120px + 25px); // ずらした白背景レイアウト部分 + 余白
     height: calc(14px * 1.5); // font-size * 1.5 = 21
     left: -120px;
     position: absolute;
     width: 100%;
-    ul{
+    ul {
       display: flex;
       justify-content: flex-end; // 右寄せ
-      li{
-        &:not(:first-child){
+      li {
+        &:not(:first-child) {
           // セパレーター
-          &::before{
+          &::before {
             color: #fff;
             content: "−";
             margin-left: 20px;
           }
         } // not:first-child
         a,
-        span{
+        span {
           color: #fff;
           font-size: 14px;
         }
-        a{
+        a {
           font-weight: 500; // リンク付きのぱんくず(親階層)は太文字
         }
-        span{
+        span {
           margin-left: 20px;
         }
       } // li

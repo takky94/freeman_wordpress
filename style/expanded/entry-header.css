@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* entry-header(single/page)
+--------------------------------------------------------------------------------------------*/
+.entry-header {
+  background: rgba(0, 0, 0, 0.5);
+  height: 300px;
+  position: relative;
+  z-index: 1;
+}
+
+.entry-header::after {
+  background: #fff;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 120px;
+  left: -120px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.entry-header__title {
+  bottom: calc(120px + 21px + 25px + 14px);
+  color: #fff;
+  font-size: 34px;
+  position: absolute;
+}
+
+.entry-header .breadcrumb {
+  bottom: calc(120px + 25px);
+  height: calc(14px * 1.5);
+  left: -120px;
+  position: absolute;
+  width: 100%;
+}
+
+.entry-header .breadcrumb ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.entry-header .breadcrumb ul li:not(:first-child)::before {
+  color: #fff;
+  content: "−";
+  margin-left: 20px;
+}
+
+.entry-header .breadcrumb ul li a,
+.entry-header .breadcrumb ul li span {
+  color: #fff;
+  font-size: 14px;
+}
+
+.entry-header .breadcrumb ul li a {
+  font-weight: 500;
+}
+
+.entry-header .breadcrumb ul li span {
+  margin-left: 20px;
+}
+/*# sourceMappingURL=entry-header.css.map */
