@@ -69,6 +69,10 @@ button {
   padding: 0;
 }
 
+address {
+  font-style: normal;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
@@ -76,13 +80,13 @@ button {
   *,
   *::before,
   *::after {
-    -webkit-animation-duration: .01ms !important;
-            animation-duration: .01ms !important;
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
             animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
-    -webkit-transition-duration: .01ms !important;
-            transition-duration: .01ms !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
   }
 }
 
@@ -141,6 +145,10 @@ body.js-fixed {
 
 .font-gothic {
   font-family: "メイリオ", Meiryo, "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
+}
+
+.font-serif {
+  font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
 }
 
 .center {

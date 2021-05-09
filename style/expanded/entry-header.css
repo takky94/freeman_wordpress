@@ -66,19 +66,38 @@
   margin-left: 20px;
 }
 
-.search-header {
-  background: #fff;
-}
-
-.search-header::before {
+.news-header::before,
+.company-header::before,
+.search-header::before,
+.notfound-header::before {
   bottom: 110px;
-  color: #f4f5f8;
-  content: "SEARCH";
+  color: #dce5f0;
   display: inline-block;
   font: bold 180px "Roboto Condensed", sans-serif;
   line-height: 1;
   position: absolute;
   right: 0;
+}
+
+.news-header::before {
+  bottom: 65px;
+  content: "NEWS";
+  opacity: 0.4;
+}
+
+.company-header::before {
+  bottom: 65px;
+  content: "COMPANY";
+  opacity: 0.4;
+}
+
+.search-header {
+  background: #fff;
+}
+
+.search-header::before {
+  color: #f4f5f8;
+  content: "SEARCH";
 }
 
 .search-header::after {
@@ -129,16 +148,10 @@
 }
 
 .notfound-header::before {
-  bottom: 110px;
-  color: #dce5f0;
   content: "404 NOT FOUND";
-  display: inline-block;
-  font: bold 110px "Roboto Condensed", sans-serif;
+  font-size: 110px;
   left: 0;
-  line-height: 1;
   margin: auto;
-  position: absolute;
-  right: 0;
   text-align: center;
 }
 

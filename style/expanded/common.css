@@ -1,54 +1,45 @@
+@charset "UTF-8";
 /* Common
 --------------------------------------------------------------------------------------------*/
-
-// style/compressed/main.min.cssからのrootへの相対
-$root-path: "../..";
-
-@import "./config";
-
 @font-face {
   font-family: "Noto Sans CJK JP";
   font-weight: 100;
-  src: url(#{$root-path}/library/fonts/NotoSansCJKjp-Thin.woff) format("woff");
+  src: url(../../library/fonts/NotoSansCJKjp-Thin.woff) format("woff");
 }
 
 @font-face {
   font-family: "Noto Sans CJK JP";
   font-weight: 400;
-  src: url(#{$root-path}/library/fonts/NotoSansCJKjp-Regular.woff) format("woff");
+  src: url(../../library/fonts/NotoSansCJKjp-Regular.woff) format("woff");
 }
 
 @font-face {
   font-family: "Noto Sans CJK JP";
   font-weight: 700;
-  src: url(#{$root-path}/library/fonts/NotoSansCJKjp-Bold.woff) format("woff");
+  src: url(../../library/fonts/NotoSansCJKjp-Bold.woff) format("woff");
 }
 
-// 全体
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans CJK JP", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Arial",
-  "メイリオ", Meiryo, sans-serif;
-
-  // ハンバーガーなどactive時にスクロールできなくする
-  &.js-fixed {
-    height: 100%;
-    overflow: hidden;
-  }
+  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans CJK JP", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Arial", "メイリオ", Meiryo, sans-serif;
 }
 
-// 色
+body.js-fixed {
+  height: 100%;
+  overflow: hidden;
+}
+
 .c-main {
-  color: $c-main;
+  color: #eb2936;
 }
+
 .c-main-bg {
-  background-color: $c-main;
+  background-color: #eb2936;
 }
 
 .c-white {
   color: #fff;
 }
 
-// フォント
 .bold {
   font-weight: bold;
 }
@@ -69,26 +60,36 @@ body {
   font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
 }
 
-// レイアウト
 .center {
   text-align: center;
 }
 
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .flex-center {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container {
   margin: auto;
   max-width: 1080px;
   width: 100%;
-  @media (max-width: $pc) {
+}
+
+@media (max-width: 1080px) {
+  .container {
     width: 95%;
   }
 }
@@ -97,38 +98,36 @@ body {
   position: relative;
 }
 
-// レスポンシブ
-@media (min-width: #{$tab}) {
+@media (min-width: 769px) {
   .pc__none {
     display: none !important;
   }
 }
 
-@media (max-width: #{$sp}) {
+@media (max-width: 768px) {
   .sp__none {
     display: none !important;
   }
 }
 
-// 余白
-
 .mt-5 {
   margin-top: 5px;
 }
+
 .mt-10 {
   margin-top: 10px;
 }
+
 .mt-20 {
   margin-top: 20px;
 }
 
-// 装飾
-
 .button {
-  background: $c-main;
+  background: #eb2936;
   color: #fff;
   display: inline-block;
   font-size: 16px;
   margin-top: 60px;
   padding: 20px 30px;
 }
+/*# sourceMappingURL=common.css.map */

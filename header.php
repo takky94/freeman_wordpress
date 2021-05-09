@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/index.min.css" />
   <?php elseif (is_archive()): ?>
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/archive.min.css" />
+  <?php elseif (is_page_template()): //テンプレート使用の固定ページ ?>
+  <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/article-template.min.css" />
   <?php elseif (is_single()||is_page()): ?>
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/article.min.css" />
   <?php elseif (is_search()): ?>

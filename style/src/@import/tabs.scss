@@ -1,15 +1,15 @@
-.archive-tabs{
-  ul{
+.archive-tabs {
+  ul {
     display: flex;
 
-    li{
-      a{
+    li {
+      a {
         display: block;
         padding: 2em;
       }
 
-      &.active{
-        a{
+      &.active {
+        a {
           background: #000;
           color: #fff;
         }

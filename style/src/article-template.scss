@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+/* 固定ページテンプレート使用時
+--------------------------------------------------------------------------------------------*/
+
+$root-path: "../..";
+@import "./@import/config";
+@import "./@import/entry-header";
+
+.company-page {
+  .content-header {
+    display: flex;
+    margin-left: -75px;
+
+    .block {
+      position: relative;
+      width: calc(100% / 3);
+
+      &::before {
+        background: #000;
+        content: "";
+        display: inline-block;
+        height: 2px;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30px;
+      }
+
+      &:not(:first-child) {
+        &::after {
+          background: center / contain url(#{$root-path}/images/company/lineY.svg) no-repeat;
+          bottom: 0;
+          content: "";
+          display: inline-block;
+          height: 120px;
+          left: 0;
+          position: absolute;
+          width: 1px;
+        }
+      }
+
+      h2 {
+        font-size: 50px;
+        line-height: 1;
+        margin-top: 30px;
+        text-align: center;
+      }
+      .sub-title {
+        color: $c-gray;
+        font-size: 20px;
+        margin-top: 1em;
+        text-align: center;
+      }
+      .description {
+        font-size: 22px;
+        margin-top: 50px;
+        text-align: center;
+      }
+    }
+  } // .content-header
+
+  .content-main {
+    .greeting {
+      display: flex;
+      margin-top: 200px;
+
+      .pic {
+        img {
+          max-width: 300px;
+        }
+      }
+
+      .text {
+        margin-left: 70px;
+
+        h2 {
+          font-size: 60px;
+          line-height: 1;
+        }
+        .sub-title {
+          color: $c-gray;
+          font-size: 20px;
+          margin-top: 1em;
+        }
+        .message {
+          font-weight: 100;
+          line-height: 2;
+          margin-top: 70px;
+        }
+        .sign {
+          font-size: 14px;
+          font-weight: bold;
+          margin-top: 50px;
+          text-align: right;
+
+          img {
+            margin-left: auto;
+            margin-top: 20px;
+            width: 160px;
+          }
+        }
+      }
+    } // greeting
+    .overview {
+      display: flex;
+      margin-top: 200px;
+
+      .title {
+        width: 300px;
+        h2 {
+          font-size: 60px;
+          line-height: 1;
+        }
+        .sub-title {
+          color: $c-gray;
+          font-size: 20px;
+          margin-top: 1em;
+        }
+      }
+
+      .address {
+        margin-left: 70px;
+
+        table {
+          tr {
+            display: flex;
+            position: relative;
+
+            // ボーダー
+            &:not(:first-child) {
+              margin-top: 40px;
+              padding-top: 40px;
+
+              &::before {
+                background: left / cover url(#{$root-path}/images/company/lineX.svg) no-repeat;
+                content: "";
+                display: block;
+                height: 1px;
+                position: absolute;
+                top: 0;
+                width: 100%;
+              }
+            }
+          }
+
+          th {
+            text-align: left;
+            width: 120px;
+          }
+          td {
+            display: block;
+            font-weight: 100;
+            margin-left: 50px;
+          }
+        }
+      }
+    } // overview
+
+    .map {
+      margin-top: 100px;
+
+      iframe {
+        height: 400px;
+        width: 100%;
+      }
+    }
+  } // content-main
+}

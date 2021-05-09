@@ -68,20 +68,38 @@
   margin-left: 20px;
 }
 
+.news-header::before,
+.company-header::before,
+.search-header::before,
+.notfound-header::before {
+  bottom: 110px;
+  color: #dce5f0;
+  display: inline-block;
+  font: bold 180px "Roboto Condensed", sans-serif;
+  line-height: 1;
+  position: absolute;
+  right: 0;
+}
+
+.news-header::before {
+  bottom: 65px;
+  content: "NEWS";
+  opacity: 0.4;
+}
+
+.company-header::before {
+  bottom: 65px;
+  content: "COMPANY";
+  opacity: 0.4;
+}
+
 .search-header {
   background: #fff;
 }
 
 .search-header::before {
-  bottom: 110px;
-  color: #dce5f0;
+  color: #f4f5f8;
   content: "SEARCH";
-  display: inline-block;
-  font: bold 180px "Roboto Condensed", sans-serif;
-  line-height: 1;
-  opacity: 0.4;
-  position: absolute;
-  right: 0;
 }
 
 .search-header::after {
@@ -125,6 +143,22 @@
 .search-header .breadcrumb ul li a,
 .search-header .breadcrumb ul li span {
   color: #000;
+}
+
+.notfound-header {
+  background: #fff;
+}
+
+.notfound-header::before {
+  content: "404 NOT FOUND";
+  font-size: 110px;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.notfound-header::after {
+  display: none;
 }
 
 /* Post Card
@@ -235,6 +269,14 @@
   font-size: 18px;
   font-weight: bold;
   margin-top: 10px;
+}
+
+.post-card-wide .title {
+  font-size: 22px;
+}
+
+.post-card-wide .description {
+  margin-top: 1em;
 }
 
 /* Content(single/page)
