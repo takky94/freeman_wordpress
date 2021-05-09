@@ -203,7 +203,9 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding: 60px 0 0 60px;
+  max-width: 580px;
+  padding: 50px 0 0 80px;
+  width: 100%;
 }
 
 .post-card-large .title {
@@ -256,14 +258,14 @@
 
 .news__large {
   margin-left: -100px;
-  margin-top: 60px;
+  margin-top: 90px;
 }
 
 .news__2col {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 @media (min-width: 769px) {
@@ -275,10 +277,10 @@
     width: 55%;
   }
   .news__2col .news__2col--left {
-    margin-right: 60px;
+    margin-right: 80px;
   }
   .news__2col .news__2col--right {
-    margin-left: 60px;
+    margin-left: 80px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;

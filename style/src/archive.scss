@@ -12,12 +12,12 @@
 .news {
   &__large {
     margin-left: -100px;
-    margin-top: 60px;
+    margin-top: 90px;
   }
 
   &__2col {
     display: flex;
-    margin-top: 60px;
+    margin-top: 80px;
 
     @media (min-width: $tab) {
       .news__2col--left,
@@ -29,10 +29,10 @@
       }
 
       .news__2col--left {
-        margin-right: 60px;
+        margin-right: 80px;
       }
       .news__2col--right {
-        margin-left: 60px;
+        margin-left: 80px;
         order: 2;
       }
     }

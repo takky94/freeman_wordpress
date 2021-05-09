@@ -9,7 +9,7 @@
 <nav id="archiveTabs" class="archive-tabs">
   <ul>
     <li <?php if (!is_tax('news_category')) echo 'class="active"'; ?>>
-      <a href="#">ALL</a>
+      <a href="<?php echo get_post_type_archive_link('news'); ?>">ALL</a>
     </li>
     <?php foreach($categories as $category): ?>
     <li <?php if ($category -> term_id == $term_id) echo 'class="active"'; ?>>

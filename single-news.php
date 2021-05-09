@@ -1,23 +1,47 @@
 <!--single-news.php-->
-
+<?php
+  $terms = wp_get_object_terms($post->ID, 'news_category');
+?>
 <?php get_header(); ?>
 
 <main id="main" class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
   <article id="article" <?php post_class(); ?>>
     <?php get_template_part('/parts/header/news-header'); ?>
+    <!-- #content -->
     <div id="content">
+      <!-- container -->
       <div class="container">
         <?php if (have_posts()): while (have_posts()): the_post(); ?>
-        <?php if (has_post_thumbnail()): //アイキャッチ画像 ?>
-        <p class="post-thumbnail"><?php the_post_thumbnail('thumb-600');?></p>
-        <?php endif; ?>
-        <h2><?php the_title(); ?></h2>
-        <div>
+        <!-- content-header -->
+        <div class="content-header">
+          <div class="thumbail">
+            <p class="post-thumbnail"><img src="<?php echo fm_default_thumb('thumb-600'); ?>"</p>
+          </div>
+          <!-- title -->
+          <div class="title">
+            <div class="meta">
+              <div class="meta__label">
+                <?php fm_newmark(); ?>
+                <span class="meta__label--category"><?php echo $terms[0] -> name; ?></span>
+              </div>
+              <time class="meta__date font-robot"
+                datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+            </div>
+            <h1><?php the_title(); ?></h1>
+          </div>
+          <!-- // title -->
+        </div>
+        <!-- // content-header -->
+        <!-- content-main -->
+        <div class="content-main">
           <?php the_content(); ?>
         </div>
+        <!-- // content-main -->
         <?php endwhile; endif; wp_reset_postdata(); ?>
       </div>
+      <!-- // container -->
     </div>
+    <!-- // #content -->
   </article>
 </main>
 

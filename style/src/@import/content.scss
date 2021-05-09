@@ -1,0 +1,57 @@
+.content-header {
+  display: flex;
+  margin-left: -100px;
+
+  img {
+    max-width: 680px;
+    width: 100%;
+  }
+
+  .title {
+    flex-grow: 1;
+    max-width: 580px;
+    padding: 90px 0 0 80px;
+    width: 100%;
+
+    .meta {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+
+      &__label {
+        display: flex;
+        min-width: 180px;
+
+        span {
+          color: #fff;
+          font-size: 14px;
+          padding: 6px;
+          text-align: center;
+          width: 50%;
+        }
+        &--new {
+          background: $c-gray;
+        }
+        &--category {
+          background: #000;
+        }
+      }
+
+      &__date {
+        color: $c-gray;
+      }
+    }
+
+    // 記事タイトル
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 50px;
+    }
+  }
+}
+
+.content-main {
+  margin: 120px auto 0;
+  max-width: 900px;
+}
