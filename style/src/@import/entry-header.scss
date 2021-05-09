@@ -27,7 +27,9 @@
     bottom: calc(120px + 21px + 25px + 14px); // ずらした白背景レイアウト部分 + ぱんくず + ぱんくず余白 + 余白
     color: #fff;
     font-size: 34px;
+    max-width: 800px;
     position: absolute;
+    word-break: break-word;
   }
 
   // ぱんくず
@@ -59,6 +61,76 @@
         }
         span {
           margin-left: 20px;
+        }
+      } // li
+    } // ul
+  } // breadcrumb
+}
+
+// 検索画面
+.search-header {
+  background: #fff;
+
+  &::before {
+    bottom: 110px;
+    color: $c-lightgray;
+    content: "SEARCH";
+    display: inline-block;
+    font: bold 180px "Roboto Condensed", sans-serif;
+    line-height: 1;
+    opacity: 0.4;
+    position: absolute;
+    right: 0;
+  }
+
+  // ずらした白背景レイアウト部分
+  &::after {
+    display: none;
+  }
+
+  // XXの検索結果
+  .entry-header__title {
+    bottom: calc(120px + 66px + 20px + 15px); // __countの位置 + __countの高さ + ぱんくずの高さ + 余白
+    color: #000;
+  }
+
+  // hit件数
+  &__count {
+    bottom: 120px;
+    color: #000;
+    line-height: 1;
+    position: absolute;
+
+    &--num,
+    &--unit {
+      display: inline-block;
+    }
+
+    &--num {
+      font-size: 66px;
+      vertical-align: sub;
+    }
+
+    &--unit {
+      font-size: 34px;
+      margin-left: 0.5em;
+    }
+  }
+
+  // ぱんくず
+  .breadcrumb {
+    bottom: calc(120px + 66px); // __countの位置 + __countの高さ
+    ul {
+      li {
+        &:not(:first-child) {
+          // セパレーター
+          &::before {
+            color: #000;
+          }
+        } // not:first-child
+        a,
+        span {
+          color: #000;
         }
       } // li
     } // ul

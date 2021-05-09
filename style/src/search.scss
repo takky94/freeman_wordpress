@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/* Search
+--------------------------------------------------------------------------------------------*/
+
+$root-path: "../..";
+
+@import "./@import/config";
+@import "./@import/entry-header";
+@import "./@import/post-card";
+@import "./@import/pagenavi";
+
+.search-result {
+  // 検索結果部分
+  #content {
+    .container {
+      max-width: 820px;
+    }
+
+    // 検索フォーム
+    .search-form {
+      position: relative;
+      width: 100%;
+
+      &__input {
+        background: $c-whitesmoke;
+        border: none;
+        font-size: 18px;
+        line-height: 1;
+        padding: 1em 2em 1em 1.5em;
+        width: 100%;
+
+        &::placeholder {
+          color: $c-gray;
+        }
+        &:-ms-input-placeholder {
+          color: $c-gray;
+        }
+        &::-ms-input-placeholder {
+          color: $c-gray;
+        }
+      }
+
+      &__button {
+        background: $c-gray;
+        bottom: 0;
+        height: 100%;
+        margin: auto;
+        padding: 3px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: calc(18px + 18px + 18px); // 文字数 + 上下余白 (高さと同じ)
+
+        svg {
+          height: 15px;
+          width: 15px;
+          .search-icon {
+            stroke: #fff;
+          }
+        }
+      }
+    } // search-form
+
+    .result {
+      li {
+        margin-top: 50px;
+
+        .title,
+        .description {
+          mark {
+            background: none;
+            color: $c-main;
+          }
+        }
+      }
+    }
+  } // #content
+
+  .notfound {
+    background: center / contain url(#{$root-path}/images/notfound-background.svg) no-repeat;
+
+    &__title {
+      text-align: center;
+    }
+
+    &__image,
+    &__text {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    &__text {
+      font-weight: bold;
+    }
+
+    .search-form {
+      margin-top: 30px;
+    }
+  }
+}

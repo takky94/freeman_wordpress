@@ -16,6 +16,10 @@
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/archive.min.css" />
   <?php elseif (is_single()||is_page()): ?>
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/article.min.css" />
+  <?php elseif (is_search()): ?>
+  <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/search.min.css" />
+  <?php elseif (is_404()): ?>
+  <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/notfound.min.css" />
   <?php endif; ?>
   <?php wp_head(); //必須 ?>
 </head>

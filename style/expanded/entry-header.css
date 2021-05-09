@@ -24,7 +24,9 @@
   bottom: calc(120px + 21px + 25px + 14px);
   color: #fff;
   font-size: 34px;
+  max-width: 800px;
   position: absolute;
+  word-break: break-word;
 }
 
 .entry-header .breadcrumb {
@@ -62,5 +64,64 @@
 
 .entry-header .breadcrumb ul li span {
   margin-left: 20px;
+}
+
+.search-header {
+  background: #fff;
+}
+
+.search-header::before {
+  bottom: 110px;
+  color: #dce5f0;
+  content: "SEARCH";
+  display: inline-block;
+  font: bold 180px "Roboto Condensed", sans-serif;
+  line-height: 1;
+  opacity: 0.4;
+  position: absolute;
+  right: 0;
+}
+
+.search-header::after {
+  display: none;
+}
+
+.search-header .entry-header__title {
+  bottom: calc(120px + 66px + 20px + 15px);
+  color: #000;
+}
+
+.search-header__count {
+  bottom: 120px;
+  color: #000;
+  line-height: 1;
+  position: absolute;
+}
+
+.search-header__count--num, .search-header__count--unit {
+  display: inline-block;
+}
+
+.search-header__count--num {
+  font-size: 66px;
+  vertical-align: sub;
+}
+
+.search-header__count--unit {
+  font-size: 34px;
+  margin-left: 0.5em;
+}
+
+.search-header .breadcrumb {
+  bottom: calc(120px + 66px);
+}
+
+.search-header .breadcrumb ul li:not(:first-child)::before {
+  color: #000;
+}
+
+.search-header .breadcrumb ul li a,
+.search-header .breadcrumb ul li span {
+  color: #000;
 }
 /*# sourceMappingURL=entry-header.css.map */

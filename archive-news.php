@@ -39,7 +39,7 @@
                 datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
             </div>
             <p class="title"><?php echo get_the_title(); ?></p>
-            <p class="description"><?php echo the_excerpt(); ?></p>
+            <p class="description"><?php echo get_the_excerpt(); ?></p>
           </div>
         </a>
       </div>
@@ -126,7 +126,7 @@
     <?php else: echo '404'; ?>
     <?php endif; endif; ?>
     <?php wp_reset_query(); ?>
-    <?php if(function_exists('fm_pagenavi')) fm_pagenavi(array('query' => $the_query)); ?>
+    <?php fm_pagenavi(array('query' => $the_query)); ?>
   </div>
 </main>
 

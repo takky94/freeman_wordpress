@@ -36,5 +36,10 @@ function fm_theme_support(){
     return $title;
   };
 
+  // 抜粋文の文字数超過[…]を…に変更
+  add_filter('excerpt_more', 'fm_excerpt_more');
+  function fm_excerpt_more($more) {
+    return '…';
+  }
 
 } // fm_theme_support()

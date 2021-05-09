@@ -107,4 +107,12 @@
   font-weight: bold;
   margin-top: 10px;
 }
+
+.post-card-wide .title {
+  font-size: 22px;
+}
+
+.post-card-wide .description {
+  margin-top: 1em;
+}
 /*# sourceMappingURL=post-card.css.map */
