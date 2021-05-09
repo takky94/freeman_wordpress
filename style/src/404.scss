@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+/* 404
+--------------------------------------------------------------------------------------------*/
+
+$root-path: "../..";
+
+@import "./@import/config";
+@import "./@import/entry-header";
+
+.notfound-page {
+  padding-bottom: 60px; // フッターとの間に余白追加
+}
+
+.notfound {
+  background: center / contain url(#{$root-path}/images/notfound-background.svg) no-repeat;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__image,
+  &__text {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  &__text {
+    font-weight: bold;
+  }
+
+  .search-form {
+    margin-top: 30px;
+  }
+
+  .button {
+    padding-right: 130px;
+  }
+}

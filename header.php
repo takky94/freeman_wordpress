@@ -19,7 +19,7 @@
   <?php elseif (is_search()): ?>
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/search.min.css" />
   <?php elseif (is_404()): ?>
-  <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/notfound.min.css" />
+  <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/404.min.css" />
   <?php endif; ?>
   <?php wp_head(); //必須 ?>
 </head>

@@ -74,12 +74,11 @@
 
 .search-header::before {
   bottom: 110px;
-  color: #dce5f0;
+  color: #f4f5f8;
   content: "SEARCH";
   display: inline-block;
   font: bold 180px "Roboto Condensed", sans-serif;
   line-height: 1;
-  opacity: 0.4;
   position: absolute;
   right: 0;
 }
@@ -125,6 +124,28 @@
 .search-header .breadcrumb ul li a,
 .search-header .breadcrumb ul li span {
   color: #000;
+}
+
+.notfound-header {
+  background: #fff;
+}
+
+.notfound-header::before {
+  bottom: 110px;
+  color: #dce5f0;
+  content: "404 NOT FOUND";
+  display: inline-block;
+  font: bold 110px "Roboto Condensed", sans-serif;
+  left: 0;
+  line-height: 1;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.notfound-header::after {
+  display: none;
 }
 
 /* Post Card
@@ -309,6 +330,10 @@
   line-height: 70px;
   text-align: center;
   width: 75px;
+}
+
+.search-result {
+  padding-bottom: 60px;
 }
 
 .search-result #content .container {

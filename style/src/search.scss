@@ -11,6 +11,8 @@ $root-path: "../..";
 @import "./@import/pagenavi";
 
 .search-result {
+  padding-bottom: 60px; // フッターとの間に余白追加
+
   // 検索結果部分
   #content {
     .container {
@@ -77,6 +79,7 @@ $root-path: "../..";
     }
   } // #content
 
+  // 検索結果なし
   .notfound {
     background: center / contain url(#{$root-path}/images/notfound-background.svg) no-repeat;
 

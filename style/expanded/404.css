@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* 404
+--------------------------------------------------------------------------------------------*/
 /* entry-header(single/page)
 --------------------------------------------------------------------------------------------*/
 .entry-header {
@@ -145,4 +147,33 @@
 .notfound-header::after {
   display: none;
 }
-/*# sourceMappingURL=entry-header.css.map */
+
+.notfound-page {
+  padding-bottom: 60px;
+}
+
+.notfound {
+  background: center/contain url(../../images/notfound-background.svg) no-repeat;
+}
+
+.notfound__title {
+  text-align: center;
+}
+
+.notfound__image, .notfound__text {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.notfound__text {
+  font-weight: bold;
+}
+
+.notfound .search-form {
+  margin-top: 30px;
+}
+
+.notfound .button {
+  padding-right: 130px;
+}
+/*# sourceMappingURL=404.css.map */
