@@ -69,6 +69,7 @@
 }
 
 .news-header::before,
+.company-header::before,
 .search-header::before,
 .notfound-header::before {
   bottom: 110px;
@@ -81,11 +82,15 @@
 }
 
 .news-header::before {
+  bottom: 65px;
   content: "NEWS";
+  opacity: 0.4;
 }
 
-.news-header::after {
-  display: none;
+.company-header::before {
+  bottom: 65px;
+  content: "COMPANY";
+  opacity: 0.4;
 }
 
 .search-header {
