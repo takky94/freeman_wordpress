@@ -10,6 +10,15 @@
 - ニュース/商品に関してはカスタム投稿です
   - ニュース/商品のカテゴリはカスタムタクソノミーです(新規追加の必要あり)
 
+## スラッグ
+
+- 型製品(/mold)
+- 砂型鋳造(/sand-casting)
+- 精密鋳造(/investment-casting)
+- ジュエリー(/juwerly)
+- 新たな取り組み(/new-field)
+- 会社概要(/company)
+
 ## プラグインについて
 
 ### Custom Post Type Permalinks
