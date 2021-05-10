@@ -37,7 +37,76 @@
       <img src="<?= get_template_directory_uri(); ?>/images/logo-white.svg" class="sitemap__logo"
         alt="株式会社FREEMAN ロゴ" />
       <div class="sitemap__menu">
-        <p>HOGE</p>
+        <!-- sitemap__block -->
+        <div class="sitemap__block">
+          <div class="sitemap__block--title">試作・型</div>
+          <div class="sitemap__block--titleSub c-main font-robot">MOLD</div>
+          <ul class="sitemap__block--menu col">
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+          </ul>
+        </div>
+        <!-- // sitemap__block -->
+        <!-- sitemap__block -->
+        <div class="sitemap__block">
+          <div class="sitemap__block--title">精密鋳造</div>
+          <div class="sitemap__block--titleSub c-main font-robot">INVESTMENT CASTING</div>
+          <ul class="sitemap__block--menu">
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+          </ul>
+        </div>
+        <!-- // sitemap__block -->
+        <!-- sitemap__block -->
+        <div class="sitemap__block">
+          <div class="sitemap__block--title">砂型鋳造</div>
+          <div class="sitemap__block--titleSub c-main font-robot">SAND CASTING</div>
+          <ul class="sitemap__block--menu">
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+          </ul>
+        </div>
+        <!-- // sitemap__block -->
+        <!-- sitemap__block -->
+        <div class="sitemap__block">
+          <div class="sitemap__block--title">ジュエリー</div>
+          <div class="sitemap__block--titleSub c-main font-robot">JUWELRY</div>
+          <ul class="sitemap__block--menu">
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+          </ul>
+        </div>
+        <!-- // sitemap__block -->
+        <!-- sitemap__block -->
+        <div class="sitemap__block">
+          <div class="sitemap__block--title">試作</div>
+          <div class="sitemap__block--titleSub c-main font-robot">MOLD</div>
+          <ul class="sitemap__block--menu">
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">MENU</a></li>
+          </ul>
+        </div>
+        <!-- // sitemap__block -->
       </div>
     </div>
   </div>

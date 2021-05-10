@@ -77,24 +77,24 @@ $root-path: "../..";
       flex-grow: 2;
       justify-content: space-between;
       margin-left: auto;
-      padding-left: 50px;
+      padding-left: 200px;
 
       img{
         // FREEMAN
         &:nth-child(1){
-          width: 18%;
+          width: 20%;
         }
         // RANSOM & RANDOLPH
         &:nth-child(2){
-          width: 18%;
+          width: 20%;
         }
         // LANIK
         &:nth-child(3){
-          width: 18%;
+          width: 20%;
         }
         // Remet
         &:nth-child(4){
-          width: 9%;
+          width: 5%;
         }
       }
     }
@@ -110,7 +110,42 @@ $root-path: "../..";
     }
 
     &__menu{
+      color: #fff;
+      display: flex;
       margin-top: 60px;
+    }
+
+    &__block{
+      display: flex;
+      flex-direction: column;
+      width: calc(100% / 5);
+
+      &--title{
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1;
+      }
+
+      &--titleSub{
+        font-size: 12px;
+        line-height: 1;
+        margin-top: 7px;
+      }
+
+      &--menu{
+        margin-top: 20px;
+        &.col{
+          display: flex;
+          flex-wrap: wrap;
+          li{
+            width: 50%;
+          }
+        }
+        a{
+          color: #fff;
+          font-size: 14px;
+        }
+      }
     }
   } // sitemap
 
