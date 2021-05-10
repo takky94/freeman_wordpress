@@ -19,7 +19,7 @@
 - news => /%news_category%/%postname%/
 - product => /%product_category%/%postname%/
 
-### PageNavi
+### WP-PageNavi
 
 - 総ページ数用テキスト => 未入力
 - pagenavi-css.css を使用 => いいえ
