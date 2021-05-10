@@ -122,3 +122,13 @@ if (!function_exists('fm_trim_text')) {
     }
   }
 }
+
+/*
+画像遅延読み込みラップ
+********************************************************************/
+
+if (!function_exists('fm_lazyload')) {
+  function fm_lazyload(){
+    echo 'loading="lazy"';
+  }
+}

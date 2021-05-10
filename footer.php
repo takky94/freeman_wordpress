@@ -19,11 +19,14 @@
         <div class="overseas__titleSub">海外主要取引先</div>
       </div>
       <div class="overseas__right">
-        <img src="<?= get_template_directory_uri(); ?>/images/footer/freeman.png" alt="海外主要取引先 FREEMAN ロゴ" />
+        <img src="<?= get_template_directory_uri(); ?>/images/footer/freeman.png" alt="海外主要取引先 FREEMAN ロゴ"
+          <?php fm_lazyload(); ?> />
         <img src="<?= get_template_directory_uri(); ?>/images/footer/ransom_randolph.png"
-          alt="海外主要取引先 RANSOM&RANDOLPH ロゴ" />
-        <img src="<?= get_template_directory_uri(); ?>/images/footer/lanik.png" alt="海外主要取引先 LANIK ロゴ" />
-        <img src="<?= get_template_directory_uri(); ?>/images/footer/remet.png" alt="海外主要取引先 Remet ロゴ" />
+          alt="海外主要取引先 RANSOM&RANDOLPH ロゴ" <?php fm_lazyload(); ?> />
+        <img src="<?= get_template_directory_uri(); ?>/images/footer/lanik.png" alt="海外主要取引先 LANIK ロゴ"
+          <?php fm_lazyload(); ?> />
+        <img src="<?= get_template_directory_uri(); ?>/images/footer/remet.png" alt="海外主要取引先 Remet ロゴ"
+          <?php fm_lazyload(); ?> />
       </div>
     </div>
   </div>

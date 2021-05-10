@@ -206,7 +206,7 @@
           </div>
           <div class="detail__image">
             <picture>
-              <img src="<?= get_template_directory_uri(); ?>/images/top/mold.png" alt="" />
+              <img src="<?= get_template_directory_uri(); ?>/images/top/mold.png" alt="" <?php fm_lazyload(); ?> />
             </picture>
           </div>
         </div>
@@ -229,7 +229,8 @@
           </div>
           <div class="detail__image">
             <picture>
-              <img src="<?= get_template_directory_uri(); ?>/images/top/sand-casting.png" alt="" />
+              <img src="<?= get_template_directory_uri(); ?>/images/top/sand-casting.png" alt=""
+                <?php fm_lazyload(); ?> />
             </picture>
           </div>
         </div>
@@ -255,7 +256,8 @@
           </div>
           <div class="detail__image">
             <picture>
-              <img src="<?= get_template_directory_uri(); ?>/images/top/investment-casting.png" alt="" />
+              <img src="<?= get_template_directory_uri(); ?>/images/top/investment-casting.png" alt=""
+                <?php fm_lazyload(); ?> />
             </picture>
           </div>
         </div>
@@ -277,7 +279,7 @@
           </div>
           <div class="detail__image">
             <picture>
-              <img src="<?= get_template_directory_uri(); ?>/images/top/jewelry.png" alt="" />
+              <img src="<?= get_template_directory_uri(); ?>/images/top/jewelry.png" alt="" <?php fm_lazyload(); ?> />
             </picture>
           </div>
         </div>
@@ -300,7 +302,7 @@
         </div>
         <div class="detail__image">
           <picture>
-            <img src="<?= get_template_directory_uri(); ?>/images/top/new-field.png" alt="" />
+            <img src="<?= get_template_directory_uri(); ?>/images/top/new-field.png" alt="" <?php fm_lazyload(); ?> />
           </picture>
         </div>
       </div>
