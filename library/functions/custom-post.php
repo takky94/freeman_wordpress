@@ -36,7 +36,7 @@ function fm_create_post_type() {
         'revisions'  //リビジョンを保存
       ),
       'taxonomies' => array('news_category'),
-    ),
+    )
   );
   // ニュース用カテゴリ
   register_taxonomy(
@@ -82,7 +82,7 @@ function fm_create_post_type() {
         'revisions'  //リビジョンを保存
       ),
       'taxonomies' => array('product_category'),
-    ),
+    )
   );
   // 商品用カテゴリ
   register_taxonomy(
