@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACE,aADW,CACX,EAAE,AAAA,CACA,OAAO,CAAE,IAAI,CAed,AAjBH,AAKM,aALO,CACX,EAAE,CAGA,EAAE,CACA,CAAC,AAAA,CACC,OAAO,CAAE,KAAK,CACd,OAAO,CAAE,GAAG,CACb,AARP,AAWQ,aAXK,CACX,EAAE,CAGA,EAAE,AAMC,OAAO,CACN,CAAC,AAAA,CACC,UAAU,CAAE,IAAI,CAChB,KAAK,CAAE,IAAI,CACZ",
-    "sources": [
-        "../src/@import/archive-tabs.scss"
-    ],
-    "names": [],
-    "file": "archive-tabs.min.css"
-}
