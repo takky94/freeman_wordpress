@@ -24,3 +24,7 @@
 - 総ページ数用テキスト => 未入力
 - pagenavi-css.css を使用 => いいえ
 - 表示するページ数 => 9 (WordPress 表示設定も 9 にする)
+
+### Custom Taxonomy Order
+
+カスタムタクソノミーのソート用
