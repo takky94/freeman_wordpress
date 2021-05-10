@@ -1,6 +1,57 @@
 <?php
 
 /*
+汎用メソッドなど
+********************************************************************/
+
+// 現在のページのURLを取得する
+if (!function_exists('fm_get_current_url')){
+  function fm_get_current_url() {
+    if (is_front_page() || is_home()){ // トップページ
+      return home_url();
+    } elseif (is_category()){ // カテゴリーページ
+      return get_category_link(get_query_var('cat'));
+    } elseif (is_post_type_archive(array('news', 'product'))){
+      return get_post_type_archive_link(get_post_type());
+    } elseif (is_singular( array('news', 'products'))){ // カスタム投稿
+      return get_post_permalink();
+    } else { // 投稿ページ等
+      return get_permalink();
+    }
+  }
+}
+
+
+// 現在のページのタイトルを取得する
+if (!function_exists('fm_get_page_title')){
+  function fm_get_page_title(){
+
+
+    if (is_front_page() || is_home()){
+      $catchy = (get_bloginfo('description')) ? '｜' . get_bloginfo('description') : "";
+      return get_bloginfo('name') . $catchy;
+    }
+    if (is_category()){
+      return (output_archive_title()) ? output_archive_title() : '「' . single_cat_title('', false) . '」の記事一覧';
+    }
+    if (is_post_type_archive(array('news', 'product'))){
+      $post_obj = get_post_type_object(get_post_type());
+      return apply_filters('post_type_archive_title', $post_obj -> labels -> name ).'一覧';
+    }
+    if (is_archive()){
+      return get_the_archive_title();
+    }
+
+    global $post;
+    if ($post){ // 投稿ページ
+      return $post->post_title;
+    }
+    // 見つからなかった場合はサイトタイトルだけ返す
+    return get_bloginfo('name');
+  }
+}
+
+/*
 アイキャッチ画像
 ********************************************************************/
 

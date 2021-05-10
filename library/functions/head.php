@@ -2,6 +2,7 @@
 
 add_action('init', 'fm_head_cleanup');
 add_action('wp_enqueue_scripts', 'fm_basic_scripts_and_styles', 1 );
+add_action('wp_head', 'fm_meta_ogp');
 
 /*
 デフォルトのhead整理
@@ -54,3 +55,84 @@ if (!function_exists('fm_basic_scripts_and_styles')){
     } //is_admin()
   }
 }//fm_basic_scripts_and_styles()
+
+
+/*
+デフォルトのhead整理
+********************************************************************/
+
+// og:image
+if (!function_exists('fm_set_ogp_image')){
+  function fm_set_ogp_image(){
+    if (is_singular()) return fm_default_thumb('large'); // 投稿(post)、カスタム投稿タイプ、固定ページ、添付ファイルのシングルページ
+    return get_template_directory_uri() . '/images/article/default.png';
+  }
+}
+
+// og:url
+if (!function_exists('fm_set_ogp_url')) {
+  function fm_set_ogp_url() {
+    return fm_get_current_url();
+  }
+}
+
+// og:title
+if (!function_exists('fm_set_ogp_title_tag')) {
+  function fm_set_ogp_title_tag() {
+    return fm_get_page_title();
+  }
+}
+
+
+// meta description
+if (!function_exists('fm_get_meta_description')) {
+  function fm_get_meta_description() {
+    global $post;
+    if (is_singular('news', 'product') || is_single() || is_page()){ // 各投稿
+      $description = $post -> post_content;
+      if (empty($description)) return null;
+      $description = str_replace(array("\r\n","\r","\n","&nbsp;"),'',$description);
+      $description = wp_strip_all_tags($description);
+      $description = mb_strimwidth($description,0,220,"...");
+      return $description;
+    } elseif (is_front_page() || is_home()){ // トップページ
+      if( get_bloginfo('description') ) return get_bloginfo('description');
+    } elseif(is_category()) { // カテゴリページ
+      $cat_term = get_term(get_query_var('cat'), "category");
+      $cat_meta = get_option($cat_term -> taxonomy.'_'.$cat_term -> term_id);
+      return isset($cat_meta['category_description']) ? $cat_meta['category_description'] : null;
+    }
+    return null;
+    // メタデスクリプションは指定しなくても、Googleが自動で説明文を生成してくれるため、これ以外のページではメタデスクリプションを出力しない
+  }
+}
+
+if (!function_exists('fm_meta_ogp')) {
+  function fm_meta_ogp() {
+    $insert = '';
+    if (fm_get_meta_description()) {
+      $insert = '<meta name="description" content="'.esc_attr(fm_get_meta_description()).'" />';
+    }
+    $ogp_descr = fm_get_meta_description();
+    $ogp_img = fm_set_ogp_image();
+    $ogp_title = fm_set_ogp_title_tag();
+    $ogp_url = fm_set_ogp_url();
+    $ogp_type = (is_front_page() || is_home()) ? 'website' : 'article';
+
+    // 出力するOGPタグをまとめる
+    $insert .= '<meta property="og:title" content="' . esc_attr($ogp_title) . '" />' . "\n";
+    $insert .= '<meta property="og:description" content="' . esc_attr($ogp_descr) . '" />' . "\n";
+    $insert .= '<meta property="og:type" content="' . $ogp_type . '" />' . "\n";
+    $insert .= '<meta property="og:url" content="' . esc_url($ogp_url) . '" />' . "\n";
+    $insert .= '<meta property="og:image" content="' . esc_url($ogp_img) . '" />' . "\n";
+    $insert .= '<meta name="thumbnail" content="' . esc_url($ogp_img) . '" />' . "\n";
+    $insert .= '<meta property="og:site_name" content="' . esc_attr(get_bloginfo('name')) . '" />' . "\n";
+    $insert .= '<meta name="twitter:card" content="summary_large_image" />' . "\n";
+
+    // 出力
+    if (is_front_page() || is_home() || is_singular('news', 'product') || is_single() || is_page() || is_category() || is_archive() || is_tag()){
+      echo $insert;
+    }
+
+  } // fm_meta_ogp
+}
