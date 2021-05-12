@@ -248,13 +248,18 @@ $menu-animation-duration: 0.3s;
       }
 
       .block {
+        align-items: flex-end;
         display: flex;
         line-height: 1;
         @media (max-width: $sp) {
+          align-items: center;
           flex-direction: column;
         }
         &:not(:first-child) {
           margin-left: 90px;
+          @media (max-width: $pc) {
+            margin-left: px-to-vw(90);
+          }
           @media (max-width: $sp) {
             margin-left: 0;
           }
@@ -263,8 +268,10 @@ $menu-animation-duration: 0.3s;
         &__left {
           font-size: 22px;
           text-align: left;
-          @media (max-width: $sp) {
+          @media (max-width: $pc) {
             font-size: px-to-vw(22);
+          }
+          @media (max-width: $sp) {
             text-align: center;
             .sp-inlineBlock {
               display: inline-block;
@@ -284,11 +291,16 @@ $menu-animation-duration: 0.3s;
           margin-left: 15px;
           @media (max-width: $sp) {
             margin-left: 0;
+            margin-top: 10px;
           }
           .big {
-            font-size: 52px;
-            @media (max-width: $sp) {
-              font-size: 8vw;
+            display: inline-block;
+            img {
+              display: inline-block;
+              height: 50px;
+              @media (max-width: $pc) {
+                height: 5vw;
+              }
             }
           }
           .small {

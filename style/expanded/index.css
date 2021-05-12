@@ -332,6 +332,9 @@
 }
 
 #index .lead__achievement .block {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,6 +343,9 @@
 
 @media (max-width: 768px) {
   #index .lead__achievement .block {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -349,6 +355,12 @@
 
 #index .lead__achievement .block:not(:first-child) {
   margin-left: 90px;
+}
+
+@media (max-width: 1080px) {
+  #index .lead__achievement .block:not(:first-child) {
+    margin-left: 8.33333vw;
+  }
 }
 
 @media (max-width: 768px) {
@@ -362,9 +374,14 @@
   text-align: left;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   #index .lead__achievement .block__left {
     font-size: 2.03704vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #index .lead__achievement .block__left {
     text-align: center;
   }
   #index .lead__achievement .block__left .sp-inlineBlock {
@@ -394,16 +411,22 @@
 @media (max-width: 768px) {
   #index .lead__achievement .block__right {
     margin-left: 0;
+    margin-top: 10px;
   }
 }
 
 #index .lead__achievement .block__right .big {
-  font-size: 52px;
+  display: inline-block;
 }
 
-@media (max-width: 768px) {
-  #index .lead__achievement .block__right .big {
-    font-size: 8vw;
+#index .lead__achievement .block__right .big img {
+  display: inline-block;
+  height: 50px;
+}
+
+@media (max-width: 1080px) {
+  #index .lead__achievement .block__right .big img {
+    height: 5vw;
   }
 }
 

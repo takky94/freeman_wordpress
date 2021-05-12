@@ -68,7 +68,9 @@
             <div class="mt-5 bold">創立</div>
           </div>
           <div class="block__right dev">
-            <span class="c-main big dev">1973</span>
+            <span class="c-main big dev">
+              <img src="<?= get_template_directory_uri(); ?>/images/top/1973.svg" alt="1973" />
+            </span>
             <span class="small bold dev">年</span>
           </div>
         </div>
@@ -85,7 +87,9 @@
             <div class="mt-5 bold sp-inlineBlock">企業国内外</div>
           </div>
           <div class="block__right dev">
-            <span class="c-main big dev">400</span>
+            <span class="c-main big dev">
+              <img src="<?= get_template_directory_uri(); ?>/images/top/400.svg" alt="400" />
+            </span>
             <span class="small bold dev">社</span>
           </div>
         </div>
@@ -99,7 +103,9 @@
             <div class="mt-5 bold">海外取引</div>
           </div>
           <div class="block__right dev">
-            <span class="c-main big dev">16</span>
+            <span class="c-main big dev">
+              <img src="<?= get_template_directory_uri(); ?>/images/top/16.svg" alt="16" />
+            </span>
             <span class="small bold dev">カ国</span>
           </div>
         </div>
