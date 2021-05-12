@@ -213,8 +213,9 @@ $menu-animation-duration: 0.3s;
     background: center top / cover url(#{$root-path}/images/top/lead-background.png) no-repeat;
     display: flex;
     justify-content: center;
-    padding: 200px 0 85px;
+    padding: 200px 0 0;
     @media (max-width: $sp) {
+      background-size: contain;
       padding: px-to-vw(200) 0 px-to-vw(85);
     }
 
@@ -233,7 +234,7 @@ $menu-animation-duration: 0.3s;
       margin-top: 30px;
       @media (max-width: $sp) {
         @include sp-font-vw(30);
-        margin-top: px-to-vw(30);
+        margin-top: 20px;
       }
     }
 
@@ -241,14 +242,21 @@ $menu-animation-duration: 0.3s;
       display: flex;
       justify-content: space-between;
       margin-top: 60px;
+      @media (max-width: $sp) {
+        @include sp-font-vw(30);
+        margin-top: 30px;
+      }
 
       .block {
         display: flex;
         line-height: 1;
+        @media (max-width: $sp) {
+          flex-direction: column;
+        }
         &:not(:first-child) {
           margin-left: 90px;
           @media (max-width: $sp) {
-            margin-left: px-to-vw(90);
+            margin-left: 0;
           }
         }
 
@@ -257,19 +265,30 @@ $menu-animation-duration: 0.3s;
           text-align: left;
           @media (max-width: $sp) {
             font-size: px-to-vw(22);
+            text-align: center;
+            .sp-inlineBlock {
+              display: inline-block;
+            }
           }
           img {
             display: inline-block;
             vertical-align: bottom;
+            @media (max-width: $sp) {
+              height: 25px;
+              width: auto;
+            }
           }
         }
         &__right {
           flex-grow: 1;
           margin-left: 15px;
+          @media (max-width: $sp) {
+            margin-left: 0;
+          }
           .big {
             font-size: 52px;
             @media (max-width: $sp) {
-              @include sp-font-vw(30);
+              font-size: 8vw;
             }
           }
           .small {
@@ -279,9 +298,28 @@ $menu-animation-duration: 0.3s;
             }
           }
         }
+      } // block
+    } // lead__achievement
+    .button {
+      @media (max-width: $sp) {
+        margin-top: 30px;
+        width: 100%;
       }
     }
   } // END 手のひらから宇宙まで
+
+  .lead__background {
+    background: center top / cover url(#{$root-path}/images/top/lead-background2.png) no-repeat;
+    margin-bottom: 100px;
+    margin-top: -50px;
+    padding: 50px 0;
+    @media (max-width: $sp) {
+      background-position: left center;
+      margin-bottom: 40px;
+      margin-top: -20px;
+      padding: 30px 0;
+    }
+  }
 
   // メニュー
   .menu {

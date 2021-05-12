@@ -76,10 +76,13 @@
         <!-- block -->
         <div class="block">
           <div class="block__left dev">
+            <div class="center pc__none">
+              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/pin.svg" width="25" />
+            </div>
             <span class="bold">取引先</span>
-            <img src="<?= get_template_directory_uri(); ?>/images/top/icon/pin.svg" width="20" />
-            <br />
-            <div class="mt-5 bold">企業国内外</div>
+            <img src="<?= get_template_directory_uri(); ?>/images/top/icon/pin.svg" width="20" class="sp__none" />
+            <br class="sp__none" />
+            <div class="mt-5 bold sp-inlineBlock">企業国内外</div>
           </div>
           <div class="block__right dev">
             <span class="c-main big dev">400</span>
@@ -108,6 +111,9 @@
     <!-- // center -->
   </section>
   <!-- // 手のひらから宇宙まで -->
+  <!-- MANUFACTURING ~ -->
+  <div class="lead__background"></div>
+  <!-- // MANUFACTURING -->
   <!-- リンクリスト -->
   <nav class="menu">
     <div class="container relative dev">
@@ -240,7 +246,6 @@
     <!-- // 砂型鋳造用資材・原材料 -->
   </div>
   <div class="section__background">
-
     <!-- 精密鋳造用材料 -->
     <section class="investment-casting" id="investment-casting">
       <div class="container dev">

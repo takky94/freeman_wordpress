@@ -6,18 +6,18 @@ $root-path: "../..";
 
 @import "./config";
 
-.footer{
+.footer {
   margin-top: 100px;
 
-  .cta{
+  .cta {
     background: center / cover url(#{$root-path}/images/footer/cta-background.png) no-repeat;
     display: block;
     height: 200px;
     position: relative;
 
     // フィルター
-    &::before{
-      background: rgba(0, 0, 0, .6);
+    &::before {
+      background: rgba(0, 0, 0, 0.6);
       content: "";
       height: 100%;
       position: absolute;
@@ -25,7 +25,7 @@ $root-path: "../..";
       z-index: 1;
     }
 
-    .container{
+    .container {
       align-items: center;
       display: flex;
       height: 100%;
@@ -33,115 +33,130 @@ $root-path: "../..";
       z-index: 2;
     }
 
-    &__title{
+    &__title {
       font-size: 42px;
       font-weight: 500;
 
-      &Sub{
+      &Sub {
         font-weight: 500;
         margin-left: 1.5em;
       }
     }
 
-    &__icon{
+    &__icon {
       margin-left: 30px;
     }
   } // cta
 
-  .overseas{
+  .overseas {
     padding: 50px 0;
 
-    .container{
+    .container {
       align-items: center;
       display: flex;
-    }
-
-    &__title{
-      font-size: 22px;
-      font-weight: 500;
-
-      &Sub{
-        color: $c-gray;
-        font-weight: 500;
-        margin-top: 1em;
+      @media (max-width: $sp) {
+        flex-wrap: wrap;
       }
     }
 
-    &__left{
-      flex-grow: 1;
+    &__title {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1;
+
+      &Sub {
+        color: $c-gray;
+        font-weight: 500;
+        margin-top: 1em;
+        @media (max-width: $sp) {
+          margin-top: 15px;
+        }
+      }
     }
 
-    &__right{
+    &__left {
+      flex-grow: 1;
+      @media (max-width: $sp) {
+        width: 100%;
+      }
+    }
+
+    &__right {
       align-items: center;
       display: flex;
       flex-grow: 2;
       justify-content: space-between;
       margin-left: auto;
       padding-left: 200px;
+      @media (max-width: $sp) {
+        margin-top: 20px;
+        padding-left: 0;
+        width: 100%;
+      }
 
-      img{
+      img {
         // FREEMAN
-        &:nth-child(1){
+        &:nth-child(1) {
           width: 20%;
         }
         // RANSOM & RANDOLPH
-        &:nth-child(2){
+        &:nth-child(2) {
           width: 20%;
         }
         // LANIK
-        &:nth-child(3){
+        &:nth-child(3) {
           width: 20%;
         }
         // Remet
-        &:nth-child(4){
+        &:nth-child(4) {
           width: 5%;
         }
       }
     }
   } // overseas
 
-  .sitemap{
+  .sitemap {
     background: #000;
     padding: 90px 0;
 
-    &__logo{
+    &__logo {
       margin: auto;
       width: 200px;
     }
 
-    &__menu{
+    &__menu {
       color: #fff;
       display: flex;
       margin-top: 60px;
     }
 
-    &__block{
+    &__block {
       display: flex;
       flex-direction: column;
       width: calc(100% / 5);
 
-      &--title{
+      &--title {
         font-size: 16px;
         font-weight: bold;
         line-height: 1;
       }
 
-      &--titleSub{
+      &--titleSub {
         font-size: 12px;
         line-height: 1;
         margin-top: 7px;
       }
 
-      &--menu{
+      &--menu {
         margin-top: 20px;
-        &.col{
+        &.col {
           display: flex;
           flex-wrap: wrap;
-          li{
+          li {
             width: 50%;
           }
         }
-        a{
+        a {
           color: #fff;
           font-size: 14px;
         }
@@ -149,7 +164,7 @@ $root-path: "../..";
     }
   } // sitemap
 
-  .copyright{
+  .copyright {
     background: #151515;
     padding: 40px 0;
   } // copyright

@@ -276,11 +276,12 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 200px 0 85px;
+  padding: 200px 0 0;
 }
 
 @media (max-width: 768px) {
   #index .lead {
+    background-size: contain;
     padding: 18.51852vw 0 7.87037vw;
   }
 }
@@ -308,7 +309,7 @@
   #index .lead__text {
     font-size: 30px;
     font-size: 3.90625vw;
-    margin-top: 2.77778vw;
+    margin-top: 20px;
   }
 }
 
@@ -322,11 +323,28 @@
   margin-top: 60px;
 }
 
+@media (max-width: 768px) {
+  #index .lead__achievement {
+    font-size: 30px;
+    font-size: 3.90625vw;
+    margin-top: 30px;
+  }
+}
+
 #index .lead__achievement .block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   line-height: 1;
+}
+
+@media (max-width: 768px) {
+  #index .lead__achievement .block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 #index .lead__achievement .block:not(:first-child) {
@@ -335,7 +353,7 @@
 
 @media (max-width: 768px) {
   #index .lead__achievement .block:not(:first-child) {
-    margin-left: 8.33333vw;
+    margin-left: 0;
   }
 }
 
@@ -347,12 +365,23 @@
 @media (max-width: 768px) {
   #index .lead__achievement .block__left {
     font-size: 2.03704vw;
+    text-align: center;
+  }
+  #index .lead__achievement .block__left .sp-inlineBlock {
+    display: inline-block;
   }
 }
 
 #index .lead__achievement .block__left img {
   display: inline-block;
   vertical-align: bottom;
+}
+
+@media (max-width: 768px) {
+  #index .lead__achievement .block__left img {
+    height: 25px;
+    width: auto;
+  }
 }
 
 #index .lead__achievement .block__right {
@@ -362,14 +391,19 @@
   margin-left: 15px;
 }
 
+@media (max-width: 768px) {
+  #index .lead__achievement .block__right {
+    margin-left: 0;
+  }
+}
+
 #index .lead__achievement .block__right .big {
   font-size: 52px;
 }
 
 @media (max-width: 768px) {
   #index .lead__achievement .block__right .big {
-    font-size: 30px;
-    font-size: 3.90625vw;
+    font-size: 8vw;
   }
 }
 
@@ -381,6 +415,29 @@
   #index .lead__achievement .block__right .small {
     font-size: 20px;
     font-size: 2.60417vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #index .lead .button {
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+
+#index .lead__background {
+  background: center top/cover url(../../images/top/lead-background2.png) no-repeat;
+  margin-bottom: 100px;
+  margin-top: -50px;
+  padding: 50px 0;
+}
+
+@media (max-width: 768px) {
+  #index .lead__background {
+    background-position: left center;
+    margin-bottom: 40px;
+    margin-top: -20px;
+    padding: 30px 0;
   }
 }
 
