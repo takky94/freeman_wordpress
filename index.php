@@ -223,6 +223,11 @@
           </div>
         </div>
         <!-- // detail -->
+        <!-- products -->
+        <div class="products">
+          <?php do_shortcode('[product cat="mold"]'); ?>
+        </div>
+        <!-- // products -->
       </div>
     </section>
     <!-- // 型製品 -->
@@ -247,6 +252,11 @@
           </div>
         </div>
         <!-- // detail -->
+        <!-- products -->
+        <div class="products">
+          <?php do_shortcode('[product cat="sand-casting"]'); ?>
+        </div>
+        <!-- // products -->
       </div>
     </section>
     <!-- // 砂型鋳造用資材・原材料 -->
@@ -273,6 +283,11 @@
           </div>
         </div>
         <!-- // detail -->
+        <!-- products -->
+        <div class="products">
+          <?php do_shortcode('[product cat="investment-casting"]'); ?>
+        </div>
+        <!-- // products -->
       </div>
     </section>
     <!-- // 精密鋳造用材料 -->
@@ -295,6 +310,11 @@
           </div>
         </div>
         <!-- // detail -->
+        <!-- products -->
+        <div class="products">
+          <?php do_shortcode('[product cat="jewelry"]'); ?>
+        </div>
+        <!-- // products -->
       </div>
     </section>
     <!-- // ジュエリーキャスト用副資材 -->

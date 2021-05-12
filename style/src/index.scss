@@ -687,7 +687,7 @@ $menu-animation-duration: 0.3s;
           }
         }
       }
-    }
+    } // -reverse
 
     &__image,
     &__text {
@@ -711,7 +711,7 @@ $menu-animation-duration: 0.3s;
           margin: 30px auto 0;
         }
       }
-    }
+    } // __image
 
     &__text {
       &--heading {
@@ -775,8 +775,22 @@ $menu-animation-duration: 0.3s;
           margin-top: 1.5em;
         }
       }
+    } // __text
+  } // detail
+
+  .products-link {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        &:not(:first-child) {
+          margin-left: 40px;
+        }
+      }
     }
-  } // END セクション内共通スタイル
+  }
+
+  // セクション内共通スタイル
 
   .mold,
   .sand-casting,
@@ -804,7 +818,7 @@ $menu-animation-duration: 0.3s;
         background-position: 40vw 50%;
         background-size: 150%;
       }
-    }
+    } // 右側にくる方
 
     // 左側にくる方
     &:nth-of-type(2) {
@@ -818,6 +832,6 @@ $menu-animation-duration: 0.3s;
         background-position: -40vw 50%;
         background-size: 150%;
       }
-    }
-  }
+    } // 左側にくる方
+  } // section__background
 }

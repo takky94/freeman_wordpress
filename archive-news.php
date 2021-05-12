@@ -27,7 +27,7 @@
       <div class="news__large">
         <a href="<?php echo get_post_permalink(); ?>" class="post-card post-card-large">
           <div class="thumbail">
-            <p class="post-thumbnail"><img src="<?php echo fm_default_thumb('thumb-600'); ?>"</p>
+            <p class="post-thumbnail"><img src="<?php echo fm_default_thumb('thumb-600'); ?>" /></p>
           </div>
           <div class="content">
             <div class="meta">

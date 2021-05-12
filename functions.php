@@ -7,3 +7,4 @@ require_once 'library/functions/custom-fields.php';
 require_once 'library/functions/breadcrumb.php';
 require_once 'library/functions/fm-functions.php';
 require_once 'library/functions/page-navi.php';
+require_once 'library/functions/shortcode.php';
