@@ -24,6 +24,13 @@
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/404.min.css" />
   <?php endif; ?>
   <?php wp_head(); //必須 ?>
+  <?php if (is_user_logged_in()): ?>
+  <style>
+  html {
+    margin-top: 0 !important;
+  }
+  </style>
+  <?php endif; ?>
 </head>
 
 <body <?php body_class(); ?>>
