@@ -151,8 +151,16 @@ body.js-fixed {
   font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
 }
 
+.left {
+  text-align: left;
+}
+
 .center {
   text-align: center;
+}
+
+.right {
+  text-align: right;
 }
 
 .flex {

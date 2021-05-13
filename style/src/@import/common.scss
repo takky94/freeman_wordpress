@@ -70,8 +70,16 @@ body {
 }
 
 // レイアウト
+.left {
+  text-align: left;
+}
+
 .center {
   text-align: center;
+}
+
+.right {
+  text-align: right;
 }
 
 .flex {
@@ -142,6 +150,7 @@ body {
   position: relative;
   transition: 0.3s all;
   width: 10px;
+  will-change: width;
   // 三角形部分
   &::after {
     border-color: transparent transparent transparent #fff;

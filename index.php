@@ -229,6 +229,12 @@
           <?php do_shortcode('[product cat="mold"]'); ?>
         </div>
         <!-- // products -->
+        <div class="right">
+          <a href="#" class="button arrow-wrap">
+            <span class="font-robot">VIEW ALL</span>
+            <?php get_template_part('/parts/icon/arrow'); ?>
+          </a>
+        </div>
       </div>
     </section>
     <!-- // 型製品 -->
@@ -258,6 +264,12 @@
           <?php do_shortcode('[product cat="sand-casting"]'); ?>
         </div>
         <!-- // products -->
+        <div class="left view-all">
+          <a href="#" class="button arrow-wrap">
+            <span class="font-robot">VIEW ALL</span>
+            <?php get_template_part('/parts/icon/arrow'); ?>
+          </a>
+        </div>
       </div>
     </section>
     <!-- // 砂型鋳造用資材・原材料 -->
@@ -289,6 +301,12 @@
           <?php do_shortcode('[product cat="investment-casting"]'); ?>
         </div>
         <!-- // products -->
+        <div class="right view-all">
+          <a href="#" class="button arrow-wrap">
+            <span class="font-robot">VIEW ALL</span>
+            <?php get_template_part('/parts/icon/arrow'); ?>
+          </a>
+        </div>
       </div>
     </section>
     <!-- // 精密鋳造用材料 -->
@@ -316,6 +334,12 @@
           <?php do_shortcode('[product cat="jewelry"]'); ?>
         </div>
         <!-- // products -->
+        <div class="left view-all">
+          <a href="#" class="button arrow-wrap">
+            <span class="font-robot">VIEW ALL</span>
+            <?php get_template_part('/parts/icon/arrow'); ?>
+          </a>
+        </div>
       </div>
     </section>
     <!-- // ジュエリーキャスト用副資材 -->
@@ -339,6 +363,12 @@
         </div>
       </div>
       <!-- // detail -->
+      <div class="right view-all">
+        <a href="#" class="button arrow-wrap">
+          <span class="font-robot">VIEW ALL</span>
+          <?php get_template_part('/parts/icon/arrow'); ?>
+        </a>
+      </div>
     </div>
   </section>
   <!-- // 新たな取り組み -->

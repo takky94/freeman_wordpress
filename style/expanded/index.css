@@ -1235,6 +1235,10 @@
   margin-top: 110px;
 }
 
+#index .view-all .arrow {
+  margin-left: 60px;
+}
+
 #index .mold,
 #index .sand-casting,
 #index .investment-casting,
