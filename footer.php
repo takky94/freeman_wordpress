@@ -121,12 +121,14 @@
 </footer>
 <!-- // footer -->
 </div>
-<script src="<?= get_template_directory_uri(); ?>/js/main.js"></script>
-<?php if (is_home() || is_front_page()):  ?>
+<script src="<?= get_template_directory_uri(); ?>/js/main.js" defer></script>
+<?php wp_reset_query(); ?>
+<?php if (is_home() || is_front_page()): ?>
+<script src="<?= get_template_directory_uri(); ?>/js/index.js" defer></script>
 <?php elseif (is_archive()): ?>
 <?php elseif (is_single()||is_page()): ?>
 <?php elseif (is_search()): ?>
-<script src="<?= get_template_directory_uri(); ?>/js/search.js"></script>
+<script src="<?= get_template_directory_uri(); ?>/js/search.js" defer></script>
 <?php elseif (is_404()): ?>
 <?php endif; ?>
 </body>

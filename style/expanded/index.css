@@ -963,6 +963,7 @@
 @media (max-width: 768px) {
   #index .menu .diamond > a .diamond__inner > div .diamond__titleSub {
     display: inline-block;
+    font-size: 12px;
   }
 }
 
@@ -1207,7 +1208,8 @@
 #index .detail__text--headingSub {
   font-size: 35px;
   font-weight: bold;
-  margin-top: 80px;
+  line-height: 1;
+  margin-top: 60px;
 }
 
 @media (max-width: 768px) {
@@ -1281,6 +1283,19 @@
   #index .section__background--left {
     background-position: -100vw bottom;
     background-size: 150%;
+  }
+}
+
+#index .new-field .detail {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (min-width: 769px) {
+  #index .new-field .detail__image img {
+    margin-right: 0;
+    padding-left: 60px;
   }
 }
 /*# sourceMappingURL=index.css.map */

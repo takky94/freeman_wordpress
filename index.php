@@ -2,7 +2,7 @@
 <!-- main -->
 <main class="main">
   <!-- メインビジュアル -->
-  <section class="hero">
+  <section class="hero js-hero">
     <h2 class="hero__heading font-eb">
           <span>To be </span><span class="c-main">P</span><span>OSSIBLE</span>
           <span class="small font-gothic">モノづくりに無限の可能性を</span>

@@ -583,6 +583,7 @@ $menu-animation-duration: 0.3s;
               }
               @media (max-width: $sp) {
                 display: inline-block;
+                font-size: 12px;
               }
             }
           }
@@ -764,7 +765,8 @@ $menu-animation-duration: 0.3s;
         &Sub {
           font-size: 35px;
           font-weight: bold;
-          margin-top: 80px;
+          line-height: 1;
+          margin-top: 60px;
           @media (max-width: $sp) {
             @include sp-font-vw(40);
             margin-top: 1.5em;
@@ -786,6 +788,8 @@ $menu-animation-duration: 0.3s;
   }
 
   // セクション内共通スタイル
+
+  // セクション内非共通スタイル
 
   .mold,
   .sand-casting,
@@ -827,4 +831,17 @@ $menu-animation-duration: 0.3s;
       }
     } // 左側にくる方
   } // section__background
+
+  .new-field {
+    .detail {
+      align-items: flex-start;
+
+      &__image img {
+        @media (min-width: $tab) {
+          margin-right: 0;
+          padding-left: 60px;
+        }
+      }
+    }
+  }
 }
