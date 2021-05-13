@@ -1,9 +1,10 @@
-@charset "UTF-8";
-
 /* Post Card
 --------------------------------------------------------------------------------------------*/
 
 @import "./config";
+
+// style/compressed/article.min.cssからのrootへの相対
+$root-path: "../..";
 
 .post-card {
   .meta {
@@ -108,5 +109,40 @@
 
   .description {
     margin-top: 1em;
+  }
+}
+
+// 商品のカード
+
+.products-link {
+  .column {
+    display: flex;
+    justify-content: space-between;
+    li {
+      &:not(:first-child) {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+
+.post-card-product {
+  .title {
+    margin-top: 30px;
+  }
+  .more {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+
+    &::after {
+      background: center / contain url(#{$root-path}/images/common/more-arrow.svg);
+      content: "";
+      display: inline-block;
+      height: 1em;
+      margin-left: 8px;
+      width: 1em;
+    }
   }
 }

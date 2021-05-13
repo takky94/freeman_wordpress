@@ -38,9 +38,10 @@
       <time class="hero__news--date" datetime="<?php the_time('Y-m-d') ?>"><?php the_time('Y/m/d') ?></time>
       <a href="<?php the_permalink();?>"
         class="hero__news--postTitle c-white"><?php echo wp_trim_words(get_the_title(), 20); ?></a>
-      <a href="<?php echo get_post_type_archive_link('news'); ?>" class="hero__news--link c-white sp__none">お知らせ一覧</a>
+      <a href="<?php echo get_post_type_archive_link('news'); ?>" class="hero__news--link c-white sp__none">お知らせ一覧
+        <?php get_template_part('/parts/icon/arrow'); ?></a>
       <a href="#" class="hero__news--link c-main-bg pc__none">
-        <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowRight.svg" width="25" alt="">
+        <?php get_template_part('/parts/icon/arrow'); ?>
       </a>
     </div>
     <?php endforeach; endif; wp_reset_postdata(); ?>
@@ -112,7 +113,7 @@
         <!-- // block -->
       </div>
       <!-- // lead__achivment -->
-      <a href="#" class="button">社長ご挨拶・企業理念</a>
+      <a href="#" class="button arrow-wrap flex-center">社長ご挨拶・企業理念<?php get_template_part('/parts/icon/arrow'); ?></a>
     </div>
     <!-- // center -->
   </section>
@@ -203,7 +204,7 @@
     </div>
   </nav>
   <!-- // リンクリスト -->
-  <div class="section__background">
+  <div class="section__background section__background--right">
     <!-- 型製品 -->
     <section class="mold" id="mold">
       <div class="container dev">
@@ -261,7 +262,7 @@
     </section>
     <!-- // 砂型鋳造用資材・原材料 -->
   </div>
-  <div class="section__background">
+  <div class="section__background section__background--left">
     <!-- 精密鋳造用材料 -->
     <section class="investment-casting" id="investment-casting">
       <div class="container dev">

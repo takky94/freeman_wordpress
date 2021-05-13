@@ -1,6 +1,163 @@
 @charset "UTF-8";
 /* IndexPage (topのみ)
 --------------------------------------------------------------------------------------------*/
+/* Post Card
+--------------------------------------------------------------------------------------------*/
+.post-card .meta {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.post-card .meta__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 180px;
+}
+
+.post-card .meta__label span {
+  color: #fff;
+  font-size: 14px;
+  padding: 6px;
+  text-align: center;
+  width: 50%;
+}
+
+.post-card .meta__label--new {
+  background: #96a8be;
+}
+
+.post-card .meta__label--category {
+  background: #000;
+}
+
+.post-card .meta__date {
+  color: #96a8be;
+}
+
+.post-card-large {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.post-card-large img {
+  max-width: 680px;
+  width: 100%;
+}
+
+.post-card-large .content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 580px;
+  padding: 50px 0 0 80px;
+  width: 100%;
+}
+
+.post-card-large .title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.post-card-large .description {
+  margin-top: 60px;
+}
+
+.post-card-middle img {
+  margin: auto;
+  width: 100%;
+}
+
+.post-card-middle .meta {
+  margin-top: 20px;
+}
+
+.post-card-middle .title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.post-card-middle .description {
+  margin-top: 60px;
+}
+
+.post-card-small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.post-card-small .content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-left: 30px;
+}
+
+.post-card-small .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.post-card-wide .title {
+  font-size: 22px;
+}
+
+.post-card-wide .description {
+  margin-top: 1em;
+}
+
+.products-link .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.products-link .column li:not(:first-child) {
+  margin-left: 40px;
+}
+
+.post-card-product .title {
+  margin-top: 30px;
+}
+
+.post-card-product .more {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.post-card-product .more::after {
+  background: center/contain url(../../images/common/more-arrow.svg);
+  content: "";
+  display: inline-block;
+  height: 1em;
+  margin-left: 8px;
+  width: 1em;
+}
+
 #index .hero {
   position: relative;
 }
@@ -1070,17 +1227,8 @@
   }
 }
 
-#index .products-link ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#index .products-link ul li:not(:first-child) {
-  margin-left: 40px;
+#index .products {
+  margin-top: 110px;
 }
 
 #index .mold,
@@ -1095,41 +1243,41 @@
 #index .section__background {
   background: url(../../images/top/section-background.svg) no-repeat;
   background-position-y: bottom;
-  background-size: 800px;
+  background-size: 1200px;
 }
 
-#index .section__background:nth-of-type(1) {
-  background-position-x: 80%;
+#index .section__background--right {
+  background-position: right -600px bottom;
 }
 
 @media (max-width: 1080px) {
-  #index .section__background:nth-of-type(1) {
+  #index .section__background--right {
     background-position-x: 150%;
     background-size: 75%;
   }
 }
 
 @media (max-width: 768px) {
-  #index .section__background:nth-of-type(1) {
+  #index .section__background--right {
     background-position: 40vw 50%;
     background-size: 150%;
   }
 }
 
-#index .section__background:nth-of-type(2) {
-  background-position-x: 20%;
+#index .section__background--left {
+  background-position: left -600px bottom;
 }
 
 @media (max-width: 1080px) {
-  #index .section__background:nth-of-type(2) {
+  #index .section__background--left {
     background-position-x: -50%;
     background-size: 75%;
   }
 }
 
 @media (max-width: 768px) {
-  #index .section__background:nth-of-type(2) {
-    background-position: -40vw 50%;
+  #index .section__background--left {
+    background-position: -100vw bottom;
     background-size: 150%;
   }
 }

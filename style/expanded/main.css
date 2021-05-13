@@ -222,6 +222,33 @@ body.js-fixed {
   padding: 20px 30px;
 }
 
+.arrow {
+  background: #fff;
+  display: inline-block;
+  height: 2px;
+  margin-left: 10px;
+  position: relative;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  width: 10px;
+}
+
+.arrow::after {
+  border-color: transparent transparent transparent #fff;
+  border-style: solid;
+  border-width: 6px 0 0 10px;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: -10px;
+  top: -4px;
+  width: 0;
+}
+
+.arrow-wrap:hover .arrow {
+  width: 17px;
+}
+
 /* Header
 --------------------------------------------------------------------------------------------*/
 .header {

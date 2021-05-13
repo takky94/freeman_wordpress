@@ -8,6 +8,7 @@ $root-path: "../..";
 $menu-animation-duration: 0.3s;
 
 @import "./@import/config";
+@import "./@import/post-card";
 
 #index {
   // FV
@@ -778,16 +779,8 @@ $menu-animation-duration: 0.3s;
     } // __text
   } // detail
 
-  .products-link {
-    ul {
-      display: flex;
-      justify-content: space-between;
-      li {
-        &:not(:first-child) {
-          margin-left: 40px;
-        }
-      }
-    }
+  .products {
+    margin-top: 110px;
   }
 
   // セクション内共通スタイル
@@ -804,12 +797,11 @@ $menu-animation-duration: 0.3s;
   .section__background {
     background: url(#{$root-path}/images/top/section-background.svg) no-repeat;
     background-position-y: bottom;
-    background-size: 800px;
+    background-size: 1200px;
 
     // 右側にくる方
-    &:nth-of-type(1) {
-      background-position-x: 80%;
-
+    &--right {
+      background-position: right -600px bottom;
       @media (max-width: $pc) {
         background-position-x: 150%;
         background-size: 75%;
@@ -821,15 +813,14 @@ $menu-animation-duration: 0.3s;
     } // 右側にくる方
 
     // 左側にくる方
-    &:nth-of-type(2) {
-      background-position-x: 20%;
-
+    &--left {
+      background-position: left -600px bottom;
       @media (max-width: $pc) {
         background-position-x: -50%;
         background-size: 75%;
       }
       @media (max-width: $sp) {
-        background-position: -40vw 50%;
+        background-position: -100vw bottom;
         background-size: 150%;
       }
     } // 左側にくる方

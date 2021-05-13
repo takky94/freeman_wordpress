@@ -101,7 +101,7 @@
                 </div>
               </li>
               <li>
-                <a href="<?php echo home_url(); ?>/jewerly" class="js-accordion" data-subtitle="JEWELRY">ジュエリー</a>
+                <a href="<?php echo home_url(); ?>/jewelry" class="js-accordion" data-subtitle="JEWELRY">ジュエリー</a>
                 <div class="sub">
                   <div class="container flex">
                     <p class="sub__title c-main font-robot sp__none">JEWELRY</p>

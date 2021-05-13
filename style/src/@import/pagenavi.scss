@@ -1,3 +1,9 @@
+/* Page navigation
+--------------------------------------------------------------------------------------------*/
+
+// style/compressed/article.min.cssからのrootへの相対
+$root-path: "../..";
+
 .pagenavi {
   display: flex;
   justify-content: center;
