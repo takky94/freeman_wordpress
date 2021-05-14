@@ -127,7 +127,23 @@
   <!-- copyright -->
   <div class="copyright">
     <div class="container">
-
+      <ul class="links">
+        <li><a href="#">会社情報</a></li>
+        <li><a href="#">お知らせ</a></li>
+        <li><a href="#">個人情報保護方針</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+      <div class="affiliates">
+        <h4>関連会社</h4>
+        <ul class="companies">
+          <li>三洋貿易株式会社</li>
+          <li>三洋貿易ホットメルトシステム</li>
+          <li>三洋物産貿易（上海）有限公司</li>
+          <li>Sanyo Trading Asia ©., Ltd.</li>
+          <li>新東洋機械工業株式会社</li>
+        </ul>
+      </div>
+      <p>©2021 FREEMAAN JAPAN </p>
     </div>
   </div>
   <!-- //copyright -->
