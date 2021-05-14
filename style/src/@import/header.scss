@@ -162,10 +162,20 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
               margin-left: px-to-vw(20);
             }
             @media (max-width: $sp) {
-              border-top: 1px solid rgba(255, 255, 255, 0.5);
               margin-left: 0;
               margin-top: 20px;
               padding-top: 20px;
+              position: relative;
+              &::before {
+                background: rgba(255, 255, 255, 0.2);
+                content: "";
+                display: inline-block;
+                height: 1px;
+                left: -5%; // header__list余白分
+                position: absolute;
+                top: 0;
+                width: 100vw;
+              }
             }
           }
           // 各メニュー下階層の一列の個数
@@ -204,6 +214,11 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
             @media (max-width: $pc) {
               font-size: px-to-vw(14);
             }
+            @media (min-width: $tab) {
+              &:hover {
+                color: $c-main;
+              }
+            }
             @media (max-width: $sp) {
               color: #fff;
               display: block;
@@ -229,10 +244,15 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
                 margin-top: 10px;
               }
             }
-            &:hover {
-              color: $c-main;
+          }
+          .js-clicked {
+            @media (max-width: $sp) {
+              &::before {
+                transform: translateY(-50%) rotate(180deg);
+              }
             }
           }
+
           // 第二階層以下のメニュー
           .sub {
             @media (min-width: $tab) {

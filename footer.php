@@ -39,9 +39,11 @@
       <div class="sitemap__menu">
         <!-- sitemap__block -->
         <div class="sitemap__block grow-1">
-          <div class="sitemap__block--title">試作・型</div>
-          <div class="sitemap__block--titleSub c-main font-robot">MOLD</div>
-          <ul class="sitemap__block--menu col">
+          <div class="js-accordion">
+            <div class="sitemap__block--title">型製品</div>
+            <div class="sitemap__block--titleSub c-main font-robot">MOLD</div>
+          </div>
+          <ul class="sitemap__block--menu col js-accordionContent">
             <li><a href="#">デザイン吐出</a></li>
             <li><a href="#">デザイン切削</a></li>
             <li><a href="#">試作注型樹脂</a></li>
@@ -57,9 +59,11 @@
         <!-- // sitemap__block -->
         <!-- sitemap__block -->
         <div class="sitemap__block shrink">
-          <div class="sitemap__block--title">精密鋳造</div>
-          <div class="sitemap__block--titleSub c-main font-robot">INVESTMENT CASTING</div>
-          <ul class="sitemap__block--menu">
+          <div class="js-accordion">
+            <div class="sitemap__block--title">精密鋳造</div>
+            <div class="sitemap__block--titleSub c-main font-robot">INVESTMENT CASTING</div>
+          </div>
+          <ul class="sitemap__block--menu js-accordionContent">
             <li><a href="#">WAX</a></li>
             <li><a href="#">理散財・洗浄剤</a></li>
             <li><a href="#">バインダー</a></li>
@@ -70,9 +74,11 @@
         <!-- // sitemap__block -->
         <!-- sitemap__block -->
         <div class="sitemap__block shrink">
-          <div class="sitemap__block--title">砂型鋳造</div>
-          <div class="sitemap__block--titleSub c-main font-robot">SAND CASTING</div>
-          <ul class="sitemap__block--menu">
+          <div class="js-accordion">
+            <div class="sitemap__block--title">砂型鋳造</div>
+            <div class="sitemap__block--titleSub c-main font-robot">SAND CASTING</div>
+          </div>
+          <ul class="sitemap__block--menu js-accordionContent">
             <li><a href="#">鋳造用フィルター</a></li>
             <li><a href="#">スリープ</a></li>
             <li><a href="#">方案用ゲート</a></li>
@@ -84,9 +90,11 @@
         <!-- // sitemap__block -->
         <!-- sitemap__block -->
         <div class="sitemap__block shrink">
-          <div class="sitemap__block--title">ジュエリー</div>
-          <div class="sitemap__block--titleSub c-main font-robot">JUWELRY</div>
-          <ul class="sitemap__block--menu">
+          <div class="js-accordion">
+            <div class="sitemap__block--title">ジュエリー</div>
+            <div class="sitemap__block--titleSub c-main font-robot">JUWELRY</div>
+          </div>
+          <ul class="sitemap__block--menu js-accordionContent">
             <li><a href="#">インジェクションWAX</a></li>
             <li><a href="#">切削WAX</a></li>
             <li><a href="#">埋没材</a></li>
@@ -97,9 +105,11 @@
         <!-- // sitemap__block -->
         <!-- sitemap__block -->
         <div class="sitemap__block grow-2">
-          <div class="sitemap__block--title">新たな取り組み</div>
-          <div class="sitemap__block--titleSub c-main font-robot">MOLD</div>
-          <ul class="sitemap__block--menu col">
+          <div class="js-accordion">
+            <div class="sitemap__block--title">新たな取り組み</div>
+            <div class="sitemap__block--titleSub c-main font-robot">MOLD</div>
+          </div>
+          <ul class="sitemap__block--menu col js-accordionContent">
             <li><a href="#">消臭剤</a></li>
             <li><a href="#">ミネラルキャスティング</a></li>
             <li><a href="#">CO2洗浄システム</a></li>
@@ -121,6 +131,7 @@
     </div>
   </div>
   <!-- //copyright -->
+  <a href="#" class="gototop">PAGE TOP</a>
 </footer>
 <!-- // footer -->
 </div>

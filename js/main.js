@@ -25,6 +25,7 @@
     for (let i = 0; i < buttons.length; i++) {
       buttons[i].addEventListener("click", function (e) {
         e.preventDefault();
+        buttons[i].classList.toggle("js-clicked");
         targets[i].classList.toggle("js-active");
       });
     }

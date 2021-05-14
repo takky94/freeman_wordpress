@@ -128,14 +128,20 @@ $root-path: "../..";
       color: #fff;
       display: flex;
       margin-top: 60px;
+      @media (max-width: $sp) {
+        margin-top: 30px;
+      }
     }
 
     &__block {
       display: flex;
       flex-direction: column;
       width: calc(100% / 5);
-      &:not(:first-child) {
-        margin-left: 10px;
+      @media (min-width: $tab) {
+        // pcでは最初の以外は左に余白
+        &:not(:first-child) {
+          margin-left: 10px;
+        }
       }
       &.grow-1 {
         flex-grow: 1;
@@ -161,12 +167,14 @@ $root-path: "../..";
 
       &--menu {
         margin-top: 20px;
-        &.col {
-          display: flex;
-          flex-wrap: wrap;
-          li {
-            width: 50%;
-          }
+        @media (min-width: $tab) {
+          &.col {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+              width: 50%;
+            }
+          } // .col
         }
         li {
           line-height: 1;
@@ -179,8 +187,77 @@ $root-path: "../..";
             font-size: px-to-vw(12);
           }
         }
+      } // &--menu
+    } // __block
+
+    // アコーディオン
+    @media (max-width: $sp) {
+      &__menu {
+        flex-direction: column;
       }
-    }
+      &__block {
+        &.grow-1,
+        &.grow-2,
+        &.shrink {
+          width: 100%;
+        }
+        &:not(:first-child) {
+          position: relative;
+          &::before {
+            background: rgba(255, 255, 255, 0.2);
+            content: "";
+            display: inline-block;
+            height: 1px;
+            left: -2.5%; // container余白分
+            position: absolute;
+            top: 0;
+            width: 100vw;
+          }
+        }
+        .js-accordion {
+          margin-top: 20px;
+          padding-right: 20px;
+          padding-top: 20px;
+          position: relative;
+          &::before {
+            content: "▲";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        .js-clicked {
+          @media (max-width: $sp) {
+            &::before {
+              transform: translateY(-50%) rotate(180deg);
+            }
+          }
+        }
+        &--menu {
+          height: 0;
+          margin-left: 0;
+          opacity: 0;
+          transform: translateY(-30px);
+          transition: all 0.3s;
+          will-change: opacity, height;
+          & > li {
+            margin-top: 20px;
+            padding-left: 0;
+            &::before {
+              display: none;
+            }
+          }
+          &.js-active {
+            height: auto;
+            margin-top: 0;
+            opacity: 1;
+            padding-bottom: 30px;
+            transform: none;
+          }
+        }
+      }
+    } // media sp
   } // sitemap
 
   .copyright {
