@@ -1,4 +1,4 @@
-<form id="search" class="search-form" method="get" action="<?php echo home_url("/"); ?>">
+<form id="search" class="search-form" method="get" action="<?= home_url("/"); ?>">
   <input class="search-form__input" name="s" type="text" placeholder="サイト内検索" />
   <button class="search-form__button" type="submit" id="searchButton">
     <p>

@@ -37,8 +37,8 @@
       <p class="hero__news--title font-robot  bold sp__none">NEWS</p>
       <time class="hero__news--date" datetime="<?php the_time('Y-m-d') ?>"><?php the_time('Y/m/d') ?></time>
       <a href="<?php the_permalink();?>"
-        class="hero__news--postTitle c-white"><?php echo wp_trim_words(get_the_title(), 20); ?></a>
-      <a href="<?php echo get_post_type_archive_link('news'); ?>" class="hero__news--link c-white sp__none">お知らせ一覧
+        class="hero__news--postTitle c-white"><?= wp_trim_words(get_the_title(), 20); ?></a>
+      <a href="<?= get_post_type_archive_link('news'); ?>" class="hero__news--link c-white sp__none">お知らせ一覧
         <?php get_template_part('/parts/icon/arrow'); ?></a>
       <a href="#" class="hero__news--link c-main-bg pc__none">
         <?php get_template_part('/parts/icon/arrow'); ?>

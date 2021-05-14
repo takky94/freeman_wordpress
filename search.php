@@ -25,10 +25,10 @@
         <ul class="result">
           <?php while (have_posts()): the_post(); ?>
           <li>
-            <a href="<?php echo get_post_permalink(); ?>" class="post-card post-card-wide">
+            <a href="<?= get_post_permalink(); ?>" class="post-card post-card-wide">
               <div class="content">
-                <p class="title"><?php echo get_the_title(); ?></p>
-                <p class="description"><?php echo get_the_excerpt(); ?></p>
+                <p class="title"><?= get_the_title(); ?></p>
+                <p class="description"><?= get_the_excerpt(); ?></p>
               </div>
             </a>
           </li>
@@ -44,7 +44,7 @@
     <div id="content" class="notfound">
       <div class="container">
         <h2
-          class="notfound__title"><?php echo esc_attr(wp_trim_words(get_search_query(), 17)); ?>の検索に<br class="sp__none" />一致するコンテンツはありませんでした</h2>
+          class="notfound__title"><?= esc_attr(wp_trim_words(get_search_query(), 17)); ?>の検索に<br class="sp__none" />一致するコンテンツはありませんでした</h2>
         <p class="notfound__image">
           <?php get_template_part('/parts/svg/robot-notfound'); ?>
         </p>

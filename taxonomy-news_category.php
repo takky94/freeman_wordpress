@@ -33,21 +33,21 @@
       ?>
       <?php if ($i === 0): // 上段 ?>
       <div class="news__large">
-        <a href="<?php echo get_post_permalink(); ?>" class="post-card post-card-large">
+        <a href="<?= get_post_permalink(); ?>" class="post-card post-card-large">
           <div class="thumbail">
-            <p class="post-thumbnail"><img src="<?php echo fm_default_thumb('thumb-600'); ?>"</p>
+            <p class="post-thumbnail"><img src="<?= fm_default_thumb('thumb-600'); ?>"</p>
           </div>
           <div class="content">
             <div class="meta">
               <div class="meta__label">
                 <?php fm_newmark(); ?>
-                <span class="meta__label--category"><?php echo $terms[0] -> name; ?></span>
+                <span class="meta__label--category"><?= $terms[0] -> name; ?></span>
               </div>
               <time class="meta__date font-robot"
-                datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+                datetime="<?= get_the_date('Y-m-d'); ?>"><?= get_the_date('Y.m.d'); ?></time>
             </div>
-            <p class="title"><?php echo get_the_title(); ?></p>
-            <p class="description"><?php echo the_excerpt(); ?></p>
+            <p class="title"><?= get_the_title(); ?></p>
+            <p class="description"><?= the_excerpt(); ?></p>
           </div>
         </a>
       </div>
@@ -108,25 +108,25 @@
           $post_class = "post-card-small";
         }
       ?>
-      <?php echo $start_tag; ?>
-      <a href="<?php echo get_post_permalink(); ?>" class="post-card <?php echo $post_class; ?>">
+      <?= $start_tag; ?>
+      <a href="<?= get_post_permalink(); ?>" class="post-card <?= $post_class; ?>">
         <div class="thumbail">
-          <p class="post-thumbnail"><img src="<?php echo $src; ?>" alt=""></p>
+          <p class="post-thumbnail"><img src="<?= $src; ?>" alt=""></p>
         </div>
         <div class="content">
           <div class="meta">
             <div class="meta__label">
               <?php fm_newmark(); ?>
-              <span class="meta__label--category"><?php echo $terms[0] -> name; ?></span>
+              <span class="meta__label--category"><?= $terms[0] -> name; ?></span>
             </div>
             <time class="meta__date font-robot"
-              datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+              datetime="<?= get_the_date('Y-m-d'); ?>"><?= get_the_date('Y.m.d'); ?></time>
           </div>
-          <p class="title"><?php echo get_the_title(); ?></p>
-          <p class="description"><?php echo the_excerpt(); ?></p>
+          <p class="title"><?= get_the_title(); ?></p>
+          <p class="description"><?= the_excerpt(); ?></p>
         </div>
       </a>
-      <?php echo $end_tag; ?>
+      <?= $end_tag; ?>
       <?php $i++; continue; ?>
       <?php endif;// 上段以外 ?>
       <?php endwhile; ?>

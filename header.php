@@ -55,7 +55,7 @@
             </div>
             <ul class="header__list dev">
               <li>
-                <a href="<?php echo home_url(); ?>/mold" class="js-accordion" data-subtitle="MOLD">型製品</a>
+                <a href="<?= home_url(); ?>/mold" class="js-accordion" data-subtitle="MOLD">型製品</a>
                 <div class="sub">
                   <div class="container flex">
                     <p class="sub__title c-main font-robot sp__none">MOLD</p>
@@ -75,8 +75,7 @@
                 </div>
               </li>
               <li>
-                <a href="<?php echo home_url(); ?>/sand-casting" class="js-accordion"
-                  data-subtitle="SAND CASTING">砂型鋳造</a>
+                <a href="<?= home_url(); ?>/sand-casting" class="js-accordion" data-subtitle="SAND CASTING">砂型鋳造</a>
                 <div class="sub">
                   <div class="container flex">
                     <p class="sub__title c-main font-robot sp__none">SAND CASTING</p>
@@ -92,7 +91,7 @@
                 </div>
               </li>
               <li>
-                <a href="<?php echo home_url(); ?>/investment-casting" class="js-accordion"
+                <a href="<?= home_url(); ?>/investment-casting" class="js-accordion"
                   data-subtitle="INVESTMENT CASTING">精密鋳造</a>
                 <div class="sub">
                   <div class="container flex">
@@ -108,7 +107,7 @@
                 </div>
               </li>
               <li>
-                <a href="<?php echo home_url(); ?>/jewelry" class="js-accordion" data-subtitle="JEWELRY">ジュエリー</a>
+                <a href="<?= home_url(); ?>/jewelry" class="js-accordion" data-subtitle="JEWELRY">ジュエリー</a>
                 <div class="sub">
                   <div class="container flex">
                     <p class="sub__title c-main font-robot sp__none">JEWELRY</p>
@@ -123,7 +122,7 @@
                 </div>
               </li>
               <li>
-                <a href="<?php echo home_url(); ?>/new-field" class="js-accordion" data-subtitle="NEW FIELD">新たな取り組み</a>
+                <a href="<?= home_url(); ?>/new-field" class="js-accordion" data-subtitle="NEW FIELD">新たな取り組み</a>
                 <div class="sub">
                   <div class="container flex">
                     <p class="sub__title c-main font-robot sp__none">NEW FIELD</p>
@@ -140,7 +139,7 @@
                 </div>
               </li>
               <li>
-                <a href="<?php echo home_url(); ?>/company">会社概要</a>
+                <a href="<?= home_url(); ?>/company">会社概要</a>
               </li>
             </ul>
           </div>

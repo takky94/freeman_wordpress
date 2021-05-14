@@ -15,17 +15,17 @@
         <!-- content-header -->
         <div class="content-header">
           <div class="thumbail">
-            <p class="post-thumbnail"><img src="<?php echo fm_default_thumb('thumb-600'); ?>"</p>
+            <p class="post-thumbnail"><img src="<?= fm_default_thumb('thumb-600'); ?>"</p>
           </div>
           <!-- title -->
           <div class="title">
             <div class="meta">
               <div class="meta__label">
                 <?php fm_newmark(); ?>
-                <span class="meta__label--category"><?php echo $terms[0] -> name; ?></span>
+                <span class="meta__label--category"><?= $terms[0] -> name; ?></span>
               </div>
               <time class="meta__date font-robot"
-                datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+                datetime="<?= get_the_date('Y-m-d'); ?>"><?= get_the_date('Y.m.d'); ?></time>
             </div>
             <h1><?php the_title(); ?></h1>
           </div>

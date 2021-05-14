@@ -7,7 +7,7 @@
   $category_slug = get_query_var('category_name');
 ?>
 <!--カテゴリページ-->
-<main id="main" class="main <?php echo $category_slug; ?>" role="main">
+<main id="main" class="main <?= $category_slug; ?>" role="main">
   <article id="article" <?php post_class(); ?>>
     <?php get_template_part('/parts/header/page-header'); ?>
     <div id="content">
