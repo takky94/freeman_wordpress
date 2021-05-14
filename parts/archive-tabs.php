@@ -1,6 +1,6 @@
 <!--archive-tabs-->
 <?php
-  $args = array('taxonomy' => 'news_category');
+  $args = array('taxonomy' => 'news_category', 'orderby' => 'description');
   $categories = get_categories($args); // 全カスタムタクソノミー
 
   $term_id = get_queried_object_id(); // 現在のカスタムタクソノミーID
