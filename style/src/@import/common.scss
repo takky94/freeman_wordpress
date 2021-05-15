@@ -141,6 +141,17 @@ body {
   padding: 20px 30px;
 }
 
+.button-arrow {
+  align-items: center;
+  background: $c-main;
+  color: #fff;
+  display: flex;
+  font-size: 16px;
+  margin-top: 60px;
+  padding: 20px 30px;
+  width: 200px;
+}
+
 // 矢印
 .arrow {
   background: #fff;

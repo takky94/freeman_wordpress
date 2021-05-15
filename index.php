@@ -113,7 +113,14 @@
         <!-- // block -->
       </div>
       <!-- // lead__achivment -->
-      <a href="#" class="button arrow-wrap flex-center">社長ご挨拶・企業理念<?php get_template_part('/parts/icon/arrow'); ?></a>
+      <!-- lead__button -->
+      <div class="lead__button">
+        <a href="#" class="button-arrow arrow-wrap flex-center">
+          <span>社長ご挨拶・企業理念</span>
+          <?php get_template_part('/parts/icon/arrow'); ?>
+        </a>
+      </div>
+      <!-- // lead__button -->
     </div>
     <!-- // center -->
   </section>
@@ -229,8 +236,8 @@
           <?php do_shortcode('[product cat="mold"]'); ?>
         </div>
         <!-- // products -->
-        <div class="right">
-          <a href="#" class="button arrow-wrap">
+        <div class="view-all view-all__right">
+          <a href="#" class="button-arrow arrow-wrap">
             <span class="font-robot">VIEW ALL</span>
             <?php get_template_part('/parts/icon/arrow'); ?>
           </a>
@@ -264,8 +271,8 @@
           <?php do_shortcode('[product cat="sand-casting"]'); ?>
         </div>
         <!-- // products -->
-        <div class="left view-all">
-          <a href="#" class="button arrow-wrap">
+        <div class="view-all">
+          <a href="#" class="button-arrow arrow-wrap">
             <span class="font-robot">VIEW ALL</span>
             <?php get_template_part('/parts/icon/arrow'); ?>
           </a>
@@ -301,8 +308,8 @@
           <?php do_shortcode('[product cat="investment-casting"]'); ?>
         </div>
         <!-- // products -->
-        <div class="right view-all">
-          <a href="#" class="button arrow-wrap">
+        <div class="view-all view-all__right">
+          <a href="#" class="button-arrow arrow-wrap">
             <span class="font-robot">VIEW ALL</span>
             <?php get_template_part('/parts/icon/arrow'); ?>
           </a>
@@ -334,8 +341,8 @@
           <?php do_shortcode('[product cat="jewelry"]'); ?>
         </div>
         <!-- // products -->
-        <div class="left view-all">
-          <a href="#" class="button arrow-wrap">
+        <div class="view-all">
+          <a href="#" class="button-arrow arrow-wrap">
             <span class="font-robot">VIEW ALL</span>
             <?php get_template_part('/parts/icon/arrow'); ?>
           </a>
@@ -363,8 +370,8 @@
         </div>
       </div>
       <!-- // detail -->
-      <div class="right view-all">
-        <a href="#" class="button arrow-wrap">
+      <div class="view-all view-all__right">
+        <a href="#" class="button-arrow arrow-wrap">
           <span class="font-robot">VIEW ALL</span>
           <?php get_template_part('/parts/icon/arrow'); ?>
         </a>

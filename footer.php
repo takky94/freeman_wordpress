@@ -2,12 +2,11 @@
 <?php wp_footer(); //必須 ?>
 <footer class="footer">
   <!-- cta -->
-  <a href="#" class="cta dev">
+  <a href="#" class="cta arrow-wrap dev">
     <div class="container">
       <div class="cta__title c-white font-robot dev">CONTACT</div>
       <div class="cta__titleSub c-white">お問い合わせ</div>
-      <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowRight.svg" class="cta__icon" width="15"
-        alt="" />
+      <?php get_template_part('/parts/icon/arrow'); ?>
     </div>
   </a>
   <!-- //cta -->
