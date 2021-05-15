@@ -260,13 +260,138 @@ $root-path: "../..";
     } // media sp
   } // sitemap
 
-  .copyright {
+  .information {
     background: #151515;
     color: #fff;
     padding: 40px 0;
 
     .container {
-      //
+      align-content: space-between;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 90px;
+      @media (max-width: $sp) {
+        flex-direction: row;
+        height: auto;
+      }
+
+      .links,
+      .copyright,
+      .affiliates {
+        width: calc(50% - 10px);
+        @media (max-width: $sp) {
+          width: 100%;
+        }
+      }
+      .links {
+        height: 60px;
+        @media (max-width: $sp) {
+          height: auto;
+        }
+
+        li {
+          display: inline-block;
+          font-size: 14px;
+          line-height: 1;
+          &:not(:first-child) {
+            border-left: 1px solid #fff;
+            margin-left: 6px;
+            padding-left: 7px;
+          }
+          @media (max-width: $sp) {
+            margin-top: 14px;
+          }
+        }
+        a {
+          color: #fff;
+        }
+      }
+      .copyright {
+        color: #707070;
+        font-size: 12px;
+        height: 30px;
+        @media (max-width: $sp) {
+          height: auto;
+          margin-top: 20px;
+          order: 3;
+          text-align: right;
+        }
+      }
+      .affiliates {
+        display: flex;
+        height: 90px;
+        @media (max-width: $sp) {
+          height: auto;
+          margin-top: 14px;
+        }
+
+        h4 {
+          font-size: 14px;
+          white-space: nowrap;
+        }
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: 30px;
+          @media (max-width: $sp) {
+            margin-left: 10px;
+          }
+
+          li {
+            font-size: 12px;
+            font-weight: 100;
+            padding: 0 2px;
+            width: 50%;
+            @media (min-width: $tab) {
+              &:nth-child(1) {
+                order: 1;
+              }
+              &:nth-child(2) {
+                order: 3;
+              }
+              &:nth-child(3) {
+                order: 5;
+              }
+              &:nth-child(4) {
+                order: 2;
+              }
+              &:nth-child(5) {
+                order: 4;
+              }
+            }
+          }
+        }
+
+        @media (max-width: $sp) {
+          order: 2;
+        }
+      } // affiliates
     }
-  } // copyright
+  } // information
+
+  .gototop {
+    background: $c-main;
+    bottom: 0;
+    color: #fff;
+    font-size: 12px;
+    padding: 1.5em 1em 1em 1em;
+    position: fixed;
+    right: 0;
+    writing-mode: vertical-rl;
+    z-index: 2;
+    &::before {
+      background: #fff;
+      content: "";
+      display: inline-block;
+      height: 12px;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 1px;
+    }
+  }
 }

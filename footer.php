@@ -124,8 +124,8 @@
     </div>
   </div>
   <!-- //sitemap -->
-  <!-- copyright -->
-  <div class="copyright">
+  <!-- information -->
+  <div class="information">
     <div class="container">
       <ul class="links">
         <li><a href="#">会社情報</a></li>
@@ -133,6 +133,7 @@
         <li><a href="#">個人情報保護方針</a></li>
         <li><a href="#">お問い合わせ</a></li>
       </ul>
+      <p class="copyright font-robot">©2021 FREEMAAN JAPAN </p>
       <div class="affiliates">
         <h4>関連会社</h4>
         <ul class="companies">
@@ -143,11 +144,10 @@
           <li>新東洋機械工業株式会社</li>
         </ul>
       </div>
-      <p>©2021 FREEMAAN JAPAN </p>
     </div>
   </div>
-  <!-- //copyright -->
-  <a href="#" class="gototop">PAGE TOP</a>
+  <!-- //information -->
+  <a href="#" class="gototop font-robot">PAGE TOP</a>
 </footer>
 <!-- // footer -->
 </div>

@@ -1133,10 +1133,198 @@ body.js-fixed {
   }
 }
 
-.footer .copyright {
+.footer .information {
   background: #151515;
   color: #fff;
   padding: 40px 0;
+}
+
+.footer .information .container {
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 90px;
+}
+
+@media (max-width: 768px) {
+  .footer .information .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: auto;
+  }
+}
+
+.footer .information .container .links,
+.footer .information .container .copyright,
+.footer .information .container .affiliates {
+  width: calc(50% - 10px);
+}
+
+@media (max-width: 768px) {
+  .footer .information .container .links,
+  .footer .information .container .copyright,
+  .footer .information .container .affiliates {
+    width: 100%;
+  }
+}
+
+.footer .information .container .links {
+  height: 60px;
+}
+
+@media (max-width: 768px) {
+  .footer .information .container .links {
+    height: auto;
+  }
+}
+
+.footer .information .container .links li {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.footer .information .container .links li:not(:first-child) {
+  border-left: 1px solid #fff;
+  margin-left: 6px;
+  padding-left: 7px;
+}
+
+@media (max-width: 768px) {
+  .footer .information .container .links li {
+    margin-top: 14px;
+  }
+}
+
+.footer .information .container .links a {
+  color: #fff;
+}
+
+.footer .information .container .copyright {
+  color: #707070;
+  font-size: 12px;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .footer .information .container .copyright {
+    height: auto;
+    margin-top: 20px;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    text-align: right;
+  }
+}
+
+.footer .information .container .affiliates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 90px;
+}
+
+@media (max-width: 768px) {
+  .footer .information .container .affiliates {
+    height: auto;
+    margin-top: 14px;
+  }
+}
+
+.footer .information .container .affiliates h4 {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.footer .information .container .affiliates ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .footer .information .container .affiliates ul {
+    margin-left: 10px;
+  }
+}
+
+.footer .information .container .affiliates ul li {
+  font-size: 12px;
+  font-weight: 100;
+  padding: 0 2px;
+  width: 50%;
+}
+
+@media (min-width: 769px) {
+  .footer .information .container .affiliates ul li:nth-child(1) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .footer .information .container .affiliates ul li:nth-child(2) {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .footer .information .container .affiliates ul li:nth-child(3) {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  .footer .information .container .affiliates ul li:nth-child(4) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .footer .information .container .affiliates ul li:nth-child(5) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer .information .container .affiliates {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+.footer .gototop {
+  background: #eb2936;
+  bottom: 0;
+  color: #fff;
+  font-size: 12px;
+  padding: 1.5em 1em 1em 1em;
+  position: fixed;
+  right: 0;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  z-index: 2;
+}
+
+.footer .gototop::before {
+  background: #fff;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: absolute;
+  width: 3px;
 }
 
 .dev {
