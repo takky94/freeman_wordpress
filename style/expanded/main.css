@@ -1322,9 +1322,13 @@ body.js-fixed {
   background: #fff;
   content: "";
   display: inline-block;
-  height: 1px;
+  height: 12px;
+  left: 0;
+  margin: auto;
   position: absolute;
-  width: 3px;
+  right: 0;
+  top: 0;
+  width: 1px;
 }
 
 .dev {
