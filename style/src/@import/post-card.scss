@@ -119,16 +119,30 @@ $root-path: "../..";
     display: flex;
     justify-content: space-between;
     li {
-      &:not(:first-child) {
-        margin-left: 40px;
+      @media (max-width: $sp) {
+        width: 100%;
       }
+      &:not(:first-child) {
+        @media (min-width: $tab) {
+          margin-left: 40px;
+        }
+        @media (max-width: $sp) {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    @media (max-width: $sp) {
+      flex-wrap: wrap;
     }
   }
 }
 
 .post-card-product {
   .title {
-    margin-top: 30px;
+    @media (min-width: $tab) {
+      margin-top: 30px;
+    }
   }
   .more {
     align-items: center;
@@ -229,5 +243,17 @@ $root-path: "../..";
         transform: scale(0);
       }
     }
-  }
+  } // media PC
+
+  @media (max-width: $sp) {
+    display: flex;
+    width: 100%;
+    .post-thumbnail img {
+      width: 100px;
+    }
+    .content {
+      flex-grow: 1;
+      margin-left: 20px;
+    }
+  } // media
 }

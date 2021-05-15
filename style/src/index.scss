@@ -785,6 +785,9 @@ $menu-animation-duration: 0.3s;
 
   .products {
     margin-top: 110px;
+    @media (max-width: $sp) {
+      margin-top: 30px;
+    }
   }
 
   .view-all {
