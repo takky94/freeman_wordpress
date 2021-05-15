@@ -890,6 +890,69 @@ body.js-fixed {
   margin-left: 30px;
 }
 
+@media (min-width: 769px) {
+  .footer .cta::after {
+    -webkit-animation: growRedOut 0.3s ease-in-out both;
+            animation: growRedOut 0.3s ease-in-out both;
+    background: rgba(235, 41, 54, 0.6);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+    will-change: opacity, width;
+    z-index: 1;
+  }
+  .footer .cta:hover::before {
+    opacity: 1;
+  }
+  .footer .cta:hover::after {
+    -webkit-animation: growRed 0.3s ease-in-out both;
+            animation: growRed 0.3s ease-in-out both;
+  }
+  @-webkit-keyframes growRed {
+    0% {
+      opacity: 0;
+      width: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+  @keyframes growRed {
+    0% {
+      opacity: 0;
+      width: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+  @-webkit-keyframes growRedOut {
+    0% {
+      opacity: 1;
+      width: 100%;
+    }
+    100% {
+      opacity: 0;
+      width: 0;
+    }
+  }
+  @keyframes growRedOut {
+    0% {
+      opacity: 1;
+      width: 100%;
+    }
+    100% {
+      opacity: 0;
+      width: 0;
+    }
+  }
+}
+
 .footer .overseas {
   padding: 50px 0;
 }

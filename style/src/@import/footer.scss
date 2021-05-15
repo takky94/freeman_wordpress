@@ -1,6 +1,7 @@
 /* Footer
 --------------------------------------------------------------------------------------------*/
 
+$footer-animation-duration: 0.3s;
 // style/compressed/main.min.cssからのrootへの相対
 $root-path: "../..";
 
@@ -46,6 +47,57 @@ $root-path: "../..";
     &__icon {
       margin-left: 30px;
     }
+
+    @media (min-width: $tab) {
+      // hover時アニメーション類(769px~)
+
+      // .cta::after(赤い背景)
+      &::after {
+        animation: growRedOut $footer-animation-duration ease-in-out both;
+        background: rgba(235, 41, 54, 0.6);
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 0;
+        will-change: opacity, width;
+        z-index: 1;
+      }
+
+      &:hover {
+        // .cta::before
+        &::before {
+          opacity: 1;
+        }
+        // .cta::after
+        &::after {
+          animation: growRed $footer-animation-duration ease-in-out both;
+        }
+      }
+      // hover時赤い背景挙動
+      @keyframes growRed {
+        0% {
+          opacity: 0;
+          width: 0;
+        }
+        100% {
+          opacity: 1;
+          width: 100%;
+        }
+      }
+      // hover解除時赤い背景挙動
+      @keyframes growRedOut {
+        0% {
+          opacity: 1;
+          width: 100%;
+        }
+        100% {
+          opacity: 0;
+          width: 0;
+        }
+      }
+    } // media PC
   } // cta
 
   .overseas {
