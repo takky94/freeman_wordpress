@@ -487,6 +487,9 @@
     -webkit-animation: circleRedPost 0.2s ease-in-out both;
             animation: circleRedPost 0.2s ease-in-out both;
   }
+  .post-card-product:hover .more::after {
+    background-image: url(../../images/common/more-arrow-fill.svg);
+  }
   @-webkit-keyframes circleRedPost {
     0% {
       opacity: 0;

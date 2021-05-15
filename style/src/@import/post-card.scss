@@ -220,6 +220,11 @@ $root-path: "../..";
       .post-thumbnail::after {
         animation: circleRedPost $post-animation-duration ease-in-out both;
       }
+      .more {
+        &::after {
+          background-image: url(#{$root-path}/images/common/more-arrow-fill.svg);
+        }
+      }
     }
     // hover時赤い円挙動
     @keyframes circleRedPost {
