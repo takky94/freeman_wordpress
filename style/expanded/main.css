@@ -398,6 +398,30 @@ body.js-fixed {
   padding: 0.5em 2em 0.5em 1em;
 }
 
+.header__menu .header__content .header__lang .search-form__input::-webkit-input-placeholder {
+  color: #96a8be;
+}
+
+.header__menu .header__content .header__lang .search-form__input:-ms-input-placeholder {
+  color: #96a8be;
+}
+
+.header__menu .header__content .header__lang .search-form__input::-ms-input-placeholder {
+  color: #96a8be;
+}
+
+.header__menu .header__content .header__lang .search-form__input::placeholder {
+  color: #96a8be;
+}
+
+.header__menu .header__content .header__lang .search-form__input:-ms-input-placeholder {
+  color: #96a8be;
+}
+
+.header__menu .header__content .header__lang .search-form__input::-ms-input-placeholder {
+  color: #96a8be;
+}
+
 .header__menu .header__content .header__lang .search-form__button {
   background: #f4f5f8;
   bottom: 0;
