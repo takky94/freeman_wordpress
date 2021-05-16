@@ -1,0 +1,47 @@
+/* Button
+--------------------------------------------------------------------------------------------*/
+
+$button-animation-duration: 0.4s;
+// style/compressed/main.min.cssからのrootへの相対
+$root-path: "../..";
+
+.button {
+  background: $c-main;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 60px;
+  padding: 20px 30px;
+}
+
+.button-arrow {
+  align-items: center;
+  background: $c-main;
+  color: #fff;
+  display: flex;
+  font-size: 16px;
+  margin-top: 60px;
+  padding: 20px 30px;
+  width: 200px;
+}
+
+.button-line {
+  overflow: hidden;
+  position: relative;
+  &::before {
+    background: rgba(0, 0, 0, 0.2);
+    content: "";
+    filter: blur(3px);
+    height: 100%;
+    left: -43px; // 横幅にblur分
+    position: absolute;
+    transition: all $button-animation-duration;
+    width: 40px;
+  }
+
+  &:hover {
+    &::before {
+      transform: translateX(400px);
+    }
+  }
+}

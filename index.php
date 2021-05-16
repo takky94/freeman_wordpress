@@ -115,7 +115,7 @@
       <!-- // lead__achivment -->
       <!-- lead__button -->
       <div class="lead__button">
-        <a href="#" class="button-arrow arrow-wrap flex-center">
+        <a href="#" class="button-arrow button-line arrow-wrap flex-center">
           <span>社長ご挨拶・企業理念</span>
           <?php get_template_part('/parts/icon/arrow'); ?>
         </a>
@@ -237,7 +237,7 @@
         </div>
         <!-- // products -->
         <div class="view-all view-all__right">
-          <a href="#" class="button-arrow arrow-wrap">
+          <a href="#" class="button-arrow button-line arrow-wrap">
             <span class="font-robot">VIEW ALL</span>
             <?php get_template_part('/parts/icon/arrow'); ?>
           </a>
@@ -272,7 +272,7 @@
         </div>
         <!-- // products -->
         <div class="view-all">
-          <a href="#" class="button-arrow arrow-wrap">
+          <a href="#" class="button-arrow button-line arrow-wrap">
             <span class="font-robot">VIEW ALL</span>
             <?php get_template_part('/parts/icon/arrow'); ?>
           </a>
@@ -309,7 +309,7 @@
         </div>
         <!-- // products -->
         <div class="view-all view-all__right">
-          <a href="#" class="button-arrow arrow-wrap">
+          <a href="#" class="button-arrow button-line arrow-wrap">
             <span class="font-robot">VIEW ALL</span>
             <?php get_template_part('/parts/icon/arrow'); ?>
           </a>
@@ -342,7 +342,7 @@
         </div>
         <!-- // products -->
         <div class="view-all">
-          <a href="#" class="button-arrow arrow-wrap">
+          <a href="#" class="button-arrow button-line arrow-wrap">
             <span class="font-robot">VIEW ALL</span>
             <?php get_template_part('/parts/icon/arrow'); ?>
           </a>
@@ -371,7 +371,7 @@
       </div>
       <!-- // detail -->
       <div class="view-all view-all__right">
-        <a href="#" class="button-arrow arrow-wrap">
+        <a href="#" class="button-arrow button-line arrow-wrap">
           <span class="font-robot">VIEW ALL</span>
           <?php get_template_part('/parts/icon/arrow'); ?>
         </a>
