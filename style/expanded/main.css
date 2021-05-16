@@ -408,6 +408,7 @@ body.js-fixed {
 .header__menu .header__content .header__lang .search-form__input {
   background: #f4f5f8;
   border: none;
+  border-radius: 0;
   font-size: 12px;
   line-height: 1;
   padding: 0.5em 2em 0.5em 1em;
@@ -456,6 +457,12 @@ body.js-fixed {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+@media (max-width: 768px) {
+  .header__menu .header__content .header__lang .search-form__button {
+    right: 5px;
+  }
 }
 
 .header__menu .header__content .header__lang .search-form__button svg {
