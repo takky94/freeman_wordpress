@@ -95,14 +95,28 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
         display: flex;
         height: $header-logo-height-pc;
         justify-content: flex-end;
+        @media (max-width: $sp) {
+          height: auto;
+        }
+
         .select {
           color: #96a8be;
           display: inline-block;
+          @media (max-width: $sp) {
+            color: #fff;
+            font-size: 18px;
+            margin-top: 25px;
+            order: 2;
+          }
         }
         // 検索フォーム
         .search-form {
           max-width: 260px;
           position: relative;
+          @media (max-width: $sp) {
+            max-width: 100%;
+            width: 100%;
+          }
 
           &__input {
             background: $c-whitesmoke;
@@ -118,6 +132,12 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
             }
             &::-ms-input-placeholder {
               color: $c-gray;
+            }
+            @media (max-width: $sp) {
+              font-size: 16px; // iOSのinputズーム対策
+              order: 1;
+              padding: 1em 2em 1em 1em;
+              width: 100%;
             }
           }
 

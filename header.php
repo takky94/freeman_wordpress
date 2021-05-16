@@ -50,7 +50,7 @@
         <nav class="header__menu dev">
           <div class="header__content js-menuContent">
             <div class="header__lang dev">
-              <span class="select">JP EN CH</span>
+              <span class="select font-robot">JP EN CH</span>
               <?php get_search_form(); ?>
             </div>
             <ul class="header__list dev">
