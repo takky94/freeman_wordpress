@@ -9,19 +9,23 @@
         </h2>
     <div class="hero__slide">
       <picture>
-        <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/01.webp" media="(min-width:769px)" />
+        <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/01.webp" />
+        <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/01-768.png" media="(max-width:768px)" />
         <img src="<?= get_template_directory_uri(); ?>/images/top/slide/01.png" alt="">
       </picture>
       <picture>
-        <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/02.webp" media="(min-width:769px)" />
+        <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/02.webp" />
+        <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/02-768.png" media="(max-width:768px)" />
         <img src="<?= get_template_directory_uri(); ?>/images/top/slide/02.png" />
       </picture>
       <picture>
-        <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/03.webp" media="(min-width:769px)" />
+        <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/03.webp" />
+        <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/03-768.png" media="(max-width:768px)" />
         <img src="<?= get_template_directory_uri(); ?>/images/top/slide/03.png" />
       </picture>
       <picture>
-        <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/04.webp" media="(min-width:769px)" />
+        <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/04.webp" />
+        <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/04-768.png" media="(max-width:768px)" />
         <img src="<?= get_template_directory_uri(); ?>/images/top/slide/04.png" />
       </picture>
     </div>
