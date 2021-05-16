@@ -37,8 +37,8 @@ if (!function_exists('fm_get_product')){
     $str = '<div class="products-link"><ul class="'.$layout.'">';
 
     while ($wp_query -> have_posts()){
-      $wp_query->the_post();
-      $str .= '<li><a href="#" class="post-card-product"><div class="thumbail"><p class="post-thumbnail"><img src="'.fm_default_thumb('thumb-600').'" alt="" loading="lazy" /></p></div><div class="content"><p class="title">'.get_the_title().'</p><p class="more font-robot c-main">MORE</p></div></a></li>';
+      $wp_query -> the_post();
+      $str .= '<li><a href="'.get_the_permalink().'" class="post-card-product"><div class="thumbail"><p class="post-thumbnail"><img src="'.fm_default_thumb('thumb-600').'" alt="" loading="lazy" /></p></div><div class="content"><p class="title">'.get_the_title().'</p><p class="more font-robot c-main">MORE</p></div></a></li>';
     }
 
     $str .= '</ul></div>';

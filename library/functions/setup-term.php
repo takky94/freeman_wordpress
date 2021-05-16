@@ -14,7 +14,7 @@ if (!function_exists('fm_create_default_term')){
     $taxonomy_sets = array(
       '型製品' => array('slug' => 'mold', 'description' =>'00001__削除禁止__出力順番号'),
       '砂型鋳造' => array('slug' => 'sand-casting', 'description' =>'00002__削除禁止__出力順番号'),
-      '精密鋳造' => array('slug' => 'invetment-casting', 'description' =>'00003__削除禁止__出力順番号'),
+      '精密鋳造' => array('slug' => 'investment-casting', 'description' =>'00003__削除禁止__出力順番号'),
       'ジュエリー' => array('slug' => 'jewelry', 'description' =>'00004__削除禁止__出力順番号')
     );
     loop_register_term($taxonomy_type, $taxonomy_sets);
@@ -24,7 +24,7 @@ if (!function_exists('fm_create_default_term')){
     $taxonomy_sets = array(
       '型製品' => array('slug' => 'mold', 'description' =>'00001__削除禁止__出力順番号'),
       '砂型鋳造' => array('slug' => 'sand-casting', 'description' =>'00002__削除禁止__出力順番号'),
-      '精密鋳造' => array('slug' => 'invetment-casting', 'description' =>'00003__削除禁止__出力順番号'),
+      '精密鋳造' => array('slug' => 'investment-casting', 'description' =>'00003__削除禁止__出力順番号'),
       'ジュエリー' => array('slug' => 'jewelry', 'description' =>'00004__削除禁止__出力順番号')
     );
     loop_register_term($taxonomy_type, $taxonomy_sets);
@@ -34,7 +34,7 @@ if (!function_exists('fm_create_default_term')){
     $taxonomy_sets = array(
       '型製品' => array('slug' => 'mold', 'description' =>'00001__削除禁止__出力順番号'),
       '砂型鋳造' => array('slug' => 'sand-casting', 'description' =>'00002__削除禁止__出力順番号'),
-      '精密鋳造' => array('slug' => 'invetment-casting', 'description' =>'00003__削除禁止__出力順番号'),
+      '精密鋳造' => array('slug' => 'investment-casting', 'description' =>'00003__削除禁止__出力順番号'),
       'ジュエリー' => array('slug' => 'jewelry', 'description' =>'00004__削除禁止__出力順番号')
     );
     loop_register_term($taxonomy_type, $taxonomy_sets);

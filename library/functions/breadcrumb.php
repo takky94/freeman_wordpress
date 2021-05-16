@@ -131,8 +131,10 @@ if (!function_exists('fm_breadcrumb_single')){
           esc_url(get_category_link($category_id))
         );
       }
-    } else { // カスタム投稿ならお知らせで統一
+    } elseif ($post_type == 'news') { // お知らせ
       $result .= fm_breadcrumb_items("お知らせ", $i, get_post_type_archive_link('news'));
+    } elseif ($post_type == 'product') { // 商品
+      $result .= fm_breadcrumb_items("商品", $i, get_post_type_archive_link('product'));
     }
 
     // ぱんくず最下層に現在のページタイトル追加

@@ -233,7 +233,7 @@
         <!-- // detail -->
         <!-- products -->
         <div class="products">
-          <?php do_shortcode('[product cat="mold"]'); ?>
+          <?php do_shortcode('[product category="mold" count="3"]'); ?>
         </div>
         <!-- // products -->
         <div class="view-all view-all__right">
@@ -267,7 +267,7 @@
         <!-- // detail -->
         <!-- products -->
         <div class="products">
-          <?php do_shortcode('[product cat="sand-casting"]'); ?>
+          <?php do_shortcode('[product category="sand-casting" count="3"]'); ?>
         </div>
         <!-- // products -->
         <div class="view-all">
@@ -304,7 +304,7 @@
         <!-- // detail -->
         <!-- products -->
         <div class="products">
-          <?php do_shortcode('[product cat="investment-casting"]'); ?>
+          <?php do_shortcode('[product category="investment-casting" count="3"]'); ?>
         </div>
         <!-- // products -->
         <div class="view-all view-all__right">
@@ -337,7 +337,7 @@
         <!-- // detail -->
         <!-- products -->
         <div class="products">
-          <?php do_shortcode('[product cat="jewelry"]'); ?>
+          <?php do_shortcode('[product category="jewelry" count="3"]'); ?>
         </div>
         <!-- // products -->
         <div class="view-all">
