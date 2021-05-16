@@ -1,3 +1,5 @@
+"use strict";
+
 {
   const _w = window,
     _d = document;
