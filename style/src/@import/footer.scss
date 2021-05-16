@@ -15,6 +15,9 @@ $root-path: "../..";
     display: block;
     height: 200px;
     position: relative;
+    @media (max-width: $sp) {
+      height: 120px;
+    }
 
     // フィルター
     &::before {
@@ -32,20 +35,39 @@ $root-path: "../..";
       height: 100%;
       position: relative;
       z-index: 2;
+      @media (max-width: $sp) {
+        flex-direction: column;
+        justify-content: center;
+      }
     }
 
     &__title {
       font-size: 42px;
       font-weight: 500;
+      @media (max-width: $sp) {
+        font-size: 28px;
+      }
 
       &Sub {
         font-weight: 500;
-        margin-left: 1.5em;
+        @media (min-width: $tab) {
+          margin-left: 1.5em;
+        }
       }
     }
 
     &__icon {
       margin-left: 30px;
+    }
+
+    .arrow {
+      @media (max-width: $sp) {
+        bottom: 0;
+        margin: auto;
+        position: absolute;
+        right: 10%;
+        top: 0;
+      }
     }
 
     @media (min-width: $tab) {
@@ -102,6 +124,9 @@ $root-path: "../..";
 
   .overseas {
     padding: 50px 0;
+    @media (max-width: $sp) {
+      padding: 25px 0;
+    }
 
     .container {
       align-items: center;
@@ -115,6 +140,9 @@ $root-path: "../..";
       font-size: 22px;
       font-weight: 500;
       line-height: 1;
+      @media (max-width: $sp) {
+        font-weight: bold;
+      }
 
       &Sub {
         color: $c-gray;
@@ -150,14 +178,23 @@ $root-path: "../..";
         // FREEMAN
         &:nth-child(1) {
           width: 20%;
+          @media (max-width: $sp) {
+            width: 30%;
+          }
         }
         // RANSOM & RANDOLPH
         &:nth-child(2) {
           width: 20%;
+          @media (max-width: $sp) {
+            width: 30%;
+          }
         }
         // LANIK
         &:nth-child(3) {
           width: 20%;
+          @media (max-width: $sp) {
+            width: 25%;
+          }
         }
         // Remet
         &:nth-child(4) {
@@ -237,6 +274,9 @@ $root-path: "../..";
           font-size: 12px;
           @media (max-width: $pc) {
             font-size: px-to-vw(12);
+          }
+          @media (max-width: $sp) {
+            font-size: 13px;
           }
         }
       } // &--menu
@@ -412,6 +452,9 @@ $root-path: "../..";
               &:nth-child(5) {
                 order: 4;
               }
+            } // media PC
+            @media (max-width: $sp) {
+              width: 100%;
             }
           }
         }

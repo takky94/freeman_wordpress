@@ -881,6 +881,12 @@ body.js-fixed {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .footer .cta {
+    height: 120px;
+  }
+}
+
 .footer .cta::before {
   background: rgba(0, 0, 0, 0.6);
   content: "";
@@ -902,18 +908,51 @@ body.js-fixed {
   z-index: 2;
 }
 
+@media (max-width: 768px) {
+  .footer .cta .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .footer .cta__title {
   font-size: 42px;
   font-weight: 500;
 }
 
+@media (max-width: 768px) {
+  .footer .cta__title {
+    font-size: 28px;
+  }
+}
+
 .footer .cta__titleSub {
   font-weight: 500;
-  margin-left: 1.5em;
+}
+
+@media (min-width: 769px) {
+  .footer .cta__titleSub {
+    margin-left: 1.5em;
+  }
 }
 
 .footer .cta__icon {
   margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .footer .cta .arrow {
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    right: 10%;
+    top: 0;
+  }
 }
 
 @media (min-width: 769px) {
@@ -983,6 +1022,12 @@ body.js-fixed {
   padding: 50px 0;
 }
 
+@media (max-width: 768px) {
+  .footer .overseas {
+    padding: 25px 0;
+  }
+}
+
 .footer .overseas .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1003,6 +1048,12 @@ body.js-fixed {
   font-size: 22px;
   font-weight: 500;
   line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .footer .overseas__title {
+    font-weight: bold;
+  }
 }
 
 .footer .overseas__titleSub {
@@ -1058,12 +1109,30 @@ body.js-fixed {
   width: 20%;
 }
 
+@media (max-width: 768px) {
+  .footer .overseas__right img:nth-child(1) {
+    width: 30%;
+  }
+}
+
 .footer .overseas__right img:nth-child(2) {
   width: 20%;
 }
 
+@media (max-width: 768px) {
+  .footer .overseas__right img:nth-child(2) {
+    width: 30%;
+  }
+}
+
 .footer .overseas__right img:nth-child(3) {
   width: 20%;
+}
+
+@media (max-width: 768px) {
+  .footer .overseas__right img:nth-child(3) {
+    width: 25%;
+  }
 }
 
 .footer .overseas__right img:nth-child(4) {
@@ -1169,6 +1238,12 @@ body.js-fixed {
 @media (max-width: 1080px) {
   .footer .sitemap__block--menu a {
     font-size: 1.11111vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer .sitemap__block--menu a {
+    font-size: 13px;
   }
 }
 
@@ -1406,6 +1481,12 @@ body.js-fixed {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer .information .container .affiliates ul li {
+    width: 100%;
   }
 }
 
