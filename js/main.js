@@ -24,6 +24,7 @@
 
     for (let i = 0; i < buttons.length; i++) {
       buttons[i].addEventListener("click", function (e) {
+        if (!window.matchMedia("(max-width: 768px)").matches) return; // スマホ以外では無効
         e.preventDefault();
         buttons[i].classList.toggle("js-clicked");
         targets[i].classList.toggle("js-active");
