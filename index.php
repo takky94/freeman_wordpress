@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <!-- main -->
-<main class="main">
+<main id="main" class="main">
   <!-- メインビジュアル -->
   <section class="hero js-hero">
     <h2 class="hero__heading font-eb">
@@ -378,7 +378,7 @@
       </div>
       <!-- // detail -->
       <div class="view-all view-all__right">
-        <a href="#" class="button-arrow button-line arrow-wrap">
+        <a href="#top" class="button-arrow button-line arrow-wrap">
           <span class="font-robot">VIEW ALL</span>
           <?php get_template_part('/parts/icon/arrow'); ?>
         </a>

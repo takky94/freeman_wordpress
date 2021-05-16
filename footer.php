@@ -146,7 +146,7 @@
     </div>
   </div>
   <!-- //information -->
-  <a href="#" class="gototop font-robot sp__none">PAGE TOP</a>
+  <a href="#main" class="gototop font-robot sp__none">PAGE TOP</a>
 </footer>
 <!-- // footer -->
 </div>
