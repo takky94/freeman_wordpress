@@ -740,11 +740,12 @@ $menu-animation-duration: 0.3s;
           font-size: 72px;
           font-weight: bold;
           line-height: 1;
-          transform: scale(0.8, 1);
+          transform: scale(0.9, 1);
           transform-origin: top left;
           width: 125%;
           @media (max-width: $sp) {
-            @include sp-font-vw(80);
+            @include sp-font-vw(100);
+            transform: none;
           }
 
           // 切り抜き文字
@@ -752,20 +753,42 @@ $menu-animation-duration: 0.3s;
             color: #fff;
             display: inline-block;
             position: relative;
-            &::before {
-              border: 9px solid #fff;
-              content: "";
-              display: block;
-              height: calc(100% + 2px);
-              left: -1px;
-              position: absolute;
-              top: -1px;
-              width: calc(100% + 2px);
+
+            &__o,
+            &__a,
+            &__s,
+            &__w {
+              outline: 2px solid #fff;
+              outline-offset: -1px;
 
               @media (max-width: $sp) {
-                border: px-to-vw(9, 768) solid #fff;
-                height: calc(100% + 2px);
-                width: calc(100% + 2px);
+                outline: px-to-vw(8) solid #fff;
+                outline-offset: px-to-vw(-4);
+              }
+            }
+
+            &__o {
+              box-shadow: 4px 11px 0 0 #fff inset, -4px -12px 0 0 #fff inset, -1px -1px 0 0 #fff, 1px 1px 0 0 #fff;
+              @media (max-width: $sp) {
+                box-shadow: 0.5vw 1.9vw 0 0 #fff inset, -0.9vw -1.9vw 0 0 #fff inset, -0.1vw -0.1vw 0 0 #fff, 0.1vw 0.1vw 0 0 #fff;
+              }
+            }
+            &__a {
+              box-shadow: 2px 11px 0 0 #fff inset, -2px -10px 0 0 #fff inset, -1px -1px 0 0 #fff, 1px 1px 0 0 #fff;
+              @media (max-width: $sp) {
+                box-shadow: 0.3vw 2.3vw 0 0 #fff inset, -0.8vw -1.9vw 0 0 #fff inset, -0.1vw -0.1vw 0 0 #fff, 0.1vw 0.1vw 0 0 #fff;
+              }
+            }
+            &__s {
+              box-shadow: 3px 10px 0 0 #fff inset, -3px -12px 0 0 #fff inset, -1px -1px 0 0 #fff, 1px 1px 0 0 #fff;
+              @media (max-width: $sp) {
+                box-shadow: 0.4vw 1.8vw 0 0 #fff inset, -0.9vw -2vw 0 0 #fff inset, -0.1vw -0.1vw 0 0 #fff, 0.1vw 0.1vw 0 0 #fff;
+              }
+            }
+            &__w {
+              box-shadow: 2px 11px 0 0 #fff inset, -2px -9px 0 0 #fff inset, -1px -1px 0 0 #fff, 1px 1px 0 0 #fff;
+              @media (max-width: $sp) {
+                box-shadow: 0.3vw 1.7vw 0 0 #fff inset, -0.8vw -2.1vw 0 0 #fff inset, -0.1vw -0.1vw 0 0 #fff, 0.1vw 0.1vw 0 0 #fff;
               }
             }
           }

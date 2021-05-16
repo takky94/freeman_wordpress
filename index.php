@@ -218,7 +218,8 @@
         <!-- detail -->
         <div class="detail flex">
           <div class="detail__text">
-            <h2 class="detail__text--headingEn font-gothic">M<span class="decoration c-main-bg">O</span>LD</h2>
+            <h2
+              class="detail__text--headingEn font-robot">M<span class="decoration decoration__o c-main-bg">O</span>LD</h2>
             <p class="detail__text--headingJp bold">型製品</p>
             <p class="detail__text--headingSub">無限に広がる表現力</p>
             <p
@@ -251,7 +252,8 @@
         <!-- detail -->
         <div class="detail detail-reverse flex">
           <div class="detail__text">
-            <h2 class="detail__text--headingEn font-gothic">S<span class="decoration c-main-bg">A</span>ND CASTING</h2>
+            <h2
+              class="detail__text--headingEn font-robot">S<span class="decoration decoration__a c-main-bg">A</span>ND CASTING</h2>
             <p class="detail__text--headingJp bold">砂型鋳造用資材・原材料</p>
             <p class="detail__text--headingSub">ヨーロッパクオリティで<br />高品質な鋳物作りを</p>
             <p
@@ -288,7 +290,7 @@
         <div class="detail flex">
           <div class="detail__text">
             <h2
-              class="detail__text--headingEn font-gothic">INVE<span class="decoration c-main-bg">S</span>TMENT CASTING</h2>
+              class="detail__text--headingEn font-robot">INVE<span class="decoration decoration__s c-main-bg">S</span>TMENT<br class="pc__none" /> CASTING</h2>
             <p class="detail__text--headingJp bold">精密鋳造用材料</p>
             <p class="detail__text--headingSub">高付加価値な製品<br />ラインナップと技術サービス</p>
             <p
@@ -322,7 +324,8 @@
         <!-- detail -->
         <div class="detail detail-reverse flex">
           <div class="detail__text">
-            <h2 class="detail__text--headingEn font-gothic">JE<span class="decoration c-main-bg">W</span>ELRY</h2>
+            <h2
+              class="detail__text--headingEn font-robot">JE<span class="decoration decoration__w c-main-bg">W</span>ELRY</h2>
             <p class="detail__text--headingJp bold">ジュエリーキャスト用副資材</p>
             <p class="detail__text--headingSub">業界のスタンダードとして</p>
             <p
@@ -356,7 +359,8 @@
       <!-- detail -->
       <div class="detail flex">
         <div class="detail__text">
-          <h2 class="detail__text--headingEn font-gothic">NE<span class="decoration c-main-bg">W</span> FIELD</h2>
+          <h2
+            class="detail__text--headingEn font-robot">NE<span class="decoration decoration__w c-main-bg">W</span> FIELD</h2>
           <p class="detail__text--headingJp bold">新たな取り組み</p>
           <p class="detail__text--headingSub">SDGsへの貢献</p>
           <p
