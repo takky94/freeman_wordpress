@@ -150,6 +150,7 @@
 </footer>
 <!-- // footer -->
 </div>
+<script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js" defer></script>
 <script src="<?= get_template_directory_uri(); ?>/js/main.js" defer></script>
 <?php wp_reset_query(); ?>
 <?php if (is_home() || is_front_page()): ?>
