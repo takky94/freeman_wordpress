@@ -133,7 +133,7 @@
     <div class="container relative">
       <ul>
         <li class="diamond">
-          <a href="#">
+          <a href="#mold">
             <div class="diamond__inner">
               <div class="center">
                 <div class="diamond__title font-robot c-white">MOLD</div>
@@ -148,7 +148,7 @@
           <div class="filter"></div>
         </li>
         <li class="diamond">
-          <a href="#">
+          <a href="#investment-casting">
             <div class="diamond__inner">
               <div class="center">
                 <div class="diamond__title font-robot c-white">INVESTMENT<br class="sp__none" />CASTING</div>
@@ -163,7 +163,7 @@
           <div class="filter"></div>
         </li>
         <li class="diamond">
-          <a href="#">
+          <a href="#new-field">
             <div class="diamond__inner">
               <div class="center">
                 <div class="diamond__title font-robot c-white">NEW FIELD</div>
@@ -178,7 +178,7 @@
           <div class="filter"></div>
         </li>
         <li class="diamond">
-          <a href="#">
+          <a href="#sand-casting">
             <div class="diamond__inner">
               <div class="center">
                 <div class="diamond__title font-robot c-white">SAND<br class="sp__none" />CASTING</div>
@@ -193,7 +193,7 @@
           <div class="filter"></div>
         </li>
         <li class="diamond">
-          <a href="#">
+          <a href="#jewelry">
             <div class="diamond__inner">
               <div class="center">
                 <div class="diamond__title font-robot c-white">JEWELRY</div>
