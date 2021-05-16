@@ -207,6 +207,9 @@ $root-path: "../..";
   .sitemap {
     background: #000;
     padding: 90px 0;
+    @media (max-width: $sp) {
+      overflow: hidden;
+    }
 
     &__logo {
       margin: auto;

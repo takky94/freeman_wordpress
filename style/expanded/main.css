@@ -1158,6 +1158,12 @@ body.js-fixed {
   padding: 90px 0;
 }
 
+@media (max-width: 768px) {
+  .footer .sitemap {
+    overflow: hidden;
+  }
+}
+
 .footer .sitemap__logo {
   margin: auto;
   width: 200px;
