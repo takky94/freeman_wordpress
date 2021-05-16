@@ -349,6 +349,9 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
                       font-size: px-to-vw(14);
                       margin-left: px-to-vw(7);
                     }
+                    @media (max-width: $sp) {
+                      font-size: 13px;
+                    }
                   }
                 }
 

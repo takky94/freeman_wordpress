@@ -343,6 +343,7 @@ body.js-fixed {
     height: calc(100vh - 65px);
     left: 100%;
     opacity: 0;
+    overflow-x: hidden;
     overflow-y: scroll;
     position: absolute;
     top: 65px;
@@ -700,6 +701,12 @@ body.js-fixed {
   .header__menu .header__content .header__list > li .sub .container > ul > li > a {
     font-size: 1.2963vw;
     margin-left: 0.64815vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__menu .header__content .header__list > li .sub .container > ul > li > a {
+    font-size: 13px;
   }
 }
 
