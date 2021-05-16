@@ -1,6 +1,11 @@
 {
-  heroImage();
-  window.addEventListener("resize", heroImage);
+  window.addEventListener("DOMContentLoaded", heroImage);
+
+  const currentWidth = window.innerWidth;
+  window.addEventListener("resize", function () {
+    if (currentWidth == window.innerWidth) return; //safariのアドレスバー表示/非表示はresize判定しない
+    heroImage();
+  });
 
   function heroImage() {
     const hero = document.querySelector(".js-hero");

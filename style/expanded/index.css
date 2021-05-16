@@ -378,15 +378,9 @@
 
 #index .hero__slide {
   background-color: rgba(0, 0, 0, 0.5);
-  height: calc(100vh - 100px);
+  height: 100%;
   position: relative;
   width: 100%;
-}
-
-@media (max-width: 768px) {
-  #index .hero__slide {
-    height: calc(100vh - 65px);
-  }
 }
 
 #index .hero__slide picture:nth-of-type(1) img {

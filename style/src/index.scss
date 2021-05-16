@@ -19,12 +19,9 @@ $menu-animation-duration: 0.3s;
     // スライドショー
     &__slide {
       background-color: rgba(0, 0, 0, 0.5);
-      height: calc(100vh - #{$header-height-pc});
+      height: 100%;
       position: relative;
       width: 100%;
-      @media (max-width: $sp) {
-        height: calc(100vh - #{$header-height-sp});
-      }
 
       picture {
         &:nth-of-type(1) {
