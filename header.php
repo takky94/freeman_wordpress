@@ -39,21 +39,21 @@
     <!-- header -->
     <header class="header">
       <div class="header__inner">
-        <div class="header__logo dev">
+        <div class="header__logo">
           <?php $titleTag = (is_home() || is_front_page()) ? "h1" : "div"; ?>
           <<?= $titleTag; ?> class="logo">
-            <a href="<?= home_url(); ?>" class="dev">
+            <a href="<?= home_url(); ?>">
               <img src="<?= get_template_directory_uri(); ?>/images/logo.svg" alt="株式会社フリーマン ロゴ">
             </a>
           </<?= $titleTag; ?>>
         </div>
-        <nav class="header__menu dev">
+        <nav class="header__menu">
           <div class="header__content js-menuContent">
-            <div class="header__lang dev">
+            <div class="header__lang">
               <span class="select font-robot">JP EN CH</span>
               <?php get_search_form(); ?>
             </div>
-            <ul class="header__list dev">
+            <ul class="header__list">
               <li>
                 <a href="<?= home_url(); ?>/mold" class="js-accordion" data-subtitle="MOLD">型製品</a>
                 <div class="sub">
@@ -143,7 +143,7 @@
               </li>
             </ul>
           </div>
-          <div class="header__button dev">
+          <div class="header__button">
             <a href="#" class="font-robot white">
               <div>
                 <div class="center">CONTACT</div>
@@ -151,7 +151,7 @@
               </div>
             </a>
           </div>
-          <div class="header__buttonMenu pc__none dev">
+          <div class="header__buttonMenu pc__none">
             <button class="font-robot white js-menu">
               <div>
                 <div class="center">MENU</div>

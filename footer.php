@@ -2,19 +2,19 @@
 <?php wp_footer(); //必須 ?>
 <footer class="footer">
   <!-- cta -->
-  <a href="#" class="cta arrow-wrap dev">
+  <a href="#" class="cta arrow-wrap">
     <div class="container">
-      <div class="cta__title c-white font-robot dev">CONTACT</div>
+      <div class="cta__title c-white font-robot">CONTACT</div>
       <div class="cta__titleSub c-white">お問い合わせ</div>
       <?php get_template_part('/parts/icon/arrow'); ?>
     </div>
   </a>
   <!-- //cta -->
   <!-- overseas -->
-  <div class="overseas dev">
+  <div class="overseas">
     <div class="container">
       <div class="overseas__left">
-        <div class="overseas__title font-robot dev">OVERSEAS SUPPLIER</div>
+        <div class="overseas__title font-robot">OVERSEAS SUPPLIER</div>
         <div class="overseas__titleSub">海外主要取引先</div>
       </div>
       <div class="overseas__right">
