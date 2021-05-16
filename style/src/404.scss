@@ -6,6 +6,7 @@
 $root-path: "../..";
 
 @import "./@import/config";
+@import "./@import/button";
 @import "./@import/entry-header";
 
 .notfound-page {
@@ -34,6 +35,10 @@ $root-path: "../..";
   }
 
   .button {
-    padding-right: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    span {
+      padding-right: 80px;
+    }
   }
 }

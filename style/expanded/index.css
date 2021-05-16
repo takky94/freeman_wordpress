@@ -27,6 +27,15 @@
   width: 200px;
 }
 
+@media (max-width: 768px) {
+  .button-arrow {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+}
+
 .button-line {
   overflow: hidden;
   position: relative;
@@ -810,6 +819,15 @@
   margin-right: auto;
   padding: 20px;
   width: 270px;
+}
+
+@media (max-width: 768px) {
+  #index .lead .lead__button .button-arrow {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
 }
 
 #index .lead .lead__button .button-arrow .arrow {

@@ -27,6 +27,15 @@
   width: 200px;
 }
 
+@media (max-width: 768px) {
+  .button-arrow {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+}
+
 .button-line {
   overflow: hidden;
   position: relative;

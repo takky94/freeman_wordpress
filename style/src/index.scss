@@ -322,6 +322,10 @@ $menu-animation-duration: 0.3s;
         margin-right: auto;
         padding: 20px;
         width: 270px;
+        @media (max-width: $sp) {
+          justify-content: space-between;
+          width: 100%;
+        }
 
         .arrow {
           margin-left: 30px;

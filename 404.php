@@ -12,7 +12,10 @@
           <?php get_template_part('/parts/svg/robot-404'); ?>
         </p>
         <div class="center">
-          <a href="#" class="button font-robot c-white c-main-bg">TOP</a>
+          <a href="#" class="button button-arrow button-line arrow-wrap c-white c-main-bg">
+            <span class="font-robot">TOP</span>
+            <?php get_template_part('/parts/icon/arrow'); ?>
+          </a>
         </div>
       </div>
     </div>

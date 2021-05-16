@@ -5,6 +5,8 @@ $button-animation-duration: 0.4s;
 // style/compressed/main.min.cssからのrootへの相対
 $root-path: "../..";
 
+@import "./config";
+
 .button {
   background: $c-main;
   color: #fff;
@@ -23,6 +25,11 @@ $root-path: "../..";
   margin-top: 60px;
   padding: 20px 30px;
   width: 200px;
+
+  @media (max-width: $sp) {
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 .button-line {
