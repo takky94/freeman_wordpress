@@ -677,8 +677,7 @@
 
 @media (max-width: 768px) {
   #index .lead__text {
-    font-size: 30px;
-    font-size: 3.90625vw;
+    font-size: 17px;
     margin-top: 20px;
   }
 }
@@ -752,6 +751,7 @@
 
 @media (max-width: 768px) {
   #index .lead__achievement .block__left {
+    font-size: 14px;
     text-align: center;
   }
   #index .lead__achievement .block__left .sp-inlineBlock {
@@ -806,8 +806,7 @@
 
 @media (max-width: 768px) {
   #index .lead__achievement .block__right .small {
-    font-size: 20px;
-    font-size: 2.60417vw;
+    font-size: 16px;
   }
 }
 
@@ -1470,6 +1469,12 @@
 @media (max-width: 768px) {
   #index .products {
     margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #index .products .post-card-product .more span {
+    display: none;
   }
 }
 

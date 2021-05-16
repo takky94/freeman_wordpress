@@ -236,7 +236,7 @@ $menu-animation-duration: 0.3s;
       font-size: 20px;
       margin-top: 30px;
       @media (max-width: $sp) {
-        @include sp-font-vw(30);
+        font-size: 17px;
         margin-top: 20px;
       }
     }
@@ -275,6 +275,7 @@ $menu-animation-duration: 0.3s;
             font-size: px-to-vw(22);
           }
           @media (max-width: $sp) {
+            font-size: 14px;
             text-align: center;
             .sp-inlineBlock {
               display: inline-block;
@@ -309,7 +310,7 @@ $menu-animation-duration: 0.3s;
           .small {
             font-size: 22px;
             @media (max-width: $sp) {
-              @include sp-font-vw(20);
+              font-size: 16px;
             }
           }
         }
@@ -804,6 +805,12 @@ $menu-animation-duration: 0.3s;
     margin-top: 110px;
     @media (max-width: $sp) {
       margin-top: 30px;
+    }
+
+    .post-card-product .more span {
+      @media (max-width: $sp) {
+        display: none;
+      }
     }
   }
 
