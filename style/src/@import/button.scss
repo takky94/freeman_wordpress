@@ -46,9 +46,11 @@ $root-path: "../..";
     width: 40px;
   }
 
-  &:hover {
-    &::before {
-      transform: translateX(400px);
+  @media (min-width: $tab) {
+    &:hover {
+      &::before {
+        transform: translateX(400px);
+      }
     }
   }
 }

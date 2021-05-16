@@ -54,9 +54,11 @@
   width: 40px;
 }
 
-.button-line:hover::before {
-  -webkit-transform: translateX(400px);
-          transform: translateX(400px);
+@media (min-width: 769px) {
+  .button-line:hover::before {
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
 }
 
 /* entry-header(single/page)
