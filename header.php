@@ -8,7 +8,8 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Roboto+Condensed&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Roboto+Condensed:wght@300;400;700&display=swap"
     rel="stylesheet">
   <?php if (is_home() || is_front_page()):  ?>
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/index.min.css" />

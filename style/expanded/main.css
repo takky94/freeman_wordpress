@@ -1523,9 +1523,13 @@ body.js-fixed {
   bottom: 0;
   color: #fff;
   font-size: 12px;
+  opacity: 0;
   padding: 1.5em 1em 1em 1em;
   position: fixed;
   right: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  visibility: hidden;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -1543,6 +1547,11 @@ body.js-fixed {
   right: 0;
   top: 0;
   width: 1px;
+}
+
+.footer .gototop.js-active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .dev {

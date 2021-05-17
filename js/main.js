@@ -7,6 +7,8 @@
     smoothScroll();
   });
 
+  window.addEventListener("scroll", goToTop);
+
   // ハンバーガー
   function hamburgerMenu() {
     const button = document.querySelector(".js-menu");
@@ -55,6 +57,15 @@
           behavior: "smooth",
         });
       });
+    }
+  }
+
+  function goToTop() {
+    const target = document.querySelector(".js-gototop");
+    if (100 < window.scrollY) {
+      target.classList.add("js-active");
+    } else {
+      target.classList.remove("js-active");
     }
   }
 }

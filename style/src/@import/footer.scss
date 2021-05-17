@@ -474,9 +474,12 @@ $root-path: "../..";
     bottom: 0;
     color: #fff;
     font-size: 12px;
+    opacity: 0;
     padding: 1.5em 1em 1em 1em;
     position: fixed;
     right: 0;
+    transition: all $footer-animation-duration;
+    visibility: hidden;
     writing-mode: vertical-rl;
     z-index: 2;
     &::before {
@@ -490,6 +493,11 @@ $root-path: "../..";
       right: 0;
       top: 0;
       width: 1px;
+    }
+
+    &.js-active{
+      opacity: 1;
+      visibility: visible;
     }
   }
 }
