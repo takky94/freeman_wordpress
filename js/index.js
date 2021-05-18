@@ -4,18 +4,6 @@
   window.addEventListener("DOMContentLoaded", function () {
     heroImage();
     textBoxShadow();
-    ScrollReveal().reveal(".js-scroll-shown-block", {
-      delay: 100,
-      duration: 1000,
-      origin: "bottom",
-      distance: "50px",
-    });
-    ScrollReveal().reveal(".js-scroll-shown-title", {
-      delay: 500,
-      duration: 1500,
-      origin: "left",
-      distance: "20px",
-    });
   });
 
   const currentWidth = window.innerWidth;

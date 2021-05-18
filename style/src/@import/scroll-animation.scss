@@ -1,0 +1,77 @@
+/* スクロールしてから表示系アニメーションまとめ
+--------------------------------------------------------------------------------------------*/
+
+$fadeIn-animation-duration: .3s;
+
+// 共通
+
+.js-scroll-fadeIn-block,
+.js-scroll-fadeIn-title{
+	transform: translate3d(0, 0, 0); // animationのGPU処理
+}
+
+// ブロック
+.js-scroll-fadeIn-block{
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all $fadeIn-animation-duration;
+}
+
+.js-scroll-fadeIn-block.started{
+  opacity: 1;
+  transform: none;
+}
+
+// タイトル
+.js-scroll-fadeIn-title {
+  position: relative;
+}
+
+.js-scroll-fadeIn-title::before {
+  background: #fff;
+  content: "";
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  z-index: 1;
+}
+
+.js-scroll-fadeIn-title.started::before {
+  animation: scrollPassingBar 1.5s both;
+}
+
+.js-scroll-fadeIn-title h2 {
+  transform: translate3d(0, 0, 0); // animationのGPU処理
+  opacity: 0;
+}
+
+.js-scroll-fadeIn-title.started h2{
+  animation: scrollFadeIn .75s .75s both;
+}
+
+@keyframes scrollPassingBar{
+  0% {
+    left: 0;
+    width: 0;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
+
+@keyframes scrollFadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

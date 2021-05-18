@@ -154,7 +154,7 @@
 <script src="<?= get_template_directory_uri(); ?>/js/main.js" defer></script>
 <?php wp_reset_query(); ?>
 <?php if (is_home() || is_front_page()): ?>
-<script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
+<script src="<?= get_template_directory_uri(); ?>/library/js/delighters.js" defer></script>
 <script src="<?= get_template_directory_uri(); ?>/js/index.js" defer></script>
 <?php elseif (is_archive()): ?>
 <?php elseif (is_single()||is_page()): ?>

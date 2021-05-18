@@ -58,10 +58,11 @@
   </section>
   <!-- // 導入企業様 -->
   <!-- 手のひらから宇宙まで -->
-  <section class="lead js-scroll-shown-block">
+  <section class="lead js-scroll-fadeIn-block" data-delighter>
     <div class="center">
-      <h2
-        class="lead__heading center js-scroll-shown-title"><span class="c-main">手</span>のひらから<span class="c-main">宇</span>宙まで</h2>
+      <div class="js-scroll-fadeIn-title" data-delighter>
+        <h2 class="lead__heading center"><span class="c-main">手</span>のひらから<span class="c-main">宇</span>宙まで</h2>
+      </div>
       <p class="lead__text center">国内トップクラスの品揃えと提案力で、<br class="pc__none" />企業のあらゆる創造をサポートします。</p>
       <!-- lead__achivment -->
       <div class="lead__achievement">
@@ -218,13 +219,15 @@
   <!-- // リンクリスト -->
   <div class="section__background section__background--right">
     <!-- 型製品 -->
-    <section class="mold js-scroll-shown-block" id="mold">
+    <section class="mold js-scroll-fadeIn-block" data-delighter id="mold">
       <div class="container">
         <!-- detail -->
         <div class="detail flex">
           <div class="detail__text">
-            <h2
-              class="detail__text--headingEn font-robot js-scroll-shown-title">M<span class="decoration decoration__o c-main-bg">O</span>LD</h2>
+            <div class="js-scroll-fadeIn-title" data-delighter>
+              <h2
+                class="detail__text--headingEn font-robot">M<span class="decoration decoration__o c-main-bg">O</span>LD</h2>
+            </div>
             <p class="detail__text--headingJp bold">型製品</p>
             <p class="detail__text--headingSub">無限に広がる表現力</p>
             <p
@@ -252,13 +255,15 @@
     </section>
     <!-- // 型製品 -->
     <!-- 砂型鋳造用資材・原材料 -->
-    <section class="sand-casting js-scroll-shown-block" id="sand-casting">
+    <section class="sand-casting js-scroll-fadeIn-block" data-delighter id="sand-casting">
       <div class="container">
         <!-- detail -->
         <div class="detail detail-reverse flex">
           <div class="detail__text">
-            <h2
-              class="detail__text--headingEn font-robot js-scroll-shown-title">S<span class="decoration decoration__a c-main-bg">A</span>ND CASTING</h2>
+            <div class="js-scroll-fadeIn-title" data-delighter>
+              <h2
+                class="detail__text--headingEn font-robot">S<span class="decoration decoration__a c-main-bg">A</span>ND CASTING</h2>
+            </div>
             <p class="detail__text--headingJp bold">砂型鋳造用資材・原材料</p>
             <p class="detail__text--headingSub">ヨーロッパクオリティで<br />高品質な鋳物作りを</p>
             <p
@@ -289,13 +294,15 @@
   </div>
   <div class="section__background section__background--left">
     <!-- 精密鋳造用材料 -->
-    <section class="investment-casting js-scroll-shown-block" id="investment-casting">
+    <section class="investment-casting js-scroll-fadeIn-block" data-delighter id="investment-casting">
       <div class="container">
         <!-- detail -->
         <div class="detail flex">
           <div class="detail__text">
-            <h2
-              class="detail__text--headingEn font-robot js-scroll-shown-title">INVE<span class="decoration decoration__s c-main-bg">S</span>TMENT<br class="pc__none" /> CASTING</h2>
+            <div class="js-scroll-fadeIn-title" data-delighter>
+              <h2
+                class="detail__text--headingEn font-robot">INVE<span class="decoration decoration__s c-main-bg">S</span>TMENT<br class="pc__none" /> CASTING</h2>
+            </div>
             <p class="detail__text--headingJp bold">精密鋳造用材料</p>
             <p class="detail__text--headingSub">高付加価値な製品<br />ラインナップと技術サービス</p>
             <p
@@ -324,13 +331,15 @@
     </section>
     <!-- // 精密鋳造用材料 -->
     <!-- ジュエリーキャスト用副資材 -->
-    <section class="jewelry js-scroll-shown-block" id="jewelry">
+    <section class="jewelry js-scroll-fadeIn-block" data-delighter id="jewelry">
       <div class="container">
         <!-- detail -->
         <div class="detail detail-reverse flex">
           <div class="detail__text">
-            <h2
-              class="detail__text--headingEn font-robot js-scroll-shown-title">JE<span class="decoration decoration__w c-main-bg">W</span>ELRY</h2>
+            <div class="js-scroll-fadeIn-title" data-delighter>
+              <h2
+                class="detail__text--headingEn font-robot">JE<span class="decoration decoration__w c-main-bg">W</span>ELRY</h2>
+            </div>
             <p class="detail__text--headingJp bold">ジュエリーキャスト用副資材</p>
             <p class="detail__text--headingSub">業界のスタンダードとして</p>
             <p
@@ -359,13 +368,15 @@
     <!-- // ジュエリーキャスト用副資材 -->
   </div>
   <!-- 新たな取り組み -->
-  <section class="new-field js-scroll-shown-block" id="new-field">
+  <section class="new-field js-scroll-fadeIn-block" data-delighter id="new-field">
     <div class="container">
       <!-- detail -->
       <div class="detail flex">
         <div class="detail__text">
-          <h2
-            class="detail__text--headingEn font-robot js-scroll-shown-title">NE<span class="decoration decoration__w c-main-bg">W</span> FIELD</h2>
+          <div class="js-scroll-fadeIn-title" data-delighter>
+            <h2
+              class="detail__text--headingEn font-robot">NE<span class="decoration decoration__w c-main-bg">W</span> FIELD</h2>
+          </div>
           <p class="detail__text--headingJp bold">新たな取り組み</p>
           <p class="detail__text--headingSub">SDGsへの貢献</p>
           <p

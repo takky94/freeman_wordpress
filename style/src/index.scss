@@ -10,6 +10,7 @@ $menu-animation-duration: 0.3s;
 @import "./@import/config";
 @import "./@import/button";
 @import "./@import/post-card";
+@import "./@import/scroll-animation";
 
 #index {
   // FV
@@ -582,12 +583,14 @@ $menu-animation-duration: 0.3s;
 
             .diamond__title {
               font-size: 30px;
+              font-weight: 600;
               line-height: 1.2;
               @media (max-width: $pc) {
                 font-size: px-to-vw(30); // 30pxを1080px(containerのmax横幅)以下でvw化
               }
               @media (max-width: $sp) {
                 display: inline-block;
+                font-weight: 500;
                 @include sp-font-vw(35);
               }
             }

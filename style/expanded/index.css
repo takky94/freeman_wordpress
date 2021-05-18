@@ -374,6 +374,108 @@
   }
 }
 
+/* スクロールしてから表示系アニメーションまとめ
+--------------------------------------------------------------------------------------------*/
+.js-scroll-fadeIn-block,
+.js-scroll-fadeIn-title {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.js-scroll-fadeIn-block {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.js-scroll-fadeIn-block.started {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.js-scroll-fadeIn-title {
+  position: relative;
+}
+
+.js-scroll-fadeIn-title::before {
+  background: #fff;
+  content: "";
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  z-index: 1;
+}
+
+.js-scroll-fadeIn-title.started::before {
+  -webkit-animation: scrollPassingBar 1.5s both;
+          animation: scrollPassingBar 1.5s both;
+}
+
+.js-scroll-fadeIn-title h2 {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  opacity: 0;
+}
+
+.js-scroll-fadeIn-title.started h2 {
+  -webkit-animation: scrollFadeIn .75s .75s both;
+          animation: scrollFadeIn .75s .75s both;
+}
+
+@-webkit-keyframes scrollPassingBar {
+  0% {
+    left: 0;
+    width: 0;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
+
+@keyframes scrollPassingBar {
+  0% {
+    left: 0;
+    width: 0;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
+
+@-webkit-keyframes scrollFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scrollFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #index .hero {
   position: relative;
 }
@@ -1163,6 +1265,7 @@
 
 #index .menu .diamond > a .diamond__inner > div .diamond__title {
   font-size: 30px;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -1175,6 +1278,7 @@
 @media (max-width: 768px) {
   #index .menu .diamond > a .diamond__inner > div .diamond__title {
     display: inline-block;
+    font-weight: 500;
     font-size: 35px;
     font-size: 4.55729vw;
   }
