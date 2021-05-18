@@ -6,18 +6,19 @@ $fadeIn-animation-duration: .3s;
 // 共通
 
 .js-scroll-fadeIn-block,
-.js-scroll-fadeIn-title{
+.js-scroll-fadeIn-title,
+.js-scroll-fadeIn-text {
 	transform: translate3d(0, 0, 0); // animationのGPU処理
 }
 
 // ブロック
-.js-scroll-fadeIn-block{
+.js-scroll-fadeIn-block {
   opacity: 0;
   transform: translateY(30px);
   transition: all $fadeIn-animation-duration;
 }
 
-.js-scroll-fadeIn-block.started{
+.js-scroll-fadeIn-block.started {
   opacity: 1;
   transform: none;
 }
@@ -48,11 +49,11 @@ $fadeIn-animation-duration: .3s;
   opacity: 0;
 }
 
-.js-scroll-fadeIn-title.started h2{
+.js-scroll-fadeIn-title.started h2 {
   animation: scrollFadeIn .75s .75s both;
 }
 
-@keyframes scrollPassingBar{
+@keyframes scrollPassingBar {
   0% {
     left: 0;
     width: 0;
@@ -67,11 +68,22 @@ $fadeIn-animation-duration: .3s;
   }
 }
 
-@keyframes scrollFadeIn{
+@keyframes scrollFadeIn {
   0%{
     opacity: 0;
   }
   100%{
     opacity: 1;
   }
+}
+
+
+// 概要テキスト
+.js-scroll-fadeIn-text {
+  @extend .js-scroll-fadeIn-block;
+  transition-delay: 1.45s; //タイトルアニメーション終了後発火
+}
+
+.js-scroll-fadeIn-text.started {
+  @extend .js-scroll-fadeIn-block.started;
 }

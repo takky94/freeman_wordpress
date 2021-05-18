@@ -228,10 +228,12 @@
               <h2
                 class="detail__text--headingEn font-robot">M<span class="decoration decoration__o c-main-bg">O</span>LD</h2>
             </div>
-            <p class="detail__text--headingJp bold">型製品</p>
-            <p class="detail__text--headingSub">無限に広がる表現力</p>
-            <p
-              class="detail__text--description">デザインから試作開発、量産にいたる全ての領域で、モノづくりに必要な技術や製品を提案し、イメージの具体化や納期改善、コストダウンに貢献します。</p>
+            <div class="js-scroll-fadeIn-text" data-delighter>
+              <p class="detail__text--headingJp bold">型製品</p>
+              <p class="detail__text--headingSub">無限に広がる表現力</p>
+              <p
+                class="detail__text--description">デザインから試作開発、量産にいたる全ての領域で、モノづくりに必要な技術や製品を提案し、イメージの具体化や納期改善、コストダウンに貢献します。</p>
+            </div>
           </div>
           <div class="detail__image">
             <picture>
@@ -264,10 +266,12 @@
               <h2
                 class="detail__text--headingEn font-robot">S<span class="decoration decoration__a c-main-bg">A</span>ND CASTING</h2>
             </div>
-            <p class="detail__text--headingJp bold">砂型鋳造用資材・原材料</p>
-            <p class="detail__text--headingSub">ヨーロッパクオリティで<br />高品質な鋳物作りを</p>
-            <p
-              class="detail__text--description">本場ヨーロッパの鋳物づくりを支えるLANIKセラミックフォームフィルターを筆頭に、海外から独自ルートで仕入れる最良の鋳造用資材を多岐にわたってお取り扱いしております。</p>
+            <div class="js-scroll-fadeIn-text" data-delighter>
+              <p class="detail__text--headingJp bold">砂型鋳造用資材・原材料</p>
+              <p class="detail__text--headingSub">ヨーロッパクオリティで<br />高品質な鋳物作りを</p>
+              <p
+                class="detail__text--description">本場ヨーロッパの鋳物づくりを支えるLANIKセラミックフォームフィルターを筆頭に、海外から独自ルートで仕入れる最良の鋳造用資材を多岐にわたってお取り扱いしております。</p>
+            </div>
           </div>
           <div class="detail__image">
             <picture>
@@ -303,10 +307,12 @@
               <h2
                 class="detail__text--headingEn font-robot">INVE<span class="decoration decoration__s c-main-bg">S</span>TMENT<br class="pc__none" /> CASTING</h2>
             </div>
-            <p class="detail__text--headingJp bold">精密鋳造用材料</p>
-            <p class="detail__text--headingSub">高付加価値な製品<br />ラインナップと技術サービス</p>
-            <p
-              class="detail__text--description">国内外より厳選した、精密鋳造プロセスに欠かせない各種材料を取り揃え、最適なソリューションを提供。航空機・自動車・産業用ガスタービン・一般産業機械などの基幹産業を支えています。</p>
+            <div class="js-scroll-fadeIn-text" data-delighter>
+              <p class="detail__text--headingJp bold">精密鋳造用材料</p>
+              <p class="detail__text--headingSub">高付加価値な製品<br />ラインナップと技術サービス</p>
+              <p
+                class="detail__text--description">国内外より厳選した、精密鋳造プロセスに欠かせない各種材料を取り揃え、最適なソリューションを提供。航空機・自動車・産業用ガスタービン・一般産業機械などの基幹産業を支えています。</p>
+            </div>
           </div>
           <div class="detail__image">
             <picture>
@@ -340,10 +346,12 @@
               <h2
                 class="detail__text--headingEn font-robot">JE<span class="decoration decoration__w c-main-bg">W</span>ELRY</h2>
             </div>
-            <p class="detail__text--headingJp bold">ジュエリーキャスト用副資材</p>
-            <p class="detail__text--headingSub">業界のスタンダードとして</p>
-            <p
-              class="detail__text--description">ジュエリー業界で最も著名かつ実績のある、FreemanワックスおよびR&R埋没材の豊富なラインナップの中から、ご要望にあわせて提案します。その他関連材、設備もお任せください。</p>
+            <div class="js-scroll-fadeIn-text" data-delighter>
+              <p class="detail__text--headingJp bold">ジュエリーキャスト用副資材</p>
+              <p class="detail__text--headingSub">業界のスタンダードとして</p>
+              <p
+                class="detail__text--description">ジュエリー業界で最も著名かつ実績のある、FreemanワックスおよびR&R埋没材の豊富なラインナップの中から、ご要望にあわせて提案します。その他関連材、設備もお任せください。</p>
+            </div>
           </div>
           <div class="detail__image">
             <picture>
@@ -377,10 +385,12 @@
             <h2
               class="detail__text--headingEn font-robot">NE<span class="decoration decoration__w c-main-bg">W</span> FIELD</h2>
           </div>
-          <p class="detail__text--headingJp bold">新たな取り組み</p>
-          <p class="detail__text--headingSub">SDGsへの貢献</p>
-          <p
-            class="detail__text--description">ただの材料屋ではありません、明日の地球・働く人たちのことを考えたご提案。臭気対策・ミネラルキャスティング・CO2洗浄システムなど、環境を考える方に向けた新しい技術のご紹介です。</p>
+          <div class="js-scroll-fadeIn-text" data-delighter>
+            <p class="detail__text--headingJp bold">新たな取り組み</p>
+            <p class="detail__text--headingSub">SDGsへの貢献</p>
+            <p
+              class="detail__text--description">ただの材料屋ではありません、明日の地球・働く人たちのことを考えたご提案。臭気対策・ミネラルキャスティング・CO2洗浄システムなど、環境を考える方に向けた新しい技術のご紹介です。</p>
+          </div>
         </div>
         <div class="detail__image">
           <picture>

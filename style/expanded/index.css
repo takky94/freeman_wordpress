@@ -376,13 +376,14 @@
 
 /* スクロールしてから表示系アニメーションまとめ
 --------------------------------------------------------------------------------------------*/
-.js-scroll-fadeIn-block,
-.js-scroll-fadeIn-title {
+.js-scroll-fadeIn-block, .js-scroll-fadeIn-text,
+.js-scroll-fadeIn-title,
+.js-scroll-fadeIn-text {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
 
-.js-scroll-fadeIn-block {
+.js-scroll-fadeIn-block, .js-scroll-fadeIn-text {
   opacity: 0;
   -webkit-transform: translateY(30px);
           transform: translateY(30px);
@@ -390,7 +391,7 @@
   transition: all 0.3s;
 }
 
-.js-scroll-fadeIn-block.started {
+.js-scroll-fadeIn-block.started, .started.js-scroll-fadeIn-text {
   opacity: 1;
   -webkit-transform: none;
           transform: none;
@@ -474,6 +475,11 @@
   100% {
     opacity: 1;
   }
+}
+
+.js-scroll-fadeIn-text {
+  -webkit-transition-delay: 1.45s;
+          transition-delay: 1.45s;
 }
 
 #index .hero {
