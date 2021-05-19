@@ -3,81 +3,62 @@
 
 @import "./config";
 
+// ループで使う変数
+$delay: 0.3s;
+
 .hero__svg {
   path {
     animation: handWriting 2s ease-in both;
+    // $fadeIn-animation-duration分+.05sずつ
     fill: #666;
     stroke: #666;
     stroke-width: 1px;
-  }
-  path.main-color {
-    animation: handWritingRed 2s ease-in both;
-  }
-  path:nth-child(1) {
-    animation-delay: 0s;
-  }
-  path:nth-child(2) {
-    animation-delay: 0.3s;
-  }
-  path:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-  path:nth-child(4) {
-    animation-delay: 0.9s;
-  }
-  path:nth-child(5) {
-    animation-delay: 1.2s;
-    animation-duration: 5s;
-  }
-  path:nth-child(6) {
-    animation-delay: 1.5s;
-  }
-  path:nth-child(7) {
-    animation-delay: 1.8s;
-  }
-  path:nth-child(8) {
-    animation-delay: 2.1s;
-  }
-  path:nth-child(9) {
-    animation-delay: 2.4s;
-  }
-  path:nth-child(10) {
-    animation-delay: 2.7s;
-  }
-  path:nth-child(11) {
-    animation-delay: 3s;
-  }
-  path:nth-child(12) {
-    animation-delay: 3.3s;
-  }
-  @keyframes handWriting {
-    0% {
-      fill: transparent;
-      stroke-dasharray: 2000px;
-      stroke-dashoffset: 2000px;
+
+    // Pの部分だけアニメーション違う
+    &.main-color {
+      animation: handWritingRed 2s ease-in both;
     }
-    60% {
-      fill: transparent;
-      stroke-dashoffset: 0;
+
+    // 一文字ずつ遅らせてアニメーション
+    @for $i from 2 through 12 {
+      &:nth-child(#{$i}) {
+        animation-delay: $delay * $i;
+      }
     }
-    100% {
-      fill: #fff;
-      stroke: #fff;
+
+    &:nth-child(5) {
+      animation-duration: 5s;
     }
-  }
-  @keyframes handWritingRed {
-    0% {
-      fill: transparent;
-      stroke-dasharray: 2000px;
-      stroke-dashoffset: 2000px;
+
+    @keyframes handWriting {
+      0% {
+        fill: transparent;
+        stroke-dasharray: 2000px;
+        stroke-dashoffset: 2000px;
+      }
+      60% {
+        fill: transparent;
+        stroke-dashoffset: 0;
+      }
+      100% {
+        fill: #fff;
+        stroke: #fff;
+      }
     }
-    60% {
-      fill: transparent;
-      stroke-dashoffset: 0;
-    }
-    100% {
-      fill: $c-main;
-      stroke: $c-main;
+    @keyframes handWritingRed {
+      0% {
+        fill: transparent;
+        stroke-dasharray: 2000px;
+        stroke-dashoffset: 2000px;
+      }
+      60% {
+        fill: transparent;
+        stroke-dashoffset: 0;
+      }
+      100% {
+        fill: $c-main;
+        stroke: $c-main;
+      }
     }
   }
 }

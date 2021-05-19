@@ -546,66 +546,64 @@
           animation: handWritingRed 2s ease-in both;
 }
 
-.hero__svg path:nth-child(1) {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-
 .hero__svg path:nth-child(2) {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-
-.hero__svg path:nth-child(3) {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-.hero__svg path:nth-child(4) {
+.hero__svg path:nth-child(3) {
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
 }
 
-.hero__svg path:nth-child(5) {
+.hero__svg path:nth-child(4) {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
 }
 
-.hero__svg path:nth-child(6) {
+.hero__svg path:nth-child(5) {
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
 }
 
-.hero__svg path:nth-child(7) {
+.hero__svg path:nth-child(6) {
   -webkit-animation-delay: 1.8s;
           animation-delay: 1.8s;
 }
 
-.hero__svg path:nth-child(8) {
+.hero__svg path:nth-child(7) {
   -webkit-animation-delay: 2.1s;
           animation-delay: 2.1s;
 }
 
-.hero__svg path:nth-child(9) {
+.hero__svg path:nth-child(8) {
   -webkit-animation-delay: 2.4s;
           animation-delay: 2.4s;
 }
 
-.hero__svg path:nth-child(10) {
+.hero__svg path:nth-child(9) {
   -webkit-animation-delay: 2.7s;
           animation-delay: 2.7s;
 }
 
-.hero__svg path:nth-child(11) {
+.hero__svg path:nth-child(10) {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
 
-.hero__svg path:nth-child(12) {
+.hero__svg path:nth-child(11) {
   -webkit-animation-delay: 3.3s;
           animation-delay: 3.3s;
+}
+
+.hero__svg path:nth-child(12) {
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
+}
+
+.hero__svg path:nth-child(5) {
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 
 @-webkit-keyframes handWriting {
