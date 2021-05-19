@@ -11,6 +11,7 @@ $menu-animation-duration: 0.3s;
 @import "./@import/button";
 @import "./@import/post-card";
 @import "./@import/scroll-animation";
+@import "./@import/fv-animation";
 
 #index {
   // FV
@@ -98,23 +99,26 @@ $menu-animation-duration: 0.3s;
     // 見出し
     &__heading {
       bottom: 25%;
-      color: #fff;
-      font-size: 100px;
-      font-style: italic;
       left: 40px;
       line-height: 1;
       overflow: hidden;
       position: absolute;
       z-index: 2;
-      @media (max-width: $pc) {
-        font-size: px-to-vw(100);
+      svg {
+        width: 52vw;
       }
       @media (max-width: $sp) {
         bottom: 15%;
         @include sp-font-vw(150);
         left: 20px;
+
+        svg {
+          width: 80vw;
+        }
       }
+      // モノづくりに無限の可能性を
       .small {
+        color: #fff;
         display: block;
         font-size: 30px;
         font-style: normal;

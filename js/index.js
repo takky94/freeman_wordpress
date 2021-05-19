@@ -8,8 +8,6 @@
 
   const currentWidth = window.innerWidth;
   window.addEventListener("resize", function () {
-    textBoxShadow();
-
     if (currentWidth == window.innerWidth) return; //safariのアドレスバー表示/非表示はresize判定しない
     heroImage();
   });
@@ -23,6 +21,7 @@
     hero.style.height = heroHeight + "px";
   }
 
+  // 可視範囲でのFadeInアニメーション
   function fadeInElement() {
     const callback = function (entries) {
       for (let i = 0; i < entries.length; i++) {

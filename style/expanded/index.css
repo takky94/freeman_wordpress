@@ -531,6 +531,147 @@
           transition-delay: 1.3s;
 }
 
+/* FVのテキストのアニメーション
+--------------------------------------------------------------------------------------------*/
+.hero__svg path {
+  -webkit-animation: handWriting 2s ease-in both;
+          animation: handWriting 2s ease-in both;
+  fill: #666;
+  stroke: #666;
+  stroke-width: 1px;
+}
+
+.hero__svg path.main-color {
+  -webkit-animation: handWritingRed 2s ease-in both;
+          animation: handWritingRed 2s ease-in both;
+}
+
+.hero__svg path:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.hero__svg path:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.hero__svg path:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.hero__svg path:nth-child(4) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.hero__svg path:nth-child(5) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+.hero__svg path:nth-child(6) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.hero__svg path:nth-child(7) {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+.hero__svg path:nth-child(8) {
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+
+.hero__svg path:nth-child(9) {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+
+.hero__svg path:nth-child(10) {
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
+}
+
+.hero__svg path:nth-child(11) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.hero__svg path:nth-child(12) {
+  -webkit-animation-delay: 3.3s;
+          animation-delay: 3.3s;
+}
+
+@-webkit-keyframes handWriting {
+  0% {
+    fill: transparent;
+    stroke-dasharray: 2000px;
+    stroke-dashoffset: 2000px;
+  }
+  60% {
+    fill: transparent;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    fill: #fff;
+    stroke: #fff;
+  }
+}
+
+@keyframes handWriting {
+  0% {
+    fill: transparent;
+    stroke-dasharray: 2000px;
+    stroke-dashoffset: 2000px;
+  }
+  60% {
+    fill: transparent;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    fill: #fff;
+    stroke: #fff;
+  }
+}
+
+@-webkit-keyframes handWritingRed {
+  0% {
+    fill: transparent;
+    stroke-dasharray: 2000px;
+    stroke-dashoffset: 2000px;
+  }
+  60% {
+    fill: transparent;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    fill: #eb2936;
+    stroke: #eb2936;
+  }
+}
+
+@keyframes handWritingRed {
+  0% {
+    fill: transparent;
+    stroke-dasharray: 2000px;
+    stroke-dashoffset: 2000px;
+  }
+  60% {
+    fill: transparent;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    fill: #eb2936;
+    stroke: #eb2936;
+  }
+}
+
 #index .hero {
   position: relative;
 }
@@ -630,9 +771,6 @@
 
 #index .hero__heading {
   bottom: 25%;
-  color: #fff;
-  font-size: 100px;
-  font-style: italic;
   left: 40px;
   line-height: 1;
   overflow: hidden;
@@ -640,10 +778,8 @@
   z-index: 2;
 }
 
-@media (max-width: 1080px) {
-  #index .hero__heading {
-    font-size: 9.25926vw;
-  }
+#index .hero__heading svg {
+  width: 52vw;
 }
 
 @media (max-width: 768px) {
@@ -653,9 +789,13 @@
     font-size: 19.53125vw;
     left: 20px;
   }
+  #index .hero__heading svg {
+    width: 80vw;
+  }
 }
 
 #index .hero__heading .small {
+  color: #fff;
   display: block;
   font-size: 30px;
   font-style: normal;

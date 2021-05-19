@@ -4,8 +4,11 @@
   <!-- メインビジュアル -->
   <section class="hero js-hero">
     <h2 class="hero__heading font-eb">
-      <div class="js-scroll-fadeIn-title js-scroll-animation">
-        <span>To be </span><span class="c-main">P</span><span>OSSIBLE</span>
+      <div class="sp__none">
+        <?php get_template_part('/parts/svg/top-fv-text'); ?>
+      </div>
+      <div class="pc__none">
+        <?php get_template_part('/parts/svg/top-fv-textSp'); ?>
       </div>
       <div class="js-scroll-fadeIn-title js-scroll-animation">
         <div class="small font-gothic"><span>モ</span><span>ノ</span><span>づ</span><span>く</span><span>り</span><span>に</span><span>無</span><span>限</span><span>の</span><span>可</span><span>能</span><span>性</span><span>を</span></div>
