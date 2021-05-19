@@ -61,72 +61,76 @@
   <section class="lead js-scroll-fadeIn-block" data-delighter>
     <div class="center">
       <div class="js-scroll-fadeIn-title" data-delighter>
-        <h2 class="lead__heading center"><span class="c-main">手</span>のひらから<span class="c-main">宇</span>宙まで</h2>
+        <h2 class="lead__heading center">
+          <span class="c-main">手</span><span>の</span><span>ひ</span><span>ら</span><span>か</span><span>ら</span><span class="c-main">宇</span><span>宙</span><span>ま</span><span>で</span>
+        </h2>
       </div>
-      <p class="lead__text center">国内トップクラスの品揃えと提案力で、<br class="pc__none" />企業のあらゆる創造をサポートします。</p>
-      <!-- lead__achivment -->
-      <div class="lead__achievement">
-        <!-- block -->
-        <div class="block">
-          <div class="block__left">
-            <div class="center">
-              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/company.svg" width="25" />
+      <div class="js-scroll-fadeIn-text" data-delighter>
+        <p class="lead__text center">国内トップクラスの品揃えと提案力で、<br class="pc__none" />企業のあらゆる創造をサポートします。</p>
+        <!-- lead__achivment -->
+        <div class="lead__achievement">
+          <!-- block -->
+          <div class="block">
+            <div class="block__left">
+              <div class="center">
+                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/company.svg" width="25" />
+              </div>
+              <div class="mt-5 bold">創立</div>
             </div>
-            <div class="mt-5 bold">創立</div>
-          </div>
-          <div class="block__right">
-            <span class="c-main big">
-              <img src="<?= get_template_directory_uri(); ?>/images/top/1973.svg" alt="1973" />
-            </span>
-            <span class="small bold">年</span>
-          </div>
-        </div>
-        <!-- // block -->
-        <!-- block -->
-        <div class="block">
-          <div class="block__left">
-            <div class="center pc__none">
-              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/pin.svg" width="25" />
+            <div class="block__right">
+              <span class="c-main big">
+                <img src="<?= get_template_directory_uri(); ?>/images/top/1973.svg" alt="1973" />
+              </span>
+              <span class="small bold">年</span>
             </div>
-            <span class="bold">取引先</span>
-            <img src="<?= get_template_directory_uri(); ?>/images/top/icon/pin.svg" width="20" class="sp__none" />
-            <br class="sp__none" />
-            <div class="mt-5 bold sp-inlineBlock">企業国内外</div>
           </div>
-          <div class="block__right">
-            <span class="c-main big">
-              <img src="<?= get_template_directory_uri(); ?>/images/top/400.svg" alt="400" />
-            </span>
-            <span class="small bold">社</span>
-          </div>
-        </div>
-        <!-- // block -->
-        <!-- block -->
-        <div class="block">
-          <div class="block__left">
-            <div class="center">
-              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/earth.svg" width="25" />
+          <!-- // block -->
+          <!-- block -->
+          <div class="block">
+            <div class="block__left">
+              <div class="center pc__none">
+                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/pin.svg" width="25" />
+              </div>
+              <span class="bold">取引先</span>
+              <img src="<?= get_template_directory_uri(); ?>/images/top/icon/pin.svg" width="20" class="sp__none" />
+              <br class="sp__none" />
+              <div class="mt-5 bold sp-inlineBlock">企業国内外</div>
             </div>
-            <div class="mt-5 bold">海外取引</div>
+            <div class="block__right">
+              <span class="c-main big">
+                <img src="<?= get_template_directory_uri(); ?>/images/top/400.svg" alt="400" />
+              </span>
+              <span class="small bold">社</span>
+            </div>
           </div>
-          <div class="block__right">
-            <span class="c-main big">
-              <img src="<?= get_template_directory_uri(); ?>/images/top/16.svg" alt="16" />
-            </span>
-            <span class="small bold">カ国</span>
+          <!-- // block -->
+          <!-- block -->
+          <div class="block">
+            <div class="block__left">
+              <div class="center">
+                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/earth.svg" width="25" />
+              </div>
+              <div class="mt-5 bold">海外取引</div>
+            </div>
+            <div class="block__right">
+              <span class="c-main big">
+                <img src="<?= get_template_directory_uri(); ?>/images/top/16.svg" alt="16" />
+              </span>
+              <span class="small bold">カ国</span>
+            </div>
           </div>
+          <!-- // block -->
         </div>
-        <!-- // block -->
+        <!-- // lead__achivment -->
+        <!-- lead__button -->
+        <div class="lead__button">
+          <a href="#" class="button-arrow button-line arrow-wrap flex-center">
+            <span>社長ご挨拶・企業理念</span>
+            <?php get_template_part('/parts/icon/arrow'); ?>
+          </a>
+        </div>
+        <!-- // lead__button -->
       </div>
-      <!-- // lead__achivment -->
-      <!-- lead__button -->
-      <div class="lead__button">
-        <a href="#" class="button-arrow button-line arrow-wrap flex-center">
-          <span>社長ご挨拶・企業理念</span>
-          <?php get_template_part('/parts/icon/arrow'); ?>
-        </a>
-      </div>
-      <!-- // lead__button -->
     </div>
     <!-- // center -->
   </section>
@@ -225,8 +229,9 @@
         <div class="detail flex">
           <div class="detail__text">
             <div class="js-scroll-fadeIn-title" data-delighter>
-              <h2
-                class="detail__text--headingEn font-robot">M<span class="decoration decoration__o c-main-bg">O</span>LD</h2>
+              <h2 class="detail__text--headingEn font-robot">
+                <span>M</span><span class="decoration decoration__o c-main-bg">O</span><span>L</span><span>D</span>
+              </h2>
             </div>
             <div class="js-scroll-fadeIn-text" data-delighter>
               <p class="detail__text--headingJp bold">型製品</p>
@@ -263,8 +268,9 @@
         <div class="detail detail-reverse flex">
           <div class="detail__text">
             <div class="js-scroll-fadeIn-title" data-delighter>
-              <h2
-                class="detail__text--headingEn font-robot">S<span class="decoration decoration__a c-main-bg">A</span>ND CASTING</h2>
+              <h2 class="detail__text--headingEn font-robot">
+                <span>S</span><span class="decoration decoration__a c-main-bg">A</span><span>N</span><span>D </span><span>C</span><span>A</span><span>S</span><span>T</span><span>I</span><span>N</span><span>G</span>
+              </h2>
             </div>
             <div class="js-scroll-fadeIn-text" data-delighter>
               <p class="detail__text--headingJp bold">砂型鋳造用資材・原材料</p>
@@ -304,8 +310,9 @@
         <div class="detail flex">
           <div class="detail__text">
             <div class="js-scroll-fadeIn-title" data-delighter>
-              <h2
-                class="detail__text--headingEn font-robot">INVE<span class="decoration decoration__s c-main-bg">S</span>TMENT<br class="pc__none" /> CASTING</h2>
+              <h2 class="detail__text--headingEn font-robot">
+                <span>I</span><span>N</span><span>V</span><span>E</span><span class="decoration decoration__s c-main-bg">S</span><span>T</span><span>M</span><span>E</span><span>N</span><span>T </span><br class="pc__none" /><span>C</span><span>A</span><span>S</span><span>T</span><span>I</span><span>N</span><span>G</span>
+              </h2>
             </div>
             <div class="js-scroll-fadeIn-text" data-delighter>
               <p class="detail__text--headingJp bold">精密鋳造用材料</p>
@@ -343,8 +350,9 @@
         <div class="detail detail-reverse flex">
           <div class="detail__text">
             <div class="js-scroll-fadeIn-title" data-delighter>
-              <h2
-                class="detail__text--headingEn font-robot">JE<span class="decoration decoration__w c-main-bg">W</span>ELRY</h2>
+              <h2 class="detail__text--headingEn font-robot">
+                <span>J</span><span>E</span><span class="decoration decoration__w c-main-bg">W</span><span>E</span><span>L</span><span>R</span><span>Y</span>
+              </h2>
             </div>
             <div class="js-scroll-fadeIn-text" data-delighter>
               <p class="detail__text--headingJp bold">ジュエリーキャスト用副資材</p>
@@ -382,8 +390,9 @@
       <div class="detail flex">
         <div class="detail__text">
           <div class="js-scroll-fadeIn-title" data-delighter>
-            <h2
-              class="detail__text--headingEn font-robot">NE<span class="decoration decoration__w c-main-bg">W</span> FIELD</h2>
+            <h2 class="detail__text--headingEn font-robot">
+              <span>N</span><span>E</span><span class="decoration decoration__w c-main-bg">W </span><span>F</span><span>I</span><span>E</span><span>L</span><span>D</span>
+            </h2>
           </div>
           <div class="js-scroll-fadeIn-text" data-delighter>
             <p class="detail__text--headingJp bold">新たな取り組み</p>
