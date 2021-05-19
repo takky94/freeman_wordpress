@@ -24,12 +24,12 @@ $fadeIn-animation-duration: 0.3s;
 }
 
 // タイトル
-.js-scroll-fadeIn-title h2 span {
+.js-scroll-fadeIn-title span {
   opacity: 0;
   transform: translate3d(0, 0, 0); // animationのGPU処理
 }
 
-.js-scroll-fadeIn-title.started h2 span {
+.js-scroll-fadeIn-title.started span {
   animation: scrollFadeIn 0.75s both;
 
   &:nth-of-type(1) {

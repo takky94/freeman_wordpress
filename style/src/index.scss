@@ -103,6 +103,7 @@ $menu-animation-duration: 0.3s;
       font-style: italic;
       left: 40px;
       line-height: 1;
+      overflow: hidden;
       position: absolute;
       z-index: 2;
       @media (max-width: $pc) {
@@ -127,7 +128,28 @@ $menu-animation-duration: 0.3s;
           margin-top: 1.5em;
         }
       }
-    }
+      &--animation {
+        animation: fadeUp 0.2s both;
+        position: relative;
+
+        &:nth-of-type(1) {
+          animation-delay: 0.3s;
+        }
+        &:nth-of-type(2) {
+          animation-delay: 0.4s;
+          animation-duration: 0.3s;
+        }
+      }
+
+      @keyframes fadeUp {
+        0% {
+          bottom: -150px;
+        }
+        100% {
+          bottom: 0;
+        }
+      }
+    } // __heading
 
     &__news {
       align-items: center;
@@ -787,28 +809,28 @@ $menu-animation-duration: 0.3s;
               box-shadow: 4px 8px 0 0 #fff inset, -4px -12px 0 0 #fff inset, -1px -1px 0 0 #fff, 1px 1px 0 0 #fff;
               @media (max-width: $sp) {
                 box-shadow: px-to-vw(4) px-to-vw(18) 0 0 #fff inset, px-to-vw(-4) px-to-vw(-22) 0 0 #fff inset,
-                  px-to-vw(-1) px-to-vw(-1) 0 0 #fff, px-to-vw(1) px-to-vw(1) 0 0 #fff;
+                px-to-vw(-1) px-to-vw(-1) 0 0 #fff, px-to-vw(1) px-to-vw(1) 0 0 #fff;
               }
             }
             &__a {
               box-shadow: 2px 9px 0 0 #fff inset, -2px -12px 0 0 #fff inset, -1px -1px 0 0 #fff, 1px 1px 0 0 #fff;
               @media (max-width: $sp) {
                 box-shadow: px-to-vw(4) px-to-vw(18) 0 0 #fff inset, px-to-vw(-4) px-to-vw(-23) 0 0 #fff inset,
-                  px-to-vw(-1) px-to-vw(-1) 0 0 #fff, px-to-vw(1) px-to-vw(1) 0 0 #fff;
+                px-to-vw(-1) px-to-vw(-1) 0 0 #fff, px-to-vw(1) px-to-vw(1) 0 0 #fff;
               }
             }
             &__s {
               box-shadow: 3px 8px 0 0 #fff inset, -3px -12px 0 0 #fff inset, -1px -1px 0 0 #fff, 1px 1px 0 0 #fff;
               @media (max-width: $sp) {
                 box-shadow: px-to-vw(4) px-to-vw(18) 0 0 #fff inset, px-to-vw(-4) px-to-vw(-22) 0 0 #fff inset,
-                  px-to-vw(-1) px-to-vw(-1) 0 0 #fff, px-to-vw(1) px-to-vw(1) 0 0 #fff;
+                px-to-vw(-1) px-to-vw(-1) 0 0 #fff, px-to-vw(1) px-to-vw(1) 0 0 #fff;
               }
             }
             &__w {
               box-shadow: 2px 9px 0 0 #fff inset, -2px -12px 0 0 #fff inset, -1px -1px 0 0 #fff, 1px 1px 0 0 #fff;
               @media (max-width: $sp) {
                 box-shadow: px-to-vw(4) px-to-vw(19) 0 0 #fff inset, px-to-vw(-4) px-to-vw(-23) 0 0 #fff inset,
-                  px-to-vw(-1) px-to-vw(-1) 0 0 #fff, px-to-vw(1) px-to-vw(1) 0 0 #fff;
+                px-to-vw(-1) px-to-vw(-1) 0 0 #fff, px-to-vw(1) px-to-vw(1) 0 0 #fff;
               }
             }
           }
