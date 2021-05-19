@@ -227,7 +227,7 @@
   display: -ms-flexbox;
   display: flex;
   font-size: 16px;
-  font-size: weight;
+  font-weight: bold;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
