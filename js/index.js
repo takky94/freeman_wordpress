@@ -24,27 +24,24 @@
   }
 
   function fadeInElement() {
-    // IntersectionObserverの作成
-    const observer = new IntersectionObserver(
-      function (entries) {
-        for (let i = 0; i < entries.length; i++) {
-          // 領域内なら処理を実行
-          if (entries[i].intersectionRatio <= 0) continue;
-          showElm(entries[i].target);
-        }
-      },
-      {
-        // オプション
-        rootMargin: "-10% 0% -10% 0%",
+    const callback = function (entries) {
+      for (let i = 0; i < entries.length; i++) {
+        if (entries[i].intersectionRatio <= 0) continue;
+        classAdd(entries[i].target);
       }
-    );
-    // 監視対象の追加
-    const elements = document.querySelectorAll(".js-scroll-animation");
-    for (let i = 0; i < elements.length; i++) {
-      observer.observe(elements[i]);
+    };
+    const options = {
+      rootMargin: "-10% 0% -10% 0%",
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    const targets = document.querySelectorAll(".js-scroll-animation");
+    for (let i = 0; i < targets.length; i++) {
+      observer.observe(targets[i]);
     }
-    // 領域内に入ったとき実行する処理
-    function showElm(e) {
+
+    function classAdd(e) {
       e.classList.add("started");
       observer.unobserve(e);
     }
