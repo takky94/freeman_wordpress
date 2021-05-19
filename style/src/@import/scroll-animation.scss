@@ -1,7 +1,7 @@
 /* スクロールしてから表示系アニメーションまとめ
 --------------------------------------------------------------------------------------------*/
 
-$fadeIn-animation-duration: 0.3s;
+$fadeIn-animation-duration: 0.2s;
 
 // 共通
 
@@ -15,7 +15,7 @@ $fadeIn-animation-duration: 0.3s;
 .js-scroll-fadeIn-block {
   opacity: 0;
   transform: translateY(30px);
-  transition: all $fadeIn-animation-duration;
+  transition: $fadeIn-animation-duration ease-out;
 }
 
 .js-scroll-fadeIn-block.started {
@@ -30,7 +30,7 @@ $fadeIn-animation-duration: 0.3s;
 }
 
 .js-scroll-fadeIn-title.started span {
-  animation: scrollFadeIn 0.75s both;
+  animation: scrollFadeIn 0.75s ease-out both;
 
   &:nth-of-type(1) {
     animation-delay: 0.35s; // $fadeIn-animation-duration分+.05sずつ

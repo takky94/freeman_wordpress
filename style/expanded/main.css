@@ -653,13 +653,14 @@ body.js-fixed {
   }
 }
 
-.header__menu .header__content .header__list > li .sub .container > p {
+.header__menu .header__content .header__list > li .sub .container .sub__title {
   font-size: 30px;
+  font-weight: 600;
   white-space: nowrap;
 }
 
 @media (max-width: 1080px) {
-  .header__menu .header__content .header__list > li .sub .container > p {
+  .header__menu .header__content .header__list > li .sub .container .sub__title {
     font-size: 2.77778vw;
     padding-top: 1.38889vw;
   }

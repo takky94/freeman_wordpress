@@ -309,8 +309,9 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
               @media (max-width: $sp) {
                 margin: 0; //spメニュー内ではcontainerの横余白なし
               }
-              & > p {
+              .sub__title {
                 font-size: 30px;
+                font-weight: 600;
                 white-space: nowrap;
                 @media (max-width: $pc) {
                   font-size: px-to-vw(30);

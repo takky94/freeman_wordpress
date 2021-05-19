@@ -59,7 +59,7 @@
                 <a href="<?= home_url(); ?>/mold" class="js-accordion" data-subtitle="MOLD">型製品</a>
                 <div class="sub">
                   <div class="container flex">
-                    <p class="sub__title c-main font-robot sp__none">MOLD</p>
+                    <p class="sub__title c-white font-robot sp__none">M<span class="c-main">O</span>LD</p>
                     <ul class="js-accordionContent">
                       <li><a href="#" class="c-white c-trans-red">デザイン吐出</a></li>
                       <li><a href="#" class="c-white c-trans-red">デザイン切削</a></li>
@@ -79,7 +79,7 @@
                 <a href="<?= home_url(); ?>/sand-casting" class="js-accordion" data-subtitle="SAND CASTING">砂型鋳造</a>
                 <div class="sub">
                   <div class="container flex">
-                    <p class="sub__title c-main font-robot sp__none">SAND CASTING</p>
+                    <p class="sub__title c-white font-robot sp__none">S<span class="c-main">A</span>ND CASTING</p>
                     <ul class="js-accordionContent">
                       <li><a href="#" class="c-white c-trans-red">鋳造用フィルター</a></li>
                       <li><a href="#" class="c-white c-trans-red">スリープ</a></li>
@@ -96,7 +96,7 @@
                   data-subtitle="INVESTMENT CASTING">精密鋳造</a>
                 <div class="sub">
                   <div class="container flex">
-                    <p class="sub__title c-main font-robot sp__none">INVESTMENT CASTING</p>
+                    <p class="sub__title c-white font-robot sp__none">INVE<span class="c-main">S</span>TMENT CASTING</p>
                     <ul class="js-accordionContent">
                       <li><a href="#" class="c-white c-trans-red">WAX</a></li>
                       <li><a href="#" class="c-white c-trans-red">離散型・洗浄剤</a></li>
@@ -111,7 +111,7 @@
                 <a href="<?= home_url(); ?>/jewelry" class="js-accordion" data-subtitle="JEWELRY">ジュエリー</a>
                 <div class="sub">
                   <div class="container flex">
-                    <p class="sub__title c-main font-robot sp__none">JEWELRY</p>
+                    <p class="sub__title c-white font-robot sp__none">JE<span class="c-main">W</span>ELRY</p>
                     <ul class="js-accordionContent">
                       <li><a href="#" class="c-white c-trans-red">インジェクションWAX</a></li>
                       <li><a href="#" class="c-white c-trans-red">切削WAX</a></li>
@@ -126,7 +126,7 @@
                 <a href="<?= home_url(); ?>/new-field" class="js-accordion" data-subtitle="NEW FIELD">新たな取り組み</a>
                 <div class="sub">
                   <div class="container flex">
-                    <p class="sub__title c-main font-robot sp__none">NEW FIELD</p>
+                    <p class="sub__title c-white font-robot sp__none">NE<span class="c-main">W</span> FIELD</p>
                     <ul class="js-accordionContent">
                       <li><a href="#" class="c-white c-trans-red">消臭剤</a></li>
                       <li><a href="#" class="c-white c-trans-red">ミネラルキャスティング</a></li>
