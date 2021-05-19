@@ -56,12 +56,7 @@ layout の値は `column`(横並び), `slider`(スライダー)から選べま�
 
 ## 使用ライブラリについて
 
-### delighter
-
-スクロールに伴うアニメーション
-
-[[公式]](https://q42.github.io/delighters/)
-
 ### Polyfill
 
 - smooth scroll
+- intersection observer
