@@ -623,6 +623,7 @@ $menu-animation-duration: 0.3s;
             }
             .diamond__titleSub {
               font-size: 14px;
+              font-weight: bold;
               margin-top: 8px;
               @media (max-width: $pc) {
                 font-size: px-to-vw(14);

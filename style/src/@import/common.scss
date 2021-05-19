@@ -27,7 +27,7 @@ $root-path: "../..";
 // 全体
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Noto Sans CJK JP", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Arial",
-    "メイリオ", Meiryo, sans-serif;
+  "メイリオ", Meiryo, sans-serif;
 
   // ハンバーガーなどactive時にスクロールできなくする
   &.js-fixed {
@@ -77,7 +77,7 @@ body {
 
 .font-serif {
   font-family: "Noto Serif JP", "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN",
-    sans-serif;
+  sans-serif;
 }
 
 // レイアウト

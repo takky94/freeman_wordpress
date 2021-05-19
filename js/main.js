@@ -50,8 +50,9 @@
         const offset = window.pageYOffset;
 
         const header = document.querySelector(".header");
+        const gap = 30;
 
-        const targetPosition = rect + offset - header.offsetHeight;
+        const targetPosition = rect + offset - header.offsetHeight - gap;
         window.scrollTo({
           top: targetPosition,
           behavior: "smooth",

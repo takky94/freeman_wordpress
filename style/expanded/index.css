@@ -1391,6 +1391,7 @@
 
 #index .menu .diamond > a .diamond__inner > div .diamond__titleSub {
   font-size: 14px;
+  font-weight: bold;
   margin-top: 8px;
 }
 

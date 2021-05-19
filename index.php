@@ -258,7 +258,7 @@
         <!-- // products -->
         <div class="view-all view-all__right">
           <a href="#" class="button-arrow button-line arrow-wrap">
-            <span class="font-robot">VIEW ALL</span>
+            <span class="font-robot bold">VIEW ALL</span>
             <?php get_template_part('/parts/icon/arrow'); ?>
           </a>
         </div>
@@ -298,7 +298,7 @@
         <!-- // products -->
         <div class="view-all">
           <a href="#" class="button-arrow button-line arrow-wrap">
-            <span class="font-robot">VIEW ALL</span>
+            <span class="font-robot bold">VIEW ALL</span>
             <?php get_template_part('/parts/icon/arrow'); ?>
           </a>
         </div>
@@ -340,7 +340,7 @@
         <!-- // products -->
         <div class="view-all view-all__right">
           <a href="#" class="button-arrow button-line arrow-wrap">
-            <span class="font-robot">VIEW ALL</span>
+            <span class="font-robot bold">VIEW ALL</span>
             <?php get_template_part('/parts/icon/arrow'); ?>
           </a>
         </div>
@@ -379,7 +379,7 @@
         <!-- // products -->
         <div class="view-all">
           <a href="#" class="button-arrow button-line arrow-wrap">
-            <span class="font-robot">VIEW ALL</span>
+            <span class="font-robot bold">VIEW ALL</span>
             <?php get_template_part('/parts/icon/arrow'); ?>
           </a>
         </div>
@@ -414,7 +414,7 @@
       <!-- // detail -->
       <div class="view-all view-all__right">
         <a href="#top" class="button-arrow button-line arrow-wrap">
-          <span class="font-robot">VIEW ALL</span>
+          <span class="font-robot bold">VIEW ALL</span>
           <?php get_template_part('/parts/icon/arrow'); ?>
         </a>
       </div>
