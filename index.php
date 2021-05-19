@@ -41,8 +41,8 @@
       <p class="hero__news--title font-robot  bold sp__none">NEWS</p>
       <time class="hero__news--date" datetime="<?php the_time('Y-m-d') ?>"><?php the_time('Y/m/d') ?></time>
       <a href="<?php the_permalink();?>"
-        class="hero__news--postTitle c-white"><?= wp_trim_words(get_the_title(), 20); ?></a>
-      <a href="<?= get_post_type_archive_link('news'); ?>" class="hero__news--link c-white sp__none">お知らせ一覧
+        class="hero__news--postTitle c-white c-trans-red"><?= wp_trim_words(get_the_title(), 20); ?></a>
+      <a href="<?= get_post_type_archive_link('news'); ?>" class="hero__news--link c-white c-trans-red sp__none">お知らせ一覧
         <?php get_template_part('/parts/icon/arrow'); ?></a>
       <a href="#" class="hero__news--link c-main-bg pc__none">
         <?php get_template_part('/parts/icon/arrow'); ?>
@@ -61,7 +61,7 @@
   <section class="lead js-scroll-fadeIn-block" data-delighter>
     <div class="center">
       <div class="js-scroll-fadeIn-title" data-delighter>
-        <h2 class="lead__heading center">
+        <h2 class="lead__heading font-serif center">
           <span class="c-main">手</span><span>の</span><span>ひ</span><span>ら</span><span>か</span><span>ら</span><span class="c-main">宇</span><span>宙</span><span>ま</span><span>で</span>
         </h2>
       </div>
@@ -311,7 +311,7 @@
           <div class="detail__text">
             <div class="js-scroll-fadeIn-title" data-delighter>
               <h2 class="detail__text--headingEn font-robot">
-                <span>I</span><span>N</span><span>V</span><span>E</span><span class="decoration decoration__s c-main-bg">S</span><span>T</span><span>M</span><span>E</span><span>N</span><span>T </span><br class="pc__none" /><span>C</span><span>A</span><span>S</span><span>T</span><span>I</span><span>N</span><span>G</span>
+                <span>I</span><span>N</span><span>V</span><span>E</span><span class="decoration decoration__s c-main-bg">S</span><span>T</span><span>M</span><span>E</span><span>N</span><span>T </span><br /><span>C</span><span>A</span><span>S</span><span>T</span><span>I</span><span>N</span><span>G</span>
               </h2>
             </div>
             <div class="js-scroll-fadeIn-text" data-delighter>

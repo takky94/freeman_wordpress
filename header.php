@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
-    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Roboto+Condensed:wght@300;400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Roboto+Condensed:wght@300;400;700&family=Noto+Serif+JP:wght@600&&display=swap"
     rel="stylesheet">
   <?php if (is_home() || is_front_page()):  ?>
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/index.min.css" />
@@ -61,16 +61,16 @@
                   <div class="container flex">
                     <p class="sub__title c-main font-robot sp__none">MOLD</p>
                     <ul class="js-accordionContent">
-                      <li><a href="#">デザイン吐出</a></li>
-                      <li><a href="#">デザイン切削</a></li>
-                      <li><a href="#">試作注型樹脂</a></li>
-                      <li><a href="#">試作型材</a></li>
-                      <li><a href="#">試作シリコン</a></li>
-                      <li><a href="#">量産インバー</a></li>
-                      <li><a href="#">量産砂型鋳造</a></li>
-                      <li><a href="#">量産精密鋳造</a></li>
-                      <li><a href="#">量産ジュエリー</a></li>
-                      <li><a href="#">特殊</a></li>
+                      <li><a href="#" class="c-white c-trans-red">デザイン吐出</a></li>
+                      <li><a href="#" class="c-white c-trans-red">デザイン切削</a></li>
+                      <li><a href="#" class="c-white c-trans-red">試作注型樹脂</a></li>
+                      <li><a href="#" class="c-white c-trans-red">試作型材</a></li>
+                      <li><a href="#" class="c-white c-trans-red">試作シリコン</a></li>
+                      <li><a href="#" class="c-white c-trans-red">量産インバー</a></li>
+                      <li><a href="#" class="c-white c-trans-red">量産砂型鋳造</a></li>
+                      <li><a href="#" class="c-white c-trans-red">量産精密鋳造</a></li>
+                      <li><a href="#" class="c-white c-trans-red">量産ジュエリー</a></li>
+                      <li><a href="#" class="c-white c-trans-red">特殊</a></li>
                     </ul>
                   </div>
                 </div>
@@ -81,12 +81,12 @@
                   <div class="container flex">
                     <p class="sub__title c-main font-robot sp__none">SAND CASTING</p>
                     <ul class="js-accordionContent">
-                      <li><a href="#">鋳造用フィルター</a></li>
-                      <li><a href="#">スリープ</a></li>
-                      <li><a href="#">方案用ゲート</a></li>
-                      <li><a href="#">非鉄用塗型</a></li>
-                      <li><a href="#">各種対火物</a></li>
-                      <li><a href="#">アルミ原材料</a></li>
+                      <li><a href="#" class="c-white c-trans-red">鋳造用フィルター</a></li>
+                      <li><a href="#" class="c-white c-trans-red">スリープ</a></li>
+                      <li><a href="#" class="c-white c-trans-red">方案用ゲート</a></li>
+                      <li><a href="#" class="c-white c-trans-red">非鉄用塗型</a></li>
+                      <li><a href="#" class="c-white c-trans-red">各種対火物</a></li>
+                      <li><a href="#" class="c-white c-trans-red">アルミ原材料</a></li>
                     </ul>
                   </div>
                 </div>
@@ -98,11 +98,11 @@
                   <div class="container flex">
                     <p class="sub__title c-main font-robot sp__none">INVESTMENT CASTING</p>
                     <ul class="js-accordionContent">
-                      <li><a href="#">WAX</a></li>
-                      <li><a href="#">離散型・洗浄剤</a></li>
-                      <li><a href="#">バインダー</a></li>
-                      <li><a href="#">砂</a></li>
-                      <li><a href="#">その他</a></li>
+                      <li><a href="#" class="c-white c-trans-red">WAX</a></li>
+                      <li><a href="#" class="c-white c-trans-red">離散型・洗浄剤</a></li>
+                      <li><a href="#" class="c-white c-trans-red">バインダー</a></li>
+                      <li><a href="#" class="c-white c-trans-red">砂</a></li>
+                      <li><a href="#" class="c-white c-trans-red">その他</a></li>
                     </ul>
                   </div>
                 </div>
@@ -113,11 +113,11 @@
                   <div class="container flex">
                     <p class="sub__title c-main font-robot sp__none">JEWELRY</p>
                     <ul class="js-accordionContent">
-                      <li><a href="#">インジェクションWAX</a></li>
-                      <li><a href="#">切削WAX</a></li>
-                      <li><a href="#">埋没材</a></li>
-                      <li><a href="#">シリコン</a></li>
-                      <li><a href="#">ツールマット</a></li>
+                      <li><a href="#" class="c-white c-trans-red">インジェクションWAX</a></li>
+                      <li><a href="#" class="c-white c-trans-red">切削WAX</a></li>
+                      <li><a href="#" class="c-white c-trans-red">埋没材</a></li>
+                      <li><a href="#" class="c-white c-trans-red">シリコン</a></li>
+                      <li><a href="#" class="c-white c-trans-red">ツールマット</a></li>
                     </ul>
                   </div>
                 </div>
@@ -128,13 +128,13 @@
                   <div class="container flex">
                     <p class="sub__title c-main font-robot sp__none">NEW FIELD</p>
                     <ul class="js-accordionContent">
-                      <li><a href="#">消臭剤</a></li>
-                      <li><a href="#">ミネラルキャスティング</a></li>
-                      <li><a href="#">CO2洗浄システム</a></li>
-                      <li><a href="#">ホットメルト</a></li>
-                      <li><a href="#">暑さ対策</a></li>
-                      <li><a href="#">電動アシスト台車</a></li>
-                      <li class="grow"><a href="#">ベアリングセンサーシステム</a></li>
+                      <li><a href="#" class="c-white c-trans-red">消臭剤</a></li>
+                      <li><a href="#" class="c-white c-trans-red">ミネラルキャスティング</a></li>
+                      <li><a href="#" class="c-white c-trans-red">CO2洗浄システム</a></li>
+                      <li><a href="#" class="c-white c-trans-red">ホットメルト</a></li>
+                      <li><a href="#" class="c-white c-trans-red">暑さ対策</a></li>
+                      <li><a href="#" class="c-white c-trans-red">電動アシスト台車</a></li>
+                      <li class="grow"><a href="#" class="c-white c-trans-red">ベアリングセンサーシステム</a></li>
                     </ul>
                   </div>
                 </div>
@@ -145,7 +145,7 @@
             </ul>
           </div>
           <div class="header__button">
-            <a href="#" class="font-robot white">
+            <a href="#" class="font-robot white button-line">
               <div>
                 <div class="center">CONTACT</div>
                 <img src="<?= get_template_directory_uri(); ?>/images/top/icon/mail.svg" />
