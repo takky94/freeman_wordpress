@@ -33,8 +33,9 @@ if (!function_exists('fm_get_page_title')){
     }
     if (is_category()){
       $category = get_the_category();
-      $cat_name = $category[0] -> cat_name;
-      return $cat_name . '｜' . get_bloginfo('name');
+      $category = category[0];
+      $category_name = $category -> cat_name;
+      return $category_name . '｜' . get_bloginfo('name');
     }
     if (is_post_type_archive(array('news', 'product'))){
       $post_obj = get_post_type_object(get_post_type());

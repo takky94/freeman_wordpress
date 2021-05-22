@@ -83,6 +83,25 @@
   }
 }
 
+// カテゴリ
+.category-header {
+  &-mold {
+    background-image: url(#{$root-path}/images/category/mold.png);
+  }
+  &-sand-casting {
+    background-image: url(#{$root-path}/images/category/sand-casting.png);
+  }
+  &-investment-casting {
+    background-image: url(#{$root-path}/images/category/investment-casting.png);
+  }
+  &-jewelry {
+    background-image: url(#{$root-path}/images/category/jewelry.png);
+  }
+  &-new-field {
+    background-image: url(#{$root-path}/images/category/new-filed.png);
+  }
+}
+
 // ニュース
 .news-header {
   &::before {
