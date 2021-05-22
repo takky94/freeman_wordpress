@@ -149,7 +149,6 @@
   <a href="#main" class="gototop js-gototop font-robot bold sp__none">PAGE TOP</a>
 </footer>
 <!-- // footer -->
-</div>
 <script src="<?= get_template_directory_uri(); ?>/library/js/smoothscroll.js" defer></script>
 <script src="<?= get_template_directory_uri(); ?>/js/main.js" defer></script>
 <?php wp_reset_query(); ?>

@@ -22,39 +22,41 @@
 
 <?php get_header(); ?>
 
-<main class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-  <?php get_template_part('/parts/header/news-header'); ?>
-  <div class="container">
-    <?php get_template_part('/parts/archive-tabs'); ?>
-    <div class="news">
-      <?php $i = 0; if ($the_query -> found_posts > 0): if ($the_query -> have_posts()): while ($the_query -> have_posts()): $the_query -> the_post(); ?>
-      <?php
+<div id="product-category">
+
+  <main class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+    <?php get_template_part('/parts/header/news-header'); ?>
+    <div class="container">
+      <?php get_template_part('/parts/archive-tabs'); ?>
+      <div class="news">
+        <?php $i = 0; if ($the_query -> found_posts > 0): if ($the_query -> have_posts()): while ($the_query -> have_posts()): $the_query -> the_post(); ?>
+        <?php
         $terms = wp_get_object_terms($post->ID, 'product_category');
       ?>
-      <?php if ($i === 0): // 上段 ?>
-      <div class="news__large">
-        <a href="<?= get_post_permalink(); ?>" class="post-card post-card-large">
-          <div class="thumbail">
-            <p class="post-thumbnail"><img src="<?= fm_default_thumb('thumb-600'); ?>"</p>
-          </div>
-          <div class="content">
-            <div class="meta">
-              <div class="meta__label">
-                <?php fm_newmark(); ?>
-                <span class="meta__label--category"><?= $terms[0] -> name; ?></span>
-              </div>
-              <time class="meta__date font-robot"
-                datetime="<?= get_the_date('Y-m-d'); ?>"><?= get_the_date('Y.m.d'); ?></time>
+        <?php if ($i === 0): // 上段 ?>
+        <div class="news__large">
+          <a href="<?= get_post_permalink(); ?>" class="post-card post-card-large">
+            <div class="thumbail">
+              <p class="post-thumbnail"><img src="<?= fm_default_thumb('thumb-600'); ?>"</p>
             </div>
-            <p class="title"><?= get_the_title(); ?></p>
-            <p class="description"><?= the_excerpt(); ?></p>
-          </div>
-        </a>
-      </div>
-      <?php $i++; continue; ?>
-      <?php endif;// 上段 ?>
-      <?php if ($i !== 0): // 上段以外 ?>
-      <?php
+            <div class="content">
+              <div class="meta">
+                <div class="meta__label">
+                  <?php fm_newmark(); ?>
+                  <span class="meta__label--category"><?= $terms[0] -> name; ?></span>
+                </div>
+                <time class="meta__date font-robot"
+                  datetime="<?= get_the_date('Y-m-d'); ?>"><?= get_the_date('Y.m.d'); ?></time>
+              </div>
+              <p class="title"><?= get_the_title(); ?></p>
+              <p class="description"><?= the_excerpt(); ?></p>
+            </div>
+          </a>
+        </div>
+        <?php $i++; continue; ?>
+        <?php endif;// 上段 ?>
+        <?php if ($i !== 0): // 上段以外 ?>
+        <?php
         // 雛形
         switch ($i) {
           case 1:
@@ -108,35 +110,36 @@
           $post_class = "post-card-small";
         }
       ?>
-      <?= $start_tag; ?>
-      <a href="<?= get_post_permalink(); ?>" class="post-card <?= $post_class; ?>">
-        <div class="thumbail">
-          <p class="post-thumbnail"><img src="<?= $src; ?>" alt=""></p>
-        </div>
-        <div class="content">
-          <div class="meta">
-            <div class="meta__label">
-              <?php fm_newmark(); ?>
-              <span class="meta__label--category"><?= $terms[0] -> name; ?></span>
-            </div>
-            <time class="meta__date font-robot"
-              datetime="<?= get_the_date('Y-m-d'); ?>"><?= get_the_date('Y.m.d'); ?></time>
+        <?= $start_tag; ?>
+        <a href="<?= get_post_permalink(); ?>" class="post-card <?= $post_class; ?>">
+          <div class="thumbail">
+            <p class="post-thumbnail"><img src="<?= $src; ?>" alt=""></p>
           </div>
-          <p class="title"><?= get_the_title(); ?></p>
-          <p class="description"><?= the_excerpt(); ?></p>
-        </div>
-      </a>
-      <?= $end_tag; ?>
-      <?php $i++; continue; ?>
-      <?php endif;// 上段以外 ?>
-      <?php endwhile; ?>
+          <div class="content">
+            <div class="meta">
+              <div class="meta__label">
+                <?php fm_newmark(); ?>
+                <span class="meta__label--category"><?= $terms[0] -> name; ?></span>
+              </div>
+              <time class="meta__date font-robot"
+                datetime="<?= get_the_date('Y-m-d'); ?>"><?= get_the_date('Y.m.d'); ?></time>
+            </div>
+            <p class="title"><?= get_the_title(); ?></p>
+            <p class="description"><?= the_excerpt(); ?></p>
+          </div>
+        </a>
+        <?= $end_tag; ?>
+        <?php $i++; continue; ?>
+        <?php endif;// 上段以外 ?>
+        <?php endwhile; ?>
+      </div>
+      <?php else: echo '404'; ?>
+      <?php endif; endif; ?>
+      <?php wp_reset_query(); ?>
+      <?php if(function_exists('fm_pagenavi')) fm_pagenavi(array('query' => $the_query)); ?>
     </div>
-    <?php else: echo '404'; ?>
-    <?php endif; endif; ?>
-    <?php wp_reset_query(); ?>
-    <?php if(function_exists('fm_pagenavi')) fm_pagenavi(array('query' => $the_query)); ?>
-  </div>
-</main>
+  </main>
 
+</div>
 
 <?php get_footer(); ?>

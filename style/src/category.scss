@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/* CategoryPage
+--------------------------------------------------------------------------------------------*/
+
+// style/compressed/main.min.cssからのrootへの相対
+$root-path: "../..";
+$menu-animation-duration: 0.3s;
+
+@import "./@import/config";
+@import "./@import/button";
+@import "./@import/post-card";
