@@ -32,7 +32,9 @@ if (!function_exists('fm_get_page_title')){
       return get_bloginfo('name') . $catchy;
     }
     if (is_category()){
-      return (output_archive_title()) ? output_archive_title() : '「' . single_cat_title('', false) . '」の記事一覧';
+      $category = get_the_category();
+      $cat_name = $category[0] -> cat_name;
+      return $cat_name . '｜' . get_bloginfo('name');
     }
     if (is_post_type_archive(array('news', 'product'))){
       $post_obj = get_post_type_object(get_post_type());

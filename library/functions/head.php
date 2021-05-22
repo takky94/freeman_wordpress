@@ -1,7 +1,7 @@
 <?php
 
 add_action('init', 'fm_head_cleanup');
-add_action('wp_enqueue_scripts', 'fm_basic_scripts_and_styles', 1 );
+add_action('wp_enqueue_scripts', 'fm_basic_scripts_and_styles');
 add_action('wp_head', 'fm_meta_ogp');
 
 /*
@@ -96,11 +96,11 @@ if (!function_exists('fm_get_meta_description')) {
       $description = mb_strimwidth($description,0,220,"...");
       return $description;
     } elseif (is_front_page() || is_home()){ // トップページ
-      if( get_bloginfo('description') ) return get_bloginfo('description');
+      if (get_bloginfo('description')) return get_bloginfo('description');
     } elseif(is_category()) { // カテゴリページ
-      $cat_term = get_term(get_query_var('cat'), "category");
-      $cat_meta = get_option($cat_term -> taxonomy.'_'.$cat_term -> term_id);
-      return isset($cat_meta['category_description']) ? $cat_meta['category_description'] : null;
+      $category = get_the_category();
+      $cat_name = $category[0] -> cat_name;
+      return $cat_name . 'の説明ページです。';
     }
     return null;
     // メタデスクリプションは指定しなくても、Googleが自動で説明文を生成してくれるため、これ以外のページではメタデスクリプションを出力しない

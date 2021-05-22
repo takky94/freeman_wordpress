@@ -1,4 +1,5 @@
 <!--category.php-->
+
 <?php get_header(); ?>
 <?php
   $category = get_the_category();
@@ -20,3 +21,5 @@
   </main>
 </div>
 <?php get_footer(); ?>
+
+?>

@@ -11,12 +11,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Roboto+Condensed:wght@300;400;700&family=Noto+Serif+JP:wght@600&&display=swap"
     rel="stylesheet">
-  <?php if (is_home() || is_front_page()):  ?>
+  <?php if (is_home() || is_front_page()): ?>
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/index.min.css" />
-  <?php elseif (is_archive()): ?>
-  <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/archive.min.css" />
   <?php elseif (is_category()): ?>
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/category.min.css" />
+  <?php elseif (is_archive()): ?>
+  <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/archive.min.css" />
   <?php elseif (is_page_template()): //テンプレート使用の固定ページ ?>
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/article-template.min.css" />
   <?php elseif (is_single()||is_page()): ?>
@@ -57,7 +57,7 @@
           </div>
           <ul class="header__list">
             <li>
-              <a href="<?= home_url(); ?>/mold" class="js-accordion" data-subtitle="MOLD">型製品</a>
+              <a href="<?= home_url(); ?>/category/mold" class="js-accordion" data-subtitle="MOLD">型製品</a>
               <div class="sub">
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">M<span class="c-main">O</span>LD</p>
@@ -77,7 +77,8 @@
               </div>
             </li>
             <li>
-              <a href="<?= home_url(); ?>/sand-casting" class="js-accordion" data-subtitle="SAND CASTING">砂型鋳造</a>
+              <a href="<?= home_url(); ?>/category/sand-casting" class="js-accordion"
+                data-subtitle="SAND CASTING">砂型鋳造</a>
               <div class="sub">
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">S<span class="c-main">A</span>ND CASTING</p>
@@ -93,7 +94,7 @@
               </div>
             </li>
             <li>
-              <a href="<?= home_url(); ?>/investment-casting" class="js-accordion"
+              <a href="<?= home_url(); ?>/category/investment-casting" class="js-accordion"
                 data-subtitle="INVESTMENT CASTING">精密鋳造</a>
               <div class="sub">
                 <div class="container flex">
@@ -109,7 +110,7 @@
               </div>
             </li>
             <li>
-              <a href="<?= home_url(); ?>/jewelry" class="js-accordion" data-subtitle="JEWELRY">ジュエリー</a>
+              <a href="<?= home_url(); ?>/category/jewelry" class="js-accordion" data-subtitle="JEWELRY">ジュエリー</a>
               <div class="sub">
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">JE<span class="c-main">W</span>ELRY</p>
@@ -124,7 +125,7 @@
               </div>
             </li>
             <li>
-              <a href="<?= home_url(); ?>/new-field" class="js-accordion" data-subtitle="NEW FIELD">新たな取り組み</a>
+              <a href="<?= home_url(); ?>/category/new-field" class="js-accordion" data-subtitle="NEW FIELD">新たな取り組み</a>
               <div class="sub">
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">NE<span class="c-main">W</span> FIELD</p>
