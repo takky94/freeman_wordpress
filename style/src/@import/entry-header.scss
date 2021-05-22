@@ -86,19 +86,19 @@
 // カテゴリ
 .category-header {
   &-mold {
-    background-image: url(#{$root-path}/images/category/mold.png);
+    background-image: url(#{$root-path}/images/category/mold/header.png);
   }
   &-sand-casting {
-    background-image: url(#{$root-path}/images/category/sand-casting.png);
+    background-image: url(#{$root-path}/images/category/sand-casting/header.png);
   }
   &-investment-casting {
-    background-image: url(#{$root-path}/images/category/investment-casting.png);
+    background-image: url(#{$root-path}/images/category/investment-casting/header.png);
   }
   &-jewelry {
-    background-image: url(#{$root-path}/images/category/jewelry.png);
+    background-image: url(#{$root-path}/images/category/jewelry/header.png);
   }
   &-new-field {
-    background-image: url(#{$root-path}/images/category/new-filed.png);
+    background-image: url(#{$root-path}/images/category/new-filed/header.png);
   }
 }
 

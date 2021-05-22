@@ -223,6 +223,10 @@ body.js-fixed {
   }
 }
 
+hr {
+  border-top: 1px solid #dce5f0;
+}
+
 .mt-5 {
   margin-top: 5px;
 }

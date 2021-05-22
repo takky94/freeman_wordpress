@@ -11,11 +11,15 @@ $menu-animation-duration: 0.3s;
 @import "./@import/button";
 @import "./@import/entry-header";
 @import "./@import/post-card";
+@import "./@import/swiper";
+
+// タイトル部分
 
 .category-lead {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 110px;
 
   &__text {
     width: 45%;
@@ -83,4 +87,83 @@ $menu-animation-duration: 0.3s;
       }
     }
   } // __text
-} // detail
+} // .category-lead
+
+// STEP
+
+.category-step {
+  margin-top: 70px;
+
+  .block {
+    background: $c-whitesmoke;
+    padding: 30px;
+    &:not(:nth-of-type(1)) {
+      margin-top: 100px;
+      position: relative;
+      &::before {
+        border-bottom: 8px solid transparent;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 13.8564px solid $c-gray;
+        content: "";
+        display: inline-block;
+        left: 50%;
+        position: absolute;
+        top: -56px;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__inner {
+      background: #fff;
+      padding: 40px;
+    }
+    &__label {
+      background: #000;
+      display: inline-block;
+      padding: 0.5em 2em;
+    }
+    &__title {
+      border-bottom: 1px solid $c-whitesmoke;
+      font-size: 35px;
+      font-weight: 400;
+      margin-top: 20px;
+      padding-bottom: 15px;
+    }
+    &__column {
+      align-items: center;
+      display: flex;
+      margin-top: 30px;
+      padding: 0 10px;
+    }
+    &__image,
+    &__description {
+      width: 50%;
+    }
+    &__image {
+      img {
+        margin: auto;
+        max-width: 400px;
+      }
+    }
+    &__description {
+      line-height: 2;
+      padding: 0 20px;
+    }
+    &__items {
+      margin-top: 80px;
+    }
+  }
+} // .category-step
+
+// 関連商品・記事
+
+.category-related {
+  font-size: 28px;
+  margin: 100px auto 0;
+  max-width: calc(1080px - (30px * 2) - (40px * 2)); // STEPに合わせる
+
+  h4 {
+    font-weight: 400;
+  }
+} // .category-related

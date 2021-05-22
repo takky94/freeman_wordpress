@@ -1,0 +1,318 @@
+/* Post Card
+--------------------------------------------------------------------------------------------*/
+.post-card .meta {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.post-card .meta__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 180px;
+}
+
+.post-card .meta__label span {
+  color: #fff;
+  font-size: 14px;
+  padding: 6px;
+  text-align: center;
+  width: 50%;
+}
+
+.post-card .meta__label--new {
+  background: #96a8be;
+}
+
+.post-card .meta__label--category {
+  background: #000;
+}
+
+.post-card .meta__date {
+  color: #96a8be;
+}
+
+.post-card-large {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.post-card-large img {
+  max-width: 680px;
+  width: 100%;
+}
+
+.post-card-large .content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 580px;
+  padding: 50px 0 0 80px;
+  width: 100%;
+}
+
+.post-card-large .title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.post-card-large .description {
+  margin-top: 60px;
+}
+
+.post-card-middle img {
+  margin: auto;
+  width: 100%;
+}
+
+.post-card-middle .meta {
+  margin-top: 20px;
+}
+
+.post-card-middle .title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.post-card-middle .description {
+  margin-top: 60px;
+}
+
+.post-card-small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.post-card-small .content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-left: 30px;
+}
+
+.post-card-small .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.post-card-wide .title {
+  font-size: 22px;
+}
+
+.post-card-wide .description {
+  margin-top: 1em;
+}
+
+.products-link .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .products-link .column li {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .products-link .column li:not(:first-child) {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-link .column li:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-link .column {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 769px) {
+  .post-card-product .title {
+    margin-top: 30px;
+  }
+}
+
+.post-card-product .more {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.post-card-product .more::after {
+  background: center/contain url(../../images/common/more-arrow.svg);
+  content: "";
+  display: inline-block;
+  height: 1em;
+  margin-left: 8px;
+  width: 1em;
+}
+
+@media (min-width: 769px) {
+  .post-card-product .post-thumbnail {
+    overflow: hidden;
+    position: relative;
+  }
+  .post-card-product .post-thumbnail img {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    will-change: transform;
+  }
+  .post-card-product .post-thumbnail::before {
+    color: #fff;
+    content: "VIEW MORE";
+    display: inline-block;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold;
+    height: 18px;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    width: 80px;
+    z-index: 2;
+  }
+  .post-card-product .post-thumbnail::after {
+    -webkit-animation: circleRedOutPost 0.2s ease-in-out both;
+            animation: circleRedOutPost 0.2s ease-in-out both;
+    background: rgba(235, 41, 54, 0.6);
+    border-radius: 50%;
+    content: "";
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+    top: 0;
+    position: absolute;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    width: 100%;
+    will-change: opacity, transform;
+    z-index: 1;
+  }
+  .post-card-product:hover .post-thumbnail img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .post-card-product:hover .post-thumbnail::before {
+    opacity: 1;
+  }
+  .post-card-product:hover .post-thumbnail::after {
+    -webkit-animation: circleRedPost 0.2s ease-in-out both;
+            animation: circleRedPost 0.2s ease-in-out both;
+  }
+  .post-card-product:hover .more::after {
+    background-image: url(../../images/common/more-arrow-fill.svg);
+  }
+  @-webkit-keyframes circleRedPost {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+  }
+  @keyframes circleRedPost {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+  }
+  @-webkit-keyframes circleRedOutPost {
+    0% {
+      opacity: 1;
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+  }
+  @keyframes circleRedOutPost {
+    0% {
+      opacity: 1;
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .post-card-product {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .post-card-product .post-thumbnail img {
+    width: 100px;
+  }
+  .post-card-product .content {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin-left: 20px;
+  }
+}
+
+.the-product-link .square li {
+  border: 1px solid #dce5f0;
+  padding: 5px;
+}
+/*# sourceMappingURL=post-card.css.map */

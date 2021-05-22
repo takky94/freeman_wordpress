@@ -138,6 +138,8 @@ $root-path: "../..";
   }
 }
 
+// 商品
+
 .post-card-product {
   .title {
     @media (min-width: $tab) {
@@ -261,4 +263,14 @@ $root-path: "../..";
       margin-left: 20px;
     }
   } // media
+}
+
+.the-product-link {
+  .square {
+    li {
+      border: 1px solid $c-lightgray;
+      padding: 10px;
+      width: 25%;
+    }
+  }
 }

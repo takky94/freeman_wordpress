@@ -133,6 +133,12 @@ body {
   }
 }
 
+// 線
+
+hr {
+  border-top: 1px solid $c-lightgray;
+}
+
 // 余白
 
 .mt-5 {

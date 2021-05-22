@@ -82,23 +82,23 @@
 }
 
 .category-header-mold {
-  background-image: url(../../images/category/mold.png);
+  background-image: url(../../images/category/mold/header.png);
 }
 
 .category-header-sand-casting {
-  background-image: url(../../images/category/sand-casting.png);
+  background-image: url(../../images/category/sand-casting/header.png);
 }
 
 .category-header-investment-casting {
-  background-image: url(../../images/category/investment-casting.png);
+  background-image: url(../../images/category/investment-casting/header.png);
 }
 
 .category-header-jewelry {
-  background-image: url(../../images/category/jewelry.png);
+  background-image: url(../../images/category/jewelry/header.png);
 }
 
 .category-header-new-field {
-  background-image: url(../../images/category/new-filed.png);
+  background-image: url(../../images/category/new-filed/header.png);
 }
 
 .news-header::before {

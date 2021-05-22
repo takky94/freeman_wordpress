@@ -13,3 +13,96 @@
   </div>
 </div>
 <!-- // category-lead -->
+<hr class="line-first" />
+<!-- slider -->
+<div class="swiper-container mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-1.png" alt=""
+        <?php fm_lazyload(); ?> />
+    </div>
+    <div class="swiper-slide">
+      <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-2.png" alt=""
+        <?php fm_lazyload(); ?> />
+    </div>
+    <div class="swiper-slide">
+      <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-3.png" alt=""
+        <?php fm_lazyload(); ?> />
+    </div>
+    <div class="swiper-slide">
+      <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-4.png" alt=""
+        <?php fm_lazyload(); ?> />
+    </div>
+    <div class="swiper-slide">
+      <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-5.png" alt=""
+        <?php fm_lazyload(); ?> />
+    </div>
+    <div class="swiper-slide">
+      <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-6.png" alt=""
+        <?php fm_lazyload(); ?> />
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+<!-- // slider -->
+<hr class="line-second" />
+<!-- category-step -->
+<div class="category-step">
+  <!-- block -->
+  <div class="block">
+    <div class="block__inner">
+      <p class="block__label font-robot c-white">STEP 01</p>
+      <h3 class="block__title">デザイン</h3>
+      <div class="block__column">
+        <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/mold/figure-1.png" alt=""
+        <?php fm_lazyload(); ?>></p>
+        <p
+          class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+    </div>
+  </div>
+  <!-- // block -->
+  <!-- block -->
+  <div class="block">
+    <div class="block__inner">
+      <p class="block__label font-robot c-white">STEP 02</p>
+      <h3 class="block__title">試作</h3>
+      <div class="block__column">
+        <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/mold/figure-2.png" alt=""
+        <?php fm_lazyload(); ?>></p>
+        <p
+          class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+    </div>
+  </div>
+  <!-- // block -->
+  <!-- block -->
+  <div class="block">
+    <div class="block__inner">
+      <p class="block__label font-robot c-white">STEP 03</p>
+      <h3 class="block__title">量産</h3>
+      <div class="block__column">
+        <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/mold/figure-3.png" alt=""
+        <?php fm_lazyload(); ?>></p>
+        <p
+          class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+      <div class="block__items">
+        <?php do_shortcode('[the_product id="57"]'); ?>
+      </div>
+    </div>
+  </div>
+  <!-- // block -->
+</div>
+<!-- // category-step -->
+<!-- category-related -->
+<div class="category-related">
+  <div class="products">
+    <h4>試作・型材料の関連商品一覧</h4>
+  </div>
+  <div class="articles">
+    <h4>試作・型材料の記事</h4>
+
+  </div>
+</div>
+<!-- // category-related -->

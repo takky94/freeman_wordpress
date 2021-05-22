@@ -374,6 +374,12 @@
   }
 }
 
+.the-product-link .square li {
+  border: 1px solid #dce5f0;
+  padding: 10px;
+  width: 25%;
+}
+
 /* スクロールしてから表示系アニメーションまとめ
 --------------------------------------------------------------------------------------------*/
 .js-scroll-fadeIn-block, .js-scroll-fadeIn-text,

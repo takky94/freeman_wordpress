@@ -155,6 +155,9 @@
 <?php if (is_home() || is_front_page()): ?>
 <script src="<?= get_template_directory_uri(); ?>/library/js/intersection-observer.js" defer></script>
 <script src="<?= get_template_directory_uri(); ?>/js/index.js" defer></script>
+<?php elseif (is_category()): ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js" defer></script>
+<script src="<?= get_template_directory_uri(); ?>/js/category.js" defer></script>
 <?php elseif (is_archive()): ?>
 <?php elseif (is_single()||is_page()): ?>
 <?php elseif (is_search()): ?>
