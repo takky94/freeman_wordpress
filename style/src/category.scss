@@ -124,7 +124,7 @@ $menu-animation-duration: 0.3s;
       padding: 0.5em 2em;
     }
     &__title {
-      border-bottom: 1px solid $c-whitesmoke;
+      border-bottom: 1px solid $c-lightgray;
       font-size: 35px;
       font-weight: 400;
       margin-top: 20px;
@@ -160,10 +160,33 @@ $menu-animation-duration: 0.3s;
 
 .category-related {
   font-size: 28px;
-  margin: 100px auto 0;
+  margin: 0 auto;
   max-width: calc(1080px - (30px * 2) - (40px * 2)); // STEPに合わせる
+  padding-top: 20px;
 
   h4 {
+    font-size: 22px;
     font-weight: 400;
+    margin-top: 80px;
+  }
+
+  .products-link {
+    margin-top: 40px;
+    .column {
+      justify-content: flex-start;
+    }
+    li {
+      @media (min-width: $tab) {
+        width: calc((100% - 40px * 3) / 4);
+      }
+    }
+    .post-card-product {
+      .title {
+        font-size: 16px;
+      }
+      .more {
+        display: none;
+      }
+    }
   }
 } // .category-related

@@ -99,6 +99,7 @@
 <div class="category-related">
   <div class="products">
     <h4>試作・型材料の関連商品一覧</h4>
+    <?php do_shortcode('[product category="mold" count="4" orderby="rand" layout="column"]'); ?>
   </div>
   <div class="articles">
     <h4>試作・型材料の記事</h4>

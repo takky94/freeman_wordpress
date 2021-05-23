@@ -431,26 +431,25 @@
   .post-card-product .post-thumbnail img {
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
-    will-change: transform;
   }
   .post-card-product .post-thumbnail::before {
     color: #fff;
     content: "VIEW MORE";
     display: inline-block;
-    font-family: "Roboto Condensed", sans-serif;
-    font-weight: bold;
-    height: 18px;
+    font: bold / 18px "Roboto Condensed", sans-serif;
+    height: 1em;
     bottom: 0;
     left: 0;
     margin: auto;
     right: 0;
     top: 0;
+    line-height: 1;
     opacity: 0;
     position: absolute;
     text-align: center;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
-    width: 80px;
+    width: 100%;
     z-index: 2;
   }
   .post-card-product .post-thumbnail::after {
@@ -555,9 +554,24 @@
 }
 
 .the-product-link .square li {
-  border: 1px solid #dce5f0;
-  padding: 10px;
   width: 25%;
+}
+
+.the-product-link .square .post-card-product {
+  border: 1px solid #dce5f0;
+  display: inline-block;
+  padding: 10px;
+}
+
+.the-product-link .square .post-card-product .post-thumbnail {
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .the-product-link .square .post-card-product .content .title,
+  .the-product-link .square .post-card-product .content .more {
+    margin-top: 10px;
+  }
 }
 
 .swiper-container {
@@ -725,7 +739,7 @@
 }
 
 .category-step .block__title {
-  border-bottom: 1px solid #f4f5f8;
+  border-bottom: 1px solid #dce5f0;
   font-size: 35px;
   font-weight: 400;
   margin-top: 20px;
@@ -763,11 +777,38 @@
 
 .category-related {
   font-size: 28px;
-  margin: 100px auto 0;
+  margin: 0 auto;
   max-width: calc(1080px - (30px * 2) - (40px * 2));
+  padding-top: 20px;
 }
 
 .category-related h4 {
+  font-size: 22px;
   font-weight: 400;
+  margin-top: 80px;
+}
+
+.category-related .products-link {
+  margin-top: 40px;
+}
+
+.category-related .products-link .column {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media (min-width: 769px) {
+  .category-related .products-link li {
+    width: calc((100% - 40px * 3) / 4);
+  }
+}
+
+.category-related .products-link .post-card-product .title {
+  font-size: 16px;
+}
+
+.category-related .products-link .post-card-product .more {
+  display: none;
 }
 /*# sourceMappingURL=category.css.map */
