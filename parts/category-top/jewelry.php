@@ -113,11 +113,111 @@
   </div>
 </div>
 <!-- // category-children -->
+<div class="category-table">
+  <table>
+    <thead>
+      <tr>
+        <th>用途</th>
+        <th>製品名</th>
+        <th>色</th>
+        <th>硬度</th>
+        <th>WT<br />(@23℃)</th>
+        <th>ST<br />(@23℃)</th>
+        <th>Tear B<br />(N/mm)</th>
+        <th>Vlsc<br />(cp)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="5" class="common">型取り用</td>
+        <td>
+          <figure>
+            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-1.png" alt=""
+              <?php fm_lazyload(); ?> />
+            <figcaption>HT 33 Transparent</figcaption>
+          </figure>
+        </td>
+        <td>半透明</td>
+        <td>33</td>
+        <td>20'</td>
+        <td>3h30'</td>
+        <td>20,0</td>
+        <td>7.5000</td>
+      </tr>
+      <tr>
+        <td>
+          <figure>
+            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-2.png" alt=""
+              <?php fm_lazyload(); ?> />
+            <figcaption>HT 33 Rosso</figcaption>
+          </figure>
+        </td>
+        <td>
+          <div class="circle circle-red"></div>
+        </td>
+        <td>33</td>
+        <td>20'</td>
+        <td>3h30'</td>
+        <td>20,0</td>
+        <td>7.5000</td>
+      </tr>
+      <tr>
+        <td>
+          <figure>
+            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-3.png" alt=""
+              <?php fm_lazyload(); ?> />
+            <figcaption>HT 42 Grigio</figcaption>
+          </figure>
+        </td>
+        <td>
+          <div class="circle"></div>
+        </td>
+        <td>41</td>
+        <td>25'</td>
+        <td>8h</td>
+        <td>16,0</td>
+        <td>25.000</td>
+      </tr>
+      <tr>
+        <td>
+          <figure>
+            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-4.png" alt=""
+              <?php fm_lazyload(); ?> />
+            <figcaption>HT 45 Transparent</figcaption>
+          </figure>
+        </td>
+        <td>半透明</td>
+        <td>43</td>
+        <td>12'</td>
+        <td>2h30'</td>
+        <td>15,0</td>
+        <td>8.000</td>
+      </tr>
+      <tr>
+        <td>
+          <figure>
+            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-5.png" alt=""
+              <?php fm_lazyload(); ?> />
+            <figcaption>ZA 50 LT</figcaption>
+          </figure>
+        </td>
+        <td>
+          <div class="circle circle-blue"></div>
+        </td>
+        <td>50</td>
+        <td>18'</td>
+        <td>4h</td>
+        <td>5,5</td>
+        <td>18.000</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 <!-- category-children -->
 <div class="category-children left-text">
   <div class="category-children__top">
     <div class="category-children__top--text">
-      <h3 class="label">MAtt Products</h3>
+      <h3 class="label">Matt Products</h3>
       <p class="title">プロセスの最適化と<br />品質向上</p>
       <p
         class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>

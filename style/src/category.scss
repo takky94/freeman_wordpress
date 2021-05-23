@@ -379,6 +379,86 @@ $menu-animation-duration: 0.3s;
   }
 }
 
+// 表(ジュエリー)
+.category-table {
+  margin-top: 90px;
+
+  table {
+    margin: 0 auto;
+    max-width: calc(1080px - (40px * 2) - (50px * 2)); // STEPに合わせる
+    width: 100%;
+  }
+  thead {
+    background: #000;
+    color: #fff;
+  }
+  tr {
+    border-bottom: 1px solid #aaa;
+  }
+  th,
+  td {
+    min-width: 90px;
+    padding: 1em;
+    text-align: center;
+  }
+  th {
+    font-weight: 700;
+    line-height: 1.2;
+    position: relative;
+    &::after {
+      background: rgba(255, 255, 255, 0.3);
+      bottom: 0;
+      content: "";
+      height: 80%;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 1px;
+    }
+  }
+  td {
+    font-weight: 100;
+    img {
+      margin: auto;
+      max-width: 110px;
+    }
+    figcaption {
+      margin-top: 8px;
+    }
+    &.common {
+      background: $c-whitesmoke;
+    }
+    &:not(.common) {
+      position: relative;
+      &::after {
+        background: $c-lightgray;
+        bottom: 0;
+        content: "";
+        height: 80%;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+      }
+    }
+  }
+  .circle {
+    background: $c-lightgray;
+    border-radius: 50%;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    &-red {
+      background: $c-main;
+    }
+    &-blue {
+      background: #1696e6;
+    }
+  }
+}
+
 // 関連商品・記事
 
 .category-related {
