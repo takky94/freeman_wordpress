@@ -169,6 +169,7 @@ $menu-animation-duration: 0.3s;
   &__block {
     background: $c-whitesmoke;
     display: flex;
+    flex-wrap: wrap;
     margin-top: 30px;
     padding: 40px;
 
@@ -179,10 +180,10 @@ $menu-animation-duration: 0.3s;
       text-align: center;
       width: calc((100% - (30px * 3)) / 4);
       // 一番左以外左に余白
-      &:not(:nth-child(1)) {
+      &:not(:nth-child(1)):not(:nth-child(5)) {
         margin-left: 30px;
         // 矢印
-        &::after {
+        &::before {
           border-bottom: 4px solid transparent;
           border-left: 6.9282px solid $c-gray;
           border-right: 4px solid transparent;
@@ -195,32 +196,37 @@ $menu-animation-duration: 0.3s;
           transform: translateY(-50%);
         }
       }
+      // 上段以外は上に余白
+      &:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)) {
+        margin-top: 30px;
+      }
 
       // STEP部分
-      &::before {
+      .label {
         background: #000;
         color: #fff;
-        content: "";
-        display: inline-block;
         font: 500 12px "Roboto Condensed", sans-serif;
         left: 0;
         line-height: 1;
         padding: 1em 2em;
         position: absolute;
         top: 0;
+        &.last {
+          background: $c-main;
+        }
       }
-      &:nth-child(1)::before {
-        content: "STEP 01";
-      }
-      &:nth-child(2)::before {
-        content: "STEP 02";
-      }
-      &:nth-child(3)::before {
-        content: "STEP 03";
-      }
-      &:nth-child(4)::before {
-        background: $c-main;
-        content: "STEP 04";
+
+      // 矢印
+      &::after {
+        background: center / contain url(#{$root-path}/images/common/down-arrow.svg) no-repeat;
+        bottom: 15px;
+        content: "";
+        display: inline-block;
+        height: 8px;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 8px;
       }
 
       // 画像下テキスト

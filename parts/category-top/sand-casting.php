@@ -70,6 +70,7 @@
   <h3 class="center">砂型鋳造の製造プロセス</h3>
   <div class="category-process__block">
     <a href="#step01" class="category-process__block--box">
+      <p class="label">STEP 01</p>
       <figure>
         <img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/process-1.png" alt=""
           <?php fm_lazyload(); ?> />
@@ -77,6 +78,7 @@
       </figure>
     </a>
     <a href="#step02" class="category-process__block--box">
+      <p class="label">STEP 02</p>
       <figure>
         <img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/process-2.png" alt=""
           <?php fm_lazyload(); ?> />
@@ -84,6 +86,7 @@
       </figure>
     </a>
     <a href="#step03" class="category-process__block--box">
+      <p class="label">STEP 03</p>
       <figure>
         <img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/process-3.png" alt=""
           <?php fm_lazyload(); ?> />
@@ -91,6 +94,7 @@
       </figure>
     </a>
     <a href="#step04" class="category-process__block--box">
+      <p class="label last">STEP 04</p>
       <figure>
         <img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/process-4.png" alt=""
           <?php fm_lazyload(); ?> />
@@ -109,7 +113,7 @@
       <p class="block__label font-robot c-white">STEP 01</p>
       <h3 class="block__title">鋳造模型(木型・金型)</h3>
       <div class="block__column">
-        <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/mold/figure-1.png" alt=""
+        <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/figure-1.png" alt=""
         <?php fm_lazyload(); ?>></p>
         <p
           class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -123,7 +127,7 @@
       <p class="block__label font-robot c-white">STEP 02</p>
       <h3 class="block__title">造型</h3>
       <div class="block__column">
-        <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/mold/figure-2.png" alt=""
+        <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/figure-2.png" alt=""
         <?php fm_lazyload(); ?>></p>
         <p
           class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -137,7 +141,7 @@
       <p class="block__label font-robot c-white">STEP 03</p>
       <h3 class="block__title">注湯(キャスティング)</h3>
       <div class="block__column">
-        <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/mold/figure-3.png" alt=""
+        <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/figure-3.png" alt=""
         <?php fm_lazyload(); ?>></p>
         <p
           class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -154,7 +158,7 @@
       <p class="block__label font-robot c-white last">STEP 04</p>
       <h3 class="block__title">鋳物(完成品)</h3>
       <div class="block__column">
-        <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/mold/figure-3.png" alt=""
+        <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/figure-3.png" alt=""
         <?php fm_lazyload(); ?>></p>
         <p
           class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>

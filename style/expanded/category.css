@@ -835,6 +835,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 30px;
   padding: 40px;
 }
@@ -847,11 +849,11 @@
   width: calc((100% - (30px * 3)) / 4);
 }
 
-.category-process__block--box:not(:nth-child(1)) {
+.category-process__block--box:not(:nth-child(1)):not(:nth-child(5)) {
   margin-left: 30px;
 }
 
-.category-process__block--box:not(:nth-child(1))::after {
+.category-process__block--box:not(:nth-child(1)):not(:nth-child(5))::before {
   border-bottom: 4px solid transparent;
   border-left: 6.9282px solid #96a8be;
   border-right: 4px solid transparent;
@@ -865,11 +867,13 @@
           transform: translateY(-50%);
 }
 
-.category-process__block--box::before {
+.category-process__block--box:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)) {
+  margin-top: 30px;
+}
+
+.category-process__block--box .label {
   background: #000;
   color: #fff;
-  content: "";
-  display: inline-block;
   font: 500 12px "Roboto Condensed", sans-serif;
   left: 0;
   line-height: 1;
@@ -878,21 +882,21 @@
   top: 0;
 }
 
-.category-process__block--box:nth-child(1)::before {
-  content: "STEP 01";
-}
-
-.category-process__block--box:nth-child(2)::before {
-  content: "STEP 02";
-}
-
-.category-process__block--box:nth-child(3)::before {
-  content: "STEP 03";
-}
-
-.category-process__block--box:nth-child(4)::before {
+.category-process__block--box .label.last {
   background: #eb2936;
-  content: "STEP 04";
+}
+
+.category-process__block--box::after {
+  background: center/contain url(../../images/common/down-arrow.svg) no-repeat;
+  bottom: 15px;
+  content: "";
+  display: inline-block;
+  height: 8px;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 8px;
 }
 
 .category-process__block--box figcaption {
