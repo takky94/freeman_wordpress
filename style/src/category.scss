@@ -188,5 +188,20 @@ $menu-animation-duration: 0.3s;
         display: none;
       }
     }
+  } // .products-link
+
+  .articles-link {
+    margin-top: 40px;
   }
 } // .category-related
+
+// see more
+.view-all {
+  .button-arrow {
+    @media (min-width: $tab) {
+      display: flex;
+      justify-content: space-between;
+      margin-left: auto;
+    }
+  }
+}

@@ -112,6 +112,52 @@ $root-path: "../..";
   }
 }
 
+// 関連記事(二列三段)
+
+.articles-link {
+  .column {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: calc((100% - 40px) / 2);
+
+      // 右側の列は左に余白
+      &:nth-child(2n) {
+        margin-left: 40px;
+      }
+      // 上段以外は上に余白/線
+      &:not(:nth-child(1)):not(:nth-child(2)) {
+        border-top: 1px solid $c-lightgray;
+        margin-top: 15px;
+        padding-top: 15px;
+      }
+
+      .article-card {
+        display: flex;
+
+        .thumbnail {
+          max-width: 200px;
+          width: 30%;
+        }
+        .content {
+          flex-grow: 1;
+          margin-left: 30px;
+        }
+        .date {
+          color: $c-gray;
+          display: block;
+          font-size: 14px;
+        }
+        .title {
+          font-size: 16px;
+          line-height: 2;
+        }
+      }
+    }
+  }
+}
+
 // 商品のカード
 
 .products-link {
@@ -285,6 +331,6 @@ $root-path: "../..";
           }
         }
       }
-    }
-  }
+    } // .post-card-product
+  } // .square
 }
