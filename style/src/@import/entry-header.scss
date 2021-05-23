@@ -3,6 +3,9 @@
 
 @import "./config";
 
+// style/compressed/main.min.cssからのrootへの相対
+$root-path: "../..";
+
 .entry-header {
   background: rgba(0, 0, 0, 0.5);
   height: 300px;
@@ -98,7 +101,7 @@
     background-image: url(#{$root-path}/images/category/jewelry/header.png);
   }
   &-new-field {
-    background-image: url(#{$root-path}/images/category/new-filed/header.png);
+    background-image: url(#{$root-path}/images/category/new-field/header.png);
   }
 }
 
