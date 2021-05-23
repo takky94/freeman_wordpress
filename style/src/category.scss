@@ -68,7 +68,7 @@ $menu-animation-duration: 0.3s;
         }
       }
       &Sub {
-        font-size: 35px;
+        font-size: 30px;
         font-weight: 600;
         line-height: 1.8;
         margin-top: 60px;
@@ -89,6 +89,152 @@ $menu-animation-duration: 0.3s;
   } // __text
 } // .category-lead
 
+// 上下にライン
+
+.category-borderY {
+  padding: 40px 0;
+  position: relative;
+
+  // 横幅いっぱいのデザインにも使用できるようborderでなく擬似要素で
+  &::before,
+  &::after {
+    background: $c-lightgray;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    left: 0;
+    margin: auto;
+    max-width: 1080px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+}
+
+// MENU
+
+.category-menu {
+  & > ul {
+    display: flex;
+  }
+  &__block {
+    border: 1px solid $c-lightgray;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px 25px 15px;
+    width: calc((100% - (25px * 3)) / 4);
+    // 一番左以外左に余白
+    &:not(:nth-child(1)) {
+      margin-left: 25px;
+    }
+
+    &--title {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    &--link {
+      margin-top: 5px;
+      li {
+        display: inline;
+
+        &:not(:nth-child(1)) {
+          margin-left: 4px;
+          &::before {
+            content: "/";
+            display: inline-block;
+            margin-right: 4px;
+          }
+        }
+      }
+    } // --link
+  } // __block
+} //.category-menu
+
+// PROCESS
+
+.category-process {
+  margin-top: 120px;
+
+  h3 {
+    font-size: 28px;
+  }
+
+  &__block {
+    background: $c-whitesmoke;
+    display: flex;
+    margin-top: 30px;
+    padding: 40px;
+
+    &--box {
+      background: #fff;
+      padding: 50px 30px 40px;
+      position: relative;
+      text-align: center;
+      width: calc((100% - (30px * 3)) / 4);
+      // 一番左以外左に余白
+      &:not(:nth-child(1)) {
+        margin-left: 30px;
+        // 矢印
+        &::after {
+          border-bottom: 4px solid transparent;
+          border-left: 6.9282px solid $c-gray;
+          border-right: 4px solid transparent;
+          border-top: 4px solid transparent;
+          content: "";
+          display: inline-block;
+          left: -18px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      // STEP部分
+      &::before {
+        background: #000;
+        color: #fff;
+        content: "";
+        display: inline-block;
+        font: 500 12px "Roboto Condensed", sans-serif;
+        left: 0;
+        line-height: 1;
+        padding: 1em 2em;
+        position: absolute;
+        top: 0;
+      }
+      &:nth-child(1)::before {
+        content: "STEP 01";
+      }
+      &:nth-child(2)::before {
+        content: "STEP 02";
+      }
+      &:nth-child(3)::before {
+        content: "STEP 03";
+      }
+      &:nth-child(4)::before {
+        background: $c-main;
+        content: "STEP 04";
+      }
+
+      // 画像下テキスト
+      figcaption {
+        margin-top: 20px;
+      }
+      .small {
+        font-size: 0.8em;
+        margin-left: 5px;
+      }
+    }
+  } // __block
+} //.category-process
+
 // STEP
 
 .category-step {
@@ -96,7 +242,7 @@ $menu-animation-duration: 0.3s;
 
   .block {
     background: $c-whitesmoke;
-    padding: 30px;
+    padding: 40px;
     &:not(:nth-of-type(1)) {
       margin-top: 100px;
       position: relative;
@@ -116,12 +262,15 @@ $menu-animation-duration: 0.3s;
 
     &__inner {
       background: #fff;
-      padding: 40px;
+      padding: 50px;
     }
     &__label {
       background: #000;
       display: inline-block;
       padding: 0.5em 2em;
+      &.last {
+        background: $c-main;
+      }
     }
     &__title {
       border-bottom: 1px solid $c-lightgray;
@@ -161,7 +310,7 @@ $menu-animation-duration: 0.3s;
 .category-related {
   font-size: 28px;
   margin: 0 auto;
-  max-width: calc(1080px - (30px * 2) - (40px * 2)); // STEPに合わせる
+  max-width: calc(1080px - (40px * 2) - (50px * 2)); // STEPに合わせる
   padding-top: 20px;
 
   h4 {

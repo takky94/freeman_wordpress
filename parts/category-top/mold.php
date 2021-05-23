@@ -13,9 +13,8 @@
   </div>
 </div>
 <!-- // category-lead -->
-<hr class="line-first" />
 <!-- slider -->
-<div class="swiper-container mySwiper">
+<div class="swiper-container mySwiper category-borderY">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
       <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-1.png" alt=""
@@ -45,7 +44,6 @@
   <div class="swiper-pagination"></div>
 </div>
 <!-- // slider -->
-<hr class="line-second" />
 <!-- category-step -->
 <div class="category-step">
   <!-- block -->

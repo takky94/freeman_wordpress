@@ -1,0 +1,32 @@
+.swiper-container {
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
+
+.swiper-slide {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 600px;
+  text-align: center;
+}
+
+.swiper-slide img {
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.swiper-slide {
+  width: 60%;
+}
+/*# sourceMappingURL=swiper.css.map */
