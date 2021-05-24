@@ -21,17 +21,20 @@ if (!function_exists('fm_create_category_child_custom_fields')){
 
     echo <<<EOM
       <tr class="form-field">
-        <th><label for="lead_text">その他テキスト</label></th>
+        <th><label for="lead_text">リード文</label></th>
         <td>
-          <input type="text" name="category_meta[lead_text]" id="lead_text" size="25" value="$category_text" />
+          <textarea type="text" name="category_meta[lead_text]" id="lead_text" rows="5">$category_text</textarea>
+          <p class="description">カテゴリページの冒頭で画像とともに表示するテキストです。第一階層のカテゴリ(型製品、砂型鋳造...etc)では表示されず、第二階層のカテゴリページで表示されます。</p>
         </td>
       </tr>
       <tr class="form-field">
-        <th><label for="uploadImage">画像URL</label></th>
+        <th><label for="uploadImage">リード画像 URL</label></th>
         <td>
-          <input id="uploadImage" type="text" size="36" name="category_meta[lead_img]" value="$category_img" />
-          <button id="uploadImageButton" type="button" class="components-button block-editor-media-placeholder__button block-editor-media-placeholder__upload-button is-primary">画像をアップロード</button>
-          <p><img id="uploadImageDemo" src="$category_img" style="width: 150px; height: auto;"></p>
+          <div style="display:flex">
+            <input id="uploadImage" type="text" size="36" name="category_meta[lead_img]" value="$category_img" />
+            <button id="uploadImageButton" type="button" class="button button-primary">画像をアップロード</button>
+          </div>
+          <p style="margin-top: 7px;text-align:center"><img id="uploadImageDemo" src="$category_img" style="width: 150px; height: auto;"></p>
         </td>
       </tr>
     EOM;
