@@ -1,6 +1,7 @@
 <?php
 
 add_action('init', 'fm_head_cleanup');
+add_action('admin_print_scripts', 'fm_admin_scripts');
 add_action('wp_enqueue_scripts', 'fm_basic_scripts_and_styles');
 add_action('wp_head', 'fm_meta_ogp');
 
@@ -37,16 +38,16 @@ function fm_head_cleanup(){
 ********************************************************************/
 if (!function_exists('fm_basic_scripts_and_styles')){
   function fm_basic_scripts_and_styles() {
-      // メインCSS
-      wp_enqueue_style(
-        'fm-stylesheet-main',
-        get_template_directory_uri() . '/style/compressed/main.min.css',
-        array(),
-        '',
-        'all'
-      );
-      // jQuery
-      wp_enqueue_script('jquery');
+    // メインCSS
+    wp_enqueue_style(
+      'fm-stylesheet-main',
+      get_template_directory_uri() . '/style/compressed/main.min.css',
+      array(),
+      '',
+      'all'
+    );
+    // jQuery
+    wp_enqueue_script('jquery');
 
     // 未ログイン時Gutenberg用CSSを読み込まない
     if (!is_admin()) {
@@ -56,6 +57,21 @@ if (!function_exists('fm_basic_scripts_and_styles')){
   }
 }//fm_basic_scripts_and_styles()
 
+/*
+管理画面での読み込み
+********************************************************************/
+if (!function_exists('fm_admin_scripts')){
+  function fm_admin_scripts(){
+    global $taxonomy;
+    if('category' == $taxonomy) {
+      wp_enqueue_media();
+      wp_enqueue_script('media-upload');
+      wp_enqueue_script('thickbox');
+      wp_register_script('fm-upload', get_template_directory_uri().'/js/upload.js');
+      wp_enqueue_script('fm-upload');
+    }
+  }
+}//fm_admin_scripts
 
 /*
 デフォルトのhead整理
