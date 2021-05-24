@@ -67,3 +67,17 @@ layout の値は `column`(横並び), `slider`(スライダー)から選べま�
 
 - smooth scroll
 - intersection observer
+
+## ディレクトリ構成
+
+### style/js
+
+基本的にどのページで使用するかをファイル名にしています。CSS は SCSS で書いており、/@import のなかにコンポーネント類をまとめており、(ページ名).scss のなかで import しております。ページでは compressed(圧縮)フォルダを読み込んでいますが一応 expanded(非圧縮)も用意しています。
+
+### library
+
+サードパーティの js ライブラリやフォント、functions.php で使用する関数などを格納しています。
+
+### .vscode
+
+一応 VScode で使用できる共通設定ファイルです。
