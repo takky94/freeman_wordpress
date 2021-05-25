@@ -67,7 +67,7 @@ if (!function_exists('fm_admin_scripts')){
       wp_enqueue_media();
       wp_enqueue_script('media-upload');
       wp_enqueue_script('thickbox');
-      wp_register_script('fm-upload', get_template_directory_uri().'/js/upload.js');
+      wp_register_script('fm-upload', get_template_directory_uri().'/js/backend-upload.js');
       wp_enqueue_script('fm-upload');
     }
   }
