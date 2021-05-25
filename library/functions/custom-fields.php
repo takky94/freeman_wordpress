@@ -13,6 +13,9 @@ add_action ('edited_term', 'fm_save_category_child_custom_fileds');
 // カテゴリ説明文等を管理画面で表示
 if (!function_exists('fm_create_category_child_custom_fields')){
   function fm_create_category_child_custom_fields($tag){
+    $category = get_queried_object();
+    $category_1 = get_the_category();
+    $category_1 = $category[0];
     $term_id = $tag -> term_id;
     $category_meta = get_option( "fm_category_$term_id");
 
@@ -27,14 +30,14 @@ if (!function_exists('fm_create_category_child_custom_fields')){
     $admin_url = admin_url();
 
     echo <<<EOM
-      <tr class="form-field">
+      <tr class="form-field parent-jewelry">
         <th><label for="leadText">リード文</label></th>
         <td>
           <textarea name="category_meta[lead_text]" id="leadText" rows="5" cols="40">$category_text</textarea>
           <p class="description">カテゴリページの冒頭で画像とともに表示するテキストです。第一階層のカテゴリ(型製品、砂型鋳造...etc)では表示されず、第二階層のカテゴリページで表示されます。</p>
         </td>
       </tr>
-      <tr class="form-field">
+      <tr class="form-field parent-jewelry">
         <th><label for="uploadImage">リード画像 URL</label></th>
         <td>
           <div style="display:flex">
@@ -44,32 +47,32 @@ if (!function_exists('fm_create_category_child_custom_fields')){
           <p style="margin-top: 7px;text-align:center"><img id="uploadImageDemo" src="$category_img" style="width: 150px; height: auto;"></p>
         </td>
       </tr>
-      <tr class="form-field">
+      <tr class="form-field parent-jewelry">
         <th><label for="leadTable1">表1</label></th>
         <td>
           <input type="text" name="category_meta[lead_table1]" id="leadTable1" value="$category_table1" />
           <p class="description">画像とテキストの下の表部分です。<a href="$admin_url/admin.php?page=tablepress">TablePressというプラグイン</a>から編集できます</p>
         </td>
       </tr>
-      <tr class="form-field">
+      <tr class="form-field parent-jewelry">
         <th><label for="leadTable2">表2</label></th>
         <td>
           <input type="text" name="category_meta[lead_table2]" id="leadTable2" value="$category_table2" />
         </td>
       </tr>
-      <tr class="form-field">
+      <tr class="form-field parent-jewelry">
         <th><label for="leadTable3">表3</label></th>
         <td>
           <input type="text" name="category_meta[lead_table3]" id="leadTable3" value="$category_table3" />
         </td>
       </tr>
-      <tr class="form-field">
+      <tr class="form-field parent-jewelry">
         <th><label for="leadTable4">表4</label></th>
         <td>
           <input type="text" name="category_meta[lead_table4]" id="leadTable4" value="$category_table4" />
         </td>
       </tr>
-      <tr class="form-field">
+      <tr class="form-field parent-jewelry">
         <th><label for="leadTable5">表5</label></th>
         <td>
           <input type="text" name="category_meta[lead_table5]" id="leadTable5" value="$category_table5" />

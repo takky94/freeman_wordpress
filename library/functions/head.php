@@ -64,11 +64,13 @@ if (!function_exists('fm_admin_scripts')){
   function fm_admin_scripts(){
     global $taxonomy;
     if('category' == $taxonomy) {
+      wp_register_script('fm-upload', get_template_directory_uri().'/js/backend-upload.js');
+      wp_register_script('fm-category', get_template_directory_uri().'/js/backend-parent-category.js');
+      wp_enqueue_script('fm-upload');
+      wp_enqueue_script('fm-category');
       wp_enqueue_media();
       wp_enqueue_script('media-upload');
       wp_enqueue_script('thickbox');
-      wp_register_script('fm-upload', get_template_directory_uri().'/js/backend-upload.js');
-      wp_enqueue_script('fm-upload');
     }
   }
 }//fm_admin_scripts
