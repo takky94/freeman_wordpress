@@ -1,6 +1,5 @@
 <?php
-  $category = get_the_category();
-  $category = $category[0];
+  $category = get_queried_object();
   $category_name = $category -> cat_name; // カテゴリー名
   $category_slug = $category -> category_nicename; // カテゴリのスラッグ
 ?>
