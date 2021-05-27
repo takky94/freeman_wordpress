@@ -88,6 +88,23 @@ $menu-animation-duration: 0.3s;
   } // __text
 } // .category-lead
 
+// 子カテゴリのcategory-lead
+.category-lead-child {
+  // ジュエリー
+  &-jewelry {
+    //
+  }
+  // ジュエリー以外
+  &-others {
+    display: flex;
+
+    &__image,
+    &__slider {
+      width: 50%;
+    }
+  }
+} // .category-lead-child
+
 // 上下にライン
 
 .category-borderY {

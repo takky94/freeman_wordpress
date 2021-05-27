@@ -1,8 +1,7 @@
 @import "config";
 
 .swiper-container {
-  margin: 0 calc(50% - 50vw);
-  width: 100vw;
+  width: 100%;
 }
 
 .swiper-slide {
@@ -37,42 +36,43 @@
 }
 
 // 型製品ページ
+.mold-slider {
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
 .mold-slider__box {
   height: 100%;
   @include centeringMargin;
   max-width: 600px;
   position: absolute;
   width: 60%;
-}
 
-.mold-slider__box .swiper-pagination-fraction,
-.mold-slider__box .swiper-button-next,
-.mold-slider__box .swiper-button-prev {
-  background: #000;
-  position: absolute;
-}
-
-.mold-slider__box .swiper-pagination-fraction {
-  //
-}
-.mold-slider__box .swiper-button-prev {
-  left: calc(-15px + -30px); // 横幅と余白分
-}
-.mold-slider__box .swiper-button-next {
-  right: calc(-15px + -30px); // 横幅と余白分
-}
-.mold-slider__box .swiper-button-prev,
-.mold-slider__box .swiper-button-next {
-  width: 30px;
-
-  &::after {
-    color: #fff;
-    font-size: 13px;
+  .swiper-pagination-fraction,
+  .swiper-button-next,
+  .swiper-button-prev {
+    background: #000;
+    position: absolute;
   }
-}
-.mold-slider__box .swiper-button-prev::after {
-  content: "<";
-}
-.mold-slider__box .swiper-button-next::after {
-  content: ">";
+
+  .swiper-button-prev {
+    left: calc(-15px + -30px); // 横幅と余白分
+  }
+  .swiper-button-next {
+    right: calc(-15px + -30px); // 横幅と余白分
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 30px;
+
+    &::after {
+      color: #fff;
+      font-size: 13px;
+    }
+  }
+  .swiper-button-prev::after {
+    content: "<";
+  }
+  .swiper-button-next::after {
+    content: ">";
+  }
 }
