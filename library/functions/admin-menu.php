@@ -8,6 +8,7 @@ add_action('admin_head', 'fm_change_post_menu_icon');
 編集画面の「投稿」を「商品」に変更
 ********************************************************************/
 
+// サイドバーの文字変更
 if (!function_exists('fm_change_post_menu_title')){
   function fm_change_post_menu_title() {
     global $menu;
@@ -19,6 +20,7 @@ if (!function_exists('fm_change_post_menu_title')){
   }
 }
 
+// 各種ラベルの変更
 if (!function_exists('fm_change_post_menu_label')){
   function fm_change_post_menu_label() {
     global $wp_post_types;
@@ -37,6 +39,7 @@ if (!function_exists('fm_change_post_menu_label')){
   }
 }
 
+// アイコンの変更
 if (!function_exists('fm_change_post_menu_icon')){
   function fm_change_post_menu_icon() {
 ?>
