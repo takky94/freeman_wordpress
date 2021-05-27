@@ -13,37 +13,45 @@
   </div>
 </div>
 <!-- // category-lead -->
-<!-- slider -->
-<div class="swiper-container mySwiper category-borderY">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-1.png" alt=""
-        <?php fm_lazyload(); ?> />
+<!-- category-borderY -->
+<div class="category-borderY">
+  <!-- // fmSwiper -->
+  <div class="swiper-container mold-slider js-mold-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-1.png" alt=""
+          <?php fm_lazyload(); ?> />
+      </div>
+      <div class="swiper-slide">
+        <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-2.png" alt=""
+          <?php fm_lazyload(); ?> />
+      </div>
+      <div class="swiper-slide">
+        <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-3.png" alt=""
+          <?php fm_lazyload(); ?> />
+      </div>
+      <div class="swiper-slide">
+        <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-4.png" alt=""
+          <?php fm_lazyload(); ?> />
+      </div>
+      <div class="swiper-slide">
+        <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-5.png" alt=""
+          <?php fm_lazyload(); ?> />
+      </div>
+      <div class="swiper-slide">
+        <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-6.png" alt=""
+          <?php fm_lazyload(); ?> />
+      </div>
     </div>
-    <div class="swiper-slide">
-      <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-2.png" alt=""
-        <?php fm_lazyload(); ?> />
-    </div>
-    <div class="swiper-slide">
-      <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-3.png" alt=""
-        <?php fm_lazyload(); ?> />
-    </div>
-    <div class="swiper-slide">
-      <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-4.png" alt=""
-        <?php fm_lazyload(); ?> />
-    </div>
-    <div class="swiper-slide">
-      <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-5.png" alt=""
-        <?php fm_lazyload(); ?> />
-    </div>
-    <div class="swiper-slide">
-      <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-6.png" alt=""
-        <?php fm_lazyload(); ?> />
+    <div class="mold-slider__box">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
     </div>
   </div>
-  <div class="swiper-pagination"></div>
+  <!-- // fmSwiper -->
 </div>
-<!-- // slider -->
+<!-- // category-borderY -->
 <!-- category-step -->
 <div class="category-step">
   <!-- block -->
@@ -86,7 +94,7 @@
           class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
       </div>
       <div class="block__items">
-        <?php do_shortcode('[the_product id="57"]'); ?>
+        <?php do_shortcode('[the_product id="75"]'); ?>
       </div>
     </div>
   </div>

@@ -29,4 +29,62 @@
 .swiper-slide {
   width: 60%;
 }
+
+.swiper-pagination-fraction {
+  background: #000;
+  bottom: 0;
+  color: #fff;
+  font-family: "Roboto Condensed", sans-serif;
+  left: auto;
+  padding: 1em 3em;
+  right: 0;
+  width: auto;
+}
+
+.mold-slider__box {
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 0;
+  max-width: 600px;
+  position: absolute;
+  width: 60%;
+}
+
+.mold-slider__box .swiper-pagination-fraction,
+.mold-slider__box .swiper-button-next,
+.mold-slider__box .swiper-button-prev {
+  background: #000;
+  position: absolute;
+}
+
+.mold-slider__box .swiper-button-next,
+.mold-slider__box .swiper-button-prev {
+  left: calc(-15px + -30px);
+}
+
+.mold-slider__box .swiper-button-next {
+  right: calc(-15px + -30px);
+}
+
+.mold-slider__box .swiper-button-prev,
+.mold-slider__box .swiper-button-next {
+  width: 30px;
+}
+
+.mold-slider__box .swiper-button-prev::after,
+.mold-slider__box .swiper-button-next::after {
+  color: #fff;
+  font-size: 13px;
+}
+
+.mold-slider__box .swiper-button-prev {
+  content: "<";
+}
+
+.mold-slider__box .swiper-button-next {
+  content: ">";
+}
 /*# sourceMappingURL=swiper.css.map */

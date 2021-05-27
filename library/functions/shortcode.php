@@ -5,7 +5,7 @@ add_shortcode("product", "fm_get_product");
 add_shortcode("the_product", "fm_get_the_product");
 
 /*
-商品ループ
+
 例) [post category="mold" count="3" orderby="rand" layout="column" /]
 ********************************************************************/
 if (!function_exists('fm_get_articles')){
@@ -17,10 +17,17 @@ if (!function_exists('fm_get_articles')){
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
 
     $args = array(
-      'post_type' => 'post',
-      'category_name' => $category,
+      'post_type' => 'news',
       'posts_per_page' => $count,
-      'orderby' => $orderby
+      'orderby' => $orderby,
+      'tax_query' => array(
+        'relation' => 'OR',
+        array(
+          'taxonomy' => 'news_category',
+          'field' => 'slug',
+          'terms' => $category,
+        )
+      )
     );
 
     $the_query = new WP_Query($args);
@@ -57,18 +64,12 @@ if (!function_exists('fm_get_product')){
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
 
     $args = array(
-      'post_type' => 'product',
+      'post_type' => 'post',
+      'category_name' => $category,
       'posts_per_page' => $count,
-      'orderby' => $orderby,
-      'tax_query' => array(
-        'relation' => 'OR',
-        array(
-          'taxonomy' => 'product_category',
-          'field' => 'slug',
-          'terms' => $category,
-        )
-      )
+      'orderby' => $orderby
     );
+
 
     $the_query = new WP_Query($args);
     global $wp_query;
@@ -102,7 +103,7 @@ if (!function_exists('fm_get_the_product')){
     $layout = isset($atts['layout']) ? $atts['layout'] : 'square';
 
     $args = array(
-      'post_type' => 'product',
+      'post_type' => 'post',
       'post__in' => array($id)
     );
 
