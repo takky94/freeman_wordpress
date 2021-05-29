@@ -313,21 +313,64 @@ $root-path: "../..";
 // 特定の商品を呼び出すショートコード
 .the-product-link {
   .square {
+    display: flex;
     li {
       width: 25%;
     }
     .post-card-product {
       border: 1px solid $c-lightgray;
       display: inline-block;
+      height: 100%;
       padding: 10px;
       .post-thumbnail {
         width: 100%;
+      }
+      .thumbnail {
+        .post-thumbnail {
+          img {
+            width: 100%;
+          }
+        }
       }
       .content {
         @media (min-width: $tab) {
           .title,
           .more {
             margin-top: 10px;
+          }
+        }
+      }
+    } // .post-card-product
+  } // .square
+}
+
+// 子カテゴリTOPの商品一覧
+.category-child-product-link {
+  @extend .the-product-link;
+  .square {
+    li {
+      width: calc((100% - 40px) / 2);
+      @media (min-width: $tab) {
+        &:nth-child(2n) {
+          margin-left: 40px;
+        }
+      }
+    }
+    .post-card-product {
+      padding: 40px;
+      width: 100%;
+      .content {
+        .title {
+          font-size: 20px;
+        }
+        .description {
+          font-weight: 100;
+        }
+        @media (min-width: $tab) {
+          .title,
+          .description,
+          .more {
+            margin-top: 30px;
           }
         }
       }

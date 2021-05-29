@@ -10,7 +10,6 @@
 
 .entry-header .container {
   height: 100%;
-  position: relative;
 }
 
 .entry-header::after {
@@ -37,6 +36,7 @@
 .entry-header .breadcrumb {
   bottom: calc(120px + 25px);
   height: calc(14px * 1.5);
+  left: -120px;
   position: absolute;
   width: 100%;
 }
@@ -105,8 +105,8 @@
 
 .category-children-header {
   background: #fff;
-  height: 180px;
-  margin-bottom: 120px;
+  height: 220px;
+  margin-bottom: 80px;
 }
 
 .category-children-header::after {
@@ -115,15 +115,17 @@
 
 .category-children-header .container {
   border-bottom: 1px solid #96a8be;
+  position: relative;
 }
 
 .category-children-header .entry-header__title {
-  bottom: calc(21px + 25px + 14px);
+  bottom: calc(21px + 45px + 14px);
   color: #000;
 }
 
 .category-children-header .breadcrumb {
-  bottom: calc(25px);
+  bottom: calc(45px);
+  left: 0;
 }
 
 .category-children-header .breadcrumb ul li a,

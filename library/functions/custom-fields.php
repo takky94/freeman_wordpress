@@ -32,11 +32,10 @@ if (!function_exists('fm_create_category_child_custom_fields')){
     $others_slider_img3 = isset($category_meta['others_slider_img3']) ? esc_html($category_meta['others_slider_img3']) : "";
     $others_slider_img4 = isset($category_meta['others_slider_img4']) ? esc_html($category_meta['others_slider_img4']) : "";
     $others_slider_img5 = isset($category_meta['others_slider_img5']) ? esc_html($category_meta['others_slider_img5']) : "";
-    $others_lead_title = isset($category_meta['others_lead_title']) ? esc_html($category_meta['others_lead_title']) : "";
-    $others_lead_text = isset($category_meta['others_lead_text']) ? esc_html($category_meta['others_lead_text']) : "";
+    $others_description_title = isset($category_meta['others_description_title']) ? esc_html($category_meta['others_description_title']) : "";
+    $others_description_text = isset($category_meta['others_description_text']) ? esc_html($category_meta['others_description_text']) : "";
     $others_youtube = isset($category_meta['others_youtube']) ? esc_html($category_meta['others_youtube']) : "";
-
-
+    $others_youtube_caption = isset($category_meta['others_youtube_caption']) ? esc_html($category_meta['others_youtube_caption']) : "";
 
     $admin_url = admin_url();
 
@@ -153,22 +152,29 @@ if (!function_exists('fm_create_category_child_custom_fields')){
   </td>
 </tr>
 <tr class="form-field parent-others">
-  <th><label for="othersLeadTitle">リード文タイトル</label></th>
+  <th><label for="othersDescriptionTitle">説明文タイトル</label></th>
   <td>
-    <input id="othersLeadTitle" type="text" size="36" name="category_meta[others_lead_title]" value="$others_lead_title" />
+    <input id="othersDescriptionTitle" type="text" size="36" name="category_meta[others_description_title]" value="$others_description_title" />
   </td>
 </tr>
 <tr class="form-field parent-others">
-  <th><label for="othersLeadText">リード文</label></th>
+  <th><label for="othersDescriptionText">説明文</label></th>
   <td>
-    <textarea name="category_meta[others_lead_text]" id="othersLeadText" rows="5" cols="40">$others_lead_text</textarea>
+    <textarea name="category_meta[others_description_text]" id="othersDescriptionText" rows="5" cols="40">$others_description_text</textarea>
     <p class="description">カテゴリページの冒頭で画像とともに表示するテキストです。第一階層のカテゴリ(型製品、砂型鋳造...etc)では表示されず、第二階層のカテゴリページで表示されます。</p>
   </td>
 </tr>
 <tr class="form-field parent-others">
-  <th><label for="othersYouTube">YouTubeのURL</label></th>
+  <th><label for="othersYouTube">YouTubeの動画ID</label></th>
   <td>
-    <input id="othersYouTube" type="text" size="36" name="category_meta[others_youtube]" value="$others_youtube" placeholder="https://youtube.com/watch?v=XXXXXX" />
+    <input id="othersYouTube" type="text" size="36" name="category_meta[others_youtube]" value="$others_youtube" placeholder="XXXXXX" />
+    <p class="description">埋め込みたいYouTube動画のURLにあるIDを入力してください。IDは、『https://youtube.com/watch?v=XXXXXX』のXXXXXXの箇所です。</p>
+  </td>
+</tr>
+<tr class="form-field parent-others">
+  <th><label for="othersYouTubeCaption">YouTubeの説明文</label></th>
+  <td>
+    <input id="othersYouTubeCaption" type="text" size="36" name="category_meta[others_youtube_caption]" value="$others_youtube_caption" placeholder="YouTube動画の下に挿入される説明文" />
   </td>
 </tr>
 EOM;

@@ -1,6 +1,6 @@
 <!--single.php-->
 <?php
-  $terms = wp_get_object_terms($post->ID, 'news_category');
+  $terms = wp_get_object_terms($post -> ID, 'category');
 ?>
 <?php get_header(); ?>
 <div id="news">

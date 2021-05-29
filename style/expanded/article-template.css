@@ -107,8 +107,8 @@
 
 .category-children-header {
   background: #fff;
-  height: 180px;
-  margin-bottom: 120px;
+  height: 220px;
+  margin-bottom: 80px;
 }
 
 .category-children-header::after {
@@ -121,12 +121,12 @@
 }
 
 .category-children-header .entry-header__title {
-  bottom: calc(21px + 25px + 14px);
+  bottom: calc(21px + 45px + 14px);
   color: #000;
 }
 
 .category-children-header .breadcrumb {
-  bottom: calc(25px);
+  bottom: calc(45px);
   left: 0;
 }
 

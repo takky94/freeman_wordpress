@@ -112,8 +112,8 @@ $root-path: "../..";
 // 子カテゴリ
 .category-children-header {
   background: #fff;
-  height: 180px;
-  margin-bottom: 120px;
+  height: 220px;
+  margin-bottom: 80px;
 
   // 白い余白なし
   &::after {
@@ -126,13 +126,13 @@ $root-path: "../..";
 
   // 記事タイトル
   .entry-header__title {
-    bottom: calc(21px + 25px + 14px); // ぱんくず + ぱんくず余白 + 余白
+    bottom: calc(21px + 45px + 14px); // ぱんくず + ぱんくず余白 + 余白
     color: #000;
   }
 
   // ぱんくず
   .breadcrumb {
-    bottom: calc(25px); // 余白
+    bottom: calc(45px); // 余白
     left: 0;
     // ぱんくず文字 & セパレータ
     ul li a,
