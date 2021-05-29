@@ -2,9 +2,9 @@
 <div class="category-lead flex">
   <div class="category-lead__text">
     <h2 class="category-lead__text--headingEn font-robot">INVESTMENT<br />CASTING</h2>
-    <p class="category-lead__text--headingSub">高付加価値な製品ラインナップと<br />技術サービス</p>
+    <p class="category-lead__text--headingSub">高機能な製品ラインナップと<br />技術サービス</p>
     <p
-      class="category-lead__text--description">国内外より厳選した、精密鋳造プロセスに欠かせない各種材料を取り揃え、最適なソリューションを提供。航空機・自動車・産業用ガスタービン・一般産業機械などの基幹産業を支えています。</p>
+      class="category-lead__text--description">国内外より厳選した、精密鋳造プロセスに欠かせない各種材料を取りそろえ、最適なソリューションを提供。航空機・自動車・産業用ガスタービン・一般産業機械等の基幹産業を支えています。</p>
   </div>
   <div class="category-lead__image">
     <picture>
@@ -81,7 +81,7 @@
         <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/figure-1.png" alt=""
         <?php fm_lazyload(); ?>></p>
         <p
-          class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          class="block__description">ワックス成形機を使って、離型剤を噴霧した金型内に溶融したワックスをインジェクションします。硬化後、金型からワックスパターンを取り出します。ワックスパターンをツリー状に組み立てます。</p>
       </div>
     </div>
   </div>
@@ -95,7 +95,7 @@
         <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/figure-2.png" alt=""
         <?php fm_lazyload(); ?>></p>
         <p
-          class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          class="block__description">ワックスツリーを洗浄処理したあと、スラリーにディッピングし、液切り後、耐火材を振りかけます。これをコーティング作業と呼びます。コーティングと乾燥を何回か繰り返して、鋳型を造型します。</p>
       </div>
     </div>
   </div>
@@ -109,7 +109,7 @@
         <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/figure-3.png" alt=""
         <?php fm_lazyload(); ?>></p>
         <p
-          class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          class="block__description">脱ロウ装置を使って、鋳型内のワックスを溶かし出します。オートクレーブ（水蒸気）を用いて脱ロウする方法が一般的ですが、パターン素材や方案によっては、フラッシュファイヤーを使用します。</p>
       </div>
       <div class="block__items">
         <?php do_shortcode('[the_product id="57"]'); ?>
@@ -126,7 +126,7 @@
         <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/figure-3.png" alt=""
         <?php fm_lazyload(); ?>></p>
         <p
-          class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          class="block__description">焼成炉で鋳型を焼結したのち、大気溶解炉または高周波誘導加熱真空溶解炉を使って、溶融した金属を鋳型湯口から流し込みます。金属の溶解には各種ルツボが用いられます。</p>
       </div>
       <div class="block__items">
         <?php do_shortcode('[the_product id="57"]'); ?>
@@ -143,7 +143,7 @@
         <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/figure-3.png" alt=""
         <?php fm_lazyload(); ?>></p>
         <p
-          class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          class="block__description">ノックアウトマシン、ウォータージェット等を使って、鋳物のまわりに付着しているシェル殻を除去します。鋳物中空部や穴・溝等に残った鋳型材やセラミックコアは、苛性リーチングにより除去します。</p>
       </div>
       <div class="block__items">
         <?php do_shortcode('[the_product id="57"]'); ?>
@@ -159,8 +159,7 @@
       <div class="block__column">
         <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/figure-3.png" alt=""
         <?php fm_lazyload(); ?>></p>
-        <p
-          class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <p class="block__description">湯口仕上げ後または熱処理後のロストワックス鋳造品に対し、表面仕上げをおこないます。製品に歪み・変形が生じた場合は、矯正を加えます。検査を経て出荷します。</p>
       </div>
       <div class="block__items">
         <?php do_shortcode('[the_product id="57"]'); ?>
@@ -173,12 +172,12 @@
 <!-- category-related -->
 <div class="category-related">
   <div class="products">
-    <h4>試作・型材料の関連商品一覧</h4>
-    <?php do_shortcode('[product category="mold" count="4" orderby="rand" layout="column"]'); ?>
+    <h4>関連商品一覧</h4>
+    <?php do_shortcode('[product category="investment_casting" count="4" orderby="rand" layout="column"]'); ?>
   </div>
   <div class="articles">
-    <h4>試作・型材料の記事</h4>
-    <?php do_shortcode('[post category="mold" count="6" orderby="rand" layout="column"]'); ?>
+    <h4>関連NEWS</h4>
+    <?php do_shortcode('[post category="investment_casting" count="6" orderby="rand" layout="column"]'); ?>
     <div class="view-all">
       <a href="#" class="button-arrow button-line arrow-wrap">
         <span class="font-robot bold">SEE MORE</span>

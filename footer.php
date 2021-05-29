@@ -39,20 +39,20 @@
         <!-- sitemap__block -->
         <div class="sitemap__block grow-1">
           <div class="js-accordion">
-            <div class="sitemap__block--title">型製品</div>
+            <div class="sitemap__block--title">試作・型材料</div>
             <div class="sitemap__block--titleSub c-main font-robot">MOLD</div>
           </div>
           <ul class="sitemap__block--menu col js-accordionContent">
-            <li><a href="#" class="c-white c-trans-red">デザイン吐出</a></li>
-            <li><a href="#" class="c-white c-trans-red">デザイン切削</a></li>
-            <li><a href="#" class="c-white c-trans-red">試作注型樹脂</a></li>
-            <li><a href="#" class="c-white c-trans-red">試作型材</a></li>
-            <li><a href="#" class="c-white c-trans-red">試作シリコン</a></li>
-            <li><a href="#" class="c-white c-trans-red">量産インバー</a></li>
-            <li><a href="#" class="c-white c-trans-red">量産砂型鋳造</a></li>
-            <li><a href="#" class="c-white c-trans-red">量産精密鋳造</a></li>
-            <li><a href="#" class="c-white c-trans-red">量産ジュエリー</a></li>
-            <li><a href="#" class="c-white c-trans-red">特殊</a></li>
+            <li><a href="<?= home_url(); ?>/mold/discharge" class="c-white c-trans-red">デザイン吐出</a></li>
+            <li><a href="<?= home_url(); ?>/mold/cutting" class="c-white c-trans-red">デザイン切削</a></li>
+            <li><a href="<?= home_url(); ?>/mold/casting" class="c-white c-trans-red">試作注型樹脂</a></li>
+            <li><a href="<?= home_url(); ?>/mold/mold_material" class="c-white c-trans-red">試作型材</a></li>
+            <li><a href="<?= home_url(); ?>/mold/silicone" class="c-white c-trans-red">試作シリコン</a></li>
+            <li><a href="<?= home_url(); ?>/mold/invar" class="c-white c-trans-red">量産インバー</a></li>
+            <li><a href="<?= home_url(); ?>/mold/" class="c-white c-trans-red">量産砂型鋳造</a></li>
+            <li><a href="<?= home_url(); ?>/mold/" class="c-white c-trans-red">量産精密鋳造</a></li>
+            <li><a href="<?= home_url(); ?>/mold/" class="c-white c-trans-red">量産ジュエリー</a></li>
+            <li><a href="<?= home_url(); ?>/mold/" class="c-white c-trans-red">特殊</a></li>
           </ul>
         </div>
         <!-- // sitemap__block -->
@@ -63,11 +63,14 @@
             <div class="sitemap__block--titleSub c-main font-robot">INVESTMENT CASTING</div>
           </div>
           <ul class="sitemap__block--menu js-accordionContent">
-            <li><a href="#" class="c-white c-trans-red">WAX</a></li>
-            <li><a href="#" class="c-white c-trans-red">理散財・洗浄剤</a></li>
-            <li><a href="#" class="c-white c-trans-red">バインダー</a></li>
-            <li><a href="#" class="c-white c-trans-red">砂</a></li>
-            <li><a href="#" class="c-white c-trans-red">その他</a></li>
+            <li><a href="<?= home_url(); ?>/investment_casting/wax" class="c-white c-trans-red">WAX</a></li>
+            <li><a href="<?= home_url(); ?>/investment_casting/parting_powder" class="c-white c-trans-red">離散型・洗浄剤</a>
+            </li>
+            <li><a href="<?= home_url(); ?>/investment_casting/binder" class="c-white c-trans-red">バインダー</a>
+            </li>
+            <li><a href="<?= home_url(); ?>/investment_casting/refractory_material" class="c-white c-trans-red">砂</a>
+            </li>
+            <li><a href="<?= home_url(); ?>/investment_casting/others" class="c-white c-trans-red">その他</a></li>
           </ul>
         </div>
         <!-- // sitemap__block -->
@@ -78,12 +81,12 @@
             <div class="sitemap__block--titleSub c-main font-robot">SAND CASTING</div>
           </div>
           <ul class="sitemap__block--menu js-accordionContent">
-            <li><a href="#" class="c-white c-trans-red">鋳造用フィルター</a></li>
-            <li><a href="#" class="c-white c-trans-red">スリープ</a></li>
-            <li><a href="#" class="c-white c-trans-red">方案用ゲート</a></li>
-            <li><a href="#" class="c-white c-trans-red">非鉄用塗型</a></li>
-            <li><a href="#" class="c-white c-trans-red">各種対火物</a></li>
-            <li><a href="#" class="c-white c-trans-red">アルミ原材料</a></li>
+            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red">鋳造用フィルター</a></li>
+            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red">スリープ</a></li>
+            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red">方案用ゲート</a></li>
+            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red">非鉄用塗型</a></li>
+            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red">各種対火物</a></li>
+            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red">アルミ原材料</a></li>
           </ul>
         </div>
         <!-- // sitemap__block -->
@@ -94,11 +97,12 @@
             <div class="sitemap__block--titleSub c-main font-robot">JUWELRY</div>
           </div>
           <ul class="sitemap__block--menu js-accordionContent">
-            <li><a href="#" class="c-white c-trans-red">インジェクションWAX</a></li>
-            <li><a href="#" class="c-white c-trans-red">切削WAX</a></li>
-            <li><a href="#" class="c-white c-trans-red">埋没材</a></li>
-            <li><a href="#" class="c-white c-trans-red">シリコン</a></li>
-            <li><a href="#" class="c-white c-trans-red">ツールマット</a></li>
+            <li><a href="<?= home_url(); ?>/jewelry/injection_wax" class="c-white c-trans-red">インジェクションWAX</a>
+            </li>
+            <li><a href="<?= home_url(); ?>/jewelry/carving_wax" class="c-white c-trans-red">切削WAX</a></li>
+            <li><a href="<?= home_url(); ?>/jewelry/investing_material" class="c-white c-trans-red">埋没材</a></li>
+            <li><a href="<?= home_url(); ?>/jewelry/" class="c-white c-trans-red">シリコン</a></li>
+            <li><a href="<?= home_url(); ?>/jewelry/matt_tool" class="c-white c-trans-red">ツールマット</a></li>
           </ul>
         </div>
         <!-- // sitemap__block -->
@@ -127,8 +131,8 @@
   <div class="information">
     <div class="container">
       <ul class="links">
-        <li><a href="#" class="c-white c-trans-red">会社情報</a></li>
-        <li><a href="#" class="c-white c-trans-red">お知らせ</a></li>
+        <li><a href="<?= home_url(); ?>/company" class="c-white c-trans-red">会社情報</a></li>
+        <li><a href="<?= home_url(); ?>/news" class="c-white c-trans-red">お知らせ</a></li>
         <li><a href="#" class="c-white c-trans-red">個人情報保護方針</a></li>
         <li><a href="#" class="c-white c-trans-red">お問い合わせ</a></li>
       </ul>

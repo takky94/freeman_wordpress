@@ -4,7 +4,7 @@
     <h2 class="category-lead__text--headingEn font-robot">JEWELRY</h2>
     <p class="category-lead__text--headingSub">業界のスタンダードとして</p>
     <p
-      class="category-lead__text--description">ジュエリー業界で最も著名かつ実績のある、FreemanワックスおよびR&R埋没材の豊富なラインナップの中から、ご要望にあわせて提案します。その他関連材、設備もお任せください。</p>
+      class="category-lead__text--description">ジュエリーキャストにおいて、知名度かつ豊富な実績のあるFreemanの各種ワックス、及び、R&Rの埋没材で、お客様のニーズに応えます。その他、シリコーンゴム等の関連材、小型鋳造装置などもお任せ下さい。</p>
   </div>
   <div class="category-lead__image">
     <picture>
@@ -20,7 +20,7 @@
       <h3 class="label">インジェクションWAX</h3>
       <p class="title">優れた流動性と再現性</p>
       <p
-        class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        class="description">Freemanのインジェクションワックスは、その高い品質で、40年以上に渡り、ジュエリー業界のスタンダードとなっています。流動性に優れ、再現性が高く、低収縮なのが特徴です。また、灰分が少ないため、クリーンな焼成が可能です。プラチナ・金・銀・銅・真鍮のジュエリーキャストの他、工業用・歯科技工用にも使用できます。</p>
     </div>
     <div class="category-children__top--image">
       <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/children-1.png" alt=""
@@ -49,7 +49,7 @@
       <h3 class="label">カービングWAX</h3>
       <p class="title">あらゆるジュエリー<br />パターンの作製が可能</p>
       <p
-        class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        class="description">Freemanのカービングワックス 「Ferris File-A-Wax」は、ジュエリーキャストにおいて、長年の実績とともに、高い信頼性があります。クラシックブルー・パープル・グリーン・ゴールド・オレンジ・ターコイズの全6種類があり、パターンメイキングにおける様々なニーズに対応可能です。</p>
     </div>
   </div>
   <div class="category-children__bottom">
@@ -70,7 +70,7 @@
       <h3 class="label">埋没材</h3>
       <p class="title">高品質な<br />ジュエリーキャスト</p>
       <p
-        class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        class="description">プラチナ・金・銀・銅・真鍮・ステンレスの各種地金に対応する埋没材を取り揃えています。また、ワックスのみならず、RP素材をパターンとして、そのまま使用できる埋没材もあります。R&Rの埋没材は、世界のトップブランドとして、長年にわたり皆様から愛用されています。</p>
     </div>
     <div class="category-children__top--image">
       <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/children-3.png" alt=""
@@ -99,7 +99,7 @@
       <h3 class="label">シリコーン</h3>
       <p class="title">デザインに忠実・高精度<br />に再現可能</p>
       <p
-        class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        class="description">イタリアのZhermack社は、製品開発力と厳格な生産管理で知られており、そのシリコーン製品は卓越したパフォーマンスを発揮します。その用途は幅広く、一般型取り・真空バッグ・ジュエリー・特殊効果・人体模型などで活用されています。お客様のご用途・ニーズに沿った最良のソリューションを提供します。</p>
     </div>
   </div>
   <div class="category-children__bottom">
@@ -220,7 +220,7 @@
       <h3 class="label">Matt Products</h3>
       <p class="title">プロセスの最適化と<br />品質向上</p>
       <p
-        class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        class="description">Matt 製品 を使用することで、モデリングプロセスの効率化、高品質なモデルメイキングが可能となります。カービングワックス、ツール、教材は、プロセスの最適化、作業効率の向上を念頭に、最適化設計されています。ジュエリーデザイナー・モデルメーカーの皆様から喜ばれる最適解を提案いたします。</p>
     </div>
     <div class="category-children__top--image">
       <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/children-5.png" alt=""
@@ -241,12 +241,12 @@
 <!-- category-related -->
 <div class="category-related">
   <div class="products">
-    <h4>試作・型材料の関連商品一覧</h4>
-    <?php do_shortcode('[product category="mold" count="4" orderby="rand" layout="column"]'); ?>
+    <h4>関連商品一覧</h4>
+    <?php do_shortcode('[product category="jewelry" count="4" orderby="rand" layout="column"]'); ?>
   </div>
   <div class="articles">
-    <h4>試作・型材料の記事</h4>
-    <?php do_shortcode('[post category="mold" count="6" orderby="rand" layout="column"]'); ?>
+    <h4>関連NEWS</h4>
+    <?php do_shortcode('[post category="jewelry" count="6" orderby="rand" layout="column"]'); ?>
     <div class="view-all">
       <a href="#" class="button-arrow button-line arrow-wrap">
         <span class="font-robot bold">SEE MORE</span>

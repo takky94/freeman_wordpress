@@ -13,7 +13,7 @@ if (!function_exists('fm_create_default_term')){
     $taxonomy_type = 'category';
     $taxonomy_sets = array(
       // 第一階層
-      '型製品' => array('slug' => 'mold', 'description' =>'00001__削除禁止__出力順番号'),
+      '試作・型材料' => array('slug' => 'mold', 'description' =>'00001__削除禁止__出力順番号'),
       '砂型鋳造' => array('slug' => 'sand_casting', 'description' =>'00002__削除禁止__出力順番号'),
       '精密鋳造' => array('slug' => 'investment_casting', 'description' =>'00003__削除禁止__出力順番号'),
       'ジュエリー' => array('slug' => 'jewelry', 'description' =>'00004__削除禁止__出力順番号'),
@@ -26,18 +26,10 @@ if (!function_exists('fm_create_default_term')){
       '試作型材' => array('slug' => 'mold_material','parent' => 'mold'),
       '試作シリコン' => array('slug' => 'silicone','parent' => 'mold'),
       '量産インバー' => array('slug' => 'invar','parent' => 'mold'),
-      // '量産砂型鋳造' => array('slug' => 'sand_casting','parent' => 'mold'), // 第二階層へのリンクのみ
-      // '量産精密鋳造' => array('slug' => 'investing_casting','parent' => 'mold'), // 第二階層へのリンクのみ
-      // '量産ジュエリー' => array('slug' => 'jewelry','parent' => 'mold'), // 第二階層へのリンクのみ
+      '量産砂型鋳造' => array('slug' => 'sand_casting','parent' => 'mold'), // 第二階層へのリンクのみ
+      '量産精密鋳造' => array('slug' => 'investing_casting','parent' => 'mold'), // 第二階層へのリンクのみ
+      '量産ジュエリー' => array('slug' => 'jewelry','parent' => 'mold'), // 第二階層へのリンクのみ
       // '特殊' => array('slug' => 'hoge10','parent' => 'mold'), // スプレに記載なし
-
-      // 砂型鋳造子カテゴリ // 第三階層なし(納品直前削除)
-      // '鋳造用フィルター' => array('slug' => 'hoge123', 'parent' => 'sand_casting'),
-      // 'スリープ' => array('slug' => 'hoge123', 'parent' => 'sand_casting'),
-      // '方案用ゲート' => array('slug' => 'hoge123', 'parent' => 'sand_casting'),
-      // '非鉄用塗型' => array('slug' => 'hoge123', 'parent' => 'sand_casting'),
-      // '各種対火物' => array('slug' => 'hoge123', 'parent' => 'sand_casting'),
-      // 'アルミ原材料' => array('slug' => 'hoge123', 'parent' => 'sand_casting'),
 
       // 精密鋳造子カテゴリ
       'WAX' => array('slug' => 'wax', 'parent' => 'investment_casting'),
@@ -52,25 +44,17 @@ if (!function_exists('fm_create_default_term')){
       '埋没材' => array('slug' => 'investing_material', 'parent' => 'jewelry'),
       // 'シリコン' => array('slug' => 'hgo', 'parent' => 'jewelry'), // 第三階層なし
       'ツールマット' => array('slug' => 'matt_tool', 'parent' => 'jewelry'),
-
-      // 新たな取り組み子カテゴリ // 第三階層なし(納品直前削除)
-      // '消臭剤' => array('slug' => 'hhhh', 'parent' => 'new_field'),
-      // 'ミネラルキャスティング' => array('slug' => 'hhhh', 'parent' => 'new_field'),
-      // 'CO2洗浄システム' => array('slug' => 'hhhh', 'parent' => 'new_field'),
-      // 'ホットメルト' => array('slug' => 'hhhh', 'parent' => 'new_field'),
-      // '暑さ対策' => array('slug' => 'hhhh', 'parent' => 'new_field'),
-      // '電動アシスト台車' => array('slug' => 'hhhh', 'parent' => 'new_field'),
-      // 'ベアリングセンサーシステム' => array('slug' => 'hhhh', 'parent' => 'new_field'),
     );
     loop_register_term($taxonomy_type, $taxonomy_sets);
 
     // ニュースのカテゴリ
     $taxonomy_type = 'news_category';
     $taxonomy_sets = array(
-      '型製品' => array('slug' => 'mold', 'description' =>'00001__削除禁止__出力順番号'),
+      '試作・型材料' => array('slug' => 'mold', 'description' =>'00001__削除禁止__出力順番号'),
       '砂型鋳造' => array('slug' => 'sand_casting', 'description' =>'00002__削除禁止__出力順番号'),
       '精密鋳造' => array('slug' => 'investment_casting', 'description' =>'00003__削除禁止__出力順番号'),
       'ジュエリー' => array('slug' => 'jewelry', 'description' =>'00004__削除禁止__出力順番号'),
+      '環境商品' => array('slug' => 'new_field', 'description' =>'00005__削除禁止__出力順番号'),
     );
     loop_register_term($taxonomy_type, $taxonomy_sets);
   }

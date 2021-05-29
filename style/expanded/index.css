@@ -1124,8 +1124,8 @@
 }
 
 #index .case__list {
-  -webkit-animation: case_slide 100s linear infinite;
-          animation: case_slide 100s linear infinite;
+  -webkit-animation: case_slide 40s linear infinite;
+          animation: case_slide 40s linear infinite;
   background: left top/cover url(../../images/top/case-list.png) repeat-x;
   height: 50px;
   will-change: animation;

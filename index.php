@@ -156,7 +156,7 @@
               <div class="diamond__inner">
                 <div class="center">
                   <div class="diamond__title font-robot c-white">MOLD</div>
-                  <div class="diamond__titleSub c-white">型製品</div>
+                  <div class="diamond__titleSub c-white">試作・型材料</div>
                   <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
                     class="diamond__icon sp__none" width="25" alt="">
                 </div>
@@ -231,7 +231,7 @@
     </nav>
     <!-- // リンクリスト -->
     <div class="section__background section__background--right">
-      <!-- 型製品 -->
+      <!-- 試作・型材料 -->
       <section class="mold js-scroll-fadeIn-block js-scroll-animation" id="mold">
         <div class="container">
           <!-- detail -->
@@ -243,7 +243,7 @@
               </h2>
               </div>
               <div class="js-scroll-fadeIn-text js-scroll-animation">
-                <p class="detail__text--headingJp bold">型製品</p>
+                <p class="detail__text--headingJp bold">試作・型材料</p>
                 <p class="detail__text--headingSub">無限に広がる表現力</p>
                 <p
                   class="detail__text--description">デザインから試作開発、量産にいたる全ての領域で、モノづくりに必要な技術や製品を提案し、イメージの具体化や納期改善、コストダウンに貢献します。</p>
@@ -269,7 +269,7 @@
           </div>
         </div>
       </section>
-      <!-- // 型製品 -->
+      <!-- // 試作・型材料 -->
       <!-- 砂型鋳造用資材・原材料 -->
       <section class="sand-casting js-scroll-fadeIn-block js-scroll-animation" id="sand-casting">
         <div class="container">
@@ -325,7 +325,7 @@
               </div>
               <div class="js-scroll-fadeIn-text js-scroll-animation">
                 <p class="detail__text--headingJp bold">精密鋳造用材料</p>
-                <p class="detail__text--headingSub">高付加価値な製品<br />ラインナップと技術サービス</p>
+                <p class="detail__text--headingSub">高機能な製品ラインナップ<br />と技術サービス</p>
                 <p
                   class="detail__text--description">国内外より厳選した、精密鋳造プロセスに欠かせない各種材料を取り揃え、最適なソリューションを提供。航空機・自動車・産業用ガスタービン・一般産業機械などの基幹産業を支えています。</p>
               </div>
@@ -407,7 +407,7 @@
               <p class="detail__text--headingJp bold">新たな取り組み</p>
               <p class="detail__text--headingSub">SDGsへの貢献</p>
               <p
-                class="detail__text--description">ただの材料屋ではありません、明日の地球・働く人たちのことを考えたご提案。臭気対策・ミネラルキャスティング・CO2洗浄システムなど、環境を考える方に向けた新しい技術のご紹介です。</p>
+                class="detail__text--description">ただの材料屋ではありません、明日の地球・働く人たちを考えます。臭気対策・ミネラルキャスティング・CO2洗浄システムなど、環境を考える方へ新しい技術のご紹介です。</p>
             </div>
           </div>
           <div class="detail__image">

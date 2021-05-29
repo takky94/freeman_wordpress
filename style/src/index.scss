@@ -224,7 +224,7 @@ $menu-animation-duration: 0.3s;
     }
 
     &__list {
-      animation: case_slide 100s linear infinite;
+      animation: case_slide 50s linear infinite;
       background: left top / cover url(#{$root-path}/images/top/case-list.png) repeat-x;
       height: 50px;
       will-change: animation;

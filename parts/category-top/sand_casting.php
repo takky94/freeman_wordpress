@@ -4,7 +4,7 @@
     <h2 class="category-lead__text--headingEn font-robot">SAND CASTING</h2>
     <p class="category-lead__text--headingSub">ヨーロッパクオリティで高品質な<br />鋳物作りを</p>
     <p
-      class="category-lead__text--description">本場ヨーロッパの鋳物づくりを支えるLANIKセラミックフォームフィルターを筆頭に、海外から独自ルートで仕入れる最良の鋳造用資材を多岐にわたってお取り扱いしております。</p>
+      class="category-lead__text--description">本場ヨーロッパの鋳物づくりを支えるLANIKセラミックフォームフィルターを筆頭に、独自ルートで仕入れる海外から特徴的な鋳造用資材を多岐に扱っております。より良い鋳物づくりをサポートいたします。</p>
   </div>
   <div class="category-lead__image">
     <picture>
@@ -21,7 +21,7 @@
         <?php fm_lazyload(); ?> />
       <p class="category-menu__block--title">鋳鋼鋳物</p>
       <ul class="category-menu__block--link">
-        <li><a href="#" class="c-main">フィルター(Zr)</a></li>
+        <li><a href="#" class="c-main">フィルター(ZrO2)</a></li>
         <li><a href="#" class="c-main">発熱スリーブ</a></li>
         <li><a href="#" class="c-main">陶管</a></li>
         <li><a href="#" class="c-main">ジルコン塗型</a></li>
@@ -59,7 +59,7 @@
         <li><a href="#" class="c-main">砂・耐火材</a></li>
         <li><a href="#" class="c-main">セラミック中子</a></li>
         <li><a href="#" class="c-main">セラミックカップ</a></li>
-        <li><a href="#" class="c-main">フィルター(Zr)</a></li>
+        <li><a href="#" class="c-main">フィルター(ZrO2)</a></li>
       </ul>
     </li>
   </ul>
@@ -116,7 +116,7 @@
         <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/figure-1.png" alt=""
         <?php fm_lazyload(); ?>></p>
         <p
-          class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          class="block__description">“型”なくして鋳物は作れません。現代では、多くは合成木材を用いて最終製品の形をした”型”を精密に削ります。当社は創業以来、模型/木型用材料及び、補修材など日本で随一の各種資材を全国に供給しております。</p>
       </div>
     </div>
   </div>
@@ -130,7 +130,7 @@
         <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/figure-2.png" alt=""
         <?php fm_lazyload(); ?>></p>
         <p
-          class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          class="block__description">より良い鋳物づくりのために、正しい方案設計・造型材料が必要です。日本で手に入りづらかった高品質でお手頃な海外資材を提供しております。歩留まり向上・原価低減をお求めの方は是非お問い合わせください。</p>
       </div>
     </div>
   </div>
@@ -144,7 +144,7 @@
         <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/figure-3.png" alt=""
         <?php fm_lazyload(); ?>></p>
         <p
-          class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          class="block__description">取鍋（とりべ）を傾けて、溶けた金属を鋳型に注入する工程です。各種合金、SiC、Mｇなどの溶解用材料はもちろん、耐火材料、除滓材など、独自ルートで仕入れる特徴的な材料で原価低減に貢献いたします。</p>
       </div>
       <div class="block__items">
         <?php do_shortcode('[the_product id="57"]'); ?>
@@ -161,7 +161,7 @@
         <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/figure-3.png" alt=""
         <?php fm_lazyload(); ?>></p>
         <p
-          class="block__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          class="block__description">いよいよ鋳物の完成です。さて、今まで鋳物の事だけを考えていませんでしたか。これからは作る人・環境の事も考えてみてはいかがでしょう。SDG’sに取り組む企業を当社は応援致します。環境にやさしい新技術のご紹介です。</p>
       </div>
       <div class="block__items">
         <?php do_shortcode('[the_product id="57"]'); ?>
@@ -174,12 +174,12 @@
 <!-- category-related -->
 <div class="category-related">
   <div class="products">
-    <h4>試作・型材料の関連商品一覧</h4>
-    <?php do_shortcode('[product category="mold" count="4" orderby="rand" layout="column"]'); ?>
+    <h4>関連商品一覧</h4>
+    <?php do_shortcode('[product category="sand_casting" count="4" orderby="rand" layout="column"]'); ?>
   </div>
   <div class="articles">
-    <h4>試作・型材料の記事</h4>
-    <?php do_shortcode('[post category="mold" count="6" orderby="rand" layout="column"]'); ?>
+    <h4>関連NEWS</h4>
+    <?php do_shortcode('[post category="sand_casting" count="6" orderby="rand" layout="column"]'); ?>
     <div class="view-all">
       <a href="#" class="button-arrow button-line arrow-wrap">
         <span class="font-robot bold">SEE MORE</span>
