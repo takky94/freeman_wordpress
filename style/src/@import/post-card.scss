@@ -354,6 +354,9 @@ $root-path: "../..";
         &:nth-child(2n) {
           margin-left: 40px;
         }
+        &:not(:nth-child(1)):not(:nth-child(2)) {
+          margin-top: 40px;
+        }
       }
     }
     .post-card-product {
