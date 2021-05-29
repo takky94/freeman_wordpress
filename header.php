@@ -146,7 +146,18 @@
               </div>
             </li>
             <li>
-              <a href="<?= home_url(); ?>/company">会社概要</a>
+              <a href="<?= home_url(); ?>/company" class="js-accordion" data-subtitle="COMPANY">会社概要</a>
+              <div class="sub">
+                <div class="container flex">
+                  <p class="sub__title c-white font-robot sp__none">CO<span class="c-main">M</span>PANY</p>
+                  <ul class="js-accordionContent">
+                    <li><a href="<?= home_url(); ?>/company" class="c-white c-trans-red">理念</a></li>
+                    <li><a href="<?= home_url(); ?>/company" class="c-white c-trans-red">数字で見る日本フリーマン</a></li>
+                    <li><a href="<?= home_url(); ?>/company" class="c-white c-trans-red">社長挨拶</a></li>
+                    <li><a href="<?= home_url(); ?>/company" class="c-white c-trans-red">会社概要</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
