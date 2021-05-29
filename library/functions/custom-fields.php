@@ -17,6 +17,7 @@ if (!function_exists('fm_create_category_child_custom_fields')){
     $category_meta = get_option( "fm_category_$term_id");
 
     // ジュエリー子カテゴリ用カスタムフィールド
+    $jewelry_title = isset($category_meta['jewelry_title']) ? esc_html($category_meta['jewelry_title']) : "";
     $jewelry_text = isset($category_meta['jewelry_text']) ? esc_html($category_meta['jewelry_text']) : "";
     $jewelry_img = isset($category_meta['jewelry_img']) ? esc_html($category_meta['jewelry_img']) : "";
     $jewelry_table1 = isset($category_meta['jewelry_table1']) ? esc_html($category_meta['jewelry_table1']) : "";
@@ -41,6 +42,13 @@ if (!function_exists('fm_create_category_child_custom_fields')){
 
     echo <<<EOM
 <!-- ジュエリー子カテゴリ用カスタムフィールド -->
+<tr class="form-field parent-jewelry">
+  <th><label for="jewelryTitle">リード文タイトル</label></th>
+  <td>
+    <input id="jewelryTitle" type="text" size="36" name="category_meta[jewelry_title]" value="$jewelry_title" />
+    <p class="description">カテゴリページの冒頭で画像とともに表示するタイトルです。第一階層のカテゴリ(型製品、砂型鋳造...etc)では表示されず、第二階層のカテゴリページで表示されます。</p>
+  </td>
+</tr>
 <tr class="form-field parent-jewelry">
   <th><label for="jewelryText">リード文</label></th>
   <td>

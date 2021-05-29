@@ -379,4 +379,50 @@ $root-path: "../..";
       }
     } // .post-card-product
   } // .square
+  .wide {
+    display: flex;
+    li {
+      border-bottom: 1px solid $c-lightgray;
+      padding-bottom: 20px;
+      width: calc((100% - 40px) / 2);
+      @media (min-width: $tab) {
+        &:nth-child(2n) {
+          margin-left: 40px;
+        }
+        &:not(:nth-child(1)):not(:nth-child(2)) {
+          margin-top: 40px;
+        }
+      }
+    }
+    .post-card-product {
+      display: flex;
+      width: 100%;
+      .thumbnail {
+        .post-thumbnail {
+          img {
+            max-width: 150px;
+            width: 100%;
+          }
+        }
+      }
+      .content {
+        flex-grow: 1;
+        margin-left: 20px;
+        .title {
+          font-size: 20px;
+        }
+        .description {
+          font-weight: 100;
+          margin-top: 20px;
+        }
+        @media (min-width: $tab) {
+          .title,
+          .description,
+          .more {
+            margin-top: 10px;
+          }
+        }
+      }
+    } // .post-card-product
+  } // .wide
 }

@@ -92,7 +92,32 @@ $menu-animation-duration: 0.3s;
 .category-lead-child {
   // ジュエリー
   &-jewelry {
-    //
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+
+    &__image,
+    &__description {
+      width: calc((100% - 60px) / 2);
+    }
+    &__description {
+      border-bottom: 1px solid $c-lightgray;
+
+      &--title {
+        font-size: 40px;
+        font-weight: 400;
+      }
+      &--text {
+        line-height: 1.8;
+        margin-top: 35px;
+      }
+      &--subTitle {
+        font-size: 12px;
+        font-weight: 300;
+        margin-top: 24px;
+        text-transform: uppercase;
+      }
+    }
   }
   // ジュエリー以外
   &-others {
@@ -115,52 +140,38 @@ $menu-animation-duration: 0.3s;
   }
 } // .category-lead-child
 
-// 子カテゴリトップのcategory-description
-.category-description-child {
-  // ジュエリー
-  &-jewelry {
-    //
-  }
-  // ジュエリー以外
-  &-others {
-    margin: 80px auto 20px;
-    max-width: 900px;
+// 子カテゴリトップのcategory-description-child-others
+.category-description-child-others {
+  margin: 80px auto 20px;
+  max-width: 900px;
 
-    &__title {
-      border-bottom: 1px solid $c-lightgray;
-      font-weight: 400;
-      line-height: 2;
-    }
-    &__text {
-      line-height: 1.8;
-      margin-top: 25px;
-    }
+  &__title {
+    border-bottom: 1px solid $c-lightgray;
+    font-weight: 400;
+    line-height: 2;
   }
-} // .category-description
+  &__text {
+    line-height: 1.8;
+    margin-top: 25px;
+  }
+} // .category-description-child-others
 
 // 子カテゴリの動画エリア
-.category-movie-child {
-  // ジュエリー
-  &-jewelry {
-    //
+.category-movie-child-others {
+  background: #f5f5f5;
+  margin: 80px auto 0;
+  max-width: 900px;
+  padding: 40px 70px;
+  text-align: center;
+
+  iframe {
+    width: 100%;
   }
-  // ジュエリー以外
-  &-others {
-    background: #f5f5f5;
-    margin: 80px auto 0;
-    max-width: 900px;
-    padding: 40px 70px;
-    text-align: center;
 
-    iframe {
-      width: 100%;
-    }
-
-    &__caption {
-      font-weight: 100;
-      margin-top: 1em;
-      text-align: left;
-    }
+  &__caption {
+    font-weight: 100;
+    margin-top: 1em;
+    text-align: left;
   }
 } // .category-description
 
@@ -534,6 +545,36 @@ $menu-animation-duration: 0.3s;
     }
   }
 }
+
+// 表（ジュエリーの子カテゴリトップ）
+.category-table-child-jewelry {
+  margin: 30px auto 0;
+  max-width: 900px;
+
+  table {
+    thead {
+      th {
+        background: #000;
+        color: #fff;
+        font-weight: 700;
+        line-height: 1.2;
+        padding: 1em;
+        position: relative;
+        text-align: center;
+      }
+    }
+    tbody {
+      tr {
+        border-bottom: 1px solid #aaa;
+        td {
+          border-top: none;
+          padding: 1em;
+          text-align: center;
+        }
+      }
+    }
+  }
+} //
 
 // 関連商品・記事
 
