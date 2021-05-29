@@ -89,3 +89,11 @@ layout の値は `column`(横並び), `slider`(スライダー)から選べま�
 
 - smooth scroll
 - intersection observer
+
+## カテゴリーページ構成
+
+category.php => category のスラッグによってページコンテンツ切り替え
+
+例: /mold => category.php のなかに/parts/category-top/mold.php をインポート
+
+/parts/category-top/hoge.php は第一階層のカテゴリに表示されます

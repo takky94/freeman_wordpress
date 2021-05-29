@@ -180,3 +180,8 @@ hr {
     width: 17px;
   }
 }
+
+// 英語タイトル(他言語表示時削除)
+.eng-title {
+  text-transform: capitalize;
+}

@@ -6,8 +6,10 @@
 
 // リンク生成(+構造化データ)
 if (!function_exists('fm_breadcrumb_items')){
-  function fm_breadcrumb_items($name, $position="1", $url=""){
+  function fm_breadcrumb_items($name, $position="1", $url="", $slug=""){
     $name = wp_trim_words($name, 20); // 20文字以上は省略
+    $slug = $slug ? '<span class="eng-title">'.fm_remove_underbar($slug).'</span>' : '';
+
     // 現在のカテゴリは$url渡さない
     $str = $url
         ? '<li itemprop="itemListElement" itemscope
@@ -18,12 +20,14 @@ if (!function_exists('fm_breadcrumb_items')){
           .$url
           .'"><span itemprop="name">'
           .$name
+          .$slug
           .'</span></a><meta itemprop="position" content="'
           .$position
           .'"></li>'
         : '<li itemprop="itemListElement" itemscope
           itemtype="https://schema.org/ListItem"><span itemprop="name">'
           .$name
+          .$slug
           .'</span><meta itemprop="position" content="'
           .$position
           .'"></li>';
@@ -38,6 +42,7 @@ if (!function_exists('fm_breadcrumb_category')){
     $category = get_queried_object();
     $category_id = $category -> cat_ID;
     $category_name = $category -> cat_name;
+    $category_slug = $category -> slug;
 
     $result = '';
     $i = 2;
@@ -55,7 +60,11 @@ if (!function_exists('fm_breadcrumb_category')){
     }
 
     // ぱんくず最下層に現在の階層
-    $result .= fm_breadcrumb_items(esc_attr($category_name),$i);
+    if ($category->parent != 0){ // 親カテゴリを持つ場合
+      $result .= fm_breadcrumb_items(esc_attr($category_name), $i, '', $category_slug);
+    } else {
+      $result .= fm_breadcrumb_items(esc_attr($category_name), $i);
+    }
     return $result;
   }
 }
@@ -108,9 +117,11 @@ if (!function_exists('fm_breadcrumb_single')){
       $category = $categories[0]; // 投稿ページのカテゴリ
       $category_id = $category -> cat_ID;
       $category_name = $category -> cat_name;
+      $category_slug = $category -> slug;
 
       if($category -> parent != 0) { // 投稿のカテゴリが親カテゴリを持つ場合
         $ancestors = array_reverse(get_ancestors($category_id, 'category'));
+        // 親カテゴリループ
         foreach ($ancestors as $ancestor){
           $result .= fm_breadcrumb_items(
             esc_attr(get_cat_name($ancestor)),
@@ -119,10 +130,12 @@ if (!function_exists('fm_breadcrumb_single')){
           );
           $i++;
         } // foreach
+        // 子カテゴリ追加
         $result .= fm_breadcrumb_items(
           esc_attr($category_name),
           $i,
-          esc_url(get_category_link($category_id))
+          esc_url(get_category_link($category_id)),
+          $category_slug
         );
       } else { // 投稿のカテゴリに親カテゴリなし
         $result .= fm_breadcrumb_items(
@@ -133,8 +146,6 @@ if (!function_exists('fm_breadcrumb_single')){
       }
     } elseif ($post_type == 'news') { // お知らせ
       $result .= fm_breadcrumb_items("お知らせ", $i, get_post_type_archive_link('news'));
-    } elseif ($post_type == 'product') { // 商品
-      $result .= fm_breadcrumb_items("商品", $i, get_post_type_archive_link('product'));
     }
 
     // ぱんくず最下層に現在のページタイトル追加

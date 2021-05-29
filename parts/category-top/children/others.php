@@ -17,7 +17,6 @@
 
 ?>
 
-
 <!-- category-lead-child-jewelry -->
 <div class="category-lead-child-others">
   <!-- category-lead-child-others__image -->
@@ -33,30 +32,12 @@
   <div class="category-lead-child-others__slider">
     <div class="swiper-container category-child-slider js-category-child-slider">
       <div class="swiper-wrapper">
+        <?php foreach ($others_slider_imgs as $img): ?>
+        <?php if ($img === null) continue; ?>
         <div class="swiper-slide">
-          <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-1.png" alt=""
-            <?php fm_lazyload(); ?> />
+          <img src="<?= $img; ?>" alt="" <?php fm_lazyload(); ?> />
         </div>
-        <div class="swiper-slide">
-          <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-2.png" alt=""
-            <?php fm_lazyload(); ?> />
-        </div>
-        <div class="swiper-slide">
-          <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-3.png" alt=""
-            <?php fm_lazyload(); ?> />
-        </div>
-        <div class="swiper-slide">
-          <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-4.png" alt=""
-            <?php fm_lazyload(); ?> />
-        </div>
-        <div class="swiper-slide">
-          <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-5.png" alt=""
-            <?php fm_lazyload(); ?> />
-        </div>
-        <div class="swiper-slide">
-          <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-6.png" alt=""
-            <?php fm_lazyload(); ?> />
-        </div>
+        <?php endforeach; ?>
       </div>
       <div class="category-child-slider__box">
         <div class="swiper-button-prev"></div>

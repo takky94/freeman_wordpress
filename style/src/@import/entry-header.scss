@@ -12,6 +12,10 @@ $root-path: "../..";
   position: relative;
   z-index: 1;
 
+  .container {
+    height: 100%;
+  }
+
   // ずらした白背景レイアウト部分
   &::after {
     background: #fff;
@@ -102,6 +106,40 @@ $root-path: "../..";
   }
   &-new-field {
     background-image: url(#{$root-path}/images/category/new-field/header.png);
+  }
+}
+
+// 子カテゴリ
+.category-children-header {
+  background: #fff;
+  height: 180px;
+  margin-bottom: 120px;
+
+  // 白い余白なし
+  &::after {
+    display: none;
+  }
+  .container {
+    border-bottom: 1px solid $c-gray;
+    position: relative;
+  }
+
+  // 記事タイトル
+  .entry-header__title {
+    bottom: calc(21px + 25px + 14px); // ぱんくず + ぱんくず余白 + 余白
+    color: #000;
+  }
+
+  // ぱんくず
+  .breadcrumb {
+    bottom: calc(25px); // 余白
+    left: 0;
+    // ぱんくず文字 & セパレータ
+    ul li a,
+    ul li span,
+    ul li:not(:first-child)::before {
+      color: #000;
+    }
   }
 }
 

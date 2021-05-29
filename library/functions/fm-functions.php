@@ -135,3 +135,13 @@ if (!function_exists('fm_lazyload')) {
     echo 'loading="lazy"';
   }
 }
+
+/*
+スラッグからアンダーバーを削除して空白に(子カテゴリトップなどで使用)
+********************************************************************/
+
+if (!function_exists('fm_remove_underbar')) {
+  function fm_remove_underbar($text) {
+    return str_replace('_', ' ', $text);
+  }
+}
