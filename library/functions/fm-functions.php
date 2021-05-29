@@ -33,7 +33,7 @@ if (!function_exists('fm_get_page_title')){
     }
     if (is_category()){
       $category = get_the_category();
-      $category = category[0];
+      $category = $category[0];
       $category_name = $category -> cat_name;
       return $category_name . '｜' . get_bloginfo('name');
     }

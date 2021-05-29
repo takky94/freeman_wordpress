@@ -7,18 +7,18 @@
   $contents = get_option('fm_category_'.intval($category_id));
 
   // 画像各種
-  $others_img = $contents[others_img] ? $contents[others_img] : null;
+  $others_img = $contents['others_img'] ? $contents['others_img'] : null;
   $others_slider_imgs = array();
-  $others_slider_img1 = $contents[others_slider_img1] ? $contents[others_slider_img1] : null;
-  $others_slider_img2 = $contents[others_slider_img2] ? $contents[others_slider_img2] : null;
-  $others_slider_img3 = $contents[others_slider_img3] ? $contents[others_slider_img3] : null;
-  $others_slider_img4 = $contents[others_slider_img4] ? $contents[others_slider_img4] : null;
-  $others_slider_img5 = $contents[others_slider_img5] ? $contents[others_slider_img5] : null;
+  $others_slider_img1 = $contents['others_slider_img1'] ? $contents['others_slider_img1'] : null;
+  $others_slider_img2 = $contents['others_slider_img2'] ? $contents['others_slider_img2'] : null;
+  $others_slider_img3 = $contents['others_slider_img3'] ? $contents['others_slider_img3'] : null;
+  $others_slider_img4 = $contents['others_slider_img4'] ? $contents['others_slider_img4'] : null;
+  $others_slider_img5 = $contents['others_slider_img5'] ? $contents['others_slider_img5'] : null;
   array_push($others_slider_imgs, $others_slider_img1, $others_slider_img2, $others_slider_img3 , $others_slider_img4, $others_slider_img5);
 
   // 説明文
-  $others_description_title = $contents[others_description_title] ? esc_html($contents[others_description_title]) : '<p style="color:tomato">カテゴリページにて「説明文タイトル」を設定してください</p>';
-  $others_description_text = $contents[others_description_text] ? esc_html($contents[others_description_text]) : '<p style="color:tomato">カテゴリページにて「説明文」を設定してください</p>';
+  $others_description_title = $contents['others_description_title'] ? esc_html($contents['others_description_title']) : '<p style="color:tomato">カテゴリページにて「説明文タイトル」を設定してください</p>';
+  $others_description_text = $contents['others_description_text'] ? esc_html($contents['others_description_text']) : '<p style="color:tomato">カテゴリページにて「説明文」を設定してください</p>';
 
   // YouTube
    $others_youtube = isset($contents['others_youtube'])
