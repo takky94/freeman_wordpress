@@ -8,6 +8,8 @@ $root-path: "../..";
 
 .entry-header {
   background: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 300px;
   position: relative;
   z-index: 1;
@@ -92,19 +94,33 @@ $root-path: "../..";
 
 // カテゴリ
 .category-header {
+  &::before {
+    background: rgba(0, 0, 0, 0.5);
+    content: "";
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+  .container {
+    position: relative;
+    z-index: 3;
+  }
+
   &-mold {
     background-image: url(#{$root-path}/images/category/mold/header.png);
   }
-  &-sand-casting {
+  &-sand_casting {
     background-image: url(#{$root-path}/images/category/sand-casting/header.png);
   }
-  &-investment-casting {
+  &-investment_casting {
     background-image: url(#{$root-path}/images/category/investment-casting/header.png);
   }
   &-jewelry {
     background-image: url(#{$root-path}/images/category/jewelry/header.png);
   }
-  &-new-field {
+  &-new_field {
     background-image: url(#{$root-path}/images/category/new-field/header.png);
   }
 }
@@ -145,6 +161,8 @@ $root-path: "../..";
 
 // ニュース
 .news-header {
+  background-image: url(#{$root-path}/images/news/header.png);
+
   &::before {
     bottom: 65px;
     content: "NEWS";
@@ -154,6 +172,8 @@ $root-path: "../..";
 
 // 会社概要
 .company-header {
+  background-image: url(#{$root-path}/images/company/header.png);
+
   &::before {
     bottom: 65px;
     content: "COMPANY";

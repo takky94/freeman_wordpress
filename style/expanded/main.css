@@ -579,6 +579,9 @@ hr {
   .header__menu .header__content .header__list > li:nth-of-type(5) .sub .container > ul > li {
     width: calc((100% / 4) - 10px);
   }
+  .header__menu .header__content .header__list > li:nth-of-type(6) .sub .container > ul > li {
+    width: calc((100% / 2) - 10px);
+  }
 }
 
 .header__menu .header__content .header__list > li > a {

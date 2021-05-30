@@ -9,6 +9,7 @@ $menu-list-count-sand-casting: 3;
 $menu-list-count-investment-casting: 3;
 $menu-list-count-jewelry: 3;
 $menu-list-count-new-field: 4;
+$menu-list-count-company: 2;
 $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
 
 .header {
@@ -237,6 +238,11 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
             &:nth-of-type(5) {
               .sub .container > ul > li {
                 width: calc((100% / #{$menu-list-count-new-field}) - 10px);
+              }
+            }
+            &:nth-of-type(6) {
+              .sub .container > ul > li {
+                width: calc((100% / #{$menu-list-count-company}) - 10px);
               }
             }
           }
