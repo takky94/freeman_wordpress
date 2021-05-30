@@ -1,3 +1,5 @@
+<?php echo fm_is_active_page('mold'); ?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -58,7 +60,8 @@
           </div>
           <ul class="header__list">
             <li>
-              <a href="<?= home_url(); ?>/mold" class="js-accordion" data-subtitle="MOLD">試作・型材料</a>
+              <a href="<?= home_url(); ?>/mold" class="js-accordion <?= fm_is_active_page('mold'); ?>"
+                data-subtitle="MOLD">試作・型材料</a>
               <div class="sub">
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">M<span class="c-main">O</span>LD</p>
@@ -78,7 +81,8 @@
               </div>
             </li>
             <li>
-              <a href="<?= home_url(); ?>/sand_casting" class="js-accordion" data-subtitle="SAND CASTING">砂型鋳造</a>
+              <a href="<?= home_url(); ?>/sand_casting" class="js-accordion <?= fm_is_active_page('sand_casting'); ?>"
+                data-subtitle="SAND CASTING">砂型鋳造</a>
               <div class="sub">
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">S<span class="c-main">A</span>ND CASTING</p>
@@ -94,7 +98,8 @@
               </div>
             </li>
             <li>
-              <a href="<?= home_url(); ?>/investment_casting" class="js-accordion"
+              <a href="<?= home_url(); ?>/investment_casting"
+                class="js-accordion <?= fm_is_active_page('investment_casting'); ?>"
                 data-subtitle="INVESTMENT CASTING">精密鋳造</a>
               <div class="sub">
                 <div class="container flex">
@@ -113,7 +118,8 @@
               </div>
             </li>
             <li>
-              <a href="<?= home_url(); ?>/jewelry" class="js-accordion" data-subtitle="JEWELRY">ジュエリー</a>
+              <a href="<?= home_url(); ?>/jewelry" class="js-accordion <?= fm_is_active_page('jewelry'); ?>"
+                data-subtitle="JEWELRY">ジュエリー</a>
               <div class="sub">
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">JE<span class="c-main">W</span>ELRY</p>
@@ -129,7 +135,8 @@
               </div>
             </li>
             <li>
-              <a href="<?= home_url(); ?>/new_field" class="js-accordion" data-subtitle="NEW FIELD">新たな取り組み</a>
+              <a href="<?= home_url(); ?>/new_field" class="js-accordion <?= fm_is_active_page('new_field'); ?>"
+                data-subtitle="NEW FIELD">新たな取り組み</a>
               <div class="sub">
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">NE<span class="c-main">W</span> FIELD</p>

@@ -147,3 +147,15 @@ if (!function_exists('fm_remove_underbar')) {
     return str_replace('_', ' ', $text);
   }
 }
+
+/*
+引数の文字列がURLに含まれるか
+********************************************************************/
+
+if (!function_exists('fm_is_active_page')) {
+  function fm_is_active_page($str){
+    $pattern = '/(mold|sand_casting|investment_casting|jewelry|new_field)/';
+    preg_match($pattern, get_the_permalink(), $matches);
+    if ($matches[0] === $str) return "active";
+  }
+}
