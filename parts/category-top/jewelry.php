@@ -14,7 +14,7 @@
 </div>
 <!-- // category-lead -->
 <!-- category-children -->
-<div class="category-children left-text">
+<div class="category-children right-text">
   <div class="category-children__top">
     <div class="category-children__top--text">
       <h3 class="label">インジェクションWAX</h3>
@@ -39,17 +39,17 @@
 </div>
 <!-- // category-children -->
 <!-- category-children -->
-<div class="category-children right-text">
+<div class="category-children left-text">
   <div class="category-children__top">
-    <div class="category-children__top--image">
-      <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/children-2.png" alt=""
-        <?php fm_lazyload(); ?> />
-    </div>
     <div class="category-children__top--text">
       <h3 class="label">カービングWAX</h3>
       <p class="title">あらゆるジュエリー<br />パターンの作製が可能</p>
       <p
         class="description">Freemanのカービングワックス 「Ferris File-A-Wax」は、ジュエリーキャストにおいて、長年の実績とともに、高い信頼性があります。クラシックブルー・パープル・グリーン・ゴールド・オレンジ・ターコイズの全6種類があり、パターンメイキングにおける様々なニーズに対応可能です。</p>
+    </div>
+    <div class="category-children__top--image">
+      <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/children-2.png" alt=""
+        <?php fm_lazyload(); ?> />
     </div>
   </div>
   <div class="category-children__bottom">
@@ -64,7 +64,7 @@
 </div>
 <!-- // category-children -->
 <!-- category-children -->
-<div class="category-children left-text">
+<div class="category-children right-text">
   <div class="category-children__top">
     <div class="category-children__top--text">
       <h3 class="label">埋没材</h3>
@@ -89,17 +89,17 @@
 </div>
 <!-- // category-children -->
 <!-- category-children -->
-<div class="category-children right-text">
+<div class="category-children left-text">
   <div class="category-children__top">
-    <div class="category-children__top--image">
-      <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/children-4.png" alt=""
-        <?php fm_lazyload(); ?> />
-    </div>
     <div class="category-children__top--text">
       <h3 class="label">シリコーン</h3>
       <p class="title">デザインに忠実・高精度<br />に再現可能</p>
       <p
         class="description">イタリアのZhermack社は、製品開発力と厳格な生産管理で知られており、そのシリコーン製品は卓越したパフォーマンスを発揮します。その用途は幅広く、一般型取り・真空バッグ・ジュエリー・特殊効果・人体模型などで活用されています。お客様のご用途・ニーズに沿った最良のソリューションを提供します。</p>
+    </div>
+    <div class="category-children__top--image">
+      <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/children-4.png" alt=""
+        <?php fm_lazyload(); ?> />
     </div>
   </div>
   <div class="category-children__bottom">
@@ -214,7 +214,7 @@
   </table>
 </div>
 <!-- category-children -->
-<div class="category-children left-text">
+<div class="category-children right-text">
   <div class="category-children__top">
     <div class="category-children__top--text">
       <h3 class="label">Matt Products</h3>

@@ -30,18 +30,6 @@
         <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-3.png" alt=""
           <?php fm_lazyload(); ?> />
       </div>
-      <div class="swiper-slide">
-        <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-4.png" alt=""
-          <?php fm_lazyload(); ?> />
-      </div>
-      <div class="swiper-slide">
-        <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-5.png" alt=""
-          <?php fm_lazyload(); ?> />
-      </div>
-      <div class="swiper-slide">
-        <img src="<?= get_template_directory_uri(); ?>/images/category/mold/slider-6.png" alt=""
-          <?php fm_lazyload(); ?> />
-      </div>
     </div>
     <div class="mold-slider__box">
       <div class="swiper-button-prev"></div>
@@ -57,13 +45,17 @@
   <!-- block -->
   <div class="block">
     <div class="block__inner">
-      <p class="block__label font-robot c-white">STEP 01</p>
-      <h3 class="block__title">デザイン</h3>
       <div class="block__column">
+        <div class="block__text">
+          <div class="flex">
+            <p class="block__label font-robot c-white">STEP 01</p>
+            <h3 class="block__title">デザイン</h3>
+          </div>
+          <p
+            class="block__description">デザインはモノづくりで最初に行う工程です。使用者の事を考え、また作り手の思いをイメージにします。当社では自動車部品や家電、ホビー等、ジャンルを問わず、イメージを確実に具現化する材料や工法をご提案します。</p>
+        </div>
         <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/mold/figure-1.png" alt=""
         <?php fm_lazyload(); ?>></p>
-        <p
-          class="block__description">デザインはモノづくりで最初に行う工程です。使用者の事を考え、また作り手の思いをイメージにします。当社では自動車部品や家電、ホビー等、ジャンルを問わず、イメージを確実に具現化する材料や工法をご提案します。</p>
       </div>
     </div>
   </div>
@@ -71,13 +63,17 @@
   <!-- block -->
   <div class="block">
     <div class="block__inner">
-      <p class="block__label font-robot c-white">STEP 02</p>
-      <h3 class="block__title">試作</h3>
       <div class="block__column">
+        <div class="block__text">
+          <div class="flex">
+            <p class="block__label font-robot c-white">STEP 02</p>
+            <h3 class="block__title">試作</h3>
+          </div>
+          <p
+            class="block__description">試作は文字通り”試しに作る”工程です。他の部材との組み合わせや、設計上の問題点を検証する事が可能です。当社はコスト削減や量産への移行が可能となる試作材料や工法、少量生産に適する簡易型材料等をご提案します。</p>
+        </div>
         <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/mold/figure-2.png" alt=""
         <?php fm_lazyload(); ?>></p>
-        <p
-          class="block__description">試作は文字通り”試しに作る”工程です。他の部材との組み合わせや、設計上の問題点を検証する事が可能です。当社はコスト削減や量産への移行が可能となる試作材料や工法、少量生産に適する簡易型材料等をご提案します。</p>
       </div>
     </div>
   </div>
@@ -85,13 +81,17 @@
   <!-- block -->
   <div class="block">
     <div class="block__inner">
-      <p class="block__label font-robot c-white">STEP 03</p>
-      <h3 class="block__title">量産</h3>
       <div class="block__column">
+        <div class="block__text">
+          <div class="flex">
+            <p class="block__label font-robot c-white">STEP 03</p>
+            <h3 class="block__title">量産</h3>
+          </div>
+          <p
+            class="block__description">製品を市場に送り出す為には大量生産する必要があります。当社では宝飾品から航空宇宙分野まで、あらゆる製品の製造に必要な最適な材料、工法をご提案する事が可能です。生産性やコスト、納期等の問題を確実に解決します。</p>
+        </div>
         <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/mold/figure-3.png" alt=""
         <?php fm_lazyload(); ?>></p>
-        <p
-          class="block__description">製品を市場に送り出す為には大量生産する必要があります。当社では宝飾品から航空宇宙分野まで、あらゆる製品の製造に必要な最適な材料、工法をご提案する事が可能です。生産性やコスト、納期等の問題を確実に解決します。</p>
       </div>
       <div class="block__items">
         <?php do_shortcode('[the_product id="75"]'); ?>
