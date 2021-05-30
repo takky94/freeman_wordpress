@@ -169,7 +169,7 @@
           </ul>
         </div>
         <div class="header__button">
-          <a href="#" class="font-robot white button-line">
+          <a href="<?= home_url(); ?>/contact" class="font-robot white button-line">
             <div>
               <div class="center">CONTACT</div>
               <img src="<?= get_template_directory_uri(); ?>/images/top/icon/mail.svg" />

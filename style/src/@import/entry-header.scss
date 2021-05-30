@@ -79,6 +79,7 @@ $root-path: "../..";
 // 各ページヘッダー共通部分(薄いタイトル)
 .news-header,
 .company-header,
+.contact-header,
 .search-header,
 .notfound-header {
   &::before {
@@ -168,6 +169,51 @@ $root-path: "../..";
     content: "NEWS";
     opacity: 0.4;
   }
+}
+
+// お問合せ
+.contact-header {
+  background: #fff;
+
+  &::before {
+    bottom: 65px;
+    content: "CONTACT";
+    opacity: 0.4;
+  }
+  // ずらした白背景レイアウト部分
+  &::after {
+    display: none;
+  }
+
+  // 記事タイトル
+  .entry-header__title {
+    color: #000;
+  }
+  .entry-header__titleSub {
+    bottom: calc(120px + 14px); // ずらした白背景レイアウト部分 + 余白
+    color: #000;
+    @extend .entry-header__title;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  // ぱんくず
+  .breadcrumb {
+    ul {
+      li {
+        &:not(:first-child) {
+          // セパレーター
+          &::before {
+            color: #000;
+          }
+        } // not:first-child
+        a,
+        span {
+          color: #000;
+        }
+      } // li
+    } // ul
+  } // breadcrumb
 }
 
 // 会社概要

@@ -28,7 +28,7 @@
   z-index: 2;
 }
 
-.entry-header__title {
+.entry-header__title, .contact-header .entry-header__titleSub {
   bottom: calc(120px + 21px + 25px + 14px);
   color: #fff;
   font-size: 34px;
@@ -76,6 +76,7 @@
 
 .news-header::before,
 .company-header::before,
+.contact-header::before,
 .search-header::before,
 .notfound-header::before {
   bottom: 110px;
@@ -137,7 +138,7 @@
   position: relative;
 }
 
-.category-children-header .entry-header__title {
+.category-children-header .entry-header__title, .category-children-header .contact-header .entry-header__titleSub, .contact-header .category-children-header .entry-header__titleSub {
   bottom: calc(21px + 45px + 14px);
   color: #000;
 }
@@ -163,6 +164,40 @@
   opacity: 0.4;
 }
 
+.contact-header {
+  background: #fff;
+}
+
+.contact-header::before {
+  bottom: 65px;
+  content: "CONTACT";
+  opacity: 0.4;
+}
+
+.contact-header::after {
+  display: none;
+}
+
+.contact-header .entry-header__title, .contact-header .entry-header__titleSub {
+  color: #000;
+}
+
+.contact-header .entry-header__titleSub {
+  bottom: calc(120px + 14px);
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contact-header .breadcrumb ul li:not(:first-child)::before {
+  color: #000;
+}
+
+.contact-header .breadcrumb ul li a,
+.contact-header .breadcrumb ul li span {
+  color: #000;
+}
+
 .company-header {
   background-image: url(../../images/company/header.png);
 }
@@ -186,7 +221,7 @@
   display: none;
 }
 
-.search-header .entry-header__title {
+.search-header .entry-header__title, .search-header .contact-header .entry-header__titleSub, .contact-header .search-header .entry-header__titleSub {
   bottom: calc(120px + 66px + 20px + 15px);
   color: #000;
 }
@@ -241,6 +276,8 @@
   display: none;
 }
 
+/* 会社概要ページ用
+--------------------------------------------------------------------------------------------*/
 .company-page .content-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -408,5 +445,299 @@
 .company-page .content-main .map iframe {
   height: 400px;
   width: 100%;
+}
+
+/* お問い合わせページ用
+--------------------------------------------------------------------------------------------*/
+/* Button
+--------------------------------------------------------------------------------------------*/
+.button {
+  background: #eb2936;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 60px;
+  padding: 20px 30px;
+}
+
+.button-arrow {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #eb2936;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  margin-top: 60px;
+  padding: 20px 30px;
+  width: 200px;
+}
+
+@media (max-width: 768px) {
+  .button-arrow {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.button-line {
+  overflow: hidden;
+  position: relative;
+}
+
+.button-line::before {
+  background: rgba(0, 0, 0, 0.2);
+  content: "";
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  height: 100%;
+  left: -43px;
+  position: absolute;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  width: 40px;
+}
+
+@media (min-width: 769px) {
+  .button-line:hover::before {
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
+}
+
+.content-main.contact {
+  margin: auto;
+  max-width: 790px;
+}
+
+.form-block {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form-block.flex-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.form-block.center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form-block:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.form-block .must-label {
+  background: #96a8be;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 10px;
+  padding: 3px;
+}
+
+.form-block label {
+  font-weight: bold;
+}
+
+.form-block .form-block__field {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-left: 50px;
+  max-width: 500px;
+}
+
+.form-block .form-block__field input[type="text"],
+.form-block .form-block__field input[type="email"] {
+  background: #f4f5f8;
+  border: 1px solid #dce5f0;
+  border-radius: 3px;
+  max-width: 100%;
+  padding: 1em;
+}
+
+.form-block .form-block__field input[type="text"]::-webkit-input-placeholder,
+.form-block .form-block__field input[type="email"]::-webkit-input-placeholder {
+  color: #96a8be;
+}
+
+.form-block .form-block__field input[type="text"]:-ms-input-placeholder,
+.form-block .form-block__field input[type="email"]:-ms-input-placeholder {
+  color: #96a8be;
+}
+
+.form-block .form-block__field input[type="text"]::-ms-input-placeholder,
+.form-block .form-block__field input[type="email"]::-ms-input-placeholder {
+  color: #96a8be;
+}
+
+.form-block .form-block__field input[type="text"]::placeholder,
+.form-block .form-block__field input[type="email"]::placeholder {
+  color: #96a8be;
+}
+
+.form-block .form-block__field input[type="text"]:-ms-input-placeholder,
+.form-block .form-block__field input[type="email"]:-ms-input-placeholder {
+  color: #96a8be;
+}
+
+.form-block .form-block__field input[type="text"]::-ms-input-placeholder,
+.form-block .form-block__field input[type="email"]::-ms-input-placeholder {
+  color: #96a8be;
+}
+
+.form-block .form-block__field input[type="checkbox"] {
+  display: none;
+}
+
+.form-block .form-block__field input[type="checkbox"] + span {
+  cursor: pointer;
+  padding-left: 25px;
+  position: relative;
+}
+
+.form-block .form-block__field input[type="checkbox"] + span::before {
+  background: #f4f5f8;
+  border: 1px solid #dce5f0;
+  border-radius: 3px;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  left: 0;
+  margin-top: -10px;
+  position: absolute;
+  top: 50%;
+  width: 20px;
+}
+
+.form-block .form-block__field input[type="checkbox"]:checked + span::after {
+  border-bottom: 3px solid #96a8be;
+  border-left: 3px solid #96a8be;
+  content: "";
+  display: inline-block;
+  height: 9px;
+  left: 3px;
+  margin-top: -9px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 18px;
+}
+
+.form-block .form-block__field textarea {
+  background: #f4f5f8;
+  border: 1px solid #dce5f0;
+  border-radius: 3px;
+  padding: 1em;
+  width: 100%;
+}
+
+.form-block.confirm {
+  margin-top: 80px;
+}
+
+.form-block.confirm .form-block__field {
+  max-width: 100%;
+}
+
+.form-block.submit {
+  margin-top: 45px;
+}
+
+.form-block.submit .arrow-wrap {
+  height: 70px;
+  margin: auto;
+  width: 350px;
+}
+
+.form-block.submit .arrow-wrap .button-arrow {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 0;
+}
+
+.form-block.submit .arrow-wrap .button-arrow input[type="submit"] {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  outline: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.mw_wp_form_confirm .must-label {
+  display: none;
+}
+
+.mw_wp_form_confirm .submit {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mw_wp_form_confirm .submit .form-block__back::before {
+  background: center/contain url(../../images/common/left-arrow-lightgray.svg) no-repeat;
+  content: "";
+  display: inline-block;
+  height: 6px;
+  width: 16px;
+}
+
+.mw_wp_form_confirm .submit .form-block__back input[type="submit"] {
+  background: transparent;
+  border: none;
+  color: #96a8be;
+  cursor: pointer;
+  outline: 0;
+  text-decoration: underline;
+}
+
+.mw_wp_form_confirm .submit .arrow-wrap {
+  margin-left: 0;
+}
+
+.contact-send-page .entry-header__titleSub {
+  display: none;
+}
+
+.contact-send-page .contact-send {
+  background: center/contain url(../../images/notfound-background.svg) no-repeat;
+}
+
+.contact-send-page .contact-send__title {
+  font-size: 22px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.contact-send-page .contact-send__image {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.contact-send-page .contact-send .button-arrow {
+  margin-left: auto;
+  margin-right: auto;
 }
 /*# sourceMappingURL=article-template.css.map */

@@ -34,7 +34,7 @@ Template Name: 会社概要
         </div>
         <!-- // content-header -->
         <!-- content-main -->
-        <div class="content-main">
+        <div class="content-main company">
           <!-- greeting -->
           <section class="greeting">
             <div class="pic">

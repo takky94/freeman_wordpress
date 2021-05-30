@@ -1,0 +1,201 @@
+/* お問い合わせページ用
+--------------------------------------------------------------------------------------------*/
+
+// style/compressed/main.min.cssからのrootへの相対
+$root-path: "../..";
+
+@import "./config";
+@import "./button";
+
+.content-main.contact {
+  margin: auto;
+  max-width: 790px;
+}
+
+.form-block {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  &.flex-start {
+    align-items: flex-start;
+  }
+  &.center {
+    justify-content: center;
+  }
+  &:not(:first-of-type) {
+    margin-top: 20px;
+  }
+
+  .must-label {
+    background: $c-gray;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 10px;
+    padding: 3px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  .form-block__field {
+    flex-grow: 1;
+    margin-left: 50px;
+    max-width: 500px;
+
+    // テキスト
+    input[type="text"],
+    input[type="email"] {
+      background: $c-whitesmoke;
+      border: 1px solid $c-lightgray;
+      border-radius: 3px;
+      max-width: 100%;
+      padding: 1em;
+      &::placeholder {
+        color: $c-gray;
+      }
+      &:-ms-input-placeholder {
+        color: $c-gray;
+      }
+      &::-ms-input-placeholder {
+        color: $c-gray;
+      }
+    } // text,email
+    // チェックボックス
+    input[type="checkbox"] {
+      display: none;
+      & + span {
+        cursor: pointer;
+        padding-left: 25px;
+        position: relative;
+      }
+      & + span::before {
+        background: $c-whitesmoke;
+        border: 1px solid $c-lightgray;
+        border-radius: 3px;
+        content: "";
+        display: inline-block;
+        height: 20px;
+        left: 0;
+        margin-top: -10px;
+        position: absolute;
+        top: 50%;
+        width: 20px;
+      }
+      &:checked + span::after {
+        border-bottom: 3px solid $c-gray;
+        border-left: 3px solid $c-gray;
+        content: "";
+        display: inline-block;
+        height: 9px;
+        left: 3px;
+        margin-top: -9px;
+        position: absolute;
+        top: 50%;
+        transform: rotate(-45deg);
+        width: 18px;
+      }
+    } //checkbox
+    // 本文入力らん
+    textarea {
+      background: $c-whitesmoke;
+      border: 1px solid $c-lightgray;
+      border-radius: 3px;
+      padding: 1em;
+      width: 100%;
+    }
+  }
+
+  // 確認用チェックのブロック
+  &.confirm {
+    margin-top: 80px;
+    .form-block__field {
+      max-width: 100%;
+    }
+  }
+
+  &.submit {
+    margin-top: 45px;
+    .arrow-wrap {
+      height: 70px;
+      margin: auto;
+      width: 350px;
+
+      .button-arrow {
+        justify-content: flex-end;
+        margin-top: 0;
+
+        input[type="submit"] {
+          background: transparent;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+          display: block;
+          height: 100%;
+          outline: 0;
+          position: absolute;
+          width: 100%;
+        }
+      }
+    }
+  } // submit
+}
+
+// 確認画面
+.mw_wp_form_confirm {
+  .must-label {
+    display: none;
+  }
+
+  .submit {
+    justify-content: space-between;
+    .form-block__back {
+      &::before {
+        background: center / contain url(#{$root-path}/images/common/left-arrow-lightgray.svg) no-repeat;
+        content: "";
+        display: inline-block;
+        height: 6px;
+        width: 16px;
+      }
+      input[type="submit"] {
+        background: transparent;
+        border: none;
+        color: $c-gray;
+        cursor: pointer;
+        outline: 0;
+        text-decoration: underline;
+      }
+    }
+    .arrow-wrap {
+      margin-left: 0;
+    }
+  }
+}
+
+// 完了画面
+.contact-send-page {
+  .entry-header__titleSub {
+    display: none;
+  }
+
+  .contact-send {
+    background: center / contain url(#{$root-path}/images/notfound-background.svg) no-repeat;
+
+    &__title {
+      font-size: 22px;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    &__image {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .button-arrow {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

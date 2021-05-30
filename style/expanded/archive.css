@@ -28,7 +28,7 @@
   z-index: 2;
 }
 
-.entry-header__title {
+.entry-header__title, .contact-header .entry-header__titleSub {
   bottom: calc(120px + 21px + 25px + 14px);
   color: #fff;
   font-size: 34px;
@@ -76,6 +76,7 @@
 
 .news-header::before,
 .company-header::before,
+.contact-header::before,
 .search-header::before,
 .notfound-header::before {
   bottom: 110px;
@@ -137,7 +138,7 @@
   position: relative;
 }
 
-.category-children-header .entry-header__title {
+.category-children-header .entry-header__title, .category-children-header .contact-header .entry-header__titleSub, .contact-header .category-children-header .entry-header__titleSub {
   bottom: calc(21px + 45px + 14px);
   color: #000;
 }
@@ -163,6 +164,40 @@
   opacity: 0.4;
 }
 
+.contact-header {
+  background: #fff;
+}
+
+.contact-header::before {
+  bottom: 65px;
+  content: "CONTACT";
+  opacity: 0.4;
+}
+
+.contact-header::after {
+  display: none;
+}
+
+.contact-header .entry-header__title, .contact-header .entry-header__titleSub {
+  color: #000;
+}
+
+.contact-header .entry-header__titleSub {
+  bottom: calc(120px + 14px);
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contact-header .breadcrumb ul li:not(:first-child)::before {
+  color: #000;
+}
+
+.contact-header .breadcrumb ul li a,
+.contact-header .breadcrumb ul li span {
+  color: #000;
+}
+
 .company-header {
   background-image: url(../../images/company/header.png);
 }
@@ -186,7 +221,7 @@
   display: none;
 }
 
-.search-header .entry-header__title {
+.search-header .entry-header__title, .search-header .contact-header .entry-header__titleSub, .contact-header .search-header .entry-header__titleSub {
   bottom: calc(120px + 66px + 20px + 15px);
   color: #000;
 }
