@@ -61,6 +61,7 @@
 
 .news-header,
 .company-header,
+.category-header,
 .contact-header,
 .search-header,
 .notfound-header {
@@ -71,6 +72,7 @@
 
 .news-header::before,
 .company-header::before,
+.category-header::before,
 .contact-header::before,
 .search-header::before,
 .notfound-header::before {
@@ -85,6 +87,7 @@
 
 .news-header::after,
 .company-header::after,
+.category-header::after,
 .contact-header::after,
 .search-header::after,
 .notfound-header::after {
@@ -103,6 +106,9 @@
 .company-header .entry-header__title,
 .company-header .contact-header .entry-header__titleSub,
 .contact-header .company-header .entry-header__titleSub,
+.category-header .entry-header__title,
+.category-header .contact-header .entry-header__titleSub,
+.contact-header .category-header .entry-header__titleSub,
 .contact-header .entry-header__title,
 .contact-header .entry-header__titleSub,
 .search-header .entry-header__title,
@@ -120,6 +126,9 @@
 .company-header .breadcrumb ul li a,
 .company-header .breadcrumb ul li span,
 .company-header .breadcrumb ul li:not(:first-child)::before,
+.category-header .breadcrumb ul li a,
+.category-header .breadcrumb ul li span,
+.category-header .breadcrumb ul li:not(:first-child)::before,
 .contact-header .breadcrumb ul li a,
 .contact-header .breadcrumb ul li span,
 .contact-header .breadcrumb ul li:not(:first-child)::before,
@@ -246,12 +255,6 @@
 
 .company-header {
   background-image: url(../../images/company/header.png);
-}
-
-.company-header::before {
-  bottom: 65px;
-  content: "COMPANY";
-  opacity: 0.4;
 }
 
 .search-header {

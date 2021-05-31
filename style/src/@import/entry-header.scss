@@ -63,6 +63,7 @@ $root-path: "../..";
 // 各ページヘッダー共通部分
 .news-header,
 .company-header,
+.category-header,
 .contact-header,
 .search-header,
 .notfound-header {
@@ -236,12 +237,6 @@ $root-path: "../..";
 // 会社概要
 .company-header {
   background-image: url(#{$root-path}/images/company/header.png);
-
-  &::before {
-    bottom: 65px;
-    content: "COMPANY";
-    opacity: 0.4;
-  }
 }
 
 // 検索画面
