@@ -7,9 +7,6 @@
 $root-path: "../..";
 
 .entry-header {
-  background: rgba(0, 0, 0, 0.5);
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 300px;
   position: relative;
   z-index: 1;
@@ -18,23 +15,10 @@ $root-path: "../..";
     height: 100%;
   }
 
-  // ずらした白背景レイアウト部分
-  &::after {
-    background: #fff;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 120px;
-    left: -120px;
-    position: absolute;
-    width: 100%;
-    z-index: 2;
-  }
-
   // 記事タイトル
   &__title {
     bottom: calc(120px + 21px + 25px + 14px); // ずらした白背景レイアウト部分 + ぱんくず + ぱんくず余白 + 余白
-    color: #fff;
+    color: #000;
     font-size: 34px;
     max-width: 800px;
     position: absolute;
@@ -55,14 +39,14 @@ $root-path: "../..";
         &:not(:first-child) {
           // セパレーター
           &::before {
-            color: #fff;
+            color: #000;
             content: "−";
             margin-left: 20px;
           }
         } // not:first-child
         a,
         span {
-          color: #fff;
+          color: #000;
           font-size: 14px;
         }
         a {
@@ -76,12 +60,17 @@ $root-path: "../..";
   } // breadcrumb
 }
 
-// 各ページヘッダー共通部分(薄いタイトル)
+// 各ページヘッダー共通部分
 .news-header,
 .company-header,
 .contact-header,
 .search-header,
 .notfound-header {
+  background: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  // 薄い英字タイトル部分
   &::before {
     bottom: 110px;
     color: $c-lightgray;
@@ -90,6 +79,34 @@ $root-path: "../..";
     line-height: 1;
     position: absolute;
     right: 0;
+  }
+
+  // ずらした白背景レイアウト部分
+  &::after {
+    background: #fff;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 120px;
+    left: -120px;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
+
+  // 記事タイトル
+  .entry-header__title {
+    color: #fff;
+  }
+
+  // ぱんくず
+  .breadcrumb {
+    // ぱんくず文字 & セパレータ
+    ul li a,
+    ul li span,
+    ul li:not(:first-child)::before {
+      color: #fff;
+    }
   }
 }
 

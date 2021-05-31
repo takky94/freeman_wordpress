@@ -4,9 +4,6 @@
 /* entry-header(single/page)
 --------------------------------------------------------------------------------------------*/
 .entry-header {
-  background: rgba(0, 0, 0, 0.5);
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 300px;
   position: relative;
   z-index: 1;
@@ -16,21 +13,9 @@
   height: 100%;
 }
 
-.entry-header::after {
-  background: #fff;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 120px;
-  left: -120px;
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-}
-
 .entry-header__title, .contact-header .entry-header__titleSub {
   bottom: calc(120px + 21px + 25px + 14px);
-  color: #fff;
+  color: #000;
   font-size: 34px;
   max-width: 800px;
   position: absolute;
@@ -55,14 +40,14 @@
 }
 
 .entry-header .breadcrumb ul li:not(:first-child)::before {
-  color: #fff;
+  color: #000;
   content: "−";
   margin-left: 20px;
 }
 
 .entry-header .breadcrumb ul li a,
 .entry-header .breadcrumb ul li span {
-  color: #fff;
+  color: #000;
   font-size: 14px;
 }
 
@@ -72,6 +57,16 @@
 
 .entry-header .breadcrumb ul li span {
   margin-left: 20px;
+}
+
+.news-header,
+.company-header,
+.contact-header,
+.search-header,
+.notfound-header {
+  background: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .news-header::before,
@@ -86,6 +81,55 @@
   line-height: 1;
   position: absolute;
   right: 0;
+}
+
+.news-header::after,
+.company-header::after,
+.contact-header::after,
+.search-header::after,
+.notfound-header::after {
+  background: #fff;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 120px;
+  left: -120px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.news-header .entry-header__title, .news-header .contact-header .entry-header__titleSub, .contact-header .news-header .entry-header__titleSub,
+.company-header .entry-header__title,
+.company-header .contact-header .entry-header__titleSub,
+.contact-header .company-header .entry-header__titleSub,
+.contact-header .entry-header__title,
+.contact-header .entry-header__titleSub,
+.search-header .entry-header__title,
+.search-header .contact-header .entry-header__titleSub,
+.contact-header .search-header .entry-header__titleSub,
+.notfound-header .entry-header__title,
+.notfound-header .contact-header .entry-header__titleSub,
+.contact-header .notfound-header .entry-header__titleSub {
+  color: #fff;
+}
+
+.news-header .breadcrumb ul li a,
+.news-header .breadcrumb ul li span,
+.news-header .breadcrumb ul li:not(:first-child)::before,
+.company-header .breadcrumb ul li a,
+.company-header .breadcrumb ul li span,
+.company-header .breadcrumb ul li:not(:first-child)::before,
+.contact-header .breadcrumb ul li a,
+.contact-header .breadcrumb ul li span,
+.contact-header .breadcrumb ul li:not(:first-child)::before,
+.search-header .breadcrumb ul li a,
+.search-header .breadcrumb ul li span,
+.search-header .breadcrumb ul li:not(:first-child)::before,
+.notfound-header .breadcrumb ul li a,
+.notfound-header .breadcrumb ul li span,
+.notfound-header .breadcrumb ul li:not(:first-child)::before {
+  color: #fff;
 }
 
 .category-header::before {
@@ -178,7 +222,9 @@
   display: none;
 }
 
-.contact-header .entry-header__title, .contact-header .entry-header__titleSub {
+
+.contact-header .entry-header__title,
+.contact-header .entry-header__titleSub {
   color: #000;
 }
 
@@ -221,7 +267,10 @@
   display: none;
 }
 
-.search-header .entry-header__title, .search-header .contact-header .entry-header__titleSub, .contact-header .search-header .entry-header__titleSub {
+
+.search-header .entry-header__title,
+.search-header .contact-header .entry-header__titleSub,
+.contact-header .search-header .entry-header__titleSub {
   bottom: calc(120px + 66px + 20px + 15px);
   color: #000;
 }
