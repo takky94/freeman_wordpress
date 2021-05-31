@@ -794,6 +794,14 @@
   }
 }
 
+.company-page .bg-geometric {
+  background: top left 150px/300px url(../../images/common/geometric-pattern.svg) no-repeat;
+  margin-top: -120px;
+  padding-top: 120px;
+  position: relative;
+  z-index: 3;
+}
+
 .company-page .content-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -820,7 +828,7 @@
 }
 
 .company-page .content-header .block:not(:first-child)::after {
-  background: center/contain url(../../images/company/lineY.svg) no-repeat;
+  background: center/300px url(../../images/company/lineY.svg) no-repeat;
   bottom: 0;
   content: "";
   display: inline-block;
@@ -851,6 +859,7 @@
 }
 
 .company-page .content-main .infographic {
+  background: top right/250px url(../../images/common/geometric-pattern.svg) no-repeat;
   margin-top: 140px;
 }
 

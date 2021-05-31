@@ -1,5 +1,3 @@
-<?php echo fm_is_active_page('mold'); ?>
-
 <!DOCTYPE html>
 <html lang="ja">
 

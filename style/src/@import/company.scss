@@ -10,6 +10,14 @@ $root-path: "../..";
   // 菱形メニュー
   @import "./diamond-menu";
 
+  .bg-geometric {
+    background: top left 150px / 300px url(#{$root-path}/images/common/geometric-pattern.svg) no-repeat;
+    margin-top: -120px;
+    padding-top: 120px;
+    position: relative;
+    z-index: 3; // entry-headerの白い余白部分よりも上
+  }
+
   .content-header {
     display: flex;
     margin-left: -75px;
@@ -33,7 +41,7 @@ $root-path: "../..";
 
       &:not(:first-child) {
         &::after {
-          background: center / contain url(#{$root-path}/images/company/lineY.svg) no-repeat;
+          background: center / 300px url(#{$root-path}/images/company/lineY.svg) no-repeat;
           bottom: 0;
           content: "";
           display: inline-block;
@@ -66,6 +74,7 @@ $root-path: "../..";
 
   .content-main {
     .infographic {
+      background: top right / 250px url(#{$root-path}/images/common/geometric-pattern.svg) no-repeat;
       margin-top: 140px;
       h2 {
         font-size: 60px;

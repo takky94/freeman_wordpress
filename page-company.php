@@ -13,7 +13,7 @@ Template Name: 会社概要
     <!-- #content -->
     <div id="content">
       <!-- container -->
-      <div class="container">
+      <div class="container bg-geometric">
         <!-- content-header -->
         <div id="philosophy" class="content-header">
           <section class="block">
