@@ -157,6 +157,7 @@
 <script src="<?= get_template_directory_uri(); ?>/js/main.js" defer></script>
 <?php wp_reset_query(); ?>
 <?php if (is_home() || is_front_page()): ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js" defer></script>
 <script src="<?= get_template_directory_uri(); ?>/library/js/intersection-observer.js" defer></script>
 <script src="<?= get_template_directory_uri(); ?>/js/index.js" defer></script>
 <?php elseif (is_category()): ?>

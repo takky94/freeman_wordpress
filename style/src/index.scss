@@ -6,10 +6,20 @@
 // style/compressed/main.min.cssからのrootへの相対
 $root-path: "../..";
 
+// slide showの枚数
+$slide-duration: 5s;
+$slide-count-hero: 4;
+$slide-count-mold: 3;
+$slide-count-sand_casting: 4;
+$slide-count-investment_casting: 3;
+$slide-count-jewelry: 3;
+$slide-count-new_field: 2;
+
 @import "./@import/config";
 @import "./@import/button";
 @import "./@import/post-card";
 @import "./@import/scroll-animation";
+@import "./@import/slide-animation";
 @import "./@import/fv-animation";
 
 #index {
@@ -23,62 +33,10 @@ $root-path: "../..";
     &__slide {
       background-color: rgba(0, 0, 0, 0.5);
       height: 100%;
-      position: relative;
       width: 100%;
 
-      picture {
-        &:nth-of-type(1) {
-          img {
-            animation-delay: 0s;
-          }
-        }
-        &:nth-of-type(2) {
-          img {
-            animation-delay: 5s;
-          }
-        }
-        &:nth-of-type(3) {
-          img {
-            animation-delay: 10s;
-          }
-        }
-        &:nth-of-type(4) {
-          img {
-            animation-delay: 15s;
-          }
-        }
-      }
-      img {
-        animation: slideAnime 20s ease infinite;
-        display: block;
-        height: 100%;
-        left: 0;
-        object-fit: cover;
-        object-position: center center;
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-      }
-      @keyframes slideAnime {
-        0% {
-          opacity: 0;
-        }
-        // 1s時点
-        5% {
-          opacity: 1;
-        }
-        // 4s時点
-        25% {
-          opacity: 1;
-        }
-        30% {
-          opacity: 0;
-        }
-        // 20s時点
-        100% {
-          opacity: 0;
-        }
+      .slide-animation__image {
+        animation-duration: $slide-duration * $slide-count-hero;
       }
 
       // filter代わり
@@ -388,6 +346,25 @@ $root-path: "../..";
 
   // セクション内共通スタイル
   .detail {
+    &__image {
+      .swiper-slide {
+        height: auto;
+        opacity: 0 !important; // swiperのインラインスタイル打ち消しのため
+        transition: opacity 0.3s;
+        &.swiper-slide-active {
+          opacity: 1 !important; // 上の!important 打ち消しのため
+        }
+      }
+
+      img {
+        height: 100%;
+        max-height: 500px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .detail {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -401,20 +378,18 @@ $root-path: "../..";
         }
       }
       .detail__image {
+        margin-left: -60px;
+        margin-right: auto;
         order: 1;
         @media (max-width: $sp) {
           order: 2; // SPでは画像が下
-        }
-        img {
-          margin-left: -60px;
-          margin-right: auto;
-
-          @media (max-width: $pc) {
-            margin-left: -10px;
-          }
-          @media (max-width: $sp) {
+          image {
             margin: 30px auto 0;
           }
+        }
+
+        @media (max-width: $pc) {
+          margin-left: -10px;
         }
       }
     } // -reverse
@@ -435,18 +410,19 @@ $root-path: "../..";
     }
 
     &__image {
+      margin-left: auto;
+      margin-right: -60px;
       img {
         margin-left: auto;
-        margin-right: -60px;
         max-width: 600px;
         width: 100%;
+      }
 
-        @media (max-width: $pc) {
-          margin-right: -10px;
-        }
-        @media (max-width: $sp) {
-          margin: 30px auto 0;
-        }
+      @media (max-width: $pc) {
+        margin-right: -10px;
+      }
+      @media (max-width: $sp) {
+        margin: 30px auto 0;
       }
     } // __image
 
@@ -618,7 +594,7 @@ $root-path: "../..";
     .detail {
       align-items: flex-start;
 
-      &__image img {
+      &__image {
         @media (min-width: $tab) {
           margin-right: 0;
           padding-left: 60px;

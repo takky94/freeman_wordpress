@@ -45,4 +45,17 @@
       observer.unobserve(e);
     }
   }
+
+  // スライド
+  const slideShow = new Swiper(".swiper-container", {
+    effect: "fade",
+    autoplay: {
+      delay: 6000,
+      stopOnLastSlide: false,
+      disableOnInteraction: false,
+      reverseDirection: false,
+    },
+    allowTouchMove: false,
+    slidesPerView: 1,
+  });
 }

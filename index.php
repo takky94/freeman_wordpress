@@ -15,26 +15,30 @@
         <div class="small font-gothic"><span>モ</span><span>ノ</span><span>づ</span><span>く</span><span>り</span><span>に</span><span>無</span><span>限</span><span>の</span><span>可</span><span>能</span><span>性</span><span>を</span></div>
       </div>
     </h2>
-      <div class="hero__slide">
+      <div class="hero__slide slide-animation">
         <picture>
           <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/01.webp" />
           <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/01-768.png" media="(max-width:768px)" />
-          <img src="<?= get_template_directory_uri(); ?>/images/top/slide/01.png" alt="">
+          <img class="slide-animation__image" src="<?= get_template_directory_uri(); ?>/images/top/slide/01.png"
+            alt="" />
         </picture>
         <picture>
           <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/02.webp" />
           <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/02-768.png" media="(max-width:768px)" />
-          <img src="<?= get_template_directory_uri(); ?>/images/top/slide/02.png" />
+          <img class="slide-animation__image" src="<?= get_template_directory_uri(); ?>/images/top/slide/02.png"
+            alt="" />
         </picture>
         <picture>
           <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/03.webp" />
           <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/03-768.png" media="(max-width:768px)" />
-          <img src="<?= get_template_directory_uri(); ?>/images/top/slide/03.png" />
+          <img class="slide-animation__image" src="<?= get_template_directory_uri(); ?>/images/top/slide/03.png"
+            alt="" />
         </picture>
         <picture>
           <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/04.webp" />
           <source srcset="<?= get_template_directory_uri(); ?>/images/top/slide/04-768.png" media="(max-width:768px)" />
-          <img src="<?= get_template_directory_uri(); ?>/images/top/slide/04.png" />
+          <img class="slide-animation__image" src="<?= get_template_directory_uri(); ?>/images/top/slide/04.png"
+            alt="" />
         </picture>
       </div>
       <?php
@@ -249,11 +253,34 @@
                   class="detail__text--description">デザインから試作開発、量産にいたる全ての領域で、モノづくりに必要な技術や製品を提案し、イメージの具体化や納期改善、コストダウンに貢献します。</p>
               </div>
             </div>
+            <!-- // detail__text -->
+            <!-- detail__image -->
             <div class="detail__image">
-              <picture>
-                <img src="<?= get_template_directory_uri(); ?>/images/top/mold.png" alt="" <?php fm_lazyload(); ?> />
-              </picture>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <picture>
+                      <img src="<?= get_template_directory_uri(); ?>/images/top/mold.png" alt=""
+                        <?php fm_lazyload(); ?> />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide">
+                    <picture>
+                      <img src="<?= get_template_directory_uri(); ?>/images/top/slide-category/mold-slide-2.png" alt=""
+                        <?php fm_lazyload(); ?> />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide">
+                    <picture>
+                      <img src="<?= get_template_directory_uri(); ?>/images/top/slide-category/mold-slide-3.png" alt=""
+                        <?php fm_lazyload(); ?> />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+
             </div>
+            <!-- // detail__image -->
           </div>
           <!-- // detail -->
           <!-- products -->
@@ -288,12 +315,40 @@
                   class="detail__text--description">本場ヨーロッパの鋳物づくりを支えるLANIKセラミックフォームフィルターを筆頭に、海外から独自ルートで仕入れる最良の鋳造用資材を多岐にわたってお取り扱いしております。</p>
               </div>
             </div>
+            <!-- // detail__text -->
+            <!-- detail__image -->
             <div class="detail__image">
-              <picture>
-                <img src="<?= get_template_directory_uri(); ?>/images/top/sand-casting.png" alt=""
-                  <?php fm_lazyload(); ?> />
-              </picture>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <picture>
+                      <img src="<?= get_template_directory_uri(); ?>/images/top/sand-casting.png" alt=""
+                        <?php fm_lazyload(); ?> />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide">
+                    <picture>
+                      <img src="<?= get_template_directory_uri(); ?>/images/top/slide-category/sand_casting-slide-2.png"
+                        alt="" <?php fm_lazyload(); ?> />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide">
+                    <picture>
+                      <img src="<?= get_template_directory_uri(); ?>/images/top/slide-category/sand_casting-slide-3.png"
+                        alt="" <?php fm_lazyload(); ?> />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide">
+                    <picture>
+                      <img src="<?= get_template_directory_uri(); ?>/images/top/slide-category/sand_casting-slide-4.png"
+                        alt="" <?php fm_lazyload(); ?> />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+
             </div>
+            <!-- // detail__image -->
           </div>
           <!-- // detail -->
           <!-- products -->
@@ -330,12 +385,36 @@
                   class="detail__text--description">国内外より厳選した、精密鋳造プロセスに欠かせない各種材料を取り揃え、最適なソリューションを提供。航空機・自動車・産業用ガスタービン・一般産業機械などの基幹産業を支えています。</p>
               </div>
             </div>
+            <!-- // detail__text -->
+            <!-- detail__image -->
             <div class="detail__image">
-              <picture>
-                <img src="<?= get_template_directory_uri(); ?>/images/top/investment-casting.png" alt=""
-                  <?php fm_lazyload(); ?> />
-              </picture>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <picture>
+                      <img src="<?= get_template_directory_uri(); ?>/images/top/investment-casting.png" alt=""
+                        <?php fm_lazyload(); ?> />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide">
+                    <picture>
+                      <img
+                        src="<?= get_template_directory_uri(); ?>/images/top/slide-category/investment_casting-slide-2.png"
+                        alt="" <?php fm_lazyload(); ?> />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide">
+                    <picture>
+                      <img
+                        src="<?= get_template_directory_uri(); ?>/images/top/slide-category/investment_casting-slide-3.png"
+                        alt="" <?php fm_lazyload(); ?> />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+
             </div>
+            <!-- // detail__image -->
           </div>
           <!-- // detail -->
           <!-- products -->
@@ -370,11 +449,34 @@
                   class="detail__text--description">ジュエリー業界で最も著名かつ実績のある、FreemanワックスおよびR&R埋没材の豊富なラインナップの中から、ご要望にあわせて提案します。その他関連材、設備もお任せください。</p>
               </div>
             </div>
+            <!-- // detail__text -->
+            <!-- detail__image -->
             <div class="detail__image">
-              <picture>
-                <img src="<?= get_template_directory_uri(); ?>/images/top/jewelry.png" alt="" <?php fm_lazyload(); ?> />
-              </picture>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <picture>
+                      <img src="<?= get_template_directory_uri(); ?>/images/top/jewelry.png" alt=""
+                        <?php fm_lazyload(); ?> />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide">
+                    <picture>
+                      <img src="<?= get_template_directory_uri(); ?>/images/top/slide-category/jewelry-slide-2.png"
+                        alt="" <?php fm_lazyload(); ?> />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide">
+                    <picture>
+                      <img src="<?= get_template_directory_uri(); ?>/images/top/slide-category/jewelry-slide-3.png"
+                        alt="" <?php fm_lazyload(); ?> />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+
             </div>
+            <!-- // detail__image -->
           </div>
           <!-- // detail -->
           <!-- products -->
@@ -410,11 +512,27 @@
                 class="detail__text--description">ただの材料屋ではありません、明日の地球・働く人たちを考えます。臭気対策・ミネラルキャスティング・CO2洗浄システムなど、環境を考える方へ新しい技術のご紹介です。</p>
             </div>
           </div>
-          <div class="detail__image">
-            <picture>
-              <img src="<?= get_template_directory_uri(); ?>/images/top/new-field.png" alt="" <?php fm_lazyload(); ?> />
-            </picture>
+          <!-- // detail__text -->
+          <!-- detail__image -->
+          <div class="detail__image slide-animation slide-animation-image-count2">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <picture>
+                    <img src="<?= get_template_directory_uri(); ?>/images/top/new-field.png" alt=""
+                      <?php fm_lazyload(); ?> />
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture>
+                    <img src="<?= get_template_directory_uri(); ?>/images/top/slide-category/new_field-slide-2.png"
+                      alt="" <?php fm_lazyload(); ?> />
+                  </picture>
+                </div>
+              </div>
+            </div>
           </div>
+          <!-- // detail__image -->
         </div>
         <!-- // detail -->
         <div class="view-all view-all__right">

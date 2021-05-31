@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/* TOPのスライドショーアニメーション
+--------------------------------------------------------------------------------------------*/
+.slide-animation {
+  position: relative;
+}
+
+.slide-animation picture:nth-of-type(2) .slide-animation__image {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.slide-animation picture:nth-of-type(3) .slide-animation__image {
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+
+.slide-animation picture:nth-of-type(4) .slide-animation__image {
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+}
+
+.slide-animation picture:nth-of-type(5) .slide-animation__image {
+  -webkit-animation-delay: 20s;
+          animation-delay: 20s;
+}
+
+.slide-animation picture:nth-of-type(6) .slide-animation__image {
+  -webkit-animation-delay: 25s;
+          animation-delay: 25s;
+}
+
+.slide-animation picture:nth-of-type(7) .slide-animation__image {
+  -webkit-animation-delay: 30s;
+          animation-delay: 30s;
+}
+
+.slide-animation picture:nth-of-type(8) .slide-animation__image {
+  -webkit-animation-delay: 35s;
+          animation-delay: 35s;
+}
+
+.slide-animation picture:nth-of-type(9) .slide-animation__image {
+  -webkit-animation-delay: 40s;
+          animation-delay: 40s;
+}
+
+.slide-animation picture:nth-of-type(10) .slide-animation__image {
+  -webkit-animation-delay: 45s;
+          animation-delay: 45s;
+}
+
+.slide-animation picture .slide-animation__image {
+  -webkit-animation: slideAnimeCount ease infinite;
+          animation: slideAnimeCount ease infinite;
+  display: block;
+  height: 100%;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@-webkit-keyframes slideAnimeCount {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slideAnimeCount {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=slide-animation.css.map */
