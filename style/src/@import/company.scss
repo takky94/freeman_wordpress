@@ -1,6 +1,8 @@
 /* 会社概要ページ用
 --------------------------------------------------------------------------------------------*/
 
+@import "./config";
+
 // style/compressed/main.min.cssからのrootへの相対
 $root-path: "../..";
 
@@ -14,7 +16,7 @@ $root-path: "../..";
       width: calc(100% / 3);
 
       &::before {
-        background: #000;
+        background: $c-main;
         content: "";
         display: inline-block;
         height: 2px;
@@ -60,9 +62,78 @@ $root-path: "../..";
   } // .content-header
 
   .content-main {
+    .infographic {
+      margin-top: 140px;
+      h2 {
+        font-size: 60px;
+        line-height: 1;
+      }
+      .sub-title {
+        color: $c-gray;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 1em;
+      }
+      .box {
+        margin-top: 50px;
+        &__top,
+        &__bottom {
+          display: flex;
+          &--item {
+            align-items: center;
+            display: flex;
+            width: calc((100% - (80px * 2)) / 3);
+            .icon {
+              align-items: center;
+              background: $c-main;
+              border-radius: 50%;
+              display: flex;
+              height: 120px;
+              justify-content: center;
+              width: 120px;
+            }
+            .text {
+              margin-left: 14px;
+
+              .small {
+                font-size: 16px;
+              }
+
+              .small2 {
+                font-size: 20px;
+                font-weight: bold;
+              }
+              .number {
+                font-size: 28px;
+                font-weight: bold;
+              }
+            }
+
+            // 区切り線
+            &:not(:first-child) {
+              margin-left: 80px;
+              position: relative;
+              &::before {
+                background: center / contain url(#{$root-path}/images/company/lineY.svg) no-repeat;
+                bottom: 0;
+                content: "";
+                display: inline-block;
+                height: 100%;
+                left: -40px;
+                position: absolute;
+                width: 1px;
+              }
+            } // &:not
+          } // --item
+        } // __top, __bottom
+        &__bottom {
+          margin-top: 45px;
+        }
+      } // .box
+    }
     .greeting {
       display: flex;
-      margin-top: 200px;
+      margin-top: 140px;
 
       .pic {
         img {

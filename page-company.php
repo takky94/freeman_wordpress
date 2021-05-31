@@ -15,16 +15,16 @@ Template Name: 会社概要
       <!-- container -->
       <div class="container">
         <!-- content-header -->
-        <div class="content-header">
-          <section class="block">
-            <h2 class="font-robot">MISSION</h2>
-            <p class="sub-title">ミッション</p>
-            <p class="description font-serif">自然と人類の共生を図り<br />幸福を希求する</p>
-          </section>
+        <div id="philosophy" class="content-header">
           <section class="block">
             <h2 class="font-robot">VISION</h2>
             <p class="sub-title">ビジョン</p>
             <p class="description font-serif">ものづくりの支援を通じ<br />新たな価値を創造して<br />社会発展に貢献する</p>
+          </section>
+          <section class="block">
+            <h2 class="font-robot">MISSION</h2>
+            <p class="sub-title">ミッション</p>
+            <p class="description font-serif">自然と人類の共生を図り<br />幸福を希求する</p>
           </section>
           <section class="block">
             <h2 class="font-robot">VALUE</h2>
@@ -35,10 +35,77 @@ Template Name: 会社概要
         <!-- // content-header -->
         <!-- content-main -->
         <div class="content-main company">
+          <!-- infographic -->
+          <section id="infographic" class="infographic">
+            <h2 class="font-robot">INFOGRAPHIC</h2>
+            <p class="sub-title">数字で見る日本フリーマン</p>
+            <div class="box">
+              <div class="box__top">
+                <div class="box__top--item">
+                  <p class="icon">
+                    <img src="<?= get_template_directory_uri(); ?>/images/company/icon-1.svg" alt="" <?php fm_lazyload(); ?> />
+                  </p>
+                  <div class="text">
+                    <p class="small">創立</p>
+                    <p class="number">1973年</p>
+                  </div>
+                </div>
+                <div class="box__top--item">
+                  <p class="icon">
+                    <img src="<?= get_template_directory_uri(); ?>/images/company/icon-2.svg" alt="" <?php fm_lazyload(); ?> />
+                  </p>
+                  <div class="text">
+                    <p class="small">取引先企業国内外</p>
+                    <p class="number">400社</p>
+                  </div>
+                </div>
+                <div class="box__top--item">
+                  <p class="icon">
+                    <img src="<?= get_template_directory_uri(); ?>/images/company/icon-3.svg" alt="" <?php fm_lazyload(); ?> />
+                  </p>
+                  <div class="text">
+                    <p class="small">海外取引実績</p>
+                    <p class="number">16カ国</p>
+                  </div>
+                </div>
+              </div>
+              <div class="box__bottom">
+                <div class="box__bottom--item">
+                  <p class="icon">
+                    <img src="<?= get_template_directory_uri(); ?>/images/company/icon-4.svg" alt="" <?php fm_lazyload(); ?> />
+                  </p>
+                  <div class="text">
+                    <p class="small">取り扱いアイテム</p>
+                    <p class="number">1,000以上</p>
+                  </div>
+                </div>
+                <div class="box__bottom--item">
+                  <p class="icon">
+                    <img src="<?= get_template_directory_uri(); ?>/images/company/icon-5.svg" alt="" <?php fm_lazyload(); ?> />
+                  </p>
+                  <div class="text">
+                    <p class="small">幅広い年齢層の社員</p>
+                    <p class="small2">20代から70代まで</p>
+                  </div>
+                </div>
+                <div class="box__bottom--item">
+                  <p class="icon">
+                    <img src="<?= get_template_directory_uri(); ?>/images/company/icon-6.svg" alt="" <?php fm_lazyload(); ?> />
+                  </p>
+                  <div class="text">
+                    <p class="small">国内外 グループ事業所数</p>
+                    <p class="number">30</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- // infographic -->
           <!-- greeting -->
-          <section class="greeting">
+          <section id="greeting" class="greeting">
             <div class="pic">
-              <img src="<?= get_template_directory_uri(); ?>/images/company/ceo.png" alt="日本フリーマン株式会社代表取締役社長 写真" />
+              <img src="<?= get_template_directory_uri(); ?>/images/company/ceo.png" alt="日本フリーマン株式会社代表取締役社長 写真"
+                <?php fm_lazyload(); ?> />
             </div>
             <div class="text">
               <h2 class="font-robot">GREETING</h2>
@@ -47,13 +114,14 @@ Template Name: 会社概要
                 class="message">1973年の創業以来、精密鋳造用副資材、モデル材・木型・樹脂型の作製材料、ジュエリーキャスティング用資材等の輸入及び国内販売・技術サービスを通じて、400余社のお客様のモノづくりをサポートさせて頂いております。弊社は2017年に三洋貿易株式会社の子会社となりました。<br />今まで培ってきた知見に加えて、三洋貿易グループのグローバルネットワークを活用し、<br />お客様のニーズに合った最適解を見つけ出し、提供して参ります。<br />今後とも格別のご支援、ご愛顧を賜りますようお願い申し上げます。</p>
               <div class="sign">
                 <span class="position">日本フリーマン株式会社代表取締役社長</span>
-                <img src="<?= get_template_directory_uri(); ?>/images/company/sign.svg" alt="日本フリーマン株式会社代表取締役社長 署名">
+                <img src="<?= get_template_directory_uri(); ?>/images/company/sign.svg" alt="日本フリーマン株式会社代表取締役社長 署名"
+                  <?php fm_lazyload(); ?> />
               </div>
             </div>
           </section>
           <!-- // greeting -->
           <!-- overview -->
-          <section class="overview">
+          <section id="overview" class="overview">
             <div class="title">
               <h2 class="font-robot">OVERVIEW</h2>
               <p class="sub-title">会社概要</p>

@@ -340,7 +340,7 @@
 }
 
 .company-page .content-header .block::before {
-  background: #000;
+  background: #eb2936;
   content: "";
   display: inline-block;
   height: 2px;
@@ -383,11 +383,101 @@
   text-align: center;
 }
 
+.company-page .content-main .infographic {
+  margin-top: 140px;
+}
+
+.company-page .content-main .infographic h2 {
+  font-size: 60px;
+  line-height: 1;
+}
+
+.company-page .content-main .infographic .sub-title {
+  color: #96a8be;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+.company-page .content-main .infographic .box {
+  margin-top: 50px;
+}
+
+.company-page .content-main .infographic .box__top, .company-page .content-main .infographic .box__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.company-page .content-main .infographic .box__top--item, .company-page .content-main .infographic .box__bottom--item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc((100% - (80px * 2)) / 3);
+}
+
+.company-page .content-main .infographic .box__top--item .icon, .company-page .content-main .infographic .box__bottom--item .icon {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #eb2936;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 120px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 120px;
+}
+
+.company-page .content-main .infographic .box__top--item .text, .company-page .content-main .infographic .box__bottom--item .text {
+  margin-left: 14px;
+}
+
+.company-page .content-main .infographic .box__top--item .text .small, .company-page .content-main .infographic .box__bottom--item .text .small {
+  font-size: 16px;
+}
+
+.company-page .content-main .infographic .box__top--item .text .small2, .company-page .content-main .infographic .box__bottom--item .text .small2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.company-page .content-main .infographic .box__top--item .text .number, .company-page .content-main .infographic .box__bottom--item .text .number {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.company-page .content-main .infographic .box__top--item:not(:first-child), .company-page .content-main .infographic .box__bottom--item:not(:first-child) {
+  margin-left: 80px;
+  position: relative;
+}
+
+.company-page .content-main .infographic .box__top--item:not(:first-child)::before, .company-page .content-main .infographic .box__bottom--item:not(:first-child)::before {
+  background: center/contain url(../../images/company/lineY.svg) no-repeat;
+  bottom: 0;
+  content: "";
+  display: inline-block;
+  height: 100%;
+  left: -40px;
+  position: absolute;
+  width: 1px;
+}
+
+.company-page .content-main .infographic .box__bottom {
+  margin-top: 45px;
+}
+
 .company-page .content-main .greeting {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 200px;
+  margin-top: 140px;
 }
 
 .company-page .content-main .greeting .pic img {

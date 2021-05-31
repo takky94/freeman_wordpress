@@ -158,10 +158,11 @@
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">CO<span class="c-main">M</span>PANY</p>
                   <ul class="js-accordionContent">
-                    <li><a href="<?= home_url(); ?>/company" class="c-white c-trans-red">理念</a></li>
-                    <li><a href="<?= home_url(); ?>/company" class="c-white c-trans-red">数字で見る日本フリーマン</a></li>
-                    <li><a href="<?= home_url(); ?>/company" class="c-white c-trans-red">社長挨拶</a></li>
-                    <li><a href="<?= home_url(); ?>/company" class="c-white c-trans-red">会社概要</a></li>
+                    <li><a href="<?= home_url(); ?>/company#philosophy" class="c-white c-trans-red">理念</a></li>
+                    <li><a href="<?= home_url(); ?>/company#infographic" class="c-white c-trans-red">数字で見る日本フリーマン</a>
+                    </li>
+                    <li><a href="<?= home_url(); ?>/company#greeting" class="c-white c-trans-red">社長挨拶</a></li>
+                    <li><a href="<?= home_url(); ?>/company#overview" class="c-white c-trans-red">会社概要</a></li>
                   </ul>
                 </div>
               </div>
