@@ -167,11 +167,139 @@ Template Name: 会社概要
             </div>
           </section>
           <!-- // overview -->
+          <!-- map -->
           <div class="map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.7483555586514!2d139.57858731555547!3d35.510500146923285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601858e56298677b%3A0x4bae735776e09d10!2z44CSMjI2LTAwMDIg56We5aWI5bed55yM5qiq5rWc5biC57eR5Yy65p2x5pys6YO377yU5LiB55uu77yR77yS4oiS77yZ!5e0!3m2!1sja!2sjp!4v1620554483344!5m2!1sja!2sjp"
               width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="map__link">
+              <a
+                href="https://www.google.com/maps/place/%E3%80%92226-0002+%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E7%B7%91%E5%8C%BA%E6%9D%B1%E6%9C%AC%E9%83%B7%EF%BC%94%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%92%E2%88%92%EF%BC%99/@35.510496,139.580776,16z/data=!4m2!3m1!1s0x601858e56298677b:0x4bae735776e09d10?hl=ja&gl=JP">Google
+                Mapsで見る</a>
+            </div>
           </div>
+          <!-- // map -->
+          <a href="#" class="link-box">
+            <div class="link-box__text">
+              <p>採用について</p>
+              <p class="right">
+                <img src="<?= get_template_directory_uri(); ?>/images/common/right-arrow-lightgray.svg" alt="" width="25"
+                  <?php fm_lazyload(); ?> />
+              </p>
+            </div>
+            <div class="link-box__image">
+              <img src="<?= get_template_directory_uri(); ?>/images/company/link-box.png" alt=""
+                <?php fm_lazyload(); ?> />
+            </div>
+          </a>
+          <!-- リンクリスト -->
+          <nav class="menu">
+            <div class="container relative">
+              <ul>
+                <li class="diamond">
+                  <a href="#mold">
+                    <div class="diamond__inner">
+                      <div class="center">
+                        <div class="diamond__title font-robot c-white">MOLD</div>
+                        <div class="diamond__titleSub c-white">試作・型材料</div>
+                        <div class="diamond__more font-robot sp__none">
+                          <p class="flex-center">
+                            <span>MORE</span>
+                            <img src="<?= get_template_directory_uri(); ?>/images/common/more-arrow-white.svg" width="15"
+                              alt="" <?php fm_lazyload(); ?> />
+                          </p>
+                        </div>
+                      </div>
+                      <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                        class="diamond__icon pc__none" width="25" alt="">
+                    </div>
+                  </a>
+                  <div class="filter"></div>
+                </li>
+                <li class="diamond">
+                  <a href="#investment-casting">
+                    <div class="diamond__inner">
+                      <div class="center">
+                        <div class="diamond__title font-robot c-white">INVESTMENT<br class="sp__none" />CASTING</div>
+                        <div class="diamond__titleSub c-white">精密鋳造用材料</div>
+                        <div class="diamond__more font-robot sp__none">
+                          <p class="flex-center">
+                            <span>MORE</span>
+                            <img src="<?= get_template_directory_uri(); ?>/images/common/more-arrow-white.svg" width="15"
+                              alt="" <?php fm_lazyload(); ?> />
+                          </p>
+                        </div>
+                      </div>
+                      <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                        class="diamond__icon pc__none" width="25" alt="">
+                    </div>
+                  </a>
+                  <div class="filter"></div>
+                </li>
+                <li class="diamond">
+                  <a href="#new-field">
+                    <div class="diamond__inner">
+                      <div class="center">
+                        <div class="diamond__title font-robot c-white">NEW FIELD</div>
+                        <div class="diamond__titleSub c-white">新たな取り組み</div>
+                        <div class="diamond__more font-robot sp__none">
+                          <p class="flex-center">
+                            <span>MORE</span>
+                            <img src="<?= get_template_directory_uri(); ?>/images/common/more-arrow-white.svg" width="15"
+                              alt="" <?php fm_lazyload(); ?> />
+                          </p>
+                        </div>
+                      </div>
+                      <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                        class="diamond__icon pc__none" width="25" alt="">
+                    </div>
+                  </a>
+                  <div class="filter"></div>
+                </li>
+                <li class="diamond">
+                  <a href="#sand-casting">
+                    <div class="diamond__inner">
+                      <div class="center">
+                        <div class="diamond__title font-robot c-white">SAND<br class="sp__none" />CASTING</div>
+                        <div class="diamond__titleSub c-white">砂型鋳造用資材・原材料</div>
+                        <div class="diamond__more font-robot sp__none">
+                          <p class="flex-center">
+                            <span>MORE</span>
+                            <img src="<?= get_template_directory_uri(); ?>/images/common/more-arrow-white.svg" width="15"
+                              alt="" <?php fm_lazyload(); ?> />
+                          </p>
+                        </div>
+                      </div>
+                      <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                        class="diamond__icon pc__none" width="25" alt="">
+                    </div>
+                  </a>
+                  <div class="filter"></div>
+                </li>
+                <li class="diamond">
+                  <a href="#jewelry">
+                    <div class="diamond__inner">
+                      <div class="center">
+                        <div class="diamond__title font-robot c-white">JEWELRY</div>
+                        <div class="diamond__titleSub c-white">ジュエリーキャスト用副資材</div>
+                        <div class="diamond__more font-robot sp__none">
+                          <p class="flex-center">
+                            <span>MORE</span>
+                            <img src="<?= get_template_directory_uri(); ?>/images/common/more-arrow-white.svg" width="15"
+                              alt="" <?php fm_lazyload(); ?> />
+                          </p>
+                        </div>
+                      </div>
+                      <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                        class="diamond__icon pc__none" width="25" alt="">
+                    </div>
+                  </a>
+                  <div class="filter"></div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!-- // リンクリスト -->
         </div>
         <!-- // content-main -->
       </div>
