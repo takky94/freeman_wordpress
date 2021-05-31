@@ -67,7 +67,6 @@ $root-path: "../..";
 .contact-header,
 .search-header,
 .notfound-header {
-  background: rgba(0, 0, 0, 0.5);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -119,6 +118,7 @@ $root-path: "../..";
     display: inline-block;
     height: 100%;
     position: absolute;
+    top: 0;
     width: 100%;
     z-index: 1;
   }
