@@ -34,14 +34,15 @@
 
 ## スラッグ
 
-カスタム投稿(商品/news)も下記に準ずる
+カスタム投稿(news)も下記に準ずる
 
 - 型製品(/mold)
-- 砂型鋳造(/sand-casting)
-- 精密鋳造(/investment-casting)
-- ジュエリー(/juwerly)
-- 新たな取り組み(/new-field)
+- 砂型鋳造(/sand_casting)
+- 精密鋳造(/investment_casting)
+- ジュエリー(/jewelry)
+- 新たな取り組み(/new_field)
 - 会社概要(/company)
+- お問い合わせ(/contact)
 
 上記パーマリンクにするため、
 
@@ -65,9 +66,13 @@
 - pagenavi-css.css を使用 => いいえ
 - 表示するページ数 => 9 (WordPress 表示設定も 9 にする)
 
-### Custom Taxonomy Order
+### MW WP Form
 
-カスタムタクソノミーのソート用
+お問い合わせに使用
+
+### TablePress
+
+子カテゴリ TOP でのコンテンツ編集用に使用
 
 ## ショートコードについて
 
@@ -97,3 +102,9 @@ category.php => category のスラッグによってページコンテンツ切�
 例: /mold => category.php のなかに/parts/category-top/mold.php をインポート
 
 /parts/category-top/hoge.php は第一階層のカテゴリに表示されます
+
+## 多言語対応について
+
+テーマ内ファイルの翻訳については`<?php _e('ここに翻訳対象テキスト', '任意のID'); ?>`と記入することで対応しています
+
+任意の ID はプラグイン画面にて使用されます
