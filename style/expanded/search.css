@@ -1035,6 +1035,12 @@
   text-align: center;
 }
 
+.search-result .notfound__image img {
+  margin: auto;
+  max-width: 500px;
+  width: 100%;
+}
+
 .search-result .notfound__text {
   font-weight: bold;
 }

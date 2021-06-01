@@ -191,6 +191,11 @@ $root-path: "../..";
     &__image {
       margin-top: 50px;
       text-align: center;
+      img {
+        margin: auto;
+        max-width: 500px;
+        width: 100%;
+      }
     }
 
     .button-arrow {

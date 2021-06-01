@@ -47,8 +47,8 @@
           <h2
             class="notfound__title"><?= esc_attr(wp_trim_words(get_search_query(), 17)); ?><?php _e('の検索に<br class="sp__none" />一致するコンテンツはありませんでした', 'search'); ?></h2>
           <p class="notfound__image">
-          <?php get_template_part('/parts/svg/robot-notfound'); ?>
-        </p>
+            <img src="<?= get_template_directory_uri(); ?>/images/robots/not-found.png" alt="" <?php fm_lazyload(); ?> />
+          </p>
           <p class="notfound__text"><?php _e('一般的な用語の使用、またはスペルの確認をお試しください', 'search'); ?></p>
           <?php get_search_form(); ?>
         </div>

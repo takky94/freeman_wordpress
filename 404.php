@@ -9,7 +9,7 @@
         <h2 class="notfound__title">お探しのページは見つかりませんでした。</h2>
         <p class="notfound__text">アクセスしようとしたページは削除されたかURLが変更されているため、<br class="sp__none" />見つけることができませんでした。</p>
         <p class="notfound__image">
-          <?php get_template_part('/parts/svg/robot-404'); ?>
+          <img src="<?= get_template_directory_uri(); ?>/images/robots/404.png" alt="" <?php fm_lazyload(); ?> />
         </p>
         <div class="center">
           <a href="<?= home_url(); ?>" class="button button-arrow button-line arrow-wrap c-white c-main-bg">

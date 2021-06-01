@@ -405,6 +405,12 @@
   text-align: center;
 }
 
+.notfound__image img {
+  margin: auto;
+  max-width: 500px;
+  width: 100%;
+}
+
 .notfound__text {
   font-weight: bold;
 }
