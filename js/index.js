@@ -58,4 +58,16 @@
     allowTouchMove: false,
     slidesPerView: 1,
   });
+
+  // お知らせ部分のスライド
+  const slideNewsShow = new Swiper(".swiper-news-container", {
+    autoplay: {
+      delay: 6000,
+      stopOnLastSlide: false,
+      disableOnInteraction: false,
+      reverseDirection: false,
+    },
+    allowTouchMove: false,
+    slidesPerView: 1,
+  });
 }

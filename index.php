@@ -45,17 +45,24 @@
       </div>
       <?php
       $args = array(
-        'numberposts' => 1,
+        'numberposts' => 3,
         'post_type' => 'news'
       );
       $news = get_posts($args);
     ?>
-      <?php if (!empty($news)): foreach ($news as $post): setup_postdata($post); ?>
       <div class="hero__news c-white">
         <p class="hero__news--title font-robot  bold sp__none">NEWS</p>
-        <time class="hero__news--date" datetime="<?php the_time('Y-m-d') ?>"><?php the_time('Y/m/d') ?></time>
-        <a href="<?php the_permalink();?>"
-          class="hero__news--postTitle c-white c-trans-red"><?= wp_trim_words(get_the_title(), 20); ?></a>
+        <div class="swiper-news-container">
+          <div class="swiper-wrapper">
+            <?php if (!empty($news)): foreach ($news as $post): setup_postdata($post); ?>
+            <div class="swiper-slide">
+              <time class="hero__news--date" datetime="<?php the_time('Y-m-d') ?>"><?php the_time('Y/m/d') ?></time>
+              <a href="<?php the_permalink();?>"
+                class="hero__news--postTitle c-white c-trans-red"><?= wp_trim_words(get_the_title(), 20); ?></a>
+            </div>
+            <?php endforeach; endif; wp_reset_postdata(); ?>
+          </div>
+        </div>
         <a href="<?= get_post_type_archive_link('news'); ?>" class="hero__news--link c-white c-trans-red sp__none">
           <?php _e('お知らせ一覧','top'); ?><?php get_template_part('/parts/icon/arrow'); ?>
         </a>
@@ -63,7 +70,6 @@
           <?php get_template_part('/parts/icon/arrow'); ?>
         </a>
       </div>
-      <?php endforeach; endif; wp_reset_postdata(); ?>
     </section>
     <!-- // メインビジュアル -->
     <!-- 導入企業様 -->
