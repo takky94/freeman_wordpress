@@ -275,6 +275,11 @@ hr {
   text-transform: capitalize;
 }
 
+html.en .eng-title,
+html.en .eng-hidden {
+  display: none;
+}
+
 /* Header
 --------------------------------------------------------------------------------------------*/
 .header {

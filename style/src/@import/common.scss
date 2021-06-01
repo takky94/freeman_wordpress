@@ -185,3 +185,11 @@ hr {
 .eng-title {
   text-transform: capitalize;
 }
+
+// 英語表示の時に重複しないように
+html.en {
+  .eng-title,
+  .eng-hidden {
+    display: none;
+  }
+}

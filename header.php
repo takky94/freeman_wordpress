@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="<?= ICL_LANGUAGE_CODE; ?>" class="<?= ICL_LANGUAGE_CODE; ?>">
 
 <head>
   <meta charset="utf-8">
@@ -60,7 +60,7 @@
           <ul class="header__list">
             <li>
               <a href="<?= home_url(); ?>/mold" class="js-accordion <?= fm_is_active_page('mold'); ?>"
-                data-subtitle="MOLD">試作・型材料</a>
+                data-subtitle="MOLD"><?php _e('試作・型材料', 'header'); ?></a>
               <div class="sub">
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">M<span class="c-main">O</span>LD</p>
@@ -91,7 +91,7 @@
             </li>
             <li>
               <a href="<?= home_url(); ?>/sand_casting" class="js-accordion <?= fm_is_active_page('sand_casting'); ?>"
-                data-subtitle="SAND CASTING">砂型鋳造</a>
+                data-subtitle="SAND CASTING"><?php _e('砂型鋳造', 'header'); ?></a>
               <div class="sub">
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">S<span class="c-main">A</span>ND CASTING</p>
@@ -112,7 +112,7 @@
             <li>
               <a href="<?= home_url(); ?>/investment_casting"
                 class="js-accordion <?= fm_is_active_page('investment_casting'); ?>"
-                data-subtitle="INVESTMENT CASTING">精密鋳造</a>
+                data-subtitle="INVESTMENT CASTING"><?php _e('精密鋳造', 'header'); ?></a>
               <div class="sub">
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">INVE<span class="c-main">S</span>TMENT CASTING</p>
@@ -134,7 +134,7 @@
             </li>
             <li>
               <a href="<?= home_url(); ?>/jewelry" class="js-accordion <?= fm_is_active_page('jewelry'); ?>"
-                data-subtitle="JEWELRY">ジュエリー</a>
+                data-subtitle="JEWELRY"><?php _e('ジュエリー', 'header'); ?></a>
               <div class="sub">
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">JE<span class="c-main">W</span>ELRY</p>
@@ -156,7 +156,7 @@
             </li>
             <li>
               <a href="<?= home_url(); ?>/new_field" class="js-accordion <?= fm_is_active_page('new_field'); ?>"
-                data-subtitle="NEW FIELD">新たな取り組み</a>
+                data-subtitle="NEW FIELD"><?php _e('新たな取り組み', 'header'); ?></a>
               <div class="sub">
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">NE<span class="c-main">W</span> FIELD</p>
