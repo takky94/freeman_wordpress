@@ -11,7 +11,9 @@ Template Name: お問い合わせ送信完了
     <!-- #content -->
     <div id="content" class="contact-send">
       <div class="container">
-        <h2 class="contact-send__title">お問い合わせを送信しました。<br />担当者より追ってご連絡させていただきます。</h2>
+        <h2 class="contact-send__title">
+          <?php _e('お問い合わせを送信しました。<br />担当者より追ってご連絡させていただきます。', 'page-contact-send'); ?>
+        </h2>
         <p class="contact-send__image">
           <?php get_template_part('/parts/svg/contact-send'); ?>
         </p>

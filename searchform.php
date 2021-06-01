@@ -1,5 +1,5 @@
 <form id="search" class="search-form" method="get" action="<?= home_url("/"); ?>">
-  <input class="search-form__input" name="s" type="text" placeholder="サイト内検索" />
+  <input class="search-form__input" name="s" type="text" placeholder="<?php _e('サイト内検索', 'searchform'); ?>" />
   <button class="search-form__button" type="submit" id="searchButton">
     <p>
       <svg xmlns="http://www.w3.org/2000/svg" width="15.695" height="15.719" viewBox="0 0 15.695 15.719">

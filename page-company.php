@@ -19,17 +19,19 @@ Template Name: 会社概要
           <section class="block">
             <h2 class="font-robot">VISION</h2>
             <p class="sub-title">ビジョン</p>
-            <p class="description font-serif">ものづくりの支援を通じ<br />新たな価値を創造して<br />社会発展に貢献する</p>
+            <p
+              class="description font-serif"><?php _e('ものづくりの支援を通じ<br />新たな価値を創造して<br />社会発展に貢献する','page-company'); ?></p>
           </section>
           <section class="block">
             <h2 class="font-robot">MISSION</h2>
             <p class="sub-title">ミッション</p>
-            <p class="description font-serif">自然と人類の共生を図り<br />幸福を希求する</p>
+            <p class="description font-serif"><?php _e('自然と人類の共生を図り<br />幸福を希求する','page-company'); ?></p>
           </section>
           <section class="block">
             <h2 class="font-robot">VALUE</h2>
             <p class="sub-title">バリュー</p>
-            <p class="description font-serif">チャレンジングな精神と<br />進取の気概をもって<br />最適解を追求する</p>
+            <p
+              class="description font-serif"><?php _e('チャレンジングな精神と<br />進取の気概をもって<br />最適解を追求する','page-company'); ?></p>
           </section>
         </div>
         <!-- // content-header -->
@@ -38,7 +40,7 @@ Template Name: 会社概要
           <!-- infographic -->
           <section id="infographic" class="infographic">
             <h2 class="font-robot">INFOGRAPHIC</h2>
-            <p class="sub-title">数字で見る日本フリーマン</p>
+            <p class="sub-title"><?php _e('数字で見る日本フリーマン','page-company'); ?></p>
             <div class="box">
               <div class="box__top">
                 <div class="box__top--item">
@@ -46,8 +48,8 @@ Template Name: 会社概要
                     <img src="<?= get_template_directory_uri(); ?>/images/company/icon-1.svg" alt="" <?php fm_lazyload(); ?> />
                   </p>
                   <div class="text">
-                    <p class="small">創立</p>
-                    <p class="number">1973年</p>
+                    <p class="small"><?php _e('創立','page-company'); ?></p>
+                    <p class="number"><?php _e('1973年','page-company'); ?></p>
                   </div>
                 </div>
                 <div class="box__top--item">
@@ -55,8 +57,8 @@ Template Name: 会社概要
                     <img src="<?= get_template_directory_uri(); ?>/images/company/icon-2.svg" alt="" <?php fm_lazyload(); ?> />
                   </p>
                   <div class="text">
-                    <p class="small">取引先企業国内外</p>
-                    <p class="number">400社</p>
+                    <p class="small"><?php _e('取引先企業国内外','page-company'); ?></p>
+                    <p class="number"><?php _e('400社','page-company'); ?></p>
                   </div>
                 </div>
                 <div class="box__top--item">
@@ -64,8 +66,8 @@ Template Name: 会社概要
                     <img src="<?= get_template_directory_uri(); ?>/images/company/icon-3.svg" alt="" <?php fm_lazyload(); ?> />
                   </p>
                   <div class="text">
-                    <p class="small">海外取引実績</p>
-                    <p class="number">16カ国</p>
+                    <p class="small"><?php _e('海外取引実績','page-company'); ?></p>
+                    <p class="number"><?php _e('16カ国','page-company'); ?></p>
                   </div>
                 </div>
               </div>
@@ -75,8 +77,8 @@ Template Name: 会社概要
                     <img src="<?= get_template_directory_uri(); ?>/images/company/icon-4.svg" alt="" <?php fm_lazyload(); ?> />
                   </p>
                   <div class="text">
-                    <p class="small">取り扱いアイテム</p>
-                    <p class="number">1,000以上</p>
+                    <p class="small"><?php _e('取り扱いアイテム','page-company'); ?></p>
+                    <p class="number"><?php _e('1,000以上','page-company'); ?></p>
                   </div>
                 </div>
                 <div class="box__bottom--item">
@@ -84,8 +86,8 @@ Template Name: 会社概要
                     <img src="<?= get_template_directory_uri(); ?>/images/company/icon-5.svg" alt="" <?php fm_lazyload(); ?> />
                   </p>
                   <div class="text">
-                    <p class="small">幅広い年齢層の社員</p>
-                    <p class="small2">20代から70代まで</p>
+                    <p class="small"><?php _e('幅広い年齢層の社員','page-company'); ?></p>
+                    <p class="small2"><?php _e('20代から70代まで','page-company'); ?></p>
                   </div>
                 </div>
                 <div class="box__bottom--item">
@@ -93,8 +95,8 @@ Template Name: 会社概要
                     <img src="<?= get_template_directory_uri(); ?>/images/company/icon-6.svg" alt="" <?php fm_lazyload(); ?> />
                   </p>
                   <div class="text">
-                    <p class="small">国内外 グループ事業所数</p>
-                    <p class="number">30</p>
+                    <p class="small"><?php _e('国内外 グループ事業所数','page-company'); ?></p>
+                    <p class="number"><?php _e('30','page-company'); ?></p>
                   </div>
                 </div>
               </div>
@@ -109,11 +111,11 @@ Template Name: 会社概要
             </div>
             <div class="text">
               <h2 class="font-robot">GREETING</h2>
-              <p class="sub-title">社長挨拶</p>
+              <p class="sub-title"><?php _e('','page-company'); ?>社長挨拶</p>
               <p
-                class="message">1973年の創業以来、精密鋳造用副資材、モデル材・木型・樹脂型の作製材料、ジュエリーキャスティング用資材等の輸入及び国内販売・技術サービスを通じて、400余社のお客様のモノづくりをサポートさせて頂いております。弊社は2017年に三洋貿易株式会社の子会社となりました。<br />今まで培ってきた知見に加えて、三洋貿易グループのグローバルネットワークを活用し、<br />お客様のニーズに合った最適解を見つけ出し、提供して参ります。<br />今後とも格別のご支援、ご愛顧を賜りますようお願い申し上げます。</p>
+                class="message"><?php _e('1973年の創業以来、精密鋳造用副資材、モデル材・木型・樹脂型の作製材料、ジュエリーキャスティング用資材等の輸入及び国内販売・技術サービスを通じて、400余社のお客様のモノづくりをサポートさせて頂いております。弊社は2017年に三洋貿易株式会社の子会社となりました。<br />今まで培ってきた知見に加えて、三洋貿易グループのグローバルネットワークを活用し、<br />お客様のニーズに合った最適解を見つけ出し、提供して参ります。<br />今後とも格別のご支援、ご愛顧を賜りますようお願い申し上げます。','page-company'); ?></p>
               <div class="sign">
-                <span class="position">日本フリーマン株式会社代表取締役社長</span>
+                <span class="position"><?php _e('日本フリーマン株式会社代表取締役社長','page-company'); ?></span>
                 <img src="<?= get_template_directory_uri(); ?>/images/company/sign.svg" alt="日本フリーマン株式会社代表取締役社長 署名"
                   <?php fm_lazyload(); ?> />
               </div>
@@ -124,43 +126,45 @@ Template Name: 会社概要
           <section id="overview" class="overview">
             <div class="title">
               <h2 class="font-robot">OVERVIEW</h2>
-              <p class="sub-title">会社概要</p>
+              <p class="sub-title"><?php _e('会社概要','page-company'); ?></p>
             </div>
             <div class="address">
               <table>
                 <tbody>
                   <tr>
-                    <th>会社名</th>
-                    <td>日本フリーマン株式会社　 (英文社名：FREEMAN JAPAN Co.,LTD.）</td>
+                    <th><?php _e('会社名','page-company'); ?></th>
+                    <td><?php _e('日本フリーマン株式会社　 (英文社名：FREEMAN JAPAN Co.,LTD.）','page-company'); ?></td>
                   </tr>
                   <tr>
-                    <th>所在地</th>
+                    <th><?php _e('所在地','page-company'); ?></th>
                     <td>
                       <address>
-                        〒226-0002 神奈川県横浜市緑区東本郷 4-12-9<br />TEL 045-473-3580　FAX 045-473-3656<br /><a
-                          href="mailto:info@freeman.co.jp" class="c-main">info@freeman.co.jp</a>
+                        <?php _e('〒226-0002 神奈川県横浜市緑区東本郷 4-12-9','page-company'); ?><br />TEL 045-473-3580　FAX
+                        045-473-3656<br /><a href="mailto:info@freeman.co.jp" class="c-main">info@freeman.co.jp</a>
                       </address>
                     </td>
                   </tr>
                   <tr>
-                    <th>設立</th>
-                    <td>1973年5月1日</td>
+                    <th><?php _e('設立','page-company'); ?></th>
+                    <td><?php _e('1973年5月1日','page-company'); ?></td>
                   </tr>
                   <tr>
-                    <th>資本金</th>
-                    <td>1,000万円</td>
+                    <th><?php _e('資本金','page-company'); ?></th>
+                    <td><?php _e('1,000万円','page-company'); ?></td>
                   </tr>
                   <tr>
-                    <th>代表</th>
-                    <td>岩堀　貴宏</td>
+                    <th><?php _e('代表','page-company'); ?></th>
+                    <td><?php _e('岩堀　貴宏','page-company'); ?></td>
                   </tr>
                   <tr>
-                    <th>事業内容</th>
-                    <td>精密鋳造用副資材、モデル材、ジュエリーキャスティング用資材、<br />機械等の輸入及び国内卸小売・技術サービス</td>
+                    <th><?php _e('事業内容','page-company'); ?></th>
+                    <td>
+                      <?php _e('精密鋳造用副資材、モデル材、ジュエリーキャスティング用資材、<br />機械等の輸入及び国内卸小売・技術サービス','page-company'); ?>
+                    </td>
                   </tr>
                   <tr>
-                    <th>関連会社</th>
-                    <td>三洋貿易株式会社</td>
+                    <th><?php _e('関連会社','page-company'); ?></th>
+                    <td><?php _e('三洋貿易株式会社','page-company'); ?></td>
                   </tr>
                 </tbody>
               </table>
@@ -181,7 +185,7 @@ Template Name: 会社概要
           <!-- // map -->
           <a href="#" class="link-box">
             <div class="link-box__text">
-              <p>採用について</p>
+              <p><?php _e('','page-company'); ?>採用について</p>
               <p class="right">
                 <img src="<?= get_template_directory_uri(); ?>/images/common/right-arrow-lightgray.svg" alt="" width="25"
                   <?php fm_lazyload(); ?> />
@@ -201,7 +205,7 @@ Template Name: 会社概要
                     <div class="diamond__inner">
                       <div class="center">
                         <div class="diamond__title font-robot c-white">MOLD</div>
-                        <div class="diamond__titleSub c-white">試作・型材料</div>
+                        <div class="diamond__titleSub c-white"><?php _e('試作・型材料','page-company'); ?></div>
                         <div class="diamond__more font-robot sp__none">
                           <p class="flex-center">
                             <span>MORE</span>
@@ -221,7 +225,7 @@ Template Name: 会社概要
                     <div class="diamond__inner">
                       <div class="center">
                         <div class="diamond__title font-robot c-white">INVESTMENT<br class="sp__none" />CASTING</div>
-                        <div class="diamond__titleSub c-white">精密鋳造用材料</div>
+                        <div class="diamond__titleSub c-white"><?php _e('精密鋳造用材料','page-company'); ?></div>
                         <div class="diamond__more font-robot sp__none">
                           <p class="flex-center">
                             <span>MORE</span>
@@ -241,7 +245,7 @@ Template Name: 会社概要
                     <div class="diamond__inner">
                       <div class="center">
                         <div class="diamond__title font-robot c-white">NEW FIELD</div>
-                        <div class="diamond__titleSub c-white">新たな取り組み</div>
+                        <div class="diamond__titleSub c-white"><?php _e('新たな取り組み','page-company'); ?></div>
                         <div class="diamond__more font-robot sp__none">
                           <p class="flex-center">
                             <span>MORE</span>
@@ -261,7 +265,7 @@ Template Name: 会社概要
                     <div class="diamond__inner">
                       <div class="center">
                         <div class="diamond__title font-robot c-white">SAND<br class="sp__none" />CASTING</div>
-                        <div class="diamond__titleSub c-white">砂型鋳造用資材・原材料</div>
+                        <div class="diamond__titleSub c-white"><?php _e('砂型鋳造用資材・原材料','page-company'); ?></div>
                         <div class="diamond__more font-robot sp__none">
                           <p class="flex-center">
                             <span>MORE</span>
@@ -281,7 +285,7 @@ Template Name: 会社概要
                     <div class="diamond__inner">
                       <div class="center">
                         <div class="diamond__title font-robot c-white">JEWELRY</div>
-                        <div class="diamond__titleSub c-white">ジュエリーキャスト用副資材</div>
+                        <div class="diamond__titleSub c-white"><?php _e('ジュエリーキャスト用副資材','page-company'); ?></div>
                         <div class="diamond__more font-robot sp__none">
                           <p class="flex-center">
                             <span>MORE</span>

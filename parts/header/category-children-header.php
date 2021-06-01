@@ -6,7 +6,7 @@
 <header class="entry-header category-children-header category-children-header-<?= $category_slug; ?>">
   <div class="container">
     <h1
-      class="entry-header__title"><?= $category_name; ?> <span class="eng-title"><?= fm_remove_underbar($category_slug); ?></span></h1>
+      class="entry-header__title"><?= $category_name; ?> <?php if(ICL_LANGUAGE_CODE !== 'en'): ?><span class="eng-title"><?= fm_remove_underbar($category_slug); ?></span><?php endif; ?></h1>
     <?php fm_breadcrumb(); ?>
   </div>
 </header>

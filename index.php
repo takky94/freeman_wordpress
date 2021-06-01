@@ -12,7 +12,9 @@
         <?php get_template_part('/parts/svg/top-fv-textSp'); ?>
       </div>
       <div class="js-scroll-fadeIn-title js-scroll-animation">
-        <div class="small font-gothic"><span>モ</span><span>ノ</span><span>づ</span><span>く</span><span>り</span><span>に</span><span>無</span><span>限</span><span>の</span><span>可</span><span>能</span><span>性</span><span>を</span></div>
+        <div class="small font-gothic">
+          <span><?php _e('<span>モ</span><span>ノ</span><span>づ</span><span>く</span><span>り</span><span>に</span><span>無</span><span>限</span><span>の</span><span>可</span><span>能</span><span>性</span><span>を</span>','top'); ?></span>
+        </div>
       </div>
     </h2>
       <div class="hero__slide slide-animation">
@@ -54,9 +56,9 @@
         <time class="hero__news--date" datetime="<?php the_time('Y-m-d') ?>"><?php the_time('Y/m/d') ?></time>
         <a href="<?php the_permalink();?>"
           class="hero__news--postTitle c-white c-trans-red"><?= wp_trim_words(get_the_title(), 20); ?></a>
-        <a href="<?= get_post_type_archive_link('news'); ?>"
-          class="hero__news--link c-white c-trans-red sp__none">お知らせ一覧
-          <?php get_template_part('/parts/icon/arrow'); ?></a>
+        <a href="<?= get_post_type_archive_link('news'); ?>" class="hero__news--link c-white c-trans-red sp__none">
+          <?php _e('お知らせ一覧','top'); ?><?php get_template_part('/parts/icon/arrow'); ?>
+        </a>
         <a href="#" class="hero__news--link c-main-bg pc__none">
           <?php get_template_part('/parts/icon/arrow'); ?>
         </a>
@@ -75,11 +77,12 @@
       <div class="center">
         <div class="js-scroll-fadeIn-title js-scroll-animation">
           <h2 class="lead__heading font-serif center">
-          <span class="c-main">手</span><span>の</span><span>ひ</span><span>ら</span><span>か</span><span>ら</span><span class="c-main">宇</span><span>宙</span><span>ま</span><span>で</span>
-        </h2>
+            <?php _e('<span class="c-main">手</span><span>の</span><span>ひ</span><span>ら</span><span>か</span><span>ら</span><span class="c-main">宇</span><span>宙</span><span>ま</span><span>で</span>','top'); ?>
+          </h2>
         </div>
         <div class="js-scroll-fadeIn-text js-scroll-animation">
-          <p class="lead__text center">国内トップクラスの品揃えと提案力で、<br class="pc__none" />企業のあらゆる創造をサポートします。</p>
+          <p
+            class="lead__text center"><?php _e('国内トップクラスの品揃えと提案力で、<br class="pc__none" />企業のあらゆる創造をサポートします。','top'); ?></p>
           <!-- lead__achivment -->
           <div class="lead__achievement">
             <!-- block -->
@@ -88,13 +91,13 @@
                 <div class="center">
                   <img src="<?= get_template_directory_uri(); ?>/images/top/icon/company.svg" width="25" />
                 </div>
-                <div class="mt-5 bold">創立</div>
+                <div class="mt-5 bold"><?php _e('','top'); ?>創立</div>
               </div>
               <div class="block__right">
                 <span class="c-main big">
                   <img src="<?= get_template_directory_uri(); ?>/images/top/1973.svg" alt="1973" />
                 </span>
-                <span class="small bold">年</span>
+                <span class="small bold"><?php _e('','top'); ?>年</span>
               </div>
             </div>
             <!-- // block -->
@@ -104,16 +107,16 @@
                 <div class="center pc__none">
                   <img src="<?= get_template_directory_uri(); ?>/images/top/icon/pin.svg" width="25" />
                 </div>
-                <span class="bold">取引先</span>
+                <span class="bold"><?php _e('取引先','top'); ?></span>
                 <img src="<?= get_template_directory_uri(); ?>/images/top/icon/pin.svg" width="20" class="sp__none" />
                 <br class="sp__none" />
-                <div class="mt-5 bold sp-inlineBlock">企業国内外</div>
+                <div class="mt-5 bold sp-inlineBlock"><?php _e('企業国内外','top'); ?></div>
               </div>
               <div class="block__right">
                 <span class="c-main big">
                   <img src="<?= get_template_directory_uri(); ?>/images/top/400.svg" alt="400" />
                 </span>
-                <span class="small bold">社</span>
+                <span class="small bold"><?php _e('社','top'); ?></span>
               </div>
             </div>
             <!-- // block -->
@@ -123,13 +126,13 @@
                 <div class="center">
                   <img src="<?= get_template_directory_uri(); ?>/images/top/icon/earth.svg" width="25" />
                 </div>
-                <div class="mt-5 bold">海外取引</div>
+                <div class="mt-5 bold"><?php _e('海外取引','top'); ?></div>
               </div>
               <div class="block__right">
                 <span class="c-main big">
                   <img src="<?= get_template_directory_uri(); ?>/images/top/16.svg" alt="16" />
                 </span>
-                <span class="small bold">カ国</span>
+                <span class="small bold"><?php _e('カ国','top'); ?></span>
               </div>
             </div>
             <!-- // block -->
@@ -138,7 +141,7 @@
           <!-- lead__button -->
           <div class="lead__button">
             <a href="#" class="button-arrow button-line arrow-wrap flex-center">
-              <span>社長ご挨拶・企業理念</span>
+              <span><?php _e('社長ご挨拶・企業理念','top'); ?></span>
               <?php get_template_part('/parts/icon/arrow'); ?>
             </a>
           </div>
@@ -160,7 +163,7 @@
               <div class="diamond__inner">
                 <div class="center">
                   <div class="diamond__title font-robot c-white">MOLD</div>
-                  <div class="diamond__titleSub c-white">試作・型材料</div>
+                  <div class="diamond__titleSub c-white"><?php _e('試作・型材料','top'); ?></div>
                   <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
                     class="diamond__icon sp__none" width="25" alt="">
                 </div>
@@ -175,7 +178,7 @@
               <div class="diamond__inner">
                 <div class="center">
                   <div class="diamond__title font-robot c-white">INVESTMENT<br class="sp__none" />CASTING</div>
-                  <div class="diamond__titleSub c-white">精密鋳造用材料</div>
+                  <div class="diamond__titleSub c-white"><?php _e('精密鋳造用材料','top'); ?></div>
                   <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
                     class="diamond__icon sp__none" width="25" alt="">
                 </div>
@@ -190,7 +193,7 @@
               <div class="diamond__inner">
                 <div class="center">
                   <div class="diamond__title font-robot c-white">NEW FIELD</div>
-                  <div class="diamond__titleSub c-white">新たな取り組み</div>
+                  <div class="diamond__titleSub c-white"><?php _e('新たな取り組み','top'); ?></div>
                   <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
                     class="diamond__icon sp__none" width="25" alt="">
                 </div>
@@ -205,7 +208,7 @@
               <div class="diamond__inner">
                 <div class="center">
                   <div class="diamond__title font-robot c-white">SAND<br class="sp__none" />CASTING</div>
-                  <div class="diamond__titleSub c-white">砂型鋳造用資材・原材料</div>
+                  <div class="diamond__titleSub c-white"><?php _e('砂型鋳造用資材・原材料','top'); ?></div>
                   <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
                     class="diamond__icon sp__none" width="25" alt="">
                 </div>
@@ -220,7 +223,7 @@
               <div class="diamond__inner">
                 <div class="center">
                   <div class="diamond__title font-robot c-white">JEWELRY</div>
-                  <div class="diamond__titleSub c-white">ジュエリーキャスト用副資材</div>
+                  <div class="diamond__titleSub c-white"><?php _e('ジュエリーキャスト用副資材','top'); ?></div>
                   <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
                     class="diamond__icon sp__none" width="25" alt="">
                 </div>
@@ -247,10 +250,10 @@
               </h2>
               </div>
               <div class="js-scroll-fadeIn-text js-scroll-animation">
-                <p class="detail__text--headingJp bold">試作・型材料</p>
-                <p class="detail__text--headingSub">無限に広がる表現力</p>
+                <p class="detail__text--headingJp bold"><?php _e('試作・型材料','top'); ?></p>
+                <p class="detail__text--headingSub"><?php _e('無限に広がる表現力','top'); ?></p>
                 <p
-                  class="detail__text--description">デザインから試作開発、量産にいたる全ての領域で、モノづくりに必要な技術や製品を提案し、イメージの具体化や納期改善、コストダウンに貢献します。</p>
+                  class="detail__text--description"><?php _e('デザインから試作開発、量産にいたる全ての領域で、モノづくりに必要な技術や製品を提案し、イメージの具体化や納期改善、コストダウンに貢献します。','top'); ?></p>
               </div>
             </div>
             <!-- // detail__text -->
@@ -309,10 +312,10 @@
               </h2>
               </div>
               <div class="js-scroll-fadeIn-text js-scroll-animation">
-                <p class="detail__text--headingJp bold">砂型鋳造用資材・原材料</p>
-                <p class="detail__text--headingSub">ヨーロッパクオリティで<br />高品質な鋳物作りを</p>
+                <p class="detail__text--headingJp bold"><?php _e('砂型鋳造用資材・原材料','top'); ?></p>
+                <p class="detail__text--headingSub"><?php _e('ヨーロッパクオリティで<br />高品質な鋳物作りを','top'); ?></p>
                 <p
-                  class="detail__text--description">本場ヨーロッパの鋳物づくりを支えるLANIKセラミックフォームフィルターを筆頭に、海外から独自ルートで仕入れる最良の鋳造用資材を多岐にわたってお取り扱いしております。</p>
+                  class="detail__text--description"><?php _e('本場ヨーロッパの鋳物づくりを支えるLANIKセラミックフォームフィルターを筆頭に、海外から独自ルートで仕入れる最良の鋳造用資材を多岐にわたってお取り扱いしております。','top'); ?></p>
               </div>
             </div>
             <!-- // detail__text -->
@@ -379,10 +382,11 @@
               </h2>
               </div>
               <div class="js-scroll-fadeIn-text js-scroll-animation">
-                <p class="detail__text--headingJp bold">精密鋳造用材料</p>
-                <p class="detail__text--headingSub">高機能な製品ラインナップ<br />と技術サービス</p>
+                <p class="detail__text--headingJp bold"><?php _e('精密鋳造用材料','top'); ?></p>
                 <p
-                  class="detail__text--description">国内外より厳選した、精密鋳造プロセスに欠かせない各種材料を取り揃え、最適なソリューションを提供。航空機・自動車・産業用ガスタービン・一般産業機械などの基幹産業を支えています。</p>
+                  class="detail__text--headingSub"><?php _e('高機能な製品ラインナップ','top'); ?><br /><?php _e('と技術サービス','top'); ?></p>
+                <p
+                  class="detail__text--description"><?php _e('国内外より厳選した、精密鋳造プロセスに欠かせない各種材料を取り揃え、最適なソリューションを提供。航空機・自動車・産業用ガスタービン・一般産業機械などの基幹産業を支えています。','top'); ?></p>
               </div>
             </div>
             <!-- // detail__text -->
@@ -443,10 +447,10 @@
               </h2>
               </div>
               <div class="js-scroll-fadeIn-text js-scroll-animation">
-                <p class="detail__text--headingJp bold">ジュエリーキャスト用副資材</p>
-                <p class="detail__text--headingSub">業界のスタンダードとして</p>
+                <p class="detail__text--headingJp bold"><?php _e('ジュエリーキャスト用副資材','top'); ?></p>
+                <p class="detail__text--headingSub"><?php _e('業界のスタンダードとして','top'); ?></p>
                 <p
-                  class="detail__text--description">ジュエリー業界で最も著名かつ実績のある、FreemanワックスおよびR&R埋没材の豊富なラインナップの中から、ご要望にあわせて提案します。その他関連材、設備もお任せください。</p>
+                  class="detail__text--description"><?php _e('ジュエリー業界で最も著名かつ実績のある、FreemanワックスおよびR&R埋没材の豊富なラインナップの中から、ご要望にあわせて提案します。その他関連材、設備もお任せください。','top'); ?></p>
               </div>
             </div>
             <!-- // detail__text -->
@@ -506,10 +510,10 @@
             </h2>
             </div>
             <div class="js-scroll-fadeIn-text js-scroll-animation">
-              <p class="detail__text--headingJp bold">新たな取り組み</p>
-              <p class="detail__text--headingSub">SDGsへの貢献</p>
+              <p class="detail__text--headingJp bold"><?php _e('新たな取り組み','top'); ?></p>
+              <p class="detail__text--headingSub"><?php _e('SDGsへの貢献','top'); ?></p>
               <p
-                class="detail__text--description">ただの材料屋ではありません、明日の地球・働く人たちを考えます。臭気対策・ミネラルキャスティング・CO2洗浄システムなど、環境を考える方へ新しい技術のご紹介です。</p>
+                class="detail__text--description"><?php _e('ただの材料屋ではありません、明日の地球・働く人たちを考えます。臭気対策・ミネラルキャスティング・CO2洗浄システムなど、環境を考える方へ新しい技術のご紹介です。','top'); ?></p>
             </div>
           </div>
           <!-- // detail__text -->

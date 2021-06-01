@@ -2,9 +2,9 @@
 <div class="category-lead flex">
   <div class="category-lead__text">
     <h2 class="category-lead__text--headingEn font-robot">JEWELRY</h2>
-    <p class="category-lead__text--headingSub">業界のスタンダードとして</p>
+    <p class="category-lead__text--headingSub"><?php _e('業界のスタンダードとして', 'category-jewelry'); ?></p>
     <p
-      class="category-lead__text--description">ジュエリーキャストにおいて、知名度かつ豊富な実績のあるFreemanの各種ワックス、及び、R&Rの埋没材で、お客様のニーズに応えます。その他、シリコーンゴム等の関連材、小型鋳造装置などもお任せ下さい。</p>
+      class="category-lead__text--description"><?php _e('ジュエリーキャストにおいて、知名度かつ豊富な実績のあるFreemanの各種ワックス、及び、R&Rの埋没材で、お客様のニーズに応えます。その他、シリコーンゴム等の関連材、小型鋳造装置などもお任せ下さい。', 'category-jewelry'); ?></p>
   </div>
   <div class="category-lead__image">
     <picture>
@@ -17,10 +17,10 @@
 <div class="category-children right-text">
   <div class="category-children__top">
     <div class="category-children__top--text">
-      <h3 class="label">インジェクションWAX</h3>
-      <p class="title">優れた流動性と再現性</p>
+      <h3 class="label"><?php _e('インジェクションWAX', 'category-jewelry'); ?></h3>
+      <p class="title"><?php _e('優れた流動性と再現性', 'category-jewelry'); ?></p>
       <p
-        class="description">Freemanのインジェクションワックスは、その高い品質で、40年以上に渡り、ジュエリー業界のスタンダードとなっています。流動性に優れ、再現性が高く、低収縮なのが特徴です。また、灰分が少ないため、クリーンな焼成が可能です。プラチナ・金・銀・銅・真鍮のジュエリーキャストの他、工業用・歯科技工用にも使用できます。</p>
+        class="description"><?php _e('Freemanのインジェクションワックスは、その高い品質で、40年以上に渡り、ジュエリー業界のスタンダードとなっています。流動性に優れ、再現性が高く、低収縮なのが特徴です。また、灰分が少ないため、クリーンな焼成が可能です。プラチナ・金・銀・銅・真鍮のジュエリーキャストの他、工業用・歯科技工用にも使用できます。', 'category-jewelry'); ?></p>
     </div>
     <div class="category-children__top--image">
       <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/children-1.png" alt=""
@@ -42,10 +42,10 @@
 <div class="category-children left-text">
   <div class="category-children__top">
     <div class="category-children__top--text">
-      <h3 class="label">カービングWAX</h3>
-      <p class="title">あらゆるジュエリー<br />パターンの作製が可能</p>
+      <h3 class="label"><?php _e('カービングWAX', 'category-jewelry'); ?></h3>
+      <p class="title"><?php _e('あらゆるジュエリー<br />パターンの作製が可能', 'category-jewelry'); ?></p>
       <p
-        class="description">Freemanのカービングワックス 「Ferris File-A-Wax」は、ジュエリーキャストにおいて、長年の実績とともに、高い信頼性があります。クラシックブルー・パープル・グリーン・ゴールド・オレンジ・ターコイズの全6種類があり、パターンメイキングにおける様々なニーズに対応可能です。</p>
+        class="description"><?php _e('Freemanのカービングワックス 「Ferris File-A-Wax」は、ジュエリーキャストにおいて、長年の実績とともに、高い信頼性があります。クラシックブルー・パープル・グリーン・ゴールド・オレンジ・ターコイズの全6種類があり、パターンメイキングにおける様々なニーズに対応可能です。', 'category-jewelry'); ?></p>
     </div>
     <div class="category-children__top--image">
       <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/children-2.png" alt=""
@@ -67,10 +67,10 @@
 <div class="category-children right-text">
   <div class="category-children__top">
     <div class="category-children__top--text">
-      <h3 class="label">埋没材</h3>
-      <p class="title">高品質な<br />ジュエリーキャスト</p>
+      <h3 class="label"><?php _e('埋没材', 'category-jewelry'); ?></h3>
+      <p class="title"><?php _e('高品質な<br />ジュエリーキャスト', 'category-jewelry'); ?></p>
       <p
-        class="description">プラチナ・金・銀・銅・真鍮・ステンレスの各種地金に対応する埋没材を取り揃えています。また、ワックスのみならず、RP素材をパターンとして、そのまま使用できる埋没材もあります。R&Rの埋没材は、世界のトップブランドとして、長年にわたり皆様から愛用されています。</p>
+        class="description"><?php _e('プラチナ・金・銀・銅・真鍮・ステンレスの各種地金に対応する埋没材を取り揃えています。また、ワックスのみならず、RP素材をパターンとして、そのまま使用できる埋没材もあります。R&Rの埋没材は、世界のトップブランドとして、長年にわたり皆様から愛用されています。', 'category-jewelry'); ?></p>
     </div>
     <div class="category-children__top--image">
       <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/children-3.png" alt=""
@@ -92,10 +92,10 @@
 <div class="category-children left-text">
   <div class="category-children__top">
     <div class="category-children__top--text">
-      <h3 class="label">シリコーン</h3>
-      <p class="title">デザインに忠実・高精度<br />に再現可能</p>
+      <h3 class="label"><?php _e('シリコーン', 'category-jewelry'); ?></h3>
+      <p class="title"><?php _e('デザインに忠実・高精度<br />に再現可能', 'category-jewelry'); ?></p>
       <p
-        class="description">イタリアのZhermack社は、製品開発力と厳格な生産管理で知られており、そのシリコーン製品は卓越したパフォーマンスを発揮します。その用途は幅広く、一般型取り・真空バッグ・ジュエリー・特殊効果・人体模型などで活用されています。お客様のご用途・ニーズに沿った最良のソリューションを提供します。</p>
+        class="description"><?php _e('イタリアのZhermack社は、製品開発力と厳格な生産管理で知られており、そのシリコーン製品は卓越したパフォーマンスを発揮します。その用途は幅広く、一般型取り・真空バッグ・ジュエリー・特殊効果・人体模型などで活用されています。お客様のご用途・ニーズに沿った最良のソリューションを提供します。', 'category-jewelry'); ?></p>
     </div>
     <div class="category-children__top--image">
       <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/children-4.png" alt=""
@@ -117,10 +117,10 @@
   <table>
     <thead>
       <tr>
-        <th>用途</th>
-        <th>製品名</th>
-        <th>色</th>
-        <th>硬度</th>
+        <th><?php _e('用途', 'category-jewelry'); ?></th>
+        <th><?php _e('製品名', 'category-jewelry'); ?></th>
+        <th><?php _e('色', 'category-jewelry'); ?></th>
+        <th><?php _e('硬度', 'category-jewelry'); ?></th>
         <th>WT<br />(@23℃)</th>
         <th>ST<br />(@23℃)</th>
         <th>Tear B<br />(N/mm)</th>
@@ -129,7 +129,7 @@
     </thead>
     <tbody>
       <tr>
-        <td rowspan="5" class="common">型取り用</td>
+        <td rowspan="5" class="common"><?php _e('型取り用', 'category-jewelry'); ?></td>
         <td>
           <figure>
             <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-1.png" alt=""
@@ -137,7 +137,7 @@
             <figcaption>HT 33 Transparent</figcaption>
           </figure>
         </td>
-        <td>半透明</td>
+        <td><?php _e('半透明', 'category-jewelry'); ?></td>
         <td>33</td>
         <td>20'</td>
         <td>3h30'</td>
@@ -186,7 +186,7 @@
             <figcaption>HT 45 Transparent</figcaption>
           </figure>
         </td>
-        <td>半透明</td>
+        <td><?php _e('半透明', 'category-jewelry'); ?></td>
         <td>43</td>
         <td>12'</td>
         <td>2h30'</td>
@@ -218,9 +218,9 @@
   <div class="category-children__top">
     <div class="category-children__top--text">
       <h3 class="label">Matt Products</h3>
-      <p class="title">プロセスの最適化と<br />品質向上</p>
+      <p class="title"><?php _e('プロセスの最適化と<br />品質向上', 'category-jewelry'); ?></p>
       <p
-        class="description">Matt 製品 を使用することで、モデリングプロセスの効率化、高品質なモデルメイキングが可能となります。カービングワックス、ツール、教材は、プロセスの最適化、作業効率の向上を念頭に、最適化設計されています。ジュエリーデザイナー・モデルメーカーの皆様から喜ばれる最適解を提案いたします。</p>
+        class="description"><?php _e('Matt 製品 を使用することで、モデリングプロセスの効率化、高品質なモデルメイキングが可能となります。カービングワックス、ツール、教材は、プロセスの最適化、作業効率の向上を念頭に、最適化設計されています。ジュエリーデザイナー・モデルメーカーの皆様から喜ばれる最適解を提案いたします。', 'category-jewelry'); ?></p>
     </div>
     <div class="category-children__top--image">
       <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/children-5.png" alt=""
@@ -241,11 +241,11 @@
 <!-- category-related -->
 <div class="category-related">
   <div class="products">
-    <h4>関連商品一覧</h4>
+    <h4><?php _e('関連商品一覧', 'category-jewelry'); ?></h4>
     <?php do_shortcode('[product category="jewelry" count="4" orderby="rand" layout="column"]'); ?>
   </div>
   <div class="articles">
-    <h4>関連NEWS</h4>
+    <h4><?php _e('関連NEWS', 'category-jewelry'); ?></h4>
     <?php do_shortcode('[post category="jewelry" count="6" orderby="rand" layout="column"]'); ?>
     <div class="view-all">
       <a href="#" class="button-arrow button-line arrow-wrap">

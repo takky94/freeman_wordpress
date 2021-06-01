@@ -65,16 +65,26 @@
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">M<span class="c-main">O</span>LD</p>
                   <ul class="js-accordionContent">
-                    <li><a href="<?= home_url(); ?>/mold/discharge" class="c-white c-trans-red">デザイン吐出</a></li>
-                    <li><a href="<?= home_url(); ?>/mold/cutting" class="c-white c-trans-red">デザイン切削</a></li>
-                    <li><a href="<?= home_url(); ?>/mold/casting" class="c-white c-trans-red">試作注型樹脂</a></li>
-                    <li><a href="<?= home_url(); ?>/mold/mold_material" class="c-white c-trans-red">試作型材</a></li>
-                    <li><a href="<?= home_url(); ?>/mold/silicone" class="c-white c-trans-red">試作シリコン</a></li>
-                    <li><a href="<?= home_url(); ?>/mold/invar" class="c-white c-trans-red">量産インバー</a></li>
-                    <li><a href="<?= home_url(); ?>/mold/" class="c-white c-trans-red">量産砂型鋳造</a></li>
-                    <li><a href="<?= home_url(); ?>/mold/" class="c-white c-trans-red">量産精密鋳造</a></li>
-                    <li><a href="<?= home_url(); ?>/mold/" class="c-white c-trans-red">量産ジュエリー</a></li>
-                    <li><a href="<?= home_url(); ?>/mold/" class="c-white c-trans-red">特殊</a></li>
+                    <li><a href="<?= home_url(); ?>/mold/discharge"
+                        class="c-white c-trans-red"><?php _e('デザイン吐出','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/mold/cutting"
+                        class="c-white c-trans-red"><?php _e('デザイン切削','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/mold/casting"
+                        class="c-white c-trans-red"><?php _e('試作注型樹脂','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/mold/mold_material"
+                        class="c-white c-trans-red"><?php _e('試作型材','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/mold/silicone"
+                        class="c-white c-trans-red"><?php _e('試作シリコン','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/mold/invar"
+                        class="c-white c-trans-red"><?php _e('量産インバー','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/mold/"
+                        class="c-white c-trans-red"><?php _e('量産砂型鋳造','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/mold/"
+                        class="c-white c-trans-red"><?php _e('量産精密鋳造','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/mold/"
+                        class="c-white c-trans-red"><?php _e('量産ジュエリー','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/mold/" class="c-white c-trans-red"><?php _e('特殊','header'); ?></a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -86,12 +96,15 @@
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">S<span class="c-main">A</span>ND CASTING</p>
                   <ul class="js-accordionContent">
-                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red">鋳造用フィルター</a></li>
-                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red">スリープ</a></li>
-                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red">方案用ゲート</a></li>
-                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red">非鉄用塗型</a></li>
-                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red">各種対火物</a></li>
-                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red">アルミ原材料</a></li>
+                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('鋳造用フィルター','header'); ?></a>
+                    </li>
+                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('スリープ','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('方案用ゲート','header'); ?></a>
+                    </li>
+                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('非鉄用塗型','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('各種対火物','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('アルミ原材料','header'); ?></a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -104,14 +117,17 @@
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">INVE<span class="c-main">S</span>TMENT CASTING</p>
                   <ul class="js-accordionContent">
-                    <li><a href="<?= home_url(); ?>/investment_casting/wax" class="c-white c-trans-red">WAX</a></li>
+                    <li><a href="<?= home_url(); ?>/investment_casting/wax"
+                        class="c-white c-trans-red"><?php _e('WAX','header'); ?></a></li>
                     <li><a href="<?= home_url(); ?>/investment_casting/parting_powder"
-                        class="c-white c-trans-red">離散型・洗浄剤</a></li>
-                    <li><a href="<?= home_url(); ?>/investment_casting/binder" class="c-white c-trans-red">バインダー</a>
+                        class="c-white c-trans-red"><?php _e('離散型・洗浄剤','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/investment_casting/binder"
+                        class="c-white c-trans-red"><?php _e('バインダー','header'); ?></a>
                     </li>
                     <li><a href="<?= home_url(); ?>/investment_casting/refractory_material"
-                        class="c-white c-trans-red">砂</a></li>
-                    <li><a href="<?= home_url(); ?>/investment_casting/others" class="c-white c-trans-red">その他</a></li>
+                        class="c-white c-trans-red"><?php _e('砂','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/investment_casting/others"
+                        class="c-white c-trans-red"><?php _e('その他','header'); ?></a></li>
                   </ul>
                 </div>
               </div>
@@ -123,12 +139,17 @@
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">JE<span class="c-main">W</span>ELRY</p>
                   <ul class="js-accordionContent">
-                    <li><a href="<?= home_url(); ?>/jewelry/injection_wax" class="c-white c-trans-red">インジェクションWAX</a>
+                    <li><a href="<?= home_url(); ?>/jewelry/injection_wax"
+                        class="c-white c-trans-red"><?php _e('インジェクションWAX','header'); ?></a>
                     </li>
-                    <li><a href="<?= home_url(); ?>/jewelry/carving_wax" class="c-white c-trans-red">切削WAX</a></li>
-                    <li><a href="<?= home_url(); ?>/jewelry/investing_material" class="c-white c-trans-red">埋没材</a></li>
-                    <li><a href="<?= home_url(); ?>/jewelry/" class="c-white c-trans-red">シリコン</a></li>
-                    <li><a href="<?= home_url(); ?>/jewelry/matt_tool" class="c-white c-trans-red">ツールマット</a></li>
+                    <li><a href="<?= home_url(); ?>/jewelry/carving_wax"
+                        class="c-white c-trans-red"><?php _e('切削WAX','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/jewelry/investing_material"
+                        class="c-white c-trans-red"><?php _e('埋没材','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/jewelry/"
+                        class="c-white c-trans-red"><?php _e('シリコン','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/jewelry/matt_tool"
+                        class="c-white c-trans-red"><?php _e('ツールマット','header'); ?></a></li>
                   </ul>
                 </div>
               </div>
@@ -140,28 +161,34 @@
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">NE<span class="c-main">W</span> FIELD</p>
                   <ul class="js-accordionContent">
-                    <li><a href="#" class="c-white c-trans-red">消臭剤</a></li>
-                    <li><a href="#" class="c-white c-trans-red">ミネラルキャスティング</a></li>
-                    <li><a href="#" class="c-white c-trans-red">CO2洗浄システム</a></li>
-                    <li><a href="#" class="c-white c-trans-red">ホットメルト</a></li>
-                    <li><a href="#" class="c-white c-trans-red">暑さ対策</a></li>
-                    <li><a href="#" class="c-white c-trans-red">電動アシスト台車</a></li>
-                    <li class="grow"><a href="#" class="c-white c-trans-red">ベアリングセンサーシステム</a></li>
+                    <li><a href="#" class="c-white c-trans-red"><?php _e('消臭剤','header'); ?></a></li>
+                    <li><a href="#" class="c-white c-trans-red"><?php _e('ミネラルキャスティング','header'); ?></a></li>
+                    <li><a href="#" class="c-white c-trans-red"><?php _e('CO2洗浄システム','header'); ?></a></li>
+                    <li><a href="#" class="c-white c-trans-red"><?php _e('ホットメルト','header'); ?></a></li>
+                    <li><a href="#" class="c-white c-trans-red"><?php _e('暑さ対策','header'); ?></a></li>
+                    <li><a href="#" class="c-white c-trans-red"><?php _e('電動アシスト台車','header'); ?></a></li>
+                    <li class="grow"><a href="#" class="c-white c-trans-red"><?php _e('ベアリングセンサーシステム','header'); ?></a>
+                    </li>
                   </ul>
                 </div>
               </div>
             </li>
             <li>
-              <a href="<?= home_url(); ?>/company" class="js-accordion" data-subtitle="COMPANY">会社概要</a>
+              <a href="<?= home_url(); ?>/company" class="js-accordion"
+                data-subtitle="COMPANY"><?php _e('会社概要','header'); ?></a>
               <div class="sub">
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">CO<span class="c-main">M</span>PANY</p>
                   <ul class="js-accordionContent">
-                    <li><a href="<?= home_url(); ?>/company#philosophy" class="c-white c-trans-red">理念</a></li>
-                    <li><a href="<?= home_url(); ?>/company#infographic" class="c-white c-trans-red">数字で見る日本フリーマン</a>
+                    <li><a href="<?= home_url(); ?>/company#philosophy"
+                        class="c-white c-trans-red"><?php _e('理念','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/company#infographic"
+                        class="c-white c-trans-red"><?php _e('数字で見る日本フリーマン','header'); ?></a>
                     </li>
-                    <li><a href="<?= home_url(); ?>/company#greeting" class="c-white c-trans-red">社長挨拶</a></li>
-                    <li><a href="<?= home_url(); ?>/company#overview" class="c-white c-trans-red">会社概要</a></li>
+                    <li><a href="<?= home_url(); ?>/company#greeting"
+                        class="c-white c-trans-red"><?php _e('社長挨拶','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/company#overview"
+                        class="c-white c-trans-red"><?php _e('会社概要','header'); ?></a></li>
                   </ul>
                 </div>
               </div>
