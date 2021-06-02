@@ -56,9 +56,10 @@
           <div class="swiper-wrapper">
             <?php if (!empty($news)): foreach ($news as $post): setup_postdata($post); ?>
             <div class="swiper-slide">
-              <time class="hero__news--date" datetime="<?php the_time('Y-m-d') ?>"><?php the_time('Y/m/d') ?></time>
-              <a href="<?php the_permalink();?>"
-                class="hero__news--postTitle c-white c-trans-red"><?= wp_trim_words(get_the_title(), 20); ?></a>
+              <a href="<?php the_permalink();?>" class="hero__news--postTitle c-white c-trans-red">
+                <time class="hero__news--date" datetime="<?php the_time('Y-m-d') ?>"><?php the_time('Y/m/d') ?></time>
+                <?= wp_trim_words(get_the_title(), 20); ?>
+              </a>
             </div>
             <?php endforeach; endif; wp_reset_postdata(); ?>
           </div>

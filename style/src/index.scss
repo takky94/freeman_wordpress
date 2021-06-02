@@ -124,6 +124,10 @@ $slide-count-new_field: 2;
       padding: 25px 50px;
       position: absolute;
       z-index: 1;
+      .swiper-news-container{
+        max-width: 400px;
+        overflow: hidden;
+      }
       @media (max-width: 800px) {
         min-width: inherit;
         width: 100%;

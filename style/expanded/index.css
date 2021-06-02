@@ -1542,6 +1542,11 @@
   z-index: 1;
 }
 
+#index .hero__news .swiper-news-container {
+  max-width: 400px;
+  overflow: hidden;
+}
+
 @media (max-width: 800px) {
   #index .hero__news {
     min-width: inherit;
