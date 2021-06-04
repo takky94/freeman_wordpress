@@ -254,6 +254,9 @@ $root-path: "../..";
     @extend .entry-header__title;
     font-size: 18px;
     font-weight: bold;
+    @media (max-width: $sp) {
+      bottom: calc(#{$blank-bg-white-heightSp} + 21px + 15px); // ずらした白背景レイアウト部分 + ぱんくず + 余白
+    }
   }
 
   // ぱんくず

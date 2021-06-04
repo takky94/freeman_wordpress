@@ -362,6 +362,12 @@
   font-weight: bold;
 }
 
+@media (max-width: 768px) {
+  .contact-header .entry-header__titleSub {
+    bottom: calc(50px + 21px + 15px);
+  }
+}
+
 .contact-header .breadcrumb ul li:not(:first-child)::before {
   color: #000;
 }
