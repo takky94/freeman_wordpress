@@ -124,7 +124,7 @@ $slide-count-new_field: 2;
       padding: 25px 50px;
       position: absolute;
       z-index: 1;
-      .swiper-news-container{
+      .swiper-news-container {
         max-width: 400px;
         overflow: hidden;
       }
@@ -147,13 +147,15 @@ $slide-count-new_field: 2;
         }
       }
       &--postTitle {
-        margin-left: 5px;
         @media (max-width: $sp) {
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
           width: 60%;
         }
+      }
+      &--postTitle span {
+        margin-left: 5px;
       }
       &--link {
         @media (min-width: $tab) {

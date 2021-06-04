@@ -62,7 +62,7 @@
   // お知らせ部分のスライド
   const slideNewsShow = new Swiper(".swiper-news-container", {
     autoplay: {
-      delay: 60000,
+      delay: 6000,
       stopOnLastSlide: false,
       disableOnInteraction: false,
       reverseDirection: false,

@@ -58,7 +58,7 @@
             <div class="swiper-slide">
               <a href="<?php the_permalink();?>" class="hero__news--postTitle c-white c-trans-red">
                 <time class="hero__news--date" datetime="<?php the_time('Y-m-d') ?>"><?php the_time('Y/m/d') ?></time>
-                <?= wp_trim_words(get_the_title(), 20); ?>
+                <span><?= wp_trim_words(get_the_title(), 20); ?></span>
               </a>
             </div>
             <?php endforeach; endif; wp_reset_postdata(); ?>

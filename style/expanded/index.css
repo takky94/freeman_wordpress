@@ -1575,10 +1575,6 @@
   }
 }
 
-#index .hero__news--postTitle {
-  margin-left: 5px;
-}
-
 @media (max-width: 768px) {
   #index .hero__news--postTitle {
     overflow: hidden;
@@ -1586,6 +1582,10 @@
     white-space: nowrap;
     width: 60%;
   }
+}
+
+#index .hero__news--postTitle span {
+  margin-left: 5px;
 }
 
 @media (min-width: 769px) {
