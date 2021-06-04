@@ -1,11 +1,95 @@
+/* /newsページのタブ
+--------------------------------------------------------------------------------------------*/
+
+@import "./config";
+
+// タブの数
+$tabs-count: 6;
+
 .archive-tabs {
+  @media (max-width: $sp) {
+    margin-top: 10px;
+  }
+
   ul {
-    display: flex;
+    display: inline-block;
+    font-size: 0; // li inline-blockの隙間埋める
+    position: relative;
+    @media (max-width: $pc) {
+      display: block;
+    }
+    @media (min-width: $tab) {
+      &::after {
+        background: center / contain url(../../images/archive/lineX.svg) no-repeat;
+        bottom: 0;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
 
     li {
+      display: inline-block;
+      font-size: 16px;
+      height: 90px;
+      line-height: 90px;
+      position: relative;
+      text-align: center;
+      width: 170px;
+      @media (max-width: $pc) {
+        width: calc(100% / #{$tabs-count});
+      }
+      @media (max-width: $sp) {
+        font-size: 12px;
+        height: 60px;
+        line-height: 60px;
+        width: calc(100% / 2);
+      }
+
+      // ボタン部分
       a {
         display: block;
-        padding: 2em;
+      }
+      // 横のライン(最初とactiveなものには付与しない)
+      &:not(:first-of-type):not(.active)::before {
+        background: center / contain url(../../images/archive/lineY.svg) no-repeat;
+        content: "";
+        display: inline-block;
+        height: 90%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 1px;
+        @media (max-width: $sp) {
+          bottom: 0;
+          height: 60%;
+          margin: auto;
+        }
+      }
+      @media (max-width: $sp) {
+        &:first-of-type::before,
+        &:nth-of-type(2n):not(.active)::after {
+          background: center / contain url(../../images/archive/lineY.svg) no-repeat;
+          bottom: 0;
+          content: "";
+          display: inline-block;
+          height: 60%;
+          left: 0;
+          margin: auto;
+          position: absolute;
+          top: 0;
+          width: 1px;
+        }
+        &:nth-of-type(2n):not(.active)::after {
+          left: inherit;
+          right: 0;
+        }
+        &:not(:first-of-type):not(:nth-of-type(2)) {
+          border-top: 1px solid $c-lightgray;
+        }
       }
 
       &.active {

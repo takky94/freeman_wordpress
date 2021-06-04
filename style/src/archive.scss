@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* Archive(記事ページ以外)
+/* /news
 --------------------------------------------------------------------------------------------*/
 
 @import "./@import/config";
@@ -9,17 +9,27 @@
 @import "./@import/pagenavi";
 @import "./@import/post-card";
 
+// 記事とアイキャッチの余白
+$gapPc: 30px;
+// 記事とアイキャッチの左部分余白
+$gapSp: 20px;
+
 .news {
   &__large {
     margin-left: -100px;
     margin-top: 90px;
+    @media (max-width: $pc) {
+      margin-left: 0;
+    }
+    @media (max-width: $sp) {
+      margin: 20px 0 0 0;
+    }
   }
-
   &__2col {
-    display: flex;
-    margin-top: 80px;
-
     @media (min-width: $tab) {
+      display: flex;
+      margin-top: 80px;
+
       .news__2col--left,
       .news__2col--right {
         width: 45%;
@@ -35,14 +45,32 @@
         margin-left: 80px;
         order: 2;
       }
+    } // PCの__2col
+
+    @media (max-width: $sp) {
+      margin-top: 20px;
+    }
+  }
+  &__middle {
+    @media (max-width: $sp) {
+      border-top: 1px solid $c-lightgray;
+      margin-top: $gapSp;
+      padding-top: $gapSp;
     }
   }
 
   &__small {
-    &:not(:first-of-type) {
+    @media (min-width: $tab) {
+      &:not(:first-of-type) {
+        border-top: 1px solid $c-lightgray;
+        margin-top: $gapPc;
+        padding-top: $gapPc;
+      }
+    }
+    @media (max-width: $sp) {
       border-top: 1px solid $c-lightgray;
-      margin-top: 30px;
-      padding-top: 30px;
+      margin-top: $gapSp;
+      padding-top: $gapSp;
     }
   }
 }

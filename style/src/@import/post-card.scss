@@ -2,7 +2,15 @@
 --------------------------------------------------------------------------------------------*/
 
 @import "./config";
+// アニメーションにかかる時間
 $post-animation-duration: 0.2s;
+// 記事とアイキャッチの余白
+$gapPc: 30px;
+// 記事とアイキャッチの左部分余白
+$gapSp: 20px;
+// 記事タイトル文字サイズ
+$textSizeSp: 18px;
+
 // style/compressed/article.min.cssからのrootへの相対
 $root-path: "../..";
 
@@ -34,55 +42,105 @@ $root-path: "../..";
     &__date {
       color: $c-gray;
     }
+  } // meta
+
+  @media (max-width: $sp) {
+    display: flex;
+    width: 100%;
+
+    .thumbail {
+      max-width: 40%;
+      img {
+        max-width: 200px;
+        width: 100%;
+      }
+    }
+    .content {
+      flex-grow: 1;
+      margin-left: $gapSp;
+      padding-bottom: 15px;
+      position: relative;
+      width: 60%;
+      .meta {
+        &__label {
+          max-width: 180px;
+          min-width: inherit;
+          width: 100%;
+          span {
+            font-size: 10px;
+            padding: 4px;
+          }
+        }
+        &__date {
+          bottom: 0;
+          font-size: 10px;
+          line-height: 15px;
+          position: absolute;
+          right: 0;
+        }
+      }
+      .title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+    }
+  } // media
+}
+
+// /newsページ一つ目の大きめなカード
+@media (min-width: $tab) {
+  .post-card-large {
+    display: flex;
+    width: 100%;
+
+    img {
+      @media (min-width: $tab) {
+        max-width: 680px;
+        width: 100%;
+      }
+    }
+
+    .content {
+      flex-grow: 1;
+      max-width: 580px;
+      padding: 50px 0 0 80px;
+      width: 100%;
+    }
+
+    .title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .description {
+      margin-top: 60px;
+    }
   }
 }
 
-.post-card-large {
-  display: flex;
-  width: 100%;
+// /newsページの中くらいのサイズ
+@media (min-width: $tab) {
+  .post-card-middle {
+    img {
+      margin: auto;
+      width: 100%;
+    }
 
-  img {
-    max-width: 680px;
-    width: 100%;
-  }
+    .meta {
+      margin-top: 20px;
+    }
 
-  .content {
-    flex-grow: 1;
-    max-width: 580px;
-    padding: 50px 0 0 80px;
-    width: 100%;
-  }
+    .title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
 
-  .title {
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 20px;
-  }
-
-  .description {
-    margin-top: 60px;
-  }
-}
-
-// 中サイズ
-.post-card-middle {
-  img {
-    margin: auto;
-    width: 100%;
-  }
-
-  .meta {
-    margin-top: 20px;
-  }
-
-  .title {
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 20px;
-  }
-
-  .description {
-    margin-top: 60px;
+    .description {
+      margin-top: 60px;
+    }
   }
 }
 
@@ -91,7 +149,10 @@ $root-path: "../..";
 
   .content {
     flex-grow: 1;
-    margin-left: 30px;
+    margin-left: $gapPc;
+    @media (max-width: $sp) {
+      margin-left: $gapSp;
+    }
   }
 
   .title {
@@ -142,7 +203,7 @@ $root-path: "../..";
         }
         .content {
           flex-grow: 1;
-          margin-left: 30px;
+          margin-left: $gapPc;
         }
         .date {
           color: $c-gray;
@@ -190,7 +251,7 @@ $root-path: "../..";
 .post-card-product {
   .title {
     @media (min-width: $tab) {
-      margin-top: 30px;
+      margin-top: $gapPc;
     }
   }
   .more {
@@ -374,7 +435,7 @@ $root-path: "../..";
           .title,
           .description,
           .more {
-            margin-top: 30px;
+            margin-top: $gapPc;
           }
         }
       }
