@@ -67,7 +67,7 @@
         <a href="<?= get_post_type_archive_link('news'); ?>" class="hero__news--link c-white c-trans-red sp__none">
           <?php _e('お知らせ一覧','top'); ?><?php get_template_part('/parts/icon/arrow'); ?>
         </a>
-        <a href="#" class="hero__news--link c-main-bg pc__none">
+        <a href="<?= get_post_type_archive_link('news'); ?>" class="hero__news--link c-main-bg pc__none">
           <?php get_template_part('/parts/icon/arrow'); ?>
         </a>
       </div>

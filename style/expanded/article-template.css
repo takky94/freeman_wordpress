@@ -4,9 +4,15 @@
 /* entry-header(single/page)
 --------------------------------------------------------------------------------------------*/
 .entry-header {
-  height: 300px;
+  height: calc(180px + 120px);
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .entry-header {
+    height: calc(180px + 50px);
+  }
 }
 
 .entry-header .container {
@@ -14,12 +20,19 @@
 }
 
 .entry-header__title, .contact-header .entry-header__titleSub {
-  bottom: calc(120px + 21px + 25px + 14px);
+  bottom: calc( 120px + 21px + 25px + 14px);
   color: #000;
   font-size: 34px;
   max-width: 800px;
   position: absolute;
   word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .entry-header__title, .contact-header .entry-header__titleSub {
+    bottom: calc( 50px + 21px + 25px + 14px);
+    font-size: 28px;
+  }
 }
 
 .entry-header .breadcrumb {
@@ -28,6 +41,13 @@
   left: -120px;
   position: absolute;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .entry-header .breadcrumb {
+    bottom: calc(50px + 15px);
+    left: -2.5%;
+  }
 }
 
 .entry-header .breadcrumb ul {
@@ -75,13 +95,25 @@
 .contact-header::before,
 .search-header::before,
 .notfound-header::before {
-  bottom: 110px;
+  bottom: calc(120px - 10px);
   color: #dce5f0;
   display: inline-block;
   font: bold 180px "Roboto Condensed", sans-serif;
   line-height: 1;
   position: absolute;
   right: 0;
+}
+
+@media (max-width: 768px) {
+  .news-header::before,
+  .company-header::before,
+  .category-header::before,
+  .contact-header::before,
+  .search-header::before,
+  .notfound-header::before {
+    bottom: calc(50px - 10px);
+    font-size: 90px;
+  }
 }
 
 .news-header::after,
@@ -99,6 +131,18 @@
   position: absolute;
   width: 100%;
   z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .news-header::after,
+  .company-header::after,
+  .category-header::after,
+  .contact-header::after,
+  .search-header::after,
+  .notfound-header::after {
+    height: 50px;
+    left: -2.5%;
+  }
 }
 
 .news-header .entry-header__title, .news-header .contact-header .entry-header__titleSub, .contact-header .news-header .entry-header__titleSub,
@@ -217,6 +261,13 @@
   opacity: 0.4;
 }
 
+@media (max-width: 768px) {
+  .news-header::before {
+    bottom: calc(50px - 20px);
+    opacity: 0.3;
+  }
+}
+
 .contact-header {
   background: #fff;
 }
@@ -225,6 +276,13 @@
   bottom: 65px;
   content: "CONTACT";
   opacity: 0.4;
+}
+
+@media (max-width: 768px) {
+  .contact-header::before {
+    bottom: calc(50px - 20px);
+    opacity: 0.3;
+  }
 }
 
 .contact-header::after {

@@ -63,7 +63,11 @@
 
 /* Post Card
 --------------------------------------------------------------------------------------------*/
-.post-card .meta {
+.post-card .content .description {
+  word-break: break-all;
+}
+
+.post-card .content .meta {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -75,14 +79,14 @@
           justify-content: space-between;
 }
 
-.post-card .meta__label {
+.post-card .content .meta__label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   min-width: 180px;
 }
 
-.post-card .meta__label span {
+.post-card .content .meta__label span {
   color: #fff;
   font-size: 14px;
   padding: 6px;
@@ -90,15 +94,15 @@
   width: 50%;
 }
 
-.post-card .meta__label--new {
+.post-card .content .meta__label--new {
   background: #96a8be;
 }
 
-.post-card .meta__label--category {
+.post-card .content .meta__label--category {
   background: #000;
 }
 
-.post-card .meta__date {
+.post-card .content .meta__date {
   color: #96a8be;
 }
 
@@ -145,6 +149,9 @@
     font-size: 16px;
     font-weight: bold;
     margin-top: 10px;
+  }
+  .post-card .content .description {
+    display: none;
   }
 }
 
@@ -224,6 +231,10 @@
   font-size: 18px;
   font-weight: bold;
   margin-top: 10px;
+}
+
+.post-card-small .description {
+  display: none;
 }
 
 .post-card-wide .title {

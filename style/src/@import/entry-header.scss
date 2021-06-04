@@ -3,13 +3,25 @@
 
 @import "./config";
 
+//
+$entry-header-height: 180px;
+$blank-bg-white-heightPc: 120px;
+$blank-bg-white-heightSp: 50px;
+$blank-bg-white-positionPc: -120px;
+$blank-bg-white-positionSp: -2.5%; // containerの余白に合わせる
+$breadList-gapPc: 25px;
+$breadList-gapSp: 15px;
+
 // style/compressed/main.min.cssからのrootへの相対
 $root-path: "../..";
 
 .entry-header {
-  height: 300px;
+  height: calc(#{$entry-header-height} + #{$blank-bg-white-heightPc});
   position: relative;
   z-index: 1;
+  @media (max-width: $sp) {
+    height: calc(#{$entry-header-height} + #{$blank-bg-white-heightSp});
+  }
 
   .container {
     height: 100%;
@@ -17,21 +29,34 @@ $root-path: "../..";
 
   // 記事タイトル
   &__title {
-    bottom: calc(120px + 21px + 25px + 14px); // ずらした白背景レイアウト部分 + ぱんくず + ぱんくず余白 + 余白
+    bottom: calc(
+    #{$blank-bg-white-heightPc} + 21px + #{$breadList-gapPc} + 14px
+    ); // ずらした白背景レイアウト部分 + ぱんくず + ぱんくず余白 + 余白
     color: #000;
     font-size: 34px;
     max-width: 800px;
     position: absolute;
     word-break: break-word;
+    @media (max-width: $sp) {
+      bottom: calc(
+      #{$blank-bg-white-heightSp} + 21px + #{$breadList-gapPc} + 14px
+      ); // ずらした白背景レイアウト部分 + ぱんくず + ぱんくず余白 + 余白
+      font-size: 28px;
+    }
   }
 
   // ぱんくず
   .breadcrumb {
-    bottom: calc(120px + 25px); // ずらした白背景レイアウト部分 + 余白
+    bottom: calc(#{$blank-bg-white-heightPc} + #{$breadList-gapPc}); // ずらした白背景レイアウト部分 + 余白
     height: calc(14px * 1.5); // font-size * 1.5 = 21
-    left: -120px;
+    left: $blank-bg-white-positionPc; // 白い余白部分に合わせる
     position: absolute;
     width: 100%;
+    @media (max-width: $sp) {
+      bottom: calc(#{$blank-bg-white-heightSp} + #{$breadList-gapSp}); // ずらした白背景レイアウト部分 + 余白
+      left: $blank-bg-white-positionSp;
+    }
+
     ul {
       display: flex;
       justify-content: flex-end; // 右寄せ
@@ -72,13 +97,17 @@ $root-path: "../..";
 
   // 薄い英字タイトル部分
   &::before {
-    bottom: 110px;
+    bottom: calc(#{$blank-bg-white-heightPc} - 10px); // 文字が背景に被るくらい
     color: $c-lightgray;
     display: inline-block;
     font: bold 180px "Roboto Condensed", sans-serif;
     line-height: 1;
     position: absolute;
     right: 0;
+    @media (max-width: $sp) {
+      bottom: calc(#{$blank-bg-white-heightSp} - 10px); // 文字が背景に被るくらい
+      font-size: 90px;
+    }
   }
 
   // ずらした白背景レイアウト部分
@@ -87,11 +116,15 @@ $root-path: "../..";
     bottom: 0;
     content: "";
     display: block;
-    height: 120px;
-    left: -120px;
+    height: $blank-bg-white-heightPc;
+    left: $blank-bg-white-positionPc;
     position: absolute;
     width: 100%;
     z-index: 2;
+    @media (max-width: $sp) {
+      height: $blank-bg-white-heightSp;
+      left: $blank-bg-white-positionSp;
+    }
   }
 
   // 記事タイトル
@@ -186,6 +219,10 @@ $root-path: "../..";
     bottom: 65px;
     content: "NEWS";
     opacity: 0.4;
+    @media (max-width: $sp) {
+      bottom: calc(#{$blank-bg-white-heightSp} - 20px);
+      opacity: 0.3;
+    }
   }
 }
 
@@ -197,6 +234,10 @@ $root-path: "../..";
     bottom: 65px;
     content: "CONTACT";
     opacity: 0.4;
+    @media (max-width: $sp) {
+      bottom: calc(#{$blank-bg-white-heightSp} - 20px);
+      opacity: 0.3;
+    }
   }
   // ずらした白背景レイアウト部分
   &::after {
@@ -208,7 +249,7 @@ $root-path: "../..";
     color: #000;
   }
   .entry-header__titleSub {
-    bottom: calc(120px + 14px); // ずらした白背景レイアウト部分 + 余白
+    bottom: calc(#{$blank-bg-white-heightPc} + 14px); // ずらした白背景レイアウト部分 + 余白
     color: #000;
     @extend .entry-header__title;
     font-size: 18px;

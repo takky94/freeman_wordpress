@@ -15,6 +15,6 @@
     <li <?php if ($category -> term_id == $term_id) echo 'class="active"'; ?>>
       <a href="<?= esc_url(get_category_link($category -> term_id)); ?>"><?= $category -> name; ?></a>
     </li>
-    <?php endforeach; ?>
+    <?php endforeach;wp_reset_query(); ?>
   </ul>
 </nav>

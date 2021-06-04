@@ -15,34 +15,39 @@ $textSizeSp: 18px;
 $root-path: "../..";
 
 .post-card {
-  .meta {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-
-    &__label {
+  .content {
+    .description {
+      word-break: break-all;
+    }
+    .meta {
+      align-items: center;
       display: flex;
-      min-width: 180px;
+      justify-content: space-between;
 
-      span {
-        color: #fff;
-        font-size: 14px;
-        padding: 6px;
-        text-align: center;
-        width: 50%;
-      }
-      &--new {
-        background: $c-gray;
-      }
-      &--category {
-        background: #000;
-      }
-    }
+      &__label {
+        display: flex;
+        min-width: 180px;
 
-    &__date {
-      color: $c-gray;
-    }
-  } // meta
+        span {
+          color: #fff;
+          font-size: 14px;
+          padding: 6px;
+          text-align: center;
+          width: 50%;
+        }
+        &--new {
+          background: $c-gray;
+        }
+        &--category {
+          background: #000;
+        }
+      }
+
+      &__date {
+        color: $c-gray;
+      }
+    } // meta
+  } // content
 
   @media (max-width: $sp) {
     display: flex;
@@ -83,6 +88,9 @@ $root-path: "../..";
         font-size: 16px;
         font-weight: bold;
         margin-top: 10px;
+      }
+      .description {
+        display: none;
       }
     }
   } // media
@@ -159,6 +167,10 @@ $root-path: "../..";
     font-size: 18px;
     font-weight: bold;
     margin-top: 10px;
+  }
+
+  .description {
+    display: none;
   }
 }
 
