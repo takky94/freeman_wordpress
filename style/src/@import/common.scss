@@ -171,7 +171,17 @@ hr {
     position: absolute;
     right: -10px;
     top: -4px;
+    transition: 0.3s all;
     width: 0;
+  }
+}
+
+.c-trans-red:hover {
+  .arrow {
+    background: $c-main;
+    &::after {
+      border-color: transparent transparent transparent $c-main;
+    }
   }
 }
 

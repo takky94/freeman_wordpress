@@ -566,6 +566,10 @@
           justify-content: space-between;
 }
 
+.products-link .column li {
+  width: calc(100% / 3);
+}
+
 @media (max-width: 768px) {
   .products-link .column li {
     width: 100%;

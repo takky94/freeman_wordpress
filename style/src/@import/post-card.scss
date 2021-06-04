@@ -165,6 +165,7 @@ $root-path: "../..";
     display: flex;
     justify-content: space-between;
     li {
+      width: calc(100% / 3);
       @media (max-width: $sp) {
         width: 100%;
       }

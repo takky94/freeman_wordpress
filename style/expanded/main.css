@@ -264,7 +264,17 @@ hr {
   position: absolute;
   right: -10px;
   top: -4px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
   width: 0;
+}
+
+.c-trans-red:hover .arrow {
+  background: #eb2936;
+}
+
+.c-trans-red:hover .arrow::after {
+  border-color: transparent transparent transparent #eb2936;
 }
 
 .arrow-wrap:hover .arrow {

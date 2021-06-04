@@ -239,6 +239,10 @@
           justify-content: space-between;
 }
 
+.products-link .column li {
+  width: calc(100% / 3);
+}
+
 @media (max-width: 768px) {
   .products-link .column li {
     width: 100%;
@@ -553,21 +557,27 @@
 /* スクロールしてから表示系アニメーションまとめ
 --------------------------------------------------------------------------------------------*/
 .js-scroll-fadeIn-block, .js-scroll-fadeIn-text,
+.js-scroll-fadeIn-image, .js-scroll-fadeIn-products li,
 .js-scroll-fadeIn-title,
-.js-scroll-fadeIn-text {
+.js-scroll-fadeIn-text,
+.js-scroll-fadeIn-products {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
 }
 
-.js-scroll-fadeIn-block, .js-scroll-fadeIn-text {
+.js-scroll-fadeIn-block, .js-scroll-fadeIn-text,
+.js-scroll-fadeIn-image, .js-scroll-fadeIn-products li {
   opacity: 0;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
-  -webkit-transition: 0.2s ease-out;
-  transition: 0.2s ease-out;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: 0.3s 0.2s ease-out;
+  transition: 0.3s 0.2s ease-out;
 }
 
-.js-scroll-fadeIn-block.started, .started.js-scroll-fadeIn-text {
+.js-scroll-fadeIn-block.started, .started.js-scroll-fadeIn-text,
+.started.js-scroll-fadeIn-image, .started .js-scroll-fadeIn-text,
+.started .js-scroll-fadeIn-image, .js-scroll-fadeIn-products li.started, .started .js-scroll-fadeIn-products li {
   opacity: 1;
   -webkit-transform: none;
           transform: none;
@@ -579,109 +589,109 @@
           transform: translate3d(0, 0, 0);
 }
 
-.js-scroll-fadeIn-title.started span {
-  -webkit-animation: scrollFadeIn 0.75s ease-out both;
-          animation: scrollFadeIn 0.75s ease-out both;
+.started .js-scroll-fadeIn-title span {
+  -webkit-animation: scrollFadeIn 0.5s ease-out both;
+          animation: scrollFadeIn 0.5s ease-out both;
 }
 
-.js-scroll-fadeIn-title.started span:nth-of-type(1) {
-  -webkit-animation-delay: 0.35s;
-          animation-delay: 0.35s;
-}
-
-.js-scroll-fadeIn-title.started span:nth-of-type(2) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-
-.js-scroll-fadeIn-title.started span:nth-of-type(3) {
-  -webkit-animation-delay: 0.45s;
-          animation-delay: 0.45s;
-}
-
-.js-scroll-fadeIn-title.started span:nth-of-type(4) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-
-.js-scroll-fadeIn-title.started span:nth-of-type(5) {
+.started .js-scroll-fadeIn-title span:nth-of-type(1) {
   -webkit-animation-delay: 0.55s;
           animation-delay: 0.55s;
 }
 
-.js-scroll-fadeIn-title.started span:nth-of-type(6) {
+.started .js-scroll-fadeIn-title span:nth-of-type(2) {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-.js-scroll-fadeIn-title.started span:nth-of-type(7) {
+.started .js-scroll-fadeIn-title span:nth-of-type(3) {
   -webkit-animation-delay: 0.65s;
           animation-delay: 0.65s;
 }
 
-.js-scroll-fadeIn-title.started span:nth-of-type(8) {
+.started .js-scroll-fadeIn-title span:nth-of-type(4) {
   -webkit-animation-delay: 0.7s;
           animation-delay: 0.7s;
 }
 
-.js-scroll-fadeIn-title.started span:nth-of-type(9) {
+.started .js-scroll-fadeIn-title span:nth-of-type(5) {
   -webkit-animation-delay: 0.75s;
           animation-delay: 0.75s;
 }
 
-.js-scroll-fadeIn-title.started span:nth-of-type(10) {
+.started .js-scroll-fadeIn-title span:nth-of-type(6) {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
 
-.js-scroll-fadeIn-title.started span:nth-of-type(11) {
+.started .js-scroll-fadeIn-title span:nth-of-type(7) {
   -webkit-animation-delay: 0.85s;
           animation-delay: 0.85s;
 }
 
-.js-scroll-fadeIn-title.started span:nth-of-type(12) {
+.started .js-scroll-fadeIn-title span:nth-of-type(8) {
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
 }
 
-.js-scroll-fadeIn-title.started span:nth-of-type(13) {
+.started .js-scroll-fadeIn-title span:nth-of-type(9) {
   -webkit-animation-delay: 0.95s;
           animation-delay: 0.95s;
 }
 
-.js-scroll-fadeIn-title.started span:nth-of-type(14) {
+.started .js-scroll-fadeIn-title span:nth-of-type(10) {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-.js-scroll-fadeIn-title.started span:nth-of-type(15) {
+.started .js-scroll-fadeIn-title span:nth-of-type(11) {
   -webkit-animation-delay: 1.05s;
           animation-delay: 1.05s;
 }
 
-.js-scroll-fadeIn-title.started span:nth-of-type(16) {
+.started .js-scroll-fadeIn-title span:nth-of-type(12) {
   -webkit-animation-delay: 1.1s;
           animation-delay: 1.1s;
 }
 
-.js-scroll-fadeIn-title.started span:nth-of-type(17) {
+.started .js-scroll-fadeIn-title span:nth-of-type(13) {
   -webkit-animation-delay: 1.15s;
           animation-delay: 1.15s;
 }
 
-.js-scroll-fadeIn-title.started span:nth-of-type(18) {
+.started .js-scroll-fadeIn-title span:nth-of-type(14) {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
 }
 
-.js-scroll-fadeIn-title.started span:nth-of-type(19) {
+.started .js-scroll-fadeIn-title span:nth-of-type(15) {
   -webkit-animation-delay: 1.25s;
           animation-delay: 1.25s;
 }
 
-.js-scroll-fadeIn-title.started span:nth-of-type(20) {
+.started .js-scroll-fadeIn-title span:nth-of-type(16) {
   -webkit-animation-delay: 1.3s;
           animation-delay: 1.3s;
+}
+
+.started .js-scroll-fadeIn-title span:nth-of-type(17) {
+  -webkit-animation-delay: 1.35s;
+          animation-delay: 1.35s;
+}
+
+.started .js-scroll-fadeIn-title span:nth-of-type(18) {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+.started .js-scroll-fadeIn-title span:nth-of-type(19) {
+  -webkit-animation-delay: 1.45s;
+          animation-delay: 1.45s;
+}
+
+.started .js-scroll-fadeIn-title span:nth-of-type(20) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 @-webkit-keyframes scrollFadeIn {
@@ -702,9 +712,32 @@
   }
 }
 
-.js-scroll-fadeIn-text {
-  -webkit-transition-delay: 1.3s;
-          transition-delay: 1.3s;
+.js-scroll-fadeIn-text,
+.js-scroll-fadeIn-image {
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+}
+
+.js-scroll-fadeIn-products li {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+
+@media (max-width: 768px) {
+  .js-scroll-fadeIn-products li {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+}
+
+.js-scroll-fadeIn-products li:nth-of-type(2) {
+  -webkit-transition-delay: 1.7s;
+          transition-delay: 1.7s;
+}
+
+.js-scroll-fadeIn-products li:nth-of-type(3) {
+  -webkit-transition-delay: 1.9s;
+          transition-delay: 1.9s;
 }
 
 /* TOPのスライドショーアニメーション
@@ -1891,11 +1924,31 @@
   opacity: 1 !important;
 }
 
+@media (max-width: 768px) {
+  #index .detail__image .swiper-slide {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 #index .detail__image img {
   height: 100%;
   max-height: 500px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  #index .detail__image img {
+    max-height: 300px;
+  }
 }
 
 #index .detail {
@@ -1931,20 +1984,18 @@
           order: 1;
 }
 
-@media (max-width: 768px) {
-  #index .detail-reverse .detail__image {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-  #index .detail-reverse .detail__image image {
-    margin: 30px auto 0;
-  }
-}
-
 @media (max-width: 1080px) {
   #index .detail-reverse .detail__image {
     margin-left: -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  #index .detail-reverse .detail__image {
+    margin: 30px auto 0;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 }
 
@@ -1982,6 +2033,9 @@
 @media (max-width: 768px) {
   #index .detail__image {
     margin: 30px auto 0;
+  }
+  #index .detail__image img {
+    margin: auto;
   }
 }
 
@@ -2102,7 +2156,7 @@
 }
 
 #index .detail__text--description {
-  font-weight: 100;
+  font-weight: 400;
   line-height: 2;
   margin-top: 30px;
 }

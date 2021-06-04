@@ -24,26 +24,25 @@
   // 可視範囲でのFadeInアニメーション
   function fadeInElement() {
     const callback = function (entries) {
-      for (let i = 0; i < entries.length; i++) {
-        if (entries[i].intersectionRatio <= 0) continue;
-        classAdd(entries[i].target);
-      }
+      entries.forEach(function (entry) {
+        if (entry.intersectionRatio > 0) {
+          entry.target.classList.add("started");
+          observer.unobserve(entry.target);
+        }
+      });
     };
     const options = {
-      rootMargin: "-10% 0% -10% 0%",
+      root: null,
+      rootMargin: "0px 30%",
+      threshold: 0,
     };
 
     const observer = new IntersectionObserver(callback, options);
 
     const targets = document.querySelectorAll(".js-scroll-animation");
-    for (let i = 0; i < targets.length; i++) {
-      observer.observe(targets[i]);
-    }
-
-    function classAdd(e) {
-      e.classList.add("started");
-      observer.unobserve(e);
-    }
+    targets.forEach(function (target) {
+      observer.observe(target);
+    });
   }
 
   // スライド

@@ -1,21 +1,23 @@
 /* スクロールしてから表示系アニメーションまとめ
 --------------------------------------------------------------------------------------------*/
-
-$fadeIn-animation-duration: 0.2s;
+@import "./config";
+$fadeIn-animation-duration: 0.3s;
 
 // 共通
 
 .js-scroll-fadeIn-block,
 .js-scroll-fadeIn-title,
-.js-scroll-fadeIn-text {
+.js-scroll-fadeIn-text,
+.js-scroll-fadeIn-products {
   transform: translate3d(0, 0, 0); // animationのGPU処理
+  will-change: transform, opacity;
 }
 
 // ブロック
 .js-scroll-fadeIn-block {
   opacity: 0;
-  transform: translateY(30px);
-  transition: $fadeIn-animation-duration ease-out;
+  transform: translateY(50px);
+  transition: $fadeIn-animation-duration 0.2s ease-out;
 }
 
 .js-scroll-fadeIn-block.started {
@@ -29,14 +31,14 @@ $fadeIn-animation-duration: 0.2s;
   transform: translate3d(0, 0, 0); // animationのGPU処理
 }
 
-.js-scroll-fadeIn-title.started span {
-  animation: scrollFadeIn 0.75s ease-out both;
+.started .js-scroll-fadeIn-title span {
+  animation: scrollFadeIn 0.5s ease-out both;
   // 一文字ずつ遅らせてアニメーション
   // $fadeIn-animation-duration分+.05sずつ
   $delay: 0.05s;
   @for $i from 1 through 20 {
     &:nth-of-type(#{$i}) {
-      animation-delay: $delay * $i + 0.3s;
+      animation-delay: $delay * $i + 0.5s;
     }
   }
 }
@@ -51,11 +53,33 @@ $fadeIn-animation-duration: 0.2s;
 }
 
 // 概要テキスト
-.js-scroll-fadeIn-text {
+.js-scroll-fadeIn-text,
+.js-scroll-fadeIn-image {
   @extend .js-scroll-fadeIn-block;
-  transition-delay: 1.3s; //タイトルアニメーション終了後発火
+  transition-delay: 1.2s; //タイトルアニメーション終了後発火
 }
 
-.js-scroll-fadeIn-text.started {
+.started .js-scroll-fadeIn-text,
+.started .js-scroll-fadeIn-image {
+  @extend .js-scroll-fadeIn-block.started;
+}
+
+// TOPのカテゴリ下部 商品一覧
+.js-scroll-fadeIn-products li {
+  @extend .js-scroll-fadeIn-block;
+  transition-delay: 1.5s; //概要テキストアニメーション終了後発火
+  @media (max-width: $sp) {
+    transform: translateX(100px);
+  }
+
+  &:nth-of-type(2) {
+    transition-delay: 1.7s; //概要テキストアニメーション終了後発火
+  }
+  &:nth-of-type(3) {
+    transition-delay: 1.9s; //概要テキストアニメーション終了後発火
+  }
+}
+// TOPのカテゴリ下部 商品一覧
+.started .js-scroll-fadeIn-products li {
   @extend .js-scroll-fadeIn-block.started;
 }
