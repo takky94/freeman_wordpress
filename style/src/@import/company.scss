@@ -56,14 +56,16 @@ $root-path: "../..";
           margin-top: 30px;
         }
         &::after {
-          background: center / 300px url(#{$root-path}/images/company/lineY.svg) no-repeat;
-          bottom: 0;
-          content: "";
-          display: inline-block;
-          height: 120px;
-          left: 0;
-          position: absolute;
-          width: 1px;
+          @media (min-width: $tab) {
+            background: center / 300px url(#{$root-path}/images/company/lineY.svg) no-repeat;
+            bottom: 0;
+            content: "";
+            display: inline-block;
+            height: 120px;
+            left: 0;
+            position: absolute;
+            width: 1px;
+          }
         }
       }
       &__header {
