@@ -354,6 +354,12 @@
   background: #fff;
 }
 
+@media (max-width: 768px) {
+  .search-header {
+    height: 180px;
+  }
+}
+
 .search-header::before {
   color: #f4f5f8;
   content: "SEARCH";
@@ -387,9 +393,22 @@
   vertical-align: sub;
 }
 
+@media (max-width: 768px) {
+  .search-header__count--num {
+    font-size: 28px;
+  }
+}
+
 .search-header__count--unit {
   font-size: 34px;
   margin-left: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .search-header__count--unit {
+    font-size: 15px;
+    vertical-align: text-bottom;
+  }
 }
 
 .search-header .breadcrumb {
@@ -409,12 +428,24 @@
   background: #fff;
 }
 
+@media (max-width: 768px) {
+  .notfound-header {
+    height: 180px;
+  }
+}
+
 .notfound-header::before {
   content: "404 NOT FOUND";
   font-size: 110px;
   left: 0;
   margin: auto;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .notfound-header::before {
+    font-size: 15vw;
+  }
 }
 
 .notfound-header::after {

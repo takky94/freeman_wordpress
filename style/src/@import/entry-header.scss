@@ -300,6 +300,9 @@ $root-path: "../..";
 // 検索画面
 .search-header {
   background: #fff;
+  @media (max-width: $sp) {
+    height: $entry-header-height;
+  }
 
   &::before {
     color: $c-whitesmoke;
@@ -332,11 +335,18 @@ $root-path: "../..";
     &--num {
       font-size: 66px;
       vertical-align: sub;
+      @media (max-width: $sp) {
+        font-size: 28px;
+      }
     }
 
     &--unit {
       font-size: 34px;
       margin-left: 0.5em;
+      @media (max-width: $sp) {
+        font-size: 15px;
+        vertical-align: text-bottom;
+      }
     }
   }
 
@@ -363,6 +373,9 @@ $root-path: "../..";
 // 404
 .notfound-header {
   background: #fff;
+  @media (max-width: $sp) {
+    height: $entry-header-height;
+  }
 
   &::before {
     content: "404 NOT FOUND";
@@ -370,6 +383,9 @@ $root-path: "../..";
     left: 0;
     margin: auto;
     text-align: center;
+    @media (max-width: $sp) {
+      font-size: 15vw;
+    }
   }
 
   // ずらした白背景レイアウト部分

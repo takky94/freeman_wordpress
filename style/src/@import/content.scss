@@ -88,6 +88,9 @@ $root-path: "../..";
   margin: 120px auto 0;
   max-width: 900px;
   word-break: break-all;
+  @media (max-width: $sp) {
+    margin-top: 100px;
+  }
 
   // 表現集
   h2,

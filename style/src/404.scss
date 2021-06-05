@@ -36,6 +36,9 @@ $root-path: "../..";
 
   &__text {
     font-weight: bold;
+    @media (max-width: $sp) {
+      text-align: left;
+    }
   }
 
   .search-form {

@@ -6,7 +6,7 @@
     <!-- #content -->
     <div id="content" class="notfound">
       <div class="container">
-        <h2 class="notfound__title">お探しのページは見つかりませんでした。</h2>
+        <h2 class="notfound__title">お探しのページは<br class="pc__none" />見つかりませんでした。</h2>
         <p class="notfound__text">アクセスしようとしたページは削除されたかURLが変更されているため、<br class="sp__none" />見つけることができませんでした。</p>
         <p class="notfound__image">
           <img src="<?= get_template_directory_uri(); ?>/images/robots/404.png" alt="" <?php fm_lazyload(); ?> />

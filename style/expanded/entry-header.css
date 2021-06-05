@@ -1,66 +1,4 @@
 @charset "UTF-8";
-/* 404
---------------------------------------------------------------------------------------------*/
-/* Button
---------------------------------------------------------------------------------------------*/
-.button {
-  background: #eb2936;
-  color: #fff;
-  display: inline-block;
-  font-size: 16px;
-  margin-top: 60px;
-  padding: 20px 30px;
-}
-
-.button-arrow {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #eb2936;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 16px;
-  margin-top: 60px;
-  padding: 20px 30px;
-  width: 200px;
-}
-
-@media (max-width: 768px) {
-  .button-arrow {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 100%;
-  }
-}
-
-.button-line {
-  overflow: hidden;
-  position: relative;
-}
-
-.button-line::before {
-  background: rgba(0, 0, 0, 0.2);
-  content: "";
-  -webkit-filter: blur(3px);
-          filter: blur(3px);
-  height: 100%;
-  left: -43px;
-  position: absolute;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  width: 40px;
-}
-
-@media (min-width: 769px) {
-  .button-line:hover::before {
-    -webkit-transform: translateX(400px);
-            transform: translateX(400px);
-  }
-}
-
 /* entry-header(single/page)
 --------------------------------------------------------------------------------------------*/
 .entry-header {
@@ -455,7 +393,7 @@
 
 @media (max-width: 768px) {
   .search-header__count--num {
-    font-size: 28px;
+    font-size: 30px;
   }
 }
 
@@ -466,8 +404,7 @@
 
 @media (max-width: 768px) {
   .search-header__count--unit {
-    font-size: 15px;
-    vertical-align: text-bottom;
+    font-size: 18px;
   }
 }
 
@@ -511,50 +448,4 @@
 .notfound-header::after {
   display: none;
 }
-
-.notfound-page {
-  padding-bottom: 60px;
-}
-
-.notfound {
-  background: center/contain url(../../images/notfound-background.svg) no-repeat;
-}
-
-.notfound__title {
-  text-align: center;
-}
-
-.notfound__image, .notfound__text {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.notfound__image img {
-  margin: auto;
-  max-width: 500px;
-  width: 100%;
-}
-
-.notfound__text {
-  font-weight: bold;
-}
-
-@media (max-width: 768px) {
-  .notfound__text {
-    text-align: left;
-  }
-}
-
-.notfound .search-form {
-  margin-top: 30px;
-}
-
-.notfound .button {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.notfound .button span {
-  padding-right: 80px;
-}
-/*# sourceMappingURL=404.css.map */
+/*# sourceMappingURL=entry-header.css.map */
