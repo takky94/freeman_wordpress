@@ -8,12 +8,22 @@
 
 <nav id="archiveTabs" class="archive-tabs">
   <ul>
-    <li <?php if (!is_tax('news_category')) echo 'class="active"'; ?>>
-      <a href="<?= get_post_type_archive_link('news'); ?>">ALL</a>
+    <li>
+      <?php if (!is_tax('news_category')): ?>
+      <span class="archive-tabs__item active">ALL</span>
+      <?php else: ?>
+      <a class="archive-tabs__item" href="<?= esc_url(get_post_type_archive_link('news')); ?>">ALL</a>
+      <?php endif; ?>
     </li>
     <?php foreach($categories as $category): ?>
-    <li <?php if ($category -> term_id == $term_id) echo 'class="active"'; ?>>
-      <a href="<?= esc_url(get_category_link($category -> term_id)); ?>"><?= $category -> name; ?></a>
+    <?php $is_active = $category -> term_id == $term_id; ?>
+    <?php $post_link = esc_url(get_category_link($category -> term_id)); ?>
+    <li>
+      <?php if($is_active): ?>
+      <span class="archive-tabs__item active"><?= $category -> name; ?></span>
+      <?php else: ?>
+      <a href="<?= $post_link ?>" class="archive-tabs__item c-trans-red"><?= $category -> name; ?></a>
+      <?php endif; ?>
     </li>
     <?php endforeach;wp_reset_query(); ?>
   </ul>

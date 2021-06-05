@@ -50,8 +50,13 @@ $tabs-count: 6;
       }
 
       // ボタン部分
-      a {
+      .archive-tabs__item {
         display: block;
+
+        &.active {
+          background: #000;
+          color: #fff;
+        }
       }
       // 横のライン(最初とactiveなものには付与しない)
       &:not(:first-of-type):not(.active)::before {
@@ -89,13 +94,6 @@ $tabs-count: 6;
         }
         &:not(:first-of-type):not(:nth-of-type(2)) {
           border-top: 1px solid $c-lightgray;
-        }
-      }
-
-      &.active {
-        a {
-          background: #000;
-          color: #fff;
         }
       }
     }

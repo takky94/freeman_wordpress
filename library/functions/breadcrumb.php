@@ -15,7 +15,7 @@ if (!function_exists('fm_breadcrumb_items')){
         ? '<li itemprop="itemListElement" itemscope
           itemtype="https://schema.org/ListItem"><a href="'
           .$url
-          .'" itemscope itemtype="https://schema.org/WebPage"
+          .'" class="c-trans-red" itemscope itemtype="https://schema.org/WebPage"
           itemprop="item" itemid="'
           .$url
           .'"><span itemprop="name">'

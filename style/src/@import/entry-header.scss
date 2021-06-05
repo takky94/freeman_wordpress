@@ -76,6 +76,12 @@ $root-path: "../..";
         }
         a {
           font-weight: 500; // リンク付きのぱんくず(親階層)は太文字
+          &.c-trans-red span {
+            transition: all 0.3s;
+          }
+          &.c-trans-red:hover span {
+            color: $c-main;
+          }
         }
         span {
           margin-left: 20px;
@@ -139,6 +145,12 @@ $root-path: "../..";
     ul li span,
     ul li:not(:first-child)::before {
       color: #fff;
+    }
+    ul li a.c-trans-red span {
+      transition: all 0.3s;
+    }
+    ul li a.c-trans-red:hover span {
+      color: $c-main;
     }
   }
 }
