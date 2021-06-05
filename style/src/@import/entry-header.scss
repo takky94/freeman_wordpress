@@ -300,13 +300,13 @@ $root-path: "../..";
 // 検索画面
 .search-header {
   background: #fff;
-  @media (max-width: $sp) {
-    height: $entry-header-height;
-  }
 
   &::before {
     color: $c-whitesmoke;
     content: "SEARCH";
+    @media (max-width: $sp) {
+      bottom: calc(#{$blank-bg-white-heightSp} - 20px);
+    }
   }
 
   // ずらした白背景レイアウト部分
@@ -316,16 +316,23 @@ $root-path: "../..";
 
   // XXの検索結果
   .entry-header__title {
-    bottom: calc(120px + 66px + 20px + 15px); // __countの位置 + __countの高さ + ぱんくずの高さ + 余白
+    bottom: calc(#{$blank-bg-white-heightPc} + 66px + 20px + 15px); // __countの位置 + __countの高さ + ぱんくずの高さ + 余白
     color: #000;
+    @media (max-width: $sp) {
+      bottom: calc(20px + 45px + 20px + 25px); // __countの位置 + __countの高さ + ぱんくずの余白 + ぱんくずの高さ + 余白
+    }
   }
 
   // hit件数
   &__count {
-    bottom: 120px;
+    bottom: $blank-bg-white-heightPc;
     color: #000;
     line-height: 1;
     position: absolute;
+    @media (max-width: $sp) {
+      bottom: 20px;
+      margin-bottom: 25px; // ぱんくずと少し被るくらい
+    }
 
     &--num,
     &--unit {
@@ -336,7 +343,7 @@ $root-path: "../..";
       font-size: 66px;
       vertical-align: sub;
       @media (max-width: $sp) {
-        font-size: 28px;
+        font-size: 45px;
       }
     }
 
@@ -352,7 +359,10 @@ $root-path: "../..";
 
   // ぱんくず
   .breadcrumb {
-    bottom: calc(120px + 66px); // __countの位置 + __countの高さ
+    bottom: calc(#{$blank-bg-white-heightPc} + 66px); // __countの位置 + __countの高さ
+    @media (max-width: $sp) {
+      bottom: calc(20px + 45px); // __countの位置 + __countの高さ
+    }
     ul {
       li {
         &:not(:first-child) {

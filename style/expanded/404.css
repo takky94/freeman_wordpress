@@ -414,15 +414,15 @@
   background: #fff;
 }
 
-@media (max-width: 768px) {
-  .search-header {
-    height: 180px;
-  }
-}
-
 .search-header::before {
   color: #f4f5f8;
   content: "SEARCH";
+}
+
+@media (max-width: 768px) {
+  .search-header::before {
+    bottom: calc(50px - 20px);
+  }
 }
 
 .search-header::after {
@@ -437,11 +437,27 @@
   color: #000;
 }
 
+@media (max-width: 768px) {
+  
+  .search-header .entry-header__title,
+  .search-header .contact-header .entry-header__titleSub,
+  .contact-header .search-header .entry-header__titleSub {
+    bottom: calc(20px + 45px + 20px + 25px);
+  }
+}
+
 .search-header__count {
   bottom: 120px;
   color: #000;
   line-height: 1;
   position: absolute;
+}
+
+@media (max-width: 768px) {
+  .search-header__count {
+    bottom: 20px;
+    margin-bottom: 25px;
+  }
 }
 
 .search-header__count--num, .search-header__count--unit {
@@ -455,7 +471,7 @@
 
 @media (max-width: 768px) {
   .search-header__count--num {
-    font-size: 28px;
+    font-size: 45px;
   }
 }
 
@@ -473,6 +489,12 @@
 
 .search-header .breadcrumb {
   bottom: calc(120px + 66px);
+}
+
+@media (max-width: 768px) {
+  .search-header .breadcrumb {
+    bottom: calc(20px + 45px);
+  }
 }
 
 .search-header .breadcrumb ul li:not(:first-child)::before {

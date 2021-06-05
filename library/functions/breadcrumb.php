@@ -170,7 +170,9 @@ if (!function_exists('fm_breadcrumb_archive')){
 // 検索画面
 if (!function_exists('fm_breadcrumb_search')){
   function fm_breadcrumb_search(){
-    $result = fm_breadcrumb_items(esc_attr(get_search_query())."の検索結果", "2");
+    $search_text = esc_attr(get_search_query());
+    $search_text = wp_trim_words($search_text, 5); // 「の検索結果」がトリミングされないように検索文字を削る
+    $result = fm_breadcrumb_items($search_text."の検索結果", "2");
     return $result;
   }
 }
