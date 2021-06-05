@@ -39,7 +39,7 @@
                 datetime="<?= get_the_date('Y-m-d'); ?>"><?= get_the_date('Y.m.d'); ?></time>
             </div>
             <p class="title"><?= get_the_title(); ?></p>
-            <p class="description"><?= get_the_excerpt(); ?></p>
+            <div class="description"><?= get_the_excerpt(); ?></div>
           </div>
         </a>
       </div>
