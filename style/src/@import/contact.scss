@@ -129,8 +129,11 @@ $root-path: "../..";
     .form-block__field {
       max-width: 100%;
     }
-    input[type="checkbox"] + span {
-      text-align: left;
+    @media (max-width: $sp) {
+      input[type="checkbox"] + span {
+        display: block;
+        text-align: left;
+      }
     }
   }
 
@@ -140,6 +143,10 @@ $root-path: "../..";
       height: 70px;
       margin: auto;
       width: 350px;
+      @media (max-width: $sp) {
+        max-width: 320px;
+        width: 100%;
+      }
 
       .button-arrow {
         justify-content: flex-end;
@@ -188,6 +195,22 @@ $root-path: "../..";
     }
     .arrow-wrap {
       margin-left: 0;
+      @media (max-width: $sp) {
+        margin-left: auto;
+        margin-top: 15px;
+      }
+    }
+  }
+}
+// 個人情報保護に同意するのテキスト削除
+.confirm-page-content-main {
+  .form-block.confirm {
+    display: none;
+  }
+  @media (max-width: $sp) {
+    .form-block label {
+      border-bottom: 1px solid $c-lightgray;
+      line-height: 1.8;
     }
   }
 }
@@ -205,6 +228,9 @@ $root-path: "../..";
       font-size: 22px;
       line-height: 1.8;
       text-align: center;
+      @media (max-width: $sp) {
+        font-size: 18px;
+      }
     }
 
     &__image {

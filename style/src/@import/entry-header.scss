@@ -260,6 +260,7 @@ $root-path: "../..";
   .entry-header__title {
     color: #000;
   }
+  // お問い合わせはこちらから
   .entry-header__titleSub {
     bottom: calc(#{$blank-bg-white-heightPc} + 14px); // ずらした白背景レイアウト部分 + 余白
     color: #000;
@@ -267,7 +268,8 @@ $root-path: "../..";
     font-size: 18px;
     font-weight: bold;
     @media (max-width: $sp) {
-      bottom: calc(#{$blank-bg-white-heightSp} + 21px + 15px); // ずらした白背景レイアウト部分 + ぱんくず + 余白
+      bottom: calc(#{$blank-bg-white-heightSp} + 21px + 24px); // ずらした白背景レイアウト部分 + ぱんくず + 余白
+      font-size: 12px;
     }
   }
 

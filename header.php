@@ -1,3 +1,5 @@
+<?php // 言語プラグインが有効かどうか(有効でないならja固定) ?>
+<?php if (!defined(ICL_LANGUAGE_CODE)){ define("ICL_LANGUAGE_CODE", "ja"); }  ?>
 <!DOCTYPE html>
 <html lang="<?= ICL_LANGUAGE_CODE; ?>" class="<?= ICL_LANGUAGE_CODE; ?>">
 

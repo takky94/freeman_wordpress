@@ -2,6 +2,8 @@
 /*
 Template Name: お問い合わせ
 */
+
+$last_slug = fm_get_last_slug() === "confirm" ? "confirm-page-content-main" : "";
 ?>
 <!--contact.php-->
 <?php get_header(); ?>
@@ -15,7 +17,7 @@ Template Name: お問い合わせ
         <div class="container">
           <?php if (have_posts()): while (have_posts()): the_post(); ?>
           <!-- content-main -->
-          <div class="content-main contact">
+          <div class="content-main contact <?= $last_slug; ?>">
             <?php the_content(); ?>
           </div>
           <!-- // content-main -->

@@ -332,7 +332,8 @@
 
 @media (max-width: 768px) {
   .contact-header .entry-header__titleSub {
-    bottom: calc(50px + 21px + 15px);
+    bottom: calc(50px + 21px + 24px);
+    font-size: 12px;
   }
 }
 

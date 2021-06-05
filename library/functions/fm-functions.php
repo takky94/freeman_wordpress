@@ -159,3 +159,15 @@ if (!function_exists('fm_is_active_page')) {
     if ($matches[0] === $str) return "active";
   }
 }
+
+/*
+URLの末尾のスラッグを取得
+********************************************************************/
+
+if (!function_exists('fm_get_last_slug')){
+  function fm_get_last_slug(){
+    $uri = rtrim($_SERVER["REQUEST_URI"], '/');
+    $uri = substr($uri, strrpos($uri, '/') + 1);
+    return $uri;
+  }
+}
