@@ -21,10 +21,19 @@ $root-path: "../..";
   .content-header {
     display: flex;
     margin-left: -75px;
+    @media (max-width: $pc) {
+      margin-left: 0;
+    }
+    @media (max-width: $sp) {
+      flex-direction: column;
+    }
 
     .block {
       position: relative;
       width: calc(100% / 3);
+      @media (max-width: $sp) {
+        width: 100%;
+      }
 
       &::before {
         background: $c-main;
@@ -37,9 +46,15 @@ $root-path: "../..";
         right: 0;
         top: 0;
         width: 30px;
+        @media (max-width: $sp) {
+          right: auto;
+        }
       }
 
       &:not(:first-child) {
+        @media (max-width: $sp) {
+          margin-top: 30px;
+        }
         &::after {
           background: center / 300px url(#{$root-path}/images/company/lineY.svg) no-repeat;
           bottom: 0;
@@ -51,23 +66,42 @@ $root-path: "../..";
           width: 1px;
         }
       }
-
-      h2 {
-        font-size: 50px;
-        line-height: 1;
-        margin-top: 30px;
-        text-align: center;
-      }
-      .sub-title {
-        color: $c-gray;
-        font-size: 20px;
-        margin-top: 1em;
-        text-align: center;
+      &__header {
+        h2 {
+          font-size: 50px;
+          line-height: 1;
+          margin-top: 30px;
+          text-align: center;
+          @media (max-width: $sp) {
+            font-size: 30px;
+            margin-top: 20px;
+            text-align: left;
+          }
+        }
+        .sub-title {
+          color: $c-gray;
+          font-size: 20px;
+          margin-top: 1em;
+          text-align: center;
+          @media (max-width: $sp) {
+            font-size: 16px;
+            margin-top: 0;
+            text-align: left;
+          }
+        }
       }
       .description {
         font-size: 22px;
         margin-top: 50px;
         text-align: center;
+        @media (max-width: $pc) {
+          font-size: px-to-vw(22);
+        }
+        @media (max-width: $sp) {
+          font-size: 16px;
+          margin-top: 20px;
+          text-align: left;
+        }
       }
     }
   } // .content-header
@@ -76,25 +110,54 @@ $root-path: "../..";
     .infographic {
       background: top right / 250px url(#{$root-path}/images/common/geometric-pattern.svg) no-repeat;
       margin-top: 140px;
+      @media (max-width: $sp) {
+        margin-top: 100px;
+      }
       h2 {
         font-size: 60px;
         line-height: 1;
+        @media (max-width: $sp) {
+          font-size: 40px;
+        }
       }
       .sub-title {
         color: $c-gray;
         font-size: 20px;
         font-weight: bold;
         margin-top: 1em;
+        @media (max-width: $sp) {
+          font-size: 18px;
+          margin-top: 0;
+        }
       }
       .box {
         margin-top: 50px;
+        @media (max-width: $sp) {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 30px;
+        }
+
         &__top,
         &__bottom {
           display: flex;
+          @media (max-width: $sp) {
+            display: inline-block;
+            margin-top: 10px;
+            min-width: 230px;
+            width: 50%;
+          }
+
           &--item {
             align-items: center;
             display: flex;
             width: calc((100% - (80px * 2)) / 3);
+            @media (max-width: $pc) {
+              width: calc((100% - (#{px-to-vw(80)} * 2)) / 3);
+            }
+            @media (max-width: $sp) {
+              width: 100%;
+            }
             .icon {
               align-items: center;
               background: $c-main;
@@ -103,21 +166,51 @@ $root-path: "../..";
               height: 110px;
               justify-content: center;
               width: 110px;
+              @media (max-width: $pc) {
+                height: px-to-vw(110);
+                width: px-to-vw(110);
+                img {
+                  width: 50%;
+                }
+              }
+              @media (max-width: $sp) {
+                height: 60px;
+                width: 60px;
+                img {
+                  width: 50%;
+                }
+              }
             }
             .text {
               margin-left: 14px;
-
               .small {
                 font-size: 16px;
+                @media (max-width: $pc) {
+                  font-size: px-to-vw(14);
+                }
+                @media (max-width: $sp) {
+                  font-size: 14px;
+                }
               }
-
               .small2 {
                 font-size: 20px;
                 font-weight: bold;
+                @media (max-width: $pc) {
+                  font-size: px-to-vw(18);
+                }
+                @media (max-width: $sp) {
+                  font-size: 18px;
+                }
               }
               .number {
                 font-size: 28px;
                 font-weight: bold;
+                @media (max-width: $pc) {
+                  font-size: px-to-vw(28);
+                }
+                @media (max-width: $sp) {
+                  font-size: 26px;
+                }
               }
             }
 
@@ -125,50 +218,117 @@ $root-path: "../..";
             &:not(:first-child) {
               margin-left: 80px;
               position: relative;
+              @media (max-width: $pc) {
+                margin-left: px-to-vw(80);
+              }
+              @media (max-width: $sp) {
+                margin-left: 0;
+                margin-top: 10px;
+              }
               &::before {
-                background: center / contain url(#{$root-path}/images/company/lineY.svg) no-repeat;
-                bottom: 0;
-                content: "";
-                display: inline-block;
-                height: 100%;
-                left: -40px;
-                position: absolute;
-                width: 1px;
+                @media (min-width: $tab) {
+                  background: center / contain url(#{$root-path}/images/company/lineY.svg) no-repeat;
+                  bottom: 0;
+                  content: "";
+                  display: inline-block;
+                  height: 100%;
+                  left: -40px;
+                  position: absolute;
+                  width: 1px;
+                }
               }
             } // &:not
           } // --item
         } // __top, __bottom
         &__bottom {
-          margin-top: 45px;
+          @media (min-width: $tab) {
+            margin-top: 45px;
+          }
         }
       } // .box
     }
     .greeting {
       display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 500px;
       margin-top: 140px;
-
-      .pic {
-        img {
-          max-width: 300px;
-        }
+      @media (max-width: $pc) {
+        height: 590px;
+      }
+      @media (max-width: $sp) {
+        flex-wrap: nowrap;
+        height: auto;
+        margin-top: 100px;
       }
 
-      .text {
+      .pic {
+        flex-basis: 100%;
+        width: 300px;
+        @media (max-width: $pc) {
+          width: 250px;
+        }
+        @media (max-width: $sp) {
+          margin-top: 30px;
+          order: 2;
+          width: 100%;
+          img {
+            margin: auto;
+            max-width: 500px;
+            width: 100%;
+          }
+        }
+      }
+      .title {
+        flex-basis: 10%;
         margin-left: 70px;
-
+        max-width: calc(100% - 70px - 300px); //左余白と画像分
+        @media (max-width: $pc) {
+          margin-left: 50px;
+          max-width: calc(100% - 50px - 250px); //左余白と画像分
+        }
+        @media (max-width: $sp) {
+          margin-left: 0;
+          max-width: inherit;
+          order: 1;
+        }
         h2 {
           font-size: 60px;
           line-height: 1;
+          @media (max-width: $sp) {
+            font-size: 40px;
+          }
         }
         .sub-title {
           color: $c-gray;
           font-size: 20px;
           margin-top: 1em;
+          @media (max-width: $sp) {
+            margin-top: 0;
+          }
+        }
+      }
+      .text {
+        flex-basis: 10%;
+        margin-left: 70px;
+        margin-top: 70px;
+        max-width: calc(100% - 70px - 300px); //左余白と画像分
+        @media (max-width: $pc) {
+          font-size: px-to-vw(19);
+          margin-left: 50px;
+          margin-top: 50px;
+          max-width: calc(100% - 50px - 250px); //左余白と画像分
+        }
+        @media (max-width: $sp) {
+          font-size: 16px;
+          margin-left: 0;
+          margin-top: 30px;
+          max-width: inherit;
+          order: 3;
         }
         .message {
           font-weight: 100;
           line-height: 2;
-          margin-top: 70px;
         }
         .sign {
           font-size: 14px;
@@ -187,22 +347,39 @@ $root-path: "../..";
     .overview {
       display: flex;
       margin-top: 200px;
+      @media (max-width: $pc) {
+        margin-top: 140px;
+      }
+      @media (max-width: $sp) {
+        flex-direction: column;
+        margin-top: 100px;
+      }
 
       .title {
         width: 300px;
         h2 {
           font-size: 60px;
           line-height: 1;
+          @media (max-width: $sp) {
+            font-size: 40px;
+          }
         }
         .sub-title {
           color: $c-gray;
           font-size: 20px;
           margin-top: 1em;
+          @media (max-width: $sp) {
+            margin-top: 0;
+          }
         }
       }
 
       .address {
         margin-left: 70px;
+        @media (max-width: $sp) {
+          margin-left: 0;
+          margin-top: 30px;
+        }
 
         table {
           tr {
@@ -229,11 +406,18 @@ $root-path: "../..";
           th {
             text-align: left;
             width: 120px;
+            @media (max-width: $sp) {
+              width: 20%;
+            }
           }
           td {
             display: block;
             font-weight: 100;
             margin-left: 30px;
+            @media (max-width: $sp) {
+              margin-left: 15px;
+              width: calc(80% - 15px);
+            }
           }
         }
       }
@@ -263,9 +447,18 @@ $root-path: "../..";
       height: 210px;
       margin: 70px auto 0;
       max-width: 720px;
+      @media (max-width: $sp) {
+        align-items: center;
+        flex-direction: column-reverse;
+        height: auto;
+      }
+
       &__text,
       &__image {
         width: 50%;
+        @media (max-width: $sp) {
+          width: 100%;
+        }
       }
       &__text {
         background: #f0f0f0;
@@ -275,13 +468,25 @@ $root-path: "../..";
         font-weight: 100;
         height: 100%;
         justify-content: space-between;
-        padding: 35px;
+        padding: 50px 35px 35px;
+        @media (max-width: $sp) {
+          flex-direction: row;
+          font-size: 20px;
+          padding: 20px;
+        }
 
-        img {
-          display: inline-block;
+        &__image {
+          img {
+            display: inline-block;
+            @media (max-width: $sp) {
+              max-height: 300px;
+              object-fit: cover;
+              width: 100%;
+            }
+          }
         }
       }
-    }
+    } // 採用ページリンク
 
     // 菱形メニュー
     .menu {

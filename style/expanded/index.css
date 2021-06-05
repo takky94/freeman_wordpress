@@ -1411,6 +1411,13 @@
   width: 200%;
 }
 
+@media (max-width: 1080px) {
+  #index .menu .diamond > a .diamond__inner > div .diamond__more {
+    bottom: -35%;
+    font-size: 12px;
+  }
+}
+
 #index .menu .diamond > a .diamond__inner > div .diamond__more img {
   display: inline-block;
   margin-left: 5px;

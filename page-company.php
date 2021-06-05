@@ -17,21 +17,28 @@ Template Name: 会社概要
         <!-- content-header -->
         <div id="philosophy" class="content-header">
           <section class="block">
-            <h2 class="font-robot">VISION</h2>
-            <p class="sub-title">ビジョン</p>
+            <div class="block__header">
+              <h2 class="font-robot">VISION</h2>
+              <p class="sub-title">ビジョン</p>
+            </div>
             <p
-              class="description font-serif"><?php _e('ものづくりの支援を通じ<br />新たな価値を創造して<br />社会発展に貢献する','page-company'); ?></p>
+              class="description font-serif"><?php _e('ものづくりの支援を通じ<br class="sp__none" />新たな価値を創造して<br class="sp__none" />社会発展に貢献する','page-company'); ?></p>
           </section>
           <section class="block">
-            <h2 class="font-robot">MISSION</h2>
-            <p class="sub-title">ミッション</p>
-            <p class="description font-serif"><?php _e('自然と人類の共生を図り<br />幸福を希求する','page-company'); ?></p>
+            <div class="block__header">
+              <h2 class="font-robot">MISSION</h2>
+              <p class="sub-title">ミッション</p>
+            </div>
+            <p
+              class="description font-serif"><?php _e('自然と人類の共生を図り<br class="sp__none" />幸福を希求する','page-company'); ?></p>
           </section>
           <section class="block">
-            <h2 class="font-robot">VALUE</h2>
-            <p class="sub-title">バリュー</p>
+            <div class="block__header">
+              <h2 class="font-robot">VALUE</h2>
+              <p class="sub-title">バリュー</p>
+            </div>
             <p
-              class="description font-serif"><?php _e('チャレンジングな精神と<br />進取の気概をもって<br />最適解を追求する','page-company'); ?></p>
+              class="description font-serif"><?php _e('チャレンジングな精神と<br class="sp__none" />進取の気概をもって<br class="sp__none" />最適解を追求する','page-company'); ?></p>
           </section>
         </div>
         <!-- // content-header -->
@@ -109,9 +116,11 @@ Template Name: 会社概要
               <img src="<?= get_template_directory_uri(); ?>/images/company/ceo.png" alt="日本フリーマン株式会社代表取締役社長 写真"
                 <?php fm_lazyload(); ?> />
             </div>
-            <div class="text">
+            <div class="title">
               <h2 class="font-robot">GREETING</h2>
               <p class="sub-title"><?php _e('','page-company'); ?>社長挨拶</p>
+            </div>
+            <div class="text">
               <p
                 class="message"><?php _e('1973年の創業以来、精密鋳造用副資材、モデル材・木型・樹脂型の作製材料、ジュエリーキャスティング用資材等の輸入及び国内販売・技術サービスを通じて、400余社のお客様のモノづくりをサポートさせて頂いております。弊社は2017年に三洋貿易株式会社の子会社となりました。<br />今まで培ってきた知見に加えて、三洋貿易グループのグローバルネットワークを活用し、<br />お客様のニーズに合った最適解を見つけ出し、提供して参ります。<br />今後とも格別のご支援、ご愛顧を賜りますようお願い申し上げます。','page-company'); ?></p>
               <div class="sign">
@@ -139,8 +148,9 @@ Template Name: 会社概要
                     <th><?php _e('所在地','page-company'); ?></th>
                     <td>
                       <address>
-                        <?php _e('〒226-0002 神奈川県横浜市緑区東本郷 4-12-9','page-company'); ?><br />TEL 045-473-3580　FAX
-                        045-473-3656<br /><a href="mailto:info@freeman.co.jp" class="c-main">info@freeman.co.jp</a>
+                        <?php _e('〒226-0002 神奈川県横浜市緑区東本郷 4-12-9','page-company'); ?>
+                        <br /><a href="tel:0454733580">TEL 045-473-3580</a>　FAX 045-473-3656
+                        <br /><a href="mailto:info@freeman-japan.co.jp" class="c-main">info@freeman-japan.co.jp</a>
                       </address>
                     </td>
                   </tr>

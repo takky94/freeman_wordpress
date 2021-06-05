@@ -271,6 +271,11 @@ $menu-animation-duration: 0.3s;
             padding-top: 10px;
             position: absolute;
             width: 200%;
+            @media (max-width: $pc) {
+              bottom: -35%;
+              font-size: 12px;
+            }
+
             img {
               display: inline-block;
               margin-left: 5px;
