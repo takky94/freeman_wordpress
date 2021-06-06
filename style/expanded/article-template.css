@@ -59,6 +59,13 @@
           justify-content: flex-end;
 }
 
+@media (max-width: 768px) {
+  .entry-header .breadcrumb ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .entry-header .breadcrumb ul li:not(:first-child)::before {
   color: #000;
   content: "−";

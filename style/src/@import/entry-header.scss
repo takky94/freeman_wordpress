@@ -60,6 +60,10 @@ $root-path: "../..";
     ul {
       display: flex;
       justify-content: flex-end; // 右寄せ
+      @media (max-width: $sp){
+        flex-wrap: wrap;
+      }
+
       li {
         &:not(:first-child) {
           // セパレーター
