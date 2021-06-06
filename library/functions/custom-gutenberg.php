@@ -23,7 +23,7 @@ if (!function_exists('fm_custom_gutenberg')){
         'core/table',
         array(
             'name'         => 'fm_table_details',
-            'label'        => '標準物性',
+            'label'        => '製品詳細',
             'inline_style' => '
             .is-style-fm_table_details tr td:nth-child(1){
               background: #f5f5f5;

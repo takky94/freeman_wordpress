@@ -183,6 +183,8 @@
 <script src="<?= get_template_directory_uri(); ?>/js/category.js" defer></script>
 <?php elseif (is_archive()): ?>
 <?php elseif (is_single()||is_page()): ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js" defer></script>
+<script src="<?= get_template_directory_uri(); ?>/js/single.js" defer></script>
 <?php elseif (is_search()): ?>
 <script src="<?= get_template_directory_uri(); ?>/js/search.js" defer></script>
 <?php elseif (is_404()): ?>

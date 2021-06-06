@@ -49,41 +49,47 @@
   content: ">";
 }
 
-// 型製品ページ
-.mold-slider {
+// 型製品ページと投稿ページ
+.mold-slider,
+.single-slider {
   margin: 0 calc(50% - 50vw);
   width: 100vw;
-}
-.mold-slider__box {
-  height: 100%;
-  @include centeringMargin;
-  max-width: 600px;
-  position: absolute;
-  width: 60%;
-
-  .swiper-pagination-fraction,
-  .swiper-button-next,
-  .swiper-button-prev {
-    background: #000;
+  &__box {
+    height: 100%;
+    @include centeringMargin;
+    max-width: 600px;
     position: absolute;
-  }
+    width: 60%;
 
-  .swiper-button-prev {
-    left: calc(-15px + -30px); // 横幅と余白分
-  }
-  .swiper-button-next {
-    right: calc(-15px + -30px); // 横幅と余白分
-  }
-  .swiper-button-prev,
-  .swiper-button-next {
-    height: 80px;
-    width: 30px;
+    .swiper-pagination-fraction,
+    .swiper-button-next,
+    .swiper-button-prev {
+      background: #000;
+      position: absolute;
+    }
 
-    &::after {
-      color: #fff;
-      font-size: 13px;
+    .swiper-button-prev {
+      left: calc(-15px + -30px); // 横幅と余白分
+    }
+    .swiper-button-next {
+      right: calc(-15px + -30px); // 横幅と余白分
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      height: 80px;
+      width: 30px;
+
+      &::after {
+        color: #fff;
+        font-size: 13px;
+      }
     }
   }
+}
+// ユーザーによる投稿なので異なる画像サイズのものも同サイズで表示
+.single-slider.swiper-container {
+  height: 40vw;
+  max-height: 380px;
 }
 
 // 子カテゴリ(親ジュエリー以外)ページ
