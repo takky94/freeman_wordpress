@@ -1091,14 +1091,12 @@
   content: ">";
 }
 
-.mold-slider,
-.single-slider {
+.mold-slider {
   margin: 0 calc(50% - 50vw);
   width: 100vw;
 }
 
-.mold-slider__box,
-.single-slider__box {
+.mold-slider__box {
   height: 100%;
   bottom: 0;
   left: 0;
@@ -1112,43 +1110,75 @@
 
 .mold-slider__box .swiper-pagination-fraction,
 .mold-slider__box .swiper-button-next,
-.mold-slider__box .swiper-button-prev,
-.single-slider__box .swiper-pagination-fraction,
-.single-slider__box .swiper-button-next,
-.single-slider__box .swiper-button-prev {
+.mold-slider__box .swiper-button-prev {
   background: #000;
   position: absolute;
 }
 
-.mold-slider__box .swiper-button-prev,
-.single-slider__box .swiper-button-prev {
+.mold-slider__box .swiper-button-prev {
   left: calc(-15px + -30px);
 }
 
-.mold-slider__box .swiper-button-next,
-.single-slider__box .swiper-button-next {
+.mold-slider__box .swiper-button-next {
   right: calc(-15px + -30px);
 }
 
 .mold-slider__box .swiper-button-prev,
-.mold-slider__box .swiper-button-next,
-.single-slider__box .swiper-button-prev,
-.single-slider__box .swiper-button-next {
+.mold-slider__box .swiper-button-next {
   height: 80px;
   width: 30px;
 }
 
 .mold-slider__box .swiper-button-prev::after,
-.mold-slider__box .swiper-button-next::after,
-.single-slider__box .swiper-button-prev::after,
-.single-slider__box .swiper-button-next::after {
+.mold-slider__box .swiper-button-next::after {
   color: #fff;
   font-size: 13px;
 }
 
-.single-slider.swiper-container {
+.single-slider {
   height: 40vw;
-  max-height: 600px;
+  margin: 0 calc(50% - 50vw);
+  max-height: 380px;
+  width: 100vw;
+}
+
+.single-slider__box {
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 0;
+  max-width: 600px;
+  position: absolute;
+  width: 60%;
+}
+
+.single-slider .swiper-button-next,
+.single-slider .swiper-button-prev {
+  background: #fff;
+  position: absolute;
+}
+
+.single-slider .swiper-button-prev {
+  left: 0;
+}
+
+.single-slider .swiper-button-next {
+  right: 0;
+}
+
+.single-slider .swiper-button-prev,
+.single-slider .swiper-button-next {
+  height: 60px;
+  width: 20px;
+}
+
+.single-slider .swiper-button-prev::after,
+.single-slider .swiper-button-next::after {
+  color: #000;
+  font-size: 10px;
+  font-weight: bold;
 }
 
 .category-child-slider .swiper-slide {

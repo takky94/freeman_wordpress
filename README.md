@@ -74,6 +74,10 @@
 
 子カテゴリ TOP でのコンテンツ編集用に使用
 
+### FREEMAN block
+
+Gutenberg の拡張です
+
 ## ショートコードについて
 
 ### `[product]`
