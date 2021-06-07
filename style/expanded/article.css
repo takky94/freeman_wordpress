@@ -1479,4 +1479,14 @@
   background: #f5f5f5;
   padding: 40px;
 }
+
+.wp-block-freeman-block-remarks {
+  background: #f5f5f5;
+  padding: 40px;
+}
+
+.wp-block-freeman-block-remarks p {
+  background: #fff;
+  padding: 1.5em;
+}
 /*# sourceMappingURL=article.css.map */

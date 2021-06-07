@@ -84,3 +84,15 @@ $root-path: "../..";
   background: #f5f5f5;
   padding: 40px;
 }
+
+
+// 備考
+.wp-block-freeman-block-remarks {
+  background: #f5f5f5;
+  padding: 40px;
+
+  p {
+    background: #fff;
+    padding: 1.5em;
+  }
+}
