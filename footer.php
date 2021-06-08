@@ -167,7 +167,8 @@
       <ul class="links">
         <li><a href="<?= home_url(); ?>/company" class="c-white c-trans-red"><?php _e('会社情報', 'footer'); ?></a></li>
         <li><a href="<?= home_url(); ?>/news" class="c-white c-trans-red"><?php _e('お知らせ', 'footer'); ?></a></li>
-        <li><a href="#" class="c-white c-trans-red"><?php _e('個人情報保護方針', 'footer'); ?></a></li>
+        <li><a href="<?= home_url(); ?>/privacy_policy"
+            class="c-white c-trans-red"><?php _e('個人情報保護方針', 'footer'); ?></a></li>
         <li><a href="#" class="c-white c-trans-red"><?php _e('お問い合わせ', 'footer'); ?></a></li>
       </ul>
       <p class="copyright font-robot">©2021 FREEMAAN JAPAN </p>
