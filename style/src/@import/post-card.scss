@@ -475,8 +475,11 @@ $root-path: "../..";
       .thumbnail {
         .post-thumbnail {
           img {
+            height: 150px;
             min-width: 150px;
-            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            width: 150px;
           }
         }
       }
