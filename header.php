@@ -121,13 +121,23 @@
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">INVE<span class="c-main">S</span>TMENT CASTING</p>
                   <ul class="js-accordionContent">
-                    <li><a href="<?= home_url(); ?>/investment_casting/wax"
-                        class="c-white c-trans-red"><?php _e('WAX','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/investment_casting/waxes"
+                        class="c-white c-trans-red"><?php _e('ワックス各種','header'); ?></a></li>
                     <li><a href="<?= home_url(); ?>/investment_casting/parting_powder"
-                        class="c-white c-trans-red"><?php _e('離散型・洗浄剤','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/investment_casting/binder"
-                        class="c-white c-trans-red"><?php _e('バインダー','header'); ?></a>
+                        class="c-white c-trans-red"><?php _e('離型剤・パターン洗浄剤','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/investment_casting/specialty_binders"
+                        class="c-white c-trans-red"><?php _e('高機能バインダー','header'); ?></a>
                     </li>
+                    <li><a href="<?= home_url(); ?>/investment_casting/refractories"
+                        class="c-white c-trans-red"><?php _e('耐火材','header'); ?></a>
+                    </li>
+                    <li><a href="<?= home_url(); ?>/investment_casting/slurry_additives_core_materials"
+                        class="c-white c-trans-red"><?php _e('スラリー添加剤・コア材','header'); ?></a>
+                    </li>
+                    <li><a href="<?= home_url(); ?>/investment_casting/casting"
+                        class="c-white c-trans-red"><?php _e('鋳造','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/investment_casting/equipment"
+                        class="c-white c-trans-red"><?php _e('設備','header'); ?></a></li>
                     <li><a href="<?= home_url(); ?>/investment_casting/refractory_material"
                         class="c-white c-trans-red"><?php _e('砂','header'); ?></a></li>
                     <li><a href="<?= home_url(); ?>/investment_casting/others"

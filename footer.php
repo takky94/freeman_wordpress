@@ -80,8 +80,20 @@
             <li><a href="<?= home_url(); ?>/investment_casting/parting_powder"
                 class="c-white c-trans-red">離<?php _e('散型・洗浄剤', 'footer'); ?></a>
             </li>
-            <li><a href="<?= home_url(); ?>/investment_casting/binder"
-                class="c-white c-trans-red"><?php _e('バインダー', 'footer'); ?></a>
+            <li><a href="<?= home_url(); ?>/investment_casting/specialty_binders"
+                class="c-white c-trans-red"><?php _e('高機能バインダー', 'footer'); ?></a>
+            </li>
+            <li><a href="<?= home_url(); ?>/investment_casting/refractories"
+                class="c-white c-trans-red"><?php _e('耐火材', 'footer'); ?></a>
+            </li>
+            <li><a href="<?= home_url(); ?>/investment_casting/slurry_additives_core_materials"
+                class="c-white c-trans-red"><?php _e('スラリー添加剤・コア材', 'footer'); ?></a>
+            </li>
+            <li><a href="<?= home_url(); ?>/investment_casting/casting"
+                class="c-white c-trans-red"><?php _e('鋳造', 'footer'); ?></a>
+            </li>
+            <li><a href="<?= home_url(); ?>/investment_casting/equipment"
+                class="c-white c-trans-red"><?php _e('設備', 'footer'); ?></a>
             </li>
             <li><a href="<?= home_url(); ?>/investment_casting/refractory_material"
                 class="c-white c-trans-red"><?php _e('砂', 'footer'); ?></a>
@@ -98,13 +110,13 @@
             <div class="sitemap__block--titleSub c-main font-robot">SAND CASTING</div>
           </div>
           <ul class="sitemap__block--menu js-accordionContent">
-            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('鋳造用フィルター', 'footer'); ?>鋳造用フィルター</a>
+            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('鋳造用フィルター', 'footer'); ?></a>
             </li>
-            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('スリープ', 'footer'); ?>スリープ</a></li>
-            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('方案用ゲート', 'footer'); ?>方案用ゲート</a></li>
-            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('非鉄用塗型', 'footer'); ?>非鉄用塗型</a></li>
-            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('各種対火物', 'footer'); ?>各種対火物</a></li>
-            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('アルミ原材料', 'footer'); ?>アルミ原材料</a></li>
+            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('スリープ', 'footer'); ?></a></li>
+            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('方案用ゲート', 'footer'); ?></a></li>
+            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('非鉄用塗型', 'footer'); ?></a></li>
+            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('各種対火物', 'footer'); ?></a></li>
+            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('アルミ原材料', 'footer'); ?></a></li>
           </ul>
         </div>
         <!-- // sitemap__block -->

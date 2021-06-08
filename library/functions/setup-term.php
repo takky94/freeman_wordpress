@@ -26,12 +26,16 @@ if (!function_exists('fm_create_default_term')){
       '試作・型材料' => array('slug' => 'mold_material','parent' => 'mold'),
       '一般型取り用シリコーン' => array('slug' => 'silicone','parent' => 'mold'),
       'インバー' => array('slug' => 'invar','parent' => 'mold'),
-      '特殊効果・造形用シリコーン' => array('slug' => 'hoge10','parent' => 'mold'),
+      '特殊効果・造形用シリコーン' => array('slug' => 'special_effects','parent' => 'mold'),
 
       // 精密鋳造子カテゴリ
-      'WAX' => array('slug' => 'wax', 'parent' => 'investment_casting'),
-      '離散型・洗浄剤' => array('slug' => 'parting_powder', 'parent' => 'investment_casting'),
-      'バインダー' => array('slug' => 'binder', 'parent' => 'investment_casting'),
+      'ワックス各種' => array('slug' => 'waxes', 'parent' => 'investment_casting'),
+      '離型剤・パターン洗浄剤' => array('slug' => 'parting_powder', 'parent' => 'investment_casting'),
+      '高機能バインダー' => array('slug' => 'specialty_binders', 'parent' => 'investment_casting'),
+      '耐火材' => array('slug' => 'refractories', 'parent' => 'investment_casting'),
+      'スラリー添加剤・コア材' => array('slug' => 'slurry_additives_core_materials', 'parent' => 'investment_casting'),
+      '鋳造' => array('slug' => 'casting', 'parent' => 'investment_casting'),
+      '設備' => array('slug' => 'equipment', 'parent' => 'investment_casting'),
       '砂' => array('slug' => 'refractory_material', 'parent' => 'investment_casting'),
       'その他' => array('slug' => 'others', 'parent' => 'investment_casting'),
 
