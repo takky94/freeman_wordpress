@@ -26,7 +26,7 @@
           <ul class="result">
             <?php while (have_posts()): the_post(); ?>
             <li>
-              <a href="<?= get_post_permalink(); ?>" class="post-card post-card-wide">
+              <a href="<?= get_post_permalink(); ?>" class="post-card post-card-wide c-trans-red">
                 <div class="content">
                   <p class="title"><?= get_the_title(); ?></p>
                   <p class="description"><?= get_the_excerpt(); ?></p>

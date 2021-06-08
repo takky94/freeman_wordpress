@@ -731,6 +731,17 @@
   color: #96a8be;
 }
 
+.post-card .content.c-trans-red .title,
+.post-card .content.c-trans-red .description {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.post-card .content.c-trans-red:hover .title,
+.post-card .content.c-trans-red:hover .description {
+  color: #eb2936;
+}
+
 @media (max-width: 768px) {
   .post-card {
     display: -webkit-box;
@@ -1217,8 +1228,13 @@
 }
 
 .category-child-product-link .wide .post-card-product .thumbnail .post-thumbnail img {
+  height: 150px;
   min-width: 150px;
-  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 150px;
 }
 
 .category-child-product-link .wide .post-card-product .content {

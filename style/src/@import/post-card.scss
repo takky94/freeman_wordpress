@@ -47,6 +47,19 @@ $root-path: "../..";
         color: $c-gray;
       }
     } // meta
+
+    &.c-trans-red {
+      .title,
+      .description {
+        transition: all 0.3s;
+      }
+      &:hover {
+        .title,
+        .description {
+          color: $c-main;
+        }
+      }
+    }
   } // content
 
   @media (max-width: $sp) {
