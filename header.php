@@ -68,25 +68,26 @@
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">M<span class="c-main">O</span>LD</p>
                   <ul class="js-accordionContent">
-                    <li><a href="<?= home_url(); ?>/mold/discharge"
-                        class="c-white c-trans-red"><?php _e('デザイン吐出','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/mold/cutting"
-                        class="c-white c-trans-red"><?php _e('デザイン切削','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/mold/casting"
-                        class="c-white c-trans-red"><?php _e('試作注型樹脂','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/mold/close_contour_paste"
+                        class="c-white c-trans-red"><?php _e('機械吐出','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/mold/cutting_process"
+                        class="c-white c-trans-red"><?php _e('切削加工','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/mold/resin_casting"
+                        class="c-white c-trans-red"><?php _e('注型','header'); ?></a></li>
                     <li><a href="<?= home_url(); ?>/mold/mold_material"
-                        class="c-white c-trans-red"><?php _e('試作型材','header'); ?></a></li>
+                        class="c-white c-trans-red"><?php _e('試作・型材料','header'); ?></a></li>
                     <li><a href="<?= home_url(); ?>/mold/silicone"
-                        class="c-white c-trans-red"><?php _e('試作シリコン','header'); ?></a></li>
+                        class="c-white c-trans-red"><?php _e('一般型取り用シリコーン','header'); ?></a></li>
                     <li><a href="<?= home_url(); ?>/mold/invar"
-                        class="c-white c-trans-red"><?php _e('量産インバー','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/mold/"
+                        class="c-white c-trans-red"><?php _e('インバー','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/sand_casting"
                         class="c-white c-trans-red"><?php _e('量産砂型鋳造','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/mold/"
+                    <li><a href="<?= home_url(); ?>/investment_casting"
                         class="c-white c-trans-red"><?php _e('量産精密鋳造','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/mold/"
-                        class="c-white c-trans-red"><?php _e('量産ジュエリー','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/mold/" class="c-white c-trans-red"><?php _e('特殊','header'); ?></a>
+                    <li><a href="<?= home_url(); ?>/jewelry"
+                        class="c-white c-trans-red"><?php _e('ジュエリー型シリコーン','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/mold/special_effects"
+                        class="c-white c-trans-red"><?php _e('特殊効果・造形用シリコーン','header'); ?></a>
                     </li>
                   </ul>
                 </div>
@@ -143,16 +144,16 @@
                   <p class="sub__title c-white font-robot sp__none">JE<span class="c-main">W</span>ELRY</p>
                   <ul class="js-accordionContent">
                     <li><a href="<?= home_url(); ?>/jewelry/injection_wax"
-                        class="c-white c-trans-red"><?php _e('インジェクションWAX','header'); ?></a>
+                        class="c-white c-trans-red"><?php _e('インジェクションワックス','header'); ?></a>
                     </li>
                     <li><a href="<?= home_url(); ?>/jewelry/carving_wax"
-                        class="c-white c-trans-red"><?php _e('切削WAX','header'); ?></a></li>
+                        class="c-white c-trans-red"><?php _e('カービングワックス','header'); ?></a></li>
                     <li><a href="<?= home_url(); ?>/jewelry/investing_material"
                         class="c-white c-trans-red"><?php _e('埋没材','header'); ?></a></li>
                     <li><a href="<?= home_url(); ?>/jewelry/"
                         class="c-white c-trans-red"><?php _e('シリコン','header'); ?></a></li>
                     <li><a href="<?= home_url(); ?>/jewelry/matt_tool"
-                        class="c-white c-trans-red"><?php _e('ツールマット','header'); ?></a></li>
+                        class="c-white c-trans-red"><?php _e('ワックス関連工具','header'); ?></a></li>
                   </ul>
                 </div>
               </div>

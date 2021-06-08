@@ -20,16 +20,13 @@ if (!function_exists('fm_create_default_term')){
       '新たな取り組み' => array('slug' => 'new_field', 'description' =>'00005__削除禁止__出力順番号'),
 
       // 型製品子カテゴリ
-      'デザイン吐出' => array('slug' => 'discharge','parent' => 'mold'),
-      'デザイン切削' => array('slug' => 'cutting','parent' => 'mold'),
-      '試作注型樹脂' => array('slug' => 'casting','parent' => 'mold'),
-      '試作型材' => array('slug' => 'mold_material','parent' => 'mold'),
-      '試作シリコン' => array('slug' => 'silicone','parent' => 'mold'),
-      '量産インバー' => array('slug' => 'invar','parent' => 'mold'),
-      '量産砂型鋳造' => array('slug' => 'sand_casting','parent' => 'mold'), // 第二階層へのリンクのみ
-      '量産精密鋳造' => array('slug' => 'investing_casting','parent' => 'mold'), // 第二階層へのリンクのみ
-      '量産ジュエリー' => array('slug' => 'jewelry','parent' => 'mold'), // 第二階層へのリンクのみ
-      // '特殊' => array('slug' => 'hoge10','parent' => 'mold'), // スプレに記載なし
+      '機械吐出' => array('slug' => 'close_contour_paste','parent' => 'mold'),
+      '切削加工' => array('slug' => 'cutting_process','parent' => 'mold'),
+      '注型' => array('slug' => 'resin_casting','parent' => 'mold'),
+      '試作・型材料' => array('slug' => 'mold_material','parent' => 'mold'),
+      '一般型取り用シリコーン' => array('slug' => 'silicone','parent' => 'mold'),
+      'インバー' => array('slug' => 'invar','parent' => 'mold'),
+      '特殊効果・造形用シリコーン' => array('slug' => 'hoge10','parent' => 'mold'),
 
       // 精密鋳造子カテゴリ
       'WAX' => array('slug' => 'wax', 'parent' => 'investment_casting'),
@@ -39,11 +36,11 @@ if (!function_exists('fm_create_default_term')){
       'その他' => array('slug' => 'others', 'parent' => 'investment_casting'),
 
       // ジュエリー子カテゴリ
-      'インジェクションWAX' => array('slug' => 'injection_wax', 'parent' => 'jewelry'),
-      'カービングWAX' => array('slug' => 'carving_wax', 'parent' => 'jewelry'),
-      '埋没材' => array('slug' => 'investing_material', 'parent' => 'jewelry'),
+      'インジェクションワックス' => array('slug' => 'injection_wax', 'parent' => 'jewelry'),
+      'カービングワックス' => array('slug' => 'carving_wax', 'parent' => 'jewelry'),
+      '埋没材' => array('slug' => 'investments', 'parent' => 'jewelry'),
       // 'シリコン' => array('slug' => 'hgo', 'parent' => 'jewelry'), // 第三階層なし
-      'ツールマット' => array('slug' => 'matt_tool', 'parent' => 'jewelry'),
+      'ワックス関連工具' => array('slug' => 'matt_tool', 'parent' => 'jewelry'),
     );
     loop_register_term($taxonomy_type, $taxonomy_sets);
 
