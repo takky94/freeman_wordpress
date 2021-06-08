@@ -21,10 +21,10 @@
   $others_description_text = $contents['others_description_text'] ? esc_html($contents['others_description_text']) : '<p style="color:tomato">カテゴリページにて「説明文」を設定してください</p>';
 
   // YouTube
-   $others_youtube = isset($contents['others_youtube'])
+   $others_youtube = $contents['others_youtube']
      ? '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.$contents['others_youtube'].'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
      : null;
-    $others_youtube_caption = isset($contents['others_youtube_caption']) ? esc_html($contents['others_youtube_caption']) : null;
+    $others_youtube_caption = $contents['others_youtube_caption'] ? esc_html($contents['others_youtube_caption']) : null;
 
 
   // クエリ (同カテゴリの商品一覧)
