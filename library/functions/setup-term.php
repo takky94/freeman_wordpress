@@ -40,7 +40,7 @@ if (!function_exists('fm_create_default_term')){
 
       // ジュエリー子カテゴリ
       'インジェクションWAX' => array('slug' => 'injection_wax', 'parent' => 'jewelry'),
-      '切削WAX' => array('slug' => 'carving_wax', 'parent' => 'jewelry'), // カービングWAX?
+      'カービングWAX' => array('slug' => 'carving_wax', 'parent' => 'jewelry'),
       '埋没材' => array('slug' => 'investing_material', 'parent' => 'jewelry'),
       // 'シリコン' => array('slug' => 'hgo', 'parent' => 'jewelry'), // 第三階層なし
       'ツールマット' => array('slug' => 'matt_tool', 'parent' => 'jewelry'),
