@@ -2,8 +2,7 @@
 --------------------------------------------------------------------------------------------*/
 
 @import "./config";
-
-//
+$border-color: #a5a5a5;
 $entry-header-height: 180px;
 $blank-bg-white-heightPc: 120px;
 $blank-bg-white-heightSp: 50px;
@@ -34,6 +33,7 @@ $root-path: "../..";
     ); // ずらした白背景レイアウト部分 + ぱんくず + ぱんくず余白 + 余白
     color: #000;
     font-size: 34px;
+    font-weight: 500;
     max-width: 800px;
     position: absolute;
     word-break: break-word;
@@ -60,7 +60,7 @@ $root-path: "../..";
     ul {
       display: flex;
       justify-content: flex-end; // 右寄せ
-      @media (max-width: $sp){
+      @media (max-width: $sp) {
         flex-wrap: wrap;
       }
 
@@ -93,6 +93,30 @@ $root-path: "../..";
       } // li
     } // ul
   } // breadcrumb
+}
+
+// 投稿ページ(第四階層)
+.single-header {
+  height: $entry-header-height;
+
+  .container {
+    border-bottom: 1px solid $border-color;
+  }
+
+  // タイトル
+  .entry-header__title {
+    bottom: calc(21px + #{$breadList-gapPc} + 14px); //ぱんくず高さ + ぱんくず余白 + 余白
+    @media (max-width: $sp) {
+      bottom: calc(21px + #{$breadList-gapSp} + 14px); //ぱんくず高さ + ぱんくず余白 + 余白
+    }
+  }
+  // ぱんくず
+  .breadcrumb {
+    bottom: $breadList-gapPc;
+    @media (max-width: $sp) {
+      bottom: $breadList-gapSp;
+    }
+  }
 }
 
 // 各ページヘッダー共通部分
@@ -204,7 +228,7 @@ $root-path: "../..";
     display: none;
   }
   .container {
-    border-bottom: 1px solid $c-gray;
+    border-bottom: 1px solid $border-color;
     position: relative;
   }
 
