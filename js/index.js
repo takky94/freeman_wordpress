@@ -84,10 +84,13 @@
 
     const options = {
       section: ".js-scrollSnap",
-      interstitialSection: ".footer",
+      interstitialSection: "footer",
       easing: "swing",
-      scrollSpeed: 400,
+      scrollSpeed: 600,
       scrollbars: true,
+      setHeights: false,
+      updateHash: false,
+      touchScroll: true,
       offset: targetOffset,
       overflowScroll: true,
     };
