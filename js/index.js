@@ -70,6 +70,7 @@
       },
       allowTouchMove: false,
       slidesPerView: 1,
+      loop: true,
     });
   }
 
