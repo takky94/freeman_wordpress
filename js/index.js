@@ -28,7 +28,22 @@
       entries.forEach(function (entry) {
         if (entry.intersectionRatio > 0) {
           entry.target.classList.add("started");
-          observer.unobserve(entry.target);
+
+          // 可視範囲時点でswiper発火
+          const targetClass = `.swiper-container-${entry.target.id}`;
+          const slideShow = new Swiper(targetClass, {
+            effect: "fade",
+            autoplay: {
+              delay: 6000,
+              stopOnLastSlide: false,
+              disableOnInteraction: false,
+              reverseDirection: false,
+            },
+            allowTouchMove: false,
+            slidesPerView: 1,
+          });
+
+          // observer.unobserve(entry.target);
         }
       });
     };
@@ -38,28 +53,24 @@
       threshold: 0,
     };
 
-    const observer = new IntersectionObserver(callback, options);
+    // 1つのobserverだと動作不良を起こすため
+    const observers = [
+      new IntersectionObserver(callback, options),
+      new IntersectionObserver(callback, options),
+      new IntersectionObserver(callback, options),
+      new IntersectionObserver(callback, options),
+      new IntersectionObserver(callback, options),
+      new IntersectionObserver(callback, options),
+    ];
 
     const targets = document.querySelectorAll(".js-scroll-animation");
-    targets.forEach(function (target) {
-      observer.observe(target);
+    targets.forEach(function (target, i) {
+      observers[i].observe(targets[i]);
     });
   }
 
   // スライド
   function slideShow() {
-    const slideShow = new Swiper(".swiper-container", {
-      effect: "fade",
-      autoplay: {
-        delay: 6000,
-        stopOnLastSlide: false,
-        disableOnInteraction: false,
-        reverseDirection: false,
-      },
-      allowTouchMove: false,
-      slidesPerView: 1,
-    });
-
     // お知らせ部分のスライド
     const slideNewsShow = new Swiper(".swiper-news-container", {
       autoplay: {

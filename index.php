@@ -268,7 +268,7 @@
             <!-- // detail__text -->
             <!-- detail__image -->
             <div class="detail__image js-scroll-fadeIn-image">
-              <div class="swiper-container">
+              <div class="swiper-container-mold">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <picture>
@@ -330,7 +330,7 @@
             <!-- // detail__text -->
             <!-- detail__image -->
             <div class="detail__image js-scroll-fadeIn-image">
-              <div class="swiper-container">
+              <div class="swiper-container-sand-casting">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <picture>
@@ -402,7 +402,7 @@
             <!-- // detail__text -->
             <!-- detail__image -->
             <div class="detail__image js-scroll-fadeIn-image">
-              <div class="swiper-container">
+              <div class="swiper-container-investment-casting">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <picture>
@@ -466,7 +466,7 @@
             <!-- // detail__text -->
             <!-- detail__image -->
             <div class="detail__image js-scroll-fadeIn-image">
-              <div class="swiper-container">
+              <div class="swiper-container-jewelry">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <picture>
@@ -529,7 +529,7 @@
           <!-- // detail__text -->
           <!-- detail__image -->
           <div class="detail__image js-scroll-fadeIn-image">
-            <div class="swiper-container">
+            <div class="swiper-container-new-field">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <picture>
