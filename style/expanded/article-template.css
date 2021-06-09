@@ -983,6 +983,24 @@
   }
 }
 
+.company-page #philosophy,
+.company-page #infographic,
+.company-page #greeting,
+.company-page #overview {
+  margin-top: calc(-1 * 100px);
+  padding-top: calc(100px);
+}
+
+@media (max-width: 768px) {
+  .company-page #philosophy,
+  .company-page #infographic,
+  .company-page #greeting,
+  .company-page #overview {
+    margin-top: calc(-1 * 65px);
+    padding-top: calc(65px);
+  }
+}
+
 .company-page .bg-geometric {
   background: top left 150px/300px url(../../images/common/geometric-pattern.svg) no-repeat;
   margin-top: -120px;
@@ -995,6 +1013,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 140px;
   margin-left: -75px;
 }
 
@@ -1010,6 +1029,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 100px;
   }
 }
 
@@ -1114,12 +1134,12 @@
 
 .company-page .content-main .infographic {
   background: top right/250px url(../../images/common/geometric-pattern.svg) no-repeat;
-  margin-top: 140px;
+  margin-bottom: 140px;
 }
 
 @media (max-width: 768px) {
   .company-page .content-main .infographic {
-    margin-top: 100px;
+    margin-bottom: 100px;
   }
 }
 
@@ -1338,12 +1358,13 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   height: 500px;
-  margin-top: 140px;
+  margin-bottom: 200px;
 }
 
 @media (max-width: 1080px) {
   .company-page .content-main .greeting {
     height: 590px;
+    margin-bottom: 140px;
   }
 }
 
@@ -1352,7 +1373,7 @@
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     height: auto;
-    margin-top: 100px;
+    margin-bottom: 100px;
   }
 }
 
@@ -1481,13 +1502,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 200px;
-}
-
-@media (max-width: 1080px) {
-  .company-page .content-main .overview {
-    margin-top: 140px;
-  }
+  margin-bottom: 100px;
 }
 
 @media (max-width: 768px) {
@@ -1496,7 +1511,6 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 100px;
   }
 }
 
@@ -1585,7 +1599,7 @@
 }
 
 .company-page .content-main .map {
-  margin-top: 100px;
+  margin-bottom: 70px;
 }
 
 .company-page .content-main .map iframe {
@@ -1609,7 +1623,7 @@
   display: -ms-flexbox;
   display: flex;
   height: 210px;
-  margin: 70px auto 0;
+  margin: 0 auto 115px;
   max-width: 720px;
 }
 
@@ -1676,10 +1690,6 @@
        object-fit: cover;
     width: 100%;
   }
-}
-
-.company-page .content-main .menu {
-  margin-top: 115px;
 }
 
 /* お問い合わせページ用

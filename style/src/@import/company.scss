@@ -10,6 +10,19 @@ $root-path: "../..";
   // 菱形メニュー
   @import "./diamond-menu";
 
+  // アンカーリンク
+  #philosophy,
+  #infographic,
+  #greeting,
+  #overview {
+    margin-top: calc(-1 * #{$header-height-pc});
+    padding-top: calc(#{$header-height-pc});
+    @media (max-width: $sp) {
+      margin-top: calc(-1 * #{$header-height-sp});
+      padding-top: calc(#{$header-height-sp});
+    }
+  }
+
   .bg-geometric {
     background: top left 150px / 300px url(#{$root-path}/images/common/geometric-pattern.svg) no-repeat;
     margin-top: -120px;
@@ -20,12 +33,14 @@ $root-path: "../..";
 
   .content-header {
     display: flex;
+    margin-bottom: 140px;
     margin-left: -75px;
     @media (max-width: $pc) {
       margin-left: 0;
     }
     @media (max-width: $sp) {
       flex-direction: column;
+      margin-bottom: 100px;
     }
 
     .block {
@@ -111,10 +126,11 @@ $root-path: "../..";
   .content-main {
     .infographic {
       background: top right / 250px url(#{$root-path}/images/common/geometric-pattern.svg) no-repeat;
-      margin-top: 140px;
+      margin-bottom: 140px;
       @media (max-width: $sp) {
-        margin-top: 100px;
+        margin-bottom: 100px;
       }
+
       h2 {
         font-size: 60px;
         line-height: 1;
@@ -254,14 +270,15 @@ $root-path: "../..";
       flex-direction: column;
       flex-wrap: wrap;
       height: 500px;
-      margin-top: 140px;
+      margin-bottom: 200px;
       @media (max-width: $pc) {
         height: 590px;
+        margin-bottom: 140px;
       }
       @media (max-width: $sp) {
         flex-wrap: nowrap;
         height: auto;
-        margin-top: 100px;
+        margin-bottom: 100px;
       }
 
       .pic {
@@ -348,13 +365,9 @@ $root-path: "../..";
     } // greeting
     .overview {
       display: flex;
-      margin-top: 200px;
-      @media (max-width: $pc) {
-        margin-top: 140px;
-      }
+      margin-bottom: 100px;
       @media (max-width: $sp) {
         flex-direction: column;
-        margin-top: 100px;
       }
 
       .title {
@@ -426,8 +439,7 @@ $root-path: "../..";
     } // overview
 
     .map {
-      margin-top: 100px;
-
+      margin-bottom: 70px;
       iframe {
         height: 400px;
         width: 100%;
@@ -447,7 +459,7 @@ $root-path: "../..";
     .link-box {
       display: flex;
       height: 210px;
-      margin: 70px auto 0;
+      margin: 0 auto 115px;
       max-width: 720px;
       @media (max-width: $sp) {
         align-items: center;
@@ -489,10 +501,5 @@ $root-path: "../..";
         }
       }
     } // 採用ページリンク
-
-    // 菱形メニュー
-    .menu {
-      margin-top: 115px;
-    }
   } // content-main
 }
