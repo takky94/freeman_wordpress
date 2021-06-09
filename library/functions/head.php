@@ -65,7 +65,7 @@ if (!function_exists('fm_admin_scripts')){
     if (get_post_type() === 'post'){
       wp_enqueue_script(
         'sample-validation',
-        get_template_directory_uri().'/js/backend/post-validation.js',
+        get_template_directory_uri().'/js/backend-post-validation.js',
         array(
 			    'wp-data', 'wp-editor', 'wp-edit-post'
         )

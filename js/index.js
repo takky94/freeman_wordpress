@@ -74,28 +74,28 @@
     });
   }
 
-  window.addEventListener("load", function () {
-    let targetOffset;
+  // window.addEventListener("load", function () {
+  //   let targetOffset;
 
-    if (window.innerWidth > 768) {
-      targetOffset = -160;
-    } else {
-      targetOffset = -130;
-    }
+  //   if (window.innerWidth > 768) {
+  //     targetOffset = -160;
+  //   } else {
+  //     targetOffset = -130;
+  //   }
 
-    const options = {
-      section: ".js-scrollSnap",
-      easing: "swing",
-      scrollSpeed: 600,
-      scrollbars: true,
-      setHeights: false,
-      updateHash: false,
-      touchScroll: true,
-      offset: targetOffset,
-      overflowScroll: true,
-    };
+  //   const options = {
+  //     section: ".js-scrollSnap",
+  //     easing: "swing",
+  //     scrollSpeed: 600,
+  //     scrollbars: true,
+  //     setHeights: false,
+  //     updateHash: false,
+  //     touchScroll: true,
+  //     offset: targetOffset,
+  //     overflowScroll: true,
+  //   };
 
-    $.scrollify(options);
-  });
+  //   $.scrollify(options);
+  // });
   // スクロールスナップ
 }
