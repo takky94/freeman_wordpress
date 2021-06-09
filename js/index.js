@@ -4,6 +4,7 @@
   window.addEventListener("DOMContentLoaded", function () {
     heroImage();
     fadeInElement();
+    slideShow();
   });
 
   const currentWidth = window.innerWidth;
@@ -46,27 +47,52 @@
   }
 
   // スライド
-  const slideShow = new Swiper(".swiper-container", {
-    effect: "fade",
-    autoplay: {
-      delay: 6000,
-      stopOnLastSlide: false,
-      disableOnInteraction: false,
-      reverseDirection: false,
-    },
-    allowTouchMove: false,
-    slidesPerView: 1,
-  });
+  function slideShow() {
+    const slideShow = new Swiper(".swiper-container", {
+      effect: "fade",
+      autoplay: {
+        delay: 6000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false,
+        reverseDirection: false,
+      },
+      allowTouchMove: false,
+      slidesPerView: 1,
+    });
 
-  // お知らせ部分のスライド
-  const slideNewsShow = new Swiper(".swiper-news-container", {
-    autoplay: {
-      delay: 6000,
-      stopOnLastSlide: false,
-      disableOnInteraction: false,
-      reverseDirection: false,
-    },
-    allowTouchMove: false,
-    slidesPerView: 1,
+    // お知らせ部分のスライド
+    const slideNewsShow = new Swiper(".swiper-news-container", {
+      autoplay: {
+        delay: 6000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false,
+        reverseDirection: false,
+      },
+      allowTouchMove: false,
+      slidesPerView: 1,
+    });
+  }
+
+  window.addEventListener("load", function () {
+    let targetOffset;
+
+    if (window.innerWidth > 768) {
+      targetOffset = -200;
+    } else {
+      targetOffset = -130;
+    }
+
+    const options = {
+      section: ".js-scrollSnap",
+      interstitialSection: ".footer",
+      easing: "swing",
+      scrollSpeed: 400,
+      scrollbars: true,
+      offset: targetOffset,
+      overflowScroll: true,
+    };
+
+    $.scrollify(options);
   });
+  // スクロールスナップ
 }

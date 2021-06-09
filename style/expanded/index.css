@@ -1535,6 +1535,17 @@
   }
 }
 
+#index .scroll-snap {
+  overflow: scroll;
+  -webkit-scroll-snap-type: y mandatory;
+      -ms-scroll-snap-type: y mandatory;
+          scroll-snap-type: y mandatory;
+}
+
+#index .scroll-snap__item {
+  scroll-snap-align: start;
+}
+
 #index .hero {
   position: relative;
 }
@@ -2030,8 +2041,10 @@
 #index .detail__image img {
   height: 100%;
   max-height: 500px;
+  max-width: 600px;
   -o-object-fit: contain;
      object-fit: contain;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -2109,8 +2122,6 @@
 
 #index .detail__image img {
   margin-left: auto;
-  max-width: 600px;
-  width: 100%;
 }
 
 @media (max-width: 1080px) {

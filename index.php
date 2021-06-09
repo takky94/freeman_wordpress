@@ -73,180 +73,182 @@
       </div>
     </section>
     <!-- // メインビジュアル -->
-    <!-- 導入企業様 -->
-    <section class="case">
-      <div class="case__list">
-      </div>
-    </section>
-    <!-- // 導入企業様 -->
-    <!-- 手のひらから宇宙まで -->
-    <section class="lead js-scroll-fadeIn-block js-scroll-animation">
-      <div class="center">
-        <div class="js-scroll-fadeIn-title">
-          <h2 class="lead__heading font-serif center">
+    <div class="js-scrollSnap">
+      <!-- 導入企業様 -->
+      <section class="case">
+        <div class="case__list">
+        </div>
+      </section>
+      <!-- // 導入企業様 -->
+      <!-- 手のひらから宇宙まで -->
+      <section class="lead js-scroll-fadeIn-block js-scroll-animation">
+        <div class="center">
+          <div class="js-scroll-fadeIn-title">
+            <h2 class="lead__heading font-serif center">
             <?php _e('<span class="c-main">手</span><span>の</span><span>ひ</span><span>ら</span><span>か</span><span>ら</span><span class="c-main">宇</span><span>宙</span><span>ま</span><span>で</span>','top'); ?>
           </h2>
-        </div>
-        <div class="js-scroll-fadeIn-text">
-          <p
-            class="lead__text center"><?php _e('国内トップクラスの品揃えと提案力で、<br class="pc__none" />企業のあらゆる創造をサポートします。','top'); ?></p>
-          <!-- lead__achivment -->
-          <div class="lead__achievement">
-            <!-- block -->
-            <div class="block">
-              <div class="block__left">
-                <div class="center">
-                  <img src="<?= get_template_directory_uri(); ?>/images/top/icon/company.svg" width="25" />
-                </div>
-                <div class="mt-5 bold"><?php _e('','top'); ?>創立</div>
-              </div>
-              <div class="block__right">
-                <span class="c-main big">
-                  <img src="<?= get_template_directory_uri(); ?>/images/top/1973.svg" alt="1973" />
-                </span>
-                <span class="small bold"><?php _e('','top'); ?>年</span>
-              </div>
-            </div>
-            <!-- // block -->
-            <!-- block -->
-            <div class="block">
-              <div class="block__left">
-                <div class="center pc__none">
-                  <img src="<?= get_template_directory_uri(); ?>/images/top/icon/pin.svg" width="25" />
-                </div>
-                <span class="bold"><?php _e('取引先','top'); ?></span>
-                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/pin.svg" width="20" class="sp__none" />
-                <br class="sp__none" />
-                <div class="mt-5 bold sp-inlineBlock"><?php _e('企業国内外','top'); ?></div>
-              </div>
-              <div class="block__right">
-                <span class="c-main big">
-                  <img src="<?= get_template_directory_uri(); ?>/images/top/400.svg" alt="400" />
-                </span>
-                <span class="small bold"><?php _e('社','top'); ?></span>
-              </div>
-            </div>
-            <!-- // block -->
-            <!-- block -->
-            <div class="block">
-              <div class="block__left">
-                <div class="center">
-                  <img src="<?= get_template_directory_uri(); ?>/images/top/icon/earth.svg" width="25" />
-                </div>
-                <div class="mt-5 bold"><?php _e('海外取引','top'); ?></div>
-              </div>
-              <div class="block__right">
-                <span class="c-main big">
-                  <img src="<?= get_template_directory_uri(); ?>/images/top/16.svg" alt="16" />
-                </span>
-                <span class="small bold"><?php _e('カ国','top'); ?></span>
-              </div>
-            </div>
-            <!-- // block -->
           </div>
-          <!-- // lead__achivment -->
-          <!-- lead__button -->
-          <div class="lead__button">
-            <a href="#" class="button-arrow button-line arrow-wrap flex-center">
-              <span><?php _e('社長ご挨拶・企業理念','top'); ?></span>
-              <?php get_template_part('/parts/icon/arrow'); ?>
-            </a>
+          <div class="js-scroll-fadeIn-text">
+            <p
+              class="lead__text center"><?php _e('国内トップクラスの品揃えと提案力で、<br class="pc__none" />企業のあらゆる創造をサポートします。','top'); ?></p>
+            <!-- lead__achivment -->
+            <div class="lead__achievement">
+              <!-- block -->
+              <div class="block">
+                <div class="block__left">
+                  <div class="center">
+                    <img src="<?= get_template_directory_uri(); ?>/images/top/icon/company.svg" width="25" />
+                  </div>
+                  <div class="mt-5 bold"><?php _e('','top'); ?>創立</div>
+                </div>
+                <div class="block__right">
+                  <span class="c-main big">
+                    <img src="<?= get_template_directory_uri(); ?>/images/top/1973.svg" alt="1973" />
+                  </span>
+                  <span class="small bold"><?php _e('','top'); ?>年</span>
+                </div>
+              </div>
+              <!-- // block -->
+              <!-- block -->
+              <div class="block">
+                <div class="block__left">
+                  <div class="center pc__none">
+                    <img src="<?= get_template_directory_uri(); ?>/images/top/icon/pin.svg" width="25" />
+                  </div>
+                  <span class="bold"><?php _e('取引先','top'); ?></span>
+                  <img src="<?= get_template_directory_uri(); ?>/images/top/icon/pin.svg" width="20" class="sp__none" />
+                  <br class="sp__none" />
+                  <div class="mt-5 bold sp-inlineBlock"><?php _e('企業国内外','top'); ?></div>
+                </div>
+                <div class="block__right">
+                  <span class="c-main big">
+                    <img src="<?= get_template_directory_uri(); ?>/images/top/400.svg" alt="400" />
+                  </span>
+                  <span class="small bold"><?php _e('社','top'); ?></span>
+                </div>
+              </div>
+              <!-- // block -->
+              <!-- block -->
+              <div class="block">
+                <div class="block__left">
+                  <div class="center">
+                    <img src="<?= get_template_directory_uri(); ?>/images/top/icon/earth.svg" width="25" />
+                  </div>
+                  <div class="mt-5 bold"><?php _e('海外取引','top'); ?></div>
+                </div>
+                <div class="block__right">
+                  <span class="c-main big">
+                    <img src="<?= get_template_directory_uri(); ?>/images/top/16.svg" alt="16" />
+                  </span>
+                  <span class="small bold"><?php _e('カ国','top'); ?></span>
+                </div>
+              </div>
+              <!-- // block -->
+            </div>
+            <!-- // lead__achivment -->
+            <!-- lead__button -->
+            <div class="lead__button">
+              <a href="#" class="button-arrow button-line arrow-wrap flex-center">
+                <span><?php _e('社長ご挨拶・企業理念','top'); ?></span>
+                <?php get_template_part('/parts/icon/arrow'); ?>
+              </a>
+            </div>
+            <!-- // lead__button -->
           </div>
-          <!-- // lead__button -->
         </div>
-      </div>
-      <!-- // center -->
-    </section>
-    <!-- // 手のひらから宇宙まで -->
-    <!-- MANUFACTURING ~ -->
-    <div class="lead__background"></div>
-    <!-- // MANUFACTURING -->
-    <!-- リンクリスト -->
-    <nav class="menu">
-      <div class="container relative">
-        <ul>
-          <li class="diamond">
-            <a href="#mold">
-              <div class="diamond__inner">
-                <div class="center">
-                  <div class="diamond__title font-robot c-white">MOLD</div>
-                  <div class="diamond__titleSub c-white"><?php _e('試作・型材料','top'); ?></div>
+        <!-- // center -->
+      </section>
+      <!-- // 手のひらから宇宙まで -->
+      <!-- MANUFACTURING ~ -->
+      <div class="lead__background"></div>
+      <!-- // MANUFACTURING -->
+      <!-- リンクリスト -->
+      <nav class="menu">
+        <div class="container relative">
+          <ul>
+            <li class="diamond">
+              <a href="#mold">
+                <div class="diamond__inner">
+                  <div class="center">
+                    <div class="diamond__title font-robot c-white">MOLD</div>
+                    <div class="diamond__titleSub c-white"><?php _e('試作・型材料','top'); ?></div>
+                    <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                      class="diamond__icon sp__none" width="25" alt="">
+                  </div>
                   <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
-                    class="diamond__icon sp__none" width="25" alt="">
+                    class="diamond__icon pc__none" width="25" alt="">
                 </div>
-                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
-                  class="diamond__icon pc__none" width="25" alt="">
-              </div>
-            </a>
-            <div class="filter"></div>
-          </li>
-          <li class="diamond">
-            <a href="#investment-casting">
-              <div class="diamond__inner">
-                <div class="center">
-                  <div class="diamond__title font-robot c-white">INVESTMENT<br class="sp__none" />CASTING</div>
-                  <div class="diamond__titleSub c-white"><?php _e('精密鋳造用材料','top'); ?></div>
+              </a>
+              <div class="filter"></div>
+            </li>
+            <li class="diamond">
+              <a href="#investment-casting">
+                <div class="diamond__inner">
+                  <div class="center">
+                    <div class="diamond__title font-robot c-white">INVESTMENT<br class="sp__none" />CASTING</div>
+                    <div class="diamond__titleSub c-white"><?php _e('精密鋳造用材料','top'); ?></div>
+                    <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                      class="diamond__icon sp__none" width="25" alt="">
+                  </div>
                   <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
-                    class="diamond__icon sp__none" width="25" alt="">
+                    class="diamond__icon pc__none" width="25" alt="">
                 </div>
-                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
-                  class="diamond__icon pc__none" width="25" alt="">
-              </div>
-            </a>
-            <div class="filter"></div>
-          </li>
-          <li class="diamond">
-            <a href="#new-field">
-              <div class="diamond__inner">
-                <div class="center">
-                  <div class="diamond__title font-robot c-white">NEW FIELD</div>
-                  <div class="diamond__titleSub c-white"><?php _e('新たな取り組み','top'); ?></div>
+              </a>
+              <div class="filter"></div>
+            </li>
+            <li class="diamond">
+              <a href="#new-field">
+                <div class="diamond__inner">
+                  <div class="center">
+                    <div class="diamond__title font-robot c-white">NEW FIELD</div>
+                    <div class="diamond__titleSub c-white"><?php _e('新たな取り組み','top'); ?></div>
+                    <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                      class="diamond__icon sp__none" width="25" alt="">
+                  </div>
                   <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
-                    class="diamond__icon sp__none" width="25" alt="">
+                    class="diamond__icon pc__none" width="25" alt="">
                 </div>
-                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
-                  class="diamond__icon pc__none" width="25" alt="">
-              </div>
-            </a>
-            <div class="filter"></div>
-          </li>
-          <li class="diamond">
-            <a href="#sand-casting">
-              <div class="diamond__inner">
-                <div class="center">
-                  <div class="diamond__title font-robot c-white">SAND<br class="sp__none" />CASTING</div>
-                  <div class="diamond__titleSub c-white"><?php _e('砂型鋳造用資材・原材料','top'); ?></div>
+              </a>
+              <div class="filter"></div>
+            </li>
+            <li class="diamond">
+              <a href="#sand-casting">
+                <div class="diamond__inner">
+                  <div class="center">
+                    <div class="diamond__title font-robot c-white">SAND<br class="sp__none" />CASTING</div>
+                    <div class="diamond__titleSub c-white"><?php _e('砂型鋳造用資材・原材料','top'); ?></div>
+                    <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                      class="diamond__icon sp__none" width="25" alt="">
+                  </div>
                   <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
-                    class="diamond__icon sp__none" width="25" alt="">
+                    class="diamond__icon pc__none" width="25" alt="">
                 </div>
-                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
-                  class="diamond__icon pc__none" width="25" alt="">
-              </div>
-            </a>
-            <div class="filter"></div>
-          </li>
-          <li class="diamond">
-            <a href="#jewelry">
-              <div class="diamond__inner">
-                <div class="center">
-                  <div class="diamond__title font-robot c-white">JEWELRY</div>
-                  <div class="diamond__titleSub c-white"><?php _e('ジュエリーキャスト用副資材','top'); ?></div>
+              </a>
+              <div class="filter"></div>
+            </li>
+            <li class="diamond">
+              <a href="#jewelry">
+                <div class="diamond__inner">
+                  <div class="center">
+                    <div class="diamond__title font-robot c-white">JEWELRY</div>
+                    <div class="diamond__titleSub c-white"><?php _e('ジュエリーキャスト用副資材','top'); ?></div>
+                    <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
+                      class="diamond__icon sp__none" width="25" alt="">
+                  </div>
                   <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
-                    class="diamond__icon sp__none" width="25" alt="">
+                    class="diamond__icon pc__none" width="25" alt="">
                 </div>
-                <img src="<?= get_template_directory_uri(); ?>/images/top/icon/arrowDown.svg"
-                  class="diamond__icon pc__none" width="25" alt="">
-              </div>
-            </a>
-            <div class="filter"></div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- // リンクリスト -->
+              </a>
+              <div class="filter"></div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- // リンクリスト -->
+    </div>
     <div class="section__background section__background--right">
       <!-- 試作・型材料 -->
-      <section class="mold js-scroll-fadeIn-block js-scroll-animation" id="mold">
+      <section class="mold js-scroll-fadeIn-block js-scroll-animation js-scrollSnap" id="mold">
         <div class="container">
           <!-- detail -->
           <div class="detail flex">
@@ -308,7 +310,7 @@
       </section>
       <!-- // 試作・型材料 -->
       <!-- 砂型鋳造用資材・原材料 -->
-      <section class="sand-casting js-scroll-fadeIn-block js-scroll-animation" id="sand-casting">
+      <section class="sand-casting js-scroll-fadeIn-block js-scroll-animation js-scrollSnap" id="sand-casting">
         <div class="container">
           <!-- detail -->
           <div class="detail detail-reverse flex">
@@ -378,7 +380,8 @@
     </div>
     <div class="section__background section__background--left">
       <!-- 精密鋳造用材料 -->
-      <section class="investment-casting js-scroll-fadeIn-block js-scroll-animation" id="investment-casting">
+      <section class="investment-casting js-scroll-fadeIn-block js-scroll-animation js-scrollSnap"
+        id="investment-casting">
         <div class="container">
           <!-- detail -->
           <div class="detail flex">
@@ -443,7 +446,7 @@
       </section>
       <!-- // 精密鋳造用材料 -->
       <!-- ジュエリーキャスト用副資材 -->
-      <section class="jewelry js-scroll-fadeIn-block js-scroll-animation" id="jewelry">
+      <section class="jewelry js-scroll-fadeIn-block js-scroll-animation js-scrollSnap" id="jewelry">
         <div class="container">
           <!-- detail -->
           <div class="detail detail-reverse flex">
@@ -506,7 +509,7 @@
       <!-- // ジュエリーキャスト用副資材 -->
     </div>
     <!-- 新たな取り組み -->
-    <section class="new-field js-scroll-fadeIn-block js-scroll-animation" id="new-field">
+    <section class="new-field js-scroll-fadeIn-block js-scroll-animation js-scrollSnap" id="new-field">
       <div class="container">
         <!-- detail -->
         <div class="detail flex">
