@@ -1,6 +1,6 @@
 <!-- footer -->
 <?php wp_footer(); //必須 ?>
-<footer class="footer">
+<footer class="footer js-scrollSnap">
   <!-- cta -->
   <a href="#" class="cta arrow-wrap">
     <div class="container">

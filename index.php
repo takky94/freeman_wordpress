@@ -3,7 +3,7 @@
 <div id="index">
   <main id="main" class="main">
     <!-- メインビジュアル -->
-    <section class="hero js-hero">
+    <section class="hero js-hero js-scrollSnap">
       <h2 class="hero__heading font-eb">
       <div class="sp__none">
         <?php get_template_part('/parts/svg/top-fv-text'); ?>

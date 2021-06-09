@@ -78,14 +78,13 @@
     let targetOffset;
 
     if (window.innerWidth > 768) {
-      targetOffset = -200;
+      targetOffset = -160;
     } else {
       targetOffset = -130;
     }
 
     const options = {
       section: ".js-scrollSnap",
-      interstitialSection: "footer",
       easing: "swing",
       scrollSpeed: 600,
       scrollbars: true,
