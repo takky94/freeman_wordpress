@@ -3,6 +3,7 @@
 
   const getCategories = () => select("core/editor").getEditedPostAttribute("categories");
   let categories = getCategories();
+
   subscribe(() => {
     const newCategories = getCategories();
     const categoriesChanged = newCategories !== categories;
