@@ -85,11 +85,11 @@
 <div class="category-related">
   <div class="products">
     <h4><?php _e('ジュエリーの関連商品一覧', 'category-children-jewelry'); ?></h4>
-    <?php do_shortcode('[product category="jewelry" count="4" orderby="rand" layout="column"]'); ?>
+    <?= do_shortcode('[product category="jewelry" count="4" orderby="rand" layout="column"]'); ?>
   </div>
   <div class="articles">
     <h4><?php _e('ジュエリーの記事', 'category-children-jewelry'); ?></h4>
-    <?php do_shortcode('[post category="jewelry" count="6" orderby="rand" layout="column"]'); ?>
+    <?= do_shortcode('[post category="jewelry" count="6" orderby="rand" layout="column"]'); ?>
     <div class="view-all">
       <a href="#" class="button-arrow button-line arrow-wrap">
         <span class="font-robot bold">SEE MORE</span>

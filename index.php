@@ -297,7 +297,7 @@
           <!-- // detail -->
           <!-- products -->
           <div class="products js-scroll-fadeIn-products">
-            <?php do_shortcode('[product category="mold" count="3"]'); ?>
+            <?= do_shortcode('[product category="mold" count="3"]'); ?>
           </div>
           <!-- // products -->
           <div class="view-all view-all__right">
@@ -365,7 +365,7 @@
           <!-- // detail -->
           <!-- products -->
           <div class="products js-scroll-fadeIn-products">
-            <?php do_shortcode('[product category="sand_casting" count="3"]'); ?>
+            <?= do_shortcode('[product category="sand_casting" count="3"]'); ?>
           </div>
           <!-- // products -->
           <div class="view-all">
@@ -433,7 +433,7 @@
           <!-- // detail -->
           <!-- products -->
           <div class="products js-scroll-fadeIn-products">
-            <?php do_shortcode('[product category="investment_casting" count="3"]'); ?>
+            <?= do_shortcode('[product category="investment_casting" count="3"]'); ?>
           </div>
           <!-- // products -->
           <div class="view-all view-all__right">
@@ -495,7 +495,7 @@
           <!-- // detail -->
           <!-- products -->
           <div class="products js-scroll-fadeIn-products">
-            <?php do_shortcode('[product category="jewelry" count="3"]'); ?>
+            <?= do_shortcode('[product category="jewelry" count="3"]'); ?>
           </div>
           <!-- // products -->
           <div class="view-all">
@@ -551,7 +551,7 @@
         <!-- // detail -->
         <!-- products -->
         <div class="products js-scroll-fadeIn-products">
-          <?php do_shortcode('[product category="new_field" count="3"]'); ?>
+          <?= do_shortcode('[product category="new_field" count="3"]'); ?>
         </div>
         <!-- // products -->
         <div class="view-all view-all__right">

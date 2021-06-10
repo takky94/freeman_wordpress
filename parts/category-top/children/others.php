@@ -117,11 +117,11 @@
 <div class="category-related">
   <div class="products">
     <h4>試作・型材料の関連商品一覧</h4>
-    <?php do_shortcode('[product category="mold" count="4" orderby="rand" layout="column"]'); ?>
+    <?= do_shortcode('[product category="mold" count="4" orderby="rand" layout="column"]'); ?>
   </div>
   <div class="articles">
     <h4>試作・型材料の記事</h4>
-    <?php do_shortcode('[post category="mold" count="6" orderby="rand" layout="column"]'); ?>
+    <?= do_shortcode('[post category="mold" count="6" orderby="rand" layout="column"]'); ?>
     <div class="view-all">
       <a href="#" class="button-arrow button-line arrow-wrap">
         <span class="font-robot bold">SEE MORE</span>

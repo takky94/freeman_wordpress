@@ -162,11 +162,11 @@
 <div class="category-related">
   <div class="products">
     <h4><?php _e('関連商品一覧', 'category-new-field'); ?></h4>
-    <?php do_shortcode('[product category="new_field" count="4" orderby="rand" layout="column"]'); ?>
+    <?= do_shortcode('[product category="new_field" count="4" orderby="rand" layout="column"]'); ?>
   </div>
   <div class="articles">
     <h4><?php _e('関連NEWS', 'category-new-field'); ?></h4>
-    <?php do_shortcode('[post category="new_field" count="6" orderby="rand" layout="column"]'); ?>
+    <?= do_shortcode('[post category="new_field" count="6" orderby="rand" layout="column"]'); ?>
     <div class="view-all">
       <a href="#" class="button-arrow button-line arrow-wrap">
         <span class="font-robot bold">SEE MORE</span>
