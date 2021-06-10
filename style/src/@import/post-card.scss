@@ -429,6 +429,43 @@ $root-path: "../..";
       }
     } // .post-card-product
   } // .square
+  // ショートコードで使用
+  .wide {
+    margin-top: 0;
+    position: relative;
+    &::before {
+      background: #dee5ef;
+      content: "";
+      display: inline-block;
+      height: 100%;
+      position: absolute;
+      width: 1px;
+    }
+
+    .post-card-product {
+      display: flex;
+      .post-thumbnail {
+        margin-top: 0;
+        img {
+          max-width: 140px;
+        }
+      }
+      .content {
+        flex-grow: 1;
+        margin-left: 20px;
+        .date {
+          color: #96a8be;
+          font-size: 16px;
+        }
+        .title {
+          color: #000;
+          font-size: 16px;
+          line-height: 1.2;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
 }
 
 // 子カテゴリTOPの商品一覧

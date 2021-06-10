@@ -2,6 +2,7 @@
 
 add_shortcode("post", "fm_get_articles");
 add_shortcode("product", "fm_get_product");
+add_shortcode("the_products", "fm_get_the_products");
 add_shortcode("the_product", "fm_get_the_product");
 
 
@@ -24,10 +25,13 @@ if (!function_exists('fm_get_output_string')) {
 
       switch ($type) {
         case 'news':
-          $str .= '<li><a href="'.$permalink.'" class="article-card"><div class="thumbnail"><p class="article-thumbnail"><img src="'.fm_default_thumb('thumb-600', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><time class="date font-robot" datetime='.get_the_date('Y-m-d').'">'.get_the_date('Y.m.d').'</time><p class="title">'.$title.'</p></div></a></li>';
+          $str .= '<li><a href="'.$permalink.'" class="article-card"><div class="thumbnail"><p class="article-thumbnail"><img src="'.fm_default_thumb('thumb-600', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><time class="date font-robot" datetime='.get_the_date('Y-m-d', $post_id).'">'.get_the_date('Y.m.d', $post_id).'</time><p class="title">'.$title.'</p></div></a></li>';
           break;
         case 'products':
           $str .= '<li><a href="'.$permalink.'" class="post-card-product"><div class="thumbnail"><p class="post-thumbnail"><img src="'.fm_default_thumb('thumb-600', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><p class="title">'.$title.'</p><p class="more font-robot c-main"><span>MORE</span></p></div></a></li>';
+          break;
+        case 'product':
+          $str .= '<li><a href="'.$permalink.'" class="post-card-product"><div class="thumbnail"><p class="post-thumbnail"><img src="'.fm_default_thumb('thumb-600', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><time class="date font-robot" datetime='.get_the_date('Y-m-d', $post_id).'">'.get_the_date('Y.m.d', $post_id).'</time><p class="title">'.$title.'</p></div></a></li>';
           break;
       }
     }
@@ -42,6 +46,7 @@ if (!function_exists('fm_get_output_string')) {
 
 /*
 ニュースをループで任意の数表示
+使用ページ: トップ, categoryトップ
 例) [post category="mold" count="3" orderby="rand" layout="column" /]
 ********************************************************************/
 if (!function_exists('fm_get_articles')){
@@ -75,6 +80,7 @@ if (!function_exists('fm_get_articles')){
 
 /*
 カテゴリの商品をループで任意の数表示
+使用ページ: トップ, categoryトップ
 例) [product category="mold" count="3" orderby="rand" layout="column" /]
 ********************************************************************/
 if (!function_exists('fm_get_product')){
@@ -101,10 +107,11 @@ if (!function_exists('fm_get_product')){
 
 /*
 特定の商品呼び出し
-例) [the_product id="1,2,5" layout="square" /]
+使用ページ: categoryトップ
+例) [the_products id="1,2,5" layout="square" /]
 ********************************************************************/
-if (!function_exists('fm_get_the_product')){
-  function fm_get_the_product($atts){
+if (!function_exists('fm_get_the_products')){
+  function fm_get_the_products($atts){
     $id = $atts['id'];
     if (!isset($id)) return "IDを指定してください";
 
@@ -117,6 +124,31 @@ if (!function_exists('fm_get_the_product')){
 
     $wrap_class = 'the-product-link';
     $type = 'products';
+
+    return fm_get_output_string($args, $wrap_class, $layout, $type);
+  }
+}
+
+/*
+特定の商品呼び出し(一つのみ)
+使用ページ: Gutenbergの『導入事例/商品』で使用
+例) [the_product id="1" /]
+********************************************************************/
+if (!function_exists('fm_get_the_product')){
+  function fm_get_the_product($atts){
+    $id = $atts['id'];
+    if (!isset($id)) return 'IDを指定してください';
+    if(preg_match(',',$id)) return 'IDの指定は一つまでです';
+
+    $layout = 'wide';
+
+    $args = array(
+      'post_type' => 'post',
+      'post__in' => array($id)
+    );
+
+    $wrap_class = 'the-product-link';
+    $type = 'product';
 
     return fm_get_output_string($args, $wrap_class, $layout, $type);
   }

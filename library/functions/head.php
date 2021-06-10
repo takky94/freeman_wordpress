@@ -50,10 +50,10 @@ if (!function_exists('fm_basic_scripts_and_styles')){
     wp_enqueue_script('jquery');
 
     // 未ログイン時Gutenberg用CSSを読み込まない
-    if (!is_admin()) {
-      wp_deregister_style('wp-block-library');
-      wp_dequeue_style('wp-block-library');
-    } //is_admin()
+    // if (!is_admin()) {
+    //   wp_deregister_style('wp-block-library');
+    //   wp_dequeue_style('wp-block-library');
+    // } //is_admin()
   }
 }//fm_basic_scripts_and_styles()
 

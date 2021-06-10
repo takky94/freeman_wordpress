@@ -5,8 +5,91 @@
 $root-path: "../..";
 $background-color: #f5f5f5;
 $border-color: #707070;
+$block-margin-bottom: 40px;
 
 @import "./config";
+
+// 共通の下部余白
+.wp-block-freeman-block-slider,
+.wp-block-embed.is-type-video,
+.is-style-fm_table_details,
+.is-style-fm_table_physical_property,
+.wp-block-freeman-block-case,
+.wp-block-freeman-block-case-and-item,
+.wp-block-freeman-block-remarks {
+  margin-bottom: $block-margin-bottom;
+}
+
+// スライダー(ユーザーによる投稿なので異なる画像サイズのものも同サイズで表示)
+.wp-block-freeman-block-slider {
+  padding: 40px 0;
+  position: relative;
+
+  // 横幅いっぱいのデザインにも使用できるようborderでなく擬似要素で
+  &::before,
+  &::after {
+    background: $c-lightgray;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    left: 0;
+    margin: auto;
+    max-width: 1080px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  // スライダー部分
+  .single-slider {
+    height: 40vw;
+    margin: 0 calc(50% - 50vw);
+    max-height: 380px;
+    width: 100vw;
+
+    &__box {
+      height: 100%;
+      @include centeringMargin;
+      max-width: 600px;
+      position: absolute;
+      width: 60%;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      background: #fff;
+      position: absolute;
+    }
+
+    .swiper-button-prev {
+      left: 0;
+    }
+
+    .swiper-button-next {
+      right: 0;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      height: 60px;
+      width: 20px;
+
+      &::after {
+        color: #000;
+        font-size: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+}
 
 .wp-block-embed.is-type-video {
   background: #f5f5f5;
@@ -81,81 +164,35 @@ $border-color: #707070;
   }
 }
 
-// スライダー(ユーザーによる投稿なので異なる画像サイズのものも同サイズで表示)
-.wp-block-freeman-block-slider {
-  padding: 40px 0;
-  position: relative;
-
-  // 横幅いっぱいのデザインにも使用できるようborderでなく擬似要素で
-  &::before,
-  &::after {
-    background: $c-lightgray;
-    content: "";
-    display: inline-block;
-    height: 1px;
-    left: 0;
-    margin: auto;
-    max-width: 1080px;
-    position: absolute;
-    right: 0;
-    width: 100%;
-  }
-
-  &::before {
-    top: 0;
-  }
-
-  &::after {
-    bottom: 0;
-  }
-
-  // スライダー部分
-  .single-slider {
-    height: 40vw;
-    margin: 0 calc(50% - 50vw);
-    max-height: 380px;
-    width: 100vw;
-
-    &__box {
-      height: 100%;
-      @include centeringMargin;
-      max-width: 600px;
-      position: absolute;
-      width: 60%;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      background: #fff;
-      position: absolute;
-    }
-
-    .swiper-button-prev {
-      left: 0;
-    }
-
-    .swiper-button-next {
-      right: 0;
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-      height: 60px;
-      width: 20px;
-
-      &::after {
-        color: #000;
-        font-size: 10px;
-        font-weight: bold;
-      }
-    }
-  }
-}
-
 // 導入事例
 .wp-block-freeman-block-case {
   background: $background-color;
   padding: 40px;
+}
+
+// 導入事例/商品
+.wp-block-freeman-block-case-and-item {
+  background: $background-color;
+  padding: 40px;
+
+  // 「導入事例」の箇所
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+  }
+
+  // 記事へのリンクでliリストの円削除
+  .the-product-link {
+    .wide {
+      li::before {
+        display: none;
+      }
+    }
+  }
 }
 
 // 備考

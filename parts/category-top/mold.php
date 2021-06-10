@@ -94,7 +94,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[the_product id="75"]'); ?>
+        <?= do_shortcode('[the_products id="75"]'); ?>
       </div>
     </div>
   </div>
