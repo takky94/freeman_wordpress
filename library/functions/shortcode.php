@@ -138,7 +138,7 @@ if (!function_exists('fm_get_the_product')){
   function fm_get_the_product($atts){
     $id = $atts['id'];
     if (!isset($id)) return 'IDを指定してください';
-    if(preg_match(',',$id)) return 'IDの指定は一つまでです';
+    if (strpos($id, ',') !== false) return 'IDの指定は一つまでです';
 
     $layout = 'wide';
 
