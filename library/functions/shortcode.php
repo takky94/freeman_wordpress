@@ -12,7 +12,7 @@ if (!function_exists('fm_get_output_string')) {
     $query = new WP_Query($args);
     $posts = $query -> posts;
 
-    if(!($posts.length)) return "記事が取得できませんでした。";
+    if(!count($posts)) return "記事が取得できませんでした。";
 
     $str = '<div class="'.$wrap_class.'"><ul class="'.$layout.'">';
 
