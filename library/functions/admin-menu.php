@@ -3,6 +3,8 @@
 add_action('admin_menu', 'fm_change_post_menu_title');
 add_action('admin_menu', 'fm_change_post_menu_label');
 add_action('admin_head', 'fm_change_post_menu_icon');
+add_filter('manage_posts_columns', 'fm_add_posts_columns_post_id');
+add_action('manage_posts_custom_column', 'fm_add_posts_columns_post_id_row', 10, 2);
 
 /*
 編集画面の「投稿」を「商品」に変更
@@ -49,5 +51,23 @@ if (!function_exists('fm_change_post_menu_icon')){
 }
 </style>
 <?php
+  }
+}
+
+/*
+投稿一覧にIDを追加
+********************************************************************/
+if (!function_exists('fm_add_posts_columns_post_id')){
+  function fm_add_posts_columns_post_id($columns){
+    $columns['postid'] = 'ID';
+    return $columns;
+  }
+}
+
+if (!function_exists('fm_add_posts_columns_post_id_row')){
+  function fm_add_posts_columns_post_id_row($column_name, $post_id) {
+    if ('postid' == $column_name) {
+      echo $post_id;
+    }
   }
 }
