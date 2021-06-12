@@ -796,6 +796,10 @@ $menu-animation-duration: 0.3s;
 
   .products-link {
     margin-top: 40px;
+    @media (max-width: $sp) {
+      margin-top: 20px;
+    }
+
     .column {
       justify-content: flex-start;
     }
@@ -816,6 +820,9 @@ $menu-animation-duration: 0.3s;
 
   .articles-link {
     margin-top: 40px;
+    @media (max-width: $sp) {
+      margin-top: 20px;
+    }
   }
 } // .category-related
 

@@ -74,7 +74,6 @@ $root-path: "../..";
       }
     }
     .content {
-      flex-grow: 1;
       margin-left: $gapSp;
       padding-bottom: 15px;
       position: relative;
@@ -101,6 +100,7 @@ $root-path: "../..";
         font-size: 16px;
         font-weight: bold;
         margin-top: 10px;
+        word-break: break-all;
       }
       .description {
         display: none;
@@ -133,6 +133,7 @@ $root-path: "../..";
       font-size: 22px;
       font-weight: bold;
       margin-top: 20px;
+      word-break: break-all;
     }
 
     .description {
@@ -157,6 +158,7 @@ $root-path: "../..";
       font-size: 22px;
       font-weight: bold;
       margin-top: 20px;
+      word-break: break-all;
     }
 
     .description {
@@ -180,6 +182,7 @@ $root-path: "../..";
     font-size: 18px;
     font-weight: bold;
     margin-top: 10px;
+    word-break: break-all;
   }
 
   .description {
@@ -191,6 +194,7 @@ $root-path: "../..";
 .post-card-wide {
   .title {
     font-size: 22px;
+    word-break: break-all;
   }
 
   .description {
@@ -207,16 +211,26 @@ $root-path: "../..";
 
     li {
       width: calc((100% - 40px) / 2);
-
-      // 右側の列は左に余白
-      &:nth-child(2n) {
-        margin-left: 40px;
+      @media (max-width: $sp) {
+        width: 100%;
       }
-      // 上段以外は上に余白/線
-      &:not(:nth-child(1)):not(:nth-child(2)) {
-        border-top: 1px solid $c-lightgray;
-        margin-top: 15px;
-        padding-top: 15px;
+
+      @media (min-width: $tab) {
+        // 右側の列は左に余白
+        &:nth-child(2n) {
+          margin-left: 40px;
+        }
+        // 上段以外は上に余白/線
+        &:not(:nth-child(1)):not(:nth-child(2)) {
+          border-top: 1px solid $c-lightgray;
+          margin-top: 15px;
+          padding-top: 15px;
+        }
+      }
+      @media (max-width: $sp) {
+        &:not(:nth-child(1)) {
+          margin-top: 20px;
+        }
       }
 
       .article-card {
@@ -224,11 +238,18 @@ $root-path: "../..";
 
         .thumbnail {
           max-width: 200px;
+          min-width: 30%;
           width: 30%;
+          @media (max-width: $sp) {
+            min-width: 100px;
+            width: 100px;
+          }
         }
         .content {
-          flex-grow: 1;
           margin-left: $gapPc;
+          @media (max-width: $sp) {
+            margin-left: $gapSp;
+          }
         }
         .date {
           color: $c-gray;
@@ -238,6 +259,10 @@ $root-path: "../..";
         .title {
           font-size: 16px;
           line-height: 2;
+          word-break: break-all;
+          @media (max-width: $sp) {
+            line-height: 1.4;
+          }
         }
       }
     }
@@ -275,6 +300,7 @@ $root-path: "../..";
 
 .post-card-product {
   .title {
+    word-break: break-all;
     @media (min-width: $tab) {
       margin-top: $gapPc;
     }
@@ -388,6 +414,7 @@ $root-path: "../..";
     display: flex;
     width: 100%;
     .post-thumbnail img {
+      min-width: 100px;
       width: 100px;
     }
     .content {

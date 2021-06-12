@@ -20,6 +20,7 @@ if (!function_exists('fm_get_output_string')) {
     foreach ($posts as $post) {
       setup_postdata($post);
       $title = $post -> post_title;
+      $title = wp_trim_words($title, 32); // 32文字以上は省略
       $post_id = $post -> ID;
       $permalink = get_the_permalink($post_id);
 
