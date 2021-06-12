@@ -63,13 +63,17 @@ if (!function_exists('fm_custom_gutenberg')){
         'name' => 'fm_table_thick',
         'label' => '厚さ/1箱の枚数',
         'inline_style' => '
+        .is-style-fm_table_thick tbody tr{
+          border-bottom: 1px solid #707070;
+          border-top: 1px solid #707070;
+        }
         .is-style-fm_table_thick thead th{
           background: #888;
           border: none;
           color: #fff;
-          font-size: 20px;
+          font-size: 16px;
           text-align: center;
-          padding: 0.5em 1.5em;
+          padding: 1em 1.5em;
           position: relative;
         }
         .is-style-fm_table_thick td{
@@ -110,13 +114,17 @@ if (!function_exists('fm_custom_gutenberg')){
         .is-style-fm_table_weight {
           margin-top: 0;
         }
+        .is-style-fm_table_weight tbody tr{
+          border-bottom: 1px solid #707070;
+          border-top: 1px solid #707070;
+        }
         .is-style-fm_table_weight thead th{
           background: #888;
           border: none;
           color: #fff;
-          font-size: 20px;
+          font-size: 16px;
           text-align: center;
-          padding: 0.5em 1.5em;
+          padding: 1em 1.5em;
           position: relative;
         }
         .is-style-fm_table_weight td{
@@ -126,6 +134,9 @@ if (!function_exists('fm_custom_gutenberg')){
           position: relative;
           text-align: center;
           width: 50%;
+        }
+        .is-style-fm_table_weight td:nth-child(2){
+          padding: 10px;
         }
         .is-style-fm_table_weight thead th:not(:first-child)::before,
         .is-style-fm_table_weight td:not(:first-child)::before{
@@ -144,6 +155,10 @@ if (!function_exists('fm_custom_gutenberg')){
         }
         .is-style-fm_table_weight td:not(:first-child)::before{
           background: #e0e0e0;
+        }
+        .is-style-fm_table_weight td img{
+          height: auto;
+          margin: auto;
         }
         ',
       )

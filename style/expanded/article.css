@@ -1652,6 +1652,18 @@
   font-size: 14px;
 }
 
+.wp-block-freeman-block-table-title {
+  background: #707070;
+  color: #fff;
+  padding: 1em 1.5em;
+  text-align: center;
+}
+
+.wp-block-freeman-block-table-title h4 {
+  font-size: 16px;
+  margin-top: 0;
+}
+
 .wp-block-freeman-block-case {
   background: #f5f5f5;
   padding: 40px;
