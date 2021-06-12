@@ -101,5 +101,52 @@ if (!function_exists('fm_custom_gutenberg')){
         ',
       )
     );
+    register_block_style(
+      'core/table',
+      array(
+        'name' => 'fm_table_weight',
+        'label' => 'XXkg + XXkg',
+        'inline_style' => '
+        .is-style-fm_table_weight {
+          margin-top: 0;
+        }
+        .is-style-fm_table_weight thead th{
+          background: #888;
+          border: none;
+          color: #fff;
+          font-size: 20px;
+          text-align: center;
+          padding: 0.5em 1.5em;
+          position: relative;
+        }
+        .is-style-fm_table_weight td{
+          border-left: none;
+          border-right: none;
+          padding: 2em 3em;
+          position: relative;
+          text-align: center;
+          width: 50%;
+        }
+        .is-style-fm_table_weight thead th:not(:first-child)::before,
+        .is-style-fm_table_weight td:not(:first-child)::before{
+          bottom: 0;
+          content: "";
+          display: inline-block;
+          height: 80%;
+          left: 0;
+          margin: auto;
+          top: 0;
+          position: absolute;
+          width: 1px;
+        }
+        .is-style-fm_table_weight thead th:not(:first-child)::before{
+          background: #707070;
+        }
+        .is-style-fm_table_weight td:not(:first-child)::before{
+          background: #e0e0e0;
+        }
+        ',
+      )
+    );
   }
 }
