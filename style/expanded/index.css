@@ -125,7 +125,7 @@
     width: 100%;
   }
   .post-card .thumbail {
-    max-width: 40%;
+    max-width: 30%;
   }
   .post-card .thumbail img {
     max-width: 200px;
@@ -135,7 +135,7 @@
     margin-left: 20px;
     padding-bottom: 15px;
     position: relative;
-    width: 60%;
+    width: 70%;
   }
   .post-card .content .meta__label {
     max-width: 180px;
@@ -230,6 +230,7 @@
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-left: 30px;
+  width: calc(70% - 30px);
 }
 
 @media (max-width: 768px) {

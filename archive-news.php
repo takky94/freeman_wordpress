@@ -22,6 +22,8 @@
       <?php $i = 0; if ($the_query -> found_posts > 0): if ($the_query -> have_posts()): while ($the_query -> have_posts()): $the_query -> the_post(); ?>
       <?php
         $terms = wp_get_object_terms($post->ID, 'news_category');
+        $title = get_the_title();
+        $title = wp_trim_words($title, 32); // 32文字以上は省略
       ?>
       <?php if ($i === 0): // 上段 ?>
       <div class="news__large">
@@ -38,7 +40,7 @@
               <time class="meta__date font-robot"
                 datetime="<?= get_the_date('Y-m-d'); ?>"><?= get_the_date('Y.m.d'); ?></time>
             </div>
-            <p class="title"><?= get_the_title(); ?></p>
+            <p class="title"><?= $title; ?></p>
             <div class="description"><?= get_the_excerpt(); ?></div>
           </div>
         </a>
@@ -114,7 +116,7 @@
             <time class="meta__date font-robot"
               datetime="<?= get_the_date('Y-m-d'); ?>"><?= get_the_date('Y.m.d'); ?></time>
           </div>
-          <p class="title"><?= get_the_title(); ?></p>
+          <p class="title"><?= $title; ?></p>
           <div class="description"><?= the_excerpt(); ?></div>
         </div>
       </a>
