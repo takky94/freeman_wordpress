@@ -90,6 +90,11 @@ $menu-animation-duration: 0.3s;
         margin-top: 1.5em;
       }
     }
+    &.new_field {
+      .category-lead__text--headingEn {
+        width: 100%;
+      }
+    }
   } // __text
 } // .category-lead
 
@@ -213,6 +218,9 @@ $menu-animation-duration: 0.3s;
 .category-menu {
   & > ul {
     display: flex;
+    @media (max-width: $sp) {
+      flex-direction: column;
+    }
   }
   &__block {
     border: 1px solid $c-lightgray;
@@ -220,9 +228,24 @@ $menu-animation-duration: 0.3s;
     flex-direction: column;
     padding: 15px 15px 25px 15px;
     width: calc((100% - (25px * 3)) / 4);
+    @media (max-width: $sp) {
+      width: 100%;
+    }
     // 一番左以外左に余白
     &:not(:nth-child(1)) {
-      margin-left: 25px;
+      @media (min-width: $tab) {
+        margin-left: 25px;
+      }
+      @media (max-width: $sp) {
+        margin-top: 20px;
+      }
+    }
+
+    img {
+      @media (max-width: $sp) {
+        margin: auto;
+        max-width: 300px;
+      }
     }
 
     &--title {
@@ -263,6 +286,13 @@ $menu-animation-duration: 0.3s;
     flex-wrap: wrap;
     margin-top: 30px;
     padding: 40px;
+    @media (max-width: $pc) {
+      padding: 20px;
+    }
+    @media (max-width: $sp) {
+      padding: 10px;
+      width: 100%;
+    }
 
     &--box {
       background: #fff;
@@ -270,26 +300,34 @@ $menu-animation-duration: 0.3s;
       position: relative;
       text-align: center;
       width: calc((100% - (30px * 3)) / 4);
+      @media (max-width: $sp) {
+        width: 100%;
+      }
+
       // 一番左以外左に余白
       &:not(:nth-child(1)):not(:nth-child(5)) {
-        margin-left: 30px;
-        // 矢印
-        &::before {
-          border-bottom: 4px solid transparent;
-          border-left: 6.9282px solid $c-gray;
-          border-right: 4px solid transparent;
-          border-top: 4px solid transparent;
-          content: "";
-          display: inline-block;
-          left: -18px;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
+        @media (min-width: $tab) {
+          margin-left: 30px;
+          // 矢印
+          &::before {
+            border-bottom: 4px solid transparent;
+            border-left: 6.9282px solid $c-gray;
+            border-right: 4px solid transparent;
+            border-top: 4px solid transparent;
+            content: "";
+            display: inline-block;
+            left: -18px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+          }
         }
       }
       // 上段以外は上に余白
       &:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)) {
-        margin-top: 30px;
+        @media (min-width: $tab) {
+          margin-top: 30px;
+        }
       }
 
       // STEP部分
@@ -304,6 +342,9 @@ $menu-animation-duration: 0.3s;
         top: 0;
         &.last {
           background: $c-main;
+        }
+        @media (max-width: $sp) {
+          width: 100%;
         }
       }
 
@@ -351,6 +392,13 @@ $menu-animation-duration: 0.3s;
   .block {
     background: $c-whitesmoke;
     padding: 40px;
+    @media (max-width: $pc) {
+      padding: 20px;
+    }
+    @media (max-width: $sp) {
+      padding: 10px;
+    }
+
     &:not(:nth-of-type(1)) {
       margin-top: 100px;
       position: relative;
@@ -370,13 +418,39 @@ $menu-animation-duration: 0.3s;
     &__inner {
       background: #fff;
       padding: 50px;
+      @media (max-width: $pc) {
+        padding: 30px;
+      }
+      @media (max-width: $sp) {
+        padding: 20px;
+      }
+    }
+    &__column {
+      border-bottom: 1px solid $c-lightgray;
+      display: flex;
+      margin-top: 30px;
+      padding: 0 10px 50px;
+      @media (max-width: $sp) {
+        flex-direction: column-reverse;
+        margin-top: 0;
+        padding: 0 0 30px;
+        position: relative;
+      }
     }
     &__text {
       width: 60%;
+      @media (max-width: $sp) {
+        width: 100%;
+      }
+
+      // タイトル(STEP01 HOGE)の塊
       .flex {
         align-items: center;
         border-bottom: 1px solid $c-lightgray;
         padding-bottom: 30px;
+        @media (max-width: $sp) {
+          padding-bottom: 5px;
+        }
       }
     }
     &__label {
@@ -386,40 +460,70 @@ $menu-animation-duration: 0.3s;
       &.last {
         background: $c-main;
       }
+      @media (max-width: $sp) {
+        font-size: 12px;
+        position: absolute;
+        top: 0;
+      }
     }
     &__title {
       font-size: 35px;
       font-weight: 400;
       margin-left: 20px;
-    }
-    &__column {
-      border-bottom: 1px solid $c-lightgray;
-      display: flex;
-      margin-top: 30px;
-      padding: 0 10px 50px;
+      @media (max-width: $pc) {
+        font-size: 28px;
+      }
+      @media (max-width: $sp) {
+        font-size: 24px;
+        margin-left: 0;
+        margin-top: 15px;
+      }
     }
     &__image {
       background: $c-whitesmoke;
       display: flex;
       margin-left: 35px;
       width: 40%;
+      @media (max-width: $sp) {
+        margin-left: 0;
+        padding: 40px 20px 20px;
+        width: 100%;
+      }
+
       img {
         height: 90%;
         margin: auto;
         max-height: 180px;
+        @media (max-width: $pc) {
+          height: auto;
+          max-height: inherit;
+          max-width: 250px;
+          width: 60%;
+        }
         &.sand_casting {
           height: auto;
           max-width: 200px;
           width: 90%;
+          @media (max-width: $pc) {
+            max-width: 180px;
+            width: 60%;
+          }
         }
         &.investment_casting {
           max-height: 160px;
+          width: auto;
+          @media (max-width: $pc) {
+            max-height: 120px;
+          }
         }
       }
     }
     &__description {
       line-height: 2;
       margin-top: 45px;
+      @media (max-width: $sp) {
+        margin-top: 25px;
+      }
     }
     &__items {
       margin-top: 80px;
@@ -436,9 +540,14 @@ $menu-animation-duration: 0.3s;
 
   &__top {
     display: flex;
+    flex-wrap: wrap;
+    position: relative;
     &--text,
     &--image {
       width: 50%;
+      @media (max-width: $sp) {
+        width: 100%;
+      }
     }
     &--text {
       // 黒背景箇所
@@ -448,17 +557,34 @@ $menu-animation-duration: 0.3s;
         display: inline-block;
         font-weight: 500;
         padding: 0.25em 1em;
+        @media (max-width: $sp) {
+          font-size: 14px;
+          left: 0;
+          position: absolute;
+          top: 0;
+        }
       }
       // 文字サイズ大きい箇所
       .title {
         font-size: 40px;
         font-weight: 400;
         margin-top: 35px;
+        @media (max-width: $sp) {
+          font-size: 24px;
+        }
       }
       // 説明文箇所
       .description {
         line-height: 2;
         margin-top: 45px;
+      }
+    }
+    @media (max-width: $sp) {
+      &--image img {
+        max-height: 300px;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
       }
     }
   } // __top
@@ -483,10 +609,16 @@ $menu-animation-duration: 0.3s;
         position: absolute;
         top: 0;
         width: 470px;
+        @media (max-width: $sp) {
+          width: 50%;
+        }
       }
     }
     .view-all .button-arrow {
       margin-top: 0;
+      @media (max-width: $sp) {
+        font-size: 12px;
+      }
     }
   } // __bottom
 
@@ -494,20 +626,34 @@ $menu-animation-duration: 0.3s;
     .category-children__top--text {
       order: 1;
       padding-right: 45px;
+      @media (max-width: $sp) {
+        order: 2;
+        padding-right: 0;
+      }
     }
     .category-children__top--image {
       order: 2;
       padding-left: 20px;
+      @media (max-width: $sp) {
+        order: 1;
+        padding-left: 0;
+      }
     }
   }
   &.right-text {
     .category-children__top--text {
       order: 2;
       padding-left: 45px;
+      @media (max-width: $sp) {
+        padding-left: 0;
+      }
     }
     .category-children__top--image {
       order: 1;
       padding-right: 20px;
+      @media (max-width: $sp) {
+        padding-right: 0;
+      }
     }
   }
 }
@@ -520,21 +666,25 @@ $menu-animation-duration: 0.3s;
     margin: 0 auto;
     max-width: calc(1080px - (40px * 2) - (50px * 2)); // STEPに合わせる
     width: 100%;
-  }
-  thead {
-    background: #888;
-    color: #fff;
+    @media (max-width: $sp) {
+      display: block;
+      -webkit-overflow-scrolling: touch;
+      overflow-x: scroll;
+      white-space: nowrap;
+    }
   }
   tr {
     border-bottom: 1px solid #aaa;
   }
   th,
-  td {
+  tr td {
     min-width: 90px;
     padding: 1em;
     text-align: center;
   }
   th {
+    background: #888;
+    color: #fff;
     font-weight: 700;
     line-height: 1.2;
     position: relative;
@@ -551,6 +701,7 @@ $menu-animation-duration: 0.3s;
     }
   }
   td {
+    background: #fff; // stickyで他のセルの上に来るため
     font-weight: 100;
     img {
       margin: auto;
@@ -562,16 +713,16 @@ $menu-animation-duration: 0.3s;
     &.common {
       background: #f5f5f5;
     }
-    &:not(.common) {
+    &:not(.common):not(.sticky) {
       position: relative;
-      &::after {
+      &::before {
         background: $c-lightgray;
         bottom: 0;
         content: "";
         height: 80%;
+        left: 0;
         margin: auto;
         position: absolute;
-        right: 0;
         top: 0;
         width: 1px;
       }
@@ -588,6 +739,13 @@ $menu-animation-duration: 0.3s;
     }
     &-blue {
       background: #1696e6;
+    }
+  }
+  .sticky {
+    @media (max-width: $sp) {
+      left: 0;
+      position: sticky;
+      z-index: 1;
     }
   }
 }

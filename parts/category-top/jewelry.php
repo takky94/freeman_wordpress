@@ -118,7 +118,7 @@
     <thead>
       <tr>
         <th><?php _e('用途', 'category-jewelry'); ?></th>
-        <th><?php _e('製品名', 'category-jewelry'); ?></th>
+        <th class="sticky"><?php _e('製品名', 'category-jewelry'); ?></th>
         <th><?php _e('色', 'category-jewelry'); ?></th>
         <th><?php _e('硬度', 'category-jewelry'); ?></th>
         <th>WT<br />(@23℃)</th>
@@ -130,7 +130,7 @@
     <tbody>
       <tr>
         <td rowspan="5" class="common"><?php _e('型取り用', 'category-jewelry'); ?></td>
-        <td>
+        <td class="sticky">
           <figure>
             <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-1.png" alt=""
               <?php fm_lazyload(); ?> />
@@ -145,7 +145,7 @@
         <td>7.5000</td>
       </tr>
       <tr>
-        <td>
+        <td class="sticky">
           <figure>
             <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-2.png" alt=""
               <?php fm_lazyload(); ?> />
@@ -162,7 +162,7 @@
         <td>7.5000</td>
       </tr>
       <tr>
-        <td>
+        <td class="sticky">
           <figure>
             <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-3.png" alt=""
               <?php fm_lazyload(); ?> />
@@ -179,7 +179,7 @@
         <td>25.000</td>
       </tr>
       <tr>
-        <td>
+        <td class="sticky">
           <figure>
             <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-4.png" alt=""
               <?php fm_lazyload(); ?> />
@@ -194,7 +194,7 @@
         <td>8.000</td>
       </tr>
       <tr>
-        <td>
+        <td class="sticky">
           <figure>
             <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-5.png" alt=""
               <?php fm_lazyload(); ?> />
