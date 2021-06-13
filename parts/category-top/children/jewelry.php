@@ -65,17 +65,12 @@
 <div class="category-child-product-link">
   <ul class="square">
     <?php
-        $i = 0;
         if ($the_query -> have_posts()):
         while ($the_query -> have_posts()):
         $the_query -> the_post();
         $title = get_the_title();
         $title = wp_trim_words($title, 32); // 32文字以上は省略
       ?>
-    <?php if ($i === 6): ?>
-  </ul>
-  <ul class="square square-second js-hidden-links">
-    <?php endif; ?>
     <li>
       <a href="<?= get_the_permalink(); ?>" class="post-card-product">
         <div class="thumbnail">
@@ -88,20 +83,6 @@
         </div>
       </a>
     </li>
-    <?php if ($i > 6 && $i == $posts_count): ?>
-    <li class="square-second__trigger-wrap">
-      <input id="square-secondTrigger" class="square-second__checkbox" type="checkbox">
-      <label class="square-second__trigger" for="square-secondTrigger">More</label>
-    </li>
-    <?php endif;?>
-    <?php $i++; ?>
-    <?php // ulの最後にshow/hidden用ボタン加える ?>
-    <?php if ($i > 6 && $i == $posts_count): ?>
-    <li class="square-second__trigger-wrap">
-      <input id="square-secondTrigger" class="square-second__checkbox" type="checkbox">
-      <label class="square-second__trigger font-robot" for="square-secondTrigger">MORE</label>
-    </li>
-    <?php endif;?>
     <?php endwhile; wp_reset_postdata(); endif; ?>
   </ul>
 </div>
