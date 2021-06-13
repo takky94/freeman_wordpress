@@ -26,10 +26,10 @@
      : null;
     $others_youtube_caption = $contents['others_youtube_caption'] ? esc_html($contents['others_youtube_caption']) : null;
 
-
   // クエリ (同カテゴリの商品一覧)
   $args = array(
     'post_type' => 'post',
+    'posts_per_page' => -1, // 全権表示
     'category_name' => $category_slug,
   );
   $the_query = new WP_Query($args);
@@ -90,27 +90,54 @@
 <!-- // category-movie-child-movie -->
 <?php endif; ?>
 
+<?php $posts_count = $the_query -> found_posts; ?>
+<?php if ($posts_count > 0): ?>
 <!-- category-child-product-link -->
 <div class="category-child-product-link">
   <ul class="square">
-    <?php if ($the_query -> found_posts > 0): if ($the_query -> have_posts()): while ($the_query -> have_posts()): $the_query -> the_post(); ?>
+    <?php　$i = 0; ?>
+    <?php
+        if ($the_query -> have_posts()):
+        while ($the_query -> have_posts()):
+        $the_query -> the_post();
+        $title = get_the_title();
+        $title = wp_trim_words($title, 32); // 32文字以上は省略
+      ?>
+    <?php if ($i === 6): ?>
+  </ul>
+  <ul class="square square-second js-hidden-links">
+    <?php endif; ?>
     <li>
       <a href="<?= get_the_permalink(); ?>" class="post-card-product">
         <div class="thumbnail">
-          <p class="post-thumbnail"><img src="<?= fm_default_thumb('thumb-200'); ?>" alt="" loading="lazy" /></p>
+          <p class="post-thumbnail"><img src="<?= fm_default_thumb('thumb-600'); ?>" alt="" loading="lazy" /></p>
         </div>
         <div class="content">
-          <p class="title"><?= get_the_title(); ?></p>
+          <p class="title"><?= $title; ?></p>
           <p class="description"><?= get_the_excerpt(); ?></p>
           <p class="more font-robot c-main"><span>MORE</span></p>
         </div>
       </a>
     </li>
-    <?php endwhile;endif;endif; ?>
+    <?php if ($i > 6 && $i == $posts_count): ?>
+    <li class="square-second__trigger-wrap">
+      <input id="square-secondTrigger" class="square-second__checkbox" type="checkbox">
+      <label class="square-second__trigger" for="square-secondTrigger">More</label>
+    </li>
+    <?php endif;?>
+    <?php $i++; ?>
+    <?php // ulの最後にshow/hidden用ボタン加える ?>
+    <?php if ($i > 6 && $i == $posts_count): ?>
+    <li class="square-second__trigger-wrap">
+      <input id="square-secondTrigger" class="square-second__checkbox" type="checkbox">
+      <label class="square-second__trigger font-robot" for="square-secondTrigger">MORE</label>
+    </li>
+    <?php endif;?>
+    <?php endwhile; wp_reset_postdata(); endif; ?>
   </ul>
 </div>
 <!-- // category-child-product-link -->
-
+<?php endif; ?>
 
 
 <!-- category-related -->

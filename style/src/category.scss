@@ -829,6 +829,7 @@ $menu-animation-duration: 0.3s;
 // 子カテゴリトップの関連商品・記事
 .category-child-product-link {
   margin: 80px auto 0;
+  max-width: 100%;
   width: 920px;
 }
 

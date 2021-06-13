@@ -420,7 +420,7 @@ $root-path: "../..";
     }
     .content {
       flex-grow: 1;
-      margin-left: 20px;
+      margin-left: $gapSp;
     }
   } // media
 }
@@ -500,20 +500,32 @@ $root-path: "../..";
 .category-child-product-link {
   @extend .the-product-link;
   .square {
+    flex-wrap: wrap;
+
     li {
       width: calc((100% - 40px) / 2);
       @media (min-width: $tab) {
-        &:nth-child(2n) {
+        &:nth-child(2n):not(.square-second__trigger-wrap) {
           margin-left: 40px;
         }
         &:not(:nth-child(1)):not(:nth-child(2)) {
           margin-top: 40px;
         }
       }
+      @media (max-width: $sp) {
+        width: 100%;
+        &:not(:nth-child(1)) {
+          margin-top: $gapSp;
+        }
+      }
     }
     .post-card-product {
       padding: 40px;
       width: 100%;
+      @media (max-width: $pc) {
+        padding: $gapSp;
+      }
+
       .content {
         .title {
           font-size: 20px;
@@ -528,9 +540,102 @@ $root-path: "../..";
             margin-top: $gapPc;
           }
         }
+        @media (max-width: $sp) {
+          .title,
+          .description,
+          .more {
+            margin-top: $gapSp;
+          }
+        }
       }
     } // .post-card-product
   } // .square
+  // 7つ以上の場合隠す(子カテゴリTOP)
+  .square-second {
+    margin-top: 40px;
+    max-height: 180px;
+    overflow: hidden;
+    padding-bottom: 100px;
+    position: relative;
+    transition: max-height 1s;
+    @media (max-width: $sp) {
+      margin-top: $gapSp;
+    }
+    &::before {
+      background: linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.9) 50%, #fff 100%);
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 100px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+    }
+    // 開いたらボタン要素のスタイル変更
+    &.is-show {
+      &::before {
+        background: none;
+      }
+    }
+    .square-second__trigger-wrap {
+      bottom: 30px;
+      margin-left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 2;
+    }
+    &__checkbox {
+      display: none;
+      &:checked + .square-second__trigger {
+        &::before {
+          transform: rotate(180deg);
+        }
+        &:hover::before {
+          animation: none;
+        }
+      }
+    }
+    // 表示ボタン
+    &__trigger {
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      font-size: 12px;
+      font-weight: bold;
+      margin: auto;
+      max-width: 230px;
+      padding: 5px 1em 25px;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      &::before {
+        background: center/ contain url(#{$root-path}/images/common/down-arrow-white.svg) no-repeat;
+        bottom: 5px;
+        content: "";
+        display: block;
+        height: 12px;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        transition: all 0.3s;
+        width: 12px;
+      }
+      &:hover::before {
+        animation: moveArrowY 1s ease-in-out alternate infinite;
+      }
+      @keyframes moveArrowY {
+        0% {
+          transform: translate(0, 0px);
+        }
+        100% {
+          transform: translate(0, -5px);
+        }
+      }
+    }
+  } // .square-second
   .wide {
     display: flex;
     flex-wrap: wrap;
