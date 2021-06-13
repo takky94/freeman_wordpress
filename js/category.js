@@ -2,17 +2,19 @@
   {
     // category-child-product-linkで投稿が7件以上時のアコーディオン
     const trigger = document.querySelector("#square-secondTrigger");
-    trigger.addEventListener("change", function (e) {
-      e.preventDefault();
-      const target = document.querySelector(".js-hidden-links");
-      const targetHeight = target.scrollHeight;
-      target.style.maxHeight = target.offsetHeight === 180 ? `${targetHeight}px` : "180px";
-      if (target.classList.contains("is-show")) {
-        target.classList.remove("is-show");
-      } else {
-        target.classList.add("is-show");
-      }
-    });
+    if (trigger !== null) {
+      trigger.addEventListener("change", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(".js-hidden-links");
+        const targetHeight = target.scrollHeight;
+        target.style.maxHeight = target.offsetHeight === 180 ? `${targetHeight}px` : "180px";
+        if (target.classList.contains("is-show")) {
+          target.classList.remove("is-show");
+        } else {
+          target.classList.add("is-show");
+        }
+      });
+    }
   }
 
   if (document.querySelector(".js-mold-slider") !== null) {

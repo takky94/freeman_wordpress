@@ -64,8 +64,8 @@
 <!-- category-child-product-link -->
 <div class="category-child-product-link">
   <ul class="square">
-    <?php　$i = 0; ?>
     <?php
+        $i = 0;
         if ($the_query -> have_posts()):
         while ($the_query -> have_posts()):
         $the_query -> the_post();
