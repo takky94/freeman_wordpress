@@ -171,6 +171,7 @@ if (!function_exists('fm_custom_gutenberg')){
         'inline_style' => '
         .wp-block-separator.is-style-fm_separator:not(.is-style-wide):not(.is-style-dots){
           border-bottom: 1px solid #DEE5EF;
+          border-top: none;
           margin: 60px 0;
           max-width: 100%;
           width: 100%;
