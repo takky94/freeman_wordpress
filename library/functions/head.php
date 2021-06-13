@@ -64,8 +64,18 @@ if (!function_exists('fm_admin_scripts')){
   function fm_admin_scripts(){
     if (get_post_type() === 'post'){
       wp_enqueue_script(
-        'sample-validation',
+        'fm-validation',
         get_template_directory_uri().'/js/backend/post-validation.js',
+        array(
+			    'wp-data', 'wp-editor', 'wp-edit-post'
+        )
+      );
+    }
+
+    if (get_post_type() === 'news'){
+      wp_enqueue_script(
+        'fm-validation',
+        get_template_directory_uri().'/js/backend/news-validation.js',
         array(
 			    'wp-data', 'wp-editor', 'wp-edit-post'
         )

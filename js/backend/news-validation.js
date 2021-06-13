@@ -19,7 +19,7 @@ window.document.addEventListener("DOMContentLoaded", function () {
 
   // エディタが読み込まれたら実行
   isEditorReadyPromise.then(() => {
-    const getCategories = () => select("core/editor").getEditedPostAttribute("categories");
+    const getCategories = () => select("core/editor").getEditedPostAttribute("news_category");
     // 編集画面を開いた時点での選択カテゴリ
     let categories = getCategories();
 
@@ -28,16 +28,16 @@ window.document.addEventListener("DOMContentLoaded", function () {
       // カテゴリ未選択
       if (categories.length === 0) {
         dispatch("core/notices").createNotice("error", "カテゴリーを選択してください", {
-          id: "fm_notice_category",
+          id: "fm_notice_taxonomy",
           isDismissible: false,
         });
         // 保存をロックして公開出来ないように
-        dispatch("core/editor").lockPostSaving("fm_category_lock");
+        dispatch("core/editor").lockPostSaving("fm_taxonomy_lock");
         // カテゴリ選択
       } else {
         // 通知を非表示にして保存のロックを解除
-        dispatch("core/notices").removeNotice("fm_notice_category");
-        dispatch("core/editor").unlockPostSaving("fm_category_lock");
+        dispatch("core/notices").removeNotice("fm_notice_taxonomy");
+        dispatch("core/editor").unlockPostSaving("fm_taxonomy_lock");
       }
     };
     // 最初に実行
