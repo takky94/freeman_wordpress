@@ -170,10 +170,41 @@ if (!function_exists('fm_custom_gutenberg')){
         'label' => 'フリーマン/区切り線',
         'inline_style' => '
         .wp-block-separator.is-style-fm_separator:not(.is-style-wide):not(.is-style-dots){
-          border-bottom: 2px solid #DEE5EF;
+          border-bottom: 1px solid #DEE5EF;
           margin: 60px 0;
           max-width: 100%;
           width: 100%;
+        }
+        ',
+      )
+    );
+    register_block_style(
+      'core/button',
+      array(
+        'name' => 'fm_catalog_button',
+        'label' => 'カタログPDFボタン',
+        'inline_style' => '
+        .is-style-fm_catalog_button{
+          text-align: center;
+        }
+        .is-style-fm_catalog_button .wp-block-button__link{
+          background: #eb2936;
+          border-radius: 0;
+          color: #fff;
+          padding: 20px 70px 20px 50px;
+          position: relative;
+        }
+        .is-style-fm_catalog_button .wp-block-button__link::before{
+          background: center / contain url('.get_template_directory_uri().'/images/common/pdf.svg) no-repeat;
+          bottom: 0;
+          content: "";
+          display: inline-block;
+          height: 21px;
+          margin: auto;
+          position: absolute;
+          right: 28px;
+          top: 0;
+          width: 18px;
         }
         ',
       )
