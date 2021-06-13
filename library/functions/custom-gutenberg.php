@@ -23,7 +23,7 @@ if (!function_exists('fm_custom_gutenberg')){
           background: #f5f5f5;
           color: #0e0e0e;
           text-align: center;
-          max-width: 15%;
+          width: 15%;
         }
         .is-style-fm_table_details tr td:nth-child(2){
           font-size: 14px;
@@ -159,6 +159,21 @@ if (!function_exists('fm_custom_gutenberg')){
         .is-style-fm_table_weight td img{
           height: auto;
           margin: auto;
+        }
+        ',
+      )
+    );
+    register_block_style(
+      'core/separator',
+      array(
+        'name' => 'fm_separator',
+        'label' => 'フリーマン/区切り線',
+        'inline_style' => '
+        .wp-block-separator.is-style-fm_separator:not(.is-style-wide):not(.is-style-dots){
+          border-bottom: 2px solid #DEE5EF;
+          margin: 60px 0;
+          max-width: 100%;
+          width: 100%;
         }
         ',
       )
