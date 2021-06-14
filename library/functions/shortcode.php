@@ -113,14 +113,16 @@ if (!function_exists('fm_get_product')){
 ********************************************************************/
 if (!function_exists('fm_get_the_products')){
   function fm_get_the_products($atts){
-    $id = $atts['id'];
-    if (!isset($id)) return "IDを指定してください";
+    if (!isset($atts['id'])) return "IDを指定してください";
+    $id = isset($atts['id']) ? explode(',', $atts['id']) : null;
+    if (!is_array($id)) return "指定の形が正しくありません";
 
     $layout = isset($atts['layout']) ? $atts['layout'] : 'square';
 
     $args = array(
       'post_type' => 'post',
-      'post__in' => array($id)
+      'post__in' => $id,
+      'posts_per_page' => -1, // 全件取得
     );
 
     $wrap_class = 'the-product-link';

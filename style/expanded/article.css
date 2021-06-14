@@ -1957,45 +1957,62 @@
   margin-top: 80px;
 }
 
-.single-related .products-link p,
-.single-related .articles-link p {
+.single-related .the-product-link p:not(.more), .single-related .category-child-product-link p:not(.more),
+.single-related .articles-link p:not(.more) {
   color: #333;
   font-weight: normal;
   margin-top: 0;
 }
 
-.single-related .products-link li::before,
+.single-related .the-product-link li::before, .single-related .category-child-product-link li::before,
 .single-related .articles-link li::before {
   display: none;
 }
 
-.single-related .products-link {
+.single-related .the-product-link, .single-related .category-child-product-link {
   margin-top: 40px;
 }
 
 @media (max-width: 768px) {
-  .single-related .products-link {
+  .single-related .the-product-link, .single-related .category-child-product-link {
     margin-top: 20px;
   }
 }
 
-.single-related .products-link .column {
+.single-related .the-product-link .column, .single-related .category-child-product-link .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
 @media (min-width: 769px) {
-  .single-related .products-link li {
+  .single-related .the-product-link li, .single-related .category-child-product-link li {
     width: calc((100% - 40px * 3) / 4);
+  }
+  .single-related .the-product-link li:not(:nth-child(1)):not(:nth-child(5)), .single-related .category-child-product-link li:not(:nth-child(1)):not(:nth-child(5)) {
+    margin-left: 40px;
+  }
+  .single-related .the-product-link li:not(:nth-child(-n + 4)), .single-related .category-child-product-link li:not(:nth-child(-n + 4)) {
+    margin-top: 40px;
   }
 }
 
-.single-related .products-link .post-card-product .title {
+@media (max-width: 768px) {
+  .single-related .the-product-link li, .single-related .category-child-product-link li {
+    width: 100%;
+  }
+}
+
+.single-related .the-product-link .post-card-product .title, .single-related .category-child-product-link .post-card-product .title {
   font-size: 16px;
 }
 
-.single-related .products-link .post-card-product .more {
+.single-related .the-product-link .post-card-product .more, .single-related .category-child-product-link .post-card-product .more {
   display: none;
 }
 

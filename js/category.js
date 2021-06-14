@@ -1,3 +1,5 @@
+"use strict";
+
 {
   {
     // category-child-product-linkで投稿が7件以上時のアコーディオン

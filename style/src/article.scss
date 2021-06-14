@@ -35,9 +35,9 @@
     margin-top: 80px;
   }
 
-  .products-link,
+  .the-product-link,
   .articles-link {
-    p {
+    p:not(.more) {
       color: #333; // .content-main aタグ内なので赤くなるのを上書き
       font-weight: normal; // .content-main aタグ内なので太くなるのを上書き
       margin-top: 0; // Gutenbergのpタグへの上余白上書き
@@ -47,18 +47,32 @@
     }
   }
 
-  .products-link {
+  .the-product-link {
     margin-top: 40px;
     @media (max-width: $sp) {
       margin-top: 20px;
     }
 
+    // ul
     .column {
+      display: flex;
+      flex-wrap: wrap;
       justify-content: flex-start;
     }
+
     li {
       @media (min-width: $tab) {
         width: calc((100% - 40px * 3) / 4);
+
+        &:not(:nth-child(1)):not(:nth-child(5)) {
+          margin-left: 40px;
+        }
+        &:not(:nth-child(-n + 4)) {
+          margin-top: 40px;
+        }
+      }
+      @media (max-width: $sp) {
+        width: 100%;
       }
     }
     .post-card-product {
