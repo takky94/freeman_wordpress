@@ -134,7 +134,7 @@ if (!function_exists('fm_breadcrumb_single')){
         $result .= fm_breadcrumb_items(
           esc_attr($category_name),
           $i,
-          esc_url(get_category_link($category_id)),
+          esc_url(get_category_link($category_id))
         );
       } else { // 投稿のカテゴリに親カテゴリなし
         $result .= fm_breadcrumb_items(
