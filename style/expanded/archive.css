@@ -696,8 +696,8 @@
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
-  .post-card-content-trans-red:hover .content,
-  .post-card-content-trans-red:hover .description {
+  .post-card-content-trans-red:hover .content .title,
+  .post-card-content-trans-red:hover .content .description {
     color: #eb2936;
   }
 }

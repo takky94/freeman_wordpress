@@ -18,8 +18,8 @@ $root-path: "../..";
       transition: all 0.3s;
     }
     &:hover {
-      .content,
-      .description {
+      .content .title,
+      .content .description {
         color: $c-main;
       }
     }
