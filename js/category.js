@@ -3,8 +3,8 @@
 {
   {
     // category-child-product-linkで投稿が7件以上時のアコーディオン
-    const trigger = document.querySelector("#square-secondTrigger");
-    if (trigger !== null) {
+    if (document.querySelector("#square-secondTrigger") !== null) {
+      const trigger = document.querySelector("#square-secondTrigger");
       trigger.addEventListener("change", function (e) {
         e.preventDefault();
         const target = document.querySelector(".js-hidden-links");
