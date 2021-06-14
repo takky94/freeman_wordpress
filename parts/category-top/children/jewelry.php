@@ -72,7 +72,8 @@
         $title = wp_trim_words($title, 32); // 32文字以上は省略
       ?>
     <li>
-      <a href="<?= get_the_permalink(); ?>" class="post-card-product">
+      <a href="<?= get_the_permalink(); ?>"
+        class="post-card-product  post-card-content-trans-red post-card-thumbnail-animation">
         <div class="thumbnail">
           <p class="post-thumbnail"><img src="<?= fm_default_thumb('thumb-600'); ?>" alt="" loading="lazy" /></p>
         </div>

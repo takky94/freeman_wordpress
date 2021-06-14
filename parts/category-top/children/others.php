@@ -108,7 +108,8 @@
   <ul class="square square-second js-hidden-links">
     <?php endif; ?>
     <li>
-      <a href="<?= get_the_permalink(); ?>" class="post-card-product">
+      <a href="<?= get_the_permalink(); ?>"
+        class="post-card-product post-card-content-trans-red post-card-thumbnail-animation">
         <div class="thumbnail">
           <p class="post-thumbnail"><img src="<?= fm_default_thumb('thumb-600'); ?>" alt="" loading="lazy" /></p>
         </div>

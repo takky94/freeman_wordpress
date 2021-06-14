@@ -73,11 +73,18 @@
       }
       @media (max-width: $sp) {
         width: 100%;
+
+        &:not(:nth-child(1)) {
+          margin-top: 20px;
+        }
       }
     }
     .post-card-product {
       .title {
         font-size: 16px;
+        @media (min-width: $tab) {
+          margin-top: 15px;
+        }
       }
       .more {
         display: none;
@@ -89,6 +96,13 @@
     margin-top: 40px;
     @media (max-width: $sp) {
       margin-top: 20px;
+    }
+  }
+
+  .button-arrow {
+    color: #fff; // .content-main aタグ内なので赤くなるのを上書き
+    @media (min-width: $tab) {
+      margin-left: auto;
     }
   }
 } // .category-related

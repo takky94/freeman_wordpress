@@ -2,6 +2,7 @@
 --------------------------------------------------------------------------------------------*/
 
 @import "./config";
+@import "./post-card-animation";
 // アニメーションにかかる時間
 $post-animation-duration: 0.2s;
 // 記事とアイキャッチの余白
@@ -305,6 +306,9 @@ $root-path: "../..";
     @media (min-width: $tab) {
       margin-top: $gapPc;
     }
+    @media (max-width: $sp) {
+      line-height: 1.4;
+    }
   }
   .more {
     align-items: center;
@@ -323,93 +327,9 @@ $root-path: "../..";
       width: 1em;
     }
   }
-
-  // hover時、赤く染まる挙動
-  @media (min-width: $tab) {
-    .post-thumbnail {
-      overflow: hidden;
-      position: relative;
-
-      img {
-        transition: all $post-animation-duration;
-      }
-    }
-
-    // hover時アニメーション類(769px~)
-
-    // .post-thunbnail::before(VIEW MORE)
-    .post-thumbnail::before {
-      color: #fff;
-      content: "VIEW MORE";
-      display: inline-block;
-      font: bold 18px "Roboto Condensed", sans-serif;
-      height: 1em;
-      @include centeringMargin;
-      line-height: 1;
-      opacity: 0;
-      position: absolute;
-      text-align: center;
-      transition: all $post-animation-duration;
-      width: 100%;
-      z-index: 2;
-    }
-
-    // .post-thunbnail::after(赤い円)
-    .post-thumbnail::after {
-      animation: circleRedOutPost $post-animation-duration ease-in-out both;
-      background: rgba(235, 41, 54, 0.6);
-      border-radius: 50%;
-      content: "";
-      height: 100%;
-      @include centeringMargin;
-      position: absolute;
-      transform: scale(0);
-      width: 100%;
-      will-change: opacity, transform;
-      z-index: 1;
-    }
-
-    &:hover {
-      .post-thumbnail img {
-        transform: scale(1.1);
-      }
-      // .post-thunbnail::before
-      .post-thumbnail::before {
-        opacity: 1;
-      }
-      // .post-thunbnail::after
-      .post-thumbnail::after {
-        animation: circleRedPost $post-animation-duration ease-in-out both;
-      }
-      .more {
-        &::after {
-          background-image: url(#{$root-path}/images/common/more-arrow-fill.svg);
-        }
-      }
-    }
-    // hover時赤い円挙動
-    @keyframes circleRedPost {
-      0% {
-        opacity: 0;
-        transform: scale(0);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1.5);
-      }
-    }
-    // hover解除時赤い円挙動
-    @keyframes circleRedOutPost {
-      0% {
-        opacity: 1;
-        transform: scale(1.5);
-      }
-      100% {
-        opacity: 0;
-        transform: scale(0);
-      }
-    }
-  } // media PC
+  .description {
+    word-break: break-all;
+  }
 
   @media (max-width: $sp) {
     display: flex;

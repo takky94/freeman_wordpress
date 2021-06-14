@@ -26,13 +26,13 @@ if (!function_exists('fm_get_output_string')) {
 
       switch ($type) {
         case 'news':
-          $str .= '<li><a href="'.$permalink.'" class="article-card"><div class="thumbnail"><p class="article-thumbnail"><img src="'.fm_default_thumb('thumb-600', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><time class="date font-robot" datetime='.get_the_date('Y-m-d', $post_id).'">'.get_the_date('Y.m.d', $post_id).'</time><p class="title">'.$title.'</p></div></a></li>';
+          $str .= '<li><a href="'.$permalink.'" class="article-card post-card-thumbnail-animation post-card-content-trans-red"><div class="thumbnail"><p class="article-thumbnail"><img src="'.fm_default_thumb('thumb-600', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><time class="date font-robot" datetime="'.get_the_date('Y-m-d', $post_id).'">'.get_the_date('Y.m.d', $post_id).'</time><p class="title">'.$title.'</p></div></a></li>';
           break;
         case 'products':
-          $str .= '<li><a href="'.$permalink.'" class="post-card-product"><div class="thumbnail"><p class="post-thumbnail"><img src="'.fm_default_thumb('thumb-600', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><p class="title">'.$title.'</p><p class="more font-robot c-main"><span>MORE</span></p></div></a></li>';
+          $str .= '<li><a href="'.$permalink.'" class="post-card-product post-card-thumbnail-animation post-card-content-trans-red"><div class="thumbnail"><p class="post-thumbnail"><img src="'.fm_default_thumb('thumb-600', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><p class="title">'.$title.'</p><p class="more font-robot c-main"><span>MORE</span></p></div></a></li>';
           break;
         case 'product':
-          $str .= '<li><a href="'.$permalink.'" class="post-card-product"><div class="thumbnail"><p class="post-thumbnail"><img src="'.fm_default_thumb('thumb-600', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><time class="date font-robot" datetime='.get_the_date('Y-m-d', $post_id).'">'.get_the_date('Y.m.d', $post_id).'</time><p class="title">'.$title.'</p></div></a></li>';
+          $str .= '<li><a href="'.$permalink.'" class="post-card-product post-card-thumbnail-animation post-card-content-trans-red"><div class="thumbnail"><p class="post-thumbnail"><img src="'.fm_default_thumb('thumb-600', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><time class="date font-robot" datetime="'.get_the_date('Y-m-d', $post_id).'">'.get_the_date('Y.m.d', $post_id).'</time><p class="title">'.$title.'</p></div></a></li>';
           break;
       }
     }
