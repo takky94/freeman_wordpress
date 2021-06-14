@@ -1,6 +1,8 @@
 <!--single.php-->
 <?php
   $terms = wp_get_object_terms($post -> ID, 'category');
+  // 親カテゴリあるかないか
+  $category = $terms[0] -> parent === 0 ? get_category($terms[0] -> term_taxonomy_id) : get_category($terms[0] -> parent);
 ?>
 <?php get_header(); ?>
 <div id="single">
@@ -22,8 +24,20 @@
           </div>
           <!-- // content-header -->
           <!-- content-main -->
-          <div class="content-main single-content-header">
+          <div class="content-main single-content-main">
             <?php the_content(); ?>
+            <div class="single-related">
+              <div class="articles">
+                <h4><?php _e('関連NEWS', 'single'); ?></h4>
+                <?= do_shortcode('[post category="'.$category -> slug.'" count="6" orderby="rand" layout="column"]'); ?>
+                <div class="view-all">
+                  <a href="#" class="button-arrow button-line arrow-wrap">
+                    <span class="font-robot bold">SEE MORE</span>
+                    <?php get_template_part('/parts/icon/arrow'); ?>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- // content-main -->
           <?php endwhile; endif; wp_reset_postdata(); ?>

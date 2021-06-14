@@ -4,6 +4,7 @@
 --------------------------------------------------------------------------------------------*/
 
 @import "./@import/config";
+@import "./@import/button";
 @import "./@import/entry-header";
 @import "./@import/post-card";
 @import "./@import/swiper";
@@ -19,3 +20,61 @@
 .single-content-main {
   max-width: 920px;
 }
+
+// 関連商品・記事
+
+.single-related {
+  font-size: 28px;
+  margin: 0 auto;
+  max-width: calc(1080px - (40px * 2) - (50px * 2)); // STEPに合わせる
+  padding-top: 20px;
+
+  h4 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 80px;
+  }
+
+  .products-link,
+  .articles-link {
+    p {
+      color: #333; // .content-main aタグ内なので赤くなるのを上書き
+      font-weight: normal; // .content-main aタグ内なので太くなるのを上書き
+      margin-top: 0; // Gutenbergのpタグへの上余白上書き
+    }
+    li::before {
+      display: none;
+    }
+  }
+
+  .products-link {
+    margin-top: 40px;
+    @media (max-width: $sp) {
+      margin-top: 20px;
+    }
+
+    .column {
+      justify-content: flex-start;
+    }
+    li {
+      @media (min-width: $tab) {
+        width: calc((100% - 40px * 3) / 4);
+      }
+    }
+    .post-card-product {
+      .title {
+        font-size: 16px;
+      }
+      .more {
+        display: none;
+      }
+    }
+  } // .products-link
+
+  .articles-link {
+    margin-top: 40px;
+    @media (max-width: $sp) {
+      margin-top: 20px;
+    }
+  }
+} // .category-related
