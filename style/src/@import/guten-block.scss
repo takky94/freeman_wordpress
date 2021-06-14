@@ -5,7 +5,12 @@
 $root-path: "../..";
 $background-color: #f5f5f5;
 $border-color: #707070;
-$block-margin-bottom: 60px;
+$block-margin-bottomPc: 60px;
+$block-margin-bottomSp: 40px;
+
+// 一部のブロックがWPのオリジナルブロックであるカラムを使用しているため、
+// そのブロックのデザイン切り替えするブレークポイントを設定する
+$wp-column-breakPoint: 599px;
 
 @import "./config";
 
@@ -17,7 +22,10 @@ $block-margin-bottom: 60px;
 .wp-block-freeman-block-case,
 .wp-block-freeman-block-case-and-item,
 .wp-block-freeman-block-remarks {
-  margin-bottom: $block-margin-bottom;
+  margin-bottom: $block-margin-bottomPc;
+  @media (max-width: $sp) {
+    margin-bottom: $block-margin-bottomSp;
+  }
 }
 
 // スライダー(ユーザーによる投稿なので異なる画像サイズのものも同サイズで表示)
@@ -94,6 +102,9 @@ $block-margin-bottom: 60px;
 .wp-block-embed.is-type-video {
   background: #f5f5f5;
   padding: 60px 5px;
+  @media (max-width: $sp) {
+    padding: 10px;
+  }
 
   .wp-block-embed__wrapper {
     text-align: center;
@@ -102,6 +113,9 @@ $block-margin-bottom: 60px;
     height: 420px;
     max-width: 720px;
     width: 100%;
+    @media (max-width: $sp) {
+      height: 280px;
+    }
   }
 }
 
@@ -118,6 +132,9 @@ $block-margin-bottom: 60px;
     border-left: none;
     border-right: none;
     padding: 2em 1.5em;
+    @media (max-width: $sp) {
+      padding: 0.5em;
+    }
   }
   tr td:nth-child(1) {
     background: $background-color;
@@ -126,6 +143,11 @@ $block-margin-bottom: 60px;
     font-weight: 500;
     max-width: 15%;
     text-align: center;
+    @media (max-width: $sp) {
+      font-size: 14px;
+      max-width: 25%;
+      width: 25%;
+    }
   }
 }
 
@@ -177,10 +199,29 @@ $block-margin-bottom: 60px;
   }
 }
 
+.wp-block-freeman-block-table-thick,
+.wp-block-freeman-block-table-kg {
+  .wp-block-columns .wp-block-column:nth-child(1) {
+    // WPのカラムブロックのデザイン切り替えブレークポイントに合わせる
+    @media (max-width: $wp-column-breakPoint) {
+      margin-bottom: $block-margin-bottomSp;
+    }
+  }
+}
+
 // 導入事例
 .wp-block-freeman-block-case {
   background: $background-color;
   padding: 40px;
+
+  h3 {
+    font-weight: 500;
+  }
+
+  p {
+    line-height: 1.8;
+    margin-top: 15px;
+  }
 }
 
 // 導入事例/商品
@@ -195,7 +236,14 @@ $block-margin-bottom: 60px;
   h4,
   h5,
   h6 {
+    font-weight: 500;
     margin-top: 0;
+  }
+  p {
+    margin-top: 15px;
+    @media (max-width: $wp-column-breakPoint) {
+      margin-bottom: $block-margin-bottomSp;
+    }
   }
 
   // 記事へのリンクでliリストの円削除
@@ -213,8 +261,14 @@ $block-margin-bottom: 60px;
   background: $background-color;
   padding: 40px;
 
+  h3 {
+    font-weight: 500;
+  }
+
   p {
     background: #fff;
+    line-height: 1.8;
+    margin-top: 25px;
     padding: 1.5em;
   }
 }

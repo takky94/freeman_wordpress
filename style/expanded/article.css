@@ -170,7 +170,7 @@
 
 @media (max-width: 768px) {
   .single-header .entry-header__title, .single-header .contact-header .entry-header__titleSub, .contact-header .single-header .entry-header__titleSub {
-    bottom: calc(21px + 15px + 14px);
+    bottom: calc(21px + (15px + 20px) + 14px);
   }
 }
 
@@ -180,7 +180,7 @@
 
 @media (max-width: 768px) {
   .single-header .breadcrumb {
-    bottom: 15px;
+    bottom: calc(15px + 20px);
   }
 }
 
@@ -1668,13 +1668,13 @@
   }
 }
 
-.content-main h2,
-.content-main h3,
-.content-main h4 {
+.content-main [data-block=""] h2,
+.content-main [data-block=""] h3,
+.content-main [data-block=""] h4 {
   font-weight: bold;
 }
 
-.content-main h2 {
+.content-main [data-block=""] h2 {
   border-bottom: 1px solid #dce5f0;
   font-size: 24px;
   margin-bottom: 10px;
@@ -1682,29 +1682,29 @@
   padding-bottom: 10px;
 }
 
-.content-main h3 {
+.content-main [data-block=""] h3 {
   font-size: 22px;
   margin-top: 30px;
 }
 
-.content-main h4 {
+.content-main [data-block=""] h4 {
   font-size: 18px;
   margin-top: 30px;
 }
 
-.content-main p {
+.content-main [data-block=""] p {
   line-height: 2;
   margin-top: 20px;
 }
 
-.content-main blockquote {
+.content-main [data-block=""] blockquote {
   background: #f4f5f8;
   margin-top: 30px;
   padding: 2em;
   position: relative;
 }
 
-.content-main blockquote::before {
+.content-main [data-block=""] blockquote::before {
   background: center/contain url(../../images/article/icon/blockquote.svg) no-repeat;
   content: "";
   height: 1em;
@@ -1714,34 +1714,34 @@
   width: 1em;
 }
 
-.content-main blockquote p {
+.content-main [data-block=""] blockquote p {
   margin: 0;
 }
 
-.content-main blockquote cite {
+.content-main [data-block=""] blockquote cite {
   display: block;
   font-size: 0.8em;
   font-style: normal;
   text-align: right;
 }
 
-.content-main a {
+.content-main [data-block=""] a {
   color: #eb2936;
 }
 
-.content-main ul,
-.content-main ol {
+.content-main [data-block=""] ul,
+.content-main [data-block=""] ol {
   margin-top: 30px;
 }
 
-.content-main ul li,
-.content-main ol li {
+.content-main [data-block=""] ul li,
+.content-main [data-block=""] ol li {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.8;
 }
 
-.content-main ul li::before {
+.content-main [data-block=""] ul li::before {
   background: #96a8be;
   border-radius: 50%;
   content: "";
@@ -1751,7 +1751,7 @@
   width: 10px;
 }
 
-.content-main ol {
+.content-main [data-block=""] ol {
   list-style: decimal;
   padding-left: 1em;
 }
@@ -1766,6 +1766,18 @@
 .wp-block-freeman-block-case-and-item,
 .wp-block-freeman-block-remarks {
   margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .wp-block-freeman-block-slider,
+  .wp-block-embed.is-type-video,
+  .is-style-fm_table_details,
+  .is-style-fm_table_physical_property,
+  .wp-block-freeman-block-case,
+  .wp-block-freeman-block-case-and-item,
+  .wp-block-freeman-block-remarks {
+    margin-bottom: 40px;
+  }
 }
 
 .wp-block-freeman-block-slider {
@@ -1845,6 +1857,12 @@
   padding: 60px 5px;
 }
 
+@media (max-width: 768px) {
+  .wp-block-embed.is-type-video {
+    padding: 10px;
+  }
+}
+
 .wp-block-embed.is-type-video .wp-block-embed__wrapper {
   text-align: center;
 }
@@ -1853,6 +1871,12 @@
   height: 420px;
   max-width: 720px;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .wp-block-embed.is-type-video iframe {
+    height: 280px;
+  }
 }
 
 .is-style-fm_table_details table {
@@ -1870,6 +1894,12 @@
   padding: 2em 1.5em;
 }
 
+@media (max-width: 768px) {
+  .is-style-fm_table_details tr td {
+    padding: 0.5em;
+  }
+}
+
 .is-style-fm_table_details tr td:nth-child(1) {
   background: #f5f5f5;
   color: #0e0e0e;
@@ -1877,6 +1907,14 @@
   font-weight: 500;
   max-width: 15%;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .is-style-fm_table_details tr td:nth-child(1) {
+    font-size: 14px;
+    max-width: 25%;
+    width: 25%;
+  }
 }
 
 .is-style-fm_table_physical_property table {
@@ -1927,9 +1965,25 @@
   margin-top: 0;
 }
 
+@media (max-width: 599px) {
+  .wp-block-freeman-block-table-thick .wp-block-columns .wp-block-column:nth-child(1),
+  .wp-block-freeman-block-table-kg .wp-block-columns .wp-block-column:nth-child(1) {
+    margin-bottom: 40px;
+  }
+}
+
 .wp-block-freeman-block-case {
   background: #f5f5f5;
   padding: 40px;
+}
+
+.wp-block-freeman-block-case h3 {
+  font-weight: 500;
+}
+
+.wp-block-freeman-block-case p {
+  line-height: 1.8;
+  margin-top: 15px;
 }
 
 .wp-block-freeman-block-case-and-item {
@@ -1943,7 +1997,18 @@
 .wp-block-freeman-block-case-and-item h4,
 .wp-block-freeman-block-case-and-item h5,
 .wp-block-freeman-block-case-and-item h6 {
+  font-weight: 500;
   margin-top: 0;
+}
+
+.wp-block-freeman-block-case-and-item p {
+  margin-top: 15px;
+}
+
+@media (max-width: 599px) {
+  .wp-block-freeman-block-case-and-item p {
+    margin-bottom: 40px;
+  }
 }
 
 .wp-block-freeman-block-case-and-item .the-product-link .wide li::before, .wp-block-freeman-block-case-and-item .category-child-product-link .wide li::before {
@@ -1955,8 +2020,14 @@
   padding: 40px;
 }
 
+.wp-block-freeman-block-remarks h3 {
+  font-weight: 500;
+}
+
 .wp-block-freeman-block-remarks p {
   background: #fff;
+  line-height: 1.8;
+  margin-top: 25px;
   padding: 1.5em;
 }
 

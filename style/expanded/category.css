@@ -170,7 +170,7 @@
 
 @media (max-width: 768px) {
   .single-header .entry-header__title, .single-header .contact-header .entry-header__titleSub, .contact-header .single-header .entry-header__titleSub {
-    bottom: calc(21px + 15px + 14px);
+    bottom: calc(21px + (15px + 20px) + 14px);
   }
 }
 
@@ -180,7 +180,7 @@
 
 @media (max-width: 768px) {
   .single-header .breadcrumb {
-    bottom: 15px;
+    bottom: calc(15px + 20px);
   }
 }
 

@@ -92,90 +92,92 @@ $root-path: "../..";
     margin-top: 100px;
   }
 
-  // 表現集
-  h2,
-  h3,
-  h4 {
-    font-weight: bold;
-  }
+  [data-block=""] {
+    // 表現集
+    h2,
+    h3,
+    h4 {
+      font-weight: bold;
+    }
 
-  h2 {
-    border-bottom: 1px solid $c-lightgray;
-    font-size: 24px;
-    margin-bottom: 10px;
-    margin-top: 50px;
-    padding-bottom: 10px;
-  }
-  h3 {
-    font-size: 22px;
-    margin-top: 30px;
-  }
+    h2 {
+      border-bottom: 1px solid $c-lightgray;
+      font-size: 24px;
+      margin-bottom: 10px;
+      margin-top: 50px;
+      padding-bottom: 10px;
+    }
+    h3 {
+      font-size: 22px;
+      margin-top: 30px;
+    }
 
-  h4 {
-    font-size: 18px;
-    margin-top: 30px;
-  }
-
-  p {
-    line-height: 2;
-    margin-top: 20px;
-  }
-
-  blockquote {
-    background: #f4f5f8;
-    margin-top: 30px;
-    padding: 2em;
-    position: relative;
-
-    &::before {
-      background: center / contain url(#{$root-path}/images/article/icon/blockquote.svg) no-repeat;
-      content: "";
-      height: 1em;
-      left: 1em;
-      position: absolute;
-      top: 1em;
-      width: 1em;
+    h4 {
+      font-size: 18px;
+      margin-top: 30px;
     }
 
     p {
-      margin: 0;
+      line-height: 2;
+      margin-top: 20px;
     }
-    cite {
-      display: block;
-      font-size: 0.8em;
-      font-style: normal;
-      text-align: right;
+
+    blockquote {
+      background: #f4f5f8;
+      margin-top: 30px;
+      padding: 2em;
+      position: relative;
+
+      &::before {
+        background: center / contain url(#{$root-path}/images/article/icon/blockquote.svg) no-repeat;
+        content: "";
+        height: 1em;
+        left: 1em;
+        position: absolute;
+        top: 1em;
+        width: 1em;
+      }
+
+      p {
+        margin: 0;
+      }
+      cite {
+        display: block;
+        font-size: 0.8em;
+        font-style: normal;
+        text-align: right;
+      }
     }
-  }
 
-  a {
-    color: $c-main;
-  }
+    a {
+      color: $c-main;
+    }
 
-  ul,
-  ol {
-    margin-top: 30px;
-  }
+    ul,
+    ol {
+      margin-top: 30px;
+    }
 
-  ul li,
-  ol li {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.8;
-  }
+    ul li,
+    ol li {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.8;
+    }
 
-  ul li::before {
-    background: $c-gray;
-    border-radius: 50%;
-    content: "";
-    display: inline-block;
-    height: 10px;
-    margin-right: 6px;
-    width: 10px;
-  }
+    ul li::before {
+      background: $c-gray;
+      border-radius: 50%;
+      content: "";
+      display: inline-block;
+      height: 10px;
+      margin-right: 6px;
+      width: 10px;
+    }
 
-  ol {
-    list-style: decimal;
-    padding-left: 1em;
+    ol {
+      list-style: decimal;
+      padding-left: 1em;
+    }
   }
 }

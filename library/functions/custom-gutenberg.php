@@ -23,6 +23,7 @@ if (!function_exists('fm_custom_gutenberg')){
           background: #f5f5f5;
           color: #0e0e0e;
           text-align: center;
+          white-space: nowrap;
           width: 15%;
         }
         .is-style-fm_table_details tr td:nth-child(2){
@@ -47,6 +48,7 @@ if (!function_exists('fm_custom_gutenberg')){
         .is-style-fm_table_physical_property tr td:nth-child(1){
           background: #f5f5f5;
           color: #0e0e0e;
+          white-space: nowrap;
           width: 20%;
         }
         .is-style-fm_table_physical_property td{

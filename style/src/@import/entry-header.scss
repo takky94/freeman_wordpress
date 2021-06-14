@@ -105,16 +105,16 @@ $root-path: "../..";
 
   // タイトル
   .entry-header__title {
-    bottom: calc(21px + #{$breadList-gapPc} + 14px); //ぱんくず高さ + ぱんくず余白 + 余白
+    bottom: calc(21px + #{$breadList-gapPc} + 14px); //ぱんくず高さ + ぱんくず位置 + 余白
     @media (max-width: $sp) {
-      bottom: calc(21px + #{$breadList-gapSp} + 14px); //ぱんくず高さ + ぱんくず余白 + 余白
+      bottom: calc(21px + (#{$breadList-gapSp} + 20px) + 14px); //ぱんくず高さ + ぱんくず位置 + 余白
     }
   }
   // ぱんくず
   .breadcrumb {
     bottom: $breadList-gapPc;
     @media (max-width: $sp) {
-      bottom: $breadList-gapSp;
+      bottom: calc(#{$breadList-gapSp} + 20px);
     }
   }
 }
