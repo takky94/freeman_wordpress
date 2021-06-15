@@ -35,15 +35,12 @@ if (!function_exists('fm_create_default_term')){
       '耐火材' => array('slug' => 'refractories', 'parent' => 'investment_casting'),
       'スラリー添加剤・コア材' => array('slug' => 'slurry_additives_core_materials', 'parent' => 'investment_casting'),
       '鋳造' => array('slug' => 'casting', 'parent' => 'investment_casting'),
-      '設備' => array('slug' => 'equipment', 'parent' => 'investment_casting'),
-      '砂' => array('slug' => 'refractory_material', 'parent' => 'investment_casting'),
-      'その他' => array('slug' => 'others', 'parent' => 'investment_casting'),
+      '精密鋳造用設備' => array('slug' => 'equipment', 'parent' => 'investment_casting'),
 
       // ジュエリー子カテゴリ
       'インジェクションワックス' => array('slug' => 'injection_wax', 'parent' => 'jewelry'),
       'カービングワックス' => array('slug' => 'carving_wax', 'parent' => 'jewelry'),
       '埋没材' => array('slug' => 'investments', 'parent' => 'jewelry'),
-      // 'シリコン' => array('slug' => 'hgo', 'parent' => 'jewelry'), // 第三階層なし
       'ワックス関連工具' => array('slug' => 'matt_tool', 'parent' => 'jewelry'),
     );
     loop_register_term($taxonomy_type, $taxonomy_sets);
