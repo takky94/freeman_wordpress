@@ -65,7 +65,7 @@
       <h3 class="label"><?php _e('CO2クリーニングシステム', 'category-new-field'); ?></h3>
       <p class="title"><?php _e('Dry, Green, Claen', 'category-new-field'); ?></p>
       <p
-        class="description"><?php _e('Made in U.S.A 。あらゆる業界のコンタミを撲滅します。環境にやさしい最新CO2テクノロジーによる精密洗浄生産性、品質、安全性を向上させることをお約束いたします。', 'category-new-field'); ?></p>
+        class="description"><?php _e('Made in U.S.A 。あらゆる業界のコンタミを撲滅します。環境にやさしい最新CO2テクノロジーによる精密洗浄で、生産性、品質、安全性を向上させることをお約束いたします。', 'category-new-field'); ?></p>
     </div>
     <div class="category-children__top--image">
       <img src="<?= get_template_directory_uri(); ?>/images/category/new-field/children-3.png" alt=""

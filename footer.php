@@ -15,7 +15,7 @@
     <div class="container">
       <div class="overseas__left">
         <div class="overseas__title font-robot">OVERSEAS SUPPLIER</div>
-        <div class="overseas__titleSub">海外主要取引先</div>
+        <div class="overseas__titleSub">海外主要サプライヤー</div>
       </div>
       <div class="overseas__right">
         <img src="<?= get_template_directory_uri(); ?>/images/footer/freeman.png" alt="海外主要取引先 FREEMAN ロゴ"
