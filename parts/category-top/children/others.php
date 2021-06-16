@@ -40,15 +40,6 @@
 
 <!-- category-lead-child-others -->
 <div class="category-lead-child-others">
-  <!-- category-lead-child-others__image -->
-  <div class="category-lead-child-others__image">
-    <?php if ($others_img): ?>
-    <img src="<?= $others_img; ?>" <?php fm_lazyload(); ?> alt="" />
-    <?php else: ?>
-    <p style="color:tomato">カテゴリページにて「リード画像 URL」を設定してください</p>
-    <?php endif; ?>
-  </div>
-  <!-- // category-lead-child-others__image -->
   <!-- category-lead-child-others__slider -->
   <div class="category-lead-child-others__slider">
     <!-- category-child-slider -->

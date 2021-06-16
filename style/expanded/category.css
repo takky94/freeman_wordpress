@@ -1692,12 +1692,9 @@
           justify-content: space-between;
 }
 
-.category-lead-child-others__image, .category-lead-child-others__slider {
-  width: calc((100% - 60px) / 2);
-}
-
 .category-lead-child-others__slider {
   border-bottom: 1px solid #96a8be;
+  width: 100%;
 }
 
 .category-lead-child-others__slider--title {

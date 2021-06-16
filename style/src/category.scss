@@ -134,12 +134,9 @@ $menu-animation-duration: 0.3s;
     display: flex;
     justify-content: space-between;
 
-    &__image,
-    &__slider {
-      width: calc((100% - 60px) / 2);
-    }
     &__slider {
       border-bottom: 1px solid $c-gray;
+      width: 100%;
       &--title {
         font-size: 12px;
         font-weight: 300;

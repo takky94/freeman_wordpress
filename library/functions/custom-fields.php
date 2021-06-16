@@ -27,7 +27,6 @@ if (!function_exists('fm_create_category_child_custom_fields')){
     $jewelry_table5 = isset($category_meta['jewelry_table5']) ? esc_html($category_meta['jewelry_table5']) : "";
 
     // その他子カテゴリ用カスタムフィールド
-    $others_img = isset($category_meta['others_img']) ? esc_html($category_meta['others_img']) : "";
     $others_slider_img1 = isset($category_meta['others_slider_img1']) ? esc_html($category_meta['others_slider_img1']) : "";
     $others_slider_img2 = isset($category_meta['others_slider_img2']) ? esc_html($category_meta['others_slider_img2']) : "";
     $others_slider_img3 = isset($category_meta['others_slider_img3']) ? esc_html($category_meta['others_slider_img3']) : "";
@@ -99,16 +98,6 @@ if (!function_exists('fm_create_category_child_custom_fields')){
   </td>
 </tr>
 <!-- その他子カテゴリ用カスタムフィールド -->
-<tr class="form-field parent-others">
-  <th><label for="othersImage">スライダー横画像 URL</label></th>
-  <td>
-    <div style="display:flex">
-      <input id="othersImage" class="js-uploadImage" type="text" size="36" name="category_meta[others_img]" value="$others_img" placeholder="https://..." />
-      <button type="button" class="js-uploadImageButton button button-primary">画像をアップロード</button>
-    </div>
-    <p style="margin-top: 7px;text-align:center"><img class="js-uploadImageDemo" src="$others_img" style="width: 150px; height: auto;"></p>
-  </td>
-</tr>
 <tr class="form-field parent-others">
   <th><label for="othersSliderImage1">スライダー画像1 URL</label></th>
   <td>
