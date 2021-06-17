@@ -3,6 +3,7 @@
 add_action('init', 'fm_head_cleanup');
 add_action('admin_print_scripts', 'fm_admin_scripts');
 add_action('wp_enqueue_scripts', 'fm_basic_scripts_and_styles');
+add_action('wp_head', 'fm_favicon');
 add_action('wp_head', 'fm_meta_ogp');
 
 /*
@@ -94,14 +95,37 @@ if (!function_exists('fm_admin_scripts')){
 }//fm_admin_scripts
 
 /*
-デフォルトのhead整理
+デフォルトのhead整理 OGP周り
+********************************************************************/
+
+if (!function_exists('fm_favicon')) {
+  function fm_favicon() {
+    $icon32 = get_template_directory_uri().'/images/favicon/32x32.png';
+    $icon192 = get_template_directory_uri().'/images/favicon/192x192.png';
+    $icon300 = get_template_directory_uri().'/images/favicon/300x300.png';
+    $icon384 = get_template_directory_uri().'/images/favicon/384x384.png';
+    $insert = '';
+
+    // favicon各種
+    $insert .= '<link rel="icon" sizes="32x32" href="'.$icon32.'" />'."\n";
+    $insert .= '<link rel="icon" sizes="192x192" href="'.$icon192.'" />'."\n";
+    $insert .= '<link rel="apple-touch-icon" href="'.$icon300.'" />'."\n";
+    $insert .= '<meta name="msapplication-TileImage" content="'.$icon300.'" />'."\n";
+
+    // 出力
+    echo $insert;
+  } // fm_favicon
+}
+
+/*
+デフォルトのhead整理 OGP周り
 ********************************************************************/
 
 // og:image
 if (!function_exists('fm_set_ogp_image')){
   function fm_set_ogp_image(){
     if (is_singular()) return fm_default_thumb('large'); // 投稿(post)、カスタム投稿タイプ、固定ページ、添付ファイルのシングルページ
-    return get_template_directory_uri() . '/images/article/default.png';
+    return get_template_directory_uri() . '/images/ogp.png';
   }
 }
 
@@ -139,7 +163,6 @@ if (!function_exists('fm_get_meta_description')) {
       return $cat_name . 'の説明ページです。';
     }
     return null;
-    // メタデスクリプションは指定しなくても、Googleが自動で説明文を生成してくれるため、これ以外のページではメタデスクリプションを出力しない
   }
 }
 
@@ -166,7 +189,7 @@ if (!function_exists('fm_meta_ogp')) {
     $insert .= '<meta name="twitter:card" content="summary_large_image" />' . "\n";
 
     // 出力
-    if (is_front_page() || is_home() || is_singular('news', 'product') || is_single() || is_page() || is_category() || is_archive() || is_tag()){
+    if (is_front_page() || is_home() || is_singular('news') || is_single() || is_page() || is_category() || is_archive() || is_tag()){
       echo $insert;
     }
 
