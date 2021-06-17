@@ -124,8 +124,12 @@ if (!function_exists('fm_favicon')) {
 // og:image
 if (!function_exists('fm_set_ogp_image')){
   function fm_set_ogp_image(){
-    if (is_singular()) return fm_default_thumb('large'); // 投稿(post)、カスタム投稿タイプ、固定ページ、添付ファイルのシングルページ
-    return get_template_directory_uri() . '/images/ogp.png';
+    // 投稿(post)、カスタム投稿タイプ、固定ページでアイキャッチが設定されてればそれを表示
+    if (is_singular()){
+      $thumbnail = fm_default_thumb('large');
+      if(strpos($thumbnail,'default') === false) return $thumbnail;
+    }
+    return get_template_directory_uri().'/images/ogp.png';
   }
 }
 
