@@ -29,6 +29,9 @@ $root-path: "../..";
     padding-top: 120px;
     position: relative;
     z-index: 3; // entry-headerの白い余白部分よりも上
+    @media (max-width: $sp) {
+      background-position-y: 100px;
+    }
   }
 
   .content-header {

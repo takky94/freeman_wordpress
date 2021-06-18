@@ -1009,6 +1009,12 @@
   z-index: 3;
 }
 
+@media (max-width: 768px) {
+  .company-page .bg-geometric {
+    background-position-y: 100px;
+  }
+}
+
 .company-page .content-header {
   display: -webkit-box;
   display: -ms-flexbox;

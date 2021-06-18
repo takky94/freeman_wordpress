@@ -927,15 +927,6 @@ html.en .eng-hidden {
   }
 }
 
-.footer .cta::before {
-  background: rgba(0, 0, 0, 0.6);
-  content: "";
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-}
-
 .footer .cta .container {
   -webkit-box-align: center;
       -ms-flex-align: center;

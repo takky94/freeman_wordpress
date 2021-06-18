@@ -19,16 +19,6 @@ $root-path: "../..";
       height: 120px;
     }
 
-    // フィルター
-    &::before {
-      background: rgba(0, 0, 0, 0.6);
-      content: "";
-      height: 100%;
-      position: absolute;
-      width: 100%;
-      z-index: 1;
-    }
-
     .container {
       align-items: center;
       display: flex;
