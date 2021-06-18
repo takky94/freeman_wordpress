@@ -1,7 +1,9 @@
 <?php
 
 add_shortcode("post", "fm_get_articles");
+add_shortcode("post_by_tag", "fm_get_articles_by_tag");
 add_shortcode("product", "fm_get_product");
+add_shortcode("product_by_tag", "fm_get_product_by_tag");
 add_shortcode("the_products", "fm_get_the_products");
 add_shortcode("the_product", "fm_get_the_product");
 
@@ -46,7 +48,7 @@ if (!function_exists('fm_get_output_string')) {
 
 
 /*
-ニュースをループで任意の数表示
+特定カテゴリのニュースをループで任意の数表示
 使用ページ: トップ, categoryトップ
 例) [post category="mold" count="3" orderby="rand" layout="column" /]
 ********************************************************************/
@@ -80,7 +82,41 @@ if (!function_exists('fm_get_articles')){
 }
 
 /*
-カテゴリの商品をループで任意の数表示
+特定タグのニュースをループで任意の数表示
+使用ページ: トップ, category第三階層関連記事部分
+例) [post_by_tag tag="型製品" count="3" orderby="rand" layout="column" /]
+********************************************************************/
+if (!function_exists('fm_get_articles_by_tag')){
+  function fm_get_articles_by_tag($atts){
+
+    $category = isset($atts['category']) ? $atts['category'] : '型製品';
+    $count = isset($atts['count']) ? $atts['count'] : 3;
+    $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
+    $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
+
+    $args = array(
+      'post_type' => 'news',
+      'posts_per_page' => $count,
+      'orderby' => $orderby,
+      'tax_query' => array(
+        'relation' => 'OR',
+        array(
+          'taxonomy' => 'news_category',
+          'field' => 'slug',
+          'terms' => $category,
+        )
+      )
+    );
+
+    $wrap_class = 'articles-link';
+    $type = 'news';
+
+    return fm_get_output_string($args, $wrap_class, $layout, $type);
+  }
+}
+
+/*
+特定カテゴリの商品をループで任意の数表示
 使用ページ: トップ, categoryトップ
 例) [product category="mold" count="3" orderby="rand" layout="column" /]
 ********************************************************************/
@@ -88,6 +124,33 @@ if (!function_exists('fm_get_product')){
   function fm_get_product($atts){
 
     $category = isset($atts['category']) ? $atts['category'] : 'mold';
+    $count = isset($atts['count']) ? $atts['count'] : 3;
+    $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
+    $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
+
+    $args = array(
+      'post_type' => 'post',
+      'category_name' => $category,
+      'posts_per_page' => $count,
+      'orderby' => $orderby
+    );
+
+    $wrap_class = 'products-link';
+    $type = 'products';
+
+    return fm_get_output_string($args, $wrap_class, $layout, $type);
+  }
+}
+
+/*
+特定タグの商品をループで任意の数表示
+使用ページ: トップ, category第三階層関連商品部分
+例) [product_by_tag tag="型製品" count="3" orderby="rand" layout="column" /]
+********************************************************************/
+if (!function_exists('fm_get_product_by_tag')){
+  function fm_get_product_by_tag($atts){
+
+    $category = isset($atts['category']) ? $atts['category'] : '型製品';
     $count = isset($atts['count']) ? $atts['count'] : 3;
     $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
