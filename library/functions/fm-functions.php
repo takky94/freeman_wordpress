@@ -73,6 +73,7 @@ if (!function_exists('replace_custom_size_thumbnail_url')) {
 if (!function_exists('replace_thumbnail_src')) {
   function replace_thumbnail_src($src, $size){
     if ($size == "thumb-600") return replace_custom_size_thumbnail_url($src, "600", "400");
+    if ($size == "thumb-300") return replace_custom_size_thumbnail_url($src, "300", "200");
     if ($size == "thumb-250") return replace_custom_size_thumbnail_url($src, "250", "250");
     if ($size == "thumb-200") return replace_custom_size_thumbnail_url($src, "200", "130");
   }
@@ -87,6 +88,7 @@ if (!function_exists('fm_default_thumb')) {
     // 登録されていなければテーマ内設置のデフォルト画像
     $template_image_path = get_template_directory_uri().'/images/article/';
     if($size == 'thumb-600') return $template_image_path.'default-600x400.png';
+    if($size == 'thumb-300') return $template_image_path.'default-300x200.png';
     if($size == 'thumb-250') return $template_image_path.'default-250x250.png';
     if($size == 'thumb-200') return $template_image_path.'default-200x130.png';
     return $template_image_path.'default.png';

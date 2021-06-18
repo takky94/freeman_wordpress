@@ -58,7 +58,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[product_by_tag tag="sand_casting,casting_pattern" count="-1" layout="square" /]'); ?>
+        <?= do_shortcode('[category category="close_contour_paste,cutting_process" /]'); ?>
       </div>
     </div>
   </div>
@@ -79,7 +79,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[product_by_tag tag="sand_casting,casting_pattern" count="-1" layout="square" /]'); ?>
+        <?= do_shortcode('[category category="resin_casting,mold_material,silicone" /]'); ?>
       </div>
     </div>
   </div>
@@ -100,7 +100,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[product_by_tag tag="sand_casting,casting_pattern" count="-1" layout="square" /]'); ?>
+        <?= do_shortcode('[category category="invar,special_effects,investment_casting,sand_casting,jewelry" /]'); ?>
       </div>
     </div>
   </div>
