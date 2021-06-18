@@ -49,7 +49,21 @@ function fm_create_post_type() {
       'show_in_quick_edit' => true, // カスタム投稿クイック編集画面で表示
       'show_in_rest' => true, // カスタム投稿編集画面で表示
       'show_in_nav_menus' => true, //カスタムメニューの作成画面で表示するか
-      'hierarchical' => true,
+      'hierarchical' => true, // カテゴリ形式
+    )
+  );
+  // ニュース用カテゴリ
+  register_taxonomy(
+    'news_tag',
+    'news',
+    array(
+      'label' => 'ニュースのタグ',
+      'show_ui' => true,
+      'show_admin_column' => true,
+      'show_in_quick_edit' => true, // カスタム投稿クイック編集画面で表示
+      'show_in_rest' => true, // カスタム投稿編集画面で表示
+      'show_in_nav_menus' => true, //カスタムメニューの作成画面で表示するか
+      'hierarchical' => false, // タグ形式
     )
   );
 }
