@@ -272,10 +272,10 @@ $root-path: "../..";
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      height: 500px;
+      height: 600px;
       margin-bottom: 200px;
       @media (max-width: $pc) {
-        height: 590px;
+        height: 680px;
         margin-bottom: 140px;
       }
       @media (max-width: $sp) {

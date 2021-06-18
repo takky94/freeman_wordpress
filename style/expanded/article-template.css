@@ -1363,13 +1363,13 @@
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 500px;
+  height: 600px;
   margin-bottom: 200px;
 }
 
 @media (max-width: 1080px) {
   .company-page .content-main .greeting {
-    height: 590px;
+    height: 680px;
     margin-bottom: 140px;
   }
 }
