@@ -84,12 +84,12 @@ if (!function_exists('fm_get_articles')){
 /*
 特定タグのニュースをループで任意の数表示
 使用ページ: トップ, category第三階層関連記事部分
-例) [post_by_tag tag="型製品" count="3" orderby="rand" layout="column" /]
+例) [post_by_tag tag="mold" count="3" orderby="rand" layout="column" /]
 ********************************************************************/
 if (!function_exists('fm_get_articles_by_tag')){
   function fm_get_articles_by_tag($atts){
 
-    $category = isset($atts['category']) ? $atts['category'] : '型製品';
+    $tag = isset($atts['tag']) ? explode(',', $atts['tag']) : 'mold';
     $count = isset($atts['count']) ? $atts['count'] : 3;
     $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
@@ -101,9 +101,9 @@ if (!function_exists('fm_get_articles_by_tag')){
       'tax_query' => array(
         'relation' => 'OR',
         array(
-          'taxonomy' => 'news_category',
+          'taxonomy' => 'news_tag',
           'field' => 'slug',
-          'terms' => $category,
+          'terms' => $tag,
         )
       )
     );
@@ -145,21 +145,27 @@ if (!function_exists('fm_get_product')){
 /*
 特定タグの商品をループで任意の数表示
 使用ページ: トップ, category第三階層関連商品部分
-例) [product_by_tag tag="型製品" count="3" orderby="rand" layout="column" /]
+例) [product_by_tag tag="mold" count="3" orderby="rand" layout="column" /]
 ********************************************************************/
 if (!function_exists('fm_get_product_by_tag')){
   function fm_get_product_by_tag($atts){
-
-    $category = isset($atts['category']) ? $atts['category'] : '型製品';
+    $tag = isset($atts['tag']) ? explode(',', $atts['tag']) : 'mold';
     $count = isset($atts['count']) ? $atts['count'] : 3;
     $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
 
     $args = array(
       'post_type' => 'post',
-      'category_name' => $category,
       'posts_per_page' => $count,
-      'orderby' => $orderby
+      'orderby' => $orderby,
+      'tax_query' => array(
+        'relation' => 'OR',
+        array(
+          'taxonomy' => 'post_tag',
+          'field' => 'slug',
+          'terms' => $tag,
+        )
+      )
     );
 
     $wrap_class = 'products-link';

@@ -121,7 +121,9 @@
         </div>
         <p class="block__image"><img class="sand_casting" src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/figure-1.png" alt=""
         <?php fm_lazyload(); ?>></p>
-
+      </div>
+      <div class="block__items">
+        <?= do_shortcode('[product_by_tag tag="sand_casting,casting_pattern" count="-1" layout="square" /]'); ?>
       </div>
     </div>
   </div>
@@ -140,6 +142,9 @@
         </div>
         <p class="block__image"><img class="sand_casting" src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/figure-2.png" alt=""
         <?php fm_lazyload(); ?>></p>
+      </div>
+      <div class="block__items">
+        <?= do_shortcode('[the_products id="57"]'); ?>
       </div>
     </div>
   </div>
