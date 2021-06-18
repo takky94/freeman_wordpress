@@ -56,7 +56,7 @@ if (!function_exists('fm_get_articles')){
   function fm_get_articles($atts){
 
     $category = isset($atts['category']) ? $atts['category'] : 'mold';
-    $count = isset($atts['count']) ? $atts['count'] : 3;
+    $count = isset($atts['count']) ? $atts['count'] : -1;
     $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
 
@@ -90,7 +90,7 @@ if (!function_exists('fm_get_articles_by_tag')){
   function fm_get_articles_by_tag($atts){
 
     $tag = isset($atts['tag']) ? explode(',', $atts['tag']) : 'mold';
-    $count = isset($atts['count']) ? $atts['count'] : 3;
+    $count = isset($atts['count']) ? $atts['count'] : -1;
     $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
 
@@ -124,7 +124,7 @@ if (!function_exists('fm_get_product')){
   function fm_get_product($atts){
 
     $category = isset($atts['category']) ? $atts['category'] : 'mold';
-    $count = isset($atts['count']) ? $atts['count'] : 3;
+    $count = isset($atts['count']) ? $atts['count'] : -1;
     $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
 
@@ -150,7 +150,7 @@ if (!function_exists('fm_get_product')){
 if (!function_exists('fm_get_product_by_tag')){
   function fm_get_product_by_tag($atts){
     $tag = isset($atts['tag']) ? explode(',', $atts['tag']) : 'mold';
-    $count = isset($atts['count']) ? $atts['count'] : 3;
+    $count = isset($atts['count']) ? $atts['count'] : -1;
     $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
 

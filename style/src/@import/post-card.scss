@@ -298,10 +298,18 @@ $root-path: "../..";
   } // column
   .square {
     display: flex;
+    flex-wrap: wrap;
     li {
-      width: calc((100% - 90px) / 4);
-      &:not(:first-child) {
-        margin-left: 30px;
+      @media (min-width: $tab) {
+        width: calc((100% - 90px) / 4);
+        // 左の列のみ
+        &:not(:first-child):not(:nth-child(4n + 1)) {
+          margin-left: 30px;
+        }
+        // 最上段除いて上に余白
+        &:not(:first-child):not(:nth-child(-n + 4)) {
+          margin-top: 30px;
+        }
       }
     }
     .post-card-product {
@@ -309,7 +317,7 @@ $root-path: "../..";
       display: flex;
       flex-direction: column;
       height: 100%;
-      padding: 10px;
+      padding: 15px;
       .post-thumbnail {
         width: 100%;
       }
@@ -388,10 +396,13 @@ $root-path: "../..";
 .the-product-link {
   .square {
     display: flex;
+    flex-wrap: wrap;
     li {
-      width: calc((100% - 90px) / 4);
-      &:not(:first-child) {
-        margin-left: 30px;
+      @media (min-width: $tab) {
+        width: calc((100% - 90px) / 4);
+        &:not(:first-child):not(:nth-child(4n + 1)) {
+          margin-left: 30px;
+        }
       }
     }
     .post-card-product {
@@ -399,7 +410,7 @@ $root-path: "../..";
       display: flex;
       flex-direction: column;
       height: 100%;
-      padding: 10px;
+      padding: 15px;
       .post-thumbnail {
         width: 100%;
       }

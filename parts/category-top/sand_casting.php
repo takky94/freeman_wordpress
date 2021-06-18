@@ -144,7 +144,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[the_products id="57"]'); ?>
+        <?= do_shortcode('[product_by_tag tag="sand_casting,casting_pattern" count="-1" layout="square" /]'); ?>
       </div>
     </div>
   </div>
@@ -165,7 +165,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[the_products id="57"]'); ?>
+        <?= do_shortcode('[product_by_tag tag="sand_casting,casting_pattern" count="-1" layout="square" /]'); ?>
       </div>
     </div>
   </div>
@@ -186,7 +186,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[the_products id="57"]'); ?>
+        <?= do_shortcode('[product_by_tag tag="sand_casting,casting_pattern" count="-1" layout="square" /]'); ?>
       </div>
     </div>
   </div>

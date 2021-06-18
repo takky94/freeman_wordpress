@@ -83,13 +83,15 @@ Gutenberg の拡張です
 
 ### `[product]`
 
-属性は`category`, `count`, `orderby`, `layouy`の 4 つ
+属性は`category`, `count`, `orderby`, `layout`の 4 つ
 
 例: `[product category="mold" count=3 orderby="rand" layout="column" /]` => 型製品の記事をランダムで 3 つ表示
 
 orderby の値は WP Query に基づきます(`rand`を使用すればランダム記事取得可)
 
-layout の値は `column`(横並び), `slider`(スライダー)から選べます
+count 値は指定しなかった場合、条件一致した全件表示になります
+
+layout の値は `column`(横並び), `square`(横並び枠線付き), `wide`(横長), `slider`(スライダー)から選べます
 
 参考: [順序づけパラメータ](https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/WP_Query#.E9.A0.86.E5.BA.8F.E3.81.A5.E3.81.91.E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF)
 
