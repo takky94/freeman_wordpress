@@ -311,6 +311,12 @@ $root-path: "../..";
           margin-top: 30px;
         }
       }
+      @media (max-width: $sp) {
+        width: 100%;
+        &:not(:first-child) {
+          margin-top: 15px;
+        }
+      }
     }
     .post-card-product {
       border: 1px solid $c-lightgray;
@@ -318,6 +324,10 @@ $root-path: "../..";
       flex-direction: column;
       height: 100%;
       padding: 15px;
+      @media (max-width: $sp) {
+        flex-direction: row;
+      }
+
       .post-thumbnail {
         width: 100%;
       }
@@ -325,6 +335,10 @@ $root-path: "../..";
         .post-thumbnail {
           img {
             width: 100%;
+            @media (max-width: $sp) {
+              min-width: 100px;
+              width: 100px;
+            }
           }
         }
       }
@@ -400,8 +414,19 @@ $root-path: "../..";
     li {
       @media (min-width: $tab) {
         width: calc((100% - 90px) / 4);
+        // 左の列のみ
         &:not(:first-child):not(:nth-child(4n + 1)) {
           margin-left: 30px;
+        }
+        // 最上段除いて上に余白
+        &:not(:first-child):not(:nth-child(-n + 4)) {
+          margin-top: 30px;
+        }
+      }
+      @media (max-width: $sp) {
+        width: 100%;
+        &:not(:first-child) {
+          margin-top: 15px;
         }
       }
     }
@@ -411,6 +436,10 @@ $root-path: "../..";
       flex-direction: column;
       height: 100%;
       padding: 15px;
+      @media (max-width: $sp) {
+        flex-direction: row;
+      }
+
       .post-thumbnail {
         width: 100%;
       }
@@ -418,6 +447,10 @@ $root-path: "../..";
         .post-thumbnail {
           img {
             width: 100%;
+            @media (max-width: $sp) {
+              min-width: 100px;
+              width: 100px;
+            }
           }
         }
       }
