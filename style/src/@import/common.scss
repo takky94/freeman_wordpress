@@ -6,33 +6,10 @@ $root-path: "../..";
 
 @import "./config";
 
-@font-face {
-  font-family: "Noto Sans CJK JP";
-  font-weight: 100;
-  src: url(#{$root-path}/library/fonts/NotoSansCJKjp-Thin.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Noto Sans CJK JP";
-  font-weight: 400;
-  src: url(#{$root-path}/library/fonts/NotoSansCJKjp-Regular.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Noto Sans CJK JP";
-  font-weight: 700;
-  src: url(#{$root-path}/library/fonts/NotoSansCJKjp-Bold.woff) format("woff");
-}
-
 // 全体
 body {
-  font-family: "Noto Sans CJK JP",
-  -apple-system,
-  BlinkMacSystemFont,
-  "Hiragino Kaku Gothic ProN",
-  "ヒラギノ角ゴ ProN W3",
-  "Arial",
-  "メイリオ", Meiryo, sans-serif;
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Arial", "メイリオ",
+  Meiryo, sans-serif;
 
   // ハンバーガーなどactive時にスクロールできなくする
   &.js-fixed {
