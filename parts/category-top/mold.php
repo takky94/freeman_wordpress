@@ -111,7 +111,12 @@
 <div class="category-related">
   <div class="products">
     <h4><?php _e('関連商品一覧', 'category-mold'); ?></h4>
-    <?= do_shortcode('[product_by_tag tag="mold" layout="column" slider="true"]'); ?>
+    <div class="pc__none">
+      <?= do_shortcode('[product_by_tag tag="mold" layout="column" slider="4"]'); ?>
+    </div>
+    <div class="sp__none">
+      <?= do_shortcode('[product_by_tag tag="mold" layout="column" slider="8"]'); ?>
+    </div>
   </div>
   <div class="articles">
     <h4><?php _e('関連NEWS', 'category-mold'); ?></h4>

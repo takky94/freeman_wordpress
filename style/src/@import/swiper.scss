@@ -131,11 +131,23 @@
 
 // 関連商品部分のスライダー
 .related-slider {
+  .swiper-wrapper {
+    @media (max-width: $sp) {
+      display: flex;
+      flex-wrap: inherit;
+    }
+  }
   .swiper-slide {
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: flex-start;
     max-width: inherit;
+    text-align: left;
     width: 100%;
+    @media (min-width: $tab) {
+      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    @media (max-width: $sp) {
+      display: block;
+    }
   }
 }

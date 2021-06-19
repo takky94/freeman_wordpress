@@ -103,9 +103,13 @@ $root-path: "../..";
         }
       }
       .title {
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
         font-size: 16px;
         font-weight: bold;
+        -webkit-line-clamp: 2;
         margin-top: 10px;
+        overflow: hidden;
         word-break: break-all;
       }
       .description {
@@ -288,13 +292,18 @@ $root-path: "../..";
     .card-wrap {
       @media (min-width: $tab) {
         width: calc((100% - 80px) / 3);
-        &:not(:first-child):not(:nth-child(4n + 1)) {
+        // 上段以外は上に余白
+        &:nth-child(n + 5) {
+          margin-top: 40px;
+        }
+        // 左の列以外は左に余白
+        &:not(:first-child):not(:nth-child(5)) {
           margin-left: 40px;
         }
       }
       @media (max-width: $sp) {
         width: 100%;
-        &:not(:first-child):not(:nth-child(8n + 1)) {
+        &:not(:first-child) {
           margin-top: 20px;
         }
       }
@@ -366,34 +375,37 @@ $root-path: "../..";
 // 商品
 
 .post-card-product {
-  .title {
-    word-break: break-all;
-    @media (min-width: $tab) {
-      margin-top: $gapPc;
+  .content {
+    .title {
+      word-break: break-all;
+      @media (min-width: $tab) {
+        margin-top: $gapPc;
+      }
+      @media (max-width: $sp) {
+        line-height: 1.4;
+        margin-top: 0;
+      }
     }
-    @media (max-width: $sp) {
-      line-height: 1.4;
-    }
-  }
-  .more {
-    align-items: center;
-    display: flex;
-    font-size: 16px;
-    font-weight: bold;
-    justify-content: flex-end;
-    margin-top: 20px;
+    .more {
+      align-items: center;
+      display: flex;
+      font-size: 16px;
+      font-weight: bold;
+      justify-content: flex-end;
+      margin-top: 20px;
 
-    &::after {
-      background: center / contain url(#{$root-path}/images/common/more-arrow.svg);
-      content: "";
-      display: inline-block;
-      height: 1em;
-      margin-left: 8px;
-      width: 1em;
+      &::after {
+        background: center / contain url(#{$root-path}/images/common/more-arrow.svg);
+        content: "";
+        display: inline-block;
+        height: 1em;
+        margin-left: 8px;
+        width: 1em;
+      }
     }
-  }
-  .description {
-    word-break: break-all;
+    .description {
+      word-break: break-all;
+    }
   }
 
   @media (max-width: $sp) {

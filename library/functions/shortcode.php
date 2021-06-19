@@ -32,7 +32,7 @@ if (!function_exists('fm_get_output_string')) {
       $title = wp_trim_words($title, 32); // 32文字以上は省略
       $post_id = $post -> ID;
       $permalink = get_the_permalink($post_id);
-      // スライダー有効&最初のループ、8つまでのlist要素をwrapする
+      // スライダー有効&最初のループ、$isSliderで設定した数までのlist要素をwrapする
       if($isSlider && $i + 1 == 1) $str .= '<div class="swiper-slide" data-role="eight-post-cards-wrapper">';
 
       switch ($type) {
@@ -47,10 +47,10 @@ if (!function_exists('fm_get_output_string')) {
           break;
       }
 
-      // スライダー有効&list要素が8の倍数である時、8つまでのlist要素のwrapper閉じ、再びwrapper出力
-      if($isSlider && (($i + 1) % 8 == 0)) $str .= '</div><div class="swiper-slide" data-role="eight-post-cards-wrapper">';
+      // スライダー有効&list要素が$isSliderで設定した数字の倍数であり、ループの最後でない時、$isSliderで設定した数までのlist要素のwrapperを閉じ、再びwrapperを出力
+      if($isSlider && (($i + 1) % $isSlider == 0) && $i + 1 !== $posts_length) $str .= '</div><div class="swiper-slide" data-role="eight-post-cards-wrapper">';
       // スライダー有効&最後のループ時、8つまでのlist要素のwrapper閉じる
-      if($isSlider && $i + 1 == count($posts)) $str .= '</div>';
+      if($isSlider && $i + 1 == $posts_length) $str .= '</div>';
     }
     wp_reset_postdata();
 
@@ -63,7 +63,7 @@ if (!function_exists('fm_get_output_string')) {
 /*
 特定カテゴリのニュースをループで任意の数表示
 使用ページ: トップ, categoryトップ
-例) [post category="mold" count="3" orderby="rand" layout="column" slider="true" /]
+例) [post category="mold" count="3" orderby="rand" layout="column" slider="8" /]
 ********************************************************************/
 if (!function_exists('fm_get_articles')){
   function fm_get_articles($atts){
@@ -72,7 +72,7 @@ if (!function_exists('fm_get_articles')){
     $count = isset($atts['count']) ? $atts['count'] : -1;
     $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
-    $isSlider = isset($atts['slider']) === "true" ? true : false;
+    $isSlider = isset($atts['slider']) ? intval($atts['slider']) : 0;
 
     $args = array(
       'post_type' => 'news',
@@ -107,7 +107,7 @@ if (!function_exists('fm_get_articles_by_tag')){
     $count = isset($atts['count']) ? $atts['count'] : -1;
     $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
-    $isSlider = isset($atts['slider']) === "true" ? true : false;
+    $isSlider = isset($atts['slider']) ? intval($atts['slider']) : 0;
 
     $args = array(
       'post_type' => 'news',
@@ -144,7 +144,7 @@ if (!function_exists('fm_get_product')){
     $count = isset($atts['count']) ? $atts['count'] : -1;
     $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
-    $isSlider = isset($atts['slider']) === "true" ? true : false;
+    $isSlider = isset($atts['slider']) ? intval($atts['slider']) : 0;
 
     $args = array(
       'post_type' => 'post',
@@ -171,7 +171,7 @@ if (!function_exists('fm_get_product_by_tag')){
     $count = isset($atts['count']) ? $atts['count'] : -1;
     $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
-    $isSlider = isset($atts['slider']) == "true" ? true : false;
+    $isSlider = isset($atts['slider']) ? intval($atts['slider']) : 0;
 
     $args = array(
       'post_type' => 'post',
