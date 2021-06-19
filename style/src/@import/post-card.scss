@@ -533,11 +533,15 @@ $root-path: "../..";
     .card-wrap {
       width: calc((100% - 40px) / 2);
       @media (min-width: $tab) {
-        &:nth-child(2n):not(.square-second__trigger-wrap) {
-          margin-left: 40px;
-        }
         &:not(:nth-child(1)):not(:nth-child(2)) {
           margin-top: 40px;
+        }
+        // extend打ち消し
+        &:not(:first-child):not(:nth-child(4n + 1)) {
+          margin-left: 0;
+        }
+        &:nth-child(2n):not(.square-second__trigger-wrap) {
+          margin-left: 40px;
         }
       }
       @media (max-width: $sp) {

@@ -48,7 +48,7 @@
         <?php foreach ($others_slider_imgs as $img): ?>
         <?php if ($img === null) continue; ?>
         <div class="swiper-slide">
-          <img src="<?= $img; ?>" alt="" <?php fm_lazyload(); ?> />
+          <img src="<?= replace_thumbnail_src($img, 'thumb-600'); ?>" alt="" <?php fm_lazyload(); ?> />
         </div>
         <?php endforeach; ?>
       </div>
@@ -98,7 +98,7 @@
   </ul>
   <ul class="square square-second js-hidden-links">
     <?php endif; ?>
-    <li>
+    <li class="card-wrap">
       <a href="<?= get_the_permalink(); ?>"
         class="post-card-product post-card-content-trans-red post-card-thumbnail-animation">
         <div class="thumbnail">
@@ -112,7 +112,7 @@
       </a>
     </li>
     <?php if ($i > 6 && $i == $posts_count): ?>
-    <li class="square-second__trigger-wrap">
+    <li class="card-wrap square-second__trigger-wrap">
       <input id="square-secondTrigger" class="square-second__checkbox" type="checkbox">
       <label class="square-second__trigger" for="square-secondTrigger">More</label>
     </li>
@@ -120,7 +120,7 @@
     <?php $i++; ?>
     <?php // ulの最後にshow/hidden用ボタン加える ?>
     <?php if ($i > 6 && $i == $posts_count): ?>
-    <li class="square-second__trigger-wrap">
+    <li class="card-wrap square-second__trigger-wrap">
       <input id="square-secondTrigger" class="square-second__checkbox" type="checkbox">
       <label class="square-second__trigger font-robot" for="square-secondTrigger">MORE</label>
     </li>

@@ -1319,11 +1319,14 @@
 }
 
 @media (min-width: 769px) {
-  .category-child-product-link .square .card-wrap:nth-child(2n):not(.square-second__trigger-wrap) {
-    margin-left: 40px;
-  }
   .category-child-product-link .square .card-wrap:not(:nth-child(1)):not(:nth-child(2)) {
     margin-top: 40px;
+  }
+  .category-child-product-link .square .card-wrap:not(:first-child):not(:nth-child(4n + 1)) {
+    margin-left: 0;
+  }
+  .category-child-product-link .square .card-wrap:nth-child(2n):not(.square-second__trigger-wrap) {
+    margin-left: 40px;
   }
 }
 

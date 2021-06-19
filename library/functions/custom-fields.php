@@ -105,6 +105,7 @@ if (!function_exists('fm_create_category_child_custom_fields')){
       <input id="othersSliderImage1" class="js-uploadImage" type="text" size="36" name="category_meta[others_slider_img1]" value="$others_slider_img1" placeholder="https://..." />
       <button type="button" class="js-uploadImageButton button button-primary">画像をアップロード</button>
     </div>
+    <p class="description">横600px:縦400px以上のサイズの画像を設定してください</p>
     <p style="margin-top: 7px;text-align:center"><img class="js-uploadImageDemo" src="$others_slider_img1" style="width: 150px; height: auto;"></p>
   </td>
 </tr>
@@ -115,6 +116,7 @@ if (!function_exists('fm_create_category_child_custom_fields')){
       <input id="othersSliderImage2" class="js-uploadImage" type="text" size="36" name="category_meta[others_slider_img2]" value="$others_slider_img2" placeholder="https://..." />
       <button type="button" class="js-uploadImageButton button button-primary">画像をアップロード</button>
     </div>
+    <p class="description">横600px:縦400px以上のサイズの画像を設定してください</p>
     <p style="margin-top: 7px;text-align:center"><img class="js-uploadImageDemo" src="$others_slider_img2" style="width: 150px; height: auto;"></p>
   </td>
 </tr>
@@ -125,6 +127,7 @@ if (!function_exists('fm_create_category_child_custom_fields')){
       <input id="othersSliderImage3" class="js-uploadImage" type="text" size="36" name="category_meta[others_slider_img3]" value="$others_slider_img3" placeholder="https://..." />
       <button type="button" class="js-uploadImageButton button button-primary">画像をアップロード</button>
     </div>
+    <p class="description">横600px:縦400px以上のサイズの画像を設定してください</p>
     <p style="margin-top: 7px;text-align:center"><img class="js-uploadImageDemo" src="$others_slider_img3" style="width: 150px; height: auto;"></p>
   </td>
 </tr>
@@ -135,6 +138,7 @@ if (!function_exists('fm_create_category_child_custom_fields')){
       <input id="othersSliderImage4" class="js-uploadImage" type="text" size="36" name="category_meta[others_slider_img4]" value="$others_slider_img4" placeholder="https://..." />
       <button type="button" class="js-uploadImageButton button button-primary">画像をアップロード</button>
     </div>
+    <p class="description">横600px:縦400px以上のサイズの画像を設定してください</p>
     <p style="margin-top: 7px;text-align:center"><img class="js-uploadImageDemo" src="$others_slider_img4" style="width: 150px; height: auto;"></p>
   </td>
 </tr>
@@ -145,6 +149,7 @@ if (!function_exists('fm_create_category_child_custom_fields')){
       <input id="othersSliderImage5" class="js-uploadImage" type="text" size="36" name="category_meta[others_slider_img5]" value="$others_slider_img5" placeholder="https://..." />
       <button type="button" class="js-uploadImageButton button button-primary">画像をアップロード</button>
     </div>
+    <p class="description">横600px:縦400px以上のサイズの画像を設定してください</p>
     <p style="margin-top: 7px;text-align:center"><img class="js-uploadImageDemo" src="$others_slider_img5" style="width: 150px; height: auto;"></p>
   </td>
 </tr>
