@@ -16,6 +16,11 @@ $textSizeSp: 18px;
 $root-path: "../..";
 
 .post-card {
+  .thumbnail {
+    img {
+      width: 100%;
+    }
+  }
   .content {
     .description {
       word-break: break-all;
@@ -67,7 +72,7 @@ $root-path: "../..";
     display: flex;
     width: 100%;
 
-    .thumbail {
+    .thumbnail {
       max-width: 30%;
       img {
         max-width: 200px;
@@ -211,7 +216,7 @@ $root-path: "../..";
     display: flex;
     flex-wrap: wrap;
 
-    li {
+    .card-wrap {
       width: calc((100% - 40px) / 2);
       @media (max-width: $sp) {
         width: 100%;
@@ -277,29 +282,28 @@ $root-path: "../..";
   .column {
     display: flex;
     justify-content: space-between;
-    li {
-      width: calc(100% / 3);
-      @media (max-width: $sp) {
-        width: 100%;
-      }
-      &:not(:first-child) {
-        @media (min-width: $tab) {
+    @media (max-width: $sp) {
+      flex-wrap: wrap;
+    }
+    .card-wrap {
+      @media (min-width: $tab) {
+        width: calc((100% - 80px) / 3);
+        &:not(:first-child):not(:nth-child(4n + 1)) {
           margin-left: 40px;
         }
-        @media (max-width: $sp) {
+      }
+      @media (max-width: $sp) {
+        width: 100%;
+        &:not(:first-child):not(:nth-child(8n + 1)) {
           margin-top: 20px;
         }
       }
-    }
-
-    @media (max-width: $sp) {
-      flex-wrap: wrap;
     }
   } // column
   .square {
     display: flex;
     flex-wrap: wrap;
-    li {
+    .card-wrap {
       @media (min-width: $tab) {
         width: calc((100% - 90px) / 4);
         // 左の列のみ
@@ -411,7 +415,7 @@ $root-path: "../..";
   .square {
     display: flex;
     flex-wrap: wrap;
-    li {
+    .card-wrap {
       @media (min-width: $tab) {
         width: calc((100% - 90px) / 4);
         // 左の列のみ
@@ -514,7 +518,7 @@ $root-path: "../..";
   .square {
     flex-wrap: wrap;
 
-    li {
+    .card-wrap {
       width: calc((100% - 40px) / 2);
       @media (min-width: $tab) {
         &:nth-child(2n):not(.square-second__trigger-wrap) {
@@ -651,7 +655,7 @@ $root-path: "../..";
   .wide {
     display: flex;
     flex-wrap: wrap;
-    li {
+    .card-wrap {
       border-bottom: 1px solid $c-lightgray;
       padding-bottom: 20px;
       width: calc((100% - 40px) / 2);

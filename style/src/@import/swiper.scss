@@ -128,3 +128,14 @@
     }
   }
 }
+
+// 関連商品部分のスライダー
+.related-slider {
+  .swiper-slide {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: inherit;
+    width: 100%;
+  }
+}

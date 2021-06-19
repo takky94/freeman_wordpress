@@ -28,7 +28,7 @@
       <?php if ($i === 0): // 上段 ?>
       <div class="news__large">
         <a href="<?= get_post_permalink(); ?>" class="post-card post-card-large">
-          <div class="thumbail">
+          <div class="thumbnail">
             <p class="post-thumbnail"><img src="<?= fm_default_thumb('thumb-600'); ?>" /></p>
           </div>
           <div class="content">
@@ -104,7 +104,7 @@
       ?>
       <?= $start_tag; ?>
       <a href="<?= get_post_permalink(); ?>" class="post-card <?= $post_class; ?>">
-        <div class="thumbail">
+        <div class="thumbnail">
           <p class="post-thumbnail"><img src="<?= $src; ?>" alt=""></p>
         </div>
         <div class="content">

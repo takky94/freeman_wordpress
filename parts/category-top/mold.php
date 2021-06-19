@@ -111,11 +111,11 @@
 <div class="category-related">
   <div class="products">
     <h4><?php _e('関連商品一覧', 'category-mold'); ?></h4>
-    <?= do_shortcode('[product category="mold" count="4" orderby="rand" layout="column"]'); ?>
+    <?= do_shortcode('[product_by_tag tag="mold" layout="column" slider="true"]'); ?>
   </div>
   <div class="articles">
     <h4><?php _e('関連NEWS', 'category-mold'); ?></h4>
-    <?= do_shortcode('[post category="mold" count="6" orderby="rand" layout="column"]'); ?>
+    <?= do_shortcode('[post_by_tag tag="mold" count="6" layout="column"]'); ?>
     <div class="view-all">
       <a href="#" class="button-arrow button-line arrow-wrap">
         <span class="font-robot bold">SEE MORE</span>

@@ -13,18 +13,16 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&family=EB+Garamond:ital@1&family=Roboto+Condensed:wght@300;400;700&family=Noto+Serif+JP:wght@600&&display=swap"
     rel="stylesheet">
-  <?php if (is_home() || is_front_page()): ?>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.css" />
+  <?php if (is_home() || is_front_page()): ?>
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/index.min.css" />
   <?php elseif (is_category()): ?>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/category.min.css" />
   <?php elseif (is_archive()): ?>
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/archive.min.css" />
   <?php elseif (is_page_template()): //テンプレート使用の固定ページ ?>
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/article-template.min.css" />
   <?php elseif (is_single()||is_page()): ?>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/article.min.css" />
   <?php elseif (is_search()): ?>
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style/compressed/search.min.css" />

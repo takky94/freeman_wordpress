@@ -11,33 +11,46 @@ add_shortcode("category", "fm_get_categories_link");
 
 // 記事の配列からリンク一覧のHTMLを生成(各ショートコードで使用)
 if (!function_exists('fm_get_output_string')) {
-  function fm_get_output_string($args, $wrap_class, $layout, $type){
+  function fm_get_output_string($args, $wrap_class, $layout, $type, $isSlider){
 
     $query = new WP_Query($args);
     $posts = $query -> posts;
 
     if(!count($posts)) return "記事が取得できませんでした。";
 
-    $str = '<div class="'.$wrap_class.'"><ul class="'.$layout.'">';
+    if($isSlider){
+      $wrap_class .= " swiper-container related-slider js-related-slider";
+      $layout .= " swiper-wrapper";
+    }
 
-    foreach ($posts as $post) {
+    $posts_length = count($posts);
+    $str = '<div class="'.$wrap_class.'"><ul class="'.$layout.'" data-length="'.$posts_length.'">';
+
+    foreach ($posts as $i => $post) {
       setup_postdata($post);
       $title = $post -> post_title;
       $title = wp_trim_words($title, 32); // 32文字以上は省略
       $post_id = $post -> ID;
       $permalink = get_the_permalink($post_id);
+      // スライダー有効&最初のループ、8つまでのlist要素をwrapする
+      if($isSlider && $i + 1 == 1) $str .= '<div class="swiper-slide" data-role="eight-post-cards-wrapper">';
 
       switch ($type) {
         case 'news':
-          $str .= '<li><a href="'.$permalink.'" class="article-card post-card-thumbnail-animation post-card-content-trans-red"><div class="thumbnail"><p class="article-thumbnail"><img src="'.fm_default_thumb('thumb-300', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><time class="date font-robot" datetime="'.get_the_date('Y-m-d', $post_id).'">'.get_the_date('Y.m.d', $post_id).'</time><p class="title">'.$title.'</p></div></a></li>';
+          $str .= '<li class="card-wrap"><a href="'.$permalink.'" class="post-card article-card post-card-thumbnail-animation post-card-content-trans-red"><div class="thumbnail"><p class="article-thumbnail"><img src="'.fm_default_thumb('thumb-300', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><time class="date font-robot" datetime="'.get_the_date('Y-m-d', $post_id).'">'.get_the_date('Y.m.d', $post_id).'</time><p class="title">'.$title.'</p></div></a></li>';
           break;
         case 'products':
-          $str .= '<li><a href="'.$permalink.'" class="post-card-product post-card-thumbnail-animation post-card-content-trans-red"><div class="thumbnail"><p class="post-thumbnail"><img src="'.fm_default_thumb('thumb-300', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><p class="title">'.$title.'</p><p class="more font-robot c-main"><span>MORE</span></p></div></a></li>';
+          $str .= '<li class="card-wrap"><a href="'.$permalink.'" class="post-card post-card-product post-card-thumbnail-animation post-card-content-trans-red"><div class="thumbnail"><p class="post-thumbnail"><img src="'.fm_default_thumb('thumb-300', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><p class="title">'.$title.'</p><p class="more font-robot c-main"><span>MORE</span></p></div></a></li>';
           break;
         case 'product':
-          $str .= '<li><a href="'.$permalink.'" class="post-card-product post-card-thumbnail-animation post-card-content-trans-red"><div class="thumbnail"><p class="post-thumbnail"><img src="'.fm_default_thumb('thumb-300', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><time class="date font-robot" datetime="'.get_the_date('Y-m-d', $post_id).'">'.get_the_date('Y.m.d', $post_id).'</time><p class="title">'.$title.'</p></div></a></li>';
+          $str .= '<li class="card-wrap"><a href="'.$permalink.'" class="post-card post-card-product post-card-thumbnail-animation post-card-content-trans-red"><div class="thumbnail"><p class="post-thumbnail"><img src="'.fm_default_thumb('thumb-300', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><time class="date font-robot" datetime="'.get_the_date('Y-m-d', $post_id).'">'.get_the_date('Y.m.d', $post_id).'</time><p class="title">'.$title.'</p></div></a></li>';
           break;
       }
+
+      // スライダー有効&list要素が8の倍数である時、8つまでのlist要素のwrapper閉じ、再びwrapper出力
+      if($isSlider && (($i + 1) % 8 == 0)) $str .= '</div><div class="swiper-slide" data-role="eight-post-cards-wrapper">';
+      // スライダー有効&最後のループ時、8つまでのlist要素のwrapper閉じる
+      if($isSlider && $i + 1 == count($posts)) $str .= '</div>';
     }
     wp_reset_postdata();
 
@@ -47,11 +60,10 @@ if (!function_exists('fm_get_output_string')) {
   }
 }
 
-
 /*
 特定カテゴリのニュースをループで任意の数表示
 使用ページ: トップ, categoryトップ
-例) [post category="mold" count="3" orderby="rand" layout="column" /]
+例) [post category="mold" count="3" orderby="rand" layout="column" slider="true" /]
 ********************************************************************/
 if (!function_exists('fm_get_articles')){
   function fm_get_articles($atts){
@@ -60,6 +72,7 @@ if (!function_exists('fm_get_articles')){
     $count = isset($atts['count']) ? $atts['count'] : -1;
     $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
+    $isSlider = isset($atts['slider']) === "true" ? true : false;
 
     $args = array(
       'post_type' => 'news',
@@ -78,7 +91,7 @@ if (!function_exists('fm_get_articles')){
     $wrap_class = 'articles-link';
     $type = 'news';
 
-    return fm_get_output_string($args, $wrap_class, $layout, $type);
+    return fm_get_output_string($args, $wrap_class, $layout, $type, $isSlider);
   }
 }
 
@@ -94,6 +107,7 @@ if (!function_exists('fm_get_articles_by_tag')){
     $count = isset($atts['count']) ? $atts['count'] : -1;
     $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
+    $isSlider = isset($atts['slider']) === "true" ? true : false;
 
     $args = array(
       'post_type' => 'news',
@@ -112,7 +126,7 @@ if (!function_exists('fm_get_articles_by_tag')){
     $wrap_class = 'articles-link';
     $type = 'news';
 
-    return fm_get_output_string($args, $wrap_class, $layout, $type);
+    return fm_get_output_string($args, $wrap_class, $layout, $type, $isSlider);
   }
 }
 
@@ -130,6 +144,7 @@ if (!function_exists('fm_get_product')){
     $count = isset($atts['count']) ? $atts['count'] : -1;
     $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
+    $isSlider = isset($atts['slider']) === "true" ? true : false;
 
     $args = array(
       'post_type' => 'post',
@@ -141,7 +156,7 @@ if (!function_exists('fm_get_product')){
     $wrap_class = 'products-link';
     $type = 'products';
 
-    return fm_get_output_string($args, $wrap_class, $layout, $type);
+    return fm_get_output_string($args, $wrap_class, $layout, $type, $isSlider);
   }
 }
 
@@ -156,6 +171,7 @@ if (!function_exists('fm_get_product_by_tag')){
     $count = isset($atts['count']) ? $atts['count'] : -1;
     $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
+    $isSlider = isset($atts['slider']) == "true" ? true : false;
 
     $args = array(
       'post_type' => 'post',
@@ -174,7 +190,7 @@ if (!function_exists('fm_get_product_by_tag')){
     $wrap_class = 'products-link';
     $type = 'products';
 
-    return fm_get_output_string($args, $wrap_class, $layout, $type);
+    return fm_get_output_string($args, $wrap_class, $layout, $type, $isSlider);
   }
 }
 
@@ -270,7 +286,7 @@ if (!function_exists('fm_get_categories_link')){
       }
 
 
-      $str .= '<li><a href="'.$permalink.'" class="post-card-product post-card-thumbnail-animation post-card-content-trans-red"><div class="thumbnail"><p class="post-thumbnail"><img src="'.$thumbnail.'" alt="" loading="lazy" /></p></div><div class="content"><p class="title">'.$title.'</p><p class="more font-robot c-main"><span>MORE</span></p></div></a></li>';
+      $str .= '<li class="card-wrap"><a href="'.$permalink.'" class="post-card-product post-card-thumbnail-animation post-card-content-trans-red"><div class="thumbnail"><p class="post-thumbnail"><img src="'.$thumbnail.'" alt="" loading="lazy" /></p></div><div class="content"><p class="title">'.$title.'</p><p class="more font-robot c-main"><span>MORE</span></p></div></a></li>';
     }
 
     $str .= '</ul></div>';
