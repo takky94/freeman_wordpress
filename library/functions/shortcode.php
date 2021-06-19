@@ -72,7 +72,7 @@ if (!function_exists('fm_get_articles')){
 
     $category = isset($atts['category']) ? $atts['category'] : 'mold';
     $count = isset($atts['count']) ? $atts['count'] : -1;
-    $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
+    $orderby = isset($atts['orderby']) ? $atts['orderby'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
     $isSlider = isset($atts['slider']) ? intval($atts['slider']) : 0;
 
@@ -107,7 +107,7 @@ if (!function_exists('fm_get_articles_by_tag')){
 
     $tag = isset($atts['tag']) ? explode(',', $atts['tag']) : 'mold';
     $count = isset($atts['count']) ? $atts['count'] : -1;
-    $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
+    $orderby = isset($atts['orderby']) ? $atts['orderby'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
     $isSlider = isset($atts['slider']) ? intval($atts['slider']) : 0;
 
@@ -144,7 +144,7 @@ if (!function_exists('fm_get_product')){
 
     $category = isset($atts['category']) ? $atts['category'] : 'mold';
     $count = isset($atts['count']) ? $atts['count'] : -1;
-    $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
+    $orderby = isset($atts['orderby']) ? $atts['orderby'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
     $isSlider = isset($atts['slider']) ? intval($atts['slider']) : 0;
 
@@ -171,7 +171,7 @@ if (!function_exists('fm_get_product_by_tag')){
   function fm_get_product_by_tag($atts){
     $tag = isset($atts['tag']) ? explode(',', $atts['tag']) : 'mold';
     $count = isset($atts['count']) ? $atts['count'] : -1;
-    $orderby = isset($atts['orderby']) ? $atts['order'] : 'date';
+    $orderby = isset($atts['orderby']) ? $atts['orderby'] : 'date';
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
     $isSlider = isset($atts['slider']) ? intval($atts['slider']) : 0;
 
