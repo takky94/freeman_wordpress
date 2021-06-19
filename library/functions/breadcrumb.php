@@ -156,12 +156,9 @@ if (!function_exists('fm_breadcrumb_single')){
 // 一覧
 if (!function_exists('fm_breadcrumb_archive')){
   function fm_breadcrumb_archive(){
-    // 通常の投稿 or カスタム投稿
-    if ($post_type == 'post'){
-      // 通常の投稿の一覧
-    } else {
-      $result = fm_breadcrumb_items("お知らせ", $i);
-    }
+    // archiveページはnewsのみ
+    $position = 2;
+    $result = fm_breadcrumb_items("お知らせ", $position);
     return $result;
   }
 }
