@@ -131,6 +131,10 @@
 
 // 関連商品部分のスライダー
 .related-slider {
+  @media (max-width: $sp) {
+    padding-bottom: calc(30px + 20px); // ナビゲーション分の余白
+  }
+
   .swiper-wrapper {
     @media (max-width: $sp) {
       display: flex;
@@ -148,6 +152,42 @@
     }
     @media (max-width: $sp) {
       display: block;
+    }
+  }
+  &-navi {
+    height: 100%;
+    @include centeringMargin;
+    position: absolute;
+    width: 100%;
+
+    .swiper-pagination-fraction,
+    .swiper-button-next,
+    .swiper-button-prev {
+      background: #000;
+      position: absolute;
+    }
+
+    .swiper-button-prev {
+      left: 0;
+    }
+    .swiper-button-next {
+      right: 0;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      height: 80px;
+      width: 30px;
+      @media (max-width: $sp) {
+        bottom: 0;
+        height: 30px;
+        margin-bottom: 0;
+        width: calc((100% - 1px) / 2);
+      }
+
+      &::after {
+        color: #fff;
+        font-size: 13px;
+      }
     }
   }
 }

@@ -49,12 +49,14 @@ if (!function_exists('fm_get_output_string')) {
 
       // スライダー有効&list要素が$isSliderで設定した数字の倍数であり、ループの最後でない時、$isSliderで設定した数までのlist要素のwrapperを閉じ、再びwrapperを出力
       if($isSlider && (($i + 1) % $isSlider == 0) && $i + 1 !== $posts_length) $str .= '</div><div class="swiper-slide" data-role="eight-post-cards-wrapper">';
-      // スライダー有効&最後のループ時、8つまでのlist要素のwrapper閉じる
+      // スライダー有効&最後のループ時、$isSliderで指定した数までのlist要素のwrapper閉じる
       if($isSlider && $i + 1 == $posts_length) $str .= '</div>';
     }
     wp_reset_postdata();
 
-    $str .= '</ul></div>';
+    $str .= '</ul>';
+    if($isSlider) $str .= '<div class="related-slider-navi"><div class="swiper-button-prev"></div><div class="swiper-button-next"></div></div>';
+    $str .= '</div>';
 
     return $str;
   }
