@@ -263,6 +263,12 @@ hr {
   width: 17px;
 }
 
+.error-message {
+  color: #eb2936;
+  font-size: 12px;
+  margin-top: 1em;
+}
+
 .eng-title {
   text-transform: capitalize;
 }

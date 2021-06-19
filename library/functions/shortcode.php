@@ -16,7 +16,7 @@ if (!function_exists('fm_get_output_string')) {
     $query = new WP_Query($args);
     $posts = $query -> posts;
 
-    if(!count($posts)) return "記事が取得できませんでした。";
+    if(!count($posts)) return '<p class="error-message">記事が取得できませんでした。</p>';
 
     if($isSlider){
       $wrap_class .= " swiper-container related-slider js-related-slider";
@@ -203,9 +203,9 @@ if (!function_exists('fm_get_product_by_tag')){
 ********************************************************************/
 if (!function_exists('fm_get_the_products')){
   function fm_get_the_products($atts){
-    if (!isset($atts['id'])) return "IDを指定してください";
+    if (!isset($atts['id'])) return '<p class="error-message">IDを指定してください</p>';
     $id = isset($atts['id']) ? explode(',', $atts['id']) : null;
-    if (!is_array($id)) return "指定の形が正しくありません";
+    if (!is_array($id)) return '<p class="error-message">指定の形が正しくありません</p>';
 
     $layout = isset($atts['layout']) ? $atts['layout'] : 'square';
 
@@ -230,8 +230,8 @@ if (!function_exists('fm_get_the_products')){
 if (!function_exists('fm_get_the_product')){
   function fm_get_the_product($atts){
     $id = $atts['id'];
-    if (!isset($id)) return 'IDを指定してください';
-    if (strpos($id, ',') !== false) return 'IDの指定は一つまでです';
+    if (!isset($id)) return '<p class="error-message">IDを指定してください</p>';
+    if (strpos($id, ',') !== false) return '<p class="error-message">IDの指定は一つまでです</p>';
 
     $layout = 'wide';
 
@@ -256,6 +256,8 @@ if (!function_exists('fm_get_categories_link')){
   function fm_get_categories_link($atts){
 
     $category_slugs = isset($atts['category']) ? explode(',', $atts['category']) : null;
+    if ($category_slugs === null) return '<p class="error-message">カテゴリを指定してください</p>';
+
     $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
 
     $categories = array();

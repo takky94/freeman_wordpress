@@ -95,7 +95,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[product_by_tag tag="sand_casting,casting_pattern" count="-1" layout="square" /]'); ?>
+        <?= do_shortcode('[category category="waxes,parting_powder,equipment" /]'); ?>
       </div>
     </div>
   </div>
@@ -116,7 +116,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[product_by_tag tag="sand_casting,casting_pattern" count="-1" layout="square" /]'); ?>
+        <?= do_shortcode('[category category="refractories,slurry_additives_core_materials,equipment" /]'); ?>
       </div>
     </div>
   </div>
@@ -137,7 +137,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[product_by_tag tag="sand_casting,casting_pattern" count="-1" layout="square" /]'); ?>
+        <?= do_shortcode('[category category="equipment" /]'); ?>
       </div>
     </div>
   </div>
@@ -158,7 +158,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[product_by_tag tag="sand_casting,casting_pattern" count="-1" layout="square" /]'); ?>
+        <?= do_shortcode('[category /]'); ?>
       </div>
     </div>
   </div>
@@ -179,7 +179,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[product_by_tag tag="sand_casting,casting_pattern" count="-1" layout="square" /]'); ?>
+        <?= do_shortcode('[category category="equipment" /]'); ?>
       </div>
     </div>
   </div>
@@ -200,22 +200,25 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[product_by_tag tag="sand_casting,casting_pattern" count="-1" layout="square" /]'); ?>
       </div>
     </div>
   </div>
   <!-- // block -->
 </div>
 <!-- // category-step -->
-<!-- category-related -->
 <div class="category-related">
   <div class="products">
     <h4><?php _e('関連商品一覧', 'category-investment-casting'); ?></h4>
-    <?= do_shortcode('[product category="investment_casting" count="4" orderby="rand" layout="column"]'); ?>
+    <div class="pc__none">
+      <?= do_shortcode('[product_by_tag tag="investment_casting" layout="column" slider="4"]'); ?>
+    </div>
+    <div class="sp__none">
+      <?= do_shortcode('[product_by_tag tag="investment_casting" layout="column" slider="8"]'); ?>
+    </div>
   </div>
   <div class="articles">
     <h4><?php _e('関連NEWS', 'category-investment-casting'); ?></h4>
-    <?= do_shortcode('[post category="investment_casting" count="6" orderby="rand" layout="column"]'); ?>
+    <?= do_shortcode('[post_by_tag tag="investment_casting" count="6" layout="column"]'); ?>
     <div class="view-all">
       <a href="#" class="button-arrow button-line arrow-wrap">
         <span class="font-robot bold">SEE MORE</span>

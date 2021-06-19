@@ -173,6 +173,13 @@ hr {
   }
 }
 
+// エラーメッセージ
+.error-message {
+  color: $c-main;
+  font-size: 12px;
+  margin-top: 1em;
+}
+
 // 英語タイトル(他言語表示時削除)
 .eng-title {
   text-transform: capitalize;

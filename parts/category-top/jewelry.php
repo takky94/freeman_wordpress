@@ -242,11 +242,16 @@
 <div class="category-related">
   <div class="products">
     <h4><?php _e('関連商品一覧', 'category-jewelry'); ?></h4>
-    <?= do_shortcode('[product category="jewelry" count="4" orderby="rand" layout="column"]'); ?>
+    <div class="pc__none">
+      <?= do_shortcode('[product_by_tag tag="jewelry" layout="column" slider="4"]'); ?>
+    </div>
+    <div class="sp__none">
+      <?= do_shortcode('[product_by_tag tag="jewelry" layout="column" slider="8"]'); ?>
+    </div>
   </div>
   <div class="articles">
     <h4><?php _e('関連NEWS', 'category-jewelry'); ?></h4>
-    <?= do_shortcode('[post category="jewelry" count="6" orderby="rand" layout="column"]'); ?>
+    <?= do_shortcode('[post_by_tag tag="jewelry" count="6" layout="column"]'); ?>
     <div class="view-all">
       <a href="#" class="button-arrow button-line arrow-wrap">
         <span class="font-robot bold">SEE MORE</span>
