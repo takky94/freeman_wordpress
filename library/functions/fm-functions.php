@@ -157,7 +157,8 @@ if (!function_exists('fm_remove_underbar')) {
 if (!function_exists('fm_is_active_page')) {
   function fm_is_active_page($str){
     $pattern = '/(mold|sand_casting|investment_casting|jewelry|new_field)/';
-    preg_match($pattern, get_the_permalink(), $matches);
+    $result = preg_match($pattern, get_the_permalink(), $matches);
+    if ($result === false) return "";
     if ($matches[0] === $str) return "active";
   }
 }
