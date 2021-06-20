@@ -407,14 +407,8 @@ html.en .eng-hidden {
   }
 }
 
-.header__menu .header__content .header__lang .select {
-  color: #96a8be;
-  display: inline-block;
-}
-
 @media (max-width: 768px) {
-  .header__menu .header__content .header__lang .select {
-    color: #fff;
+  .header__menu .header__content .header__lang .select-lang {
     font-size: 18px;
     margin-top: 25px;
     -webkit-box-ordinal-group: 3;
@@ -423,9 +417,34 @@ html.en .eng-hidden {
   }
 }
 
+.header__menu .header__content .header__lang .select-lang__link {
+  color: #96a8be;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1;
+  padding-top: 10px;
+  position: relative;
+}
+
+.header__menu .header__content .header__lang .select-lang__link:not(:first-child) {
+  margin-left: 12px;
+}
+
+@media (max-width: 768px) {
+  .header__menu .header__content .header__lang .select-lang__link {
+    color: #fff;
+  }
+}
+
 .header__menu .header__content .header__lang .search-form {
   max-width: 260px;
   position: relative;
+}
+
+@media (min-width: 769px) {
+  .header__menu .header__content .header__lang .search-form {
+    margin-left: 30px;
+  }
 }
 
 @media (max-width: 768px) {
