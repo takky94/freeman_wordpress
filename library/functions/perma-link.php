@@ -24,14 +24,6 @@ if (!function_exists('fm_category_base_rule')){
   }
 }
 
-// if (!function_exists('fm_category_base_rewrite')){
-//   function fm_category_base_rewrite($wp_rewrite) {
-//     // $new_rules = array('(.+)/page/(.+)/?' => 'index.php?category_name='.$wp_rewrite -> preg_index(1).'&paged='.$wp_rewrite->preg_index(2));
-//     // $new_rules = array('(mold|sand_casting|investment_castin|jewelryg|new_field)/(.+)/?' => 'index.php?category_name='.$wp_rewrite -> preg_index(2));
-//     $wp_rewrite -> rules = $new_rules + $wp_rewrite->rules;
-//   }
-// }
-
 // 子カテゴリのルーティングと第一階層カテゴリが指定された投稿のルーティングが被ってしまうため、子カテゴリのスラッグだけ抽出してそのページのみ子カテゴリのページを表示する
 // 例) 『ジュエリーの子カテゴリ(injection_wax)のURL => jewelry/injection_wax だが、カテゴリjewelryを指定した投稿を探してしまい404になる』のを避ける
 if (!function_exists('fm_category_child_link')){
@@ -40,7 +32,7 @@ if (!function_exists('fm_category_child_link')){
       $parent_category = get_category_by_slug($query['category_name']);
       $child_categories = get_categories('child_of='.$parent_category -> term_id);
       foreach ($child_categories as $child) {
-        if ($query['name'] === $child -> category_nicename) {
+        if (isset($query['name']) && $query['name'] === $child -> category_nicename) {
           $query['category_name'] = $query['category_name'].'/'.$query['name'];
           unset($query['name']);
         }
