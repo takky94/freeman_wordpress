@@ -20,6 +20,7 @@ function fm_head_cleanup(){
   remove_action('wp_head', 'parent_post_rel_link', 10, 0);
   remove_action('wp_head', 'start_post_rel_link', 10, 0);
   remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+  remove_action('wp_head', 'rel_canonical');
 
   // WPのバージョン表示削除
   remove_action('wp_head', 'wp_generator');
@@ -28,9 +29,29 @@ function fm_head_cleanup(){
   add_filter('style_loader_src', 'fm_remove_cssjs_ver', 9999);
   add_filter('script_loader_src', 'fm_remove_cssjs_ver', 9999);
 
+  // canonical
+  add_action('wp_head', 'fm_add_canonical');
+
   function fm_remove_cssjs_ver($src) {
     if(strpos($src,'ver=')) $src = remove_query_arg('ver',$src);
     return $src;
+  }
+
+  // canonical URL設定
+  function fm_add_canonical() {
+    $canonical = null;
+    if(is_home() || is_front_page()) {
+      $canonical = home_url();
+    } elseif (is_category()) {
+      $canonical = get_category_link( get_query_var('cat') );
+    } elseif (is_search()) {
+      $canonical = get_search_link();
+    } elseif (is_singular() ) {
+      $canonical = get_permalink();
+    } else{
+      $canonical = home_url();
+    }
+    echo '<link rel="canonical" href="'.$canonical.'">'."\n";
   }
 }// fm_head_cleanup()
 
