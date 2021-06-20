@@ -2190,6 +2190,7 @@
 .wp-block-freeman-block-case-and-item,
 .wp-block-freeman-block-remarks {
   margin-bottom: 60px;
+  margin-top: calc(60px / 2);
 }
 
 @media (max-width: 768px) {
@@ -2201,6 +2202,7 @@
   .wp-block-freeman-block-case-and-item,
   .wp-block-freeman-block-remarks {
     margin-bottom: 40px;
+    margin-top: calc(40px / 2);
   }
 }
 
@@ -2307,6 +2309,12 @@
   .wp-block-embed.is-type-video iframe {
     height: 280px;
   }
+}
+
+.wp-block-embed.is-type-video figcaption {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
 }
 
 .is-style-fm_table_details table {

@@ -23,8 +23,10 @@ $wp-column-breakPoint: 599px;
 .wp-block-freeman-block-case-and-item,
 .wp-block-freeman-block-remarks {
   margin-bottom: $block-margin-bottomPc;
+  margin-top: calc(#{$block-margin-bottomPc} / 2);
   @media (max-width: $sp) {
     margin-bottom: $block-margin-bottomSp;
+    margin-top: calc(#{$block-margin-bottomSp} / 2);
   }
 }
 
@@ -119,6 +121,12 @@ $wp-column-breakPoint: 599px;
     @media (max-width: $sp) {
       height: 280px;
     }
+  }
+
+  figcaption {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
   }
 }
 

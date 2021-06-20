@@ -32,9 +32,9 @@
 <div class="category-lead-child-jewelry">
   <div class="category-lead-child-jewelry__image">
     <?php if ($jewelry_img): ?>
-    <img src="<?= $jewelry_img; ?>" <?php fm_lazyload(); ?> alt="" />
+    <img src="<?= replace_thumbnail_src($jewelry_img, 'thumb-600'); ?>" <?php fm_lazyload(); ?> alt="" />
     <?php else: ?>
-    <p style="color:tomato">カテゴリページにて「リード画像 URL」を設定してください</p>
+    <p class="error-message">カテゴリページにて「リード画像 URL」を設定してください</p>
     <?php endif; ?>
   </div>
   <div class="category-lead-child-jewelry__description">
