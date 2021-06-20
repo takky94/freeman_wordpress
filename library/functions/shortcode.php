@@ -270,8 +270,8 @@ if (!function_exists('fm_get_categories_link')){
 
     foreach ($categories as $category) {
       $isParent = $category -> parent;
-      $parent_category = get_category($isParent);
-      $parent_category_slug = $parent_category -> slug;
+      $parent_category = $isParent ? get_category($isParent) : null;
+      $parent_category_slug = $isParent ? $parent_category -> slug : null;
       $category_id = $category -> term_id;
       $category_slug = $category -> slug;
 
@@ -282,11 +282,11 @@ if (!function_exists('fm_get_categories_link')){
       // 親カテゴリならサムネイルを,子カテゴリならスライダーなどカテゴリページで設定した画像を取得
       if ($isParent === 0){
         $thumbnail = get_template_directory_uri().'/images/category/post-card-thumbnail/'.$category_slug.'.png';
-      } else if ($parent_category_slug === "jewelry"){
-        $thumbnail = isset($contents['others_slider_img1']) ? esc_html($contents['jewelry_img']) : fm_default_thumb('thumb-300');
+      } else if ($parent_category_slug === "jewelry" && isset($contents['jewelry_img'])){
+        $thumbnail = esc_html($contents['jewelry_img']);
         $thumbnail = replace_thumbnail_src($thumbnail, 'thumb-300');
-      } else if ($parent_category_slug !== "jewelry"){
-        $thumbnail = isset($contents['others_slider_img1']) ? esc_html($contents['others_slider_img1']) : fm_default_thumb('thumb-300');
+      } else if ($parent_category_slug !== "jewelry" && isset($contents['others_slider_img1'])){
+        $thumbnail = esc_html($contents['others_slider_img1']);
         $thumbnail = replace_thumbnail_src($thumbnail, 'thumb-300');
       } else {
         $thumbnail = fm_default_thumb('thumb-300');
