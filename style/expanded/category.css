@@ -2082,8 +2082,23 @@
   margin-bottom: 80px;
 }
 
+@media (max-width: 768px) {
+  .category-lead-child-jewelry {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .category-lead-child-jewelry__image, .category-lead-child-jewelry__description {
   width: calc((100% - 60px) / 2);
+}
+
+@media (max-width: 768px) {
+  .category-lead-child-jewelry__image, .category-lead-child-jewelry__description {
+    width: 100%;
+  }
 }
 
 .category-lead-child-jewelry__description {
