@@ -392,6 +392,15 @@
   }
 }
 
+@media (max-width: 768px) {
+  .news-header .entry-header__title, .news-header .contact-header .entry-header__titleSub, .contact-header .news-header .entry-header__titleSub {
+    bottom: calc( 50px + 21px + 25px + 50px + 14px);
+  }
+  .news-header .breadcrumb {
+    bottom: calc(50px + 15px + 50px);
+  }
+}
+
 .contact-header {
   background: #fff;
 }

@@ -2,6 +2,8 @@
   $category = get_queried_object();
   $category_id = $category -> term_id; // カテゴリーID
   $category_slug = $category -> slug; // カテゴリースラッグ
+  $parent_category = get_category($category -> parent);
+  $parent_category_slug = $parent_category -> slug;
 
   // カテゴリ編集ページで設定した各情報
   $contents = get_option('fm_category_'.intval($category_id));
@@ -136,12 +138,17 @@
 <!-- category-related -->
 <div class="category-related">
   <div class="products">
-    <h4>試作・型材料の関連商品一覧</h4>
-    <?= do_shortcode('[product category="mold" count="4" orderby="rand" layout="column"]'); ?>
+    <h4><?php _e('関連商品一覧', 'category-children-others'); ?></h4>
+    <div class="pc__none">
+      <?= do_shortcode('[product_by_tag tag="'.$parent_category_slug.','.$category_slug.'" layout="column" slider="8"]'); ?>
+    </div>
+    <div class="sp__none">
+      <?= do_shortcode('[product_by_tag tag="'.$parent_category_slug.','.$category_slug.'" layout="column" slider="8"]'); ?>
+    </div>
   </div>
   <div class="articles">
-    <h4>試作・型材料の記事</h4>
-    <?= do_shortcode('[post category="mold" count="6" orderby="rand" layout="column"]'); ?>
+    <h4><?php _e('関連NEWS', 'category-children-others'); ?></h4>
+    <?= do_shortcode('[post_by_tag tag="'.$parent_category_slug.','.$category_slug.'" count="6" layout="column"]'); ?>
     <div class="view-all">
       <a href="#" class="button-arrow button-line arrow-wrap">
         <span class="font-robot bold">SEE MORE</span>

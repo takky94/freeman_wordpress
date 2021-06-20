@@ -264,6 +264,17 @@ $root-path: "../..";
       opacity: 0.3;
     }
   }
+
+  @media (max-width: $sp) {
+    .entry-header__title {
+      bottom: calc(
+      #{$blank-bg-white-heightSp} + 21px + #{$breadList-gapPc} + 50px + 14px
+      ); // ずらした白背景レイアウト部分 + ぱんくず + ぱんくず余白 + ぱんくず余白 + 余白
+    }
+    .breadcrumb {
+      bottom: calc(#{$blank-bg-white-heightSp} + #{$breadList-gapSp} + 50px); // ずらした白背景レイアウト部分 + 余白 + 余白
+    }
+  }
 }
 
 // お問合せ
