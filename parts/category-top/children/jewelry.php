@@ -4,14 +4,14 @@
   $category_slug = $category -> slug; // カテゴリースラッグ
 
   $contents = get_option('fm_category_'.intval($category_id));
-  $jewelry_title = $contents['jewelry_title'] ? esc_html($contents['jewelry_title']) : '<p style="color:tomato">カテゴリページにて「リードタイトル」を設定してください</p>';
-  $jewelry_text = $contents['jewelry_text'] ? esc_html($contents['jewelry_text']) : '<p style="color:tomato">カテゴリページにて「リード文」を設定してください</p>';
-  $jewelry_img = $contents['jewelry_img'] ? $contents['jewelry_img'] : null;
-  $jewelry_table1 = $contents['jewelry_table1'] ? $contents['jewelry_table1'] : null;
-  $jewelry_table2 = $contents['jewelry_table2'] ? $contents['jewelry_table2'] : null;
-  $jewelry_table3 = $contents['jewelry_table3'] ? $contents['jewelry_table3'] : null;
-  $jewelry_table4 = $contents['jewelry_table4'] ? $contents['jewelry_table4'] : null;
-  $jewelry_table5 = $contents['jewelry_table5'] ? $contents['jewelry_table5'] : null;
+  $jewelry_title = isset($contents['jewelry_title']) ? esc_html($contents['jewelry_title']) : '<p class="error-message">カテゴリページにて「リードタイトル」を設定してください</p>';
+  $jewelry_text = isset($contents['jewelry_text']) ? esc_html($contents['jewelry_text']) : '<p class="error-message">カテゴリページにて「リード文」を設定してください</p>';
+  $jewelry_img = isset($contents['jewelry_img']) ? $contents['jewelry_img'] : null;
+  $jewelry_table1 = isset($contents['jewelry_table1']) ? $contents['jewelry_table1'] : null;
+  $jewelry_table2 = isset($contents['jewelry_table2']) ? $contents['jewelry_table2'] : null;
+  $jewelry_table3 = isset($contents['jewelry_table3']) ? $contents['jewelry_table3'] : null;
+  $jewelry_table4 = isset($contents['jewelry_table4']) ? $contents['jewelry_table4'] : null;
+  $jewelry_table5 = isset($contents['jewelry_table5']) ? $contents['jewelry_table5'] : null;
 
   $jewelry_tables = array();
   array_push($jewelry_tables, $jewelry_table1, $jewelry_table2, $jewelry_table3, $jewelry_table4, $jewelry_table5);
@@ -71,7 +71,7 @@
         $title = get_the_title();
         $title = wp_trim_words($title, 32); // 32文字以上は省略
       ?>
-    <li>
+    <li class="card-wrap">
       <a href="<?= get_the_permalink(); ?>"
         class="post-card-product  post-card-content-trans-red post-card-thumbnail-animation">
         <div class="thumbnail">
