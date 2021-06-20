@@ -69,6 +69,9 @@ $wp-column-breakPoint: 599px;
       max-width: 600px;
       position: absolute;
       width: 60%;
+      @media (max-width: $sp) {
+        width: 80%;
+      }
     }
 
     .swiper-button-next,
@@ -213,6 +216,9 @@ $wp-column-breakPoint: 599px;
 .wp-block-freeman-block-case {
   background: $background-color;
   padding: 40px;
+  @media (max-width: $sp) {
+    padding: 20px;
+  }
 
   h3 {
     font-weight: 500;
@@ -228,6 +234,9 @@ $wp-column-breakPoint: 599px;
 .wp-block-freeman-block-case-and-item {
   background: $background-color;
   padding: 40px;
+  @media (max-width: $sp) {
+    padding: 20px;
+  }
 
   // 「導入事例」の箇所
   h1,
@@ -246,10 +255,17 @@ $wp-column-breakPoint: 599px;
     }
   }
 
-  // 記事へのリンクでliリストの円削除
   .the-product-link {
     .wide {
-      li::before {
+      // 横のラインの調整
+      &::before {
+        left: -2em;
+        @media (max-width: $sp) {
+          display: none;
+        }
+      }
+      // 記事へのリンクでliリストの円削除
+      .card-wrap::before {
         display: none;
       }
     }
@@ -260,6 +276,9 @@ $wp-column-breakPoint: 599px;
 .wp-block-freeman-block-remarks {
   background: $background-color;
   padding: 40px;
+  @media (max-width: $sp) {
+    padding: 20px;
+  }
 
   h3 {
     font-weight: 500;
@@ -270,5 +289,9 @@ $wp-column-breakPoint: 599px;
     line-height: 1.8;
     margin-top: 25px;
     padding: 1.5em;
+    @media (max-width: $sp) {
+      margin-top: 10px;
+      padding: 1em;
+    }
   }
 }

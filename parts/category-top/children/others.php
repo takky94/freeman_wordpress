@@ -76,7 +76,9 @@
 <!-- category-movie-child-movie -->
 <figure class="category-movie-child-others">
   <?= $others_youtube; ?>
+  <?php if ($others_youtube_caption !== null): ?>
   <figcaption class="category-movie-child-others__caption"><?= $others_youtube_caption; ?></figcaption>
+  <?php endif; ?>
 </figure>
 <!-- // category-movie-child-movie -->
 <?php endif; ?>

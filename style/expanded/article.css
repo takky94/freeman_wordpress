@@ -972,6 +972,12 @@
   font-size: 14px;
 }
 
+@media (max-width: 768px) {
+  .articles-link .column .card-wrap .article-card .date {
+    line-height: 1;
+  }
+}
+
 .articles-link .column .card-wrap .article-card .title {
   font-size: 16px;
   line-height: 2;
@@ -1367,8 +1373,12 @@
 }
 
 @media (max-width: 768px) {
-  .category-child-product-link .square .post-card-product .content .title,
-  .category-child-product-link .square .post-card-product .content .description,
+  .category-child-product-link .square .post-card-product .content .title {
+    font-size: 16px;
+  }
+  .category-child-product-link .square .post-card-product .content .description {
+    display: none;
+  }
   .category-child-product-link .square .post-card-product .content .more {
     margin-top: 20px;
   }
@@ -1567,6 +1577,13 @@
           justify-content: center;
   max-width: 600px;
   text-align: center;
+  width: 60%;
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 80%;
+  }
 }
 
 .swiper-slide img {
@@ -1575,10 +1592,6 @@
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-}
-
-.swiper-slide {
-  width: 60%;
 }
 
 .swiper-pagination-fraction {
@@ -1625,6 +1638,12 @@
   width: 60%;
 }
 
+@media (max-width: 768px) {
+  .mold-slider__box {
+    width: 80%;
+  }
+}
+
 .mold-slider__box .swiper-pagination-fraction,
 .mold-slider__box .swiper-button-next,
 .mold-slider__box .swiper-button-prev {
@@ -1636,8 +1655,20 @@
   left: calc(-15px + -30px);
 }
 
+@media (max-width: 768px) {
+  .mold-slider__box .swiper-button-prev {
+    left: calc(-15px + -20px);
+  }
+}
+
 .mold-slider__box .swiper-button-next {
   right: calc(-15px + -30px);
+}
+
+@media (max-width: 768px) {
+  .mold-slider__box .swiper-button-next {
+    right: calc(-15px + -20px);
+  }
 }
 
 .mold-slider__box .swiper-button-prev,
@@ -1646,10 +1677,25 @@
   width: 30px;
 }
 
+@media (max-width: 768px) {
+  .mold-slider__box .swiper-button-prev,
+  .mold-slider__box .swiper-button-next {
+    height: 60px;
+    width: 20px;
+  }
+}
+
 .mold-slider__box .swiper-button-prev::after,
 .mold-slider__box .swiper-button-next::after {
   color: #fff;
   font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .mold-slider__box .swiper-button-prev::after,
+  .mold-slider__box .swiper-button-next::after {
+    font-size: 10px;
+  }
 }
 
 .category-child-slider .swiper-slide {
@@ -2069,6 +2115,12 @@
   width: 60%;
 }
 
+@media (max-width: 768px) {
+  .wp-block-freeman-block-slider .single-slider__box {
+    width: 80%;
+  }
+}
+
 .wp-block-freeman-block-slider .single-slider .swiper-button-next,
 .wp-block-freeman-block-slider .single-slider .swiper-button-prev {
   background: #fff;
@@ -2221,6 +2273,12 @@
   padding: 40px;
 }
 
+@media (max-width: 768px) {
+  .wp-block-freeman-block-case {
+    padding: 20px;
+  }
+}
+
 .wp-block-freeman-block-case h3 {
   font-weight: 500;
 }
@@ -2233,6 +2291,12 @@
 .wp-block-freeman-block-case-and-item {
   background: #f5f5f5;
   padding: 40px;
+}
+
+@media (max-width: 768px) {
+  .wp-block-freeman-block-case-and-item {
+    padding: 20px;
+  }
 }
 
 .wp-block-freeman-block-case-and-item h1,
@@ -2255,13 +2319,29 @@
   }
 }
 
-.wp-block-freeman-block-case-and-item .the-product-link .wide li::before, .wp-block-freeman-block-case-and-item .category-child-product-link .wide li::before {
+.wp-block-freeman-block-case-and-item .the-product-link .wide::before, .wp-block-freeman-block-case-and-item .category-child-product-link .wide::before {
+  left: -2em;
+}
+
+@media (max-width: 768px) {
+  .wp-block-freeman-block-case-and-item .the-product-link .wide::before, .wp-block-freeman-block-case-and-item .category-child-product-link .wide::before {
+    display: none;
+  }
+}
+
+.wp-block-freeman-block-case-and-item .the-product-link .wide .card-wrap::before, .wp-block-freeman-block-case-and-item .category-child-product-link .wide .card-wrap::before {
   display: none;
 }
 
 .wp-block-freeman-block-remarks {
   background: #f5f5f5;
   padding: 40px;
+}
+
+@media (max-width: 768px) {
+  .wp-block-freeman-block-remarks {
+    padding: 20px;
+  }
 }
 
 .wp-block-freeman-block-remarks h3 {
@@ -2273,6 +2353,13 @@
   line-height: 1.8;
   margin-top: 25px;
   padding: 1.5em;
+}
+
+@media (max-width: 768px) {
+  .wp-block-freeman-block-remarks p {
+    margin-top: 10px;
+    padding: 1em;
+  }
 }
 
 .single-content-header .title {

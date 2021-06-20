@@ -11,7 +11,7 @@ add_shortcode("category", "fm_get_categories_link");
 
 // 記事の配列からリンク一覧のHTMLを生成(各ショートコードで使用)
 if (!function_exists('fm_get_output_string')) {
-  function fm_get_output_string($args, $wrap_class, $layout, $type, $isSlider){
+  function fm_get_output_string($args, $wrap_class, $layout, $type, $isSlider = 0){
 
     $query = new WP_Query($args);
     $posts = $query -> posts;

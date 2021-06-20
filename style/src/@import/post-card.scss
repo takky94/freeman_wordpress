@@ -266,6 +266,9 @@ $root-path: "../..";
           color: $c-gray;
           display: block;
           font-size: 14px;
+          @media (max-width: $sp) {
+            line-height: 1;
+          }
         }
         .title {
           font-size: 16px;
@@ -524,7 +527,7 @@ $root-path: "../..";
   }
 }
 
-// 子カテゴリTOPの商品一覧
+// 子カテゴリTOPの商品一覧(アコーディオン)
 .category-child-product-link {
   @extend .the-product-link;
   .square {
@@ -573,8 +576,12 @@ $root-path: "../..";
           }
         }
         @media (max-width: $sp) {
-          .title,
-          .description,
+          .title {
+            font-size: 16px;
+          }
+          .description {
+            display: none;
+          }
           .more {
             margin-top: $gapSp;
           }

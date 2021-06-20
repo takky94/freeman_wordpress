@@ -170,6 +170,9 @@ $menu-animation-duration: 0.3s;
   max-width: 920px;
   padding: 40px 70px;
   text-align: center;
+  @media (max-width: $sp) {
+    padding: 10px;
+  }
 
   iframe {
     width: 100%;
