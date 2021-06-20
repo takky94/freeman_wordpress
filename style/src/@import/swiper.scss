@@ -145,6 +145,94 @@
   }
 }
 
+// 関連カテゴリ部分のスライダー
+.related-category-slider {
+  @media (min-width: $tab) {
+    // ナビゲーション分のはみ出し
+    margin-left: -20px;
+    padding: 0 20px;
+    width: calc(100% + 40px);
+  }
+  @media (max-width: $sp) {
+    padding-bottom: 35px;
+  }
+
+  .swiper-wrapper {
+    flex-wrap: inherit;
+  }
+  .swiper-slide {
+    align-items: stretch;
+    height: initial;
+    justify-content: flex-start;
+    max-width: inherit;
+    text-align: left;
+    width: 100%;
+    @media (max-width: $sp) {
+      flex-direction: column;
+    }
+  }
+  // liタグ
+  .swiper-wrapper .swiper-slide .card-wrap {
+    @media (min-width: $tab) {
+      display: flex;
+    }
+  }
+  // aタグ
+  .post-card-product {
+    border: 1px solid #dce5f0;
+    display: block;
+    height: 100%;
+    padding: 15px;
+  }
+  &-navi {
+    height: 100%;
+    @include centeringMargin;
+    position: absolute;
+    width: 100%;
+
+    @media (min-width: $tab) {
+      .swiper-button-disabled {
+        opacity: 0;
+      }
+    }
+
+    .swiper-pagination-fraction,
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: absolute;
+      @media (max-width: $sp) {
+        background: #000;
+      }
+    }
+    .swiper-button-prev {
+      left: 0;
+    }
+    .swiper-button-next {
+      right: 0;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      height: 80px;
+      width: 10px;
+      @media (max-width: $sp) {
+        bottom: 0;
+        height: 30px;
+        margin-bottom: 0;
+        width: calc((100% - 1px) / 2);
+      }
+
+      &::after {
+        color: #000;
+        font-size: 12px;
+        font-weight: bold;
+        @media (max-width: $sp) {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
 // 関連商品部分のスライダー
 .related-slider {
   @media (max-width: $sp) {

@@ -7,7 +7,6 @@
   $contents = get_option('fm_category_'.intval($category_id));
 
   // 画像各種
-  $others_img = $contents['others_img'] ? $contents['others_img'] : null;
   $others_slider_imgs = array();
   $others_slider_img1 = $contents['others_slider_img1'] ? $contents['others_slider_img1'] : null;
   $others_slider_img2 = $contents['others_slider_img2'] ? $contents['others_slider_img2'] : null;

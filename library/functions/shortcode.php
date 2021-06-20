@@ -265,10 +265,16 @@ if (!function_exists('fm_get_categories_link')){
       $category = get_category_by_slug($category_slug);
       array_push($categories, $category);
     }
+    $categories_length = count($categories);
+    $isSlider = $categories_length > 3;
 
-    $str = '<div class="products-link"><ul class="square">';
+    if ($isSlider){
+      $str = '<div class="products-link swiper-container related-category-slider js-related-category-slider"><ul class="square swiper-wrapper">';
+    } else {
+      $str = '<div class="products-link"><ul class="square">';
+    }
 
-    foreach ($categories as $category) {
+    foreach ($categories as $i => $category) {
       $isParent = $category -> parent;
       $parent_category = $isParent ? get_category($isParent) : null;
       $parent_category_slug = $isParent ? $parent_category -> slug : null;
@@ -278,6 +284,7 @@ if (!function_exists('fm_get_categories_link')){
       $title = $category -> cat_name;
       $permalink = get_category_link($category_id);
       $contents = get_option('fm_category_'.intval($category_id));
+
 
       // 親カテゴリならサムネイルを,子カテゴリならスライダーなどカテゴリページで設定した画像を取得
       if ($isParent === 0){
@@ -292,11 +299,20 @@ if (!function_exists('fm_get_categories_link')){
         $thumbnail = fm_default_thumb('thumb-300');
       }
 
+      // 最初のループ時、4つの要素を囲うwrapper
+      if ($isSlider && $i === 0) $str .= '<div class="swiper-slide">';
 
       $str .= '<li class="card-wrap"><a href="'.$permalink.'" class="post-card-product post-card-thumbnail-animation post-card-content-trans-red"><div class="thumbnail"><p class="post-thumbnail"><img src="'.$thumbnail.'" alt="" loading="lazy" /></p></div><div class="content"><p class="title">'.$title.'</p><p class="more font-robot c-main"><span>MORE</span></p></div></a></li>';
-    }
 
-    $str .= '</ul></div>';
+      // 4つでの区切りかつループの最後でなければ新たにwrapper追加
+      if ($isSlider && ($i + 1) % 4 == 0 && ($i + 1) !== $categories_length) $str .= '</div><div class="swiper-slide">';
+      // ループの最後でwrapper閉じる
+      if ($isSlider && ($i + 1) === $categories_length) $str .= '</div>';
+    }// END foreach
+
+    $str .= '</ul>';
+    if ($categories_length > 3) $str .= '<div class="related-category-slider-navi"><div class="swiper-button-prev"></div><div class="swiper-button-next"></div></div>';
+    $str .= '</div>';
 
     return $str;
   }

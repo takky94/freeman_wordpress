@@ -70,8 +70,9 @@
     }
   }
 
+  // ショートコードによるスライダー
   if (document.querySelector(".js-related-slider") !== null) {
-    const swiper1 = new Swiper(".js-related-slider", {
+    const swiperRelated = new Swiper(".js-related-slider", {
       slidesPerView: "auto",
       centeredSlides: true,
       spaceBetween: 15,

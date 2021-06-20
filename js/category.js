@@ -20,7 +20,7 @@
   }
 
   if (document.querySelector(".js-mold-slider") !== null) {
-    const swiper1 = new Swiper(".js-mold-slider", {
+    const swiperMold = new Swiper(".js-mold-slider", {
       slidesPerView: "auto",
       centeredSlides: true,
       spaceBetween: 15,
@@ -45,7 +45,7 @@
   }
 
   if (document.querySelector(".js-category-child-slider") !== null) {
-    const swiper2 = new Swiper(".js-category-child-slider", {
+    const swiperCategoryChild = new Swiper(".js-category-child-slider", {
       slidesPerView: "auto",
       centeredSlides: true,
       spaceBetween: 15,
@@ -65,6 +65,23 @@
           if (number > 9) return number;
           return "0" + number;
         },
+      },
+    });
+  }
+
+  if (document.querySelector(".js-related-category-slider") !== null) {
+    const swiperRelatedCategory = new Swiper(".js-related-category-slider", {
+      slidesPerView: "auto",
+      centeredSlides: true,
+      // .related-category-sliderの余白に合わせる
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
     });
   }
