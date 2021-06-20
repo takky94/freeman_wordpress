@@ -72,7 +72,7 @@
 </div>
 <!-- category-description-child-others -->
 
-<?php if($others_youtube): ?>
+<?php if($others_youtube !== null): ?>
 <!-- category-movie-child-movie -->
 <figure class="category-movie-child-others">
   <?= $others_youtube; ?>
