@@ -61,7 +61,7 @@
         <img class="investment_casting"
           src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/process-5.png" alt=""
           <?php fm_lazyload(); ?> />
-        <figcaption><?php _e('型バラシ切断', 'category-investment-casting'); ?></figcaption>
+        <figcaption><?php _e('型バラシ・切断', 'category-investment-casting'); ?></figcaption>
       </figure>
     </a>
     <a href="#step06" class="category-process__block--box">
@@ -170,7 +170,7 @@
         <div class="block__text">
           <div class="flex">
             <p class="block__label font-robot c-white">STEP 05</p>
-            <h3 class="block__title"><?php _e('型バラシ切断', 'category-investment-casting'); ?></h3>
+            <h3 class="block__title"><?php _e('型バラシ・切断', 'category-investment-casting'); ?></h3>
           </div>
           <p
             class="block__description"><?php _e('ノックアウトマシン、ウォータージェット等を使って、鋳物のまわりに付着しているシェル殻を除去します。鋳物中空部や穴・溝等に残った鋳型材やセラミックコアは、苛性リーチングにより除去します。', 'category-investment-casting'); ?></p>
