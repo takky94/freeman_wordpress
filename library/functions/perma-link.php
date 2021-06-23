@@ -30,7 +30,11 @@ if (!function_exists('fm_category_child_link')){
   function fm_category_child_link( $query = array()) {
     if (isset($query['category_name']) && strpos($query['category_name'], '/') === false && isset($query['name'])){
       $parent_category = get_category_by_slug($query['category_name']);
-      $child_categories = get_categories('child_of='.$parent_category -> term_id);
+      $args = array(
+        'child_of' => $parent_category -> term_id,
+        'hide_empty' => 0,
+      );
+      $child_categories = get_categories($args);
       foreach ($child_categories as $child) {
         if (isset($query['name']) && $query['name'] === $child -> category_nicename) {
           $query['category_name'] = $query['category_name'].'/'.$query['name'];

@@ -173,7 +173,7 @@ if (!function_exists('fm_set_ogp_title_tag')) {
 if (!function_exists('fm_get_meta_description')) {
   function fm_get_meta_description() {
     global $post;
-    if (is_singular('news', 'product') || is_single() || is_page()){ // 各投稿
+    if (is_singular('news') || is_single() || is_page()){ // 各投稿
       $description = $post -> post_content;
       if (empty($description)) return null;
       $description = str_replace(array("\r\n","\r","\n","&nbsp;"),'',$description);
