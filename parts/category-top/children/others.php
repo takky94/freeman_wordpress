@@ -140,7 +140,7 @@
   <div class="products">
     <h4><?php _e('関連商品一覧', 'category-children-others'); ?></h4>
     <div class="pc__none">
-      <?= do_shortcode('[product_by_tag tag="'.$parent_category_slug.','.$category_slug.'" layout="column" slider="8"]'); ?>
+      <?= do_shortcode('[product_by_tag tag="'.$parent_category_slug.','.$category_slug.'" layout="column" slider="4"]'); ?>
     </div>
     <div class="sp__none">
       <?= do_shortcode('[product_by_tag tag="'.$parent_category_slug.','.$category_slug.'" layout="column" slider="8"]'); ?>
