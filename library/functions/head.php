@@ -183,8 +183,8 @@ if (!function_exists('fm_get_meta_description')) {
     } elseif (is_front_page() || is_home()){ // トップページ
       if (get_bloginfo('description')) return get_bloginfo('description');
     } elseif(is_category()) { // カテゴリページ
-      $category = get_the_category();
-      $cat_name = $category[0] -> cat_name;
+      $category = get_queried_object(); // 投稿がない場合用にget_the_categoryは使用しない
+      $cat_name = $category -> cat_name;
       return $cat_name . 'の説明ページです。';
     }
     return null;
