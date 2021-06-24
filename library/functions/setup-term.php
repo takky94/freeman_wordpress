@@ -37,6 +37,10 @@ if (!function_exists('fm_create_default_term')){
       'スラリー添加剤・コア材' => array('slug' => 'slurry_additives_core_materials', 'parent' => 'investment_casting'),
       '鋳造' => array('slug' => 'casting', 'parent' => 'investment_casting'),
       '精密鋳造用設備' => array('slug' => 'equipment', 'parent' => 'investment_casting'),
+      '原材料各種' => array('slug' => 'genzairyou', 'parent' => 'investment_casting'),
+      'セラミックフォームフィルター' => array('slug' => 'seramikku-fomu-firuta', 'parent' => 'investment_casting'),
+      'ルツボ' => array('slug' => 'rutubo', 'parent' => 'investment_casting'),
+      'セラミックカップ' => array('slug' => 'seramikku-kappu', 'parent' => 'investment_casting'),
 
       // ジュエリー子カテゴリ
       'インジェクションワックス' => array('slug' => 'injection_wax', 'parent' => 'jewelry'),
@@ -137,7 +141,7 @@ if (!function_exists('fm_create_default_term')){
     foreach ($taxonomy_sets as $key => $taxonomy_set) {
       $terms = get_term_by("name", $key, $taxonomy_type);
       // 親クラスのスラッグからID特定して書き換え
-      if($taxonomy_set['parent']){
+      if(isset($taxonomy_set['parent']) && $taxonomy_set['parent']){
         $parent_id = get_term_by('slug', $taxonomy_set['parent'], $taxonomy_type);//parentのid取得
         $taxonomy_set['parent'] = $parent_id -> term_id;
       }

@@ -46,12 +46,11 @@ function fm_theme_support(){
       unset($title['tagline']);
       $title['title'] = get_bloginfo('description').$sep.$site_name;
     } elseif (is_category()){
-      $category = get_the_category();
-      $category = $category[0];
-      $category_id = $category -> cat_ID;
+      $category = get_queried_object();
+      $category_id = $category ->  term_id;
       $category_name = $category -> cat_name;
       $title['title'] = $category_name;
-      if ($category -> parent !== 0){ // 親カテゴリを持つ場合
+      if ($category -> category_parent !== 0){ // 親カテゴリを持つ場合
         $ancestors = array_reverse(get_ancestors($category_id, 'category'));
         foreach ($ancestors as $ancestor){
           $title['title'] .= $sep.get_cat_name($ancestor);

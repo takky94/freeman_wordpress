@@ -164,10 +164,14 @@
                         class="c-white c-trans-red"><?php _e('鋳造','header'); ?></a></li>
                     <li><a href="<?= home_url(); ?>/investment_casting/equipment"
                         class="c-white c-trans-red"><?php _e('設備','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/investment_casting/refractory_material"
-                        class="c-white c-trans-red"><?php _e('砂','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/investment_casting/others"
-                        class="c-white c-trans-red"><?php _e('その他','header'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/investment_casting/genzairyou"
+                        class="c-white c-trans-red"><?php _e('原材料各種', 'footer'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/investment_casting/seramikku-fomu-firuta"
+                        class="c-white c-trans-red"><?php _e('セラミックフォームフィルター', 'footer'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/investment_casting/rutubo"
+                        class="c-white c-trans-red"><?php _e('ルツボ', 'footer'); ?></a></li>
+                    <li><a href="<?= home_url(); ?>/investment_casting/seramikku-kappu"
+                        class="c-white c-trans-red"><?php _e('セラミックカップ', 'footer'); ?></a></li>
                   </ul>
                 </div>
               </div>
@@ -184,11 +188,8 @@
                     </li>
                     <li><a href="<?= home_url(); ?>/jewelry/carving_wax"
                         class="c-white c-trans-red"><?php _e('カービングワックス','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/jewelry/investing_material"
+                    <li><a href="<?= home_url(); ?>/jewelry/investments"
                         class="c-white c-trans-red"><?php _e('埋没材','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/jewelry/"
-                        class="c-white c-trans-red"><?php _e('シリコン','header'); ?></a>
-                    </li>
                     <li><a href="<?= home_url(); ?>/jewelry/matt_tool"
                         class="c-white c-trans-red"><?php _e('ワックス関連工具','header'); ?></a></li>
                   </ul>

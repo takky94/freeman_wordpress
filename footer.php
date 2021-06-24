@@ -95,11 +95,18 @@
             <li><a href="<?= home_url(); ?>/investment_casting/equipment"
                 class="c-white c-trans-red"><?php _e('設備', 'footer'); ?></a>
             </li>
-            <li><a href="<?= home_url(); ?>/investment_casting/refractory_material"
-                class="c-white c-trans-red"><?php _e('砂', 'footer'); ?></a>
+            <li><a href="<?= home_url(); ?>/investment_casting/genzairyou"
+                class="c-white c-trans-red"><?php _e('原材料各種', 'footer'); ?></a>
             </li>
-            <li><a href="<?= home_url(); ?>/investment_casting/others"
-                class="c-white c-trans-red"><?php _e('その他', 'footer'); ?></a></li>
+            <li><a href="<?= home_url(); ?>/investment_casting/seramikku-fomu-firuta"
+                class="c-white c-trans-red"><?php _e('セラミックフォームフィルター', 'footer'); ?></a>
+            </li>
+            <li><a href="<?= home_url(); ?>/investment_casting/rutubo"
+                class="c-white c-trans-red"><?php _e('ルツボ', 'footer'); ?></a>
+            </li>
+            <li><a href="<?= home_url(); ?>/investment_casting/seramikku-kappu"
+                class="c-white c-trans-red"><?php _e('セラミックカップ', 'footer'); ?></a>
+            </li>
           </ul>
         </div>
         <!-- // sitemap__block -->
@@ -134,7 +141,6 @@
                 class="c-white c-trans-red"><?php _e('カービングワックス', 'footer'); ?></a></li>
             <li><a href="<?= home_url(); ?>/jewelry/investing_material"
                 class="c-white c-trans-red"><?php _e('埋没材', 'footer'); ?></a></li>
-            <!-- <li><a href="<?= home_url(); ?>/jewelry/" class="c-white c-trans-red"><?php _e('シリコン', 'footer'); ?></a></li> -->
             <li><a href="<?= home_url(); ?>/jewelry/matt_tool"
                 class="c-white c-trans-red"><?php _e('ワックス関連工具', 'footer'); ?></a></li>
           </ul>
