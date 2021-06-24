@@ -4,6 +4,7 @@
   $category_slug = $category -> slug; // カテゴリースラッグ
   $parent_category = get_category($category -> parent);
   $parent_category_slug = $parent_category -> slug;
+  $parent_category_name = $parent_category -> name;
 
   // カテゴリ編集ページで設定した各情報
   $contents = get_option('fm_category_'.intval($category_id));
@@ -138,7 +139,7 @@
 <!-- category-related -->
 <div class="category-related">
   <div class="products">
-    <h4><?php _e('関連商品一覧', 'category-children-others'); ?></h4>
+    <h4><?php _e($parent_category_name.'　その他カテゴリー', 'category-children-others'); ?></h4>
     <div class="pc__none">
       <?= do_shortcode('[product_by_tag tag="'.$parent_category_slug.','.$category_slug.'" layout="column" slider="4"]'); ?>
     </div>
