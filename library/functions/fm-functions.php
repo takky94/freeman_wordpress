@@ -26,7 +26,6 @@ if (!function_exists('fm_get_current_url')){
 if (!function_exists('fm_get_page_title')){
   function fm_get_page_title(){
 
-
     if (is_front_page() || is_home()){
       $catchy = (get_bloginfo('description')) ? '｜' . get_bloginfo('description') : "";
       return get_bloginfo('name') . $catchy;

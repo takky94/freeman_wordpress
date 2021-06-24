@@ -56,23 +56,37 @@ function fm_theme_support(){
           $title['title'] .= $sep.get_cat_name($ancestor);
         } // foreach
       }
+      // NEWS個別ページ
+    } elseif (is_singular('news')){
+      unset($title['site']);
+      global $post;
+      $title['title'] = get_the_title();
+      $category = get_the_terms($post -> ID, 'news_category');
+      $category_name = $category[0] -> name;
+      $title['title'] .= $sep.$category_name.$sep.'鋳造用材料/製品の日本フリーマン';
+      // 投稿ページ
     } elseif (is_single()){
       global $post;
       $title['title'] = get_the_title();
-
       $category = get_the_category();
       $category = $category[0];
       $category_id = $category -> cat_ID;
       $category_name = $category -> cat_name;
-
       $title['title'] .= $sep.$category_name;
-
       if ($category -> parent !== 0){ // 親カテゴリを持つ場合
         $ancestors = array_reverse(get_ancestors($category_id, 'category'));
         foreach ($ancestors as $ancestor){
           $title['title'] .= $sep.get_cat_name($ancestor);
         } // foreach
       }
+      // NEWSのカテゴリごとのアーカイブページ
+    } elseif (is_tax()){
+      // $category = get_query_var('news_category');
+      // var_dump($category);
+      $title['title'] = 'test';
+      // NEWSのアーカイブページ
+    } elseif (is_archive()){
+      $title['title'] = 'NEWS一覧';
     } elseif (is_search()){
       $title['title'] = get_search_query().'の検索結果';
     } elseif (is_404()){
