@@ -63,7 +63,7 @@
 <?php if ($posts_count > 0): ?>
 <!-- category-child-product-link -->
 <div class="category-child-product-link">
-  <ul class="square">
+  <ul class="wide">
     <?php
         if ($the_query -> have_posts()):
         while ($the_query -> have_posts()):

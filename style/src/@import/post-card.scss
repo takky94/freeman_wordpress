@@ -675,9 +675,13 @@ $root-path: "../..";
       }
     }
   } // .square-second
+  // ジュエリー子階層TOP
   .wide {
     display: flex;
     flex-wrap: wrap;
+    &::before {
+      display: none;
+    }
     .card-wrap {
       border-bottom: 1px solid $c-lightgray;
       padding-bottom: 20px;
@@ -690,11 +694,18 @@ $root-path: "../..";
           margin-top: 40px;
         }
       }
+      @media (max-width: $sp) {
+        width: 100%;
+        &:not(:nth-child(1)) {
+          margin-top: 20px;
+        }
+      }
     }
     .post-card-product {
       display: flex;
       width: 100%;
       .thumbnail {
+        min-width: 150px;
         .post-thumbnail {
           img {
             height: 150px;
