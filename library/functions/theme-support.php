@@ -45,9 +45,19 @@ function fm_theme_support(){
     if (is_home() || is_front_page()){
       unset($title['tagline']);
       $title['title'] = get_bloginfo('description').$sep.$site_name;
-    }
-
-    if (is_single()){
+    } elseif (is_category()){
+      $category = get_the_category();
+      $category = $category[0];
+      $category_id = $category -> cat_ID;
+      $category_name = $category -> cat_name;
+      $title['title'] = $category_name;
+      if ($category -> parent !== 0){ // 親カテゴリを持つ場合
+        $ancestors = array_reverse(get_ancestors($category_id, 'category'));
+        foreach ($ancestors as $ancestor){
+          $title['title'] .= $sep.get_cat_name($ancestor);
+        } // foreach
+      }
+    } elseif (is_single()){
       global $post;
       $title['title'] = get_the_title();
 
@@ -64,8 +74,7 @@ function fm_theme_support(){
           $title['title'] .= $sep.get_cat_name($ancestor);
         } // foreach
       }
-    }
-    if (is_search()){
+    } elseif (is_search()){
       $title['title'] = get_search_query().'の検索結果';
     } elseif (is_404()){
       $title['title'] = 'お探しのページは見つかりませんでした。';

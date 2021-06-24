@@ -14,11 +14,11 @@ if (!function_exists('fm_create_default_term')){
     $taxonomy_type = 'category';
     $taxonomy_sets = array(
       // 第一階層
-      '試作・型材料' => array('slug' => 'mold', 'description' =>'00001__削除禁止__出力順番号'),
-      '砂型鋳造' => array('slug' => 'sand_casting', 'description' =>'00002__削除禁止__出力順番号'),
-      '精密鋳造' => array('slug' => 'investment_casting', 'description' =>'00003__削除禁止__出力順番号'),
-      'ジュエリー' => array('slug' => 'jewelry', 'description' =>'00004__削除禁止__出力順番号'),
-      '新たな取り組み' => array('slug' => 'new_field', 'description' =>'00005__削除禁止__出力順番号'),
+      '試作・型材料' => array('slug' => 'mold'),
+      '砂型鋳造' => array('slug' => 'sand_casting'),
+      '精密鋳造' => array('slug' => 'investment_casting'),
+      'ジュエリー' => array('slug' => 'jewelry'),
+      '新たな取り組み' => array('slug' => 'new_field'),
 
       // 型製品子カテゴリ
       '機械吐出' => array('slug' => 'close_contour_paste','parent' => 'mold'),
