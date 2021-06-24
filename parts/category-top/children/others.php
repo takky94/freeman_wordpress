@@ -10,22 +10,22 @@
 
   // 画像各種
   $others_slider_imgs = array();
-  $others_slider_img1 = $contents['others_slider_img1'] ? $contents['others_slider_img1'] : null;
-  $others_slider_img2 = $contents['others_slider_img2'] ? $contents['others_slider_img2'] : null;
-  $others_slider_img3 = $contents['others_slider_img3'] ? $contents['others_slider_img3'] : null;
-  $others_slider_img4 = $contents['others_slider_img4'] ? $contents['others_slider_img4'] : null;
-  $others_slider_img5 = $contents['others_slider_img5'] ? $contents['others_slider_img5'] : null;
+  $others_slider_img1 = !empty($contents['others_slider_img1']) ? $contents['others_slider_img1'] : null;
+  $others_slider_img2 = !empty($contents['others_slider_img2']) ? $contents['others_slider_img2'] : null;
+  $others_slider_img3 = !empty($contents['others_slider_img3']) ? $contents['others_slider_img3'] : null;
+  $others_slider_img4 = !empty($contents['others_slider_img4']) ? $contents['others_slider_img4'] : null;
+  $others_slider_img5 = !empty($contents['others_slider_img5']) ? $contents['others_slider_img5'] : null;
   array_push($others_slider_imgs, $others_slider_img1, $others_slider_img2, $others_slider_img3 , $others_slider_img4, $others_slider_img5);
 
   // 説明文
-  $others_description_title = $contents['others_description_title'] ? esc_html($contents['others_description_title']) : '<p class="error-message">カテゴリページにて「説明文タイトル」を設定してください</p>';
-  $others_description_text = $contents['others_description_text'] ? esc_html($contents['others_description_text']) : '<p class="error-message">カテゴリページにて「説明文」を設定してください</p>';
+  $others_description_title = !empty($contents['others_description_title']) ? esc_html($contents['others_description_title']) : '<p class="error-message">カテゴリページにて「説明文タイトル」を設定してください</p>';
+  $others_description_text = !empty($contents['others_description_text']) ? esc_html($contents['others_description_text']) : '<p class="error-message">カテゴリページにて「説明文」を設定してください</p>';
 
   // YouTube
-   $others_youtube = $contents['others_youtube']
+   $others_youtube = !empty($contents['others_youtube'])
      ? '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.$contents['others_youtube'].'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
      : null;
-    $others_youtube_caption = $contents['others_youtube_caption'] ? esc_html($contents['others_youtube_caption']) : null;
+    $others_youtube_caption = !empty($contents['others_youtube_caption']) ? esc_html($contents['others_youtube_caption']) : null;
 
   // クエリ (同カテゴリの商品一覧)
   $args = array(

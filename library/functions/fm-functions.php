@@ -32,8 +32,7 @@ if (!function_exists('fm_get_page_title')){
       return get_bloginfo('name') . $catchy;
     }
     if (is_category()){
-      $category = get_the_category();
-      $category = $category[0];
+      $category = get_queried_object(); // 投稿がない場合用にget_the_categoryは使用しない
       $category_name = $category -> cat_name;
       return $category_name . '｜' . get_bloginfo('name');
     }
