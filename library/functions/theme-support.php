@@ -28,9 +28,43 @@ function fm_theme_support(){
 
   // 検索画面タイトル変更
   add_theme_support('title-tag');
+  add_filter('document_title_separator', 'fm_title_separator');
   add_filter('document_title_parts', 'fm_custom_title');
 
+  // セパレータの変更
+  function fm_title_separator($separator) {
+    $separator = '|';
+    return $separator;
+  }
+
+  // タイトルタグの修正
   function fm_custom_title($title){
+    $site_name = get_bloginfo('name');
+    $sep = ' | ';
+
+    if (is_home() || is_front_page()){
+      unset($title['tagline']);
+      $title['title'] = get_bloginfo('description').$sep.$site_name;
+    }
+
+    if (is_single()){
+      global $post;
+      $title['title'] = get_the_title();
+
+      $category = get_the_category();
+      $category = $category[0];
+      $category_id = $category -> cat_ID;
+      $category_name = $category -> cat_name;
+
+      $title['title'] .= $sep.$category_name;
+
+      if ($category -> parent !== 0){ // 親カテゴリを持つ場合
+        $ancestors = array_reverse(get_ancestors($category_id, 'category'));
+        foreach ($ancestors as $ancestor){
+          $title['title'] .= $sep.get_cat_name($ancestor);
+        } // foreach
+      }
+    }
     if (is_search()){
       $title['title'] = get_search_query().'の検索結果';
     } elseif (is_404()){
