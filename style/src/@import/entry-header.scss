@@ -71,6 +71,9 @@ $root-path: "../..";
             color: #000;
             content: "−";
             margin-left: 20px;
+            @media (max-width: $sp) {
+              margin-left: 10px;
+            }
           }
         } // not:first-child
         a,
@@ -78,7 +81,7 @@ $root-path: "../..";
           color: #000;
           font-size: 14px;
           @media (max-width: $sp) {
-            font-size: 12px;
+            font-size: 10px;
           }
         }
         a {
@@ -92,6 +95,9 @@ $root-path: "../..";
         }
         span {
           margin-left: 20px;
+          @media (max-width: $sp) {
+            margin-left: 10px;
+          }
         }
       } // li
     } // ul

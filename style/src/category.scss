@@ -775,6 +775,9 @@ $menu-animation-duration: 0.3s;
 .category-table-child-jewelry {
   margin: 30px auto 0;
   max-width: 900px;
+  .category-lead-child-table__block:not(:first-of-type) {
+    margin-top: 20px;
+  }
 
   table {
     thead {

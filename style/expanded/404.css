@@ -133,6 +133,12 @@
   margin-left: 20px;
 }
 
+@media (max-width: 768px) {
+  .entry-header .breadcrumb ul li:not(:first-child)::before {
+    margin-left: 10px;
+  }
+}
+
 .entry-header .breadcrumb ul li a,
 .entry-header .breadcrumb ul li span {
   color: #000;
@@ -142,7 +148,7 @@
 @media (max-width: 768px) {
   .entry-header .breadcrumb ul li a,
   .entry-header .breadcrumb ul li span {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
@@ -161,6 +167,12 @@
 
 .entry-header .breadcrumb ul li span {
   margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .entry-header .breadcrumb ul li span {
+    margin-left: 10px;
+  }
 }
 
 .single-header {

@@ -27,7 +27,7 @@ $root-path: "../..";
       padding: px-to-vw(90) 0 0 px-to-vw(80);
     }
     @media (max-width: $sp) {
-      padding: 0 0 15px 20px;
+      padding: 0;
       position: relative;
     }
 

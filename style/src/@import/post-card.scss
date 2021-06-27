@@ -702,6 +702,9 @@ $root-path: "../..";
       width: 100%;
       .thumbnail {
         min-width: 150px;
+        @media (max-width: $sp) {
+          min-width: 100px;
+        }
         .post-thumbnail {
           img {
             height: 150px;
@@ -709,6 +712,11 @@ $root-path: "../..";
             object-fit: cover;
             object-position: center;
             width: 150px;
+            @media (max-width: $sp) {
+              height: auto;
+              min-width: 100px;
+              width: 100px;
+            }
           }
         }
       }
@@ -717,10 +725,16 @@ $root-path: "../..";
         margin-left: 20px;
         .title {
           font-size: 20px;
+          @media (max-width: $sp) {
+            font-size: 16px;
+          }
         }
         .description {
           font-weight: 100;
           margin-top: 20px;
+          @media (max-width: $sp) {
+            display: none;
+          }
         }
         @media (min-width: $tab) {
           .title,
