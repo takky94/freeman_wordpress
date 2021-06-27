@@ -707,6 +707,71 @@
   }
 }
 
+.category-child-product-link .wide .card-wrap {
+  -webkit-animation: fadeInItem 0.5s both;
+          animation: fadeInItem 0.5s both;
+  will-change: opacity, width;
+}
+
+.category-child-product-link .wide .card-wrap.fadeOut {
+  -webkit-animation: fadeOutItem 0.5s both;
+          animation: fadeOutItem 0.5s both;
+}
+
+.category-child-product-link .wide .card-wrap.fadeOut .products__box {
+  display: none;
+}
+
+@-webkit-keyframes fadeInItem {
+  0% {
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInItem {
+  0% {
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOutItem {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    width: 0;
+  }
+}
+
+@keyframes fadeOutItem {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    width: 0;
+  }
+}
+
 .post-card .thumbnail img {
   width: 100%;
 }

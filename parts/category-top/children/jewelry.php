@@ -16,6 +16,25 @@
   $jewelry_tables = array();
   array_push($jewelry_tables, $jewelry_table1, $jewelry_table2, $jewelry_table3, $jewelry_table4, $jewelry_table5);
 
+  // 絞り込み用
+  $jewelry_item_terms = array();
+  array_push($jewelry_item_terms,
+    'jewelry_tags_liquidity',
+    'jewelry_tags_softness',
+    'jewelry_tags_machinability',
+    'jewelry_tags_shrinkable',
+    'jewelry_tags_elastic',
+    'jewelry_tags_prototype_life',
+    'jewelry_tags_reproducibility',
+    'jewelry_tags_solidification_time',
+    'jewelry_tags_hand_workability',
+    'jewelry_tags_hardness',
+    'jewelry_tags_cnc',
+    'jewelry_tags_casting_bullion',
+    'jewelry_tags_prototype_material',
+    'jewelry_tags_is_low_dust'
+  );
+
   // クエリ (同カテゴリの商品一覧)
   $args = array(
     'post_type' => 'post',
@@ -70,8 +89,16 @@
         $the_query -> the_post();
         $title = get_the_title();
         $title = wp_trim_words($title, 32); // 32文字以上は省略
+
+        // 絞り込み検索用にカスタムフィールドの値取得
+        $tags = array();
+        foreach ($jewelry_item_terms as $j){
+          $tag = get_post_meta(get_the_ID(), $j, true);
+          if (empty($tag)) continue;
+          array_push($tags, $tag);
+        }
       ?>
-    <li class="card-wrap">
+    <li class="card-wrap js-jewelry-item" data-tags="<?php if(!empty($tags)) echo implode(",", $tags); ?>">
       <a href="<?= get_the_permalink(); ?>"
         class="post-card-product  post-card-content-trans-red post-card-thumbnail-animation">
         <div class="thumbnail">
