@@ -1,25 +1,21 @@
 <?php // 言語プラグインが有効かどうか(有効でないならja固定) ?>
 <?php
-  // if (!defined('ICL_LANGUAGE_CODE')){
-  //   define('ICL_LANGUAGE_CODE', 'ja');
-  // }
-  // ICL_LANGUAGE_CODE) {
-  //   case 'ja':
-  //     $ja_permalink = home_url();
-  //     $en_permalink = apply_filters('wpml_permalink', '<em><u>hidden link</u></em>', 'en');
-  //     $ch_permalink = apply_filters('wpml_permalink', '<em><u>hidden link</u></em>', 'zh-hant');
-  //     break;
-  //   case 'en':
-  //     $ja_permalink = apply_filters('wpml_permalink', '<em><u>hidden link</u></em>', 'ja');
-  //     $en_permalink = home_url();
-  //     $ch_permalink = apply_filters('wpml_permalink', '<em><u>hidden link</u></em>', 'zh-hant');
-  //     break;
-  //   case 'zh-hant':
-  //     $ja_permalink = apply_filters('wpml_permalink', '<em><u>hidden link</u></em>', 'ja');
-  //     $en_permalink = apply_filters('wpml_permalink', '<em><u>hidden link</u></em>', 'en');
-  //     $ch_permalink = home_url();
-  //     break;
-  // }
+  if (!defined('ICL_LANGUAGE_CODE')){
+    define('ICL_LANGUAGE_CODE', 'ja');
+  }
+  if (ICL_LANGUAGE_CODE === 'ja') {
+    $ja_permalink = home_url();
+    $en_permalink = apply_filters('wpml_permalink', home_url(), 'en');
+    $ch_permalink = apply_filters('wpml_permalink', home_url(), 'zh-hant');
+  } elseif (ICL_LANGUAGE_CODE === 'en') {
+    $ja_permalink = apply_filters('wpml_permalink', home_url(), 'ja');
+    $en_permalink = home_url();
+    $ch_permalink = apply_filters('wpml_permalink', home_url(), 'zh-hant');
+  } elseif (ICL_LANGUAGE_CODE === 'zh-hant') {
+    $ja_permalink = apply_filters('wpml_permalink', home_url(), 'ja');
+    $en_permalink = apply_filters('wpml_permalink', home_url(), 'en');
+    $ch_permalink = home_url();
+  }
 ?>
 
 
@@ -80,9 +76,9 @@
         <div class="header__content js-menuContent">
           <div class="header__lang">
             <span class="select-lang font-robot">
-              <!-- <a href="<?= esc_url($ja_permalink);?>" class="select-lang__link">JP</>
+              <a href="<?= esc_url($ja_permalink);?>" class="select-lang__link">JP</a>
               <a href="<?= esc_url($en_permalink);?>" class="select-lang__link">EN</a>
-              <a href="<?= esc_url($ch_permalink);?>" class="select-lang__link">CH</a> -->
+              <a href="<?= esc_url($ch_permalink);?>" class="select-lang__link">CH</a>
             </span>
             <?php get_search_form(); ?>
           </div>
