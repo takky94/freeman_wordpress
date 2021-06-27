@@ -668,6 +668,7 @@ $menu-animation-duration: 0.3s;
 .category-table {
   margin-top: 90px;
 
+  // 共通
   table {
     margin: 0 auto;
     max-width: calc(1080px - (40px * 2) - (50px * 2)); // STEPに合わせる
@@ -731,6 +732,20 @@ $menu-animation-duration: 0.3s;
         position: absolute;
         top: 0;
         width: 1px;
+      }
+    }
+  }
+  //テーブルプレス
+  .tablepress {
+    td {
+      padding: 0;
+      // 絞り込み検索用ボタン
+      .js-jewelry-item-term {
+        padding: 1em;
+        width: 100%;
+        &.active {
+          background: #efefef;
+        }
       }
     }
   }

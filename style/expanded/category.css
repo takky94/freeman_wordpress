@@ -2970,6 +2970,19 @@
   width: 1px;
 }
 
+.category-table .tablepress td {
+  padding: 0;
+}
+
+.category-table .tablepress td .js-jewelry-item-term {
+  padding: 1em;
+  width: 100%;
+}
+
+.category-table .tablepress td .js-jewelry-item-term.active {
+  background: #efefef;
+}
+
 .category-table .circle {
   background: #dce5f0;
   border-radius: 50%;

@@ -339,8 +339,8 @@ if (!function_exists('fm_insert_jewelry_tags_fields')){
 <small>(埋没法ページで使用)</small>
 <select name="jewelry_tags_is_low_dust">
 <option value="">未選択</option>
-<option {$is_selected -> i('jewelry_tags_is_low_dust', '程粉塵タイプYES')} value="程粉塵タイプYES">YES</option>
-<option {$is_selected -> i('jewelry_tags_is_low_dust', '程粉塵タイプNO')} value="程粉塵タイプNO">NO</option>
+<option {$is_selected -> i('jewelry_tags_is_low_dust', '低粉塵タイプYES')} value="低粉塵タイプYES">YES</option>
+<option {$is_selected -> i('jewelry_tags_is_low_dust', '低粉塵タイプNO')} value="低粉塵タイプNO">NO</option>
 </select>
 </div>
 EOM;
