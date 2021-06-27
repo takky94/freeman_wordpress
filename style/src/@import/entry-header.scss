@@ -77,6 +77,9 @@ $root-path: "../..";
         span {
           color: #000;
           font-size: 14px;
+          @media (max-width: $sp) {
+            font-size: 12px;
+          }
         }
         a {
           font-weight: 500; // リンク付きのぱんくず(親階層)は太文字

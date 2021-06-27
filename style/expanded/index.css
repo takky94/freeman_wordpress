@@ -203,7 +203,7 @@
 
 @media (max-width: 768px) {
   .category-child-product-link .wide .card-wrap.fadeOut {
-    visibility: hidden;
+    display: none;
   }
 }
 

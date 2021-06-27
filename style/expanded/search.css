@@ -139,6 +139,13 @@
   font-size: 14px;
 }
 
+@media (max-width: 768px) {
+  .entry-header .breadcrumb ul li a,
+  .entry-header .breadcrumb ul li span {
+    font-size: 12px;
+  }
+}
+
 .entry-header .breadcrumb ul li a {
   font-weight: 500;
 }
@@ -721,7 +728,7 @@
 
 @media (max-width: 768px) {
   .category-child-product-link .wide .card-wrap.fadeOut {
-    visibility: hidden;
+    display: none;
   }
 }
 

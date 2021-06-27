@@ -127,7 +127,7 @@ $root-path: "../..";
     animation: fadeOutItem 0.5s both;
     height: 0;
     @media (max-width: $sp) {
-      visibility: hidden;
+      display: none;
     }
     .products__box {
       display: none;
