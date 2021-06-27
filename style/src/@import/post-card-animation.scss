@@ -125,6 +125,10 @@ $root-path: "../..";
   will-change: opacity, width;
   &.fadeOut {
     animation: fadeOutItem 0.5s both;
+    height: 0;
+    @media (max-width: $sp) {
+      visibility: hidden;
+    }
     .products__box {
       display: none;
     }

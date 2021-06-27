@@ -346,32 +346,32 @@ if (!function_exists('fm_insert_jewelry_tags_fields')){
 EOM;
   }
 }
+if (!function_exists('fm_save_jewelry_tags_fields_value')){
+  function fm_save_jewelry_tags_fields_value($post_id, $label){
+  if(!empty($_POST[$label])){
+    // 選択されてれば値を保存
+    update_post_meta($post_id, $label, $_POST[$label] );
+  }else{
+      // 未選択なら値削除
+    delete_post_meta($post_id, $label);
+  }
+}
+}
 if (!function_exists('fm_save_jewelry_tags_fields')){
   function fm_save_jewelry_tags_fields ($post_id){
-
-    function save_jewelry_tags_value($post_id, $label){
-      if(!empty($_POST[$label])){
-        // 選択されてれば値を保存
-        update_post_meta($post_id, $label, $_POST[$label] );
-      }else{
-         // 未選択なら値削除
-        delete_post_meta($post_id, $label);
-      }
-    }
-
-    save_jewelry_tags_value($post_id, 'jewelry_tags_liquidity');
-    save_jewelry_tags_value($post_id, 'jewelry_tags_softness');
-    save_jewelry_tags_value($post_id, 'jewelry_tags_machinability');
-    save_jewelry_tags_value($post_id, 'jewelry_tags_shrinkable');
-    save_jewelry_tags_value($post_id, 'jewelry_tags_elastic');
-    save_jewelry_tags_value($post_id, 'jewelry_tags_prototype_life');
-    save_jewelry_tags_value($post_id, 'jewelry_tags_reproducibility');
-    save_jewelry_tags_value($post_id, 'jewelry_tags_solidification_time');
-    save_jewelry_tags_value($post_id, 'jewelry_tags_hand_workability');
-    save_jewelry_tags_value($post_id, 'jewelry_tags_hardness');
-    save_jewelry_tags_value($post_id, 'jewelry_tags_cnc');
-    save_jewelry_tags_value($post_id, 'jewelry_tags_casting_bullion');
-    save_jewelry_tags_value($post_id, 'jewelry_tags_prototype_material');
-    save_jewelry_tags_value($post_id, 'jewelry_tags_is_low_dust');
+    fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_liquidity');
+    fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_softness');
+    fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_machinability');
+    fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_shrinkable');
+    fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_elastic');
+    fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_prototype_life');
+    fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_reproducibility');
+    fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_solidification_time');
+    fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_hand_workability');
+    fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_hardness');
+    fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_cnc');
+    fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_casting_bullion');
+    fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_prototype_material');
+    fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_is_low_dust');
   }
 }

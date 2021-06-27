@@ -687,12 +687,7 @@ $root-path: "../..";
       padding-bottom: 20px;
       width: calc((100% - 40px) / 2);
       @media (min-width: $tab) {
-        &:nth-child(2n) {
-          margin-left: 40px;
-        }
-        &:not(:nth-child(1)):not(:nth-child(2)) {
-          margin-top: 40px;
-        }
+        margin: 10px;
       }
       @media (max-width: $sp) {
         width: 100%;
@@ -702,6 +697,7 @@ $root-path: "../..";
       }
     }
     .post-card-product {
+      align-items: flex-start; // コンテンツと画像の高さを合わせないため
       display: flex;
       width: 100%;
       .thumbnail {
