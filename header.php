@@ -8,11 +8,11 @@
     $en_permalink = '<a href="'.apply_filters('wpml_permalink', fm_get_current_url(), 'en').'" class="select-lang__link">EN</a>';
     $ch_permalink = '<a href="'.apply_filters('wpml_permalink', fm_get_current_url(), 'zh-hant').'" class="select-lang__link">CH</a>';
   } elseif (ICL_LANGUAGE_CODE === 'en') {
-    $ja_permalink = '<a href="'.apply_filters('wpml_permalink', fm_get_current_url(), 'ja').'" class="select-lang__link">JA</a>';
+    $ja_permalink = '<a href="'.apply_filters('wpml_permalink', fm_get_current_url(), 'ja').'" class="select-lang__link">JP</a>';
     $en_permalink = '<span class="select-lang__link active">EN</span>';
     $ch_permalink = '<a href="'.apply_filters('wpml_permalink', fm_get_current_url(), 'zh-hant').'" class="select-lang__link">CH</a>';
   } elseif (ICL_LANGUAGE_CODE === 'zh-hant') {
-    $ja_permalink = '<a href="'.apply_filters('wpml_permalink', fm_get_current_url(), 'ja').'" class="select-lang__link">JA</a>';
+    $ja_permalink = '<a href="'.apply_filters('wpml_permalink', fm_get_current_url(), 'ja').'" class="select-lang__link">JP</a>';
     $en_permalink = '<a href="'.apply_filters('wpml_permalink', fm_get_current_url(), 'en').'" class="select-lang__link">EN</a>';
     $ch_permalink = '<span class="select-lang__link active">CH</span>';
   }
