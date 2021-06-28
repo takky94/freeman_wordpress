@@ -154,7 +154,7 @@ if (!function_exists('fm_remove_underbar')) {
 
 if (!function_exists('fm_is_active_page')) {
   function fm_is_active_page($str){
-    $pattern = '/(mold|sand_casting|investment_casting|jewelry|new_field)/';
+    $pattern = '/(mold|sand_casting|investment_casting|jewelry|new_field|company)/';
     $result = preg_match($pattern, fm_get_current_url(), $matches);
     if ($result){
       if ($matches[0] === $str) return "active";
