@@ -4,17 +4,17 @@
     define('ICL_LANGUAGE_CODE', 'ja');
   }
   if (ICL_LANGUAGE_CODE === 'ja') {
-    $ja_permalink = home_url();
-    $en_permalink = apply_filters('wpml_permalink', home_url(), 'en');
-    $ch_permalink = apply_filters('wpml_permalink', home_url(), 'zh-hant');
+    $ja_permalink = fm_get_current_url();
+    $en_permalink = apply_filters('wpml_permalink', fm_get_current_url(), 'en');
+    $ch_permalink = apply_filters('wpml_permalink', fm_get_current_url(), 'zh-hant');
   } elseif (ICL_LANGUAGE_CODE === 'en') {
-    $ja_permalink = apply_filters('wpml_permalink', home_url(), 'ja');
-    $en_permalink = home_url();
-    $ch_permalink = apply_filters('wpml_permalink', home_url(), 'zh-hant');
+    $ja_permalink = apply_filters('wpml_permalink', fm_get_current_url(), 'ja');
+    $en_permalink = fm_get_current_url();
+    $ch_permalink = apply_filters('wpml_permalink', fm_get_current_url(), 'zh-hant');
   } elseif (ICL_LANGUAGE_CODE === 'zh-hant') {
-    $ja_permalink = apply_filters('wpml_permalink', home_url(), 'ja');
-    $en_permalink = apply_filters('wpml_permalink', home_url(), 'en');
-    $ch_permalink = home_url();
+    $ja_permalink = apply_filters('wpml_permalink', fm_get_current_url(), 'ja');
+    $en_permalink = apply_filters('wpml_permalink', fm_get_current_url(), 'en');
+    $ch_permalink = fm_get_current_url();
   }
 ?>
 
