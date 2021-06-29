@@ -3031,7 +3031,7 @@
   width: 100%;
 }
 
-.category-table .tablepress td .js-jewelry-item-term.active {
+.category-table .tablepress td .js-jewelry-item-term:hover, .category-table .tablepress td .js-jewelry-item-term.active {
   background: #efefef;
 }
 
