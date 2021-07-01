@@ -743,6 +743,7 @@ $menu-animation-duration: 0.3s;
       .js-jewelry-item-term {
         padding: 1em;
         width: 100%;
+        &:hover,
         &.active {
           background: #efefef;
         }

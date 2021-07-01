@@ -4,17 +4,17 @@
     define('ICL_LANGUAGE_CODE', 'ja');
   }
   if (ICL_LANGUAGE_CODE === 'ja') {
-    $ja_permalink = home_url();
-    $en_permalink = apply_filters('wpml_permalink', home_url(), 'en');
-    $ch_permalink = apply_filters('wpml_permalink', home_url(), 'zh-hant');
+    $ja_permalink = '<span class="select-lang__link active">JP</span>';
+    $en_permalink = '<a href="'.apply_filters('wpml_permalink', fm_get_current_url(), 'en').'" class="select-lang__link">EN</a>';
+    $ch_permalink = '<a href="'.apply_filters('wpml_permalink', fm_get_current_url(), 'zh-hant').'" class="select-lang__link">CH</a>';
   } elseif (ICL_LANGUAGE_CODE === 'en') {
-    $ja_permalink = apply_filters('wpml_permalink', home_url(), 'ja');
-    $en_permalink = home_url();
-    $ch_permalink = apply_filters('wpml_permalink', home_url(), 'zh-hant');
+    $ja_permalink = '<a href="'.apply_filters('wpml_permalink', fm_get_current_url(), 'ja').'" class="select-lang__link">JP</a>';
+    $en_permalink = '<span class="select-lang__link active">EN</span>';
+    $ch_permalink = '<a href="'.apply_filters('wpml_permalink', fm_get_current_url(), 'zh-hant').'" class="select-lang__link">CH</a>';
   } elseif (ICL_LANGUAGE_CODE === 'zh-hant') {
-    $ja_permalink = apply_filters('wpml_permalink', home_url(), 'ja');
-    $en_permalink = apply_filters('wpml_permalink', home_url(), 'en');
-    $ch_permalink = home_url();
+    $ja_permalink = '<a href="'.apply_filters('wpml_permalink', fm_get_current_url(), 'ja').'" class="select-lang__link">JP</a>';
+    $en_permalink = '<a href="'.apply_filters('wpml_permalink', fm_get_current_url(), 'en').'" class="select-lang__link">EN</a>';
+    $ch_permalink = '<span class="select-lang__link active">CH</span>';
   }
 ?>
 
@@ -76,9 +76,9 @@
         <div class="header__content js-menuContent">
           <div class="header__lang">
             <span class="select-lang font-robot">
-              <a href="<?= esc_url($ja_permalink);?>" class="select-lang__link">JP</a>
-              <a href="<?= esc_url($en_permalink);?>" class="select-lang__link">EN</a>
-              <a href="<?= esc_url($ch_permalink);?>" class="select-lang__link">CH</a>
+              <?= $ja_permalink; ?>
+              <?= $en_permalink; ?>
+              <?= $ch_permalink; ?>
             </span>
             <?php get_search_form(); ?>
           </div>
@@ -215,7 +215,7 @@
               </div>
             </li>
             <li>
-              <a href="<?= home_url(); ?>/company" class="js-accordion"
+              <a href="<?= home_url(); ?>/company" class="js-accordion <?= fm_is_active_page('company'); ?>"
                 data-subtitle="COMPANY"><?php _e('会社概要','header'); ?></a>
               <div class="sub">
                 <div class="container flex">

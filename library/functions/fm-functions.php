@@ -11,9 +11,9 @@ if (!function_exists('fm_get_current_url')){
       return home_url();
     } elseif (is_category()){ // カテゴリーページ
       return get_category_link(get_query_var('cat'));
-    } elseif (is_post_type_archive(array('news', 'product'))){
+    } elseif (is_post_type_archive(array('news'))){
       return get_post_type_archive_link(get_post_type());
-    } elseif (is_singular( array('news', 'products'))){ // カスタム投稿
+    } elseif (is_singular( array('news'))){ // カスタム投稿
       return get_post_permalink();
     } else { // 投稿ページ等
       return get_permalink();
@@ -154,10 +154,11 @@ if (!function_exists('fm_remove_underbar')) {
 
 if (!function_exists('fm_is_active_page')) {
   function fm_is_active_page($str){
-    $pattern = '/(mold|sand_casting|investment_casting|jewelry|new_field)/';
-    $result = preg_match($pattern, get_the_permalink(), $matches);
-    if ($result === false) return "";
-    if ($matches[0] === $str) return "active";
+    $pattern = '/(mold|sand_casting|investment_casting|jewelry|new_field|company)/';
+    $result = preg_match($pattern, fm_get_current_url(), $matches);
+    if ($result){
+      if ($matches[0] === $str) return "active";
+    }
   }
 }
 
