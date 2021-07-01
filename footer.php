@@ -1,6 +1,15 @@
 <!-- footer -->
 <?php wp_footer(); //必須 ?>
 <footer class="footer js-scrollSnap">
+  <?php if (is_category()): ?>
+  <div class="cta-lead">
+    <div class="container">
+      <p class="cta-lead__text">
+      <?php _e('その他にも国内外の幅広い製品を取り扱っています！<br />もし上記にお探しの製品が無くても、お気軽にお問い合わせ下さい。', 'footer'); ?>
+    </p>
+    </div>
+  </div>
+  <?php endif; ?>
   <!-- cta -->
   <a href="#" class="cta arrow-wrap">
     <div class="container">

@@ -52,7 +52,7 @@
             <h3 class="block__title"><?php _e('デザイン', 'category-mold'); ?></h3>
           </div>
           <p
-            class="block__description"><?php _e('デザインはモノづくりで最初に行う工程です。使用者の事を考え、また作り手の思いをイメージにします。当社では自動車部品や家電、ホビー等、ジャンルを問わず、イメージを確実に具現化する材料や工法をご提案します。', 'category-mold'); ?></p>
+            class="block__description"><?php _e('デザインから試作開発、量産にいたる全ての領域で、関連製品および技術サービスを提供します。長年培ってきた独自のネットワークに加え、三洋貿易グループの国内外拠点を活かして活動しています。', 'category-mold'); ?></p>
         </div>
         <p class="block__image"><img src="<?= get_template_directory_uri(); ?>/images/category/mold/figure-1.png" alt=""
         <?php fm_lazyload(); ?>></p>

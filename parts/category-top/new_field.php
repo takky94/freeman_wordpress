@@ -42,7 +42,7 @@
     </div>
     <div class="category-children__top--text">
       <h3 class="label"><?php _e('ミネラルキャスティング', 'category-new-field'); ?></h3>
-      <p class="title"><?php _e('高い振動減衰率と優れた熱安定性を有する、次世代エンジニアリング素材', 'category-new-field'); ?></p>
+      <p class="title"><?php _e('高い振動減衰性と優れた熱安定性を有する、次世代エンジニアリング素材', 'category-new-field'); ?></p>
       <p
         class="description"><?php _e('欧州ハイエンド工作機の土台・フレームには、その優れた特性から、鋳鉄の代わりにミネラルキャスティングが用いられています。従来の鋳鉄製に比べ、製造時のエネルギー消費量、CO2排出量の削減に貢献します。', 'category-new-field'); ?></p>
     </div>
@@ -92,7 +92,7 @@
     </div>
     <div class="category-children__top--text">
       <h3 class="label"><?php _e('プロ用ホットメルトシステム', 'category-new-field'); ?></h3>
-      <p class="title"><?php _e('ホットメルト輸入販売第一人者の誇り', 'category-new-field'); ?></p>
+      <p class="title"><?php _e('ホットメルト輸入販売<br />第一人者の誇り', 'category-new-field'); ?></p>
       <p
         class="description"><?php _e('次世代接着システムへの切り替えはお済みでしょうか。接着の多様なニーズに応えてきた40年の経験でより良い提案をいたします。自社サービスセンターで修理・メンテナンスを行いますので、迅速な対応が可能です。', 'category-new-field'); ?></p>
     </div>
