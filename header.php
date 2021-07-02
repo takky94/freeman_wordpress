@@ -159,7 +159,7 @@
                     <li><a href="<?= home_url(); ?>/investment_casting/casting"
                         class="c-white c-trans-red"><?php _e('鋳造','header'); ?></a></li>
                     <li><a href="<?= home_url(); ?>/investment_casting/equipment"
-                        class="c-white c-trans-red"><?php _e('設備','header'); ?></a></li>
+                        class="c-white c-trans-red"><?php _e('精密鋳造用設備','header'); ?></a></li>
                     <?php /* ?>
                     <li><a href="<?= home_url(); ?>/investment_casting/genzairyou"
                         class="c-white c-trans-red"><?php _e('原材料各種', 'footer'); ?></a>
