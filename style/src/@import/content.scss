@@ -43,7 +43,7 @@ $root-path: "../..";
         span {
           color: #fff;
           font-size: 13px;
-          padding: 6px;
+          padding: 6px 12px;
           text-align: center;
           @media (max-width: $sp) {
             font-size: 10px;
@@ -78,6 +78,23 @@ $root-path: "../..";
       @media (max-width: $sp) {
         font-size: 16px;
         margin-top: 20px;
+      }
+    }
+  }
+
+  // ニュースページ
+  &.news-content-header {
+    @media (max-width: $sp) {
+      flex-direction: column;
+      position: relative;
+      .title{
+        position: initial;
+        .meta__label span {
+          font-size: 14px;
+          padding: 0.25em 1em;
+          position: absolute;
+          top: 0;
+        }
       }
     }
   }
@@ -178,5 +195,9 @@ $root-path: "../..";
       list-style: decimal;
       padding-left: 1em;
     }
+  }
+
+  &.news-content-main{
+    //
   }
 }

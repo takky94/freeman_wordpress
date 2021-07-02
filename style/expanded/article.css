@@ -828,9 +828,8 @@
 .post-card .content .meta__label span {
   color: #fff;
   font-size: 14px;
-  padding: 6px;
+  padding: 6px 12px;
   text-align: center;
-  width: 50%;
 }
 
 .post-card .content .meta__label--new {
@@ -2177,7 +2176,7 @@
 .content-header .title .meta__label span {
   color: #fff;
   font-size: 13px;
-  padding: 6px;
+  padding: 6px 12px;
   text-align: center;
 }
 
@@ -2220,6 +2219,25 @@
   .content-header .title h1 {
     font-size: 16px;
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-header.news-content-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+  }
+  .content-header.news-content-header .title {
+    position: initial;
+  }
+  .content-header.news-content-header .title .meta__label span {
+    font-size: 14px;
+    padding: 0.25em 1em;
+    position: absolute;
+    top: 0;
   }
 }
 
