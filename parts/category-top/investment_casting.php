@@ -34,7 +34,7 @@
         <img class="investment_casting"
           src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/process-2.png" alt=""
           <?php fm_lazyload(); ?> />
-        <figcaption><?php _e('鋳型制作', 'category-investment-casting'); ?></figcaption>
+        <figcaption><?php _e('鋳型製作', 'category-investment-casting'); ?></figcaption>
       </figure>
     </a>
     <a href="#step03" class="category-process__block--box">
@@ -107,7 +107,7 @@
         <div class="block__text">
           <div class="flex">
             <p class="block__label font-robot c-white">STEP 02</p>
-            <h3 class="block__title"><?php _e('鋳型制作', 'category-investment-casting'); ?></h3>
+            <h3 class="block__title"><?php _e('鋳型製作', 'category-investment-casting'); ?></h3>
           </div>
           <p
             class="block__description"><?php _e('ワックスツリーを洗浄処理したあと、スラリーにディッピングし、液切り後、耐火材を振りかけます。これをコーティング作業と呼びます。コーティングと乾燥を何回か繰り返して、鋳型を造型します。', 'category-investment-casting'); ?></p>

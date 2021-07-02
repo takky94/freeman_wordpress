@@ -5,7 +5,13 @@
 ?>
 <header class="entry-header category-header category-header-<?= $category_slug; ?>">
   <div class="container">
-    <h1 class="entry-header__title"><?= $category_name; ?></h1>
+    <h1 class="entry-header__title">
+    <?php if($category_slug === 'jewelry'): ?>
+    <?php _e('ジュエリーキャスト用副資材', 'category-jewelry'); ?>
+    <?php else: ?>
+    <?= $category_name; ?>
+    <?php endif; ?>
+    </h1>
     <?php fm_breadcrumb(); ?>
   </div>
 </header>

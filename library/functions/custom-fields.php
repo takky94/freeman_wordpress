@@ -230,77 +230,74 @@ if (!function_exists('fm_insert_jewelry_tags_fields')){
 <small>(インジェクションワックスページで使用)</small>
 <select name="jewelry_tags_liquidity">
 <option value="">未選択</option>
-<option {$is_selected -> i('jewelry_tags_liquidity', '流動性優')} value="流動性優">高</option>
-<option {$is_selected -> i('jewelry_tags_liquidity', '流動性普通')} value="流動性普通">普通</option>
-<option {$is_selected -> i('jewelry_tags_liquidity', '流動性低')} value="流動性低">低</option>
+<option {$is_selected -> i('jewelry_tags_liquidity', '流動性優')} value="流動性優">優</option>
+<option {$is_selected -> i('jewelry_tags_liquidity', '流動性良')} value="流動性良">良</option>
+<option {$is_selected -> i('jewelry_tags_liquidity', '流動性可')} value="流動性高">可</option>
 </select>
 <p>柔軟性</p>
 <small>(インジェクションワックス/カービングワックスページで使用)</small>
 <select name="jewelry_tags_softness">
 <option value="">未選択</option>
 <option {$is_selected -> i('jewelry_tags_softness', '柔軟性優')} value="柔軟性優">優</option>
-<option {$is_selected -> i('jewelry_tags_softness', '柔軟性高')} value="柔軟性高">高</option>
 <option {$is_selected -> i('jewelry_tags_softness', '柔軟性良')} value="柔軟性良">良</option>
 <option {$is_selected -> i('jewelry_tags_softness', '柔軟性可')} value="柔軟性可">可</option>
-<option {$is_selected -> i('jewelry_tags_softness', '柔軟性普通')} value="柔軟性普通">普通</option>
-<option {$is_selected -> i('jewelry_tags_softness', '柔軟性低')} value="柔軟性低">低</option>
 <option {$is_selected -> i('jewelry_tags_softness', '柔軟性不足')} value="柔軟性不足">不足</option>
 </select>
 <p>切削性</p>
 <small>(インジェクションワックスページで使用)</small>
 <select name="jewelry_tags_machinability">
 <option value="">未選択</option>
-<option {$is_selected -> i('jewelry_tags_machinability', '切削性高')} value="切削性高">高</option>
-<option {$is_selected -> i('jewelry_tags_machinability', '切削性普通')} value="切削性普通">普通</option>
-<option {$is_selected -> i('jewelry_tags_machinability', '切削性低')} value="切削性低">低</option>
+<option {$is_selected -> i('jewelry_tags_machinability', '切削性優')} value="切削性優">優</option>
+<option {$is_selected -> i('jewelry_tags_machinability', '切削性良')} value="切削性良">良</option>
+<option {$is_selected -> i('jewelry_tags_machinability', '切削性可')} value="切削性可">可</option>
 </select>
 <p>収縮</p>
 <small>(インジェクションワックスページで使用)</small>
 <select name="jewelry_tags_shrinkable">
 <option value="">未選択</option>
-<option {$is_selected -> i('jewelry_tags_shrinkable', '収縮高')} value="収縮高">高</option>
+<option {$is_selected -> i('jewelry_tags_shrinkable', '収縮大')} value="収縮大">大</option>
 <option {$is_selected -> i('jewelry_tags_shrinkable', '収縮普通')} value="収縮普通">普通</option>
-<option {$is_selected -> i('jewelry_tags_shrinkable', '収縮低')} value="収縮低">低</option>
+<option {$is_selected -> i('jewelry_tags_shrinkable', '収縮小')} value="収縮小">小</option>
 </select>
 <p>弾性</p>
 <small>(インジェクションワックスページで使用)</small>
 <select name="jewelry_tags_elastic">
 <option value="">未選択</option>
-<option {$is_selected -> i('jewelry_tags_elastic', '弾性高')} value="弾性高">高</option>
-<option {$is_selected -> i('jewelry_tags_elastic', '弾性普通')} value="弾性普通">普通</option>
-<option {$is_selected -> i('jewelry_tags_elastic', '弾性低')} value="弾性低">低</option>
+<option {$is_selected -> i('jewelry_tags_elastic', '弾性優')} value="弾性優">優</option>
+<option {$is_selected -> i('jewelry_tags_elastic', '弾性良')} value="弾性良">良</option>
+<option {$is_selected -> i('jewelry_tags_elastic', '弾性可')} value="弾性可">可</option>
 </select>
 <p>原型寿命</p>
 <small>(インジェクションワックスページで使用)</small>
 <select name="jewelry_tags_prototype_life">
 <option value="">未選択</option>
-<option {$is_selected -> i('jewelry_tags_prototype_life', '原型寿命最高')} value="原型寿命最高">最高</option>
-<option {$is_selected -> i('jewelry_tags_prototype_life', '原型寿命高')} value="原型寿命高">高</option>
-<option {$is_selected -> i('jewelry_tags_prototype_life', '原型寿命普通')} value="原型寿命普通">普通</option>
+<option {$is_selected -> i('jewelry_tags_prototype_life', '原型寿命優')} value="原型寿命優">優</option>
+<option {$is_selected -> i('jewelry_tags_prototype_life', '原型寿命良')} value="原型寿命良">良</option>
+<option {$is_selected -> i('jewelry_tags_prototype_life', '原型寿命可')} value="原型寿命可">可</option>
 </select>
 <p>再現性</p>
 <small>(インジェクションワックスページで使用)</small>
 <select name="jewelry_tags_reproducibility">
 <option value="">未選択</option>
-<option {$is_selected -> i('jewelry_tags_reproducibility', '再現性高')} value="再現性高">高</option>
-<option {$is_selected -> i('jewelry_tags_reproducibility', '再現性普通')} value="再現性普通">普通</option>
-<option {$is_selected -> i('jewelry_tags_reproducibility', '再現性低')} value="再現性低">低</option>
+<option {$is_selected -> i('jewelry_tags_reproducibility', '再現性優')} value="再現性優">優</option>
+<option {$is_selected -> i('jewelry_tags_reproducibility', '再現性良')} value="再現性良">良</option>
+<option {$is_selected -> i('jewelry_tags_reproducibility', '再現性可')} value="再現性可">可</option>
 </select>
-<p>固化時間</p>
+<p>凝固時間</p>
 <small>(インジェクションワックスページで使用)</small>
 <select name="jewelry_tags_solidification_time">
 <option value="">未選択</option>
-<option {$is_selected -> i('jewelry_tags_solidification_time', '固化時間速')} value="固化時間速">速</option>
-<option {$is_selected -> i('jewelry_tags_solidification_time', '固化時間普通')} value="固化時間普通">普通</option>
-<option {$is_selected -> i('jewelry_tags_solidification_time', '固化時間遅')} value="固化時間遅">遅</option>
+<option {$is_selected -> i('jewelry_tags_solidification_time', '凝固時間速')} value="凝固時間速">速</option>
+<option {$is_selected -> i('jewelry_tags_solidification_time', '凝固時間普通')} value="凝固時間普通">普通</option>
+<option {$is_selected -> i('jewelry_tags_solidification_time', '凝固時間遅')} value="凝固時間遅">遅</option>
 </select>
 <p>手加工性</p>
 <small>(カービングワックスページで使用)</small>
 <select name="jewelry_tags_hand_workability">
 <option value="">未選択</option>
-<option {$is_selected -> i('jewelry_tags_hand_workability', '手加工性速')} value="手加工性速">速</option>
-<option {$is_selected -> i('jewelry_tags_hand_workability', '手加工性普通')} value="手加工性普通">普通</option>
-<option {$is_selected -> i('jewelry_tags_hand_workability', '手加工性遅')} value="手加工性遅">遅</option>
+<option {$is_selected -> i('jewelry_tags_hand_workability', '手加工性優')} value="手加工性優">優</option>
+<option {$is_selected -> i('jewelry_tags_hand_workability', '手加工性良')} value="手加工性良">良</option>
+<option {$is_selected -> i('jewelry_tags_hand_workability', '手加工性可')} value="手加工性可">可</option>
 </select>
 <p>硬度</p>
 <small>(カービングワックスページで使用)</small>
@@ -317,6 +314,15 @@ if (!function_exists('fm_insert_jewelry_tags_fields')){
 <option {$is_selected -> i('jewelry_tags_cnc', '高速CNC優')} value="高速CNC優">優</option>
 <option {$is_selected -> i('jewelry_tags_cnc', '高速CNC良')} value="高速CNC良">良</option>
 <option {$is_selected -> i('jewelry_tags_cnc', '高速CNC可')} value="高速CNC可">可</option>
+<option {$is_selected -> i('jewelry_tags_cnc', '高速CNC劣る')} value="高速CNC劣る">劣る</option>
+</select>
+<p>粘度</p>
+<small>(カービングワックスページで使用)</small>
+<select name="jewelry_tags_cnc">
+<option value="">未選択</option>
+<option {$is_selected -> i('jewelry_tags_cnc', '粘度高')} value="粘度高">高</option>
+<option {$is_selected -> i('jewelry_tags_cnc', '粘度中')} value="粘度中">中</option>
+<option {$is_selected -> i('jewelry_tags_cnc', '粘度低')} value="粘度低">低</option>
 </select>
 <p>鋳造地金</p>
 <small>(埋没法ページで使用)</small>

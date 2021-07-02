@@ -180,7 +180,7 @@
             <h3 class="block__title"><?php _e('鋳物(完成品)', 'category-sand-casting'); ?></h3>
           </div>
           <p
-            class="block__description"><?php _e('いよいよ鋳物の完成です。さて、今まで鋳物の事だけを考えていませんでしたか。これからは作る人・環境の事も考えてみてはいかがでしょう。SDG’sに取り組む企業を当社は応援致します。環境にやさしい新技術のご紹介です。', 'category-sand-casting'); ?></p>
+            class="block__description"><?php _e('いよいよ鋳物の完成です。さて、今まで鋳物の事だけを考えていませんでしたか。これからは作る人・環境の事も考えてみてはいかがでしょう。SDGsに取り組む企業を当社は応援致します。環境にやさしい新技術のご紹介です。', 'category-sand-casting'); ?></p>
         </div>
         <p class="block__image"><img class="sand_casting" src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/figure-4.png" alt=""
         <?php fm_lazyload(); ?>></p>
