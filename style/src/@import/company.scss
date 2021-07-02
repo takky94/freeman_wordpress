@@ -349,7 +349,7 @@ $root-path: "../..";
           order: 3;
         }
         .message {
-          font-weight: 100;
+          font-weight: 500;
           line-height: 2;
         }
         .sign {
@@ -435,6 +435,24 @@ $root-path: "../..";
             @media (max-width: $sp) {
               margin-left: 15px;
               width: calc(80% - 15px);
+            }
+            ul {
+              padding-left: 0;
+              li:not(:first-child) {
+                margin-top: 1em;
+              }
+              &.links{
+                li {
+                  &::after{
+                    background: center / contain url(#{$root-path}/images/company/icon-7.png) no-repeat;
+                    content: "";
+                    display: inline-block;
+                    height: 1em;
+                    margin-left: 6px;
+                    width: 1em;
+                  }
+                }
+              }
             }
           }
         }

@@ -42,10 +42,9 @@ $root-path: "../..";
 
         span {
           color: #fff;
-          font-size: 14px;
+          font-size: 13px;
           padding: 6px;
           text-align: center;
-          width: 50%;
           @media (max-width: $sp) {
             font-size: 10px;
             padding: 4px;

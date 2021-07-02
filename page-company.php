@@ -22,7 +22,7 @@ Template Name: 会社概要
               <p class="sub-title">ビジョン</p>
             </div>
             <p
-              class="description font-serif"><?php _e('ものづくりの支援を通じ<br class="sp__none" />新たな価値を創造して<br class="sp__none" />社会発展に貢献する','page-company'); ?></p>
+              class="description font-serif"><?php _e('自然と人類の共生を図り<br class="sp__none" />幸福を希求する。','page-company'); ?></p>
           </section>
           <section class="block">
             <div class="block__header">
@@ -30,7 +30,7 @@ Template Name: 会社概要
               <p class="sub-title">ミッション</p>
             </div>
             <p
-              class="description font-serif"><?php _e('自然と人類の共生を図り<br class="sp__none" />幸福を希求する','page-company'); ?></p>
+              class="description font-serif"><?php _e('モノづくりの支援を通じ、<br class="sp__none" />新たな価値を創造して、<br class="sp__none" />社会発展に貢献する。','page-company'); ?></p>
           </section>
           <section class="block">
             <div class="block__header">
@@ -38,7 +38,7 @@ Template Name: 会社概要
               <p class="sub-title">バリュー</p>
             </div>
             <p
-              class="description font-serif"><?php _e('チャレンジングな精神と<br class="sp__none" />進取の気概をもって<br class="sp__none" />最適解を追求する','page-company'); ?></p>
+              class="description font-serif"><?php _e('チャレンジングな精神と<br class="sp__none" />進取の気概をもって、<br class="sp__none" />最適解を追求する集団。','page-company'); ?></p>
           </section>
         </div>
         <!-- // content-header -->
@@ -118,11 +118,11 @@ Template Name: 会社概要
             </div>
             <div class="title">
               <h2 class="font-robot">GREETING</h2>
-              <p class="sub-title"><?php _e('','page-company'); ?>社長挨拶</p>
+              <p class="sub-title"><?php _e('','page-company'); ?>社長あいさつ</p>
             </div>
             <div class="text">
               <p
-                class="message"><?php _e('1973年の創業以来、精密鋳造用副資材、モデル材・木型・樹脂型の作製材料、ジュエリーキャスティング用資材等の輸入及び国内販売・技術サービスを通じて、400余社のお客様のモノづくりをサポートさせて頂いております。弊社は2017年に三洋貿易株式会社の子会社となりました。<br />今まで培ってきた知見に加えて、三洋貿易グループのグローバルネットワークを活用し、<br />お客様のニーズに合った最適解を見つけ出し、提供して参ります。<br />今後とも格別のご支援、ご愛顧を賜りますようお願い申し上げます。','page-company'); ?></p>
+                class="message"><?php _e('指輪から航空機ジェットエンジン部品製造まで。<br />1973年の創業以来、試作簡易型、モデリング、精密鋳造、ジュエリーキャストの各分野において、豊富な高機能材料と技術サービスにより、国内外400社を超える需要家様のモノづくりのお手伝いをしてまいりました。<br />2017年より三洋貿易グループの一員として、長年培ってきた知見や業界経験を活かし、つねに「最適解」を希求して、更なる社会発展に貢献してまいります。','page-company'); ?></p>
               <div class="sign">
                 <span class="position"><?php _e('日本フリーマン株式会社代表取締役社長','page-company'); ?></span>
                 <img src="<?= get_template_directory_uri(); ?>/images/company/sign.svg" alt="日本フリーマン株式会社代表取締役社長 署名"
@@ -141,8 +141,8 @@ Template Name: 会社概要
               <table>
                 <tbody>
                   <tr>
-                    <th><?php _e('会社名','page-company'); ?></th>
-                    <td><?php _e('日本フリーマン株式会社　 (英文社名：FREEMAN JAPAN Co.,LTD.）','page-company'); ?></td>
+                    <th><?php _e('名称','page-company'); ?></th>
+                    <td><?php _e('日本フリーマン株式会社　/　Freeman (Japan) Co., Ltd.','page-company'); ?></td>
                   </tr>
                   <tr>
                     <th><?php _e('所在地','page-company'); ?></th>
@@ -164,7 +164,7 @@ Template Name: 会社概要
                   </tr>
                   <tr>
                     <th><?php _e('代表','page-company'); ?></th>
-                    <td><?php _e('岩堀　貴宏','page-company'); ?></td>
+                    <td><?php _e('代表取締役社長　岩堀　貴宏','page-company'); ?></td>
                   </tr>
                   <tr>
                     <th><?php _e('事業内容','page-company'); ?></th>
@@ -174,7 +174,61 @@ Template Name: 会社概要
                   </tr>
                   <tr>
                     <th><?php _e('関連会社','page-company'); ?></th>
-                    <td><?php _e('三洋貿易株式会社','page-company'); ?></td>
+                    <td>
+                      <ul class="links">
+                        <li>
+                          <a href="https://www.sanyo-trading.co.jp/" class="c-trans-red">
+                            <?php _e('三洋貿易株式会社','page-company'); ?>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.sanyo-hotmelt.com/" class="c-trans-red">
+                            <?php _e('三洋物産貿易(上海)有限公司','page-company'); ?>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.sanyo-si.com/" class="c-trans-red">
+                            <?php _e('三洋貿易科学機器事業部','page-company'); ?>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.sanyo-hotmelt.com/" class="c-trans-red">
+                            <?php _e('三洋ホットメルトシステム','page-company'); ?>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="http://www.sanyo-trading.co.th/en/" class="c-trans-red">
+                            <?php _e('Sanyo Trading Asia Co., Ltd.','page-company'); ?>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="http://www.shin-toyo.jp/" class="c-trans-red">
+                            <?php _e('新東洋機械工業株式会社 (工業用ポンプ)','page-company'); ?>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="http://www.cosmos-shoji.co.jp/" class="c-trans-red">
+                            <?php _e('コスモス商事株式会社 (石油・ガス・海洋)','page-company'); ?>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="http://www.chem-inter.co.jp/" class="c-trans-red">
+                            <?php _e('株式会社ケムインター (精密化学品、エレクトロニクス)','page-company'); ?>
+                          </a>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><?php _e('加盟団体','page-company'); ?></th>
+                    <td>
+                      <ul>
+                        <li><?php _e('（一社）日本鋳造協会','page-company'); ?></li>
+                        <li><?php _e('Investment Casting Institute （米国精密鋳造協会）','page-company'); ?></li>
+                        <li><?php _e('（一社）日本金型工業会','page-company'); ?></li>
+                        <li><?php _e('日本木型工業会','page-company'); ?></li>
+                      </ul>
+                    </td>
                   </tr>
                 </tbody>
               </table>

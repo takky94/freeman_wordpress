@@ -2176,10 +2176,9 @@
 
 .content-header .title .meta__label span {
   color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   padding: 6px;
   text-align: center;
-  width: 50%;
 }
 
 @media (max-width: 768px) {
