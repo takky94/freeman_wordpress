@@ -1515,7 +1515,7 @@
 }
 
 .company-page .content-main .greeting .text .message {
-  font-weight: 100;
+  font-weight: 500;
   line-height: 2;
 }
 
@@ -1630,6 +1630,23 @@
     margin-left: 15px;
     width: calc(80% - 15px);
   }
+}
+
+.company-page .content-main .overview .address table td ul {
+  padding-left: 0;
+}
+
+.company-page .content-main .overview .address table td ul li:not(:first-child) {
+  margin-top: 1em;
+}
+
+.company-page .content-main .overview .address table td ul.links li::after {
+  background: center/contain url(../../images/company/icon-7.png) no-repeat;
+  content: "";
+  display: inline-block;
+  height: 1em;
+  margin-left: 6px;
+  width: 1em;
 }
 
 .company-page .content-main .map {

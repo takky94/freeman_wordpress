@@ -36,11 +36,11 @@ if (!function_exists('fm_create_default_term')){
       '耐火材' => array('slug' => 'refractories', 'parent' => 'investment_casting'),
       'スラリー添加剤・コア材' => array('slug' => 'slurry_additives_core_materials', 'parent' => 'investment_casting'),
       '鋳造' => array('slug' => 'casting', 'parent' => 'investment_casting'),
+      '原材料各種' => array('slug' => 'master-heat-ingots', 'parent' => 'investment_casting'),
+      'セラミックフォームフィルター' => array('slug' => 'ceramic-foam-filters', 'parent' => 'investment_casting'),
+      'ルツボ' => array('slug' => 'crucibles', 'parent' => 'investment_casting'),
+      'セラミックカップ' => array('slug' => 'ceramic-cups', 'parent' => 'investment_casting'),
       '精密鋳造用設備' => array('slug' => 'equipment', 'parent' => 'investment_casting'),
-      '原材料各種' => array('slug' => 'genzairyou', 'parent' => 'investment_casting'),
-      'セラミックフォームフィルター' => array('slug' => 'seramikku-fomu-firuta', 'parent' => 'investment_casting'),
-      'ルツボ' => array('slug' => 'rutubo', 'parent' => 'investment_casting'),
-      'セラミックカップ' => array('slug' => 'seramikku-kappu', 'parent' => 'investment_casting'),
 
       // ジュエリー子カテゴリ
       'インジェクションワックス' => array('slug' => 'injection_wax', 'parent' => 'jewelry'),
@@ -58,11 +58,13 @@ if (!function_exists('fm_create_default_term')){
       '精密鋳造' => array('slug' => 'investment_casting'),
       'ジュエリー' => array('slug' => 'jewelry'),
       '新たな取り組み' => array('slug' => 'new_field'),
+
       // 砂系のタグ
       '鋳造模型' => array('slug' => 'casting_pattern'),
       '造型' => array('slug' => 'moulding'),
       '注湯' => array('slug' => 'casting'),
       '鋳物' => array('slug' => 'casting_metal_works'),
+
       // 型系のタグ
       '機械吐出' => array('slug' => 'close_contour_paste'),
       '切削加工' => array('slug' => 'cutting_process'),
@@ -71,6 +73,7 @@ if (!function_exists('fm_create_default_term')){
       '一般型取り用シリコーン' => array('slug' => 'silicone'),
       'インバー' => array('slug' => 'invar'),
       '特殊効果・造形用シリコーン' => array('slug' => 'special_effects'),
+
       // 精密系のタグ
       'ワックス各種' => array('slug' => 'waxes'),
       '離散型・パターン洗浄剤' => array('slug' => 'parting_powder'),
@@ -78,7 +81,12 @@ if (!function_exists('fm_create_default_term')){
       '耐火材' => array('slug' => 'refractories'),
       'スラリー添加剤・コア材' => array('slug' => 'slurry_additives_core_materials'),
       '鋳造（精密）' => array('slug' => 'casting_investment'),
+      '原材料各種' => array('slug' => 'master-heat-ingots', 'parent' => 'investment_casting'),
+      'セラミックフォームフィルター' => array('slug' => 'ceramic-foam-filters', 'parent' => 'investment_casting'),
+      'ルツボ' => array('slug' => 'crucibles', 'parent' => 'investment_casting'),
+      'セラミックカップ' => array('slug' => 'ceramic-cups', 'parent' => 'investment_casting'),
       '精密鋳造用設備' => array('slug' => 'equipment'),
+
       // ジュエリー系のタグ
       'インジェクションワックス' => array('slug' => 'injection_wax'),
       'カービングワックス' => array('slug' => 'carving_wax'),

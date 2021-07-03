@@ -6,8 +6,8 @@
 // サブメニュー内子要素1段あたりの個数(横幅固定のため)
 $menu-list-count-mold: 5;
 $menu-list-count-sand-casting: 3;
-$menu-list-count-investment-casting: 3;
-$menu-list-count-jewelry: 3;
+$menu-list-count-investment-casting: 6;
+$menu-list-count-jewelry: 4;
 $menu-list-count-new-field: 4;
 $menu-list-count-company: 2;
 $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
@@ -366,11 +366,11 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
                 margin: 0; //spメニュー内ではcontainerの横余白なし
               }
               .sub__title {
-                font-size: 30px;
+                font-size: 26px;
                 font-weight: 600;
                 white-space: nowrap;
                 @media (max-width: $pc) {
-                  font-size: px-to-vw(30);
+                  font-size: px-to-vw(26);
                   padding-top: px-to-vw(15);
                 }
               }
@@ -378,9 +378,9 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
                 display: flex;
                 flex-grow: 1;
                 flex-wrap: wrap;
-                margin-left: 150px;
+                margin-left: 90px;
                 @media (max-width: $pc) {
-                  margin-left: px-to-vw(150);
+                  margin-left: px-to-vw(90);
                 }
                 & > li {
                   margin-left: 10px;
@@ -398,11 +398,11 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
                     position: absolute;
                   }
                   & > a {
-                    font-size: 13px;
-                    margin-left: calc(13px / 2);
+                    font-size: 12px;
+                    margin-left: calc(12px / 2);
                     position: relative;
                     @media (max-width: $pc) {
-                      font-size: px-to-vw(14);
+                      font-size: px-to-vw(12);
                       margin-left: px-to-vw(7);
                     }
                     @media (max-width: $sp) {

@@ -13,7 +13,7 @@
         <div class="container">
           <?php if (have_posts()): while (have_posts()): the_post(); ?>
           <!-- content-header -->
-          <div class="content-header">
+          <div class="content-header news-content-header">
             <div class="thumbail">
               <p class="post-thumbnail"><img src="<?= fm_default_thumb('thumb-600'); ?>"</p>
             </div>
@@ -33,7 +33,7 @@
           </div>
           <!-- // content-header -->
           <!-- content-main -->
-          <div class="content-main">
+          <div class="content-main news-content-main">
             <?php the_content(); ?>
           </div>
           <!-- // content-main -->

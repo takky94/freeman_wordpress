@@ -102,7 +102,7 @@
                 class="c-white c-trans-red"><?php _e('鋳造', 'footer'); ?></a>
             </li>
             <li><a href="<?= home_url(); ?>/investment_casting/equipment"
-                class="c-white c-trans-red"><?php _e('設備', 'footer'); ?></a>
+                class="c-white c-trans-red"><?php _e('精密鋳造用設備', 'footer'); ?></a>
             </li>
             <li><a href="<?= home_url(); ?>/investment_casting/genzairyou"
                 class="c-white c-trans-red"><?php _e('原材料各種', 'footer'); ?></a>
