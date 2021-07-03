@@ -121,6 +121,13 @@ $root-path: "../..";
       padding: 1em;
       width: 100%;
     }
+
+    .error + input[type="text"],
+    .error + input[type="email"],
+    .error + textarea {
+      background: #fff8f8;
+      border-color: #fce0e0;
+    }
   }
 
   // 確認用チェックのブロック

@@ -1973,6 +1973,14 @@
   width: 100%;
 }
 
+.form-block .form-block__field .error + input[type="text"],
+.form-block .form-block__field .error + input[type="email"],
+.form-block .form-block__field .error + textarea,
+.form-block .form-block__field .error + .mwform-checkbox-field > input[type="checkbox"] + span::before {
+  background: #fff8f8;
+  border-color: #fce0e0;
+}
+
 .form-block.confirm {
   margin-top: 80px;
 }
