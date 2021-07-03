@@ -13,3 +13,4 @@ require_once 'library/functions/shortcode.php';
 require_once 'library/functions/perma-link.php';
 require_once 'library/functions/admin-menu.php';
 require_once 'library/functions/redirect_404.php';
+require_once 'library/functions/mwwpform-validation.php';

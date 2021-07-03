@@ -104,7 +104,6 @@
             <li><a href="<?= home_url(); ?>/investment_casting/equipment"
                 class="c-white c-trans-red"><?php _e('設備', 'footer'); ?></a>
             </li>
-            <?php /* ?>
             <li><a href="<?= home_url(); ?>/investment_casting/genzairyou"
                 class="c-white c-trans-red"><?php _e('原材料各種', 'footer'); ?></a>
             </li>
@@ -117,7 +116,6 @@
             <li><a href="<?= home_url(); ?>/investment_casting/seramikku-kappu"
                 class="c-white c-trans-red"><?php _e('セラミックカップ', 'footer'); ?></a>
             </li>
-            <?php  */ ?>
           </ul>
         </div>
         <!-- // sitemap__block -->
