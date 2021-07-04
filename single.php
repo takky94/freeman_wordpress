@@ -28,7 +28,7 @@
             <?php the_content(); ?>
             <div class="single-related">
               <div class="articles">
-                <h4><?php _e('関連NEWS', 'single'); ?></h4>
+                <h4 class="font-gothic"><?php _e('関連NEWS', 'single'); ?></h4>
                 <?= do_shortcode('[post category="'.$category -> slug.'" count="6" orderby="rand" layout="column"]'); ?>
                 <div class="view-all">
                   <a href="#" class="button-arrow button-line arrow-wrap">

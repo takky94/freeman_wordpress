@@ -236,9 +236,9 @@
 // 関連商品部分のスライダー
 .related-slider {
   @media (min-width: $tab) {
-    margin-left: -20px;
-    padding: 0 20px;
-    width: calc(100% + 40px);
+    margin-left: -30px;
+    padding: 0 30px;
+    width: calc(100% + 60px);
   }
   @media (max-width: $sp) {
     padding-bottom: calc(30px + 20px); // ナビゲーション分の余白
@@ -284,9 +284,9 @@
     }
     .swiper-button-prev,
     .swiper-button-next {
-      @media (min-width: $tab){
-      height: 60px;
-      width: 20px;
+      @media (min-width: $tab) {
+        height: 60px;
+        width: 20px;
       }
       @media (max-width: $sp) {
         bottom: 0;

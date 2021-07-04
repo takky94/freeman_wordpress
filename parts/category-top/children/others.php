@@ -69,7 +69,7 @@
 
 <!-- category-description-child-others -->
 <div class="category-description-child-others">
-  <h2 class="category-description-child-others__title"><?= $others_description_title; ?></h2>
+  <h2 class="category-description-child-others__title font-gothic"><?= $others_description_title; ?></h2>
   <p class="category-description-child-others__text"><?= $others_description_text; ?></p>
 </div>
 <!-- category-description-child-others -->
@@ -139,7 +139,7 @@
 <!-- category-related -->
 <div class="category-related">
   <div class="products">
-    <h4><?php _e($parent_category_name.'　その他カテゴリー', 'category-children-others'); ?></h4>
+    <h4 class="font-gothic"><?php _e($parent_category_name.'　その他カテゴリー', 'category-children-others'); ?></h4>
     <div class="pc__none">
       <?= do_shortcode('[product_by_tag tag="'.$parent_category_slug.','.$category_slug.'" layout="column" slider="4"]'); ?>
     </div>
@@ -148,7 +148,7 @@
     </div>
   </div>
   <div class="articles">
-    <h4><?php _e('関連NEWS', 'category-children-others'); ?></h4>
+    <h4 class="font-gothic"><?php _e('関連NEWS', 'category-children-others'); ?></h4>
     <?= do_shortcode('[post_by_tag tag="'.$parent_category_slug.','.$category_slug.'" count="6" layout="column"]'); ?>
     <div class="view-all">
       <a href="#" class="button-arrow button-line arrow-wrap">

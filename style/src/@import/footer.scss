@@ -261,6 +261,7 @@ $root-path: "../..";
             display: flex;
             flex-wrap: wrap;
             li {
+              padding-right: 1em;
               width: 50%;
             }
           } // .col

@@ -30,7 +30,7 @@
   <div class="category-children__bottom">
     <p class="category-children__bottom--category">INJECTION WAX</p>
     <div class="view-all">
-      <a href="#" class="button-arrow button-line arrow-wrap">
+      <a href="<?= home_url(); ?>/jewelry/injection_wax" class="button-arrow button-line arrow-wrap">
         <span class="font-robot bold">SEE MORE</span>
         <?php get_template_part('/parts/icon/arrow'); ?>
       </a>
@@ -55,7 +55,7 @@
   <div class="category-children__bottom">
     <p class="category-children__bottom--category">CARVING WAX</p>
     <div class="view-all">
-      <a href="#" class="button-arrow button-line arrow-wrap">
+      <a href="<?= home_url(); ?>/jewelry/carving_wax" class="button-arrow button-line arrow-wrap">
         <span class="font-robot bold">SEE MORE</span>
         <?php get_template_part('/parts/icon/arrow'); ?>
       </a>
@@ -80,7 +80,7 @@
   <div class="category-children__bottom">
     <p class="category-children__bottom--category">EMBEDDED MATERIAL</p>
     <div class="view-all">
-      <a href="#" class="button-arrow button-line arrow-wrap">
+      <a href="<?= home_url(); ?>/jewelry/investments" class="button-arrow button-line arrow-wrap">
         <span class="font-robot bold">SEE MORE</span>
         <?php get_template_part('/parts/icon/arrow'); ?>
       </a>
@@ -103,8 +103,9 @@
     </div>
   </div>
   <div class="category-children__bottom">
-    <p class="category-children__bottom--category">CARVING WAX</p>
+    <p class="category-children__bottom--category">SILICONE</p>
     <div class="view-all">
+      <?php /* 第三階層なし */ ?>
       <a href="#" class="button-arrow button-line arrow-wrap">
         <span class="font-robot bold">SEE MORE</span>
         <?php get_template_part('/parts/icon/arrow'); ?>
@@ -125,6 +126,7 @@
         <th>ST<br />(@23℃)</th>
         <th>Tear B<br />(N/mm)</th>
         <th>Vlsc<br />(cp)</th>
+        <th class="blank narrow-cell"></th>
       </tr>
     </thead>
     <tbody>
@@ -143,6 +145,11 @@
         <td>3h30'</td>
         <td>20,0</td>
         <td>7.5000</td>
+        <td class="narrow-cell">
+          <a href="#">
+            <div class="arrow arrow-blue"></div>
+          </a>
+        </td>
       </tr>
       <tr>
         <td class="sticky">
@@ -160,6 +167,11 @@
         <td>3h30'</td>
         <td>20,0</td>
         <td>7.5000</td>
+        <td class="narrow-cell">
+          <a href="#">
+            <div class="arrow arrow-blue"></div>
+          </a>
+        </td>
       </tr>
       <tr>
         <td class="sticky">
@@ -177,6 +189,11 @@
         <td>8h</td>
         <td>16,0</td>
         <td>25.000</td>
+        <td class="narrow-cell">
+          <a href="#">
+            <div class="arrow arrow-blue"></div>
+          </a>
+        </td>
       </tr>
       <tr>
         <td class="sticky">
@@ -192,6 +209,11 @@
         <td>2h30'</td>
         <td>15,0</td>
         <td>8.000</td>
+        <td class="narrow-cell">
+          <a href="#">
+            <div class="arrow arrow-blue"></div>
+          </a>
+        </td>
       </tr>
       <tr>
         <td class="sticky">
@@ -209,6 +231,11 @@
         <td>4h</td>
         <td>5,5</td>
         <td>18.000</td>
+        <td class="narrow-cell">
+          <a href="#">
+            <div class="arrow arrow-blue"></div>
+          </a>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -230,7 +257,7 @@
   <div class="category-children__bottom">
     <p class="category-children__bottom--category">MATT PRODUCTS</p>
     <div class="view-all">
-      <a href="#" class="button-arrow button-line arrow-wrap">
+      <a href="<?= home_url(); ?>/jewelry/matt_tool" class="button-arrow button-line arrow-wrap">
         <span class="font-robot bold">SEE MORE</span>
         <?php get_template_part('/parts/icon/arrow'); ?>
       </a>

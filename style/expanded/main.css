@@ -140,7 +140,7 @@ body.js-fixed {
 }
 
 .font-gothic {
-  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "メイリオ", Meiryo, "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
 }
 
 .font-serif {
@@ -249,6 +249,14 @@ hr {
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
   width: 0;
+}
+
+.arrow.arrow-blue {
+  background: #96a8be;
+}
+
+.arrow.arrow-blue::after {
+  border-color: transparent transparent transparent #96a8be;
 }
 
 .c-trans-red:hover .arrow {
@@ -1329,6 +1337,7 @@ html.en .eng-hidden {
         flex-wrap: wrap;
   }
   .footer .sitemap__block--menu.col li {
+    padding-right: 1em;
     width: 50%;
   }
 }

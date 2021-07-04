@@ -82,7 +82,7 @@
 <?php if ($posts_count > 0): ?>
 <!-- category-child-product-link -->
 <div class="category-child-product-link">
-  <h4><?php _e('該当商品', 'category-children-jewelry'); ?></h4>
+  <h4 class="font-gothic"><?php _e('該当商品', 'category-children-jewelry'); ?></h4>
   <ul class="wide">
     <?php
         if ($the_query -> have_posts()):
@@ -122,7 +122,7 @@
 <!-- category-related -->
 <div class="category-related">
   <div class="products">
-    <h4><?php _e('関連商品一覧', 'category-children-jewelry'); ?></h4>
+    <h4 class="font-gothic"><?php _e('関連商品一覧', 'category-children-jewelry'); ?></h4>
     <div class="pc__none">
       <?= do_shortcode('[product_by_tag tag="jewelry,'.$category_slug.'" layout="column" slider="4"]'); ?>
     </div>
@@ -131,7 +131,7 @@
     </div>
   </div>
   <div class="articles">
-    <h4><?php _e('関連NEWS', 'category-children-jewelry'); ?></h4>
+    <h4 class="font-gothic"><?php _e('関連NEWS', 'category-children-jewelry'); ?></h4>
     <?= do_shortcode('[post_by_tag tag="jewelry,'.$category_slug.'" count="6" layout="column"]'); ?>
     <div class="view-all">
       <a href="#" class="button-arrow button-line arrow-wrap">

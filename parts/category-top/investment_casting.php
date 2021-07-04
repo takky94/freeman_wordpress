@@ -17,7 +17,7 @@
 <!-- // category-lead -->
 <!-- category-process -->
 <div class="category-process">
-  <h3 class="center"><?php _e('精密鋳造の製造プロセス', 'category-investment-casting'); ?></h3>
+  <h3 class="center font-gothic"><?php _e('精密鋳造の製造プロセス', 'category-investment-casting'); ?></h3>
   <div class="category-process__block">
     <a href="#step01" class="category-process__block--box">
       <p class="label">STEP 01</p>
@@ -25,7 +25,7 @@
         <img class="investment_casting"
           src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/process-1.png" alt=""
           <?php fm_lazyload(); ?> />
-        <figcaption><?php _e('ワックス成形組立', 'category-investment-casting'); ?></figcaption>
+        <figcaption class="font-gothic"><?php _e('ワックス成形組立', 'category-investment-casting'); ?></figcaption>
       </figure>
     </a>
     <a href="#step02" class="category-process__block--box">
@@ -34,7 +34,7 @@
         <img class="investment_casting"
           src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/process-2.png" alt=""
           <?php fm_lazyload(); ?> />
-        <figcaption><?php _e('鋳型製作', 'category-investment-casting'); ?></figcaption>
+        <figcaption class="font-gothic"><?php _e('鋳型製作', 'category-investment-casting'); ?></figcaption>
       </figure>
     </a>
     <a href="#step03" class="category-process__block--box">
@@ -43,7 +43,7 @@
         <img class="investment_casting"
           src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/process-3.png" alt=""
           <?php fm_lazyload(); ?> />
-        <figcaption><?php _e('脱ロウ・焼成', 'category-investment-casting'); ?></figcaption>
+        <figcaption class="font-gothic"><?php _e('脱ロウ・焼成', 'category-investment-casting'); ?></figcaption>
       </figure>
     </a>
     <a href="#step04" class="category-process__block--box">
@@ -52,7 +52,7 @@
         <img class="investment_casting"
           src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/process-4.png" alt=""
           <?php fm_lazyload(); ?> />
-        <figcaption><?php _e('鋳造', 'category-investment-casting'); ?></figcaption>
+        <figcaption class="font-gothic"><?php _e('鋳造', 'category-investment-casting'); ?></figcaption>
       </figure>
     </a>
     <a href="#step05" class="category-process__block--box">
@@ -61,7 +61,7 @@
         <img class="investment_casting"
           src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/process-5.png" alt=""
           <?php fm_lazyload(); ?> />
-        <figcaption><?php _e('型バラシ・切断', 'category-investment-casting'); ?></figcaption>
+        <figcaption class="font-gothic"><?php _e('型バラシ・切断', 'category-investment-casting'); ?></figcaption>
       </figure>
     </a>
     <a href="#step06" class="category-process__block--box">
@@ -70,7 +70,7 @@
         <img class="investment_casting"
           src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/process-6.png" alt=""
           <?php fm_lazyload(); ?> />
-        <figcaption><?php _e('完成', 'category-investment-casting'); ?></figcaption>
+        <figcaption class="font-gothic"><?php _e('完成', 'category-investment-casting'); ?></figcaption>
       </figure>
     </a>
   </div>
@@ -154,7 +154,7 @@
           <p
             class="block__description"><?php _e('焼成炉で鋳型を焼結したのち、大気溶解炉または高周波誘導加熱真空溶解炉を使って、溶融した金属を鋳型湯口から流し込みます。金属の溶解には各種ルツボが用いられます。', 'category-investment-casting'); ?></p>
         </div>
-        <p class="block__image"><img class="investment_casting" src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/figure-3.png" alt=""
+        <p class="block__image"><img class="investment_casting" src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/figure-4.png" alt=""
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
@@ -175,7 +175,7 @@
           <p
             class="block__description"><?php _e('ノックアウトマシン、ウォータージェット等を使って、鋳物のまわりに付着しているシェル殻を除去します。鋳物中空部や穴・溝等に残った鋳型材やセラミックコアは、苛性リーチングにより除去します。', 'category-investment-casting'); ?></p>
         </div>
-        <p class="block__image"><img class="investment_casting" src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/figure-3.png" alt=""
+        <p class="block__image"><img class="investment_casting" src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/figure-5.png" alt=""
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
@@ -196,7 +196,7 @@
           <p
             class="block__description"><?php _e('湯口仕上げ後または熱処理後のロストワックス鋳造品に対し、表面仕上げをおこないます。製品に歪み・変形が生じた場合は、矯正を加えます。検査を経て出荷します。', 'category-investment-casting'); ?></p>
         </div>
-        <p class="block__image"><img class="investment_casting" src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/figure-3.png" alt=""
+        <p class="block__image"><img class="investment_casting" src="<?= get_template_directory_uri(); ?>/images/category/investment-casting/figure-6.png" alt=""
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">

@@ -54,7 +54,7 @@ body {
 }
 
 .font-gothic {
-  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "メイリオ", Meiryo, "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
 }
 
 .font-serif {
@@ -155,6 +155,13 @@ hr {
     top: -4px;
     transition: 0.3s all;
     width: 0;
+  }
+
+  &.arrow-blue {
+    background: $c-gray;
+    &::after {
+      border-color: transparent transparent transparent $c-gray;
+    }
   }
 }
 

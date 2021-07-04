@@ -75,7 +75,7 @@
     const swiperRelated = new Swiper(".js-related-slider", {
       slidesPerView: "auto",
       centeredSlides: true,
-      spaceBetween: 20,
+      spaceBetween: 30,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",

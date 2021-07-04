@@ -287,17 +287,16 @@ $root-path: "../..";
 .products-link {
   .column {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     @media (max-width: $sp) {
       flex-wrap: wrap;
     }
     .card-wrap {
       @media (min-width: $tab) {
+        margin-bottom: 20px;
+        margin-top: 20px;
         width: calc((100% - 80px) / 3);
         // 上段以外は上に余白
-        &:nth-child(n + 5) {
-          margin-top: 40px;
-        }
         // 左の列以外は左に余白
         &:not(:first-child):not(:nth-child(5)) {
           margin-left: 40px;

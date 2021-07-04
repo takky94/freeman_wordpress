@@ -381,6 +381,7 @@
 .category-children-header .entry-header__title, .category-children-header .contact-header .entry-header__titleSub, .contact-header .category-children-header .entry-header__titleSub {
   bottom: calc(21px + 45px + 14px);
   color: #000;
+  font-weight: 700;
 }
 
 .category-children-header .breadcrumb {

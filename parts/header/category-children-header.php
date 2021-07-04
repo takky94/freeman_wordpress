@@ -9,7 +9,7 @@
 ?>
 <header class="entry-header category-children-header category-children-header-<?= $category_slug; ?>">
   <div class="container">
-    <h1 class="entry-header__title">
+    <h1 class="entry-header__title font-gothic">
         <span><?= $category_name; ?></span>
         <?php if(ICL_LANGUAGE_CODE !== 'en'): ?>
         <?php if($category_slug === 'invar'): ?>
