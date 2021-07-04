@@ -6,7 +6,7 @@
 // サブメニュー内子要素1段あたりの個数(横幅固定のため)
 $menu-list-count-mold: 5;
 $menu-list-count-sand-casting: 3;
-$menu-list-count-investment-casting: 6;
+$menu-list-count-investment-casting: 5;
 $menu-list-count-jewelry: 4;
 $menu-list-count-new-field: 4;
 $menu-list-count-company: 2;
@@ -73,20 +73,20 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
     // 問い合わせボタンに対しての左側
     .header__content {
       // PCではflex縦並び
-      @media (min-width: $tab){
+      @media (min-width: $tab) {
         display: flex;
         flex-direction: column;
-        .header__list{
+        .header__list {
           height: calc(100% - 65px);
-          &>li{
+          & > li {
             height: 100%;
             vertical-align: top;
-            &>a{
-              height: 100%;
+            & > a {
               display: block;
-              &.active{
-                color: $c-main;
+              height: 100%;
+              &.active {
                 border-bottom: 3px solid $c-main;
+                color: $c-main;
               }
             }
           }
@@ -138,10 +138,10 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
             &:not(:first-child) {
               margin-left: 12px;
             }
-            &.active{
+            &.active {
               color: $c-main;
               // 赤い丸
-              &::before{
+              &::before {
                 background: $c-main;
                 border-radius: 50%;
                 content: "";

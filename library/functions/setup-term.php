@@ -35,7 +35,6 @@ if (!function_exists('fm_create_default_term')){
       '高機能バインダー' => array('slug' => 'specialty_binders', 'parent' => 'investment_casting'),
       '耐火材' => array('slug' => 'refractories', 'parent' => 'investment_casting'),
       'スラリー添加剤・コア材' => array('slug' => 'slurry_additives_core_materials', 'parent' => 'investment_casting'),
-      '鋳造' => array('slug' => 'casting', 'parent' => 'investment_casting'),
       '原材料各種' => array('slug' => 'master-heat-ingots', 'parent' => 'investment_casting'),
       'セラミックフォームフィルター' => array('slug' => 'ceramic-foam-filters', 'parent' => 'investment_casting'),
       'ルツボ' => array('slug' => 'crucibles', 'parent' => 'investment_casting'),

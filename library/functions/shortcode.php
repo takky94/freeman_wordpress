@@ -249,6 +249,7 @@ if (!function_exists('fm_get_the_product')){
 
 /*
 特定カテゴリへのリンクを生成
+カンマ区切りで複数指定可能/呼び出すアイキャッチ画像は「メインイメージ」を使用せずに個別に設定する
 使用ページ: category(mold, investment_casting)トップ
 例) [category category="mold" /]
 ********************************************************************/
@@ -287,13 +288,13 @@ if (!function_exists('fm_get_categories_link')){
 
 
       // 親カテゴリならサムネイルを,子カテゴリならスライダーなどカテゴリページで設定した画像を取得
-      if ($isParent === 0){
+      if ($isParent === 0){ // 親階層
         $thumbnail = get_template_directory_uri().'/images/category/post-card-thumbnail/'.$category_slug.'.png';
-      } else if ($parent_category_slug === "jewelry" && isset($contents['jewelry_img'])){
+      } else if ($parent_category_slug === "jewelry" && isset($contents['jewelry_img'])){ // ジュエリーの子階層
         $thumbnail = esc_html($contents['jewelry_img']);
         $thumbnail = replace_thumbnail_src($thumbnail, 'thumb-300');
-      } else if ($parent_category_slug !== "jewelry" && isset($contents['others_slider_img1'])){
-        $thumbnail = esc_html($contents['others_slider_img1']);
+      } else if ($parent_category_slug !== "jewelry" && isset($contents['others_img'])){ // ジュエリー以外のカテゴリの子階層
+        $thumbnail = esc_html($contents['others_img']);
         $thumbnail = replace_thumbnail_src($thumbnail, 'thumb-300');
       } else {
         $thumbnail = fm_default_thumb('thumb-300');

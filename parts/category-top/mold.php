@@ -4,7 +4,7 @@
     <h2 class="category-lead__text--headingEn font-robot">MOLD</h2>
     <p class="category-lead__text--headingSub"><?php _e('無限に広がる表現力', 'category-mold'); ?></p>
     <p
-      class="category-lead__text--description"><?php _e('デザインから試作開発、量産にいたる全ての領域で、モノづくりに必要な技術や製品を提案し、イメージの具体化や納期改善、コストダウンに貢献します。', 'category-mold'); ?></p>
+      class="category-lead__text--description"><?php _e('デザインから試作開発、量産にいたる全ての領域で、関連製品および技術サービスを提供します。長年培ってきた独自のネットワークに加え、三洋貿易グループの国内外拠点を活かして活動しています。', 'category-mold'); ?></p>
   </div>
   <div class="category-lead__image">
     <picture>

@@ -98,9 +98,6 @@
             <li><a href="<?= home_url(); ?>/investment_casting/slurry_additives_core_materials"
                 class="c-white c-trans-red"><?php _e('スラリー添加剤・コア材', 'footer'); ?></a>
             </li>
-            <li><a href="<?= home_url(); ?>/investment_casting/casting"
-                class="c-white c-trans-red"><?php _e('鋳造', 'footer'); ?></a>
-            </li>
             <li><a href="<?= home_url(); ?>/investment_casting/equipment"
                 class="c-white c-trans-red"><?php _e('精密鋳造用設備', 'footer'); ?></a>
             </li>

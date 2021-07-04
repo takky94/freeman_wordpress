@@ -116,7 +116,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[category category="refractories,slurry_additives_core_materials,equipment" /]'); ?>
+        <?= do_shortcode('[category category="specialty_binders,refractories,slurry_additives_core_materials,equipment" /]'); ?>
       </div>
     </div>
   </div>
@@ -158,7 +158,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[category /]'); ?>
+        <?= do_shortcode('[category category="master-heat-ingots,ceramic-foam-filters,crucibles,ceramic-cups" /]'); ?>
       </div>
     </div>
   </div>
