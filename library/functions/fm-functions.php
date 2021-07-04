@@ -25,30 +25,60 @@ if (!function_exists('fm_get_current_url')){
 // 現在のページのタイトルを取得する
 if (!function_exists('fm_get_page_title')){
   function fm_get_page_title(){
+    $site_name = get_bloginfo('name');
+    $sep = ' | ';
 
-    if (is_front_page() || is_home()){
-      $catchy = (get_bloginfo('description')) ? '｜' . get_bloginfo('description') : "";
-      return get_bloginfo('name') . $catchy;
-    }
-    if (is_category()){
-      $category = get_queried_object(); // 投稿がない場合用にget_the_categoryは使用しない
+    if (is_home() || is_front_page()){
+      $title = get_bloginfo('description').$sep.$site_name;
+      // カテゴリページ
+    } elseif (is_category()){
+      $category = get_queried_object();
+      $category_id = $category ->  term_id;
       $category_name = $category -> cat_name;
-      return $category_name . '｜' . get_bloginfo('name');
+      $title = $category_name;
+      if ($category -> category_parent !== 0){ // 親カテゴリを持つ場合
+        $ancestors = array_reverse(get_ancestors($category_id, 'category'));
+        foreach ($ancestors as $ancestor){
+          $title .= $sep.get_cat_name($ancestor);
+        } // foreach
+      }
+      $title .= $sep.$site_name;
+      // NEWS個別ページ
+    } elseif (is_singular('news')){
+      global $post;
+      $title = get_the_title();
+      $category = get_the_terms($post -> ID, 'news_category');
+      $category_name = $category[0] -> name;
+      $title .= $sep.$category_name.$sep.'鋳造用材料/製品の日本フリーマン';
+      // 投稿ページ
+    } elseif (is_single()){
+      global $post;
+      $title = get_the_title();
+      $category = get_the_category();
+      $category = $category[0];
+      $category_id = $category -> cat_ID;
+      $category_name = $category -> cat_name;
+      $title .= $sep.$category_name;
+      if ($category -> parent !== 0){ // 親カテゴリを持つ場合
+        $ancestors = array_reverse(get_ancestors($category_id, 'category'));
+        foreach ($ancestors as $ancestor){
+          $title .= $sep.get_cat_name($ancestor);
+        } // foreach
+      }
+      // NEWSのカテゴリごとのアーカイブページ
+    } elseif (is_tax()){
+      // $category = get_query_var('news_category');
+      // var_dump($category);
+      $title = 'test';
+      // NEWSのアーカイブページ
+    } elseif (is_archive()){
+      $title = 'NEWS一覧';
+    } elseif (is_search()){
+      $title = get_search_query().'の検索結果';
+    } elseif (is_404()){
+      $title = 'お探しのページは見つかりませんでした。';
     }
-    if (is_post_type_archive(array('news', 'product'))){
-      $post_obj = get_post_type_object(get_post_type());
-      return apply_filters('post_type_archive_title', $post_obj -> labels -> name ).'一覧';
-    }
-    if (is_archive()){
-      return get_the_archive_title();
-    }
-
-    global $post;
-    if ($post){ // 投稿ページ
-      return $post->post_title;
-    }
-    // 見つからなかった場合はサイトタイトルだけ返す
-    return get_bloginfo('name');
+    return $title;
   }
 }
 

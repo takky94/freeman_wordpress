@@ -82,6 +82,7 @@
 <?php if ($posts_count > 0): ?>
 <!-- category-child-product-link -->
 <div class="category-child-product-link">
+  <h4><?php _e('該当商品', 'category-children-jewelry'); ?></h4>
   <ul class="wide">
     <?php
         if ($the_query -> have_posts()):

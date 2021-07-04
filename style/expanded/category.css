@@ -3147,6 +3147,22 @@
   width: 920px;
 }
 
+.category-child-product-link h4 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 80px;
+}
+
+.category-child-product-link .wide {
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .category-child-product-link .wide {
+    margin-top: 20px;
+  }
+}
+
 @media (min-width: 769px) {
   .view-all .button-arrow {
     display: -webkit-box;

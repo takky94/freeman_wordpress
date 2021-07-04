@@ -856,6 +856,20 @@ $menu-animation-duration: 0.3s;
   margin: 80px auto 0;
   max-width: 100%;
   width: 920px;
+
+  h4 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 80px;
+  }
+
+  // ジュエリー子階層、「該当商品」との間に余白
+  .wide {
+    margin-top: 40px;
+    @media (max-width: $sp) {
+      margin-top: 20px;
+    }
+  }
 }
 
 .category-related-child {

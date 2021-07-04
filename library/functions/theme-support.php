@@ -45,6 +45,7 @@ function fm_theme_support(){
     if (is_home() || is_front_page()){
       unset($title['tagline']);
       $title['title'] = get_bloginfo('description').$sep.$site_name;
+      // カテゴリページ
     } elseif (is_category()){
       $category = get_queried_object();
       $category_id = $category ->  term_id;

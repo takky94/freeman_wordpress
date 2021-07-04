@@ -45,7 +45,7 @@ if (!function_exists('fm_create_default_term')){
       'インジェクションワックス' => array('slug' => 'injection_wax', 'parent' => 'jewelry'),
       'カービングワックス' => array('slug' => 'carving_wax', 'parent' => 'jewelry'),
       '埋没材' => array('slug' => 'investments', 'parent' => 'jewelry'),
-      'ワックス関連工具' => array('slug' => 'matt_tool', 'parent' => 'jewelry'),
+      'ワックス関連工具' => array('slug' => 'matt_tools', 'parent' => 'jewelry'),
     );
     loop_register_term($taxonomy_type, $taxonomy_sets);
 

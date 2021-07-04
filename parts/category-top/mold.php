@@ -100,7 +100,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[category category="invar,special_effects,investment_casting,sand_casting,jewelry" /]'); ?>
+        <?= do_shortcode('[category category="invar,sand_casting,investment_casting,jewelry,special_effects" /]'); ?>
       </div>
     </div>
   </div>
