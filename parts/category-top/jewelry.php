@@ -257,7 +257,7 @@
   <div class="category-children__bottom">
     <p class="category-children__bottom--category">MATT PRODUCTS</p>
     <div class="view-all">
-      <a href="<?= home_url(); ?>/jewelry/matt_tool" class="button-arrow button-line arrow-wrap">
+      <a href="<?= home_url(); ?>/jewelry/matt_tools" class="button-arrow button-line arrow-wrap">
         <span class="font-robot bold">SEE MORE</span>
         <?php get_template_part('/parts/icon/arrow'); ?>
       </a>

@@ -147,7 +147,7 @@
                 class="c-white c-trans-red"><?php _e('カービングワックス', 'footer'); ?></a></li>
             <li><a href="<?= home_url(); ?>/jewelry/investing_material"
                 class="c-white c-trans-red"><?php _e('埋没材', 'footer'); ?></a></li>
-            <li><a href="<?= home_url(); ?>/jewelry/matt_tool"
+            <li><a href="<?= home_url(); ?>/jewelry/matt_tools"
                 class="c-white c-trans-red"><?php _e('ワックス関連工具', 'footer'); ?></a></li>
           </ul>
         </div>
