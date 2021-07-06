@@ -31,7 +31,7 @@ if (!function_exists('fm_create_default_term')){
 
       // 精密鋳造子カテゴリ
       'ワックス各種' => array('slug' => 'waxes', 'parent' => 'investment_casting'),
-      '離型剤・パターン洗浄剤' => array('slug' => 'parting_powder', 'parent' => 'investment_casting'),
+      '離型剤・パターン洗浄剤' => array('slug' => 'mold_releases_pattern_wash', 'parent' => 'investment_casting'),
       '高機能バインダー' => array('slug' => 'specialty_binders', 'parent' => 'investment_casting'),
       '耐火材' => array('slug' => 'refractories', 'parent' => 'investment_casting'),
       'スラリー添加剤・コア材' => array('slug' => 'slurry_additives_core_materials', 'parent' => 'investment_casting'),
@@ -75,7 +75,7 @@ if (!function_exists('fm_create_default_term')){
 
       // 精密系のタグ
       'ワックス各種' => array('slug' => 'waxes'),
-      '離散型・パターン洗浄剤' => array('slug' => 'parting_powder'),
+      '離散型・パターン洗浄剤' => array('slug' => 'mold_releases_pattern_wash'),
       '高機能バインダー' => array('slug' => 'specialty_binders'),
       '耐火材' => array('slug' => 'refractories'),
       'スラリー添加剤・コア材' => array('slug' => 'slurry_additives_core_materials'),

@@ -61,7 +61,13 @@
       </div>
     </div>
     <!-- // category-child-slider -->
-    <p class="category-lead-child-others__slider--title font-robot"><?= fm_remove_underbar($category_slug); ?></p>
+    <p class="category-lead-child-others__slider--title font-robot">
+      <?php if($category_slug === 'mold_releases_pattern_wash'):  ?>
+      Mold Releases, Pattern Wash
+      <?php else: ?>
+      <?= fm_remove_underbar($category_slug); ?>
+      <?php endif; ?>
+    </p>
   </div>
   <!-- // category-lead-child-others__slider -->
 </div>

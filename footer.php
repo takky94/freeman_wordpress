@@ -86,8 +86,8 @@
           <ul class="sitemap__block--menu js-accordionContent">
             <li><a href="<?= home_url(); ?>/investment_casting/wax"
                 class="c-white c-trans-red"><?php _e('WAX', 'footer'); ?></a></li>
-            <li><a href="<?= home_url(); ?>/investment_casting/parting_powder"
-                class="c-white c-trans-red">離<?php _e('散型・洗浄剤', 'footer'); ?></a>
+            <li><a href="<?= home_url(); ?>/investment_casting/mold_releases_pattern_wash"
+                class="c-white c-trans-red">離<?php _e('離型剤・パターン洗浄剤', 'footer'); ?></a>
             </li>
             <li><a href="<?= home_url(); ?>/investment_casting/specialty_binders"
                 class="c-white c-trans-red"><?php _e('高機能バインダー', 'footer'); ?></a>
