@@ -177,42 +177,50 @@ Template Name: 会社概要
                     <td>
                       <ul class="links">
                         <li>
-                          <a href="https://www.sanyo-trading.co.jp/" class="c-trans-red">
+                          <a href="https://www.sanyo-trading.co.jp/" class="c-trans-red" target="_blank"
+                            rel="noopener noreferrer">
                             <?php _e('三洋貿易株式会社','page-company'); ?>
                           </a>
                         </li>
                         <li>
-                          <a href="https://www.sanyo-hotmelt.com/" class="c-trans-red">
+                          <a href="http://www.sanyo-trading-china.com/jp/index.html" class="c-trans-red" target="_blank"
+                            rel="noopener noreferrer">
                             <?php _e('三洋物産貿易(上海)有限公司','page-company'); ?>
                           </a>
                         </li>
                         <li>
-                          <a href="https://www.sanyo-si.com/" class="c-trans-red">
+                          <a href="https://www.sanyo-trading.co.jp/business/kikai_t/" class="c-trans-red"
+                            target="_blank" rel="noopener noreferrer">
                             <?php _e('三洋貿易科学機器事業部','page-company'); ?>
                           </a>
                         </li>
                         <li>
-                          <a href="https://www.sanyo-hotmelt.com/" class="c-trans-red">
+                          <a href="https://www.sanyo-hotmelt.com/" class="c-trans-red" target="_blank"
+                            rel="noopener noreferrer">
                             <?php _e('三洋ホットメルトシステム','page-company'); ?>
                           </a>
                         </li>
                         <li>
-                          <a href="http://www.sanyo-trading.co.th/en/" class="c-trans-red">
+                          <a href="http://www.sanyo-trading.co.th/" class="c-trans-red" target="_blank"
+                            rel="noopener noreferrer">
                             <?php _e('Sanyo Trading Asia Co., Ltd.','page-company'); ?>
                           </a>
                         </li>
                         <li>
-                          <a href="http://www.shin-toyo.jp/" class="c-trans-red">
+                          <a href="http://www.shin-toyo.jp/" class="c-trans-red" target="_blank"
+                            rel="noopener noreferrer">
                             <?php _e('新東洋機械工業株式会社 (工業用ポンプ)','page-company'); ?>
                           </a>
                         </li>
                         <li>
-                          <a href="http://www.cosmos-shoji.co.jp/" class="c-trans-red">
+                          <a href="http://www.cosmos-shoji.co.jp/" class="c-trans-red" target="_blank"
+                            rel="noopener noreferrer">
                             <?php _e('コスモス商事株式会社 (石油・ガス・海洋)','page-company'); ?>
                           </a>
                         </li>
                         <li>
-                          <a href="http://www.chem-inter.co.jp/" class="c-trans-red">
+                          <a href="http://www.chem-inter.co.jp/" class="c-trans-red" target="_blank"
+                            rel="noopener noreferrer">
                             <?php _e('株式会社ケムインター (精密化学品、エレクトロニクス)','page-company'); ?>
                           </a>
                         </li>
