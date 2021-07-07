@@ -307,18 +307,39 @@ $root-path: "../..";
 
   // 記事タイトル
   .entry-header__title {
+    bottom: calc(
+    #{$blank-bg-white-heightPc} + 21px + 54px + 20px + 14px
+    ); // ずらした白背景レイアウト部分 + ぱんくず + サブタイトルの高さ + サブタイトルの余白 + 余白
     color: #000;
+    @media (max-width: $sp) {
+      bottom: calc(
+      #{$blank-bg-white-heightSp} + 21px + 36px + 24px + 24px
+      ); // ずらした白背景レイアウト部分 + ぱんくず + サブタイトルの高さ + サブタイトルの余白 + 余白
+    }
   }
-  // お問い合わせはこちらから
+  // 必須項目は入力必須項目です〜
   .entry-header__titleSub {
-    bottom: calc(#{$blank-bg-white-heightPc} + 14px); // ずらした白背景レイアウト部分 + 余白
+    bottom: calc(#{$blank-bg-white-heightPc} + 21px + 20px); // ずらした白背景レイアウト部分 + ぱんくず + 余白
     color: #000;
     @extend .entry-header__title;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     @media (max-width: $sp) {
       bottom: calc(#{$blank-bg-white-heightSp} + 21px + 24px); // ずらした白背景レイアウト部分 + ぱんくず + 余白
       font-size: 12px;
+      padding-right: 10px;
+    }
+
+    .must-label {
+      background: $c-gray;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      margin-right: 3px;
+      padding: 2px;
+      @media (max-width: $sp) {
+        font-size: 10px;
+      }
     }
   }
 

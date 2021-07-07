@@ -65,6 +65,10 @@ if (!function_exists('fm_get_page_title')){
           $title .= $sep.get_cat_name($ancestor);
         } // foreach
       }
+      // 固定ページ
+    } elseif (is_page()){
+      global $post;
+      $title = get_the_title();
       // NEWSのカテゴリごとのアーカイブページ
     } elseif (is_tax()){
       // $category = get_query_var('news_category');

@@ -445,13 +445,22 @@
 
 .contact-header .entry-header__title,
 .contact-header .entry-header__titleSub {
+  bottom: calc( 120px + 21px + 54px + 20px + 14px);
   color: #000;
 }
 
+@media (max-width: 768px) {
+  
+  .contact-header .entry-header__title,
+  .contact-header .entry-header__titleSub {
+    bottom: calc( 50px + 21px + 36px + 24px + 24px);
+  }
+}
+
 .contact-header .entry-header__titleSub {
-  bottom: calc(120px + 14px);
+  bottom: calc(120px + 21px + 20px);
   color: #000;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -459,6 +468,22 @@
   .contact-header .entry-header__titleSub {
     bottom: calc(50px + 21px + 24px);
     font-size: 12px;
+    padding-right: 10px;
+  }
+}
+
+.contact-header .entry-header__titleSub .must-label {
+  background: #96a8be;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 3px;
+  padding: 2px;
+}
+
+@media (max-width: 768px) {
+  .contact-header .entry-header__titleSub .must-label {
+    font-size: 10px;
   }
 }
 
