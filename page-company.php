@@ -183,7 +183,7 @@ Template Name: 会社概要
                           </a>
                         </li>
                         <li>
-                          <a href="http://www.sanyo-trading-china.com/jp/index.html" class="c-trans-red" target="_blank"
+                          <a href="http://www.sanyo-trading-china.com/" class="c-trans-red" target="_blank"
                             rel="noopener noreferrer">
                             <?php _e('三洋物産貿易(上海)有限公司','page-company'); ?>
                           </a>
