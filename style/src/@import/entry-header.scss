@@ -290,13 +290,29 @@ $root-path: "../..";
 // お問合せ
 .contact-header {
   background: #fff;
+  height: $entry-header-height;
+  @media (max-width: $sp) {
+    height: $entry-header-height;
+  }
 
+  .container {
+    position: relative;
+  }
+
+  .breadcrumb {
+    bottom: 75px;
+    left: -40px;
+    @media (max-width: $sp) {
+      bottom: 20px;
+      left: -2.5%;
+    }
+  }
   &::before {
-    bottom: 65px;
+    bottom: 0;
     content: "CONTACT";
     opacity: 0.4;
     @media (max-width: $sp) {
-      bottom: calc(#{$blank-bg-white-heightSp} - 20px);
+      bottom: 0;
       opacity: 0.3;
     }
   }
@@ -307,25 +323,21 @@ $root-path: "../..";
 
   // 記事タイトル
   .entry-header__title {
-    bottom: calc(
-    #{$blank-bg-white-heightPc} + 21px + 54px + 20px + 14px
-    ); // ずらした白背景レイアウト部分 + ぱんくず + サブタイトルの高さ + サブタイトルの余白 + 余白
+    bottom: calc(75px + 55px); // サブタイトルの高さ + 余白
     color: #000;
     @media (max-width: $sp) {
-      bottom: calc(
-      #{$blank-bg-white-heightSp} + 21px + 36px + 24px + 24px
-      ); // ずらした白背景レイアウト部分 + ぱんくず + サブタイトルの高さ + サブタイトルの余白 + 余白
+      bottom: calc(41px + 69px); // サブタイトルの位置 + 余白
     }
   }
   // 必須項目は入力必須項目です〜
   .entry-header__titleSub {
-    bottom: calc(#{$blank-bg-white-heightPc} + 21px + 20px); // ずらした白背景レイアウト部分 + ぱんくず + 余白
+    bottom: calc(75px - 10px); // ぱんくずと同じ位置 - 二行あるので一行分の高さ引いてぱんくずと同じ位置感に
     color: #000;
     @extend .entry-header__title;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 400;
     @media (max-width: $sp) {
-      bottom: calc(#{$blank-bg-white-heightSp} + 21px + 24px); // ずらした白背景レイアウト部分 + ぱんくず + 余白
+      bottom: calc(20px + 21px); // ぱんくずと同じ位置 + ぱんくずの高さ
       font-size: 12px;
       padding-right: 10px;
     }
