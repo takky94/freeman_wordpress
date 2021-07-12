@@ -715,8 +715,12 @@ $menu-animation-duration: 0.3s;
     padding: 1em;
     text-align: center;
     &.narrow-cell {
-      min-width: none;
-      width: 40px;
+      cursor: pointer;
+      min-width: initial;
+      width: 60px;
+      a {
+        display: block;
+      }
     }
   }
   th {

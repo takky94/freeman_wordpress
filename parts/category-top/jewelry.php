@@ -104,13 +104,6 @@
   </div>
   <div class="category-children__bottom">
     <p class="category-children__bottom--category">SILICONE</p>
-    <div class="view-all">
-      <?php /* 第三階層なし */ ?>
-      <a href="#" class="button-arrow button-line arrow-wrap">
-        <span class="font-robot bold">SEE MORE</span>
-        <?php get_template_part('/parts/icon/arrow'); ?>
-      </a>
-    </div>
   </div>
 </div>
 <!-- // category-children -->
@@ -126,7 +119,7 @@
         <th>ST<br />(@23℃)</th>
         <th>Tear B<br />(N/mm)</th>
         <th>Vlsc<br />(cp)</th>
-        <th class="blank narrow-cell"></th>
+        <th class="blank narrow-cell arrow-wrap"></th>
       </tr>
     </thead>
     <tbody>
@@ -145,7 +138,7 @@
         <td>3h30'</td>
         <td>20,0</td>
         <td>7.5000</td>
-        <td class="narrow-cell">
+        <td class="narrow-cell arrow-wrap">
           <a href="#">
             <div class="arrow arrow-blue"></div>
           </a>
@@ -167,7 +160,7 @@
         <td>3h30'</td>
         <td>20,0</td>
         <td>7.5000</td>
-        <td class="narrow-cell">
+        <td class="narrow-cell arrow-wrap">
           <a href="#">
             <div class="arrow arrow-blue"></div>
           </a>
@@ -189,7 +182,7 @@
         <td>8h</td>
         <td>16,0</td>
         <td>25.000</td>
-        <td class="narrow-cell">
+        <td class="narrow-cell arrow-wrap">
           <a href="#">
             <div class="arrow arrow-blue"></div>
           </a>
@@ -209,7 +202,7 @@
         <td>2h30'</td>
         <td>15,0</td>
         <td>8.000</td>
-        <td class="narrow-cell">
+        <td class="narrow-cell arrow-wrap">
           <a href="#">
             <div class="arrow arrow-blue"></div>
           </a>
@@ -231,7 +224,7 @@
         <td>4h</td>
         <td>5,5</td>
         <td>18.000</td>
-        <td class="narrow-cell">
+        <td class="narrow-cell arrow-wrap">
           <a href="#">
             <div class="arrow arrow-blue"></div>
           </a>

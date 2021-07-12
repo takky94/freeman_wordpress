@@ -3053,8 +3053,14 @@
 
 .category-table th.narrow-cell,
 .category-table tr td.narrow-cell {
-  min-width: none;
-  width: 40px;
+  cursor: pointer;
+  min-width: initial;
+  width: 60px;
+}
+
+.category-table th.narrow-cell a,
+.category-table tr td.narrow-cell a {
+  display: block;
 }
 
 .category-table th {
