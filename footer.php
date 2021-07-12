@@ -48,7 +48,9 @@
         <!-- sitemap__block -->
         <div class="sitemap__block grow-1">
           <div class="js-accordion">
-            <div class="sitemap__block--title">試作・型材料</div>
+            <div class="sitemap__block--title">
+              <a class="c-white c-trans-red" href="<?= home_url(); ?>/mold">試作・型材料</a>
+            </div>
             <div class="sitemap__block--titleSub c-main font-robot">MOLD</div>
           </div>
           <ul class="sitemap__block--menu col js-accordionContent">
@@ -80,7 +82,9 @@
         <!-- sitemap__block -->
         <div class="sitemap__block shrink">
           <div class="js-accordion">
-            <div class="sitemap__block--title">精密鋳造</div>
+            <div class="sitemap__block--title">
+              <a class="c-white c-trans-red" href="<?= home_url(); ?>/investment_casting">精密鋳造</a>
+            </div>
             <div class="sitemap__block--titleSub c-main font-robot">INVESTMENT CASTING</div>
           </div>
           <ul class="sitemap__block--menu js-accordionContent">
@@ -119,7 +123,9 @@
         <!-- sitemap__block -->
         <div class="sitemap__block shrink">
           <div class="js-accordion">
-            <div class="sitemap__block--title">砂型鋳造</div>
+            <div class="sitemap__block--title">
+              <a class="c-white c-trans-red" href="<?= home_url(); ?>/sand_casting">砂型鋳造</a>
+            </div>
             <div class="sitemap__block--titleSub c-main font-robot">SAND CASTING</div>
           </div>
           <ul class="sitemap__block--menu js-accordionContent">
@@ -136,7 +142,9 @@
         <!-- sitemap__block -->
         <div class="sitemap__block shrink">
           <div class="js-accordion">
-            <div class="sitemap__block--title">ジュエリー</div>
+            <div class="sitemap__block--title">
+              <a class="c-white c-trans-red" href="<?= home_url(); ?>/jewelry">ジュエリー</a>
+            </div>
             <div class="sitemap__block--titleSub c-main font-robot">JUWELRY</div>
           </div>
           <ul class="sitemap__block--menu js-accordionContent">
@@ -155,8 +163,10 @@
         <!-- sitemap__block -->
         <div class="sitemap__block grow-2">
           <div class="js-accordion">
-            <div class="sitemap__block--title">新たな取り組み</div>
-            <div class="sitemap__block--titleSub c-main font-robot">MOLD</div>
+            <div class="sitemap__block--title">
+              <a class="c-white c-trans-red" href="<?= home_url(); ?>/new_field">新たな取り組み</a>
+            </div>
+            <div class="sitemap__block--titleSub c-main font-robot">NEW FIELD</div>
           </div>
           <ul class="sitemap__block--menu col js-accordionContent">
             <li><a href="#" class="c-white c-trans-red"><?php _e('消臭剤', 'footer'); ?></a></li>
