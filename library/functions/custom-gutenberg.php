@@ -1,6 +1,6 @@
 <?php
 
-add_action( 'init', 'fm_custom_gutenberg' );
+add_action('init', 'fm_custom_gutenberg');
 
 /*
 既存Gutenbergブロックのカスタマイズ

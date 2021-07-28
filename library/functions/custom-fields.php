@@ -330,11 +330,11 @@ if (!function_exists('fm_insert_jewelry_tags_fields')){
 </select>
 <p>粘度</p>
 <small>(カービングワックスページで使用)</small>
-<select name="jewelry_tags_cnc">
+<select name="jewelry_tags_viscosity">
 <option value="">未選択</option>
-<option {$is_selected -> i('jewelry_tags_cnc', '粘度高')} value="粘度高">高</option>
-<option {$is_selected -> i('jewelry_tags_cnc', '粘度中')} value="粘度中">中</option>
-<option {$is_selected -> i('jewelry_tags_cnc', '粘度低')} value="粘度低">低</option>
+<option {$is_selected -> i('jewelry_tags_viscosity', '粘度高')} value="粘度高">高</option>
+<option {$is_selected -> i('jewelry_tags_viscosity', '粘度中')} value="粘度中">中</option>
+<option {$is_selected -> i('jewelry_tags_viscosity', '粘度低')} value="粘度低">低</option>
 </select>
 <p>鋳造地金</p>
 <small>(埋没法ページで使用)</small>
@@ -388,6 +388,7 @@ if (!function_exists('fm_save_jewelry_tags_fields')){
     fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_hand_workability');
     fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_hardness');
     fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_cnc');
+    fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_viscosity');
     fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_casting_bullion');
     fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_prototype_material');
     fm_save_jewelry_tags_fields_value($post_id, 'jewelry_tags_is_low_dust');
