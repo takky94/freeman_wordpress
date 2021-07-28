@@ -64,10 +64,12 @@
             <?php endforeach; endif; wp_reset_postdata(); ?>
           </div>
         </div>
-        <a href="<?= get_post_type_archive_link('news'); ?>" class="hero__news--link c-white c-trans-red sp__none">
+        <a href="<?= get_post_type_archive_link('news'); ?>" class="hero__news--link c-white c-trans-red sp__none"
+          aria-label="<?php _e('ニュース一覧ページへ', 'top'); ?>">
           <?php _e('お知らせ一覧','top'); ?><?php get_template_part('/parts/icon/arrow'); ?>
         </a>
-        <a href="<?= get_post_type_archive_link('news'); ?>" class="hero__news--link c-main-bg pc__none">
+        <a href="<?= get_post_type_archive_link('news'); ?>" class="hero__news--link c-main-bg pc__none"
+          aria-label="<?php _e('ニュース一覧ページへ', 'top'); ?>">
           <?php get_template_part('/parts/icon/arrow'); ?>
         </a>
       </div>
@@ -97,7 +99,8 @@
               <div class="block">
                 <div class="block__left">
                   <div class="center">
-                    <img src="<?= get_template_directory_uri(); ?>/images/top/icon/company.svg" width="25" />
+                    <img src="<?= get_template_directory_uri(); ?>/images/top/icon/company.svg" width="25"
+                      alt="<?php _e('会社のアイコン', 'top'); ?>" />
                   </div>
                   <div class="mt-5 bold"><?php _e('','top'); ?>創立</div>
                 </div>
@@ -113,10 +116,12 @@
               <div class="block">
                 <div class="block__left">
                   <div class="center pc__none">
-                    <img src="<?= get_template_directory_uri(); ?>/images/top/icon/pin.svg" width="25" />
+                    <img src="<?= get_template_directory_uri(); ?>/images/top/icon/pin.svg" width="25"
+                      alt="<?php _e('ピンのアイコン', 'top'); ?>" />
                   </div>
                   <span class="bold"><?php _e('取引先','top'); ?></span>
-                  <img src="<?= get_template_directory_uri(); ?>/images/top/icon/pin.svg" width="20" class="sp__none" />
+                  <img src="<?= get_template_directory_uri(); ?>/images/top/icon/pin.svg" width="20"
+                    alt="<?php _e('会社のアイコン', 'top'); ?>" class="sp__none" />
                   <br class="sp__none" />
                   <div class="mt-5 bold sp-inlineBlock"><?php _e('企業国内外','top'); ?></div>
                 </div>
@@ -132,7 +137,8 @@
               <div class="block">
                 <div class="block__left">
                   <div class="center">
-                    <img src="<?= get_template_directory_uri(); ?>/images/top/icon/earth.svg" width="25" />
+                    <img src="<?= get_template_directory_uri(); ?>/images/top/icon/earth.svg" width="25"
+                      alt="<?php _e('地球のアイコン', 'top'); ?>" />
                   </div>
                   <div class="mt-5 bold"><?php _e('海外取引','top'); ?></div>
                 </div>
