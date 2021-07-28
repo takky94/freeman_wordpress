@@ -37,25 +37,6 @@ $wp-column-breakPoint: 599px;
   }
 }
 
-// 表のタイトルブロックが上に来る場合は表の上余白なし
-.wp-block-freeman-block-table-title {
-  & + .is-style-fm_table_details,
-  & + .is-style-fm_table_physical_property,
-  & + .wp-block-freeman-block-table,
-  & + .wp-block-freeman-block-table-details,
-  & + .wp-block-freeman-block-table-physical-property {
-    margin-top: 0;
-  }
-  & + .wp-block-freeman-block-table,
-  & + .wp-block-freeman-block-table-details,
-  & + .wp-block-freeman-block-table-physical-property {
-    .is-style-fm_table_physical_property,
-    .is-style-fm_table_physical_property {
-      margin-top: 0;
-    }
-  }
-}
-
 // スライダー(ユーザーによる投稿なので異なる画像サイズのものも同サイズで表示)
 .wp-block-freeman-block-slider {
   padding: 40px 0;
@@ -263,12 +244,44 @@ $wp-column-breakPoint: 599px;
 .wp-block-freeman-block-table-title {
   background: #707070;
   color: #fff;
+  margin-top: calc(#{$block-margin-bottomPc} / 2);
   padding: 1em 1.5em;
-  text-align: center;
+  @media (max-width: $sp) {
+    margin-top: calc(#{$block-margin-bottomSp} / 2);
+  }
 
   h4 {
     font-size: 16px;
     margin-top: 0;
+  }
+
+  &.alignleft {
+    text-align: left;
+  }
+  &.aligncenter {
+    text-align: center;
+  }
+  &.alignright {
+    text-align: right;
+  }
+}
+
+// 表のタイトルブロックが上に来る場合は表の上余白なし
+.wp-block-freeman-block-table-title {
+  & + .is-style-fm_table_details,
+  & + .is-style-fm_table_physical_property,
+  & + .wp-block-freeman-block-table,
+  & + .wp-block-freeman-block-table-details,
+  & + .wp-block-freeman-block-table-physical-property {
+    margin-top: 0;
+  }
+  & + .wp-block-freeman-block-table,
+  & + .wp-block-freeman-block-table-details,
+  & + .wp-block-freeman-block-table-physical-property {
+    .is-style-fm_table_physical_property,
+    .is-style-fm_table_physical_property {
+      margin-top: 0;
+    }
   }
 }
 
