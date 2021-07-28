@@ -17,7 +17,8 @@ if (!function_exists('fm_custom_gutenberg')){
         .is-style-fm_table_details td{
           border-left: none;
           border-right: none;
-          padding: 2em;
+          min-width: 100%;
+          padding: 1em;
         }
         .is-style-fm_table_details tr td:nth-child(1){
           background: #f5f5f5;
@@ -26,7 +27,7 @@ if (!function_exists('fm_custom_gutenberg')){
           white-space: nowrap;
           width: 15%;
         }
-        .is-style-fm_table_details tr td:nth-child(2){
+        .is-style-fm_table_details tr td:not(:nth-child(1)){
           font-size: 14px;
         }
         ',
@@ -41,9 +42,10 @@ if (!function_exists('fm_custom_gutenberg')){
         .is-style-fm_table_physical_property thead th{
           background: #888;
           color: #fff;
-          font-size: 20px;
+          font-size: 18px;
+          min-width: 110px;
           text-align: left;
-          padding: 0.5em 1.5em;
+          padding: 0.5em 1em;
         }
         .is-style-fm_table_physical_property tr td:nth-child(1){
           background: #f5f5f5;
@@ -54,7 +56,8 @@ if (!function_exists('fm_custom_gutenberg')){
         .is-style-fm_table_physical_property td{
           border-left: none;
           border-right: none;
-          padding: 2em 3em;
+          min-width: 110px;
+          padding: 2em 1em;
         }
         ',
       )
