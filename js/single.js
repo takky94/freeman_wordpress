@@ -6,7 +6,13 @@
     console.log("スライドの枚数: ", slideLength, "FROM single.js");
 
     // スライドが1枚以下の時の挙動変更
-    const loop = slideLength <= 1 ? false : true;
+    const loop = slideLength <= 1 ? false : true; // ループ無効
+    if (slideLength <= 1) {
+      // 枚数とページネーション無効
+      document.querySelector(".swiper-button-next").remove();
+      document.querySelector(".swiper-button-prev").remove();
+      document.querySelector(".swiper-pagination").remove();
+    }
 
     const swiper = new Swiper(".js-single-slider", {
       slidesPerView: "auto",
