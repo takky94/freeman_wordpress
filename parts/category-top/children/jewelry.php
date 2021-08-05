@@ -37,6 +37,7 @@
 
   // クエリ (同カテゴリの商品一覧)
   $args = array(
+    'posts_per_page' => -1, // 管理画面の「表示件数」設定無効
     'post_type' => 'post',
     'category_name' => $category_slug,
   );
