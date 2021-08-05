@@ -127,7 +127,7 @@
         <td rowspan="5" class="common"><?php _e('型取り用', 'category-jewelry'); ?></td>
         <td class="sticky">
           <figure>
-            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-1-3.jpg" alt=""
+            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-1-4.jpg" alt=""
               <?php fm_lazyload(); ?> />
             <figcaption>HT 33 Transparent</figcaption>
           </figure>
@@ -169,7 +169,7 @@
       <tr>
         <td class="sticky">
           <figure>
-            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-1-3.jpg" alt=""
+            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-3.jpg" alt=""
               <?php fm_lazyload(); ?> />
             <figcaption>HT 42 Grigio</figcaption>
           </figure>
@@ -191,7 +191,7 @@
       <tr>
         <td class="sticky">
           <figure>
-            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-4.jpg" alt=""
+            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-1-4.jpg" alt=""
               <?php fm_lazyload(); ?> />
             <figcaption>HT 45 Transparent</figcaption>
           </figure>
