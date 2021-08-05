@@ -21,7 +21,7 @@ $tabs-count: 7;
     }
     @media (min-width: $tab) {
       &::after {
-        background: center / contain url(../../images/archive/lineX.svg) no-repeat;
+        background: center / cover url(../../images/archive/lineX.svg) no-repeat;
         bottom: 0;
         content: "";
         display: inline-block;
@@ -76,6 +76,8 @@ $tabs-count: 7;
         }
       }
       @media (max-width: $sp) {
+        border-bottom: 1px solid $c-lightgray;
+
         &:first-of-type::before,
         &:nth-of-type(2n):not(.active)::after {
           background: center / contain url(../../images/archive/lineY.svg) no-repeat;
@@ -92,9 +94,6 @@ $tabs-count: 7;
         &:nth-of-type(2n):not(.active)::after {
           left: inherit;
           right: 0;
-        }
-        &:not(:first-of-type):not(:nth-of-type(2)) {
-          border-top: 1px solid $c-lightgray;
         }
       }
     }

@@ -610,7 +610,7 @@
 
 @media (min-width: 769px) {
   .archive-tabs ul::after {
-    background: center/contain url(../../images/archive/lineX.svg) no-repeat;
+    background: center/cover url(../../images/archive/lineX.svg) no-repeat;
     bottom: 0;
     content: "";
     display: inline-block;
@@ -675,6 +675,9 @@
 }
 
 @media (max-width: 768px) {
+  .archive-tabs ul li {
+    border-bottom: 1px solid #dce5f0;
+  }
   .archive-tabs ul li:first-of-type::before, .archive-tabs ul li:nth-of-type(2n):not(.active)::after {
     background: center/contain url(../../images/archive/lineY.svg) no-repeat;
     bottom: 0;
@@ -690,9 +693,6 @@
   .archive-tabs ul li:nth-of-type(2n):not(.active)::after {
     left: inherit;
     right: 0;
-  }
-  .archive-tabs ul li:not(:first-of-type):not(:nth-of-type(2)) {
-    border-top: 1px solid #dce5f0;
   }
 }
 
