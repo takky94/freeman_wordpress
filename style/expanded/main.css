@@ -355,6 +355,10 @@ html.en .eng-hidden {
   }
 }
 
+.header__logo .logo a img {
+  max-width: 280px;
+}
+
 @media (max-width: 768px) {
   .header__logo .logo a img {
     height: calc(100% / 2);

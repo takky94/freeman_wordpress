@@ -55,6 +55,7 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
           height: 100%;
         }
         img {
+          max-width: 280px;
           @media (max-width: $sp) {
             height: calc(100% / 2);
             margin: auto;
