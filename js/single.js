@@ -2,11 +2,17 @@
 
 {
   if (document.querySelector(".js-single-slider") !== null) {
-    const swiper1 = new Swiper(".js-single-slider", {
+    const slideLength = document.querySelectorAll(".js-single-slider .swiper-slide").length;
+    console.log("スライドの枚数: ", slideLength, "FROM single.js");
+
+    // スライドが1枚以下の時の挙動変更
+    const loop = slideLength <= 1 ? false : true;
+
+    const swiper = new Swiper(".js-single-slider", {
       slidesPerView: "auto",
       centeredSlides: true,
       spaceBetween: 15,
-      loop: true,
+      loop: loop,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
