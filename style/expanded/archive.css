@@ -599,6 +599,7 @@
   display: inline-block;
   font-size: 0;
   position: relative;
+  width: 100%;
 }
 
 @media (max-width: 1080px) {
@@ -627,12 +628,12 @@
   line-height: 90px;
   position: relative;
   text-align: center;
-  width: 170px;
+  width: calc(100% / 7);
 }
 
 @media (max-width: 1080px) {
   .archive-tabs ul li {
-    width: calc(100% / 6);
+    font-size: 13px;
   }
 }
 

@@ -4,7 +4,7 @@
 @import "./config";
 
 // タブの数
-$tabs-count: 6;
+$tabs-count: 7;
 
 .archive-tabs {
   @media (max-width: $sp) {
@@ -15,6 +15,7 @@ $tabs-count: 6;
     display: inline-block;
     font-size: 0; // li inline-blockの隙間埋める
     position: relative;
+    width: 100%;
     @media (max-width: $pc) {
       display: block;
     }
@@ -38,9 +39,9 @@ $tabs-count: 6;
       line-height: 90px;
       position: relative;
       text-align: center;
-      width: 170px;
+      width: calc(100% / #{$tabs-count});
       @media (max-width: $pc) {
-        width: calc(100% / #{$tabs-count});
+        font-size: 13px;
       }
       @media (max-width: $sp) {
         font-size: 12px;

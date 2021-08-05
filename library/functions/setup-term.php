@@ -102,6 +102,7 @@ if (!function_exists('fm_create_default_term')){
       '精密鋳造' => array('slug' => 'investment_casting', 'description' =>'00003__削除禁止__出力順番号'),
       'ジュエリー' => array('slug' => 'jewelry', 'description' =>'00004__削除禁止__出力順番号'),
       '環境商品' => array('slug' => 'new_field', 'description' =>'00005__削除禁止__出力順番号'),
+      'お知らせ' => array('slug' => 'news', 'description' =>'00006__削除禁止__出力順番号'),
     );
     loop_register_term($taxonomy_type, $taxonomy_sets);
 
