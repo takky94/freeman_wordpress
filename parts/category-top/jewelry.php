@@ -127,7 +127,7 @@
         <td rowspan="5" class="common"><?php _e('型取り用', 'category-jewelry'); ?></td>
         <td class="sticky">
           <figure>
-            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-1.png" alt=""
+            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-1-3.jpg" alt=""
               <?php fm_lazyload(); ?> />
             <figcaption>HT 33 Transparent</figcaption>
           </figure>
@@ -139,7 +139,7 @@
         <td>20,0</td>
         <td>7.5000</td>
         <td class="narrow-cell arrow-wrap">
-          <a href="#">
+          <a href="<?= home_url(); ?>/jewelry/ht-33-transparent/">
             <div class="arrow arrow-blue"></div>
           </a>
         </td>
@@ -147,7 +147,7 @@
       <tr>
         <td class="sticky">
           <figure>
-            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-2.png" alt=""
+            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-2.jpg" alt=""
               <?php fm_lazyload(); ?> />
             <figcaption>HT 33 Rosso</figcaption>
           </figure>
@@ -161,7 +161,7 @@
         <td>20,0</td>
         <td>7.5000</td>
         <td class="narrow-cell arrow-wrap">
-          <a href="#">
+          <a href="<?= home_url(); ?>/jewelry/ht-33-rosso/">
             <div class="arrow arrow-blue"></div>
           </a>
         </td>
@@ -169,7 +169,7 @@
       <tr>
         <td class="sticky">
           <figure>
-            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-3.png" alt=""
+            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-1-3.jpg" alt=""
               <?php fm_lazyload(); ?> />
             <figcaption>HT 42 Grigio</figcaption>
           </figure>
@@ -183,7 +183,7 @@
         <td>16,0</td>
         <td>25.000</td>
         <td class="narrow-cell arrow-wrap">
-          <a href="#">
+          <a href="<?= home_url(); ?>/jewelry/ht-42-grigio/">
             <div class="arrow arrow-blue"></div>
           </a>
         </td>
@@ -191,7 +191,7 @@
       <tr>
         <td class="sticky">
           <figure>
-            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-4.png" alt=""
+            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-4.jpg" alt=""
               <?php fm_lazyload(); ?> />
             <figcaption>HT 45 Transparent</figcaption>
           </figure>
@@ -203,7 +203,7 @@
         <td>15,0</td>
         <td>8.000</td>
         <td class="narrow-cell arrow-wrap">
-          <a href="#">
+          <a href="<?= home_url(); ?>/jewelry/ht-45-transparent/">
             <div class="arrow arrow-blue"></div>
           </a>
         </td>
@@ -211,7 +211,7 @@
       <tr>
         <td class="sticky">
           <figure>
-            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-5.png" alt=""
+            <img src="<?= get_template_directory_uri(); ?>/images/category/jewelry/table-5.jpg" alt=""
               <?php fm_lazyload(); ?> />
             <figcaption>ZA 50 LT</figcaption>
           </figure>
@@ -225,7 +225,7 @@
         <td>5,5</td>
         <td>18.000</td>
         <td class="narrow-cell arrow-wrap">
-          <a href="#">
+          <a href="<?= home_url(); ?>/jewelry/za-50-lt/">
             <div class="arrow arrow-blue"></div>
           </a>
         </td>
