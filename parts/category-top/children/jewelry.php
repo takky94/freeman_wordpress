@@ -69,6 +69,7 @@
 
 <!-- category-table-child-jewelry -->
 <div class="category-table category-table-child-jewelry">
+  <small class="category-lead-child-table__note">表の要素を選択いただくと、商品を絞り込んでいただけます。</small>
   <?php foreach($jewelry_tables as $table): ?>
   <?php if (is_null($table)) break; ?>
   <div class="category-lead-child-table__block">
@@ -102,7 +103,7 @@
       ?>
     <li class="card-wrap js-jewelry-item" data-tags="<?php if(!empty($tags)) echo implode(",", $tags); ?>">
       <a href="<?= get_the_permalink(); ?>"
-        class="post-card-product  post-card-content-trans-red post-card-thumbnail-animation">
+        class="post-card-product post-card-content-trans-red post-card-thumbnail-animation">
         <div class="thumbnail">
           <p class="post-thumbnail"><img src="<?= fm_default_thumb('thumb-600'); ?>" alt="" loading="lazy" /></p>
         </div>
@@ -114,6 +115,7 @@
       </a>
     </li>
     <?php endwhile; wp_reset_postdata(); endif; ?>
+    <li class="category-child-product-link__note js-note none">該当商品がございません。条件の変更をお試しください。</li>
   </ul>
 </div>
 <!-- // category-child-product-link -->

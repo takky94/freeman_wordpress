@@ -3164,7 +3164,7 @@
   max-width: 900px;
 }
 
-.category-table-child-jewelry .category-lead-child-table__block:not(:first-of-type) {
+.category-table-child-jewelry .category-lead-child-table__block {
   margin-top: 20px;
 }
 
@@ -3261,6 +3261,10 @@
   .category-child-product-link .wide {
     margin-top: 20px;
   }
+}
+
+.category-child-product-link__note.none {
+  display: none;
 }
 
 @media (min-width: 769px) {

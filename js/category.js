@@ -91,6 +91,8 @@
     const terms = [];
     const items = document.querySelectorAll(".js-jewelry-item");
     const buttons = document.querySelectorAll(".js-jewelry-item-term");
+    const note = document.querySelector(".js-note");
+
     for (const button of buttons) {
       button.addEventListener("click", function () {
         button.classList.toggle("active");
@@ -105,10 +107,9 @@
         console.log("terms: ", terms);
         // 絞り込み
         for (const item of items) {
-          console.log(item.getAttribute("data-tags"));
           // data-tagsなければ処理終了
           if (item.getAttribute("data-tags") === null) continue;
-          // 選択されてる条件ないなら全てのfadeOut取って処理終了
+          // 選択されてる条件ないなら全てのfadeOut取ってカウント0に戻して処理終了
           if (terms.length === 0 && item.classList.contains("fadeOut")) {
             item.classList.remove("fadeOut");
             continue;
@@ -125,6 +126,13 @@
             // 現在の条件と完全一致しててfadeOutクラスあるならfadeOutクラス外す
             item.classList.remove("fadeOut");
           }
+        }
+        // ヒット数が0なら注意書き表示
+        const hit = document.querySelectorAll(".js-jewelry-item.fadeOut");
+        if (hit.length === items.length && note.classList.contains("none")) {
+          note.classList.remove("none");
+        } else if (hit.length !== items.length && !note.classList.contains("none")) {
+          note.classList.add("none");
         }
       });
     }

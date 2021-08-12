@@ -810,7 +810,8 @@ $menu-animation-duration: 0.3s;
 .category-table-child-jewelry {
   margin: 30px auto 0;
   max-width: 900px;
-  .category-lead-child-table__block:not(:first-of-type) {
+
+  .category-lead-child-table__block {
     margin-top: 20px;
   }
 
@@ -902,6 +903,13 @@ $menu-animation-duration: 0.3s;
     margin-top: 40px;
     @media (max-width: $sp) {
       margin-top: 20px;
+    }
+  }
+
+  // 注意書き
+  &__note {
+    &.none {
+      display: none;
     }
   }
 }
