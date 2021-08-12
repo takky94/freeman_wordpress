@@ -95,7 +95,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[category category="waxes,parting_powder,equipment" /]'); ?>
+        <?= do_shortcode('[category category="waxes,mold_releases_pattern_wash,equipment" /]'); ?>
       </div>
     </div>
   </div>
