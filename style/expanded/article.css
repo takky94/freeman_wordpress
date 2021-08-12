@@ -1816,6 +1816,10 @@
   width: 100vw;
 }
 
+.mold-slider .swiper-slide {
+  max-width: 660px;
+}
+
 .mold-slider__box {
   height: 100%;
   bottom: 0;
@@ -1823,7 +1827,7 @@
   margin: auto;
   right: 0;
   top: 0;
-  max-width: 600px;
+  max-width: 660px;
   position: absolute;
   width: 60%;
 }

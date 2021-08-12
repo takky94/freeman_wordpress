@@ -53,10 +53,15 @@
 .mold-slider {
   margin: 0 calc(50% - 50vw);
   width: 100vw;
+
+  .swiper-slide {
+    max-width: 660px;
+  }
+
   &__box {
     height: 100%;
     @include centeringMargin;
-    max-width: 600px;
+    max-width: 660px;
     position: absolute;
     width: 60%;
     @media (max-width: $sp) {
