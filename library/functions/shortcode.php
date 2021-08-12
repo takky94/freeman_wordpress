@@ -7,6 +7,7 @@ add_shortcode("product_by_tag", "fm_get_product_by_tag");
 add_shortcode("the_products", "fm_get_the_products");
 add_shortcode("the_product", "fm_get_the_product");
 add_shortcode("category", "fm_get_categories_link");
+add_shortcode("child_categories", "fm_get_child_categories");
 
 
 // 記事の配列からリンク一覧のHTMLを生成(各ショートコードで使用)
@@ -313,6 +314,56 @@ if (!function_exists('fm_get_categories_link')){
 
     $str .= '</ul>';
     if ($categories_length > 3) $str .= '<div class="related-category-slider-navi"><div class="swiper-button-prev"></div><div class="swiper-button-next"></div></div>';
+    $str .= '</div>';
+
+    return $str;
+  }
+}
+
+
+/*
+親カテゴリが同じカテゴリ一覧
+ジュエリー以外の子カテゴリトップで使用
+parentにカテゴリID渡せばその子カテゴリ一覧を出力
+例) [child_categories parent="10" /]
+********************************************************************/
+if (!function_exists('fm_get_child_categories')){
+  function fm_get_child_categories($atts){
+    $parent_category_id = isset($atts['parent']) ? $atts['parent'] : null;
+    if ($parent_category_id === null) return '<p class="error-message">親カテゴリのIDを指定してください</p>';
+    $isSlider = isset($atts['slider']) ? intval($atts['slider']) : 0;
+
+    $children = get_categories(array(
+      'child_of' => $parent_category_id,
+      'title_li' => '',
+      'hide_empty' => 0, // 商品のないカテゴリも表示
+    ));
+
+    $categories_length = count($children); // ヒットした子カテゴリの個数
+
+    $str = '<div class="products-link swiper-container related-slider js-related-slider"><ul class="column swiper-wrapper" data-length="'.$categories_length.'">';
+
+    foreach($children as $i => $child){
+      $category_id = $child -> term_id; // ID
+      $category_name = $child -> name; // タイトル
+      $category_link = get_category_link($category_id); // リンク
+      $contents = get_option('fm_category_'.intval($category_id)); // メタデータ
+      $thumbnail_original = !empty($contents['others_img']) ? $contents['others_img'] : null;
+      $thumbnail = replace_thumbnail_src($thumbnail_original, 'thumb-300');
+
+      // スライダー有効&最初のループ、$isSliderで設定した数までのlist要素をwrapする
+      if($isSlider && $i + 1 == 1) $str .= '<div class="swiper-slide" data-role="eight-post-cards-wrapper">';
+
+      $str .= '<li class="card-wrap"><a href="'.$category_link.'"class="post-card post-card-product post-card-thumbnail-animation post-card-content-trans-red"><div class="thumbnail"><p class="post-thumbnail"><img src="'.$thumbnail.'" alt="" loading="lazy" /></p></div><div class="content"><p class="title">'.$category_name.'</p><p class="more font-robot c-main"><span>MORE</span></p></div></a></li>';
+
+      // スライダー有効&list要素が$isSliderで設定した数字の倍数であり、ループの最後でない時、$isSliderで設定した数までのlist要素のwrapperを閉じ、再びwrapperを出力
+      if($isSlider && (($i + 1) % $isSlider == 0) && $i + 1 !== $categories_length) $str .= '</div><div class="swiper-slide" data-role="eight-post-cards-wrapper">';
+      // スライダー有効&最後のループ時、$isSliderで指定した数までのlist要素のwrapper閉じる
+      if($isSlider && $i + 1 == $categories_length) $str .= '</div>';
+    }
+
+    $str .= '</ul>';
+    if($isSlider) $str .= '<div class="related-slider-navi"><div class="swiper-button-prev"></div><div class="swiper-button-next"></div></div>';
     $str .= '</div>';
 
     return $str;

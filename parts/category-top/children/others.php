@@ -3,6 +3,7 @@
   $category_id = $category -> term_id; // カテゴリーID
   $category_slug = $category -> slug; // カテゴリースラッグ
   $parent_category = get_category($category -> parent);
+  $parent_category_id = $parent_category -> term_id;
   $parent_category_slug = $parent_category -> slug;
   $parent_category_name = $parent_category -> name;
 
@@ -145,12 +146,12 @@
 <!-- category-related -->
 <div class="category-related">
   <div class="products">
-    <h4 class="font-gothic"><?php _e($parent_category_name.'　その他カテゴリー', 'category-children-others'); ?></h4>
+    <h4 class="font-gothic"><?php _e($parent_category_name.'　その他のカテゴリー', 'category-children-others'); ?></h4>
     <div class="pc__none">
-      <?= do_shortcode('[product_by_tag tag="'.$parent_category_slug.','.$category_slug.'" layout="column" slider="4"]'); ?>
+      <?= do_shortcode('[child_categories parent="'.$parent_category_id.'" slider="4"]'); ?>
     </div>
     <div class="sp__none">
-      <?= do_shortcode('[product_by_tag tag="'.$parent_category_slug.','.$category_slug.'" layout="column" slider="8"]'); ?>
+      <?= do_shortcode('[child_categories parent="'.$parent_category_id.'" slider="8"]'); ?>
     </div>
   </div>
   <div class="articles">
