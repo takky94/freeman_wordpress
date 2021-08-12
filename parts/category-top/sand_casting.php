@@ -128,7 +128,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[product_by_tag tag="sand_casting,casting_pattern" count="-1" layout="square" /]'); ?>
+        <?= do_shortcode('[product_by_tag tag="sand_casting,casting_pattern" count="-1" layout="square" slider="4"]'); ?>
       </div>
     </div>
   </div>
@@ -149,7 +149,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[product_by_tag tag="sand_casting,moulding" count="-1" layout="square" /]'); ?>
+        <?= do_shortcode('[product_by_tag tag="sand_casting,moulding" count="-1" layout="square" slider="4"]'); ?>
       </div>
     </div>
   </div>
@@ -171,7 +171,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[product_by_tag tag="sand_casting,casting" count="-1" layout="square" /]'); ?>
+        <?= do_shortcode('[product_by_tag tag="sand_casting,casting" count="-1" layout="square" slider="4"]'); ?>
       </div>
     </div>
   </div>
@@ -192,7 +192,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[product_by_tag tag="sand_casting,casting_metal_works" count="-1" layout="square" /]'); ?>
+        <?= do_shortcode('[product_by_tag tag="sand_casting,casting_metal_works" count="-1" layout="square" slider="4"]'); ?>
       </div>
     </div>
   </div>

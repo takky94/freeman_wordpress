@@ -95,7 +95,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[category category="waxes,mold_releases_pattern_wash,equipment" /]'); ?>
+        <?= do_shortcode('[category category="waxes,mold_releases_pattern_wash,equipment"]'); ?>
       </div>
     </div>
   </div>
@@ -116,7 +116,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[category category="specialty_binders,refractories,slurry_additives_core_materials,equipment" /]'); ?>
+        <?= do_shortcode('[category category="specialty_binders,refractories,slurry_additives_core_materials,equipment"]'); ?>
       </div>
     </div>
   </div>
@@ -137,7 +137,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[category category="equipment" /]'); ?>
+        <?= do_shortcode('[category category="equipment" slider="4"]'); ?>
       </div>
     </div>
   </div>
@@ -158,7 +158,7 @@
         <?php fm_lazyload(); ?>></p>
       </div>
       <div class="block__items">
-        <?= do_shortcode('[category category="master-heat-ingots,ceramic-foam-filters,crucibles,ceramic-cups" /]'); ?>
+        <?= do_shortcode('[category category="master-heat-ingots,ceramic-foam-filters,crucibles,ceramic-cups"]'); ?>
       </div>
     </div>
   </div>

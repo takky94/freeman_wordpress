@@ -1299,6 +1299,11 @@
       flex-wrap: wrap;
 }
 
+.products-link .square.swiper-wrapper {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
 @media (min-width: 769px) {
   .products-link .square .card-wrap {
     width: calc((100% - 90px) / 4);
