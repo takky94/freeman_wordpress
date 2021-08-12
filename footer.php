@@ -197,11 +197,53 @@
       <div class="affiliates">
         <h4><?php _e('関連会社', 'footer'); ?></h4>
         <ul class="companies">
-          <li><?php _e('三洋貿易株式会社', 'footer'); ?></li>
-          <li><?php _e('三洋貿易ホットメルトシステム', 'footer'); ?></li>
-          <li><?php _e('三洋物産貿易（上海）有限公司', 'footer'); ?></li>
-          <li><?php _e('Sanyo Trading Asia ©., Ltd.', 'footer'); ?></li>
-          <li><?php _e('新東洋機械工業株式会社', 'footer'); ?></li>
+          <li>
+            <a href="https://www.sanyo-trading.co.jp/" class="c-white c-trans-red" target="_blank"
+              rel="noopener noreferrer">
+              <?php _e('三洋貿易株式会社','footer'); ?>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.sanyo-trading-china.com/" class="c-white c-trans-red" target="_blank"
+              rel="noopener noreferrer">
+              <?php _e('三洋物産貿易(上海)有限公司','footer'); ?>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.sanyo-trading.co.jp/business/kikai_t/" class="c-white c-trans-red" target="_blank"
+              rel="noopener noreferrer">
+              <?php _e('三洋貿易科学機器事業部','footer'); ?>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.sanyo-hotmelt.com/" class="c-white c-trans-red" target="_blank"
+              rel="noopener noreferrer">
+              <?php _e('三洋ホットメルトシステム','footer'); ?>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.sanyo-trading.co.th/" class="c-white c-trans-red" target="_blank"
+              rel="noopener noreferrer">
+              <?php _e('Sanyo Trading Asia Co., Ltd.','footer'); ?>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.shin-toyo.jp/" class="c-white c-trans-red" target="_blank" rel="noopener noreferrer">
+              <?php _e('新東洋機械工業株式会社 (工業用ポンプ)','footer'); ?>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.cosmos-shoji.co.jp/" class="c-white c-trans-red" target="_blank"
+              rel="noopener noreferrer">
+              <?php _e('コスモス商事株式会社 (石油・ガス・海洋)','footer'); ?>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.chem-inter.co.jp/" class="c-white c-trans-red" target="_blank"
+              rel="noopener noreferrer">
+              <?php _e('株式会社ケムインター (精密化学品、エレクトロニクス)','footer'); ?>
+            </a>
+          </li>
         </ul>
       </div>
     </div>

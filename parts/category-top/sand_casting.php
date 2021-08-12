@@ -32,7 +32,7 @@
       <img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/menu-2.png" alt=""
         <?php fm_lazyload(); ?> />
       <ul class="category-menu__block--link">
-        <li><a href="#" class="c-main font-gothic"><?php _e('フィルター(Sic)', 'category-sand-casting'); ?></a></li>
+        <li><a href="#" class="c-main font-gothic"><?php _e('フィルター(SiC)', 'category-sand-casting'); ?></a></li>
         <li><a href="#" class="c-main font-gothic"><?php _e('押し湯スリーブ', 'category-sand-casting'); ?></a></li>
         <li><a href="#" class="c-main font-gothic"><?php _e('溶解材料', 'category-sand-casting'); ?></a></li>
         <li><a href="#" class="c-main font-gothic"><?php _e('陶管', 'category-sand-casting'); ?></a></li>
@@ -52,7 +52,7 @@
       </ul>
     </li>
     <li class="category-menu__block">
-      <p class="category-menu__block--title font-gothic c-main"><?php _e('精密鋳造', 'category-sand-casting'); ?></p>
+      <p class="category-menu__block--title font-gothic"><?php _e('精密鋳造', 'category-sand-casting'); ?></p>
       <img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/menu-4.png" alt=""
         <?php fm_lazyload(); ?> />
       <ul class="category-menu__block--link">
@@ -165,7 +165,7 @@
               class="block__title"><?php _e('注湯', 'category-sand-casting'); ?><span class="block__title--small"><?php _e('(キャスティング)', 'category-sand-casting'); ?></span></h3>
           </div>
           <p
-            class="block__description"><?php _e('取鍋（とりべ）を傾けて、溶けた金属を鋳型に注入する工程です。各種合金、SiC、Mｇなどの溶解用材料はもちろん、耐火材料、除滓材など、独自ルートで仕入れる特徴的な材料で原価低減に貢献いたします。', 'category-sand-casting'); ?></p>
+            class="block__description"><?php _e('取鍋（とりべ）を傾けて、溶けた金属を鋳型に注入する工程です。各種合金、SiC、Mgなどの溶解用材料はもちろん、耐火材料、除滓材など、独自ルートで仕入れる特徴的な材料で原価低減に貢献いたします。', 'category-sand-casting'); ?></p>
         </div>
         <p class="block__image"><img class="sand_casting" src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/figure-3.png" alt=""
         <?php fm_lazyload(); ?>></p>
