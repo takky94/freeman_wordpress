@@ -357,6 +357,10 @@ $root-path: "../..";
               min-width: 100px;
               width: 100px;
             }
+            @media (max-width: 480px) {
+              min-width: 80px;
+              width: 80px;
+            }
           }
         }
       }
@@ -604,10 +608,10 @@ $root-path: "../..";
     }
     &::before {
       background: linear-gradient(
-      top,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.9) 50%,
-      #fff 100%
+        top,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.9) 50%,
+        #fff 100%
       );
       bottom: 0;
       content: "";

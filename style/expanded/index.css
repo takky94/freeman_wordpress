@@ -659,6 +659,13 @@
   }
 }
 
+@media (max-width: 480px) {
+  .products-link .square .post-card-product .thumbnail .post-thumbnail img {
+    min-width: 80px;
+    width: 80px;
+  }
+}
+
 @media (min-width: 769px) {
   .products-link .square .post-card-product .content {
     display: -webkit-box;

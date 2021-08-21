@@ -366,6 +366,12 @@ html.en .eng-hidden {
   }
 }
 
+@media (max-width: 480px) {
+  .header__logo .logo a img {
+    height: 8vw;
+  }
+}
+
 .header__menu {
   display: -webkit-box;
   display: -ms-flexbox;

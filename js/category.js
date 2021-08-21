@@ -74,7 +74,7 @@
       slidesPerView: "auto",
       centeredSlides: true,
       // .related-category-sliderの余白に合わせる
-      spaceBetween: 20,
+      spaceBetween: 30,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",

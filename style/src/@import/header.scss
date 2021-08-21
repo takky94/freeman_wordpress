@@ -60,6 +60,9 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
             height: calc(100% / 2);
             margin: auto;
           }
+          @media (max-width: 480px) {
+            height: 8vw;
+          }
         }
       }
     }
