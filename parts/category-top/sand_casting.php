@@ -21,10 +21,14 @@
       <img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/menu-1.png" alt=""
         <?php fm_lazyload(); ?> />
       <ul class="category-menu__block--link">
-        <li><a href="#" class="c-main font-gothic"><?php _e('フィルター(ZrO2)', 'category-sand-casting'); ?></a></li>
-        <li><a href="#" class="c-main font-gothic"><?php _e('発熱スリーブ', 'category-sand-casting'); ?></a></li>
-        <li><a href="#" class="c-main font-gothic"><?php _e('陶管', 'category-sand-casting'); ?></a></li>
-        <li><a href="#" class="c-main font-gothic"><?php _e('ジルコン塗型', 'category-sand-casting'); ?></a></li>
+        <li><a href="<?= home_url(); ?>/sand_casting/lanik-zro2/"
+            class="c-main font-gothic"><?php _e('フィルター(ZrO2)', 'category-sand-casting'); ?></a></li>
+        <li><a href="<?= home_url(); ?>/sand_casting/断熱・発熱スリーブ%e3%80%80acefeed-in-acefeed-ex/"
+            class="c-main font-gothic"><?php _e('発熱スリーブ', 'category-sand-casting'); ?></a></li>
+        <li><a href="<?= home_url(); ?>/sand_casting/陶管・方案用ゲート/"
+            class="c-main font-gothic"><?php _e('陶管', 'category-sand-casting'); ?></a></li>
+        <li><a href="<?= home_url(); ?>/sand_casting/ジルコン塗型-zircon-based-coating/"
+            class="c-main font-gothic"><?php _e('ジルコン塗型', 'category-sand-casting'); ?></a></li>
       </ul>
     </li>
     <li class="category-menu__block">
@@ -32,11 +36,17 @@
       <img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/menu-2.png" alt=""
         <?php fm_lazyload(); ?> />
       <ul class="category-menu__block--link">
-        <li><a href="#" class="c-main font-gothic"><?php _e('フィルター(SiC)', 'category-sand-casting'); ?></a></li>
-        <li><a href="#" class="c-main font-gothic"><?php _e('押し湯スリーブ', 'category-sand-casting'); ?></a></li>
-        <li><a href="#" class="c-main font-gothic"><?php _e('溶解材料', 'category-sand-casting'); ?></a></li>
-        <li><a href="#" class="c-main font-gothic"><?php _e('陶管', 'category-sand-casting'); ?></a></li>
-        <li><a href="#" class="c-main font-gothic"><?php _e('除滓材', 'category-sand-casting'); ?></a></li>
+        <li><a href="<?= home_url(); ?>/sand_casting/lanik-sic/"
+            class="c-main font-gothic"><?php _e('フィルター(SiC)', 'category-sand-casting'); ?></a></li>
+        <!--ページ未登録-->
+        <li><a href="<?= home_url(); ?>/sand_casting/"
+            class="c-main font-gothic"><?php _e('押し湯スリーブ', 'category-sand-casting'); ?></a></li>
+        <li><a href="<?= home_url(); ?>/sand_casting/fused-silica/"
+            class="c-main font-gothic"><?php _e('溶解材料', 'category-sand-casting'); ?></a></li>
+        <li><a href="<?= home_url(); ?>/sand_casting/陶管・方案用ゲート/"
+            class="c-main font-gothic"><?php _e('陶管', 'category-sand-casting'); ?></a></li>
+        <li><a href="<?= home_url(); ?>/sand_casting/除滓材パーライト、slug-catch/"
+            class="c-main font-gothic"><?php _e('除滓材', 'category-sand-casting'); ?></a></li>
       </ul>
     </li>
     <li class="category-menu__block">
@@ -45,10 +55,17 @@
       <img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/menu-3.png" alt=""
         <?php fm_lazyload(); ?> />
       <ul class="category-menu__block--link">
-        <li><a href="#" class="c-main font-gothic"><?php _e('フィルター(AI)', 'category-sand-casting'); ?></a></li>
-        <li><a href="#" class="c-main font-gothic"><?php _e('塗型・コーティング材', 'category-sand-casting'); ?></a></li>
-        <li><a href="#" class="c-main font-gothic"><?php _e('アルミ原料', 'category-sand-casting'); ?></a></li>
-        <li><a href="#" class="c-main font-gothic"><?php _e('発熱保温材', 'category-sand-casting'); ?></a></li>
+        <!--ページ未登録-->
+        <li><a href="<?= home_url(); ?>/sand_casting/"
+            class="c-main font-gothic"><?php _e('フィルター(AI)', 'category-sand-casting'); ?></a></li>
+        <!--ページ未登録-->
+        <li><a href="<?= home_url(); ?>/sand_casting/"
+            class="c-main font-gothic"><?php _e('塗型・コーティング材', 'category-sand-casting'); ?></a></li>
+        <li><a href="<?= home_url(); ?>/sand_casting/アルミ原材料インゴット-aluminum-alloys/"
+            class="c-main font-gothic"><?php _e('アルミ原料', 'category-sand-casting'); ?></a></li>
+        <!--ページ未登録-->
+        <li><a href="<?= home_url(); ?>/sand_casting/"
+            class="c-main font-gothic"><?php _e('発熱保温材', 'category-sand-casting'); ?></a></li>
       </ul>
     </li>
     <li class="category-menu__block">
@@ -56,11 +73,19 @@
       <img src="<?= get_template_directory_uri(); ?>/images/category/sand-casting/menu-4.png" alt=""
         <?php fm_lazyload(); ?> />
       <ul class="category-menu__block--link">
-        <li><a href="#" class="c-main font-gothic"><?php _e('バインダー', 'category-sand-casting'); ?></a></li>
-        <li><a href="#" class="c-main font-gothic"><?php _e('砂・耐火材', 'category-sand-casting'); ?></a></li>
-        <li><a href="#" class="c-main font-gothic"><?php _e('セラミック中子', 'category-sand-casting'); ?></a></li>
-        <li><a href="#" class="c-main font-gothic"><?php _e('セラミックカップ', 'category-sand-casting'); ?></a></li>
-        <li><a href="#" class="c-main font-gothic"><?php _e('フィルター(ZrO2)', 'category-sand-casting'); ?></a></li>
+        <!--ページ未登録-->
+        <li><a href="<?= home_url(); ?>/sand_casting/"
+            class="c-main font-gothic"><?php _e('バインダー', 'category-sand-casting'); ?></a></li>
+        <!--ページ未登録-->
+        <li><a href="<?= home_url(); ?>/sand_casting/"
+            class="c-main font-gothic"><?php _e('砂・耐火材', 'category-sand-casting'); ?></a></li>
+        <li><a href="<?= home_url(); ?>/sand_casting/lanik-ceramic-core"
+            class="c-main font-gothic"><?php _e('セラミック中子', 'category-sand-casting'); ?></a></li>
+        <!--ページ未登録-->
+        <li><a href="<?= home_url(); ?>/sand_casting/"
+            class="c-main font-gothic"><?php _e('セラミックカップ', 'category-sand-casting'); ?></a></li>
+        <li><a href="<?= home_url(); ?>/sand_casting/lanik-zro2"
+            class="c-main font-gothic"><?php _e('フィルター(ZrO2)', 'category-sand-casting'); ?></a></li>
       </ul>
     </li>
   </ul>
