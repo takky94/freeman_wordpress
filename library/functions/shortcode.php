@@ -4,6 +4,7 @@ add_shortcode("post", "fm_get_articles");
 add_shortcode("post_by_tag", "fm_get_articles_by_tag");
 add_shortcode("product", "fm_get_product");
 add_shortcode("product_by_tag", "fm_get_product_by_tag");
+add_shortcode("sand_product_by_tag", "fm_get_sand_product_by_tag");
 add_shortcode("the_products", "fm_get_the_products");
 add_shortcode("the_product", "fm_get_the_product");
 add_shortcode("category", "fm_get_categories_link");
@@ -42,6 +43,9 @@ if (!function_exists('fm_get_output_string')) {
           break;
         case 'products':
           $str .= '<li class="card-wrap"><a href="'.$permalink.'" class="post-card post-card-product post-card-thumbnail-animation post-card-content-trans-red"><div class="thumbnail"><p class="post-thumbnail"><img src="'.fm_default_thumb('thumb-300', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><p class="title">'.$title.'</p><p class="more font-robot c-main"><span>MORE</span></p></div></a></li>';
+          break;
+        case 'sand_products':
+          $str .= '<li><a href="'.$permalink.'" class="c-main font-gothic">'.$title.'</a></li>';
           break;
         case 'product':
           $str .= '<li class="card-wrap"><a href="'.$permalink.'" class="post-card post-card-product post-card-thumbnail-animation post-card-content-trans-red"><div class="thumbnail"><p class="post-thumbnail"><img src="'.fm_default_thumb('thumb-300', $post_id).'" alt="" loading="lazy" /></p></div><div class="content"><time class="date font-robot" datetime="'.get_the_date('Y-m-d', $post_id).'">'.get_the_date('Y.m.d', $post_id).'</time><p class="title">'.$title.'</p></div></a></li>';
@@ -192,6 +196,40 @@ if (!function_exists('fm_get_product_by_tag')){
 
     $wrap_class = 'products-link';
     $type = 'products';
+
+    return fm_get_output_string($args, $wrap_class, $layout, $type, $isSlider);
+  }
+}
+
+/*
+特定タグの商品をループで任意の数表示()
+使用ページ: 砂型第二階層
+例) [sand_product_by_tag tag="mold" count="3" orderby="rand" layout="column" /]
+********************************************************************/
+if (!function_exists('fm_get_sand_product_by_tag')){
+  function fm_get_sand_product_by_tag($atts){
+    $tag = isset($atts['tag']) ? explode(',', $atts['tag']) : 'mold';
+    $count = isset($atts['count']) ? $atts['count'] : -1;
+    $orderby = isset($atts['orderby']) ? $atts['orderby'] : 'date';
+    $layout = isset($atts['layout']) ? $atts['layout'] : 'column';
+    $isSlider = "";
+
+    $args = array(
+      'post_type' => 'post',
+      'posts_per_page' => $count,
+      'orderby' => $orderby,
+      'tax_query' => array(
+        'relation' => 'OR',
+        array(
+          'taxonomy' => 'post_tag',
+          'field' => 'slug',
+          'terms' => $tag,
+        )
+      )
+    );
+
+    $wrap_class = 'category-menu__block--link';
+    $type = 'sand_products';
 
     return fm_get_output_string($args, $wrap_class, $layout, $type, $isSlider);
   }
