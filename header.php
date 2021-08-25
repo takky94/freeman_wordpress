@@ -143,7 +143,8 @@
                         class="c-white c-trans-red"><?php _e('ジルコン塗型', 'header'); ?></a>
                     </li>
                     <li>
-                      <a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('耐火材・原材料', 'header'); ?></a>
+                      <a href="<?= home_url(); ?>/investment_casting/refractories/その他耐火材各種"
+                        class="c-white c-trans-red"><?php _e('耐火材・原材料', 'header'); ?></a>
                     </li>
                     <li>
                       <a href="<?= home_url(); ?>/sand_casting/アルミ原材料インゴット-aluminum-alloys"
@@ -198,7 +199,6 @@
                       <a href="<?= home_url(); ?>/investment_casting/crucibles"
                         class="c-white c-trans-red"><?php _e('ルツボ', 'header'); ?></a>
                     </li>
-
                   </ul>
                 </div>
               </div>

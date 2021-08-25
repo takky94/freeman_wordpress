@@ -88,34 +88,37 @@
             <div class="sitemap__block--titleSub c-main font-robot">INVESTMENT CASTING</div>
           </div>
           <ul class="sitemap__block--menu js-accordionContent">
-            <li><a href="<?= home_url(); ?>/investment_casting/wax"
-                class="c-white c-trans-red"><?php _e('WAX', 'footer'); ?></a></li>
-            <li><a href="<?= home_url(); ?>/investment_casting/mold_releases_pattern_wash"
-                class="c-white c-trans-red">離<?php _e('離型剤・パターン洗浄剤', 'footer'); ?></a>
+            <li>
+              <a href="<?= home_url(); ?>/investment_casting/waxes"
+                class="c-white c-trans-red"><?php _e('ワックス各種','footer'); ?></a>
             </li>
-            <li><a href="<?= home_url(); ?>/investment_casting/specialty_binders"
-                class="c-white c-trans-red"><?php _e('高機能バインダー', 'footer'); ?></a>
+            <li>
+              <a href="<?= home_url(); ?>/investment_casting/mold_releases_pattern_wash"
+                class="c-white c-trans-red"><?php _e('離型剤・パターン洗浄剤','footer'); ?></a>
             </li>
-            <li><a href="<?= home_url(); ?>/investment_casting/refractories"
-                class="c-white c-trans-red"><?php _e('耐火材', 'footer'); ?></a>
+            <li>
+              <a href="<?= home_url(); ?>/investment_casting/specialty_binders"
+                class="c-white c-trans-red"><?php _e('高機能バインダー・濃縮液','footer'); ?></a>
             </li>
-            <li><a href="<?= home_url(); ?>/investment_casting/slurry_additives_core_materials"
-                class="c-white c-trans-red"><?php _e('スラリー添加剤・コア材', 'footer'); ?></a>
+            <li>
+              <a href="<?= home_url(); ?>/investment_casting/refractories"
+                class="c-white c-trans-red"><?php _e('耐火材','footer'); ?></a>
             </li>
-            <li><a href="<?= home_url(); ?>/investment_casting/equipment"
-                class="c-white c-trans-red"><?php _e('精密鋳造用設備', 'footer'); ?></a>
+            <li>
+              <a href="<?= home_url(); ?>/investment_casting/slurry_additives_core_materials"
+                class="c-white c-trans-red"><?php _e('スラリー添加剤・コア材料','footer'); ?></a>
             </li>
-            <li><a href="<?= home_url(); ?>/investment_casting/genzairyou"
+            <li>
+              <a href="<?= home_url(); ?>/investment_casting/equipment"
+                class="c-white c-trans-red"><?php _e('精密鋳造用設備','footer'); ?></a>
+            </li>
+            <li>
+              <a href="<?= home_url(); ?>/investment_casting/master-heat-ingots"
                 class="c-white c-trans-red"><?php _e('原材料各種', 'footer'); ?></a>
             </li>
-            <li><a href="<?= home_url(); ?>/investment_casting/seramikku-fomu-firuta"
-                class="c-white c-trans-red"><?php _e('セラミックフォームフィルター', 'footer'); ?></a>
-            </li>
-            <li><a href="<?= home_url(); ?>/investment_casting/rutubo"
+            <li>
+              <a href="<?= home_url(); ?>/investment_casting/crucibles"
                 class="c-white c-trans-red"><?php _e('ルツボ', 'footer'); ?></a>
-            </li>
-            <li><a href="<?= home_url(); ?>/investment_casting/seramikku-kappu"
-                class="c-white c-trans-red"><?php _e('セラミックカップ', 'footer'); ?></a>
             </li>
           </ul>
         </div>
@@ -148,7 +151,8 @@
                 class="c-white c-trans-red"><?php _e('ジルコン塗型', 'footer'); ?></a>
             </li>
             <li>
-              <a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('耐火材・原材料', 'footer'); ?></a>
+              <a href="<?= home_url(); ?>/investment_casting/refractories/その他耐火材各種"
+                class="c-white c-trans-red"><?php _e('耐火材・原材料', 'footer'); ?></a>
             </li>
             <li>
               <a href="<?= home_url(); ?>/sand_casting/アルミ原材料インゴット-aluminum-alloys"
@@ -175,7 +179,7 @@
             </li>
             <li><a href="<?= home_url(); ?>/jewelry/carving_wax"
                 class="c-white c-trans-red"><?php _e('カービングワックス', 'footer'); ?></a></li>
-            <li><a href="<?= home_url(); ?>/jewelry/investing_material"
+            <li><a href="<?= home_url(); ?>/jewelry/investments"
                 class="c-white c-trans-red"><?php _e('埋没材', 'footer'); ?></a></li>
             <li><a href="<?= home_url(); ?>/jewelry/matt_tools"
                 class="c-white c-trans-red"><?php _e('ワックス関連工具', 'footer'); ?></a></li>
