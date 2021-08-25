@@ -8,8 +8,8 @@ $root-path: "../..";
 
 // 全体
 body {
-  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Arial", "メイリオ",
-  Meiryo, sans-serif;
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+    "ヒラギノ角ゴ ProN W3", "Arial", "メイリオ", Meiryo, sans-serif;
 
   // ハンバーガーなどactive時にスクロールできなくする
   &.js-fixed {
@@ -54,12 +54,13 @@ body {
 }
 
 .font-gothic {
-  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "メイリオ", Meiryo, "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "メイリオ", Meiryo,
+    "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
 }
 
 .font-serif {
-  font-family: "Noto Serif JP", "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN",
-  sans-serif;
+  font-family: "Noto Serif JP", "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体",
+    "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
 }
 
 // レイアウト
@@ -131,6 +132,16 @@ hr {
 }
 .mt-20 {
   margin-top: 20px;
+}
+
+// アンカー位置調整
+.anchor-point {
+  padding-top: $header-height-pc;
+  margin-top: calc(-1 * #{$header-height-pc});
+  @media (max-width: $sp) {
+    padding-top: $header-height-sp;
+    margin-top: calc(-1 * #{$header-height-sp});
+  }
 }
 
 // 矢印

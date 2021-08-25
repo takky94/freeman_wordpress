@@ -258,7 +258,8 @@
     </div>
     <div class="section__background section__background--right">
       <!-- 試作・型材料 -->
-      <section class="mold js-scroll-fadeIn-block js-scroll-animation js-scrollSnap" id="mold">
+      <section class="mold js-scroll-fadeIn-block js-scroll-animation js-scrollSnap">
+        <div id="mold" class="anchor-point"></div>
         <div class="container">
           <!-- detail -->
           <div class="detail flex">
@@ -320,7 +321,8 @@
       </section>
       <!-- // 試作・型材料 -->
       <!-- 砂型鋳造用資材・原材料 -->
-      <section class="sand-casting js-scroll-fadeIn-block js-scroll-animation js-scrollSnap" id="sand-casting">
+      <section class="sand-casting js-scroll-fadeIn-block js-scroll-animation js-scrollSnap">
+        <div id="sand-casting" class="anchor-point"></div>
         <div class="container">
           <!-- detail -->
           <div class="detail detail-reverse flex">
@@ -390,8 +392,8 @@
     </div>
     <div class="section__background section__background--left">
       <!-- 精密鋳造用材料 -->
-      <section class="investment-casting js-scroll-fadeIn-block js-scroll-animation js-scrollSnap"
-        id="investment-casting">
+      <section class="investment-casting js-scroll-fadeIn-block js-scroll-animation js-scrollSnap">
+        <div id="investment-casting" class="anchor-point"></div>
         <div class="container">
           <!-- detail -->
           <div class="detail flex">
@@ -456,7 +458,8 @@
       </section>
       <!-- // 精密鋳造用材料 -->
       <!-- ジュエリーキャスト用副資材 -->
-      <section class="jewelry js-scroll-fadeIn-block js-scroll-animation js-scrollSnap" id="jewelry">
+      <section class="jewelry js-scroll-fadeIn-block js-scroll-animation js-scrollSnap">
+        <div id="jewelry" class="anchor-point"></div>
         <div class="container">
           <!-- detail -->
           <div class="detail detail-reverse flex">
@@ -519,7 +522,8 @@
       <!-- // ジュエリーキャスト用副資材 -->
     </div>
     <!-- 新たな取り組み -->
-    <section class="new-field js-scroll-fadeIn-block js-scroll-animation js-scrollSnap" id="new-field">
+    <section class="new-field js-scroll-fadeIn-block js-scroll-animation js-scrollSnap">
+      <div id="new-field" class="anchor-point"></div>
       <div class="container">
         <!-- detail -->
         <div class="detail flex">
