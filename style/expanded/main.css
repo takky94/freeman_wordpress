@@ -696,7 +696,7 @@ html.en .eng-hidden {
     position: relative;
   }
   .header__menu .header__content .header__list > li > a::before {
-    content: "▲";
+    content: "▼";
     position: absolute;
     right: 0;
     top: 50%;

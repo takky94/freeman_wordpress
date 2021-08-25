@@ -321,7 +321,7 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
               position: relative;
 
               &::before {
-                content: "▲";
+                content: "▼";
                 position: absolute;
                 right: 0;
                 top: 50%;

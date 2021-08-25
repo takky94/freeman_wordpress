@@ -129,13 +129,35 @@
             <div class="sitemap__block--titleSub c-main font-robot">SAND CASTING</div>
           </div>
           <ul class="sitemap__block--menu js-accordionContent">
-            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('鋳造用フィルター', 'footer'); ?></a>
+            <li>
+              <a href="<?= home_url(); ?>/investment_casting/ceramic-foam-filters"
+                class="c-white c-trans-red"><?php _e('セラミックフォームフィルター', 'footer'); ?></a>
             </li>
-            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('スリープ', 'footer'); ?></a></li>
-            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('方案用ゲート', 'footer'); ?></a></li>
-            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('非鉄用塗型', 'footer'); ?></a></li>
-            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('各種対火物', 'footer'); ?></a></li>
-            <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('アルミ原材料', 'footer'); ?></a></li>
+            <li>
+              <a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('押湯スリーブ', 'footer'); ?></a>
+            </li>
+            <li>
+              <a href="<?= home_url(); ?>/sand_casting/陶管・方案用ゲート"
+                class="c-white c-trans-red"><?php _e('湯口方案スリーブ・陶管', 'footer'); ?></a>
+            </li>
+            <li>
+              <a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('非鉄用塗型・コーティング材', 'footer'); ?></a>
+            </li>
+            <li>
+              <a href="<?= home_url(); ?>/sand_casting/ジルコン塗型-zircon-based-coating"
+                class="c-white c-trans-red"><?php _e('ジルコン塗型', 'footer'); ?></a>
+            </li>
+            <li>
+              <a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('耐火材・原材料', 'footer'); ?></a>
+            </li>
+            <li>
+              <a href="<?= home_url(); ?>/sand_casting/アルミ原材料インゴット-aluminum-alloys"
+                class="c-white c-trans-red"><?php _e('アルミ原材料', 'footer'); ?></a>
+            </li>
+            <li>
+              <a href="<?= home_url(); ?>/sand_casting/除滓材パーライト、slug-catch"
+                class="c-white c-trans-red"><?php _e('除滓材(パーライト)', 'footer'); ?></a>
+            </li>
           </ul>
         </div>
         <!-- // sitemap__block -->
@@ -169,13 +191,30 @@
             <div class="sitemap__block--titleSub c-main font-robot">NEW FIELD</div>
           </div>
           <ul class="sitemap__block--menu col js-accordionContent">
-            <li><a href="#" class="c-white c-trans-red"><?php _e('消臭剤', 'footer'); ?></a></li>
-            <li><a href="#" class="c-white c-trans-red"><?php _e('ミネラルキャスティング', 'footer'); ?></a></li>
-            <li><a href="#" class="c-white c-trans-red"><?php _e('CO2洗浄システム', 'footer'); ?></a></li>
-            <li><a href="#" class="c-white c-trans-red"><?php _e('ホットメルト', 'footer'); ?></a></li>
-            <li><a href="#" class="c-white c-trans-red"><?php _e('暑さ対策', 'footer'); ?></a></li>
-            <li><a href="#" class="c-white c-trans-red"><?php _e('電動アシスト台車', 'footer'); ?></a></li>
-            <li><a href="#" class="c-white c-trans-red"><?php _e('ベアリングセンサーシステム', 'footer'); ?></a></li>
+            <li>
+              <a href="<?= home_url(); ?>/new-filed/工業用消臭剤%e3%80%80エポリオン/"
+                class="c-white c-trans-red"><?php _e('工業用消臭剤','footer'); ?></a>
+            </li>
+            <li>
+              <a href="<?= home_url(); ?>/new-filed/ミネラルキャスティング"
+                class="c-white c-trans-red"><?php _e('ミネラルキャスティング','footer'); ?></a>
+            </li>
+            <li>
+              <a href="<?= home_url(); ?>/new-filed/co2クリーニング"
+                class="c-white c-trans-red"><?php _e('CO2洗浄システム','footer'); ?></a>
+            </li>
+            <li>
+              <a href="<?= home_url(); ?>/new-filed/プロ用ホットメルトシステム"
+                class="c-white c-trans-red"><?php _e('ホットメルト','footer'); ?></a>
+            </li>
+            <li>
+              <a href="<?= home_url(); ?>/new-filed/暑さ対策品"
+                class="c-white c-trans-red"><?php _e('暑さ対策品','footer'); ?></a>
+            </li>
+            <li>
+              <a href="<?= home_url(); ?>/new-filed/軸受診断センシングシステム"
+                class="c-white c-trans-red"><?php _e('電動アシスト台車','footer'); ?></a>
+            </li>
           </ul>
         </div>
         <!-- // sitemap__block -->
@@ -252,6 +291,7 @@
   <a href="#main" class="gototop js-gototop font-robot bold">PAGE TOP</a>
 </footer>
 <!-- // footer -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js" defer></script>
 <script src="<?= get_template_directory_uri(); ?>/library/js/smoothscroll.js" defer></script>
 <script src="<?= get_template_directory_uri(); ?>/js/main.js" defer></script>

@@ -103,13 +103,13 @@
                     <li><a href="<?= home_url(); ?>/mold/invar"
                         class="c-white c-trans-red"><?php _e('インバー','header'); ?></a></li>
                     <li><a href="<?= home_url(); ?>/sand_casting"
-                        class="c-white c-trans-red"><?php _e('量産砂型鋳造','header'); ?></a></li>
+                        class="c-white c-trans-red"><?php _e('砂型鋳造','header'); ?></a></li>
                     <li><a href="<?= home_url(); ?>/investment_casting"
-                        class="c-white c-trans-red"><?php _e('量産精密鋳造','header'); ?></a></li>
+                        class="c-white c-trans-red"><?php _e('精密鋳造','header'); ?></a></li>
                     <li><a href="<?= home_url(); ?>/jewelry"
-                        class="c-white c-trans-red"><?php _e('ジュエリー型シリコーン','header'); ?></a></li>
+                        class="c-white c-trans-red"><?php _e('ジュエリー','header'); ?></a></li>
                     <li><a href="<?= home_url(); ?>/mold/special_effects"
-                        class="c-white c-trans-red"><?php _e('特殊効果・造形用シリコーン','header'); ?></a>
+                        class="c-white c-trans-red"><?php _e('特殊造形用シリコーン','header'); ?></a>
                     </li>
                   </ul>
                 </div>
@@ -123,14 +123,35 @@
                   <p
                     class="sub__title c-white font-robot sp__none">S<span class="c-main">A</span>ND <br class="sp__none">CASTING</p>
                   <ul class="js-accordionContent">
-                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('鋳造用フィルター','header'); ?></a>
+                    <li>
+                      <a href="<?= home_url(); ?>/investment_casting/ceramic-foam-filters"
+                        class="c-white c-trans-red"><?php _e('セラミックフォームフィルター', 'header'); ?></a>
                     </li>
-                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('スリープ','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('方案用ゲート','header'); ?></a>
+                    <li>
+                      <a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('押湯スリーブ', 'header'); ?></a>
                     </li>
-                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('非鉄用塗型','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('各種対火物','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('アルミ原材料','header'); ?></a>
+                    <li>
+                      <a href="<?= home_url(); ?>/sand_casting/陶管・方案用ゲート"
+                        class="c-white c-trans-red"><?php _e('湯口方案スリーブ・陶管', 'header'); ?></a>
+                    </li>
+                    <li>
+                      <a href="<?= home_url(); ?>"
+                        class="c-white c-trans-red"><?php _e('非鉄用塗型・コーティング材', 'header'); ?></a>
+                    </li>
+                    <li>
+                      <a href="<?= home_url(); ?>/sand_casting/ジルコン塗型-zircon-based-coating"
+                        class="c-white c-trans-red"><?php _e('ジルコン塗型', 'header'); ?></a>
+                    </li>
+                    <li>
+                      <a href="<?= home_url(); ?>" class="c-white c-trans-red"><?php _e('耐火材・原材料', 'header'); ?></a>
+                    </li>
+                    <li>
+                      <a href="<?= home_url(); ?>/sand_casting/アルミ原材料インゴット-aluminum-alloys"
+                        class="c-white c-trans-red"><?php _e('アルミ原材料', 'header'); ?></a>
+                    </li>
+                    <li>
+                      <a href="<?= home_url(); ?>/sand_casting/除滓材パーライト、slug-catch"
+                        class="c-white c-trans-red"><?php _e('除滓材(パーライト)', 'header'); ?></a>
                     </li>
                   </ul>
                 </div>
@@ -145,30 +166,39 @@
                   <p
                     class="sub__title c-white font-robot sp__none">INVE<span class="c-main">S</span>TMENT <br class="sp__none">CASTING</p>
                   <ul class="js-accordionContent">
-                    <li><a href="<?= home_url(); ?>/investment_casting/waxes"
-                        class="c-white c-trans-red"><?php _e('ワックス各種','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/investment_casting/mold_releases_pattern_wash"
-                        class="c-white c-trans-red"><?php _e('離型剤・パターン洗浄剤','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/investment_casting/specialty_binders"
-                        class="c-white c-trans-red"><?php _e('高機能バインダー','header'); ?></a>
+                    <li>
+                      <a href="<?= home_url(); ?>/investment_casting/waxes"
+                        class="c-white c-trans-red"><?php _e('ワックス各種','header'); ?></a>
                     </li>
-                    <li><a href="<?= home_url(); ?>/investment_casting/refractories"
+                    <li>
+                      <a href="<?= home_url(); ?>/investment_casting/mold_releases_pattern_wash"
+                        class="c-white c-trans-red"><?php _e('離型剤・パターン洗浄剤','header'); ?></a>
+                    </li>
+                    <li>
+                      <a href="<?= home_url(); ?>/investment_casting/specialty_binders"
+                        class="c-white c-trans-red"><?php _e('高機能バインダー・濃縮液','header'); ?></a>
+                    </li>
+                    <li>
+                      <a href="<?= home_url(); ?>/investment_casting/refractories"
                         class="c-white c-trans-red"><?php _e('耐火材','header'); ?></a>
                     </li>
-                    <li><a href="<?= home_url(); ?>/investment_casting/slurry_additives_core_materials"
-                        class="c-white c-trans-red"><?php _e('スラリー添加剤・コア材','header'); ?></a>
+                    <li>
+                      <a href="<?= home_url(); ?>/investment_casting/slurry_additives_core_materials"
+                        class="c-white c-trans-red"><?php _e('スラリー添加剤・コア材料','header'); ?></a>
                     </li>
-                    <li><a href="<?= home_url(); ?>/investment_casting/master-heat-ingots"
-                        class="c-white c-trans-red"><?php _e('原材料各種', 'footer'); ?></a>
+                    <li>
+                      <a href="<?= home_url(); ?>/investment_casting/equipment"
+                        class="c-white c-trans-red"><?php _e('精密鋳造用設備','header'); ?></a>
                     </li>
-                    <li><a href="<?= home_url(); ?>/investment_casting/ceramic-foam-filters"
-                        class="c-white c-trans-red"><?php _e('セラミックフォームフィルター', 'footer'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/investment_casting/crucibles"
-                        class="c-white c-trans-red"><?php _e('ルツボ', 'footer'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/investment_casting/ceramic-cups"
-                        class="c-white c-trans-red"><?php _e('セラミックカップ', 'footer'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/investment_casting/equipment"
-                        class="c-white c-trans-red"><?php _e('精密鋳造用設備','header'); ?></a></li>
+                    <li>
+                      <a href="<?= home_url(); ?>/investment_casting/master-heat-ingots"
+                        class="c-white c-trans-red"><?php _e('原材料各種', 'header'); ?></a>
+                    </li>
+                    <li>
+                      <a href="<?= home_url(); ?>/investment_casting/crucibles"
+                        class="c-white c-trans-red"><?php _e('ルツボ', 'header'); ?></a>
+                    </li>
+
                   </ul>
                 </div>
               </div>
@@ -180,15 +210,22 @@
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">JE<span class="c-main">W</span>ELRY</p>
                   <ul class="js-accordionContent">
-                    <li><a href="<?= home_url(); ?>/jewelry/injection_wax"
-                        class="c-white c-trans-red"><?php _e('インジェクションワックス','header'); ?></a>
+                    <li>
+                      <a href="<?= home_url(); ?>/jewelry/injection_wax"
+                        class="c-white c-trans-red"><?php _e('インジェクションWAX','header'); ?></a>
                     </li>
-                    <li><a href="<?= home_url(); ?>/jewelry/carving_wax"
-                        class="c-white c-trans-red"><?php _e('カービングワックス','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/jewelry/investments"
-                        class="c-white c-trans-red"><?php _e('埋没材','header'); ?></a></li>
-                    <li><a href="<?= home_url(); ?>/jewelry/matt_tools"
-                        class="c-white c-trans-red"><?php _e('ワックス関連工具','header'); ?></a></li>
+                    <li>
+                      <a href="<?= home_url(); ?>/jewelry/carving_wax"
+                        class="c-white c-trans-red"><?php _e('カービングWAX','header'); ?></a>
+                    </li>
+                    <li>
+                      <a href="<?= home_url(); ?>/jewelry/investments"
+                        class="c-white c-trans-red"><?php _e('埋没材','header'); ?></a>
+                    </li>
+                    <li>
+                      <a href="<?= home_url(); ?>/jewelry/matt_tools"
+                        class="c-white c-trans-red"><?php _e('ツール関連','header'); ?></a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -200,13 +237,29 @@
                 <div class="container flex">
                   <p class="sub__title c-white font-robot sp__none">NE<span class="c-main">W</span> FIELD</p>
                   <ul class="js-accordionContent">
-                    <li><a href="#" class="c-white c-trans-red"><?php _e('消臭剤','header'); ?></a></li>
-                    <li><a href="#" class="c-white c-trans-red"><?php _e('ミネラルキャスティング','header'); ?></a></li>
-                    <li><a href="#" class="c-white c-trans-red"><?php _e('CO2洗浄システム','header'); ?></a></li>
-                    <li><a href="#" class="c-white c-trans-red"><?php _e('ホットメルト','header'); ?></a></li>
-                    <li><a href="#" class="c-white c-trans-red"><?php _e('暑さ対策','header'); ?></a></li>
-                    <li><a href="#" class="c-white c-trans-red"><?php _e('電動アシスト台車','header'); ?></a></li>
-                    <li class="grow"><a href="#" class="c-white c-trans-red"><?php _e('ベアリングセンサーシステム','header'); ?></a>
+                    <li>
+                      <a href="<?= home_url(); ?>/new-filed/工業用消臭剤%e3%80%80エポリオン/"
+                        class="c-white c-trans-red"><?php _e('工業用消臭剤','header'); ?></a>
+                    </li>
+                    <li>
+                      <a href="<?= home_url(); ?>/new-filed/ミネラルキャスティング"
+                        class="c-white c-trans-red"><?php _e('ミネラルキャスティング','header'); ?></a>
+                    </li>
+                    <li>
+                      <a href="<?= home_url(); ?>/new-filed/co2クリーニング"
+                        class="c-white c-trans-red"><?php _e('CO2洗浄システム','header'); ?></a>
+                    </li>
+                    <li>
+                      <a href="<?= home_url(); ?>/new-filed/プロ用ホットメルトシステム"
+                        class="c-white c-trans-red"><?php _e('ホットメルト','header'); ?></a>
+                    </li>
+                    <li>
+                      <a href="<?= home_url(); ?>/new-filed/暑さ対策品"
+                        class="c-white c-trans-red"><?php _e('暑さ対策品','header'); ?></a>
+                    </li>
+                    <li>
+                      <a href="<?= home_url(); ?>/new-filed/軸受診断センシングシステム"
+                        class="c-white c-trans-red"><?php _e('電動アシスト台車','header'); ?></a>
                     </li>
                   </ul>
                 </div>
