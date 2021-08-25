@@ -191,7 +191,7 @@
         <li><a href="<?= home_url(); ?>/news" class="c-white c-trans-red"><?php _e('お知らせ', 'footer'); ?></a></li>
         <li><a href="<?= home_url(); ?>/privacy_policy"
             class="c-white c-trans-red"><?php _e('個人情報保護方針', 'footer'); ?></a></li>
-        <li><a href="#" class="c-white c-trans-red"><?php _e('お問い合わせ', 'footer'); ?></a></li>
+        <li><a href="<?= home_url(); ?>/contact" class="c-white c-trans-red"><?php _e('お問い合わせ', 'footer'); ?></a></li>
       </ul>
       <p class="copyright font-robot">©2021 FREEMAAN JAPAN </p>
       <div class="affiliates">
@@ -249,7 +249,7 @@
     </div>
   </div>
   <!-- //information -->
-  <a href="#main" class="gototop js-gototop font-robot bold sp__none">PAGE TOP</a>
+  <a href="#main" class="gototop js-gototop font-robot bold">PAGE TOP</a>
 </footer>
 <!-- // footer -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js" defer></script>

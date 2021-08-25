@@ -154,7 +154,7 @@
             <!-- // lead__achivment -->
             <!-- lead__button -->
             <div class="lead__button">
-              <a href="#" class="button-arrow button-line arrow-wrap flex-center">
+              <a href="<?= home_url(); ?>/company" class="button-arrow button-line arrow-wrap flex-center">
                 <span><?php _e('社長ご挨拶・企業理念','top'); ?></span>
                 <?php get_template_part('/parts/icon/arrow'); ?>
               </a>
