@@ -30,7 +30,7 @@
           entry.target.classList.add("started");
 
           // 可視範囲時点でswiper発火
-          const targetClass = `.swiper-container-${entry.target.id}`;
+          const targetClass = `.swiper-container-${entry.target.firstElementChild.id}`;
           const slideShow = new Swiper(targetClass, {
             effect: "fade",
             autoplay: {

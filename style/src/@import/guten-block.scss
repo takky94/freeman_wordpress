@@ -2,7 +2,7 @@
 --------------------------------------------------------------------------------------------*/
 
 // style/compressed/main.min.cssからのrootへの相対
-$root-path: "../..";
+$root-path: '../..';
 $background-color: #f5f5f5;
 $border-color: #707070;
 $block-margin-bottomPc: 60px;
@@ -12,7 +12,7 @@ $block-margin-bottomSp: 40px;
 // そのブロックのデザイン切り替えするブレークポイントを設定する
 $wp-column-breakPoint: 599px;
 
-@import "./config";
+@import './config';
 
 // Wpの既存ブロック修正
 .wp-block-image img {
@@ -29,32 +29,32 @@ $wp-column-breakPoint: 599px;
 .wp-block-freeman-block-case-and-item,
 .wp-block-freeman-block-remarks,
 .wp-block-freeman-block-catalog-button {
-  margin-bottom: $block-margin-bottomPc;
   margin-top: calc(#{$block-margin-bottomPc} / 2);
+  margin-bottom: $block-margin-bottomPc;
   @media (max-width: $sp) {
-    margin-bottom: $block-margin-bottomSp;
     margin-top: calc(#{$block-margin-bottomSp} / 2);
+    margin-bottom: $block-margin-bottomSp;
   }
 }
 
 // スライダー(ユーザーによる投稿なので異なる画像サイズのものも同サイズで表示)
 .wp-block-freeman-block-slider {
-  padding: 40px 0;
   position: relative;
+  padding: 40px 0;
 
   // 横幅いっぱいのデザインにも使用できるようborderでなく擬似要素で
   &::before,
   &::after {
-    background: $c-lightgray;
-    content: "";
-    display: inline-block;
-    height: 1px;
-    left: 0;
-    margin: auto;
-    max-width: 1080px;
     position: absolute;
     right: 0;
+    left: 0;
+    display: inline-block;
     width: 100%;
+    max-width: 1080px;
+    height: 1px;
+    margin: auto;
+    background: $c-lightgray;
+    content: '';
   }
 
   &::before {
@@ -67,17 +67,17 @@ $wp-column-breakPoint: 599px;
 
   // スライダー部分
   .single-slider {
-    height: 40vw;
-    margin: 0 calc(50% - 50vw);
-    max-height: 380px;
     width: 100vw;
+    height: 40vw;
+    max-height: 380px;
+    margin: 0 calc(50% - 50vw);
 
     &__box {
-      height: 100%;
-      @include centeringMargin;
-      max-width: 600px;
       position: absolute;
       width: 60%;
+      max-width: 600px;
+      height: 100%;
+      @include centeringMargin;
       @media (max-width: $sp) {
         width: 80%;
       }
@@ -85,8 +85,8 @@ $wp-column-breakPoint: 599px;
 
     .swiper-button-next,
     .swiper-button-prev {
-      background: #fff;
       position: absolute;
+      background: #fff;
     }
 
     .swiper-button-prev {
@@ -99,21 +99,21 @@ $wp-column-breakPoint: 599px;
 
     .swiper-button-prev,
     .swiper-button-next {
-      height: 60px;
       width: 20px;
+      height: 60px;
 
       &::after {
         color: #000;
-        font-size: 10px;
         font-weight: bold;
+        font-size: 10px;
       }
     }
   }
 }
 
 .wp-block-embed.is-type-video {
-  background: #f5f5f5;
   padding: 60px 5px;
+  background: #f5f5f5;
   @media (max-width: $sp) {
     padding: 10px;
   }
@@ -122,18 +122,18 @@ $wp-column-breakPoint: 599px;
     text-align: center;
   }
   iframe {
-    height: 420px;
-    max-width: 720px;
     width: 100%;
+    max-width: 720px;
+    height: 420px;
     @media (max-width: $sp) {
       height: 280px;
     }
   }
 
   figcaption {
-    margin-left: auto;
-    margin-right: auto;
     max-width: 720px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -143,29 +143,29 @@ $wp-column-breakPoint: 599px;
     width: 100%;
   }
   tr {
-    border-bottom: 1px solid $border-color;
     border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
   }
   tr td {
-    border-left: none;
-    border-right: none;
     min-width: 100px;
     padding: 2em 1em;
+    border-right: none;
+    border-left: none;
     @media (max-width: $sp) {
       padding: 0.5em;
     }
   }
   tr td:nth-child(1) {
-    background: $background-color;
-    color: #0e0e0e;
-    font-size: 16px;
-    font-weight: 500;
     max-width: 15%;
+    color: #0e0e0e;
+    font-weight: 500;
+    font-size: 16px;
     text-align: center;
+    background: $background-color;
     @media (max-width: $sp) {
-      font-size: 14px;
-      max-width: 25%;
       width: 25%;
+      max-width: 25%;
+      font-size: 14px;
     }
   }
 }
@@ -177,15 +177,15 @@ $wp-column-breakPoint: 599px;
   }
 
   thead th {
-    font-size: 16px;
     padding: 0.5em 1.5em;
+    font-size: 16px;
     text-align: left;
   }
   tr td {
     padding: 2em 1.5em;
     &:nth-child(1) {
-      font-size: 16px;
       font-weight: 500;
+      font-size: 16px;
       text-align: left;
     }
     &:nth-child(2) {
@@ -201,32 +201,32 @@ $wp-column-breakPoint: 599px;
   }
 
   thead th {
-    background: #888;
-    color: #fff;
-    font-size: 18px;
     min-width: 110px;
     padding: 0.5em 1em;
+    color: #fff;
+    font-size: 18px;
     text-align: left;
+    background: #888;
     @media (max-width: $sp) {
       font-size: 16px;
     }
   }
   tr {
-    border-bottom: 1px solid $border-color;
     border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
   }
   tr td {
-    border-left: none;
-    border-right: none;
     min-width: 110px;
     padding: 2em 1em;
+    border-right: none;
+    border-left: none;
     &:nth-child(1) {
-      background: $background-color;
-      color: #0e0e0e;
-      font-size: 16px;
-      font-weight: 500;
-      text-align: center;
       width: 20%;
+      color: #0e0e0e;
+      font-weight: 500;
+      font-size: 16px;
+      text-align: center;
+      background: $background-color;
       @media (max-width: $sp) {
         font-size: 14px;
       }
@@ -242,17 +242,17 @@ $wp-column-breakPoint: 599px;
 
 // テーブルのタイトル
 .wp-block-freeman-block-table-title {
-  background: #707070;
-  color: #fff;
   margin-top: calc(#{$block-margin-bottomPc} / 2);
   padding: 1em 1.5em;
+  color: #fff;
+  background: #707070;
   @media (max-width: $sp) {
     margin-top: calc(#{$block-margin-bottomSp} / 2);
   }
 
   h4 {
-    font-size: 16px;
     margin-top: 0;
+    font-size: 16px;
   }
 
   &.alignleft {
@@ -297,8 +297,8 @@ $wp-column-breakPoint: 599px;
 
 // 導入事例
 .wp-block-freeman-block-case {
-  background: $background-color;
   padding: 40px;
+  background: $background-color;
   @media (max-width: $sp) {
     padding: 20px;
   }
@@ -308,15 +308,15 @@ $wp-column-breakPoint: 599px;
   }
 
   p {
-    line-height: 1.8;
     margin-top: 15px;
+    line-height: 1.8;
   }
 }
 
 // 導入事例/商品
 .wp-block-freeman-block-case-and-item {
-  background: $background-color;
   padding: 40px;
+  background: $background-color;
   @media (max-width: $sp) {
     padding: 20px;
   }
@@ -328,8 +328,8 @@ $wp-column-breakPoint: 599px;
   h4,
   h5,
   h6 {
-    font-weight: 500;
     margin-top: 0;
+    font-weight: 500;
   }
   p {
     margin-top: 15px;
@@ -357,8 +357,8 @@ $wp-column-breakPoint: 599px;
 
 // 備考
 .wp-block-freeman-block-remarks {
-  background: $background-color;
   padding: 40px;
+  background: $background-color;
   @media (max-width: $sp) {
     padding: 20px;
   }
@@ -368,13 +368,22 @@ $wp-column-breakPoint: 599px;
   }
 
   p {
-    background: #fff;
-    line-height: 1.8;
     margin-top: 25px;
     padding: 1.5em;
+    line-height: 1.8;
+    background: #fff;
     @media (max-width: $sp) {
       margin-top: 10px;
       padding: 1em;
     }
   }
+}
+
+// 個人情報保護方針
+.page-id-175 .content-main {
+  margin-top: 0;
+}
+.page-id-175 .content-main p {
+  margin-bottom: 32px;
+  line-height: 2;
 }

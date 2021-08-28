@@ -4,21 +4,21 @@
 --------------------------------------------------------------------------------------------*/
 
 // style/compressed/main.min.cssからのrootへの相対
-$root-path: "../..";
+$root-path: '../..';
 $menu-animation-duration: 0.3s;
 
-@import "./@import/config";
-@import "./@import/button";
-@import "./@import/entry-header";
-@import "./@import/post-card";
-@import "./@import/swiper";
+@import './@import/config';
+@import './@import/button';
+@import './@import/entry-header';
+@import './@import/post-card';
+@import './@import/swiper';
 
 // タイトル部分
 
 .category-lead {
-  align-items: center;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   margin-bottom: 110px;
 
   &__text {
@@ -41,10 +41,10 @@ $menu-animation-duration: 0.3s;
 
   &__image {
     img {
-      margin-left: auto;
+      width: 100%;
       // margin-right: -60px;
       max-width: 600px;
-      width: 100%;
+      margin-left: auto;
 
       @media (max-width: $pc) {
         margin-right: -10px;
@@ -56,22 +56,23 @@ $menu-animation-duration: 0.3s;
   } // __image
 
   &__text {
-    background: top right / contain url(#{$root-path}/images/common/geometric-pattern.svg) no-repeat;
+    background: top right / contain
+      url(#{$root-path}/images/common/geometric-pattern.svg) no-repeat;
 
     &--heading {
       &En {
-        font-size: 72px;
         font-weight: bold;
+        font-size: 72px;
         line-height: 1;
         @media (max-width: $sp) {
           @include sp-font-vw(100);
         }
       }
       &Sub {
-        font-size: 30px;
-        font-weight: 600;
-        line-height: 1.8;
         margin-top: 60px;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 1.8;
         @media (max-width: $sp) {
           @include sp-font-vw(40);
           margin-top: 1.5em;
@@ -79,8 +80,8 @@ $menu-animation-duration: 0.3s;
       }
     }
     &--description {
-      line-height: 2;
       margin-top: 30px;
+      line-height: 2;
       @media (max-width: $sp) {
         margin-top: 1.5em;
       }
@@ -115,17 +116,17 @@ $menu-animation-duration: 0.3s;
       border-bottom: 1px solid $c-lightgray;
 
       &--title {
-        font-size: 40px;
         font-weight: 700;
+        font-size: 40px;
       }
       &--text {
-        line-height: 1.8;
         margin-top: 35px;
+        line-height: 1.8;
       }
       &--subTitle {
-        font-size: 12px;
-        font-weight: 300;
         margin-top: 24px;
+        font-weight: 300;
+        font-size: 12px;
         text-transform: uppercase;
       }
     }
@@ -136,12 +137,12 @@ $menu-animation-duration: 0.3s;
     justify-content: space-between;
 
     &__slider {
-      border-bottom: 1px solid $c-gray;
       width: 100%;
+      border-bottom: 1px solid $c-gray;
       &--title {
-        font-size: 12px;
-        font-weight: 300;
         margin-top: 24px;
+        font-weight: 300;
+        font-size: 12px;
         text-transform: uppercase;
       }
     }
@@ -150,27 +151,27 @@ $menu-animation-duration: 0.3s;
 
 // 子カテゴリトップのcategory-description-child-others
 .category-description-child-others {
-  margin: 80px auto 20px;
   max-width: 920px;
+  margin: 80px auto 20px;
 
   &__title {
-    border-bottom: 1px solid $c-lightgray;
     font-weight: 700;
     line-height: 2;
+    border-bottom: 1px solid $c-lightgray;
   }
   &__text {
-    line-height: 1.8;
     margin-top: 25px;
+    line-height: 1.8;
   }
 } // .category-description-child-others
 
 // 子カテゴリの動画エリア
 .category-movie-child-others {
-  background: #f5f5f5;
-  margin: 80px auto 0;
   max-width: 920px;
+  margin: 80px auto 0;
   padding: 40px 70px;
   text-align: center;
+  background: #f5f5f5;
   @media (max-width: $sp) {
     padding: 10px;
   }
@@ -180,8 +181,8 @@ $menu-animation-duration: 0.3s;
   }
 
   &__caption {
-    font-weight: 100;
     margin-top: 1em;
+    font-weight: 100;
     text-align: left;
   }
 } // .category-description
@@ -189,22 +190,22 @@ $menu-animation-duration: 0.3s;
 // 上下にライン
 
 .category-borderY {
-  padding: 40px 0;
   position: relative;
+  padding: 40px 0;
 
   // 横幅いっぱいのデザインにも使用できるようborderでなく擬似要素で
   &::before,
   &::after {
-    background: $c-lightgray;
-    content: "";
-    display: inline-block;
-    height: 1px;
-    left: 0;
-    margin: auto;
-    max-width: 1080px;
     position: absolute;
     right: 0;
+    left: 0;
+    display: inline-block;
     width: 100%;
+    max-width: 1080px;
+    height: 1px;
+    margin: auto;
+    background: $c-lightgray;
+    content: '';
   }
   &::before {
     top: 0;
@@ -218,18 +219,18 @@ $menu-animation-duration: 0.3s;
 
 .category-menu {
   & > ul {
-    align-items: flex-start;
     display: flex;
+    align-items: flex-start;
     @media (max-width: $sp) {
       flex-direction: column;
     }
   }
   &__block {
-    border: 1px solid $c-lightgray;
+    position: relative;
     display: flex;
     flex-direction: column;
-    position: relative;
     width: calc((100% - (25px * 3)) / 4);
+    border: 1px solid $c-lightgray;
     @media (max-width: $sp) {
       width: 100%;
     }
@@ -243,20 +244,20 @@ $menu-animation-duration: 0.3s;
       }
     }
     &::before {
-      background: #000;
-      content: "";
-      display: inline-block;
-      height: 3px;
-      left: 50%;
       position: absolute;
       top: -2px;
-      transform: translateX(-50%);
+      left: 50%;
+      display: inline-block;
       width: 30px;
+      height: 3px;
+      background: #000;
+      transform: translateX(-50%);
+      content: '';
     }
 
     &--title {
-      font-weight: bold;
       margin: 20px 15px 0;
+      font-weight: bold;
       &Small {
         font-size: 12px;
       }
@@ -266,15 +267,15 @@ $menu-animation-duration: 0.3s;
       margin: 15px 15px 0;
 
       @media (max-width: $sp) {
-        margin: auto;
         max-width: 300px;
+        margin: auto;
       }
     }
 
     &--link {
-      background: #f4f5f8;
       margin: 20px 2px 2px;
       padding: 13px 13px 18px 13px;
+      background: #f4f5f8;
       li {
         display: inline;
         font-size: 14px;
@@ -282,9 +283,9 @@ $menu-animation-duration: 0.3s;
         &:not(:nth-child(1)) {
           margin-left: 4px;
           &::before {
-            content: "/";
             display: inline-block;
             margin-right: 4px;
+            content: '/';
           }
         }
       }
@@ -302,25 +303,25 @@ $menu-animation-duration: 0.3s;
   }
 
   &__block {
-    background: $c-whitesmoke;
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
     padding: 40px;
+    background: $c-whitesmoke;
     @media (max-width: $pc) {
       padding: 20px;
     }
     @media (max-width: $sp) {
-      padding: 10px;
       width: 100%;
+      padding: 10px;
     }
 
     &--box {
-      background: #fff;
-      padding: 50px 30px 40px;
       position: relative;
-      text-align: center;
       width: calc((100% - (30px * 3)) / 4);
+      padding: 50px 30px 40px;
+      text-align: center;
+      background: #fff;
       @media (max-width: $sp) {
         width: 100%;
       }
@@ -331,16 +332,16 @@ $menu-animation-duration: 0.3s;
           margin-left: 30px;
           // 矢印
           &::before {
-            border-bottom: 4px solid transparent;
-            border-left: 6.9282px solid $c-gray;
-            border-right: 4px solid transparent;
-            border-top: 4px solid transparent;
-            content: "";
-            display: inline-block;
-            left: -18px;
             position: absolute;
             top: 50%;
+            left: -18px;
+            display: inline-block;
+            border-top: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            border-left: 6.9282px solid $c-gray;
             transform: translateY(-50%);
+            content: '';
           }
         }
       }
@@ -353,14 +354,14 @@ $menu-animation-duration: 0.3s;
 
       // STEP部分
       .label {
-        background: #000;
-        color: #fff;
-        font: 500 12px "Roboto Condensed", sans-serif;
-        left: 0;
-        line-height: 1;
-        padding: 1em 2em;
         position: absolute;
         top: 0;
+        left: 0;
+        padding: 1em 2em;
+        color: #fff;
+        font: 500 12px 'Roboto Condensed', sans-serif;
+        line-height: 1;
+        background: #000;
         &.last {
           background: $c-main;
         }
@@ -371,15 +372,16 @@ $menu-animation-duration: 0.3s;
 
       // 矢印
       &::after {
-        background: center / contain url(#{$root-path}/images/common/down-arrow.svg) no-repeat;
-        bottom: 15px;
-        content: "";
-        display: inline-block;
-        height: 8px;
-        left: 50%;
         position: absolute;
-        transform: translateX(-50%);
+        bottom: 15px;
+        left: 50%;
+        display: inline-block;
         width: 8px;
+        height: 8px;
+        background: center / contain
+          url(#{$root-path}/images/common/down-arrow.svg) no-repeat;
+        transform: translateX(-50%);
+        content: '';
       }
 
       // 精密鋳造画像
@@ -395,12 +397,12 @@ $menu-animation-duration: 0.3s;
 
       // 画像下テキスト
       figcaption {
-        font-weight: 700;
         margin-top: 20px;
+        font-weight: 700;
       }
       .small {
-        font-size: 0.8em;
         margin-left: 5px;
+        font-size: 0.8em;
       }
     }
   } // __block
@@ -412,8 +414,8 @@ $menu-animation-duration: 0.3s;
   margin-top: 70px;
 
   .block {
-    background: $c-whitesmoke;
     padding: 40px;
+    background: $c-whitesmoke;
     @media (max-width: $pc) {
       padding: 20px;
     }
@@ -422,24 +424,24 @@ $menu-animation-duration: 0.3s;
     }
 
     &:not(:nth-of-type(1)) {
-      margin-top: 100px;
       position: relative;
+      margin-top: 100px;
       &::before {
-        border-bottom: 8px solid transparent;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-top: 13.8564px solid $c-gray;
-        content: "";
-        display: inline-block;
-        left: 50%;
         position: absolute;
         top: -56px;
+        left: 50%;
+        display: inline-block;
+        border-top: 13.8564px solid $c-gray;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 8px solid transparent;
         transform: translateX(-50%);
+        content: '';
       }
     }
     &__inner {
-      background: #fff;
       padding: 50px;
+      background: #fff;
       @media (max-width: $pc) {
         padding: 30px;
       }
@@ -448,15 +450,15 @@ $menu-animation-duration: 0.3s;
       }
     }
     &__column {
-      border-bottom: 1px solid $c-lightgray;
       display: flex;
       margin-top: 30px;
       padding: 0 10px 50px;
+      border-bottom: 1px solid $c-lightgray;
       @media (max-width: $sp) {
+        position: relative;
         flex-direction: column-reverse;
         margin-top: 0;
         padding: 0 0 30px;
-        position: relative;
       }
     }
     &__text {
@@ -468,37 +470,37 @@ $menu-animation-duration: 0.3s;
       // タイトル(STEP01 HOGE)の塊
       .flex {
         align-items: center;
-        border-bottom: 1px solid $c-lightgray;
         padding-bottom: 30px;
+        border-bottom: 1px solid $c-lightgray;
         @media (max-width: $sp) {
           padding-bottom: 5px;
         }
       }
     }
     &__label {
-      background: #000;
       display: inline-block;
       padding: 0.5em 2em;
+      background: #000;
       &.last {
         background: $c-main;
       }
       @media (max-width: $sp) {
-        font-size: 12px;
         position: absolute;
         top: 0;
+        font-size: 12px;
       }
     }
     &__title {
-      font-size: 35px;
-      font-weight: 900;
       margin-left: 20px;
+      font-weight: 900;
+      font-size: 35px;
       @media (max-width: $pc) {
         font-size: 28px;
       }
       @media (max-width: $sp) {
-        font-size: 24px;
-        margin-left: 0;
         margin-top: 15px;
+        margin-left: 0;
+        font-size: 24px;
       }
 
       &--small {
@@ -512,38 +514,38 @@ $menu-animation-duration: 0.3s;
       }
     }
     &__image {
-      background: $c-whitesmoke;
       display: flex;
-      margin-left: 35px;
       width: 40%;
+      margin-left: 35px;
+      background: $c-whitesmoke;
       @media (max-width: $sp) {
+        width: 100%;
         margin-left: 0;
         padding: 40px 20px 20px;
-        width: 100%;
       }
 
       img {
         height: 90%;
-        margin: auto;
         max-height: 180px;
+        margin: auto;
         @media (max-width: $pc) {
+          width: 60%;
+          max-width: 250px;
           height: auto;
           max-height: inherit;
-          max-width: 250px;
-          width: 60%;
         }
         &.sand_casting {
-          height: auto;
-          max-width: 200px;
           width: 90%;
+          max-width: 200px;
+          height: auto;
           @media (max-width: $pc) {
-            max-width: 180px;
             width: 60%;
+            max-width: 180px;
           }
         }
         &.investment_casting {
-          max-height: 160px;
           width: auto;
+          max-height: 160px;
           @media (max-width: $pc) {
             max-height: 120px;
           }
@@ -551,8 +553,8 @@ $menu-animation-duration: 0.3s;
       }
     }
     &__description {
-      line-height: 2;
       margin-top: 45px;
+      line-height: 2;
       @media (max-width: $sp) {
         margin-top: 25px;
       }
@@ -571,9 +573,9 @@ $menu-animation-duration: 0.3s;
   }
 
   &__top {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    position: relative;
     &--text,
     &--image {
       width: 50%;
@@ -584,63 +586,63 @@ $menu-animation-duration: 0.3s;
     &--text {
       // 黒背景箇所
       .label {
-        background: #000;
-        color: #fff;
         display: inline-block;
-        font-weight: 500;
         padding: 0.25em 1em;
+        color: #fff;
+        font-weight: 500;
+        background: #000;
         @media (max-width: $sp) {
-          font-size: 14px;
-          left: 0;
           position: absolute;
           top: 0;
+          left: 0;
+          font-size: 14px;
         }
       }
       // 文字サイズ大きい箇所
       .title {
-        font-size: 40px;
-        font-weight: 400;
         margin-top: 35px;
+        font-weight: 400;
+        font-size: 40px;
         @media (max-width: $sp) {
           font-size: 24px;
         }
       }
       // 説明文箇所
       .description {
-        line-height: 2;
         margin-top: 45px;
+        line-height: 2;
       }
     }
     @media (max-width: $sp) {
       &--image img {
+        width: 100%;
         max-height: 300px;
         object-fit: cover;
         object-position: center;
-        width: 100%;
       }
     }
   } // __top
   &__bottom {
-    align-items: flex-end;
-    border-bottom: 1px solid #707070;
+    position: relative;
     display: flex;
+    align-items: flex-end;
     justify-content: space-between;
     margin-top: 40px;
     padding-bottom: 30px;
-    position: relative;
+    border-bottom: 1px solid #707070;
 
     &--category {
-      font-size: 12px;
-      padding-top: 30px;
       position: relative;
+      padding-top: 30px;
+      font-size: 12px;
       &::before {
-        background: #707070;
-        content: "";
-        height: 1px;
-        left: 0;
         position: absolute;
         top: 0;
+        left: 0;
         width: 470px;
+        height: 1px;
+        background: #707070;
+        content: '';
         @media (max-width: $sp) {
           width: 50%;
         }
@@ -696,14 +698,14 @@ $menu-animation-duration: 0.3s;
 
   // 共通
   table {
-    margin: 0 auto;
-    max-width: calc(1080px - (40px * 2) - (50px * 2)); // STEPに合わせる
     width: 100%;
+    max-width: calc(1080px - (40px * 2) - (50px * 2)); // STEPに合わせる
+    margin: 0 auto;
     @media (max-width: $sp) {
       display: block;
-      -webkit-overflow-scrolling: touch;
       overflow-x: scroll;
       white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
     }
   }
   tr {
@@ -715,38 +717,38 @@ $menu-animation-duration: 0.3s;
     padding: 1em;
     text-align: center;
     &.narrow-cell {
-      cursor: pointer;
-      min-width: initial;
       width: 60px;
+      min-width: initial;
+      cursor: pointer;
       a {
         display: block;
       }
     }
   }
   th {
-    background: #888;
+    position: relative;
     color: #fff;
     font-weight: 700;
     line-height: 1.2;
-    position: relative;
+    background: #888;
     &::after {
-      background: rgba(255, 255, 255, 0.3);
+      position: absolute;
+      top: 0;
+      right: 0;
       bottom: 0;
-      content: "";
+      width: 1px;
       height: 80%;
       margin: auto;
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 1px;
+      background: rgba(255, 255, 255, 0.3);
+      content: '';
     }
   }
   td {
-    background: #fff; // stickyで他のセルの上に来るため
     font-weight: 100;
+    background: #fff; // stickyで他のセルの上に来るため
     img {
-      margin: auto;
       max-width: 110px;
+      margin: auto;
     }
     figcaption {
       margin-top: 8px;
@@ -757,15 +759,15 @@ $menu-animation-duration: 0.3s;
     &:not(.common):not(.sticky) {
       position: relative;
       &::before {
-        background: $c-lightgray;
-        bottom: 0;
-        content: "";
-        height: 80%;
-        left: 0;
-        margin: auto;
         position: absolute;
         top: 0;
+        bottom: 0;
+        left: 0;
         width: 1px;
+        height: 80%;
+        margin: auto;
+        background: $c-lightgray;
+        content: '';
       }
     }
   }
@@ -775,8 +777,8 @@ $menu-animation-duration: 0.3s;
       padding: 0;
       // 絞り込み検索用ボタン
       .js-jewelry-item-term {
-        padding: 1em;
         width: 100%;
+        padding: 1em;
         &:hover,
         &.active {
           background: #efefef;
@@ -785,11 +787,11 @@ $menu-animation-duration: 0.3s;
     }
   }
   .circle {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
     background: $c-lightgray;
     border-radius: 50%;
-    display: inline-block;
-    height: 15px;
-    width: 15px;
     &-red {
       background: $c-main;
     }
@@ -799,8 +801,8 @@ $menu-animation-duration: 0.3s;
   }
   .sticky {
     @media (max-width: $sp) {
-      left: 0;
       position: sticky;
+      left: 0;
       z-index: 1;
     }
   }
@@ -808,8 +810,8 @@ $menu-animation-duration: 0.3s;
 
 // 表（ジュエリーの子カテゴリトップ）
 .category-table-child-jewelry {
-  margin: 30px auto 0;
   max-width: 900px;
+  margin: 30px auto 0;
 
   .category-lead-child-table__block {
     margin-top: 20px;
@@ -818,22 +820,22 @@ $menu-animation-duration: 0.3s;
   table {
     thead {
       th {
-        background: #888;
+        position: relative;
+        padding: 1em;
         color: #fff;
         font-weight: 700;
         line-height: 1.2;
-        padding: 1em;
-        position: relative;
         text-align: center;
+        background: #888;
       }
     }
     tbody {
       tr {
         border-bottom: 1px solid #aaa;
         td {
-          border-top: none;
           padding: 1em;
           text-align: center;
+          border-top: none;
         }
       }
     }
@@ -843,15 +845,15 @@ $menu-animation-duration: 0.3s;
 // 関連商品・記事
 
 .category-related {
-  font-size: 28px;
-  margin: 0 auto;
   max-width: calc(1080px - (40px * 2) - (50px * 2)); // STEPに合わせる
+  margin: 0 auto;
   padding-top: 20px;
+  font-size: 28px;
 
   h4 {
-    font-size: 22px;
-    font-weight: 700;
     margin-top: 80px;
+    font-weight: 700;
+    font-size: 22px;
   }
 
   .products-link {
@@ -888,14 +890,14 @@ $menu-animation-duration: 0.3s;
 
 // 子カテゴリトップの関連商品・記事
 .category-child-product-link {
-  margin: 80px auto 0;
-  max-width: 100%;
   width: 920px;
+  max-width: 100%;
+  margin: 80px auto 0;
 
   h4 {
-    font-size: 22px;
-    font-weight: 700;
     margin-top: 80px;
+    font-weight: 700;
+    font-size: 22px;
   }
 
   // ジュエリー子階層、「該当商品」との間に余白

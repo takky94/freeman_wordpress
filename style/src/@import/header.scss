@@ -1,32 +1,32 @@
 /* Header
 --------------------------------------------------------------------------------------------*/
 
-@import "./config";
+@import './config';
 
 // サブメニュー内子要素1段あたりの個数(横幅固定のため)
 $menu-list-count-mold: 5;
 $menu-list-count-sand-casting: 3;
-$menu-list-count-investment-casting: 5;
+$menu-list-count-investment-casting: 4;
 $menu-list-count-jewelry: 4;
 $menu-list-count-new-field: 4;
 $menu-list-count-company: 2;
 $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
 
 .header {
-  background: #fff;
-  height: $header-height-pc;
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: 99;
+  width: 100%;
+  height: $header-height-pc;
+  background: #fff;
   @media (max-width: $sp) {
     height: $header-height-sp;
   }
 
   &__inner {
+    position: relative;
     display: flex;
     height: 100%;
-    position: relative;
   }
 
   &__logo {
@@ -35,14 +35,14 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
     .logo {
       display: block;
       height: 100%;
-      padding-left: 40px;
       padding-top: 15px;
+      padding-left: 40px;
       @media (max-width: $pc) {
         padding-left: px-to-vw(25);
       }
       @media (max-width: $sp) {
-        padding-left: px-to-vw(10);
         padding-top: 0;
+        padding-left: px-to-vw(10);
       }
       a {
         display: flex;
@@ -89,8 +89,8 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
               display: block;
               height: 100%;
               &.active {
-                border-bottom: 3px solid $c-main;
                 color: $c-main;
+                border-bottom: 3px solid $c-main;
               }
             }
           }
@@ -98,47 +98,47 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
       }
       // ハンバーガー右に隠しておく(クリックで表示)
       @media (max-width: $sp) {
-        background: #111;
-        height: calc(100vh - #{$header-height-sp});
-        left: 100%;
-        opacity: 0;
-        overflow-x: hidden;
-        overflow-y: scroll;
         position: absolute;
         top: $header-height-sp;
-        transition: all 0.3s;
+        left: 100%;
         width: 100%;
+        height: calc(100vh - #{$header-height-sp});
+        overflow-x: hidden;
+        overflow-y: scroll;
+        background: #111;
+        opacity: 0;
+        transition: all 0.3s;
         will-change: opacity, transform;
 
         &.js-active {
-          opacity: 1;
           transform: translateX(-100%);
+          opacity: 1;
         }
       }
 
       .header__lang {
-        align-items: center;
         display: flex;
-        height: $header-logo-height-pc;
+        align-items: center;
         justify-content: flex-end;
+        height: $header-logo-height-pc;
         @media (max-width: $sp) {
           height: auto;
         }
 
         .select-lang {
           @media (max-width: $sp) {
-            font-size: 18px;
-            margin-top: 25px;
             order: 2;
             width: 100%;
+            margin-top: 25px;
+            font-size: 18px;
           }
           &__link {
-            color: $c-gray;
+            position: relative;
             display: inline-block;
+            padding-top: 10px;
+            color: $c-gray;
             font-size: 14px;
             line-height: 1;
-            padding-top: 10px;
-            position: relative;
             &:not(:first-child) {
               margin-left: 12px;
             }
@@ -146,15 +146,15 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
               color: $c-main;
               // 赤い丸
               &::before {
-                background: $c-main;
-                border-radius: 50%;
-                content: "";
-                height: 4px;
-                left: 50%;
                 position: absolute;
                 top: 0;
-                transform: translateX(-50%);
+                left: 50%;
                 width: 4px;
+                height: 4px;
+                background: $c-main;
+                border-radius: 50%;
+                transform: translateX(-50%);
+                content: '';
               }
             }
             @media (max-width: $sp) {
@@ -164,23 +164,24 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
         }
         // 検索フォーム
         .search-form {
-          max-width: 260px;
           position: relative;
+          max-width: 260px;
           @media (min-width: $tab) {
             margin-left: 30px;
           }
           @media (max-width: $sp) {
-            max-width: 100%;
             width: 100%;
+            max-width: 100%;
           }
 
           &__input {
+            max-width: 100%;
+            padding: 0.5em 2em 0.5em 1em;
+            font-size: 12px;
+            line-height: 1;
             background: $c-whitesmoke;
             border: none;
             border-radius: 0;
-            font-size: 12px;
-            line-height: 1;
-            padding: 0.5em 2em 0.5em 1em;
             &::placeholder {
               color: $c-gray;
             }
@@ -191,28 +192,28 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
               color: $c-gray;
             }
             @media (max-width: $sp) {
-              font-size: 16px; // iOSのinputズーム対策
               order: 1;
-              padding: 1em 2em 1em 1em;
               width: 100%;
+              padding: 1em 2em 1em 1em;
+              font-size: 16px; // iOSのinputズーム対策
             }
           }
 
           &__button {
-            background: $c-whitesmoke;
+            position: absolute;
+            top: 0;
+            right: 0;
             bottom: 0;
             margin: auto;
             padding: 3px;
-            position: absolute;
-            right: 0;
-            top: 0;
+            background: $c-whitesmoke;
             @media (max-width: $sp) {
               right: 5px;
             }
 
             svg {
-              height: 15px;
               width: 15px;
+              height: 15px;
               .search-icon {
                 stroke: $c-gray;
               }
@@ -223,9 +224,9 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
         @media (max-width: $sp) {
           display: flex;
           flex-wrap: wrap;
+          width: 90%;
           margin: 40px auto 0;
           text-align: center;
-          width: 90%;
           .select {
             width: 100%;
           }
@@ -251,19 +252,19 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
               margin-left: px-to-vw(20);
             }
             @media (max-width: $sp) {
-              margin-left: 0;
-              margin-top: 20px;
-              padding-top: 20px;
               position: relative;
+              margin-top: 20px;
+              margin-left: 0;
+              padding-top: 20px;
               &::before {
-                background: rgba(255, 255, 255, 0.2);
-                content: "";
-                display: inline-block;
-                height: 1px;
-                left: -5%; // header__list余白分
                 position: absolute;
                 top: 0;
+                left: -5%; // header__list余白分
+                display: inline-block;
                 width: 100vw;
+                height: 1px;
+                background: rgba(255, 255, 255, 0.2);
+                content: '';
               }
             }
           }
@@ -281,7 +282,9 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
             }
             &:nth-of-type(3) {
               .sub .container > ul > li {
-                width: calc((100% / #{$menu-list-count-investment-casting}) - 10px);
+                width: calc(
+                  (100% / #{$menu-list-count-investment-casting}) - 10px
+                );
               }
             }
             &:nth-of-type(4) {
@@ -303,8 +306,8 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
           // 固定ヘッダー第一階層メニュー
           & > a {
             color: #333;
-            font-size: 14px;
             font-weight: 700;
+            font-size: 14px;
             @media (max-width: $pc) {
               font-size: px-to-vw(14);
             }
@@ -314,28 +317,28 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
               }
             }
             @media (max-width: $sp) {
-              color: #fff;
-              display: block;
-              font-size: 14px;
-              padding-right: 20px;
               position: relative;
+              display: block;
+              padding-right: 20px;
+              color: #fff;
+              font-size: 14px;
 
               &::before {
-                content: "▼";
                 position: absolute;
-                right: 0;
                 top: 50%;
+                right: 0;
                 transform: translateY(-50%);
+                content: '▼';
               }
 
               &::after {
-                color: $c-main;
-                content: attr(data-subtitle);
                 display: block;
-                font-family: "Roboto Condensed", sans-serif;
-                font-size: 14px;
-                font-weight: 300;
                 margin-top: 10px;
+                color: $c-main;
+                font-weight: 300;
+                font-size: 14px;
+                font-family: 'Roboto Condensed', sans-serif;
+                content: attr(data-subtitle);
               }
             }
           }
@@ -350,16 +353,16 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
           // 第二階層以下のメニュー
           .sub {
             @media (min-width: $tab) {
-              background: rgb(0, 0, 0);
-              height: 0;
-              left: 0;
-              opacity: 0;
               position: fixed;
               top: $header-height-pc;
-              transition: 0.4s all;
-              visibility: hidden;
-              width: 100%;
+              left: 0;
               z-index: 99;
+              width: 100%;
+              height: 0;
+              background: rgb(0, 0, 0);
+              visibility: hidden;
+              opacity: 0;
+              transition: 0.4s all;
             }
             @media (max-width: $sp) {
               top: $header-height-sp;
@@ -370,12 +373,12 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
                 margin: 0; //spメニュー内ではcontainerの横余白なし
               }
               .sub__title {
-                font-size: 26px;
                 font-weight: 600;
+                font-size: 26px;
                 white-space: nowrap;
                 @media (max-width: $pc) {
-                  font-size: px-to-vw(26);
                   padding-top: px-to-vw(15);
+                  font-size: px-to-vw(26);
                 }
               }
               & > ul {
@@ -387,27 +390,36 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
                   margin-left: px-to-vw(90);
                 }
                 & > li {
-                  margin-left: 10px;
-                  margin-top: 15px;
-                  padding-left: calc(14px / 2);
                   position: relative;
+                  margin-top: 15px;
+                  margin-left: 10px;
+                  padding-left: calc(14px / 2);
                   &.grow {
                     flex-grow: 1;
                   }
+                  &.sp-main-cat {
+                    display: none;
+                    @media (max-width: $sp) {
+                      display: list-item;
+                      margin-left: 0;
+                      font-weight: bold;
+                    }
+                  }
                   &::before {
-                    color: $c-main;
-                    content: ">";
-                    display: inline-block;
-                    left: 0;
                     position: absolute;
+                    top: 2px;
+                    left: 0;
+                    display: inline-block;
+                    color: $c-main;
+                    content: '>';
                   }
                   & > a {
-                    font-size: 12px;
-                    margin-left: calc(12px / 2);
                     position: relative;
+                    margin-left: calc(12px / 2);
+                    font-size: 12px;
                     @media (max-width: $pc) {
-                      font-size: px-to-vw(12);
                       margin-left: px-to-vw(7);
+                      font-size: px-to-vw(12);
                     }
                     @media (max-width: $sp) {
                       font-size: 13px;
@@ -419,8 +431,8 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
                   display: block;
                   height: 0;
                   margin-left: 0;
-                  opacity: 0;
                   transform: translateY(-30px);
+                  opacity: 0;
                   transition: all 0.3s;
                   will-change: opacity, height;
                   & > li {
@@ -433,8 +445,8 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
 
                   &.js-active {
                     height: auto;
-                    opacity: 1;
                     transform: none;
+                    opacity: 1;
                   }
                 } // media sp
               }
@@ -444,9 +456,9 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
             .sub {
               @media (min-width: $tab) {
                 height: 200px;
-                opacity: 1;
                 padding: 50px 0;
                 visibility: visible;
+                opacity: 1;
               }
             }
           }
@@ -454,35 +466,36 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
 
         // header__list(sp)
         @media (max-width: $sp) {
-          margin: 30px auto 0;
           width: 90%;
+          margin: 30px auto 0;
+          padding-bottom: 140px;
         }
       } // header__list
     } // header__content
 
     // 問い合わせボタン
     .header__button {
-      align-items: center;
-      background: $c-main;
       display: flex;
-      height: 100%;
+      align-items: center;
       justify-content: center;
-      margin-left: 50px;
       width: $header-height-pc;
+      height: 100%;
+      margin-left: 50px;
+      background: $c-main;
       @media (max-width: $pc) {
-        margin-left: 10px;
         width: px-to-vw(100); // = $header-height-pc
+        margin-left: 10px;
       }
       @media (max-width: $sp) {
-        margin-left: px-to-vw(10);
         width: $header-height-sp;
+        margin-left: px-to-vw(10);
       }
 
       // ハンバーガー(PC非表示)
       &Menu {
+        margin-left: 0;
         background: #000;
         @extend .header__button;
-        margin-left: 0;
         & > div {
           position: relative;
         }
@@ -491,36 +504,36 @@ $menu-sp-gap-y: 50%; // SPでのヘッダー内のcontent部分の上下余白
       //
       & > a,
       & > button {
-        align-items: center;
-        color: #fff;
         display: flex;
-        height: 100%; // クリック有効範囲を全体に
+        align-items: center;
         justify-content: center;
         width: 100%; // クリック有効範囲を全体に
+        height: 100%; // クリック有効範囲を全体に
+        color: #fff;
         @media (max-width: $sp) {
+          padding: calc((#{$header-height-sp} / 2) / 2) 0; // (コンテンツエリア(ヘッダーの半分) / 2)
           font-size: 11px;
           line-height: 1;
-          padding: calc((#{$header-height-sp} / 2) / 2) 0; // (コンテンツエリア(ヘッダーの半分) / 2)
         }
 
         // メールアイコン
         & > div > img {
           margin: 10px auto 0;
           @media (max-width: $sp) {
+            width: 20px;
             height: 15px;
             margin-top: 5px; // トータル height20px
-            width: 20px;
           }
         }
         // ハンバーガー棒(~768pxでのみ表示)
         .header__buttonMenu--bar {
-          background: #fff;
           display: block;
+          width: 15px;
           height: 2px;
           margin: 6px auto 0;
+          background: #fff;
           transform-origin: center;
           transition: all 0.3s;
-          width: 15px;
           will-change: transform, opacity;
           &:nth-of-type(2),
           &:nth-of-type(3) {

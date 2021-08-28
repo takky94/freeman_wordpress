@@ -2,19 +2,19 @@
 --------------------------------------------------------------------------------------------*/
 
 // style/compressed/main.min.cssからのrootへの相対
-$root-path: "../..";
+$root-path: '../..';
 
-@import "./config";
-@import "./button";
+@import './config';
+@import './button';
 
 .content-main.contact {
-  margin: auto;
   max-width: 790px;
+  margin: auto;
 }
 
 .form-block {
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   @media (max-width: $sp) {
     flex-wrap: wrap;
@@ -34,12 +34,12 @@ $root-path: "../..";
   }
 
   .must-label {
-    background: $c-gray;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
     margin-right: 10px;
     padding: 3px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    background: $c-gray;
   }
 
   label {
@@ -51,23 +51,23 @@ $root-path: "../..";
 
   .form-block__field {
     flex-grow: 1;
-    margin-left: 50px;
     max-width: 500px;
+    margin-left: 50px;
     @media (max-width: $sp) {
-      margin-left: 0;
-      margin-top: 10px;
-      max-width: inherit;
       width: 100%;
+      max-width: inherit;
+      margin-top: 10px;
+      margin-left: 0;
     }
 
     // テキスト
-    input[type="text"],
-    input[type="email"] {
+    input[type='text'],
+    input[type='email'] {
+      width: 100%;
+      padding: 1em;
       background: $c-whitesmoke;
       border: 1px solid $c-lightgray;
       border-radius: 3px;
-      padding: 1em;
-      width: 100%;
       &::placeholder {
         color: $c-gray;
       }
@@ -79,51 +79,51 @@ $root-path: "../..";
       }
     } // text,email
     // チェックボックス
-    input[type="checkbox"] {
+    input[type='checkbox'] {
       display: none;
       & + span {
-        cursor: pointer;
-        padding-left: 30px;
         position: relative;
+        padding-left: 30px;
+        cursor: pointer;
       }
       & + span::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-top: -10px;
         background: $c-whitesmoke;
         border: 1px solid $c-lightgray;
         border-radius: 3px;
-        content: "";
-        display: inline-block;
-        height: 20px;
-        left: 0;
-        margin-top: -10px;
-        position: absolute;
-        top: 50%;
-        width: 20px;
+        content: '';
       }
       &:checked + span::after {
-        border-bottom: 3px solid $c-gray;
-        border-left: 3px solid $c-gray;
-        content: "";
-        display: inline-block;
-        height: 9px;
-        left: 3px;
-        margin-top: -9px;
         position: absolute;
         top: 50%;
-        transform: rotate(-45deg);
+        left: 3px;
+        display: inline-block;
         width: 18px;
+        height: 9px;
+        margin-top: -9px;
+        border-bottom: 3px solid $c-gray;
+        border-left: 3px solid $c-gray;
+        transform: rotate(-45deg);
+        content: '';
       }
     } //checkbox
     // 本文入力らん
     textarea {
+      width: 100%;
+      padding: 1em;
       background: $c-whitesmoke;
       border: 1px solid $c-lightgray;
       border-radius: 3px;
-      padding: 1em;
-      width: 100%;
     }
 
-    .error + input[type="text"],
-    .error + input[type="email"],
+    .error + input[type='text'],
+    .error + input[type='email'],
     .error + textarea {
       background: #fff8f8;
       border-color: #fce0e0;
@@ -137,7 +137,7 @@ $root-path: "../..";
       max-width: 100%;
     }
     @media (max-width: $sp) {
-      input[type="checkbox"] + span {
+      input[type='checkbox'] + span {
         display: block;
         text-align: left;
       }
@@ -147,28 +147,28 @@ $root-path: "../..";
   &.submit {
     margin-top: 35px;
     .arrow-wrap {
+      width: 350px;
       height: 70px;
       margin: auto;
-      width: 350px;
       @media (max-width: $sp) {
-        max-width: 320px;
         width: 100%;
+        max-width: 320px;
       }
 
       .button-arrow {
         justify-content: flex-end;
         margin-top: 0;
 
-        input[type="submit"] {
+        input[type='submit'] {
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          color: #fff;
           background: transparent;
           border: none;
-          color: #fff;
-          cursor: pointer;
-          display: block;
-          height: 100%;
           outline: 0;
-          position: absolute;
-          width: 100%;
+          cursor: pointer;
         }
       }
     }
@@ -185,26 +185,27 @@ $root-path: "../..";
     justify-content: space-between;
     .form-block__back {
       &::before {
-        background: center / contain url(#{$root-path}/images/common/left-arrow-lightgray.svg) no-repeat;
-        content: "";
         display: inline-block;
-        height: 6px;
         width: 16px;
+        height: 6px;
+        background: center / contain
+          url(#{$root-path}/images/common/left-arrow-lightgray.svg) no-repeat;
+        content: '';
       }
-      input[type="submit"] {
+      input[type='submit'] {
+        color: $c-gray;
+        text-decoration: underline;
         background: transparent;
         border: none;
-        color: $c-gray;
-        cursor: pointer;
         outline: 0;
-        text-decoration: underline;
+        cursor: pointer;
       }
     }
     .arrow-wrap {
       margin-left: 0;
       @media (max-width: $sp) {
-        margin-left: auto;
         margin-top: 15px;
+        margin-left: auto;
       }
     }
   }
@@ -216,8 +217,8 @@ $root-path: "../..";
   }
   @media (max-width: $sp) {
     .form-block label {
-      border-bottom: 1px solid $c-lightgray;
       line-height: 1.8;
+      border-bottom: 1px solid $c-lightgray;
     }
   }
 }
@@ -229,7 +230,8 @@ $root-path: "../..";
   }
 
   .contact-send {
-    background: center / contain url(#{$root-path}/images/notfound-background.svg) no-repeat;
+    background: center / contain
+      url(#{$root-path}/images/notfound-background.svg) no-repeat;
 
     &__title {
       font-size: 22px;
@@ -244,15 +246,16 @@ $root-path: "../..";
       margin-top: 50px;
       text-align: center;
       img {
-        margin: auto;
-        max-width: 500px;
         width: 100%;
+        max-width: 500px;
+        margin: auto;
       }
     }
 
     .button-arrow {
-      margin-left: auto;
+      justify-content: space-between;
       margin-right: auto;
+      margin-left: auto;
     }
   }
 }

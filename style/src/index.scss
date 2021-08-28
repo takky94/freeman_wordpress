@@ -4,7 +4,7 @@
 --------------------------------------------------------------------------------------------*/
 
 // style/compressed/main.min.cssからのrootへの相対
-$root-path: "../..";
+$root-path: '../..';
 
 // slide showの枚数
 $slide-duration: 5s;
@@ -15,16 +15,16 @@ $slide-count-investment_casting: 3;
 $slide-count-jewelry: 3;
 $slide-count-new_field: 2;
 
-@import "./@import/config";
-@import "./@import/button";
-@import "./@import/post-card";
-@import "./@import/scroll-animation";
-@import "./@import/slide-animation";
-@import "./@import/fv-animation";
+@import './@import/config';
+@import './@import/button';
+@import './@import/post-card';
+@import './@import/scroll-animation';
+@import './@import/slide-animation';
+@import './@import/fv-animation';
 
 #index {
   // 菱形メニュー
-  @import "./@import/diamond-menu";
+  @import './@import/diamond-menu';
 
   .scroll-snap {
     overflow: scroll;
@@ -41,9 +41,9 @@ $slide-count-new_field: 2;
 
     // スライドショー
     &__slide {
-      background-color: rgba(0, 0, 0, 0.5);
-      height: 100%;
       width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
 
       .slide-animation__image {
         animation-duration: $slide-duration * $slide-count-hero;
@@ -51,35 +51,35 @@ $slide-count-new_field: 2;
 
       // filter代わり
       &::before {
-        background-color: rgba(0, 0, 0, 0.5);
-        bottom: 0;
-        content: "";
-        display: block;
-        height: 100%;
-        left: 0;
         position: absolute;
-        right: 0;
         top: 0;
-        width: 100%;
+        right: 0;
+        bottom: 0;
+        left: 0;
         z-index: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        content: '';
       }
     }
 
     // 見出し
     &__heading {
+      position: absolute;
       bottom: 25%;
       left: 40px;
-      line-height: 1;
-      overflow: hidden;
-      position: absolute;
       z-index: 2;
+      overflow: hidden;
+      line-height: 1;
       svg {
         width: 52vw;
       }
       @media (max-width: $sp) {
         bottom: 15%;
-        @include sp-font-vw(150);
         left: 20px;
+        @include sp-font-vw(150);
 
         svg {
           width: 80vw;
@@ -87,12 +87,12 @@ $slide-count-new_field: 2;
       }
       // モノづくりに無限の可能性を
       .small {
-        color: #fff;
         display: block;
+        margin-top: 35px;
+        color: #fff;
         font-size: 30px;
         font-style: normal;
         letter-spacing: 5px;
-        margin-top: 35px;
         @media (max-width: $pc) {
           font-size: px-to-vw(30);
         }
@@ -102,15 +102,15 @@ $slide-count-new_field: 2;
         }
       }
       &--animation {
-        animation: fadeUp 0.2s both;
         position: relative;
+        animation: fadeUp 0.2s both;
 
         &:nth-of-type(1) {
           animation-delay: 0.3s;
         }
         &:nth-of-type(2) {
-          animation-delay: 0.4s;
           animation-duration: 0.3s;
+          animation-delay: 0.4s;
         }
       }
 
@@ -125,26 +125,26 @@ $slide-count-new_field: 2;
     } // __heading
 
     &__news {
-      align-items: center;
-      background: rgba(0, 0, 0, 0.7);
+      position: absolute;
       bottom: 0;
+      z-index: 1;
       display: flex;
-      font-size: 14px;
+      align-items: center;
       min-width: 800px;
       padding: 25px 50px;
-      position: absolute;
-      z-index: 1;
+      font-size: 14px;
+      background: rgba(0, 0, 0, 0.7);
       .swiper-news-container {
         max-width: 400px;
         overflow: hidden;
       }
       @media (max-width: 800px) {
-        min-width: inherit;
         width: 100%;
+        min-width: inherit;
       }
       @media (max-width: $sp) {
-        padding: px-to-vw(25) 0;
         width: 100%;
+        padding: px-to-vw(25) 0;
       }
 
       &--title {
@@ -158,10 +158,10 @@ $slide-count-new_field: 2;
       }
       &--postTitle {
         @media (max-width: $sp) {
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
           width: 60%;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
         }
       }
       &--postTitle span {
@@ -172,14 +172,14 @@ $slide-count-new_field: 2;
           margin-left: auto;
         }
         @media (max-width: $sp) {
-          align-items: center;
-          display: flex;
-          height: 100%;
-          justify-content: center;
-          padding: 0 15px 0 10px;
           position: absolute;
-          right: 0;
           top: 0;
+          right: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          padding: 0 15px 0 10px;
         }
 
         .arrow {
@@ -199,9 +199,10 @@ $slide-count-new_field: 2;
     }
 
     &__list {
-      animation: case_slide 50s linear infinite;
-      background: left top / cover url(#{$root-path}/images/top/case-list.png) repeat-x;
       height: 50px;
+      background: left top / cover url(#{$root-path}/images/top/case-list.png)
+        repeat-x;
+      animation: case_slide 50s linear infinite;
       will-change: animation;
     }
   }
@@ -214,19 +215,20 @@ $slide-count-new_field: 2;
 
   // 手のひらから宇宙まで
   .lead {
-    align-items: center;
-    background: center top / cover url(#{$root-path}/images/top/lead-background.png) no-repeat;
     display: flex;
+    align-items: center;
     justify-content: center;
     padding: 220px 0 0;
+    background: center top / cover
+      url(#{$root-path}/images/top/lead-background.png) no-repeat;
     @media (max-width: $sp) {
-      background-size: contain;
       padding: px-to-vw(200) 0 px-to-vw(85);
+      background-size: contain;
     }
 
     &__heading {
-      font-size: 44px;
       font-weight: 100;
+      font-size: 44px;
       letter-spacing: 3px;
       text-align: center;
       @media (max-width: $sp) {
@@ -235,11 +237,11 @@ $slide-count-new_field: 2;
     }
 
     &__text {
-      font-size: 20px;
       margin-top: 30px;
+      font-size: 20px;
       @media (max-width: $sp) {
-        font-size: 17px;
         margin-top: 20px;
+        font-size: 17px;
       }
     }
 
@@ -253,12 +255,12 @@ $slide-count-new_field: 2;
       }
 
       .block {
-        align-items: flex-end;
         display: flex;
+        align-items: flex-end;
         line-height: 1;
         @media (max-width: $sp) {
-          align-items: center;
           flex-direction: column;
+          align-items: center;
         }
         &:not(:first-child) {
           margin-left: 90px;
@@ -287,8 +289,8 @@ $slide-count-new_field: 2;
             display: inline-block;
             vertical-align: bottom;
             @media (max-width: $sp) {
-              height: 25px;
               width: auto;
+              height: 25px;
             }
           }
         }
@@ -296,8 +298,8 @@ $slide-count-new_field: 2;
           flex-grow: 1;
           margin-left: 15px;
           @media (max-width: $sp) {
-            margin-left: 0;
             margin-top: 10px;
+            margin-left: 0;
           }
           .big {
             display: inline-block;
@@ -320,10 +322,10 @@ $slide-count-new_field: 2;
     } // lead__achievement
     .lead__button {
       .button-arrow {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 20px;
         width: 270px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 20px;
         @media (max-width: $sp) {
           justify-content: space-between;
           width: 100%;
@@ -336,22 +338,23 @@ $slide-count-new_field: 2;
     }
     .button {
       @media (max-width: $sp) {
-        margin-top: 30px;
         width: 100%;
+        margin-top: 30px;
       }
     }
   } // END 手のひらから宇宙まで
 
   .lead__background {
-    animation: lead_slide 100s linear infinite;
-    background: left top / cover url(#{$root-path}/images/top/lead-background2.png) repeat-x;
     height: 100px;
-    margin-bottom: 100px;
     margin-top: -50px;
+    margin-bottom: 100px;
+    background: left top / cover
+      url(#{$root-path}/images/top/lead-background2.png) repeat-x;
+    animation: lead_slide 100s linear infinite;
     @media (max-width: $sp) {
       height: 60px;
-      margin-bottom: 40px;
       margin-top: -20px;
+      margin-bottom: 40px;
     }
     @keyframes lead_slide {
       100% {
@@ -372,18 +375,18 @@ $slide-count-new_field: 2;
         }
 
         @media (max-width: $sp) {
-          align-items: center;
           display: flex;
+          align-items: center;
           justify-content: center;
         }
       }
 
       img {
+        width: 100%;
+        max-width: 600px;
         height: 100%;
         max-height: 500px;
-        max-width: 600px;
         object-fit: contain;
-        width: 100%;
         @media (max-width: $sp) {
           max-height: 300px;
         }
@@ -392,9 +395,9 @@ $slide-count-new_field: 2;
   }
 
   .detail {
-    align-items: center;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 
     // 左側が画像
     &-reverse {
@@ -405,15 +408,15 @@ $slide-count-new_field: 2;
         }
       }
       .detail__image {
-        margin-left: -60px;
-        margin-right: auto;
         order: 1;
+        margin-right: auto;
+        margin-left: -60px;
         @media (max-width: $pc) {
           margin-left: -10px;
         }
         @media (max-width: $sp) {
-          margin: 30px auto 0;
           order: 2; // SPでは画像が下
+          margin: 30px auto 0;
         }
       }
     } // -reverse
@@ -434,8 +437,8 @@ $slide-count-new_field: 2;
     }
 
     &__image {
-      margin-left: auto;
       margin-right: -60px;
+      margin-left: auto;
       img {
         margin-left: auto;
       }
@@ -454,23 +457,23 @@ $slide-count-new_field: 2;
     &__text {
       &--heading {
         &En {
-          font-size: 72px;
+          width: 120%;
           font-weight: bold;
+          font-size: 72px;
           line-height: 1;
           transform: scale(0.9, 1);
           transform-origin: top left;
-          width: 120%;
           @media (max-width: $sp) {
             @include sp-font-vw(100);
-            transform: none;
             width: 100%;
+            transform: none;
           }
 
           // 切り抜き文字
           .decoration {
-            color: #fff;
-            display: inline-block;
             position: relative;
+            display: inline-block;
+            color: #fff;
 
             &__o,
             &__a,
@@ -486,57 +489,61 @@ $slide-count-new_field: 2;
             }
 
             &__o {
-              box-shadow: 4px 8px 0 0 #fff inset, -4px -12px 0 0 #fff inset, -1px -1px 0 0 #fff,
-                1px 1px 0 0 #fff;
+              box-shadow: 4px 8px 0 0 #fff inset, -4px -12px 0 0 #fff inset,
+                -1px -1px 0 0 #fff, 1px 1px 0 0 #fff;
               @media (max-width: $sp) {
                 box-shadow: px-to-vw(4) px-to-vw(18) 0 0 #fff inset,
-                  px-to-vw(-4) px-to-vw(-22) 0 0 #fff inset, px-to-vw(-1) px-to-vw(-1) 0 0 #fff,
+                  px-to-vw(-4) px-to-vw(-22) 0 0 #fff inset,
+                  px-to-vw(-1) px-to-vw(-1) 0 0 #fff,
                   px-to-vw(1) px-to-vw(1) 0 0 #fff;
               }
             }
             &__a {
-              box-shadow: 2px 9px 0 0 #fff inset, -2px -12px 0 0 #fff inset, -1px -1px 0 0 #fff,
-                1px 1px 0 0 #fff;
+              box-shadow: 2px 9px 0 0 #fff inset, -2px -12px 0 0 #fff inset,
+                -1px -1px 0 0 #fff, 1px 1px 0 0 #fff;
               @media (max-width: $sp) {
                 box-shadow: px-to-vw(4) px-to-vw(18) 0 0 #fff inset,
-                  px-to-vw(-4) px-to-vw(-23) 0 0 #fff inset, px-to-vw(-1) px-to-vw(-1) 0 0 #fff,
+                  px-to-vw(-4) px-to-vw(-23) 0 0 #fff inset,
+                  px-to-vw(-1) px-to-vw(-1) 0 0 #fff,
                   px-to-vw(1) px-to-vw(1) 0 0 #fff;
               }
             }
             &__s {
-              box-shadow: 3px 8px 0 0 #fff inset, -3px -12px 0 0 #fff inset, -1px -1px 0 0 #fff,
-                1px 1px 0 0 #fff;
+              box-shadow: 3px 8px 0 0 #fff inset, -3px -12px 0 0 #fff inset,
+                -1px -1px 0 0 #fff, 1px 1px 0 0 #fff;
               @media (max-width: $sp) {
                 box-shadow: px-to-vw(4) px-to-vw(18) 0 0 #fff inset,
-                  px-to-vw(-4) px-to-vw(-22) 0 0 #fff inset, px-to-vw(-1) px-to-vw(-1) 0 0 #fff,
+                  px-to-vw(-4) px-to-vw(-22) 0 0 #fff inset,
+                  px-to-vw(-1) px-to-vw(-1) 0 0 #fff,
                   px-to-vw(1) px-to-vw(1) 0 0 #fff;
               }
             }
             &__w {
-              box-shadow: 2px 9px 0 0 #fff inset, -2px -12px 0 0 #fff inset, -1px -1px 0 0 #fff,
-                1px 1px 0 0 #fff;
+              box-shadow: 2px 9px 0 0 #fff inset, -2px -12px 0 0 #fff inset,
+                -1px -1px 0 0 #fff, 1px 1px 0 0 #fff;
               @media (max-width: $sp) {
                 box-shadow: px-to-vw(4) px-to-vw(19) 0 0 #fff inset,
-                  px-to-vw(-4) px-to-vw(-23) 0 0 #fff inset, px-to-vw(-1) px-to-vw(-1) 0 0 #fff,
+                  px-to-vw(-4) px-to-vw(-23) 0 0 #fff inset,
+                  px-to-vw(-1) px-to-vw(-1) 0 0 #fff,
                   px-to-vw(1) px-to-vw(1) 0 0 #fff;
               }
             }
           }
         }
         &Jp {
+          margin-top: 30px;
           color: $c-gray;
           font-size: 20px;
-          margin-top: 30px;
           @media (max-width: $sp) {
             @include sp-font-vw(30);
             margin-top: 1em;
           }
         }
         &Sub {
-          font-size: 35px;
-          font-weight: 600;
-          line-height: 1.8;
           margin-top: 60px;
+          font-weight: 600;
+          font-size: 35px;
+          line-height: 1.8;
           @media (max-width: $sp) {
             @include sp-font-vw(40);
             margin-top: 1.5em;
@@ -544,9 +551,9 @@ $slide-count-new_field: 2;
         }
       }
       &--description {
+        margin-top: 30px;
         font-weight: 400;
         line-height: 2;
-        margin-top: 30px;
         @media (max-width: $sp) {
           margin-top: 1.5em;
         }
