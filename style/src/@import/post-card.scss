@@ -625,7 +625,7 @@ $root-path: "../..";
     // 開いたらボタン要素のスタイル変更
     &.is-show {
       &::before {
-        background: none;
+        display: none;
       }
     }
     .square-second__trigger-wrap {
